@@ -4083,9 +4083,6 @@ div.interactively-flipped-panels div.container div.panel-wrapper.bottom-right:ho
     width: 100%;
   }
 }
-div.interactively-flipped-panels div.container:hover {
-  padding-bottom: calc((50% - 2em) * 2 + 2em);
-}
 @media all and (max-width: 480px) {
   div.interactively-flipped-panels div.container:hover {
     padding-bottom: calc(100% * 4);
