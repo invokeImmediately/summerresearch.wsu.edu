@@ -4087,7 +4087,7 @@ div.interactively-flipped-panels div.container div.panel-wrapper.bottom-right:ho
   div.interactively-flipped-panels div.container div.panel-wrapper.bottom-left:hover,
   div.interactively-flipped-panels div.container div.panel-wrapper.bottom-right:hover {
     position: relative;
-    padding-bottom: calc(100% * 4);
+    padding-bottom: 100%;
     width: 100%;
   }
 }
