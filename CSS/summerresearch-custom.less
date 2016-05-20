@@ -144,17 +144,18 @@ div.interactively-flipped-panels {
 				padding-bottom: ~"calc((50% - 1.5em) * 2 + 3em)";
 			}
 			@media (max-width: 480px) {
-				padding-bottom: ~"calc(100% * 4)";
+				padding-bottom: ~"calc(100% * 4 + 3em)";
 			}
 		}        
         div.panel-wrapper {
 			padding-bottom: ~"calc(50% - 1.5em)";
-			@media all {
-				@media (max-width: 480px) {
-					padding-bottom: 100%;
-				}
+			@media all and (max-width: 480px) {
+				padding-bottom: 100%;
 			}
             &.top-left {
+                @media all and (max-width: 480px) {
+                    margin-bottom: 1em;
+                }
                 div.panel {
                     div.front {
                         background: url(/wp-content/uploads/sites/907/2016/05/homepage-buttons_summer-research-opportunities.jpg) no-repeat center center;
@@ -168,6 +169,9 @@ div.interactively-flipped-panels {
                 }
             }
             &.top-right{
+                @media all and (max-width: 480px) {
+                    margin-bottom: 1em;
+                }
                 div.panel {
                     div.front {
                         background: url(/wp-content/uploads/sites/907/2016/05/homepage-buttons_summer-in-pullman-02.jpg) no-repeat center center;
@@ -181,6 +185,9 @@ div.interactively-flipped-panels {
                 }
             }
             &.bottom-left{
+                @media all and (max-width: 480px) {
+                    margin-bottom: 1em;
+                }
                 div.panel {
                     div.front {
                         background: url(/wp-content/uploads/sites/907/2016/05/homepage-buttons_summer-research-poster-symposium.jpg) no-repeat center center;
@@ -208,31 +215,16 @@ div.interactively-flipped-panels {
             }
 			&.top-left:hover, &.top-right:hover, &.bottom-left:hover, &.bottom-right:hover {
 				padding-bottom: ~"calc((50% - 2em) * 2 + 2em)";
-				@media all {
-					@media (max-width: 480px) {
-						position: relative;
-						padding-bottom: 100%;
-						width: 100%;
-					}
+				@media all and (max-width: 480px) {
+                    position: relative;
+                    padding-bottom: 100%;
+                    width: 100%;
 				}
 			}
         }
         &:hover {
-//            padding-bottom: ~"calc((50% - 2em) * 2 + 2em)";
-            padding-bottom: ~"calc(((50% * 0.6) - 1.5em) * 2 + 3em)";
-            @media all {
-                @media (max-width: 1030px) and @ifp-desktop-min {
-                    padding-bottom: ~"calc(((50% * 0.7) - 1.5em) * 2 + 3em)";
-                }
-                @media (max-width: 791px) and (min-width: 592px) {
-                    padding-bottom: ~"calc(((50% * 0.8) - 1.5em) * 2 + 3em)";
-                }
-                @media (max-width: 591px) and (min-width: 481px) {
-                    padding-bottom: ~"calc((50% - 1.5em) * 2 + 3em)";
-                }
-                @media (max-width: 480px) {
-                    padding-bottom: ~"calc(100% * 4)";
-                }
+            @media all and (max-width: 480px) {
+                padding-bottom: ~"calc(100% * 4 + 3em)";
             }        
         }
     }
