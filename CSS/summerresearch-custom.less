@@ -206,14 +206,6 @@ div.interactively-flipped-panels {
                     }
                 }
             }
-			&:hover {
-				padding-bottom: ~"calc((50% - 2em) * 2 + 2em)";
-				@media all {
-					@media (max-width: 480px) {
-						padding-bottom: ~"calc(100% * 4)";
-					}
-				}
-			}
 			&.top-left:hover, &.top-right:hover, &.bottom-left:hover, &.bottom-right:hover {
 				padding-bottom: ~"calc((50% - 2em) * 2 + 2em)";
 				@media all {
@@ -224,6 +216,24 @@ div.interactively-flipped-panels {
 					}
 				}
 			}
+        }
+        &:hover {
+//            padding-bottom: ~"calc((50% - 2em) * 2 + 2em)";
+            padding-bottom: ~"calc(((50% * 0.6) - 1.5em) * 2 + 3em)";
+            @media all {
+                @media (max-width: 1030px) and @ifp-desktop-min {
+                    padding-bottom: ~"calc(((50% * 0.7) - 1.5em) * 2 + 3em)";
+                }
+                @media (max-width: 791px) and (min-width: 592px) {
+                    padding-bottom: ~"calc(((50% * 0.8) - 1.5em) * 2 + 3em)";
+                }
+                @media (max-width: 591px) and (min-width: 481px) {
+                    padding-bottom: ~"calc((50% - 1.5em) * 2 + 3em)";
+                }
+                @media (max-width: 480px) {
+                    padding-bottom: ~"calc(100% * 4)";
+                }
+            }        
         }
     }
 }
