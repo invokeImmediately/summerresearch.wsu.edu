@@ -4000,39 +4000,94 @@ div.column section.header-newsEvents {
 div.interactively-flipped-panels {
   background: #5e6a71 url(/wp-content/uploads/sites/907/2016/05/texture_brushed-metal.jpg) repeat scroll left top;
 }
-div.interactively-flipped-panels > div.container > div.panel-wrapper.top-left div.panel div.front {
+div.interactively-flipped-panels div.container {
+  padding-bottom: calc(((50% * 0.6) - 1.5em) * 2 + 3em);
+}
+@media all and (max-width: 1030px) and (min-width: 792px) {
+  div.interactively-flipped-panels div.container {
+    padding-bottom: calc(((50% * 0.7) - 1.5em) * 2 + 3em);
+  }
+}
+@media all and (max-width: 791px) and (min-width: 592px) {
+  div.interactively-flipped-panels div.container {
+    padding-bottom: calc(((50% * 0.8) - 1.5em) * 2 + 3em);
+  }
+}
+@media all and (max-width: 591px) and (min-width: 481px) {
+  div.interactively-flipped-panels div.container {
+    padding-bottom: calc((50% - 1.5em) * 2 + 3em);
+  }
+}
+@media all and (max-width: 480px) {
+  div.interactively-flipped-panels div.container {
+    padding-bottom: calc(100% * 4);
+  }
+}
+div.interactively-flipped-panels div.container div.panel-wrapper {
+  padding-bottom: calc(50% - 1.5em);
+}
+@media all and (max-width: 480px) {
+  div.interactively-flipped-panels div.container div.panel-wrapper {
+    padding-bottom: 100%;
+  }
+}
+div.interactively-flipped-panels div.container div.panel-wrapper.top-left div.panel div.front {
   background: url(/wp-content/uploads/sites/907/2016/05/homepage-buttons_summer-research-opportunities.jpg) no-repeat center center;
   background-size: auto 100%;
 }
-div.interactively-flipped-panels > div.container > div.panel-wrapper.top-left div.panel div.rear {
+div.interactively-flipped-panels div.container div.panel-wrapper.top-left div.panel div.rear {
   background: #981e32 url(/wp-content/uploads/sites/907/2016/05/homepage-buttons_summer-research-opportunities_hovered.jpg) no-repeat center center;
   background-size: auto 100%;
   color: #fff;
 }
-div.interactively-flipped-panels > div.container > div.panel-wrapper.top-right div.panel div.front {
+div.interactively-flipped-panels div.container div.panel-wrapper.top-right div.panel div.front {
   background: url(/wp-content/uploads/sites/907/2016/05/homepage-buttons_summer-in-pullman-02.jpg) no-repeat center center;
   background-size: auto 100%;
 }
-div.interactively-flipped-panels > div.container > div.panel-wrapper.top-right div.panel div.rear {
+div.interactively-flipped-panels div.container div.panel-wrapper.top-right div.panel div.rear {
   background: #981e32 url(/wp-content/uploads/sites/907/2016/05/homepage-buttons_summer-in-pullman-02_hovered.jpg) no-repeat center center;
   background-size: auto 100%;
   color: #fff;
 }
-div.interactively-flipped-panels > div.container > div.panel-wrapper.bottom-left div.panel div.front {
+div.interactively-flipped-panels div.container div.panel-wrapper.bottom-left div.panel div.front {
   background: url(/wp-content/uploads/sites/907/2016/05/homepage-buttons_summer-research-poster-symposium.jpg) no-repeat center center;
   background-size: auto 100%;
 }
-div.interactively-flipped-panels > div.container > div.panel-wrapper.bottom-left div.panel div.rear {
+div.interactively-flipped-panels div.container div.panel-wrapper.bottom-left div.panel div.rear {
   background: #981e32 url(/wp-content/uploads/sites/907/2016/05/homepage-buttons_summer-research-poster-symposium_hovered.jpg) no-repeat center center;
   background-size: auto 100%;
   color: #fff;
 }
-div.interactively-flipped-panels > div.container > div.panel-wrapper.bottom-right div.panel div.front {
+div.interactively-flipped-panels div.container div.panel-wrapper.bottom-right div.panel div.front {
   background: url(/wp-content/uploads/sites/907/2016/05/homepage-buttons_summer-research-events.jpg) no-repeat center center;
   background-size: auto 100%;
 }
-div.interactively-flipped-panels > div.container > div.panel-wrapper.bottom-right div.panel div.rear {
+div.interactively-flipped-panels div.container div.panel-wrapper.bottom-right div.panel div.rear {
   background: #981e32 url(/wp-content/uploads/sites/907/2016/05/homepage-buttons_summer-research-events_hovered.jpg) no-repeat center center;
   background-size: auto 100%;
   color: #fff;
+}
+div.interactively-flipped-panels div.container div.panel-wrapper:hover {
+  padding-bottom: calc((50% - 2em) * 2 + 2em);
+}
+@media all and (max-width: 480px) {
+  div.interactively-flipped-panels div.container div.panel-wrapper:hover {
+    padding-bottom: calc(100% * 4);
+  }
+}
+div.interactively-flipped-panels div.container div.panel-wrapper.top-left:hover,
+div.interactively-flipped-panels div.container div.panel-wrapper.top-right:hover,
+div.interactively-flipped-panels div.container div.panel-wrapper.bottom-left:hover,
+div.interactively-flipped-panels div.container div.panel-wrapper.bottom-right:hover {
+  padding-bottom: calc((50% - 2em) * 2 + 2em);
+}
+@media all and (max-width: 480px) {
+  div.interactively-flipped-panels div.container div.panel-wrapper.top-left:hover,
+  div.interactively-flipped-panels div.container div.panel-wrapper.top-right:hover,
+  div.interactively-flipped-panels div.container div.panel-wrapper.bottom-left:hover,
+  div.interactively-flipped-panels div.container div.panel-wrapper.bottom-right:hover {
+    position: relative;
+    padding-bottom: calc(100% * 4);
+    width: 100%;
+  }
 }
