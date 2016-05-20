@@ -62,6 +62,38 @@ div.column {
                 padding-bottom: 0;
             }
 		}
+        &.article-sidebar {
+            background: #f8f1eb url(/wp-content/uploads/sites/907/2015/09/tileable-concrete-texture_128x128.png) left top repeat;
+            &.green-marble {
+                background: #e3dfcd url(/wp-content/uploads/sites/907/2015/09/seamless-marble-texture_528x528.png) left top repeat;
+                border: 1px solid #afa370;
+                box-shadow: 3px 3px 3px rgba(57,50,21,0.3333);
+            }
+            &.bluish-gray {
+                background: #edf3f4 url(/wp-content/uploads/sites/907/2015/09/vertically-tileable-gray-acrylic_opacity-0.15.png) left top repeat-y;
+                background-size: 100% auto;
+                border: 1px solid #464e54;
+                box-shadow: 3px 3px 3px rgba(42,48,51,0.3333);
+            }
+        }
+	}
+}
+
+div.column {
+	div.bluish-gray-acrylic-sidebar, div.green-marble-sidebar, div.gray-acrylic-sidebar {
+		p {
+			font-size: .75rem;
+		}
+		h2 + hr {
+			margin-top: .25rem;
+			background-color: rgba(70,78,84,0.75);
+		}
+		h3 {
+			font-size: 1.275rem;
+		}
+		h4 {
+			font-size: 1.05rem;
+		}
 	}
 }
 
@@ -87,5 +119,70 @@ div.column {
                 url(/wp-content/uploads/sites/50/2015/10/section-bar.png) no-repeat right top,
                 url(/wp-content/uploads/sites/50/2015/06/wpbg-news-events-v2.png) no-repeat center;
 		}
+	}
+}
+
+/*  ╔══════════════════════════════════════════════════════════════════════════════════════════════╗ 
+ *  ║ #### DIV STYLES ############################################################################ ║
+ *  ╠==============================================================================================╣
+ *  ║ Containers designed to be used as custom sidebars within a div.column element.               ║
+ *  ║  ╘═» Customized here for use on the SURCA website.                                           ║
+ *  ╚══════════════════════════════════════════════════════════════════════════════════════════════╝
+ */
+div.interactively-flipped-panels {
+    background: @hex-dark-gray url(/wp-content/uploads/sites/907/2016/05/texture_brushed-metal.jpg) repeat scroll left top ;
+    & > div.container > div.panel-wrapper {
+        &.top-left {
+            div.panel {
+                div.front {
+                    background: url(/wp-content/uploads/sites/907/2016/05/homepage-buttons_summer-research-opportunities.jpg) no-repeat center center;
+                    background-size: auto 100%;
+                }	
+                div.rear {
+                    background: @hex-crimson url(/wp-content/uploads/sites/907/2016/05/homepage-buttons_summer-research-opportunities_hovered.jpg) no-repeat center center;
+                    background-size: auto 100%;
+                    color: @hex-white;
+                }
+            }
+        }
+        &.top-right{
+            div.panel {
+                div.front {
+                    background: url(/wp-content/uploads/sites/907/2016/05/homepage-buttons_summer-in-pullman-02.jpg) no-repeat center center;
+                    background-size: auto 100%;
+                }	
+                div.rear {
+                    background: @hex-crimson url(/wp-content/uploads/sites/907/2016/05/homepage-buttons_summer-in-pullman-02_hovered.jpg) no-repeat center center;
+                    background-size: auto 100%;
+                    color: @hex-white;
+                }
+            }
+        }
+        &.bottom-left{
+            div.panel {
+                div.front {
+                    background: url(/wp-content/uploads/sites/907/2016/05/homepage-buttons_summer-research-poster-symposium.jpg) no-repeat center center;
+                    background-size: auto 100%;
+                }	
+                div.rear {
+                    background: @hex-crimson url(/wp-content/uploads/sites/907/2016/05/homepage-buttons_summer-research-poster-symposium_hovered.jpg) no-repeat center center;
+                    background-size: auto 100%;
+                    color: @hex-white;
+                }
+            }
+        }
+        &.bottom-right{
+            div.panel {
+                div.front {
+                    background: url(/wp-content/uploads/sites/907/2016/05/homepage-buttons_summer-research-events.jpg) no-repeat center center;
+                    background-size: auto 100%;
+                }	
+                div.rear {
+                    background: @hex-crimson url(/wp-content/uploads/sites/907/2016/05/homepage-buttons_summer-research-events_hovered.jpg) no-repeat center center;
+                    background-size: auto 100%;
+                    color: @hex-white;
+                }
+            }
+        }
 	}
 }
