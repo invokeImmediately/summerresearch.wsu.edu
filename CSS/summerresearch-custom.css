@@ -4020,7 +4020,7 @@ div.interactively-flipped-panels div.container {
 }
 @media all and (max-width: 480px) {
   div.interactively-flipped-panels div.container {
-    padding-bottom: calc(100% * 4);
+    padding-bottom: calc(100% * 4 + 3em);
   }
 }
 div.interactively-flipped-panels div.container div.panel-wrapper {
@@ -4029,6 +4029,11 @@ div.interactively-flipped-panels div.container div.panel-wrapper {
 @media all and (max-width: 480px) {
   div.interactively-flipped-panels div.container div.panel-wrapper {
     padding-bottom: 100%;
+  }
+}
+@media all and (max-width: 480px) {
+  div.interactively-flipped-panels div.container div.panel-wrapper.top-left {
+    margin-bottom: 1em;
   }
 }
 div.interactively-flipped-panels div.container div.panel-wrapper.top-left div.panel div.front {
@@ -4040,6 +4045,11 @@ div.interactively-flipped-panels div.container div.panel-wrapper.top-left div.pa
   background-size: auto 100%;
   color: #fff;
 }
+@media all and (max-width: 480px) {
+  div.interactively-flipped-panels div.container div.panel-wrapper.top-right {
+    margin-bottom: 1em;
+  }
+}
 div.interactively-flipped-panels div.container div.panel-wrapper.top-right div.panel div.front {
   background: url(/wp-content/uploads/sites/907/2016/05/homepage-buttons_summer-in-pullman-02.jpg) no-repeat center center;
   background-size: auto 100%;
@@ -4048,6 +4058,11 @@ div.interactively-flipped-panels div.container div.panel-wrapper.top-right div.p
   background: #981e32 url(/wp-content/uploads/sites/907/2016/05/homepage-buttons_summer-in-pullman-02_hovered.jpg) no-repeat center center;
   background-size: auto 100%;
   color: #fff;
+}
+@media all and (max-width: 480px) {
+  div.interactively-flipped-panels div.container div.panel-wrapper.bottom-left {
+    margin-bottom: 1em;
+  }
 }
 div.interactively-flipped-panels div.container div.panel-wrapper.bottom-left div.panel div.front {
   background: url(/wp-content/uploads/sites/907/2016/05/homepage-buttons_summer-research-poster-symposium.jpg) no-repeat center center;
@@ -4085,6 +4100,6 @@ div.interactively-flipped-panels div.container div.panel-wrapper.bottom-right:ho
 }
 @media all and (max-width: 480px) {
   div.interactively-flipped-panels div.container:hover {
-    padding-bottom: calc(100% * 4);
+    padding-bottom: calc(100% * 4 + 3em);
   }
 }
