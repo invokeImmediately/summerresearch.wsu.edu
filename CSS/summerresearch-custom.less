@@ -2,26 +2,26 @@
 
 body {
     @media all and (max-width: @v-wdscrn-bckgrnd) {
-        background: @hex-black;
+        background: @hex-light-gray;
     }
     @media all and (min-width: (@v-wdscrn-bckgrnd+1)) and (max-width: @v-wuxga-width) {
-        background: url(/wp-content/uploads/sites/50/2016/05/DSP-Logo-Tiling_wuxga.png) repeat-y fixed right top, @hex-black  url(/wp-content/uploads/sites/50/2016/05/bg-431-gray-0.26-K_wuxga.jpg) repeat-y fixed right top;
+        background: @hex-light-gray url(/wp-content/uploads/sites/907/2016/05/tileable-eroded-scratch-metal-texture_wuxga.jpg) repeat-y fixed right top;
     }
     @media all and (min-width: (@v-wuxga-width+1)) and (max-width: @v-wqxga-width) {
-        background: url(/wp-content/uploads/sites/50/2016/05/DSP-Logo-Tiling_wqxga.png) repeat-y fixed right top, @hex-black url(/wp-content/uploads/sites/50/2016/05/bg-431-gray-0.26-K_wqxga.jpg) repeat-y fixed right top;
+        background: @hex-light-gray url(/wp-content/uploads/sites/907/2016/05/tileable-eroded-scratch-metal-texture_wqxga.jpg) repeat-y fixed right top;
     }
     @media all and (min-width: (@v-wqxga-width+1)) {
-        background: @hex-black;
+        background: @hex-light-gray url(/wp-content/uploads/sites/907/2016/05/tileable-eroded-scratch-metal-texture_wqxga.jpg) repeat-y fixed 1080px top;
     }
 }
 
 main {
-	background: @hex-white url(/wp-content/uploads/sites/53/2016/05/tileable-papar-texture_500x500_opacity-0.5.png) left top repeat;
+	background: @hex-white url(/wp-content/uploads/sites/907/2016/05/tileable-papar-texture_500x500_opacity-0.5.png) left top repeat;
 }
 
 #binder {
-	.rgb-bright-gray(); border-right: 1px solid rgba(@rval, @bval, @gval,0.5);
-	.rgb-darker-gray(); box-shadow: 5px 0 5px rgba(@rval, @bval, @gval,0.5);
+	border-right: 1px solid rgba(red(@hex-black), green(@hex-black), blue(@hex-black), 0.5);
+	box-shadow: 5px 0 5px rgba(red(@hex-darkest-gray), green(@hex-darkest-gray), blue(@hex-darkest-gray), 0.5);
 }
 
 #jacket {
