@@ -3897,9 +3897,11 @@ div.auto-scroller ul li {
 main {
   background: #fff url(/wp-content/uploads/sites/907/2016/05/tileable-papar-texture_500x500_opacity-0.5.png) left top repeat;
 }
-#binder {
-  border-right: 1px solid rgba(0, 0, 0, 0.5);
-  box-shadow: 5px 0 5px rgba(42, 48, 51, 0.5);
+@media all and (min-width: 1441px) {
+  #binder {
+    border-right: 1px solid rgba(0, 0, 0, 0.5);
+    box-shadow: 5px 0 5px rgba(42, 48, 51, 0.5);
+  }
 }
 #jacket {
   background-repeat: no-repeat;
