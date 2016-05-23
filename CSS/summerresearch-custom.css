@@ -1012,17 +1012,17 @@ div.column p.article-deck {
 }
 @media all {
   div.column p.article-deck {
-    font-size: 1.2rem;
+    font-size: 1.2em;
   }
 }
 @media all and (min-width: 481px) and (max-width: 1049px) {
   div.column p.article-deck {
-    font-size: 1.10634534rem;
+    font-size: 1.10634534em;
   }
 }
 @media all and (max-width: 480px) {
   div.column p.article-deck {
-    font-size: 1.02000001rem;
+    font-size: 1.02000001em;
   }
 }
 div.column p.article-deck strong {
@@ -1030,18 +1030,18 @@ div.column p.article-deck strong {
 }
 div.column p.article-tagline {
   font-family: "Palatino";
-  font-size: 1.45rem;
+  font-size: 1.45em;
   line-height: 1.275em;
   font-weight: 500;
 }
 @media all and (min-width: 481px) and (max-width: 1049px) {
   div.column p.article-tagline {
-    font-size: 1.33683395rem;
+    font-size: 1.33683395em;
   }
 }
 @media all and (max-width: 480px) {
   div.column p.article-tagline {
-    font-size: 1.23250001rem;
+    font-size: 1.23250001em;
   }
 }
 div.column p.article-tagline.sans {
@@ -1053,6 +1053,19 @@ div.column p.article-tagline.sans > span.lead-in {
   color: #3f6b72;
   font-weight: 700;
   letter-spacing: normal;
+}
+div.column p.article-tagline.home {
+  font-size: 1.90000025em;
+}
+@media all and (min-width: 481px) and (max-width: 1049px) {
+  div.column p.article-tagline.home {
+    font-size: 1.75171369em;
+  }
+}
+@media all and (max-width: 480px) {
+  div.column p.article-tagline.home {
+    font-size: 1.61500023em;
+  }
 }
 div.column p.no-bottom-pad {
   padding-bottom: 0;
