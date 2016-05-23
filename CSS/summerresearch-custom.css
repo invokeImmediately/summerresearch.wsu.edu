@@ -4118,3 +4118,19 @@ div.interactively-flipped-panels div.container div.panel-wrapper.bottom-right:ho
     padding-bottom: calc(100% * 4 + 3em);
   }
 }
+/*  ╔══════════════════════════════════════════════════════════════════════════════════════════════╗ 
+ *  ║ #### CUSTOM STYLES ######################################################################### ║
+ *  ╠==============================================================================================╣
+ *  ║ Custom styles intended only for the Summer Research website.                                 ║
+ *  ╚══════════════════════════════════════════════════════════════════════════════════════════════╝
+ */
+div.column p.rounded-box {
+  border: 1px solid #d9d9d9;
+  border-radius: 7px;
+  padding: 7px;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+}
+div.column p.rounded-box > img {
+  border-radius: 7px;
+  margin: 4px;
+}
