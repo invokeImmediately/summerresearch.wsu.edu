@@ -4201,3 +4201,27 @@ ul.event-boxes > li > p {
 ul.event-boxes > li > *:last-child {
   padding-bottom: 0.5rem;
 }
+ul.event-boxes > li:nth-child(4n + 1) > h3:first-child {
+  background-color: rgba(255, 184, 28, 0.5);
+  color: #9e7510;
+}
+ul.event-boxes > li:nth-child(4n + 1) > h4:nth-child(2) {
+  background-color: rgba(255, 184, 28, 0.75);
+  color: #f9f4e7;
+}
+ul.event-boxes > li:nth-child(4n + 2) > h3:first-child {
+  background-color: rgba(173, 164, 0, 0.5);
+  color: #72652a;
+}
+ul.event-boxes > li:nth-child(4n + 2) > h4:nth-child(2) {
+  background-color: rgba(173, 164, 0, 0.75);
+  color: #f4f2eb;
+}
+ul.event-boxes > li:nth-child(4n + 3) > h3:first-child {
+  background-color: rgba(246, 134, 31, 0.5);
+  color: #925b29;
+}
+ul.event-boxes > li:nth-child(4n + 3) > h4:nth-child(2) {
+  background-color: rgba(246, 134, 31, 0.75);
+  color: #f8f1eb;
+}
