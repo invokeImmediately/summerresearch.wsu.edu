@@ -1685,7 +1685,7 @@ div.column .has-smaller-text {
     max-width: 792px;
   }
 }
-main > section.row:last-child > div.column:last-child > *:last-child:not(.no-bottom-pad) {
+main section.row:last-child > div.column:last-child > *:last-child:not(.no-bottom-pad) {
   padding-bottom: 2rem;
 }
 /*         └-----------------------------------------------------------------------------------------┘        
