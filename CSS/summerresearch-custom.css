@@ -4175,6 +4175,9 @@ ul.event-boxes > li > h3:first-child {
   border-top: 1px solid rgba(0, 165, 189, 0);
   border-top-left-radius: 4px;
   border-top-right-radius: 4px;
+  font-size: 1.45em;
+  font-weight: bold;
+  text-transform: none;
   color: #3f6b72;
 }
 ul.event-boxes > li > h4:nth-child(2) {
@@ -4182,7 +4185,7 @@ ul.event-boxes > li > h4:nth-child(2) {
   margin-top: 0;
   margin-bottom: 0;
   background-color: rgba(0, 165, 189, 0.75);
-  font-size: 1.1em;
+  font-size: 1.15em;
   font-weight: 700;
   color: #edf3f4;
 }
@@ -4193,6 +4196,7 @@ ul.event-boxes > li > p {
   text-align: left;
   padding-right: 0.5rem;
   padding-left: 0.5rem;
+  font-size: 0.95em;
 }
 ul.event-boxes > li > *:last-child {
   padding-bottom: 0.5rem;
