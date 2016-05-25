@@ -5,7 +5,7 @@ concat([
  '../WSU-UE---JS/jQuery.oue-custom.js',
  '../WSU-UE---JS/jQuery.qTip.js',
  '../WSU-UE---JS/jQuery.autoScrollingImages.js',
- '../WSU-UE---JS/jQuery.masonry.js'
+ '../WSU-UE---JS/jQuery.masonry.min.js'
  ], './wp-custom-js-source.js', function() {
     console.log('Concatenation complete.');     
  });
