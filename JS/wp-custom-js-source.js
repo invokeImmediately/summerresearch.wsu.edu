@@ -298,8 +298,6 @@ e===O?(h=c===H?L:K,j[h]="50%",j[ib+"-"+h]=-Math.round(b[c===H?0:1]/2)+i):(h=f._p
             });
             if(proceedWithLayout && (!sizerFound || !gutterSizerFound)) proceedWithLayout = false;
             if(proceedWithLayout) {
-//                var gutterSize = $thisCascade.data("data-gutter-size");
-//                if(gutterSize == undefined) gutterSize = 16; // This is equivalent to half the default spacing in Chrome, i.e. 1rem.
                 $thisCascade.masonry({
                     columnWidth: ".cascade-sizer",
                     gutter: ".gutter-sizer",
@@ -312,5 +310,36 @@ e===O?(h=c===H?L:K,j[h]="50%",j[ib+"-"+h]=-Math.round(b[c===H?0:1]/2)+i):(h=f._p
                 });
             }
         });
+    });
+    $(window).load(function () {
+        $masonryTrgts.each(function () {
+            var $thisCascade = $(this);
+            var proceedWithLayout = true;
+            var sizerFound = false;
+            var gutterSizerFound = false;
+            var $cascadeChilren = $thisCascade.children();
+            $cascadeChilren.each(function () { // Look for the correct layout
+                var $thisChild = $(this);
+                if(!$thisChild.hasClass("cascaded-item")) {
+                    if(!$thisChild.hasClass("cascade-sizer")) {
+                        if(!$thisChild.hasClass("gutter-sizer")) {
+                            if(!$thisChild.hasClass("cascade-other")) {
+                                return proceedWithLayout = false;
+                            }
+                        }
+                        else
+                        {
+                            gutterSizerFound = true;
+                        }
+                    }
+                    else {
+                        sizerFound = true;
+                    }
+                }
+            });
+            if(proceedWithLayout && (!sizerFound || !gutterSizerFound)) proceedWithLayout = false;
+            if(proceedWithLayout) {
+                $thisCascade.masonry("layout");
+            }
     });
 })(jQuery);
