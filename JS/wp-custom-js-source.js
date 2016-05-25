@@ -342,5 +342,6 @@ e===O?(h=c===H?L:K,j[h]="50%",j[ib+"-"+h]=-Math.round(b[c===H?0:1]/2)+i):(h=f._p
             if(proceedWithLayout) {
                 $thisCascade.masonry("layout");
             }
+        });
     });
 })(jQuery);
