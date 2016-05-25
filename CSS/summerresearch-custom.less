@@ -248,3 +248,66 @@ div.column p.rounded-box {
         margin: 4px;
     }
 }
+
+//     ┌─────────────────────────────────────────────────────────────────────────────────────────────────┐
+//     │ ++++ Custom UL selectors ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ │
+//     └─────────────────────────────────────────────────────────────────────────────────────────────────┘
+ul.event-boxes {
+    &:extend(ul.content-boxes all);
+}
+
+ul.event-boxes {
+    & > li {
+        float: left;
+        width: 49%;
+        min-height: 198px;
+        margin-bottom: 2%;
+        @media all and (max-width: @v-bckgrnd-thrshld) {
+            overflow-x: visible;
+        }
+        & + li {
+            margin-top: 0;
+        }
+        &.cascade-sizer, &.gutter-sizer {
+            height: 0;
+            min-height: 0;
+            padding: 0;
+            border: none;
+            background: none;
+            box-shadow: none;
+        }
+        &.gutter-sizer {
+            width: 2%;
+        }
+        & > h3:first-child {
+            padding: (@v-dflt-spcng / 4);
+            margin: 0;
+            .rgb-accent-blue(); background-color: rgba(@rval, @gval, @bval, 0.5);
+            border-top: 1px solid rgba(@rval, @gval, @bval, 0.0);
+            border-top-left-radius: 4px;
+             border-top-right-radius: 4px;
+            color: @hex-dark-blue;
+        }
+        & > h4:nth-child(2) {
+            &:extend(.has-alt-font);
+            padding: (@v-dflt-spcng * 3 / 20) (@v-dflt-spcng / 4);
+            margin-top: 0;
+             margin-bottom: 0;
+            .rgb-accent-blue(); background-color: rgba(@rval, @gval, @bval, 0.75);
+            font-size: @v-p-sz * 1.1;
+            font-weight: 700;
+            color: @hex-bright-blue;
+            & + * {
+                margin-top: (@v-dflt-spcng / 4);
+            }
+        }
+        & > p {
+            text-align: left;
+            padding-right: (@v-dflt-spcng / 4);
+             padding-left: (@v-dflt-spcng / 4);
+        }
+        & > *:last-child {
+            padding-bottom: (@v-dflt-spcng / 4);
+        }
+    }
+}
