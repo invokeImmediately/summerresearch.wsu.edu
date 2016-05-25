@@ -302,5 +302,35 @@ ul.event-boxes {
         & > *:last-child {
             padding-bottom: (@v-dflt-spcng / 4);
         }
+        &:nth-child(4n + 1) {
+            & > h3:first-child {
+                background-color: rgba(red(@hex-accent-yellow), green(@hex-accent-yellow), blue(@hex-accent-yellow), 0.5);
+                color: @hex-dark-yellow;
+            }
+            & > h4:nth-child(2) {
+                background-color: rgba(red(@hex-accent-yellow), green(@hex-accent-yellow), blue(@hex-accent-yellow), 0.75);
+                color: @hex-bright-yellow;
+            }
+        }
+        &:nth-child(4n + 2) {
+            & > h3:first-child {
+                background-color: rgba(red(@hex-accent-green), green(@hex-accent-green), blue(@hex-accent-green), 0.5);
+                color: @hex-dark-green;
+            }
+            & > h4:nth-child(2) {
+                background-color: rgba(red(@hex-accent-green), green(@hex-accent-green), blue(@hex-accent-green), 0.75);
+                color: @hex-bright-green;
+            }
+        }
+        &:nth-child(4n + 3) {
+            & > h3:first-child {
+                background-color: rgba(red(@hex-accent-orange), green(@hex-accent-orange), blue(@hex-accent-orange), 0.5);
+                color: @hex-dark-orange;
+            }
+            & > h4:nth-child(2) {
+                background-color: rgba(red(@hex-accent-orange), green(@hex-accent-orange), blue(@hex-accent-orange), 0.75);
+                color: @hex-bright-orange;
+            }
+        }
     }
 }
