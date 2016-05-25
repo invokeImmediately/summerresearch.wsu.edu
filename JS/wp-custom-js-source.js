@@ -312,6 +312,7 @@ e===O?(h=c===H?L:K,j[h]="50%",j[ib+"-"+h]=-Math.round(b[c===H?0:1]/2)+i):(h=f._p
         });
     });
     $(window).load(function () {
+        var $masonryTrgts = $("ul.cascaded-layout");
         $masonryTrgts.each(function () {
             var $thisCascade = $(this);
             var proceedWithLayout = true;
