@@ -2386,6 +2386,18 @@ ul.content-boxes > li + li,
 ul.event-boxes > li + li {
   margin-top: 2rem;
 }
+ul.cascaded-layout > li.cascade-sizer,
+ul.cascaded-layout > li.gutter-sizer {
+  height: 0 !important;
+  min-height: 0 !important;
+  padding: 0 !important;
+  border: none !important;
+  background: none !important;
+  box-shadow: none !important;
+}
+ul.cascaded-layout > li.gutter-sizer {
+  width: 2% !important;
+}
 a.vpue-tooltip {
   position: relative;
   border-bottom: dotted 1px #b67233;
