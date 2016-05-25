@@ -1336,9 +1336,6 @@ div.column {
 div.column:nth-child(1) {
   margin-top: 0;
 }
-div.column > *:last-child:not(.no-bottom-pad) {
-  padding-bottom: 2rem;
-}
 div.column.hides-overflow {
   overflow: hidden;
 }
@@ -1687,6 +1684,9 @@ div.column .has-smaller-text {
   div.column .large-format-friendly {
     max-width: 792px;
   }
+}
+main > section.row:last-child > div.column:last-child > *:last-child:not(.no-bottom-pad) {
+  padding-bottom: 2rem;
 }
 /*         └-----------------------------------------------------------------------------------------┘        
  */
