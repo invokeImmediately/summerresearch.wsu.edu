@@ -417,6 +417,14 @@ section.halves div.column p {
   text-align: left;
 }
 @media (min-width: 1050px) {
+  section.halves.large-format-friendly,
+  section.halves.row.large-format-friendly {
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 800px;
+  }
+}
+@media (min-width: 1050px) {
   section.single.large-format-friendly div.column.one,
   section.row.single.large-format-friendly div.column.one {
     float: none;
