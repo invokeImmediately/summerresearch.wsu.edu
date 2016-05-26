@@ -3953,7 +3953,7 @@ header.main-header {
  *  ║ #### ASIDE.ARTICLE-SIDEBAR ################################################################# ║
  *  ╠==============================================================================================╣
  *  ║ Containers designed to be used as custom sidebars within a div.column element.               ║
- *  ║  ╘═» Customized here for use on the DSP website.                                             ║
+ *  ║  ╘═» Customized here for use on the Summer Research website.                                 ║
  *  ╚══════════════════════════════════════════════════════════════════════════════════════════════╝
  */
 div.column aside {
@@ -4009,19 +4009,6 @@ div.column div.green-marble-sidebar h4,
 div.column div.gray-acrylic-sidebar h4 {
   font-size: 1.05rem;
 }
-/*  ╔══════════════════════════════════════════════════════════════════════════════════════════════╗ 
- *  ║ #### LIST STYLES ########################################################################### ║
- *  ╠==============================================================================================╣
- *  ║ Containers designed to be used as custom sidebars within a div.column element.               ║
- *  ║  ╘═» Customized here for use on the SURCA website.                                           ║
- *  ╚══════════════════════════════════════════════════════════════════════════════════════════════╝
- */
-div.column ul:not(.content-boxes):not(.event-boxes) li {
-  list-style-image: url(/wp-content/uploads/sites/50/2015/05/ico-cougar-bullet-point.png);
-}
-div.column ul:not(.content-boxes):not(.event-boxes).gray-bullets li {
-  list-style-image: url(/wp-content/uploads/sites/50/2016/01/ico-cougar-bullet-point_gray.png);
-}
 div.column section.header-newsEvents {
   background: url(/wp-content/uploads/sites/50/2015/10/section-bar.png) no-repeat left top, url(/wp-content/uploads/sites/50/2015/10/section-bar.png) no-repeat right top, url(/wp-content/uploads/sites/50/2015/06/wpbg-news-events-v2.png) no-repeat center;
 }
@@ -4029,7 +4016,7 @@ div.column section.header-newsEvents {
  *  ║ #### DIV STYLES ############################################################################ ║
  *  ╠==============================================================================================╣
  *  ║ Containers designed to be used as custom sidebars within a div.column element.               ║
- *  ║  ╘═» Customized here for use on the SURCA website.                                           ║
+ *  ║  ╘═» Customized here for use on the Summer Research website.                                 ║
  *  ╚══════════════════════════════════════════════════════════════════════════════════════════════╝
  */
 div.interactively-flipped-panels {
@@ -4154,6 +4141,19 @@ div.column p.rounded-box > img {
   border-radius: 7px;
   margin: 4px;
 }
+/*  ╔══════════════════════════════════════════════════════════════════════════════════════════════╗ 
+ *  ║ #### LIST STYLES ########################################################################### ║
+ *  ╠==============================================================================================╣
+ *  ║ Containers designed to be used as custom sidebars within a div.column element.               ║
+ *  ║  ╘═» Customized here for use on the Summer Research website.                                 ║
+ *  ╚══════════════════════════════════════════════════════════════════════════════════════════════╝
+ */
+div.column ul:not(.content-boxes):not(.event-boxes):not(.program-info) li {
+  list-style-image: url(/wp-content/uploads/sites/50/2015/05/ico-cougar-bullet-point.png);
+}
+div.column ul:not(.content-boxes):not(.event-boxes):not(.program-info).gray-bullets li {
+  list-style-image: url(/wp-content/uploads/sites/50/2016/01/ico-cougar-bullet-point_gray.png);
+}
 ul.event-boxes > li {
   float: left;
   width: 49%;
@@ -4224,4 +4224,18 @@ ul.event-boxes > li:nth-child(4n + 3) > h3:first-child {
 ul.event-boxes > li:nth-child(4n + 3) > h4:nth-child(2) {
   background-color: rgba(246, 134, 31, 0.75);
   color: #f8f1eb;
+}
+ul.program-info li {
+  float: left;
+  width: 49%;
+  min-height: 198px;
+  padding: 7px;
+  margin-bottom: 2%;
+  border: 1px solid #d9d9d9;
+  border-radius: 7px;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+}
+ul.program-info li > img {
+  border-radius: 7px;
+  margin: 4px;
 }
