@@ -4225,17 +4225,21 @@ ul.event-boxes > li:nth-child(4n + 3) > h4:nth-child(2) {
   background-color: rgba(246, 134, 31, 0.75);
   color: #f8f1eb;
 }
-ul.program-info li {
+ul.program-info {
+  padding-right: 0;
+  padding-left: 0;
+}
+ul.program-info > li {
   float: left;
   width: 49%;
-  min-height: 198px;
   padding: 7px;
   margin-bottom: 2%;
   border: 1px solid #d9d9d9;
   border-radius: 7px;
+  list-style-type: none;
   box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
 }
-ul.program-info li > img {
+ul.program-info > li > img {
   border-radius: 7px;
   margin: 4px;
 }
