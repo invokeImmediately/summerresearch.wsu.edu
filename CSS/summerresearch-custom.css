@@ -654,15 +654,6 @@ div.column aside.article-sidebar h4:first-child {
     transform: none;
   }
 }
-div.column > header:first-child {
-  display: none;
-}
-div.column header:first-child + h1,
-div.column header:first-child + h2,
-div.column header:first-child + h3,
-div.column header:first-child + h4 {
-  margin-top: 0;
-}
 div.column h1 {
   padding-bottom: 0;
   margin-top: 1.5rem;
@@ -962,6 +953,14 @@ header.main-header div.header-group {
     -webkit-transform: translateX(-50%);
     -ms-transform: translateX(-50%);
   }
+}
+div.column > header:first-child {
+  display: none;
+}
+div.column header:first-child + h1,
+div.column header:first-child + h2.fancy.with-top-border,
+div.column header:first-child + h3.fancy.with-top-border {
+  margin-top: 0;
 }
 footer.article-footer div.author-info {
   display: none;
