@@ -4232,14 +4232,16 @@ ul.program-info {
 ul.program-info > li {
   float: left;
   width: 49%;
-  padding: 7px;
   margin-bottom: 2%;
   border: 1px solid #d9d9d9;
   border-radius: 7px;
   list-style-type: none;
   box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
 }
-ul.program-info > li > img {
+ul.program-info > li > p {
+  padding: 7px;
+}
+ul.program-info > li > p > img {
   border-radius: 7px;
   margin: 4px;
 }
