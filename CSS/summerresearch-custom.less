@@ -336,17 +336,23 @@ ul.event-boxes {
     }
 }
 
-ul.program-info li {
-    float: left;
-    width: 49%;
-    min-height: 198px;
-    padding: 7px;
-    margin-bottom: 2%;
-    border: 1px solid #d9d9d9;
-    border-radius: 7px;
-    box-shadow: 1px 1px 1px rgba(red(@hex-black), green(@hex-black), blue(@hex-black), 0.2);
-    & > img {
+ul.program-info {
+    padding-right: 0;
+     padding-left: 0;
+    & > li {
+        float: left;
+        width: 49%;
+        margin-bottom: 2%;
+        border: 1px solid #d9d9d9;
         border-radius: 7px;
-        margin: 4px;
+        list-style-type: none;
+        box-shadow: 1px 1px 1px rgba(red(@hex-black), green(@hex-black), blue(@hex-black), 0.2);
+        & > p {
+            padding: 7px;
+            & > img {
+                border-radius: 7px;
+                margin: 4px;
+            }
+        }
     }
 }
