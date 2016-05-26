@@ -46,7 +46,7 @@ header.main-header {
  *  ║ #### ASIDE.ARTICLE-SIDEBAR ################################################################# ║
  *  ╠==============================================================================================╣
  *  ║ Containers designed to be used as custom sidebars within a div.column element.               ║
- *  ║  ╘═» Customized here for use on the DSP website.                                             ║
+ *  ║  ╘═» Customized here for use on the Summer Research website.                                 ║
  *  ╚══════════════════════════════════════════════════════════════════════════════════════════════╝
  */
 div.column {
@@ -99,20 +99,6 @@ div.column {
 	}
 }
 
-/*  ╔══════════════════════════════════════════════════════════════════════════════════════════════╗ 
- *  ║ #### LIST STYLES ########################################################################### ║
- *  ╠==============================================================================================╣
- *  ║ Containers designed to be used as custom sidebars within a div.column element.               ║
- *  ║  ╘═» Customized here for use on the SURCA website.                                           ║
- *  ╚══════════════════════════════════════════════════════════════════════════════════════════════╝
- */
-div.column ul:not(.content-boxes):not(.event-boxes) {
-    li { list-style-image: url(/wp-content/uploads/sites/50/2015/05/ico-cougar-bullet-point.png); }
-    &.gray-bullets {
-        li { list-style-image: url(/wp-content/uploads/sites/50/2016/01/ico-cougar-bullet-point_gray.png); }
-    }
-}
-
 div.column {
 	&:extend(.has-dflt-font);
 	section {
@@ -128,7 +114,7 @@ div.column {
  *  ║ #### DIV STYLES ############################################################################ ║
  *  ╠==============================================================================================╣
  *  ║ Containers designed to be used as custom sidebars within a div.column element.               ║
- *  ║  ╘═» Customized here for use on the SURCA website.                                           ║
+ *  ║  ╘═» Customized here for use on the Summer Research website.                                 ║
  *  ╚══════════════════════════════════════════════════════════════════════════════════════════════╝
  */
 div.interactively-flipped-panels {
@@ -249,9 +235,24 @@ div.column p.rounded-box {
     }
 }
 
+/*  ╔══════════════════════════════════════════════════════════════════════════════════════════════╗ 
+ *  ║ #### LIST STYLES ########################################################################### ║
+ *  ╠==============================================================================================╣
+ *  ║ Containers designed to be used as custom sidebars within a div.column element.               ║
+ *  ║  ╘═» Customized here for use on the Summer Research website.                                 ║
+ *  ╚══════════════════════════════════════════════════════════════════════════════════════════════╝
+ */
+div.column ul:not(.content-boxes):not(.event-boxes):not(.program-info) {
+    li { list-style-image: url(/wp-content/uploads/sites/50/2015/05/ico-cougar-bullet-point.png); }
+    &.gray-bullets {
+        li { list-style-image: url(/wp-content/uploads/sites/50/2016/01/ico-cougar-bullet-point_gray.png); }
+    }
+}
+//
 //     ┌─────────────────────────────────────────────────────────────────────────────────────────────────┐
 //     │ ++++ Custom UL selectors ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ │
 //     └─────────────────────────────────────────────────────────────────────────────────────────────────┘
+//
 ul.event-boxes {
     &:extend(ul.content-boxes all);
 }
@@ -332,5 +333,20 @@ ul.event-boxes {
                 color: @hex-bright-orange;
             }
         }
+    }
+}
+
+ul.program-info li {
+    float: left;
+    width: 49%;
+    min-height: 198px;
+    padding: 7px;
+    margin-bottom: 2%;
+    border: 1px solid #d9d9d9;
+    border-radius: 7px;
+    box-shadow: 1px 1px 1px rgba(red(@hex-black), green(@hex-black), blue(@hex-black), 0.2);
+    & > img {
+        border-radius: 7px;
+        margin: 4px;
     }
 }
