@@ -421,7 +421,7 @@ section.halves div.column p {
   section.halves.row.large-format-friendly {
     margin-right: auto;
     margin-left: auto;
-    max-width: 800px;
+    max-width: 800px !important;
   }
 }
 @media (min-width: 1050px) {
