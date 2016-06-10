@@ -261,10 +261,16 @@ ul.event-boxes {
     & > li {
         float: left;
         width: 49%;
+        @media all and (max-width: @v-rghtclmn-thrshld) {
+            width: 98%;
+        }
         min-height: 198px;
         margin-bottom: 2%;
         @media all and (max-width: @v-bckgrnd-thrshld) {
             overflow-x: visible;
+        }
+        &.full-width {
+            width: 98%;
         }
         & + li {
             margin-top: 0;
