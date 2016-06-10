@@ -4248,6 +4248,19 @@ ul.event-boxes > li > h4:nth-child(2) {
 ul.event-boxes > li > h4:nth-child(2) + * {
   margin-top: 0.5rem;
 }
+ul.event-boxes > li > div.iframe-wrapper {
+  position: relative;
+  padding-bottom: 66.666667%;
+  height: 0;
+  overflow: hidden;
+}
+ul.event-boxes > li > div.iframe-wrapper > iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
 ul.event-boxes > li > p {
   text-align: left;
   padding-right: 0.5rem;
