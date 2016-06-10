@@ -4170,10 +4170,18 @@ ul.event-boxes > li {
   min-height: 198px;
   margin-bottom: 2%;
 }
+@media all and (max-width: 693px) {
+  ul.event-boxes > li {
+    width: 98%;
+  }
+}
 @media all and (max-width: 1205px) {
   ul.event-boxes > li {
     overflow-x: visible;
   }
+}
+ul.event-boxes > li.full-width {
+  width: 98%;
 }
 ul.event-boxes > li + li {
   margin-top: 0;
