@@ -4250,7 +4250,7 @@ ul.event-boxes > li > h4:nth-child(2) + * {
 }
 ul.event-boxes > li > div.iframe-wrapper {
   position: relative;
-  width: 98%;
+  width: 97%;
   margin-left: auto;
   margin-right: auto;
   padding-bottom: 66.666667%;
