@@ -4273,6 +4273,9 @@ ul.event-boxes > li > p {
   padding-left: 0.5rem;
   font-size: 0.95em;
 }
+ul.event-boxes > li > p:last-child {
+  margin-bottom: 0;
+}
 ul.event-boxes > li > *:last-child {
   padding-bottom: 0.5rem;
 }
