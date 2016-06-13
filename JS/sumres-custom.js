@@ -21,7 +21,7 @@
 		InitExpiringItems(".has-expiration", "expirationDate");
 	});
 
-	function (slctrExpiringElems, dataAttrExprtnDate) {
+	function InitExpiringItems(slctrExpiringElems, dataAttrExprtnDate) {
 		var today = new Date();
 		var $expiringElems = $(slctrExpiringElems);
 		$expiringElems.each(function () {
