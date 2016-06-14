@@ -324,9 +324,9 @@ ul.event-boxes {
             padding-right: (@v-dflt-spcng / 4);
              padding-left: (@v-dflt-spcng / 4);
             font-size: 0.95em;
-            &:last-child {
-                margin-bottom: 0 !important;
-            }
+			&:not(:last-child) {
+                margin-bottom: @v-btm-mrgns;
+			}
         }
         & > *:last-child {
             padding-bottom: (@v-dflt-spcng / 4);
