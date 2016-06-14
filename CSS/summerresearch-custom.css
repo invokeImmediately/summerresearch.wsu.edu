@@ -2341,7 +2341,7 @@ div.column a:hover {
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0;
   border-color: transparent;
-  box-shadow: insert 0 -5px 0 transparent;
+  box-shadow: inset 0 -5px 0 transparent;
   background-color: rgba(239, 120, 121, 0.3);
   color: #c60c30;
   text-shadow: 1px 1px 1px rgba(152, 30, 50, 0.3);
