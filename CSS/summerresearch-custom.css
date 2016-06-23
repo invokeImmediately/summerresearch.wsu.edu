@@ -4272,10 +4272,12 @@ ul.event-boxes > li > div.iframe-wrapper > iframe {
   padding: 0;
 }
 ul.event-boxes > li > p {
-  text-align: left;
   padding-right: 0.5rem;
   padding-left: 0.5rem;
   font-size: 0.95em;
+}
+ul.event-boxes > li > p:not(.centered):not(.centers-text) {
+  text-align: left;
 }
 ul.event-boxes > li > p:not(:last-child):not(.no-btm-spacing) {
   margin-bottom: 1em;
