@@ -253,11 +253,11 @@ div.column ul:not(.content-boxes):not(.event-boxes):not(.program-info) {
 //     │ ++++ Custom UL selectors ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ │
 //     └─────────────────────────────────────────────────────────────────────────────────────────────────┘
 //
-ul.event-boxes {
+div.column ul.event-boxes {
     &:extend(ul.content-boxes all);
 }
 
-ul.event-boxes {
+div.column ul.event-boxes {
     & > li {
         float: left;
         width: 49%;
@@ -320,7 +320,9 @@ ul.event-boxes {
             }
         }
         & > p {
-            text-align: left;
+			&:not(.centered):not(.centers-text) {
+				text-align: left;
+			}
             padding-right: (@v-dflt-spcng / 4);
              padding-left: (@v-dflt-spcng / 4);
             font-size: 0.95em;
