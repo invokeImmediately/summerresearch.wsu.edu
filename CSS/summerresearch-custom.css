@@ -1208,11 +1208,15 @@ div.column p.banner-text-orange-with-towers {
   }
 }
 main section.row > div.column > p:not(.no-btm-margin),
-main section.row > div.column > section > p:not(.no-btm-margin) {
+main section.row > div.column > article > div.article-body > p:not(.no-btm-margin),
+main section.row > div.column > section > p:not(.no-btm-margin),
+main section.row > div.column > article > div.article-body > section > p:not(.no-btm-margin) {
   margin-bottom: 1em;
 }
 main section.row > div.column:last-child > div.column > p:last-child,
-main section.row > div.column:last-child > div.column > section > p:last-child {
+main section.row > div.column > article > div.article-body:last-child > div.column > p:last-child,
+main section.row > div.column:last-child > div.column > section > p:last-child,
+main section.row > div.column > article > div.article-body:last-child > div.column > section > p:last-child {
   margin-bottom: 0;
 }
 /*  └──────────────────────────────────────────────────────────────────────────────────────────────┘
