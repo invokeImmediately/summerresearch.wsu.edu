@@ -16,7 +16,7 @@ div.column,
   font-family: 'Open Sans', sans-serif;
 }
 .has-alt-font,
-p.article-tagline.sans,
+div.column p.article-tagline.sans,
 span.accentuated-text,
 div.column ul.event-boxes > li > h4:nth-child(2) {
   font-family: 'Open Sans Condensed', 'Open Sans', sans-serif;
@@ -999,109 +999,109 @@ footer.article-footer div.author-info {
  *  │       already been imported.                                                                 │
  *  ├----------------------------------------------------------------------------------------------┤
  */
-p {
+div.column p {
   padding-bottom: 0;
   text-align: justify;
 }
-p.centered {
+div.column p.centered {
   text-align: center;
 }
-p.align-left {
+div.column p.align-left {
   text-align: left;
 }
 @media all {
-  p {
+  div.column p {
     line-height: 1.375em;
   }
 }
 @media all and (min-width: 1050px) {
-  p {
+  div.column p {
     font-size: 1em;
   }
 }
 @media all and (min-width: 481px) and (max-width: 1049px) {
-  p {
+  div.column p {
     font-size: 0.92195445em;
   }
 }
 @media all and (max-width: 480px) {
-  p {
+  div.column p {
     font-size: 0.85000001em;
     text-align: left;
   }
 }
-p.btm-margin-override:not(:last-child) {
+div.column p.btm-margin-override:not(:last-child) {
   margin-bottom: 0;
 }
-p.double-margins:not(:last-child) {
+div.column p.double-margins:not(:last-child) {
   margin-bottom: 2em;
 }
-p.half-margins:not(:last-child) {
+div.column p.half-margins:not(:last-child) {
   margin-bottom: 0.5em;
 }
-p.article-deck {
+div.column p.article-deck {
   color: #72652a;
 }
 @media all {
-  p.article-deck {
+  div.column p.article-deck {
     font-size: 1.2em;
   }
 }
 @media all and (min-width: 481px) and (max-width: 1049px) {
-  p.article-deck {
+  div.column p.article-deck {
     font-size: 1.10634534em;
   }
 }
 @media all and (max-width: 480px) {
-  p.article-deck {
+  div.column p.article-deck {
     font-size: 1.02000001em;
   }
 }
-p.article-deck strong {
+div.column p.article-deck strong {
   color: #8f7e35;
 }
-p.article-tagline {
+div.column p.article-tagline {
   font-family: "Palatino";
   font-size: 1.45em;
   line-height: 1.275em;
   font-weight: 500;
 }
 @media all and (min-width: 481px) and (max-width: 1049px) {
-  p.article-tagline {
+  div.column p.article-tagline {
     font-size: 1.33683395em;
   }
 }
 @media all and (max-width: 480px) {
-  p.article-tagline {
+  div.column p.article-tagline {
     font-size: 1.23250001em;
   }
 }
-p.article-tagline.sans {
+div.column p.article-tagline.sans {
   color: #2a3033;
   font-weight: 300;
 }
-p.article-tagline.sans > span.lead-in {
+div.column p.article-tagline.sans > span.lead-in {
   color: #3f6b72;
   font-weight: 700;
   letter-spacing: normal;
 }
-p.article-tagline.home {
+div.column p.article-tagline.home {
   font-size: 1.90000025em;
 }
 @media all and (min-width: 481px) and (max-width: 1049px) {
-  p.article-tagline.home {
+  div.column p.article-tagline.home {
     font-size: 1.75171369em;
   }
 }
 @media all and (max-width: 480px) {
-  p.article-tagline.home {
+  div.column p.article-tagline.home {
     font-size: 1.61500023em;
   }
 }
-p.no-bottom-pad {
+div.column p.no-bottom-pad {
   padding-bottom: 0;
 }
-p.vpue-jump-bar {
+div.column p.vpue-jump-bar {
   padding: 0 1rem 1rem;
   margin-top: 2rem;
   margin-bottom: 2rem;
@@ -1111,26 +1111,26 @@ p.vpue-jump-bar {
   color: #464e54;
   text-align: center;
 }
-p.vpue-jump-bar span.title {
+div.column p.vpue-jump-bar span.title {
   font-size: 1.18147448em;
   line-height: 2em;
   font-weight: bold;
   font-variant: small-caps;
 }
-p.vpue-jump-back {
+div.column p.vpue-jump-back {
   padding-bottom: 0.33333333em;
   margin-bottom: 0.33333333em;
   font-size: 0.6875rem;
 }
-p.article-media-contacts {
+div.column p.article-media-contacts {
   padding-left: 2em;
   font-size: .8em;
   line-height: 1.375em;
 }
-p.fine-print {
+div.column p.fine-print {
   font-size: 0.9em;
 }
-p.banner-text-gray-with-towers {
+div.column p.banner-text-gray-with-towers {
   color: #2a3033;
   background-color: rgba(141, 149, 154, 0.5);
   border: 32px solid transparent;
@@ -1141,16 +1141,16 @@ p.banner-text-gray-with-towers {
   padding: 7px;
 }
 @media all and (min-width: 1050px) {
-  p.banner-text-gray-with-towers {
+  div.column p.banner-text-gray-with-towers {
     font-size: 1.25rem;
   }
 }
 @media all and (max-width: 1049px) {
-  p.banner-text-gray-with-towers {
+  div.column p.banner-text-gray-with-towers {
     font-size: 1.15244306rem;
   }
 }
-p.banner-text {
+div.column p.banner-text {
   max-width: 800px;
   padding: 7px;
   margin-right: auto;
@@ -1162,32 +1162,32 @@ p.banner-text {
   color: #2a3033;
 }
 @media all and (min-width: 1050px) {
-  p.banner-text {
+  div.column p.banner-text {
     font-size: 1.25rem;
   }
 }
 @media all and (max-width: 1049px) {
-  p.banner-text {
+  div.column p.banner-text {
     font-size: 1.15244306rem;
   }
 }
-p.banner-text.orange {
+div.column p.banner-text.orange {
   background-color: rgba(182, 114, 51, 0.5);
   border: 1px solid #492e14;
 }
-p.banner-text.blue {
+div.column p.banner-text.blue {
   background-color: rgba(79, 134, 142, 0.5);
   border: 1px solid #203639;
 }
-p.banner-text.yellow {
+div.column p.banner-text.yellow {
   background-color: rgba(198, 146, 20, 0.5);
   border: 1px solid #4f3a08;
 }
-p.banner-text.green {
+div.column p.banner-text.green {
   background-color: rgba(143, 126, 53, 0.5);
   border: 1px solid #393215;
 }
-p.banner-text-orange-with-towers {
+div.column p.banner-text-orange-with-towers {
   margin-bottom: 15px;
   padding: 7px;
   color: #492e14;
@@ -1198,12 +1198,12 @@ p.banner-text-orange-with-towers {
   border-image: url(/wp-content/uploads/sites/50/2015/09/Orange-Clock-Tower-Border-Template-v3.png) 32 32 round;
 }
 @media all and (min-width: 1050px) {
-  p.banner-text-orange-with-towers {
+  div.column p.banner-text-orange-with-towers {
     font-size: 1.25rem;
   }
 }
 @media all and (max-width: 1049px) {
-  p.banner-text-orange-with-towers {
+  div.column p.banner-text-orange-with-towers {
     font-size: 1.15244306rem;
   }
 }
