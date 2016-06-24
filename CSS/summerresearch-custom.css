@@ -3146,6 +3146,9 @@ div.column .gform_wrapper .gform_body > ul > li.has-top-border:not(.gsection):no
   border-top: 1px dashed rgba(94, 106, 113, 0.3333);
   border-bottom: 1px dashed rgba(160, 160, 160, 0.25);
 }
+div.column .gform_wrapper .gform_body > ul > li.gf-bckgrnd-field {
+  display: none !important;
+}
 div.column .gform_wrapper #extensions_message {
   padding-left: 1rem;
 }
