@@ -40,6 +40,10 @@
 		});
 	}
 
+	function isJQuery($obj) {
+		return ($obj && ($obj instanceof $ || obj.constructor.prototype.jquery));
+	}
+	
 	var FieldsToFill = function (selectionMade, $emailInputBox, $nameInputBox) {
 		this.selectionMade = typeof(selectionMade == "string") ? selectionMade : "";
 		this.$emailInputBox = isJQuery($emailInputBox) ? $emailInputBox : $();
