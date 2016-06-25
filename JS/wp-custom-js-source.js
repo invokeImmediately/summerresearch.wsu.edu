@@ -46,7 +46,7 @@
 		this.$nameInputBox = isJQuery($nameInputBox) ? $nameInputBox : $();
 	}
 	
-	FormCtrlSet.prototype.isValid = function () {
+	FieldsToFill.prototype.isValid = function () {
 		return selectionMade != "" && $emailInputBox.length && $emailInputBox.length;
 	}
 	
@@ -62,68 +62,68 @@
 					var $nameInputBox = $facultyNameField.find("input[type='hidden']").first();
 					$selectBox.blur(function() {
 						var selectionMade = $(this).val();
-						var formCtrlSet = new FormCtrlSet(selectionMade, $emailInputBox, $nameInputBox);
-						fillHiddenFields(formCtrlSet);
+						var fieldsToFill = new FieldsToFill(selectionMade, $emailInputBox, $nameInputBox);
+						fillHiddenFields(fieldsToFill);
 					});			
 				}
 			}
 		});
     }
 	
-	function fillHiddenFields(formCtrlSet) {
-		if(formCtrlSet instanceof FormCtrlSet && formCtrlSet.isValid()) {
-			switch(formCtrlSet.selectionMade) {
+	function fillHiddenFields(fieldsToFill) {
+		if(fieldsToFill instanceof FormCtrlSet && fieldsToFill.isValid()) {
+			switch(fieldsToFill.selectionMade) {
 				case "Ali Mehrizi-Sani (USPRISM: U.S.-Scotland Program for Research on Integration of Renewable Energy Resources and SMart Grid)":
-					formCtrlSet.$emailInputBox.val("mehrizi@eecs.wsu.edu");
-					formCtrlSet.$nameInputBox.val("Ali");
+					fieldsToFill.$emailInputBox.val("mehrizi@eecs.wsu.edu");
+					fieldsToFill.$nameInputBox.val("Ali");
 					break;
 				case "Amit Dhingra (Plant Genomics and Biotechnology)":
-					formCtrlSet.$emailInputBox.val("adhingra@wsu.edu");
-					formCtrlSet.$nameInputBox.val("Amit");
+					fieldsToFill.$emailInputBox.val("adhingra@wsu.edu");
+					fieldsToFill.$nameInputBox.val("Amit");
 					break;
 				case "Bennett Carrothers (Summer Undergraduate Research Fellowship (SURF))":
-					formCtrlSet.$emailInputBox.val("bcarrothers4@wsu.edu");
-					formCtrlSet.$nameInputBox.val("Bennett");
+					fieldsToFill.$emailInputBox.val("bcarrothers4@wsu.edu");
+					fieldsToFill.$nameInputBox.val("Bennett");
 					break;
 				case "Diane Cook & Maureen Schmitter-Edgecombe (Gerontechnology-focused Summer Undergraduate Research Experience (GSUR))":
-					formCtrlSet.$emailInputBox.val("djcook@wsu.edu");
-					formCtrlSet.$nameInputBox.val("Diane and Maureen");
+					fieldsToFill.$emailInputBox.val("djcook@wsu.edu");
+					fieldsToFill.$nameInputBox.val("Diane and Maureen");
 					break;
 				case "Gretchen Rollwagen-Bollens (Landscape Ecology and Ecosystem Dynamics in the Columbia River Basin: Integrating Terrestrial and Aquatic Perspectives)":
-					formCtrlSet.$emailInputBox.val("rollboll@wsu.edu");
-					formCtrlSet.$nameInputBox.val("Gretchen");
+					fieldsToFill.$emailInputBox.val("rollboll@wsu.edu");
+					fieldsToFill.$nameInputBox.val("Gretchen");
 					break;
 				case "Larry Holder (Smart Environments)":
-					formCtrlSet.$emailInputBox.val("holder@wsu.edu");
-					formCtrlSet.$nameInputBox.val("Larry");
+					fieldsToFill.$emailInputBox.val("holder@wsu.edu");
+					fieldsToFill.$nameInputBox.val("Larry");
 					break;
 				case "Partha Pande (New-generation Power-efficient Computer Systems Design)":
-					formCtrlSet.$emailInputBox.val("partha_pande@wsu.edu");
-					formCtrlSet.$nameInputBox.val("Partha");
+					fieldsToFill.$emailInputBox.val("partha_pande@wsu.edu");
+					fieldsToFill.$nameInputBox.val("Partha");
 					break;
 				case "Samantha Gizerian (Biomedicine Summer Undergraduate Research Experience)":
-					formCtrlSet.$emailInputBox.val("samantha.gizerian@wsu.edu");
-					formCtrlSet.$nameInputBox.val("Ali");
+					fieldsToFill.$emailInputBox.val("samantha.gizerian@wsu.edu");
+					fieldsToFill.$nameInputBox.val("Ali");
 					break;
 				case "Shelley Pressley (Atmospheric Chemistry and Climate Change: Measurements and Modeling in the Pacific Northwest)":
-					formCtrlSet.$emailInputBox.val("spressley@wsu.edu");
-					formCtrlSet.$nameInputBox.val("Ali");
+					fieldsToFill.$emailInputBox.val("spressley@wsu.edu");
+					fieldsToFill.$nameInputBox.val("Ali");
 					break;
 				case "Shelley Pressley (Northwest Advanced Renewables Alliance (NARA))":
-					formCtrlSet.$emailInputBox.val("spressley@wsu.edu");
-					formCtrlSet.$nameInputBox.val("Ali");
+					fieldsToFill.$emailInputBox.val("spressley@wsu.edu");
+					fieldsToFill.$nameInputBox.val("Ali");
 					break;
 				case "Shelley Pressley (REgional Approaches to Climate CHange (REACCH))":
-					formCtrlSet.$emailInputBox.val("spressley@wsu.edu");
-					formCtrlSet.$nameInputBox.val("Ali");
+					fieldsToFill.$emailInputBox.val("spressley@wsu.edu");
+					fieldsToFill.$nameInputBox.val("Ali");
 					break;
 				case "Y. M. Gupta (Materials Under Extreme Conditions)":
-					formCtrlSet.$emailInputBox.val("shock@wsu.edu");
-					formCtrlSet.$nameInputBox.val("Professor Gupta");
+					fieldsToFill.$emailInputBox.val("shock@wsu.edu");
+					fieldsToFill.$nameInputBox.val("Professor Gupta");
 					break;
 				default:
-					formCtrlSet.$emailInputBox.val("");
-					formCtrlSet.$nameInputBox.val("");
+					fieldsToFill.$emailInputBox.val("");
+					fieldsToFill.$nameInputBox.val("");
 			}
 		}
 	}
