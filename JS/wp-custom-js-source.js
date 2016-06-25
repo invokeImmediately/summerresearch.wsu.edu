@@ -66,7 +66,6 @@
 					var $nameInputBox = $facultyNameField.find("input[type='hidden']").first();
 					$selectBox.change(function() {
 						var selectionMade = $(this).val();
-						alert(selectionMade);
 						var fieldsToFill = new FieldsToFill(selectionMade, $emailInputBox, $nameInputBox);
 						fillHiddenFields(fieldsToFill);
 					});			
@@ -77,7 +76,6 @@
 	
 	function fillHiddenFields(fieldsToFill) {
 		if(fieldsToFill instanceof FieldsToFill && fieldsToFill.isValid()) {
-			alert("Guard passed.");
 			switch(fieldsToFill.selectionMade) {
 				case "Ali Mehrizi-Sani (USPRISM: U.S.-Scotland Program for Research on Integration of Renewable Energy Resources and SMart Grid)":
 					fieldsToFill.$emailInputBox.val("mehrizi@eecs.wsu.edu");
@@ -100,7 +98,6 @@
 					fieldsToFill.$nameInputBox.val("Gretchen");
 					break;
 				case "Larry Holder (Smart Environments)":
-					alert("Switch passed.");
 					fieldsToFill.$emailInputBox.val("holder@wsu.edu");
 					fieldsToFill.$nameInputBox.val("Larry");
 					break;
