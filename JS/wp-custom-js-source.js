@@ -61,7 +61,7 @@
 			if($emailField.length > 0) {
 				var $facultyNameField = $emailField.next(slctrHiddenFields);
 				if($facultyNameField.length > 0) {
-					var $selectBox = $selectField.find("input[type='text']").first();
+					var $selectBox = $selectField.find("select").first();
 					var $emailInputBox = $emailField.find("input[type='hidden']").first();
 					var $nameInputBox = $facultyNameField.find("input[type='hidden']").first();
 					$selectBox.change(function() {
