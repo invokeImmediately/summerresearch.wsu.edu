@@ -41,6 +41,7 @@
 	}
 
 	function isJQuery($obj) {
+		alert("isJQuery result: " + ($obj && ($obj instanceof $ || obj.constructor.prototype.jquery)));
 		return ($obj && ($obj instanceof $ || obj.constructor.prototype.jquery));
 	}
 	
@@ -133,7 +134,7 @@
 			}
 		}
 		else {
-			alert("Result of instanceof: " + fieldsToFill instanceof FieldsToFill);
+			alert("Result of instanceof: " + (fieldsToFill instanceof FieldsToFill));
 			alert("Result of isValid: " + fieldsToFill.isValid());
 		}
 	}
