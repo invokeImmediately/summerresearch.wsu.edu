@@ -132,6 +132,10 @@
 					fieldsToFill.$nameInputBox.val("");
 			}
 		}
+		else {
+			alert("Result of instanceof: " + fieldsToFill instanceof FieldsToFill);
+			alert("Result of isValid: " + fieldsToFill.isValid());
+		}
 	}
 	
 })(jQuery);
