@@ -51,7 +51,7 @@
 	}
 	
 	FieldsToFill.prototype.isValid = function () {
-		return selectionMade != "" && $emailInputBox.length && $emailInputBox.length;
+		return this.selectionMade != "" && this.$emailInputBox.length && this.$emailInputBox.length;
 	}
 	
     function InitFacultyEmailAutoEntry(slctrSelectBox, slctrHiddenFields) {
