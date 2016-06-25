@@ -64,7 +64,7 @@
 					var $selectBox = $selectField.find("input[type='text']").first();
 					var $emailInputBox = $emailField.find("input[type='hidden']").first();
 					var $nameInputBox = $facultyNameField.find("input[type='hidden']").first();
-					$selectBox.blur(function() {
+					$selectBox.change(function() {
 						var selectionMade = $(this).val();
 						alert(selectionMade);
 						var fieldsToFill = new FieldsToFill(selectionMade, $emailInputBox, $nameInputBox);
