@@ -75,7 +75,7 @@
     }
 	
 	function fillHiddenFields(fieldsToFill) {
-		if(fieldsToFill instanceof FormCtrlSet && fieldsToFill.isValid()) {
+		if(fieldsToFill instanceof FieldsToFill && fieldsToFill.isValid()) {
 			switch(fieldsToFill.selectionMade) {
 				case "Ali Mehrizi-Sani (USPRISM: U.S.-Scotland Program for Research on Integration of Renewable Energy Resources and SMart Grid)":
 					fieldsToFill.$emailInputBox.val("mehrizi@eecs.wsu.edu");
