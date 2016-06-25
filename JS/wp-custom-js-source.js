@@ -45,15 +45,12 @@
 	}
 	
 	var FieldsToFill = function (selectionMade, $emailInputBox, $nameInputBox) {
-		this.selectionMade = typeof(selectionMade == "string") ? selectionMade : "";
+		this.selectionMade = typeof selectionMade == "string" ? selectionMade : "";
 		this.$emailInputBox = isJQuery($emailInputBox) ? $emailInputBox : $();
 		this.$nameInputBox = isJQuery($nameInputBox) ? $nameInputBox : $();
 	}
 	
 	FieldsToFill.prototype.isValid = function () {
-		alert("FieldsToFill.isValid -- selectionMade result: " + (this.selectionMade != ""));
-		alert("FieldsToFill.isValid -- $emailInputBox result: " + (this.$emailInputBox.length > 0));
-		alert("FieldsToFill.isValid -- $nameInputBox result: " + (this.$nameInputBox.length > 0));
 		return this.selectionMade != "" && this.$emailInputBox.length > 0 && this.$nameInputBox.length > 0;
 	}
 	
