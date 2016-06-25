@@ -51,7 +51,7 @@
 	}
 	
 	FieldsToFill.prototype.isValid = function () {
-		alert("FieldsToFill.isValid result: " + (this.selectionMade != "" && this.$emailInputBox.length > 0 && this.$nameInputBox.length > 0);
+		alert("FieldsToFill.isValid result: " + (this.selectionMade != "" && this.$emailInputBox.length > 0 && this.$nameInputBox.length > 0));
 		return this.selectionMade != "" && this.$emailInputBox.length > 0 && this.$nameInputBox.length > 0;
 	}
 	
