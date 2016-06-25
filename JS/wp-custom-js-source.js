@@ -41,7 +41,6 @@
 	}
 
 	function isJQuery($obj) {
-		alert("isJQuery result: " + ($obj && ($obj instanceof $ || obj.constructor.prototype.jquery)));
 		return ($obj && ($obj instanceof $ || obj.constructor.prototype.jquery));
 	}
 	
@@ -52,7 +51,8 @@
 	}
 	
 	FieldsToFill.prototype.isValid = function () {
-		return this.selectionMade != "" && this.$emailInputBox.length && this.$emailInputBox.length;
+		alert("FieldsToFill.isValid result: " + (this.selectionMade != "" && this.$emailInputBox.length > 0 && this.$nameInputBox.length > 0);
+		return this.selectionMade != "" && this.$emailInputBox.length > 0 && this.$nameInputBox.length > 0;
 	}
 	
     function InitFacultyEmailAutoEntry(slctrSelectBox, slctrHiddenFields) {
