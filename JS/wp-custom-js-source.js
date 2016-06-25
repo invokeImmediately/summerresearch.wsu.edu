@@ -19,6 +19,7 @@
 			break;
 		}
 		InitExpiringItems(".has-expiration", "expirationDate");
+		InitFacultyEmailAutoEntry("li.gfield.sets-faculty-email", "li.gform_hidden");
 	});
 
 	function InitExpiringItems(slctrExpiringElems, dataAttrExprtnDate) {
@@ -38,6 +39,95 @@
             } 
 		});
 	}
+
+	var FieldsToFill = function (selectionMade, $emailInputBox, $nameInputBox) {
+		this.selectionMade = typeof(selectionMade == "string") ? selectionMade : "";
+		this.$emailInputBox = isJQuery($emailInputBox) ? $emailInputBox : $();
+		this.$nameInputBox = isJQuery($nameInputBox) ? $nameInputBox : $();
+	}
+	
+	FormCtrlSet.prototype.isValid = function () {
+		return selectionMade != "" && $emailInputBox.length && $emailInputBox.length;
+	}
+	
+    function InitFacultyEmailAutoEntry(slctrSelectBox, slctrHiddenFields) {
+		$(slctrSelectBox).each(function () {
+			var $selectField = $(this);
+			var $emailField = $selectField.next(slctrHiddenFields);
+			if($emailField.length > 0) {
+				var $facultyNameField = $emailField.next(slctrHiddenFields);
+				if($facultyNameField.length > 0) {
+					var $selectBox = $selectField.find("input[type='text']").first();
+					var $emailInputBox = $emailField.find("input[type='hidden']").first();
+					var $nameInputBox = $facultyNameField.find("input[type='hidden']").first();
+					$selectBox.blur(function() {
+						var selectionMade = $(this).val();
+						var formCtrlSet = new FormCtrlSet(selectionMade, $emailInputBox, $nameInputBox);
+						fillHiddenFields(formCtrlSet);
+					});			
+				}
+			}
+		});
+    }
+	
+	function fillHiddenFields(formCtrlSet) {
+		if(formCtrlSet instanceof FormCtrlSet && formCtrlSet.isValid()) {
+			switch(formCtrlSet.selectionMade) {
+				case "Ali Mehrizi-Sani (USPRISM: U.S.-Scotland Program for Research on Integration of Renewable Energy Resources and SMart Grid)":
+					formCtrlSet.$emailInputBox.val("mehrizi@eecs.wsu.edu");
+					formCtrlSet.$nameInputBox.val("Ali");
+					break;
+				case "Amit Dhingra (Plant Genomics and Biotechnology)":
+					formCtrlSet.$emailInputBox.val("adhingra@wsu.edu");
+					formCtrlSet.$nameInputBox.val("Amit");
+					break;
+				case "Bennett Carrothers (Summer Undergraduate Research Fellowship (SURF))":
+					formCtrlSet.$emailInputBox.val("bcarrothers4@wsu.edu");
+					formCtrlSet.$nameInputBox.val("Bennett");
+					break;
+				case "Diane Cook & Maureen Schmitter-Edgecombe (Gerontechnology-focused Summer Undergraduate Research Experience (GSUR))":
+					formCtrlSet.$emailInputBox.val("djcook@wsu.edu");
+					formCtrlSet.$nameInputBox.val("Diane and Maureen");
+					break;
+				case "Gretchen Rollwagen-Bollens (Landscape Ecology and Ecosystem Dynamics in the Columbia River Basin: Integrating Terrestrial and Aquatic Perspectives)":
+					formCtrlSet.$emailInputBox.val("rollboll@wsu.edu");
+					formCtrlSet.$nameInputBox.val("Gretchen");
+					break;
+				case "Larry Holder (Smart Environments)":
+					formCtrlSet.$emailInputBox.val("holder@wsu.edu");
+					formCtrlSet.$nameInputBox.val("Larry");
+					break;
+				case "Partha Pande (New-generation Power-efficient Computer Systems Design)":
+					formCtrlSet.$emailInputBox.val("partha_pande@wsu.edu");
+					formCtrlSet.$nameInputBox.val("Partha");
+					break;
+				case "Samantha Gizerian (Biomedicine Summer Undergraduate Research Experience)":
+					formCtrlSet.$emailInputBox.val("samantha.gizerian@wsu.edu");
+					formCtrlSet.$nameInputBox.val("Ali");
+					break;
+				case "Shelley Pressley (Atmospheric Chemistry and Climate Change: Measurements and Modeling in the Pacific Northwest)":
+					formCtrlSet.$emailInputBox.val("spressley@wsu.edu");
+					formCtrlSet.$nameInputBox.val("Ali");
+					break;
+				case "Shelley Pressley (Northwest Advanced Renewables Alliance (NARA))":
+					formCtrlSet.$emailInputBox.val("spressley@wsu.edu");
+					formCtrlSet.$nameInputBox.val("Ali");
+					break;
+				case "Shelley Pressley (REgional Approaches to Climate CHange (REACCH))":
+					formCtrlSet.$emailInputBox.val("spressley@wsu.edu");
+					formCtrlSet.$nameInputBox.val("Ali");
+					break;
+				case "Y. M. Gupta (Materials Under Extreme Conditions)":
+					formCtrlSet.$emailInputBox.val("shock@wsu.edu");
+					formCtrlSet.$nameInputBox.val("Professor Gupta");
+					break;
+				default:
+					formCtrlSet.$emailInputBox.val("");
+					formCtrlSet.$nameInputBox.val("");
+			}
+		}
+	}
+	
 })(jQuery);
 /**********************************************************************************************************************
  CUSTOM JQUERY-BASED DYNAMIC CONTENT
@@ -45,6 +135,10 @@
 (function ($) {
     "use strict";
     
+	function isJQuery($obj) {
+		return ($obj && ($obj instanceof $ || obj.constructor.prototype.jquery));
+	}
+	
     $(document).ready(function () {
         fixDogears("#spine-sitenav", "li.current.active.dogeared", "current active dogeared");
         checkForLrgFrmtSingle(".single.large-format-friendly", "header.main-header", "div.header-group",
