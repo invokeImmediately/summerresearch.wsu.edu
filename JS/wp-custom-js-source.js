@@ -51,7 +51,9 @@
 	}
 	
 	FieldsToFill.prototype.isValid = function () {
-		alert("FieldsToFill.isValid result: " + (this.selectionMade != "" && this.$emailInputBox.length > 0 && this.$nameInputBox.length > 0));
+		alert("FieldsToFill.isValid -- selectionMade result: " + (this.selectionMade != ""));
+		alert("FieldsToFill.isValid -- $emailInputBox result: " + (this.$emailInputBox.length > 0));
+		alert("FieldsToFill.isValid -- $nameInputBox result: " + (this.$nameInputBox.length > 0));
 		return this.selectionMade != "" && this.$emailInputBox.length > 0 && this.$nameInputBox.length > 0;
 	}
 	
@@ -132,10 +134,6 @@
 					fieldsToFill.$emailInputBox.val("");
 					fieldsToFill.$nameInputBox.val("");
 			}
-		}
-		else {
-			alert("Result of instanceof: " + (fieldsToFill instanceof FieldsToFill));
-			alert("Result of isValid: " + fieldsToFill.isValid());
 		}
 	}
 	
