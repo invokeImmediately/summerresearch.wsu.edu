@@ -177,6 +177,53 @@ div.column .centers-text {
 div.column .soft-gray-border {
   border: 1px solid rgba(42, 48, 51, 0.5);
 }
+.fade-in-from-top {
+  -webkit-animation: anim-fade-in-from-top 1s linear 1;
+  -moz-animation: anim-fade-in-from-top 1s linear 1;
+  animation: anim-fade-in-from-top 1s linear 1;
+}
+@-webkit-keyframes anim-fade-in-from-top {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(-100%, 0, 0);
+    -moz-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    -moz-transform: none;
+    transform: none;
+  }
+}
+@-moz-keyframes anim-fade-in-from-top {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(-100%, 0, 0);
+    -moz-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    -moz-transform: none;
+    transform: none;
+  }
+}
+@keyframes anim-fade-in-from-top {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(-100%, 0, 0);
+    -moz-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    -moz-transform: none;
+    transform: none;
+  }
+}
 .fade-in-from-left {
   -webkit-animation: anim-fade-in-from-left 1s linear 1;
   -moz-animation: anim-fade-in-from-left 1s linear 1;
