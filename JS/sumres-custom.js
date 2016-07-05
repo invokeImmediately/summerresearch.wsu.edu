@@ -42,8 +42,8 @@
 
 	var FieldsToFill = function (selectionMade, $emailInputBox, $nameInputBox) {
 		this.selectionMade = typeof selectionMade == "string" ? selectionMade : "";
-		this.$emailInputBox = $.isJQuery($emailInputBox) ? $emailInputBox : $();
-		this.$nameInputBox = $.isJQuery($nameInputBox) ? $nameInputBox : $();
+		this.$emailInputBox = isJQuery($emailInputBox) ? $emailInputBox : $();
+		this.$nameInputBox = isJQuery($nameInputBox) ? $nameInputBox : $();
 	}
 	
 	FieldsToFill.prototype.isValid = function () {
