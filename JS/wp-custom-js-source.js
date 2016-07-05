@@ -40,10 +40,6 @@
 		});
 	}
 
-	function isJQuery($obj) {
-		return ($obj && ($obj instanceof $ || obj.constructor.prototype.jquery));
-	}
-	
 	var FieldsToFill = function (selectionMade, $emailInputBox, $nameInputBox) {
 		this.selectionMade = typeof selectionMade == "string" ? selectionMade : "";
 		this.$emailInputBox = isJQuery($emailInputBox) ? $emailInputBox : $();
@@ -131,10 +127,6 @@
 (function ($) {
     "use strict";
     
-	function isJQuery($obj) {
-		return ($obj && ($obj instanceof $ || obj.constructor.prototype.jquery));
-	}
-	
     $(document).ready(function () {
         fixDogears("#spine-sitenav", "li.current.active.dogeared", "current active dogeared");
         checkForLrgFrmtSingle(".single.large-format-friendly", "header.main-header", "div.header-group",
