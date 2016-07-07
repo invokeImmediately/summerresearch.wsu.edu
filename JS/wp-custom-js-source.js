@@ -271,11 +271,11 @@ function isJQuery($obj) {
 			switch(fieldsToFill.selectionMade) {
 				case "Atmospheric Chemistry and Climate Change: Measurements and Modeling in the Pacific Northwest (Shelley Pressley)":
 					fieldsToFill.$emailInputBox.val("spressley@wsu.edu");
-					fieldsToFill.$nameInputBox.val("Ali");
+					fieldsToFill.$nameInputBox.val("Shelley");
 					break;
 				case "Biomedicine Summer Undergraduate Research Experience (Samantha Gizerian)":
 					fieldsToFill.$emailInputBox.val("samantha.gizerian@wsu.edu");
-					fieldsToFill.$nameInputBox.val("Ali");
+					fieldsToFill.$nameInputBox.val("Samantha");
 					break;
 				case "Gerontechnology-focused Summer Undergraduate Research Experience (GSUR) (Diane Cook & Maureen Schmitter-Edgecombe)":
 					fieldsToFill.$emailInputBox.val("djcook@wsu.edu");
@@ -295,7 +295,7 @@ function isJQuery($obj) {
 					break;
 				case "Northwest Advanced Renewables Alliance (NARA) (Shelley Pressley)":
 					fieldsToFill.$emailInputBox.val("spressley@wsu.edu");
-					fieldsToFill.$nameInputBox.val("Ali");
+					fieldsToFill.$nameInputBox.val("Shelley");
 					break;
 				case "Plant Genomics and Biotechnology (Amit Dhingra)":
 					fieldsToFill.$emailInputBox.val("adhingra@wsu.edu");
