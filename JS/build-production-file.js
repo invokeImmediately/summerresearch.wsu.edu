@@ -1,8 +1,8 @@
 /* NODE.JS - Build Production JavaScript File */
 var concat = require('../../../../AppData/Roaming/npm/node_modules/concat-files');
 concat([
- './sumres-custom.js',
  '../WSU-UE---JS/jQuery.oue-custom.js',
+ './sumres-custom.js',
  '../WSU-UE---JS/jQuery.forms.js',
  '../WSU-UE---JS/jQuery.qTip.js',
  '../WSU-UE---JS/jQuery.autoScrollingImages.js',
