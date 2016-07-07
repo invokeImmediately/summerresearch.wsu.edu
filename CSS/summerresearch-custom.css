@@ -1436,19 +1436,7 @@ div.column {
  *         ├---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  --- ┤
  */
   /*         ├---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  --- ┤
- *         │············ DEFINITION LIST elements contained within div.column containers ··········· │
- *         ├---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  --- ┤
- */
-  /*         ├---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  --- ┤
  *         │···· HORIZONTAL RULE children of div.column elements ··································· │
- *         ├---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  --- ┤
- */
-  /*         ├---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  --- ┤
- *         │ ···· UNORDERED LIST elements contained within div.column elements ····················· │
- *         ├---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  --- ┤
- */
-  /*         ├---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  --- ┤
- *         │ ···· ORDERED LIST elements contained within div.column elements ······················· │
  *         ├---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  --- ┤
  */
   /*         ├---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  --- ┤
@@ -1474,82 +1462,6 @@ div.column.no-top-pad {
 }
 div.column.with-right-margin {
   margin-right: 2rem;
-}
-div.column dl.faq dt {
-  position: relative;
-  width: 100%;
-  padding: 5px 20px 5px 10px;
-  margin: 5px -10px;
-  background-color: #d7dadb;
-  font-weight: bold;
-  -webkit-transition: all 0.25s linear;
-  -moz-transition: all 0.25s linear;
-  transition: all 0.25s linear;
-}
-@media all {
-  div.column dl.faq dt {
-    line-height: 1.375em;
-  }
-}
-@media all and (min-width: 481px) {
-  div.column dl.faq dt {
-    font-size: 1em;
-  }
-}
-@media all and (max-width: 480px) {
-  div.column dl.faq dt {
-    font-size: 0.92195445em;
-    text-align: left;
-  }
-}
-div.column dl.faq dt:after {
-  content: "";
-  position: absolute;
-  right: 10px;
-  top: 50%;
-  width: 0;
-  height: 0;
-  transform: translateY(-50%);
-  border-top: 8px solid #5e6a71;
-  border-right: 8px solid transparent;
-  border-bottom: none;
-  border-left: 8px solid transparent;
-  -webkit-transition: all 0.3s ease;
-  -moz-transition: all 0.3s ease;
-  transition: all 0.3s ease;
-}
-div.column dl.faq dt:hover {
-  background-color: #5e6a71;
-  color: #fff;
-}
-div.column dl.faq dt:hover:after {
-  border-top: 8px solid #fff;
-  border-right: 8px solid transparent;
-  border-bottom: none;
-  border-left: 8px solid transparent;
-}
-div.column dl.faq dt.activated {
-  background-color: #d3b0b8;
-  color: #464e54;
-}
-div.column dl.faq dt.activated:after {
-  border-top: none;
-  border-right: 8px solid transparent;
-  border-bottom: 8px solid #5e6a71;
-  border-left: 8px solid transparent;
-}
-div.column dl.faq dt.activated:hover {
-  background-color: #725764;
-  color: #fff;
-}
-div.column dl.faq dt.activated:hover:after {
-  border-top: none;
-  border-right: 8px solid transparent;
-  border-bottom: 8px solid #fff;
-  border-left: 8px solid transparent;
-}
-div.column dl.toggled dd {
-  display: none;
 }
 div.column hr {
   height: 0;
@@ -1610,63 +1522,6 @@ div.column hr.does-not-clear {
 }
 div.column hr.thicker {
   border-top-width: 2px;
-}
-div.column ul {
-  padding-bottom: 0;
-}
-div.column ul:last-child:not(.no-bottom-pad) {
-  padding-bottom: 1em;
-}
-div.column ul.centered {
-  text-align: center;
-}
-div.column ul + p {
-  margin-top: 1em;
-}
-@media all {
-  div.column ul {
-    line-height: 1.375em;
-  }
-}
-@media all and (min-width: 481px) {
-  div.column ul {
-    font-size: 1em;
-  }
-}
-@media all and (max-width: 480px) {
-  div.column ul {
-    font-size: 0.92195445em;
-  }
-}
-div.column ul li.no-bottom-pad {
-  padding-bottom: 0;
-}
-div.column p + ul {
-  margin-top: 1rem;
-}
-div.column section:not(:last-child) ul:last-child {
-  padding-bottom: 0;
-}
-@media all {
-  div.column ol {
-    line-height: 1.375em;
-  }
-}
-@media all and (min-width: 481px) {
-  div.column ol {
-    font-size: 1em;
-  }
-}
-@media all and (max-width: 480px) {
-  div.column ol {
-    font-size: 0.92195445em;
-  }
-}
-div.column ol ol {
-  list-style-type: lower-alpha;
-}
-div.column ol ol ol {
-  list-style-type: lower-roman;
 }
 div.column section {
   position: relative;
@@ -2358,6 +2213,51 @@ div.recent-updates p.recent-update-3 {
     z-index: 1;
   }
 }
+/*
+ *     ┌─────────────────────────────────────────────────────────────────────────────────────────────────┐
+ *     │ ++++ LIST element selectors +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ │
+ *     └─────────────────────────────────────────────────────────────────────────────────────────────────┘
+ */
+/*         ┌-----------------------------------------------------------------------------------------┐
+ *         │ ···· UNORDERED list elements ·························································· │
+ *         └-----------------------------------------------------------------------------------------┘
+ */
+div.column ul {
+  padding-bottom: 0;
+}
+div.column ul:last-child:not(.no-bottom-pad) {
+  padding-bottom: 1em;
+}
+div.column ul.centered {
+  text-align: center;
+}
+div.column ul + p {
+  margin-top: 1em;
+}
+@media all {
+  div.column ul {
+    line-height: 1.375em;
+  }
+}
+@media all and (min-width: 481px) {
+  div.column ul {
+    font-size: 1em;
+  }
+}
+@media all and (max-width: 480px) {
+  div.column ul {
+    font-size: 0.92195445em;
+  }
+}
+div.column ul li.no-bottom-pad {
+  padding-bottom: 0;
+}
+div.column p + ul {
+  margin-top: 1rem;
+}
+div.column section:not(:last-child) ul:last-child {
+  padding-bottom: 0;
+}
 ul.external-links li {
   list-style-image: url(/wp-content/uploads/sites/906/2015/08/external-link-bullet.png);
 }
@@ -2418,6 +2318,113 @@ ul.cascaded-layout > li.gutter-sizer {
 }
 ul.cascaded-layout > li.gutter-sizer {
   width: 2% !important;
+}
+/*         ┌-----------------------------------------------------------------------------------------┐
+ *         │ ···· ORDERED list elements ···························································· │
+ *         └-----------------------------------------------------------------------------------------┘
+ */
+@media all {
+  div.column ol {
+    line-height: 1.375em;
+  }
+}
+@media all and (min-width: 481px) {
+  div.column ol {
+    font-size: 1em;
+  }
+}
+@media all and (max-width: 480px) {
+  div.column ol {
+    font-size: 0.92195445em;
+  }
+}
+div.column ol ol {
+  list-style-type: lower-alpha;
+}
+div.column ol ol ol {
+  list-style-type: lower-roman;
+}
+/*         ┌-----------------------------------------------------------------------------------------┐
+ *         │ ···· DEFINITION list elements and children ············································ │
+ *         └-----------------------------------------------------------------------------------------┘
+ */
+div.column dl.faq dt {
+  position: relative;
+  width: 100%;
+  padding: 5px 20px 5px 10px;
+  margin: 5px -10px;
+  background-color: #d7dadb;
+  font-weight: bold;
+  -webkit-transition: all 0.25s linear;
+  -moz-transition: all 0.25s linear;
+  transition: all 0.25s linear;
+}
+@media all {
+  div.column dl.faq dt {
+    line-height: 1.375em;
+  }
+}
+@media all and (min-width: 481px) {
+  div.column dl.faq dt {
+    font-size: 1em;
+  }
+}
+@media all and (max-width: 480px) {
+  div.column dl.faq dt {
+    font-size: 0.92195445em;
+    text-align: left;
+  }
+}
+div.column dl.faq dt:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  width: 0;
+  height: 0;
+  border-top: 8px solid #5e6a71;
+  border-right: 8px solid transparent;
+  border-bottom: none;
+  border-left: 8px solid transparent;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  transform: translateY(-50%);
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+div.column dl.faq dt:hover {
+  background-color: #5e6a71;
+  color: #fff;
+}
+div.column dl.faq dt:hover:after {
+  border-top: 8px solid #fff;
+  border-right: 8px solid transparent;
+  border-bottom: none;
+  border-left: 8px solid transparent;
+}
+div.column dl.faq dt.activated {
+  background-color: #d3b0b8;
+  color: #464e54;
+}
+div.column dl.faq dt.activated:after {
+  border-top: none;
+  border-right: 8px solid transparent;
+  border-bottom: 8px solid #5e6a71;
+  border-left: 8px solid transparent;
+}
+div.column dl.faq dt.activated:hover {
+  background-color: #725764;
+  color: #fff;
+}
+div.column dl.faq dt.activated:hover:after {
+  border-top: none;
+  border-right: 8px solid transparent;
+  border-bottom: 8px solid #fff;
+  border-left: 8px solid transparent;
+}
+div.column dl.toggled dd {
+  display: none;
 }
 /*         ├---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  --- ┤
  *         │ ···· HYPERLINK elements contained within div.column elements ·························· │
