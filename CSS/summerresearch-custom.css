@@ -4380,29 +4380,37 @@ div.column ul.event-boxes > li > p:not(:last-child):not(.no-btm-spacing) {
 div.column ul.event-boxes > li > *:last-child {
   padding-bottom: 0.5rem;
 }
-div.column ul.event-boxes > li:nth-child(4n + 1) > h3:first-child {
+div.column ul.event-boxes > li:not(.deadline):nth-child(4n + 1) > h3:first-child {
   background-color: rgba(255, 184, 28, 0.5);
   color: #9e7510;
 }
-div.column ul.event-boxes > li:nth-child(4n + 1) > h4:nth-child(2) {
+div.column ul.event-boxes > li:not(.deadline):nth-child(4n + 1) > h4:nth-child(2) {
   background-color: rgba(255, 184, 28, 0.75);
   color: #f9f4e7;
 }
-div.column ul.event-boxes > li:nth-child(4n + 2) > h3:first-child {
+div.column ul.event-boxes > li:not(.deadline):nth-child(4n + 2) > h3:first-child {
   background-color: rgba(173, 164, 0, 0.5);
   color: #72652a;
 }
-div.column ul.event-boxes > li:nth-child(4n + 2) > h4:nth-child(2) {
+div.column ul.event-boxes > li:not(.deadline):nth-child(4n + 2) > h4:nth-child(2) {
   background-color: rgba(173, 164, 0, 0.75);
   color: #f4f2eb;
 }
-div.column ul.event-boxes > li:nth-child(4n + 3) > h3:first-child {
+div.column ul.event-boxes > li:not(.deadline):nth-child(4n + 3) > h3:first-child {
   background-color: rgba(246, 134, 31, 0.5);
   color: #925b29;
 }
-div.column ul.event-boxes > li:nth-child(4n + 3) > h4:nth-child(2) {
+div.column ul.event-boxes > li:not(.deadline):nth-child(4n + 3) > h4:nth-child(2) {
   background-color: rgba(246, 134, 31, 0.75);
   color: #f8f1eb;
+}
+div.column ul.event-boxes > li.deadline > h3:first-child {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+}
+div.column ul.event-boxes > li.deadline > h4:nth-child(2) {
+  background-color: rgba(0, 0, 0, 0.75);
+  color: #fff;
 }
 ul.program-info {
   padding-right: 0;
