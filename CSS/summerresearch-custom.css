@@ -4405,7 +4405,7 @@ div.column ul.event-boxes > li:not(.deadline):nth-child(4n + 3) > h4:nth-child(2
   color: #f8f1eb;
 }
 div.column ul.event-boxes > li.deadline > h3:first-child {
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.95);
   color: #fff;
 }
 div.column ul.event-boxes > li.deadline > h4:nth-child(2) {
