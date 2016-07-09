@@ -333,7 +333,7 @@ div.column ul.event-boxes {
         & > *:last-child {
             padding-bottom: (@v-dflt-spcng / 4);
         }
-        &:nth-child(4n + 1) {
+        &:not(.deadline):nth-child(4n + 1) {
             & > h3:first-child {
                 background-color: rgba(red(@hex-accent-yellow), green(@hex-accent-yellow), blue(@hex-accent-yellow), 0.5);
                 color: @hex-dark-yellow;
@@ -343,7 +343,7 @@ div.column ul.event-boxes {
                 color: @hex-bright-yellow;
             }
         }
-        &:nth-child(4n + 2) {
+        &:not(.deadline):nth-child(4n + 2) {
             & > h3:first-child {
                 background-color: rgba(red(@hex-accent-green), green(@hex-accent-green), blue(@hex-accent-green), 0.5);
                 color: @hex-dark-green;
@@ -353,7 +353,7 @@ div.column ul.event-boxes {
                 color: @hex-bright-green;
             }
         }
-        &:nth-child(4n + 3) {
+        &:not(.deadline):nth-child(4n + 3) {
             & > h3:first-child {
                 background-color: rgba(red(@hex-accent-orange), green(@hex-accent-orange), blue(@hex-accent-orange), 0.5);
                 color: @hex-dark-orange;
@@ -363,6 +363,16 @@ div.column ul.event-boxes {
                 color: @hex-bright-orange;
             }
         }
+		&.deadline {
+            & > h3:first-child {
+                background-color: rgba(red(@hex-black), green(@hex-black), blue(@hex-black), 0.95);
+                color: @hex-white;
+            }
+            & > h4:nth-child(2) {
+                background-color: rgba(red(@hex-black), green(@hex-black), blue(@hex-black), 0.75);
+                color: @hex-white;
+            }
+		}
     }
 }
 
