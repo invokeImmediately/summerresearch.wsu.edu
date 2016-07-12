@@ -548,6 +548,7 @@ section.halves div.column p:not([class*="center"]) {
 @media (min-width: 792px) and (max-width: 989px) {
   section.single.large-format-friendly div.column.one,
   section.row.single.large-format-friendly div.column.one {
+    float: none;
     margin-right: auto;
     margin-left: auto;
     max-width: 800px;
@@ -636,6 +637,46 @@ section.side-right div.column.two p {
 }
 div.column section:not(:last-child) > *:last-child:not(.vpue-jump-bar) {
   padding-bottom: 0;
+}
+main section.row > div.column > p:not(.no-btm-margin),
+main section.row > div.column > article > div.article-body > p:not(.no-btm-margin),
+main section.row > div.column > section > p:not(.no-btm-margin),
+main section.row > div.column > section > p:not(.no-btm-margin),
+main section.row > div.column > article > div.article-body > section > p:not(.no-btm-margin),
+main section.row > div.column > section > section > p:not(.no-btm-margin),
+main section.row > div.column > ul:not(.no-btm-margin),
+main section.row > div.column > article > div.article-body > ul:not(.no-btm-margin),
+main section.row > div.column > section > ul:not(.no-btm-margin),
+main section.row > div.column > section > ul:not(.no-btm-margin),
+main section.row > div.column > article > div.article-body > section > ul:not(.no-btm-margin),
+main section.row > div.column > section > section > ul:not(.no-btm-margin),
+main section.row > div.column > ol:not(.no-btm-margin),
+main section.row > div.column > article > div.article-body > ol:not(.no-btm-margin),
+main section.row > div.column > section > ol:not(.no-btm-margin),
+main section.row > div.column > section > ol:not(.no-btm-margin),
+main section.row > div.column > article > div.article-body > section > ol:not(.no-btm-margin),
+main section.row > div.column > section > section > ol:not(.no-btm-margin) {
+  margin-bottom: 1em;
+}
+main section.row:last-child > div.column > p:last-child,
+main section.row:last-child > div.column > article > div.article-body > p:last-child,
+main section.row:last-child > div.column > section > p:last-child,
+main section.row:last-child > div.column > section > p:last-child,
+main section.row:last-child > div.column > article > div.article-body > section > p:last-child,
+main section.row:last-child > div.column > section > section > p:last-child,
+main section.row:last-child > div.column > ul:last-child,
+main section.row:last-child > div.column > article > div.article-body > ul:last-child,
+main section.row:last-child > div.column > section > ul:last-child,
+main section.row:last-child > div.column > section > ul:last-child,
+main section.row:last-child > div.column > article > div.article-body > section > ul:last-child,
+main section.row:last-child > div.column > section > section > ul:last-child,
+main section.row:last-child > div.column > ol:last-child,
+main section.row:last-child > div.column > article > div.article-body > ol:last-child,
+main section.row:last-child > div.column > section > ol:last-child,
+main section.row:last-child > div.column > section > ol:last-child,
+main section.row:last-child > div.column > article > div.article-body > section > ol:last-child,
+main section.row:last-child > div.column > section > section > ol:last-child {
+  margin-bottom: 0;
 }
 /*     ┌─────────────────────────────────────────────────────────────────────────────────────────────────┐
  *     │ ++++ ASIDE selectors ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ │
@@ -1162,7 +1203,7 @@ div.column p.article-tagline {
   }
 }
 div.column p.article-tagline.sans {
-  color: #2a3033;
+  color: #000;
   font-weight: 300;
 }
 div.column p.article-tagline.sans > span.lead-in {
@@ -1292,22 +1333,6 @@ div.column p.banner-text-orange-with-towers {
     font-size: 1.15244306rem;
   }
 }
-main section.row > div.column > p:not(.no-btm-margin),
-main section.row > div.column > article > div.article-body > p:not(.no-btm-margin),
-main section.row > div.column > section > p:not(.no-btm-margin),
-main section.row > div.column > section > p:not(.no-btm-margin),
-main section.row > div.column > article > div.article-body > section > p:not(.no-btm-margin),
-main section.row > div.column > section > section > p:not(.no-btm-margin) {
-  margin-bottom: 1em;
-}
-main section.row > div.column:last-child > div.column > p:last-child,
-main section.row > div.column > article > div.article-body:last-child > div.column > p:last-child,
-main section.row > div.column > section:last-child > div.column > p:last-child,
-main section.row > div.column:last-child > div.column > section > p:last-child,
-main section.row > div.column > article > div.article-body:last-child > div.column > section > p:last-child,
-main section.row > div.column > section:last-child > div.column > section > p:last-child {
-  margin-bottom: 0;
-}
 /*  └──────────────────────────────────────────────────────────────────────────────────────────────┘
  */
 div.article-summary aside.article-sidebar,
@@ -1431,6 +1456,7 @@ section.pad-top div.column.half-pad {
  */
 div.column {
   font-size: 1rem;
+  color: #464e54;
   /*         ├---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  --- ┤
  *         │············ GENERIC CLASSES for div.column content containers ························· │
  *         ├---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  --- ┤
@@ -1560,7 +1586,7 @@ div.column .has-smaller-text {
     max-width: 792px;
   }
 }
-main > section.row:last-child > div.column > *:last-child:not(.no-bottom-pad) {
+main > div.page > section.row:last-child > div.column {
   padding-bottom: 2rem;
 }
 /*         └-----------------------------------------------------------------------------------------┘        
@@ -2225,9 +2251,6 @@ div.recent-updates p.recent-update-3 {
 div.column ul {
   padding-bottom: 0;
 }
-div.column ul:last-child:not(.no-bottom-pad) {
-  padding-bottom: 1em;
-}
 div.column ul.centered {
   text-align: center;
 }
@@ -2254,9 +2277,6 @@ div.column ul li.no-bottom-pad {
 }
 div.column p + ul {
   margin-top: 1rem;
-}
-div.column section:not(:last-child) ul:last-child {
-  padding-bottom: 0;
 }
 ul.external-links li {
   list-style-image: url(/wp-content/uploads/sites/906/2015/08/external-link-bullet.png);
