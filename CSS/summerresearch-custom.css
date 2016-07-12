@@ -658,6 +658,20 @@ main section.row > div.column > article > div.article-body > section > ol:not(.n
 main section.row > div.column > section > section > ol:not(.no-btm-margin) {
   margin-bottom: 1em;
 }
+main section.row > div.column > p + ul,
+main section.row > div.column > article > div.article-body > p + ul,
+main section.row > div.column > section > p + ul,
+main section.row > div.column > section > p + ul,
+main section.row > div.column > article > div.article-body > section > p + ul,
+main section.row > div.column > section > section > p + ul,
+main section.row > div.column > p + ol,
+main section.row > div.column > article > div.article-body > p + ol,
+main section.row > div.column > section > p + ol,
+main section.row > div.column > section > p + ol,
+main section.row > div.column > article > div.article-body > section > p + ol,
+main section.row > div.column > section > section > p + ol {
+  margin-top: -0.75em;
+}
 main section.row:last-child > div.column > p:last-child,
 main section.row:last-child > div.column > article > div.article-body > p:last-child,
 main section.row:last-child > div.column > section > p:last-child,
@@ -2262,14 +2276,20 @@ div.column ul + p {
     line-height: 1.375em;
   }
 }
-@media all and (min-width: 481px) {
+@media all and (min-width: 1050px) {
   div.column ul {
     font-size: 1em;
   }
 }
-@media all and (max-width: 480px) {
+@media all and (min-width: 481px) and (max-width: 1049px) {
   div.column ul {
     font-size: 0.92195445em;
+  }
+}
+@media all and (max-width: 480px) {
+  div.column ul {
+    font-size: 0.85000001em;
+    text-align: left;
   }
 }
 div.column ul li.no-bottom-pad {
@@ -2348,14 +2368,20 @@ ul.cascaded-layout > li.gutter-sizer {
     line-height: 1.375em;
   }
 }
-@media all and (min-width: 481px) {
+@media all and (min-width: 1050px) {
   div.column ol {
     font-size: 1em;
   }
 }
-@media all and (max-width: 480px) {
+@media all and (min-width: 481px) and (max-width: 1049px) {
   div.column ol {
     font-size: 0.92195445em;
+  }
+}
+@media all and (max-width: 480px) {
+  div.column ol {
+    font-size: 0.85000001em;
+    text-align: left;
   }
 }
 div.column ol ol {
@@ -2384,14 +2410,19 @@ div.column dl.faq dt {
     line-height: 1.375em;
   }
 }
-@media all and (min-width: 481px) {
+@media all and (min-width: 1050px) {
   div.column dl.faq dt {
     font-size: 1em;
   }
 }
-@media all and (max-width: 480px) {
+@media all and (min-width: 481px) and (max-width: 1049px) {
   div.column dl.faq dt {
     font-size: 0.92195445em;
+  }
+}
+@media all and (max-width: 480px) {
+  div.column dl.faq dt {
+    font-size: 0.85000001em;
     text-align: left;
   }
 }
