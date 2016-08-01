@@ -1,6 +1,6 @@
 [submodule "WSU-UE---CSS"]
 	path = WSU-UE---CSS
-	url = git://github.com/invokeImmediately/WSU-UE---CSS
+	url = https://github.com/invokeImmediately/WSU-UE---CSS
 [submodule "WSU-UE---JS"]
 	path = WSU-UE---JS
-	url = git://github.com/invokeImmediately/WSU-UE---JS
+	url = https://github.com/invokeImmediately/WSU-UE---JS
