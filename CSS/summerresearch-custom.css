@@ -4877,7 +4877,6 @@ ul.program-info > li {
   float: left;
   width: 49%;
   margin-bottom: 2%;
-  overflow-x: auto;
   border: 1px solid #d9d9d9;
   border-radius: 7px;
   list-style-type: none;
