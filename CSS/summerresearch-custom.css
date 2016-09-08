@@ -4883,6 +4883,11 @@ ul.program-info > li {
   list-style-type: none;
   box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
 }
+@media all and (max-width: 693px) {
+  ul.program-info > li {
+    width: 98%;
+  }
+}
 ul.program-info > li > p {
   padding: 7px;
   text-align: left;
