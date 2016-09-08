@@ -822,7 +822,7 @@ div.column aside.article-sidebar h4:first-child {
   margin-top: 0;
 }
 @media screen and (max-width: 693px) {
-  section.single div.column {
+  section.single div.column aside.article-sidebar {
     position: absolute;
     right: -2rem;
     top: 0px;
@@ -837,7 +837,7 @@ div.column aside.article-sidebar h4:first-child {
     -moz-transition: transform .25s ease-out;
     transition: transform .25s ease-out;
   }
-  section.single div.column:hover {
+  section.single div.column aside.article-sidebar:hover {
     -webkit-transform: none;
     -moz-transform: none;
     transform: none;
