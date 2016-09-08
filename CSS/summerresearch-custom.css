@@ -821,30 +821,8 @@ div.column aside.article-sidebar h4 {
 div.column aside.article-sidebar h4:first-child {
   margin-top: 0;
 }
-@media screen and (min-width: 990px) and (max-width: 1098px) {
-  div.column aside.article-sidebar {
-    position: absolute;
-    right: 0px;
-    top: 0px;
-    width: 230px;
-    -webkit-transform-origin: 100% 0% 0;
-    -ms-transform-origin: 100% 0% 0;
-    transform-origin: 100% 0% 0;
-    -webkit-transform: rotate(-90deg);
-    -moz-transform: rotate(-90deg);
-    transform: rotate(-90deg);
-    -webkit-transition: transform .25s ease-out;
-    -moz-transition: transform .25s ease-out;
-    transition: transform .25s ease-out;
-  }
-  div.column aside.article-sidebar:hover {
-    -webkit-transform: none;
-    -moz-transform: none;
-    transform: none;
-  }
-}
-@media screen and (max-width: 520px) {
-  div.column aside.article-sidebar {
+@media screen and (max-width: 693px) {
+  section.single div.column {
     position: absolute;
     right: -2rem;
     top: 0px;
@@ -859,7 +837,7 @@ div.column aside.article-sidebar h4:first-child {
     -moz-transition: transform .25s ease-out;
     transition: transform .25s ease-out;
   }
-  div.column aside.article-sidebar:hover {
+  section.single div.column:hover {
     -webkit-transform: none;
     -moz-transform: none;
     transform: none;
