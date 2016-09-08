@@ -4895,3 +4895,6 @@ ul.program-info > li > p > img {
   border-radius: 7px;
   margin: 4px 4px 4px 7px;
 }
+ul.program-info > li > p > a {
+  word-wrap: break-word;
+}
