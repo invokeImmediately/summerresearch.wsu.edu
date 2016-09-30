@@ -3710,46 +3710,143 @@ ul.cascaded-layout > li.gutter-sizer {
  *         │ ···· ORDERED list elements ···························································· │
  *         └-----------------------------------------------------------------------------------------┘
  */
-div.column ol {
-  padding-bottom: 0;
-}
 @media all {
-  div.column ol {
+  section.row.single div.column ol {
     line-height: 1.275em;
     font-size: 1em;
   }
 }
 @media all and (min-width: 1073px) {
-  div.column ol {
+  section.row.single div.column ol {
     font-size: 1.06609808em;
   }
 }
 @media all and (min-width: 990px) and (max-width: 1072px) {
-  div.column ol {
+  section.row.single div.column ol {
     font-size: 1em;
   }
 }
 @media all and (min-width: 792px) and (max-width: 989px) {
-  div.column ol {
+  section.row.single div.column ol {
     font-size: 1.06609808em;
   }
 }
 @media all and (min-width: 481px) and (max-width: 791px) {
-  div.column ol {
+  section.row.single div.column ol {
     font-size: 1em;
   }
 }
 @media all and (min-width: 361px) and (max-width: 480px) {
-  div.column ol {
+  section.row.single div.column ol {
     font-size: 0.938em;
     text-align: left;
   }
 }
 @media all and (max-width: 360px) {
-  div.column ol {
+  section.row.single div.column ol {
     font-size: 0.879844em;
     text-align: left;
   }
+}
+@media all {
+  section.row.side-right div.column ol,
+  section.row.side-left div.column ol,
+  section.row.halves div.column ol {
+    line-height: 1.275em;
+    font-size: 1em;
+  }
+}
+@media all and (min-width: 1073px) {
+  section.row.side-right div.column ol,
+  section.row.side-left div.column ol,
+  section.row.halves div.column ol {
+    font-size: 1em;
+  }
+}
+@media all and (min-width: 990px) and (max-width: 1072px) {
+  section.row.side-right div.column ol,
+  section.row.side-left div.column ol,
+  section.row.halves div.column ol {
+    font-size: 1em;
+  }
+}
+@media all and (min-width: 792px) and (max-width: 989px) {
+  section.row.side-right div.column ol,
+  section.row.side-left div.column ol,
+  section.row.halves div.column ol {
+    font-size: 1em;
+  }
+}
+@media all and (min-width: 481px) and (max-width: 791px) {
+  section.row.side-right div.column ol,
+  section.row.side-left div.column ol,
+  section.row.halves div.column ol {
+    font-size: 1em;
+  }
+}
+@media all and (min-width: 361px) and (max-width: 480px) {
+  section.row.side-right div.column ol,
+  section.row.side-left div.column ol,
+  section.row.halves div.column ol {
+    font-size: 0.938em;
+    text-align: left;
+  }
+}
+@media all and (max-width: 360px) {
+  section.row.side-right div.column ol,
+  section.row.side-left div.column ol,
+  section.row.halves div.column ol {
+    font-size: 0.879844em;
+    text-align: left;
+  }
+}
+@media all {
+  section.row.thirds div.column ol,
+  section.row.quarters div.column ol {
+    line-height: 1.275em;
+    font-size: 1em;
+  }
+}
+@media all and (min-width: 1073px) {
+  section.row.thirds div.column ol,
+  section.row.quarters div.column ol {
+    font-size: 1em;
+  }
+}
+@media all and (min-width: 990px) and (max-width: 1072px) {
+  section.row.thirds div.column ol,
+  section.row.quarters div.column ol {
+    font-size: 0.938em;
+  }
+}
+@media all and (min-width: 792px) and (max-width: 989px) {
+  section.row.thirds div.column ol,
+  section.row.quarters div.column ol {
+    font-size: 1em;
+  }
+}
+@media all and (min-width: 481px) and (max-width: 791px) {
+  section.row.thirds div.column ol,
+  section.row.quarters div.column ol {
+    font-size: 0.938em;
+  }
+}
+@media all and (min-width: 361px) and (max-width: 480px) {
+  section.row.thirds div.column ol,
+  section.row.quarters div.column ol {
+    font-size: 0.879844em;
+    text-align: left;
+  }
+}
+@media all and (max-width: 360px) {
+  section.row.thirds div.column ol,
+  section.row.quarters div.column ol {
+    font-size: 0.879844em;
+    text-align: left;
+  }
+}
+div.column ol {
+  padding-bottom: 0;
 }
 div.column ol li {
   line-height: inherit;
