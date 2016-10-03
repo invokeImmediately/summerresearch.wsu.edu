@@ -2695,7 +2695,7 @@ div.column .has-larger-text {
   font-size: larger;
 }
 div.column .has-smaller-text {
-  font-size: smaller;
+  font-size: smaller !important;
 }
 @media (min-width: 1050px) {
   div.column .large-format-friendly {
@@ -3583,7 +3583,7 @@ div.column ul {
 }
 div.column ul ol,
 div.column ul ul {
-  font-size: inherit;
+  font-size: inherit  !important;
 }
 div.column ul.centered {
   text-align: center;
@@ -3853,7 +3853,7 @@ div.column ol li {
 }
 div.column ol ol,
 div.column ol ul {
-  font-size: inherit;
+  font-size: inherit !important;
 }
 div.column ol ol {
   list-style-type: lower-alpha;
@@ -4507,57 +4507,6 @@ div.column table.peopleList tbody td:first-of-type {
   width: 20%;
   text-align: center;
 }
-div.column table.navigational-map {
-  width: 100%;
-  margin: 0 auto;
-  margin-bottom: 20px;
-  font-size: 13px;
-  text-align: left;
-  color: #981e32;
-}
-div.column table.navigational-map a {
-  border-bottom: 1px dotted rgba(152, 30, 50, 0);
-  color: inherit;
-}
-div.column table.navigational-map th {
-  border-bottom: 1px solid #b5babe;
-  font-size: 1.1em;
-  line-height: 1.275em;
-  font-weight: bold;
-  text-transform: uppercase;
-  vertical-align: bottom;
-  /*&:nth-child(2):hover {
-                    background-color: #d3e1e3;
-                }*/
-}
-div.column table.navigational-map th.table-spacer {
-  width: 15px;
-}
-div.column table.navigational-map th:nth-child(4n+1) {
-  color: #4e2a32;
-}
-div.column table.navigational-map th:nth-child(4n+1) a:hover {
-  background-color: rgba(239, 120, 121, 0.2);
-}
-div.column table.navigational-map th:nth-child(4n+3) {
-  color: #781d31;
-}
-div.column table.navigational-map th:nth-child(4n+3) a:hover {
-  background-color: rgba(239, 120, 121, 0.3);
-  color: #d13c59;
-}
-div.column table.navigational-map td p {
-  padding-bottom: 0px;
-  font-size: inherit;
-  text-align: inherit;
-}
-div.column table.navigational-map td p:not(:last-child) {
-  margin-bottom: 0;
-  border-bottom: 1px solid #d7dadb;
-}
-div.column table.navigational-map td:nth-child(4n+3) {
-  color: #c60c30;
-}
 div.column table.wsu-blue-theme {
   width: 100%;
   border-collapse: separate;
@@ -4679,6 +4628,28 @@ div.column table.wsu-gray-theme > tbody > tr:nth-child(2n + 1) > td {
   background-color: #d7dadb;
   vertical-align: top;
   line-height: normal;
+}
+@media screen and (max-width: 695px), screen and (min-width: 990px) and (max-width: 895px) {
+  div.column table.navigational-map {
+    display: block;
+  }
+  div.column table.navigational-map thead,
+  div.column table.navigational-map tr,
+  div.column table.navigational-map th {
+    display: block;
+  }
+  div.column table.navigational-map tbody {
+    display: none;
+  }
+  div.column table.navigational-map th {
+    border: none;
+    text-align: center;
+    text-transform: none;
+  }
+  div.column table.navigational-map th.table-spacer,
+  div.column table.navigational-map th br {
+    display: none;
+  }
 }
 /*  └──────────────────────────────────────────────────────────────────────────────────────────────┘
  */
