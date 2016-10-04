@@ -4453,41 +4453,6 @@ div.column table.plain tbody tr:nth-of-type(2n) td {
   text-align: inherit;
   vertical-align: top;
 }
-div.column table.award-recipients {
-  background: #fff url(/wp-content/uploads/sites/906/2015/08/bg-dark.jpg) repeat fixed left top;
-  border-collapse: separate;
-  border-spacing: 0;
-  border-top: 1px solid #5e6a71;
-  border-bottom: 1px solid #5e6a71;
-}
-div.column table.award-recipients thead tr th {
-  padding-top: .25rem;
-  padding-left: .25rem;
-  padding-bottom: .25rem;
-  border-top: 1px solid #fff;
-  border-bottom: 1px solid #B6BCBF;
-  text-align: inherit;
-}
-div.column table.award-recipients tbody tr td {
-  padding-top: .25rem;
-  padding-left: .25rem;
-  padding-bottom: .25rem;
-  background-color: #fff;
-  border-top: 1px solid #eff0f1;
-  border-bottom: 1px solid #d7dadb;
-  text-align: inherit;
-  vertical-align: top;
-}
-div.column table.award-recipients tbody:nth-of-type(2n) tr td {
-  padding-top: .25rem;
-  padding-left: .25rem;
-  padding-bottom: .25rem;
-  background-color: #eff0f1;
-  border-top: 1px solid #fff;
-  border-bottom: 1px solid #b5babe;
-  text-align: inherit;
-  vertical-align: top;
-}
 div.column table.peopleList {
   width: 100%;
   background: #fff;
@@ -4628,28 +4593,6 @@ div.column table.wsu-gray-theme > tbody > tr:nth-child(2n + 1) > td {
   background-color: #d7dadb;
   vertical-align: top;
   line-height: normal;
-}
-@media screen and (max-width: 695px), screen and (min-width: 990px) and (max-width: 895px) {
-  div.column table.navigational-map {
-    display: block;
-  }
-  div.column table.navigational-map thead,
-  div.column table.navigational-map tr,
-  div.column table.navigational-map th {
-    display: block;
-  }
-  div.column table.navigational-map tbody {
-    display: none;
-  }
-  div.column table.navigational-map th {
-    border: none;
-    text-align: center;
-    text-transform: none;
-  }
-  div.column table.navigational-map th.table-spacer,
-  div.column table.navigational-map th br {
-    display: none;
-  }
 }
 /*  └──────────────────────────────────────────────────────────────────────────────────────────────┘
  */
