@@ -382,8 +382,10 @@ ul.program-info {
     & > li {
         float: left;
         width: 49%;
+        @media all and (max-width: @v-rghtclmn-thrshld) {
+            width: 98%;
+        }
         margin-bottom: 2%;
-        overflow-x: auto;
         border: 1px solid #d9d9d9;
         border-radius: 7px;
         list-style-type: none;
@@ -395,6 +397,9 @@ ul.program-info {
                 border-radius: 7px;
                 margin: 4px 4px 4px 7px;
             }
+			& > a {
+				word-wrap: break-word;
+			}
         }
     }
 }
