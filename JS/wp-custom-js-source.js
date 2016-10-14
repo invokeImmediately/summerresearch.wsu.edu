@@ -715,7 +715,7 @@ function isJQuery($obj) {
                 inputText = $this.val();
 				if (inputText.length > 9) {
 					$this.val(inputText.slice(0,9));
-					errorMsg += " Also, they must be no greater than nine (9) digits in length.");
+					errorMsg += " Also, they must be no greater than nine (9) digits in length.";
 				}
 				errorMsg += " What you pasted will automatically be corrected."
 				alert(errorMsg);
