@@ -2132,25 +2132,25 @@ div.column p.article-tagline.sans > span.lead-in {
   font-weight: 700;
   letter-spacing: normal;
 }
-div.column p.article-tagline {
+div.column p.article-tagline:not(.has-no-bordering) {
   position: relative;
   padding-top: 0.33333333rem !important;
   padding-bottom: 0.33333333rem !important;
   margin-top: 0.33333333rem;
 }
-div.column p.article-tagline:before,
-div.column p.article-tagline:after {
+div.column p.article-tagline:not(.has-no-bordering):before,
+div.column p.article-tagline:not(.has-no-bordering):after {
   content: "";
   position: absolute;
   left: 0;
   width: 67%;
 }
-div.column p.article-tagline:before {
+div.column p.article-tagline:not(.has-no-bordering):before {
   top: -0.33333333rem;
   height: 5px;
   border-top: 5px solid rgba(70, 78, 84, 0.33);
 }
-div.column p.article-tagline:after {
+div.column p.article-tagline:not(.has-no-bordering):after {
   bottom: -0.33333333rem;
   height: 1px;
   width: 33%;
