@@ -1566,15 +1566,15 @@ div.column header:first-child + h3.fancy.with-top-border {
 footer.article-footer div.author-info {
   display: none;
 }
-/*  ┌──────────────────────────────────────────────────────────────────────────────────────────────┐
- *  │ ++++++++ div.column ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ │
- *  │ ++++++++ PARAGRAPHS ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ │
- *  ├----------------------------------------------------------------------------------------------┤
- *  │ Styling for paragraph elements intended as children of div.column elements as defined in the │
- *  │ WSU Spine theme for WordPress.                                                               │
- *  │  ╘═» This file assumes [//github.com/invokeImmediately/WSU-UE---CSS/color-palette.less] has  │
- *  │       already been imported.                                                                 │
- *  ├----------------------------------------------------------------------------------------------┤
+/*     ┌─────────────────────────────────────────────────────────────────────────────────────────────────┐
+ *     │ ++++++++ div.column +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ │
+ *     │ ++++++++ PARAGRAPHS +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ │
+ *     ├-------------------------------------------------------------------------------------------------┤
+ *     │ Styling for paragraph elements intended as children of div.column elements as defined in the    │
+ *     │ WSU Spine theme for WordPress.                                                                  │
+ *     │  ╘═» This file assumes [//github.com/invokeImmediately/WSU-UE---CSS/color-palette.less] has     │
+ *     │       already been imported.                                                                    │
+ *     ├-------------------------------------------------------------------------------------------------┤
  */
 @media all {
   section.row.single div.column p {
@@ -2457,7 +2457,7 @@ div.column p.banner-text-orange-with-towers {
     font-size: 1.099805em;
   }
 }
-/*  └──────────────────────────────────────────────────────────────────────────────────────────────┘
+/*     └─────────────────────────────────────────────────────────────────────────────────────────────────┘
  */
 div.article-body {
   position: relative;
