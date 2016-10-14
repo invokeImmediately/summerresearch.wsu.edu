@@ -145,11 +145,8 @@ function isJQuery($obj) {
     function initHrH2Motif(slctrStandardH2, slctrPrevHr, h2ClassesAdded, hrClassesAdded, animAddDrtn) {
         $(slctrStandardH2).each(function () {
                 var $this = $(this);
-				var $prevElem = $this.prev(slctrPrevHr);
-				if ($prevElem.length > 0) {
-					$this.addClass(h2ClassesAdded);
-					$prevElem.addClass(hrClassesAdded, animAddDrtn);
-				}
+                $this.addClass(h2ClassesAdded);
+                $this.prev(slctrPrevHr).addClass(hrClassesAdded, animAddDrtn);
         });
     }
     
