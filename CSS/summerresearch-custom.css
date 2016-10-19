@@ -700,7 +700,12 @@ main section.row > div.column > section > ol:not(.no-btm-margin),
 main section.row > div.column > article > div.article-body > section > ol:not(.no-btm-margin),
 main section.row > div.column > article > div.article-summary > section > ol:not(.no-btm-margin),
 main section.row > div.column > section > section > ol:not(.no-btm-margin),
-main section.row > div.column table > tbody > tr > td > section > ol:not(.no-btm-margin) {
+main section.row > div.column table > tbody > tr > td > section > ol:not(.no-btm-margin),
+main section.row > div.column > div.gform_wrapper li.gfield_html > p:not(:last-child),
+main section.row > div.column > article > div.article-body > div.gform_wrapper li.gfield_html > p:not(:last-child),
+main section.row > div.column > article > div.article-summary > div.gform_wrapper li.gfield_html > p:not(:last-child),
+main section.row > div.column > section > div.gform_wrapper li.gfield_html > p:not(:last-child),
+main section.row > div.column table > tbody > tr > td > div.gform_wrapper li.gfield_html > p:not(:last-child) {
   margin-bottom: 1rem;
 }
 main section.row > div.column > p + ul:not(.spaces-top-full),
@@ -4592,11 +4597,11 @@ div.column table.wsu-gray-theme > tbody > tr:nth-child(2n + 1) > td {
 }
 /*  └──────────────────────────────────────────────────────────────────────────────────────────────┘
  */
-/*  ╔══════════════════════════════════════════════════════════════════════════════════════════════╗ 
- *  ║ #### INPUT FORMS ########################################################################### ║
- *  ╠==============================================================================================╣
- *  ║ Styling applied to input elements to which the gravity form classes have been applied.       ║
- *  ╚══════════════════════════════════════════════════════════════════════════════════════════════╝
+/*  ╔════════════════════════════════════════════════════════════════════════════════════════════════════════╗ 
+ *  ║ #### INPUT FORMS ##################################################################################### ║
+ *  ╠========================================================================================================╣
+ *  ║ Styling applied to input elements to which the gravity form classes have been applied.                 ║
+ *  ╚════════════════════════════════════════════════════════════════════════════════════════════════════════╝
  */
 input.read-more-state {
   display: none;
@@ -4714,6 +4719,7 @@ div.column .gform_wrapper .field_sublabel_above .ginput_complex.ginput_container
   margin: 0;
 }
 div.column .gform_wrapper .gsection {
+  margin-top: 2rem;
   margin-bottom: 0;
 }
 div.column .gform_wrapper .gfield_checkbox li label,
@@ -4753,6 +4759,20 @@ div.column .gform_wrapper .gform_body > ul > li.gf-bckgrnd-field {
 }
 div.column .gform_wrapper #extensions_message {
   padding-left: 1rem;
+}
+div.column .gform_wrapper h2.fancy {
+  margin-right: 0;
+  margin-left: 0;
+}
+@media only screen and (min-width: 641px) {
+  div.column .gform_wrapper.gf_browser_chrome .gform_body {
+    width: calc(100% + 15px);
+  }
+}
+@media only screen and (max-width: 640px) {
+  div.column .gform_wrapper.gf_browser_chrome .gform_body {
+    width: 100%;
+  }
 }
 div.column li.gfield > div.ginput_complex > span > label {
   color: #8e7f88;
@@ -4820,7 +4840,7 @@ div.column ul.gform_fields.top_label > li.gfield > div.gfield_description {
 div.column ul.gform_fields.top_label > li.gfield > div.ginput_complex {
   margin-top: 0;
 }
-div.column ul.gform_fields.top_label > li.gfield + li.gfield,
+div.column ul.gform_fields.top_label > li.gfield + li.gfield:not(.gsection),
 div.column ul.gform_fields.top_label li.gfield:first-child {
   margin-top: 0.5rem;
 }
