@@ -4208,6 +4208,7 @@ span.accentuated-text.gray.brighter {
 }
 span.has-tool-tip,
 span.has-tooltip {
+  position: relative;
   margin-bottom: -3px;
   border-bottom: 1px dotted rgba(0, 165, 189, 0.25);
   color: #00a5bd;
