@@ -2175,19 +2175,49 @@ div.column p.no-bottom-pad {
 }
 div.column p.vpue-jump-bar {
   padding: 0 1rem 1rem;
-  margin-top: 2rem;
-  margin-bottom: 2rem;
+  margin: 2rem;
   background-color: rgba(0, 165, 189, 0.5);
   border: 1px solid rgba(63, 107, 114, 0.5);
   border-radius: 10px;
   color: #464e54;
   text-align: center;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
 }
 div.column p.vpue-jump-bar span.title {
   font-size: 1.18147448em;
   line-height: 2em;
   font-weight: bold;
   font-variant: small-caps;
+}
+div.column p.vpue-jump-bar.floating {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 50%;
+  width: 50%;
+  padding-top: 0.4rem;
+  padding-bottom: 0.75rem;
+  margin-top: 0;
+  margin-right: 0;
+  margin-left: 0;
+  background-color: rgba(127, 208, 220, 0.95);
+  font-size: 0.8em !important;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5);
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  transform: translateX(-50%);
+  z-index: 99163;
+}
+@media all and (max-width: 989px) {
+  div.column p.vpue-jump-bar.floating {
+    top: 51px;
+  }
+}
+div.column p.vpue-jump-bar.floating span.title {
+  display: none;
+}
+div.column p.vpue-jump-bar.floating br {
+  display: none;
 }
 @media all {
   section.row.single div.column p.vpue-jump-back {
