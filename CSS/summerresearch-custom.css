@@ -179,29 +179,35 @@ div.column .centers-text {
 div.column .soft-gray-border {
   border: 1px solid rgba(42, 48, 51, 0.5);
 }
-.has-pull-quote-bordering {
+.has-pull-quote-bordering:not(.alt) {
   position: relative;
   padding-top: 0.33333333rem !important;
   padding-bottom: 0.33333333rem !important;
   margin-top: 0.33333333rem;
 }
-.has-pull-quote-bordering:before,
-.has-pull-quote-bordering:after {
+.has-pull-quote-bordering:not(.alt):before,
+.has-pull-quote-bordering:not(.alt):after {
   content: "";
   position: absolute;
   left: 0;
   width: 67%;
 }
-.has-pull-quote-bordering:before {
+.has-pull-quote-bordering:not(.alt):before {
   top: -0.33333333rem;
   height: 5px;
   border-top: 5px solid rgba(70, 78, 84, 0.33);
 }
-.has-pull-quote-bordering:after {
+.has-pull-quote-bordering:not(.alt):after {
   bottom: -0.33333333rem;
   height: 1px;
   width: 33%;
   border-top: 1px solid rgba(70, 78, 84, 0.25);
+}
+.has-pull-quote-bordering.alt {
+  padding-left: 0.75rem !important;
+  padding-right: 0.75rem !important;
+  border-right: 1px solid rgba(70, 78, 84, 0.25);
+  border-left: 5px solid rgba(70, 78, 84, 0.33);
 }
 .fade-in-from-top {
   -webkit-animation: anim-fade-in-from-top 1s linear 1;
@@ -2137,29 +2143,35 @@ div.column p.article-tagline.sans > span.lead-in {
   font-weight: 700;
   letter-spacing: normal;
 }
-div.column p.article-tagline:not(.has-no-bordering) {
+div.column p.article-tagline:not(.has-no-bordering):not(.alt) {
   position: relative;
   padding-top: 0.33333333rem !important;
   padding-bottom: 0.33333333rem !important;
   margin-top: 0.33333333rem;
 }
-div.column p.article-tagline:not(.has-no-bordering):before,
-div.column p.article-tagline:not(.has-no-bordering):after {
+div.column p.article-tagline:not(.has-no-bordering):not(.alt):before,
+div.column p.article-tagline:not(.has-no-bordering):not(.alt):after {
   content: "";
   position: absolute;
   left: 0;
   width: 67%;
 }
-div.column p.article-tagline:not(.has-no-bordering):before {
+div.column p.article-tagline:not(.has-no-bordering):not(.alt):before {
   top: -0.33333333rem;
   height: 5px;
   border-top: 5px solid rgba(70, 78, 84, 0.33);
 }
-div.column p.article-tagline:not(.has-no-bordering):after {
+div.column p.article-tagline:not(.has-no-bordering):not(.alt):after {
   bottom: -0.33333333rem;
   height: 1px;
   width: 33%;
   border-top: 1px solid rgba(70, 78, 84, 0.25);
+}
+div.column p.article-tagline:not(.has-no-bordering).alt {
+  padding-left: 0.75rem !important;
+  padding-right: 0.75rem !important;
+  border-right: 1px solid rgba(70, 78, 84, 0.25);
+  border-left: 5px solid rgba(70, 78, 84, 0.33);
 }
 div.column h1 + p.article-tagline,
 div.column h2 + p.article-tagline,
