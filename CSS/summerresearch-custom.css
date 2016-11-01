@@ -11,7 +11,8 @@ div.column h3,
 div.column h4,
 div.column,
 header.main-header,
-div.column {
+div.column,
+.gform_heading h3.gform_title {
   font-family: 'Open Sans', sans-serif;
 }
 .has-alt-font,
@@ -1237,7 +1238,8 @@ h2 div.column hr:not(.subSection) + h2 {
 h2.article-title a {
   border-bottom: none;
 }
-div.column h3 {
+div.column h3,
+.gform_heading h3.gform_title {
   padding: 0 0 0 .1em;
   margin-top: 1.5rem;
   margin-bottom: .75rem;
@@ -1248,59 +1250,64 @@ div.column h3 {
   color: #981e32;
 }
 @media all {
-  div.column h3 {
+  div.column h3,
+  .gform_heading h3.gform_title {
     line-height: 1.1em;
     font-size: 1.6em;
   }
 }
 @media all and (min-width: 1073px) {
-  div.column h3 {
+  div.column h3,
+  .gform_heading h3.gform_title {
     font-size: 1.6em;
   }
 }
 @media all and (min-width: 990px) and (max-width: 1072px) {
-  div.column h3 {
+  div.column h3,
+  .gform_heading h3.gform_title {
     font-size: 1.6em;
   }
 }
 @media all and (min-width: 792px) and (max-width: 989px) {
-  div.column h3 {
+  div.column h3,
+  .gform_heading h3.gform_title {
     font-size: 1.6em;
   }
 }
 @media all and (min-width: 481px) and (max-width: 791px) {
-  div.column h3 {
+  div.column h3,
+  .gform_heading h3.gform_title {
     font-size: 1.6em;
   }
 }
 @media all and (min-width: 361px) and (max-width: 480px) {
-  div.column h3 {
+  div.column h3,
+  .gform_heading h3.gform_title {
     font-size: 1.5008em;
   }
 }
 @media all and (max-width: 360px) {
-  div.column h3 {
+  div.column h3,
+  .gform_heading h3.gform_title {
     font-size: 1.4077504em;
   }
 }
-div.column h3.centered {
+div.column h3.centered,
+.gform_heading h3.gform_title.centered {
   text-align: center;
 }
-div.column h3.gray {
+div.column h3.gray,
+.gform_heading h3.gform_title.gray {
   color: #464e54;
 }
-div.column h3.no-top-margin {
-  margin-top: 0;
-}
-div.column h3:first-child,
-div.column header:first-child + h3,
-div.column header:first-child + h3.fancy.with-top-border:not(:first-child),
-div.column hr:not(.subSection) + h3 {
+div.column h3.no-top-margin,
+.gform_heading h3.gform_title.no-top-margin {
   margin-top: 0;
 }
 div.column h3.fancy,
 div.column h4.fancy,
-.gform_heading h3.gform_title.fancy {
+.gform_heading h3.gform_title.fancy,
+.gform_heading h3.gform_title {
   position: relative;
   padding: 0.3333rem 0.5rem;
   margin-left: 0;
@@ -1310,17 +1317,23 @@ div.column h4.fancy,
 }
 div.column h3.fancy.with-top-border,
 div.column h4.fancy.with-top-border,
-.gform_heading h3.gform_title.fancy.with-top-border {
+.gform_heading h3.gform_title.fancy.with-top-border,
+.gform_heading h3.gform_title.with-top-border,
+.gform_heading h3.gform_title {
   padding-top: 0.4375rem;
 }
 div.column h3.fancy.with-top-border:not(:first-child),
 div.column h4.fancy.with-top-border:not(:first-child),
-.gform_heading h3.gform_title.fancy.with-top-border:not(:first-child) {
+.gform_heading h3.gform_title.fancy.with-top-border:not(:first-child),
+.gform_heading h3.gform_title.with-top-border:not(:first-child),
+.gform_heading h3.gform_title:not(:first-child) {
   margin-top: 2rem;
 }
 div.column h3.fancy.with-top-border::before,
 div.column h4.fancy.with-top-border::before,
-.gform_heading h3.gform_title.fancy.with-top-border::before {
+.gform_heading h3.gform_title.fancy.with-top-border::before,
+.gform_heading h3.gform_title.with-top-border::before,
+.gform_heading h3.gform_title::before {
   content: "";
   position: absolute;
   top: 0;
@@ -1329,6 +1342,13 @@ div.column h4.fancy.with-top-border::before,
   height: 0;
   border-top: 1px solid rgba(152, 30, 50, 0.67);
   border-bottom: 1px solid rgba(152, 30, 50, 0.375);
+}
+div.column h3:first-child,
+div.column header:first-child + h3,
+div.column header:first-child + h3.fancy.with-top-border:not(:first-child),
+div.column hr:not(.subSection) + h3,
+.gform_heading h3.gform_title:first-child {
+  margin-top: 0;
 }
 div.column h4 {
   padding: 0;
