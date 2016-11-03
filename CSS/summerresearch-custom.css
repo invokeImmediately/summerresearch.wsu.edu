@@ -3932,9 +3932,9 @@ div.column ol ol ol {
  */
 div.column dl.faq dt {
   position: relative;
-  width: 100%;
-  padding: 5px 20px 5px 10px;
-  margin: 5px -10px;
+  width: calc(100% - 50px);
+  padding: 5px 40px 5px 10px;
+  margin: 5px 0;
   background-color: #d7dadb;
   font-weight: bold;
   -webkit-transition: all 0.25s linear;
@@ -4025,7 +4025,10 @@ div.column dl.faq dt.activated:hover:after {
   border-bottom: 8px solid #fff;
   border-left: 8px solid transparent;
 }
-div.column dl.toggled dd {
+div.column dl.faq dd:not(:last-child) > p:last-child {
+  margin-bottom: 1rem;
+}
+div.column dl.faq.toggled dd {
   display: none;
 }
 /*         ├---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  --- ┤
@@ -4621,7 +4624,6 @@ div.column table.wsu-gray-theme {
   border-top: 1px solid #464e54;
   border-bottom: 1px solid #464e54;
   vertical-align: top;
-  font-variant: small-caps;
 }
 @media all and (min-width: 891px) {
   div.column table.wsu-gray-theme {
@@ -4644,7 +4646,6 @@ div.column table.wsu-gray-theme > thead > tr.sub-heading-row > th {
   background-color: #000;
   vertical-align: bottom;
   text-indent: -1em;
-  font-variant: small-caps;
   font-weight: bold;
   color: #fff;
 }
@@ -5069,8 +5070,11 @@ div.column ul.gform_fields > li.gfield.gfield_contains_required ul.gfield_radio:
  */
 .drop-down-toggle {
   position: relative;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
-.transition(~"all 0.3s ease") .drop-down-toggle:after {
+.drop-down-toggle:after {
   content: "";
   position: absolute;
   right: 10px;
