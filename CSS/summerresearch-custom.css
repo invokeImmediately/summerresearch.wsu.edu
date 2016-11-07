@@ -6065,13 +6065,13 @@ div.column ul:not(.content-boxes):not(.event-boxes):not(.program-info).gray-bull
 }
 div.column ul.event-boxes > li {
   float: left;
-  width: 49%;
+  width: calc(49% - 14px);
   min-height: 198px;
   margin-bottom: 2%;
 }
 @media all and (max-width: 693px) {
   div.column ul.event-boxes > li {
-    width: 98%;
+    width: calc(98% - 14px);
   }
 }
 @media all and (max-width: 1205px) {
