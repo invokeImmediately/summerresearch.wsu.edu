@@ -6201,3 +6201,6 @@ ul.program-info > li > img {
 ul.program-info > li > a {
   word-wrap: break-word;
 }
+ul.program-info > li.gutter-sizer {
+  width: calc(2% + 14px) !important;
+}
