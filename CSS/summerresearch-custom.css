@@ -205,10 +205,27 @@ div.column .soft-gray-border {
   border-top: 1px solid rgba(70, 78, 84, 0.25);
 }
 .has-pull-quote-bordering.alt {
+  position: relative;
   padding-left: 0.75rem !important;
   padding-right: 0.75rem !important;
   border-right: 1px solid rgba(70, 78, 84, 0.25);
   border-left: 5px solid rgba(70, 78, 84, 0.33);
+}
+.has-pull-quote-bordering.alt:before,
+.has-pull-quote-bordering.alt:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 1px;
+  height: 100%;
+}
+.has-pull-quote-bordering.alt:before {
+  right: 1px;
+  background-color: rgba(70, 78, 84, 0.125);
+}
+.has-pull-quote-bordering.alt:after {
+  right: 3px;
+  background-color: rgba(70, 78, 84, 0.0675);
 }
 .fade-in-from-top {
   -webkit-animation: anim-fade-in-from-top 1s linear 1;
@@ -2188,10 +2205,27 @@ div.column p.article-tagline:not(.has-no-bordering):not(.alt):after {
   border-top: 1px solid rgba(70, 78, 84, 0.25);
 }
 div.column p.article-tagline:not(.has-no-bordering).alt {
+  position: relative;
   padding-left: 0.75rem !important;
   padding-right: 0.75rem !important;
   border-right: 1px solid rgba(70, 78, 84, 0.25);
   border-left: 5px solid rgba(70, 78, 84, 0.33);
+}
+div.column p.article-tagline:not(.has-no-bordering).alt:before,
+div.column p.article-tagline:not(.has-no-bordering).alt:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 1px;
+  height: 100%;
+}
+div.column p.article-tagline:not(.has-no-bordering).alt:before {
+  right: 1px;
+  background-color: rgba(70, 78, 84, 0.125);
+}
+div.column p.article-tagline:not(.has-no-bordering).alt:after {
+  right: 3px;
+  background-color: rgba(70, 78, 84, 0.0675);
 }
 div.column h1 + p.article-tagline,
 div.column h2 + p.article-tagline,
@@ -6152,20 +6186,18 @@ ul.program-info > li {
   border-radius: 7px;
   list-style-type: none;
   box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+  padding: 7px;
+  text-align: left;
 }
 @media all and (max-width: 693px) {
   ul.program-info > li {
     width: 98%;
   }
 }
-ul.program-info > li > p {
-  padding: 7px;
-  text-align: left;
-}
-ul.program-info > li > p > img {
+ul.program-info > li > img {
   border-radius: 7px;
   margin: 4px 4px 4px 7px;
 }
-ul.program-info > li > p > a {
+ul.program-info > li > a {
   word-wrap: break-word;
 }
