@@ -328,7 +328,7 @@ function isJQuery($obj) {
 		if($toc.length === 1 && $mainHeader.length === 1) {
 			var $window = $(window);
 			var tocTrigger = $toc.offset().top + $toc.height() + 100;
-			var $tocClone = $toc.clone().addClass("floating").insertAfter($toc);
+			var $tocClone = $toc.clone().addClass("floating").removeAttr("id").insertAfter($toc);
 			$tocClone.find("span.title + br").remove();
 			$tocClone.find("span.title").remove();
 			if($linkToTop.length === 1) {
