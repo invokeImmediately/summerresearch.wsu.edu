@@ -4874,6 +4874,60 @@ div.column .gform_wrapper h2.fancy {
     width: 100%;
   }
 }
+div.column li.gfield.uses-rich-editor div.tmce-active div.mce-menubar {
+  display: none;
+}
+div.column li.gfield.uses-rich-editor div.tmce-active div.mce-toolbar-grp > div.mce-stack-layout > div.mce-toolbar.mce-first div.mce-btn[aria-label="Blockquote"],
+div.column li.gfield.uses-rich-editor div.tmce-active div.mce-toolbar-grp > div.mce-stack-layout > div.mce-toolbar.mce-first div.mce-btn[aria-label="Insert/edit link"],
+div.column li.gfield.uses-rich-editor div.tmce-active div.mce-toolbar-grp > div.mce-stack-layout > div.mce-toolbar.mce-first div.mce-btn[aria-label="Remove link"],
+div.column li.gfield.uses-rich-editor div.tmce-active div.mce-toolbar-grp > div.mce-stack-layout > div.mce-toolbar.mce-first div.mce-btn[aria-label="Insert/edit image"],
+div.column li.gfield.uses-rich-editor div.tmce-active div.mce-toolbar-grp > div.mce-stack-layout > div.mce-toolbar.mce-first div.mce-btn[aria-label="Table"],
+div.column li.gfield.uses-rich-editor div.tmce-active div.mce-toolbar-grp > div.mce-stack-layout > div.mce-toolbar.mce-first div.mce-btn[aria-label="Toolbar Toggle"],
+div.column li.gfield.uses-rich-editor div.tmce-active div.mce-toolbar-grp > div.mce-stack-layout > div.mce-toolbar.mce-first div.mce-btn[aria-label="Fullscreen"] {
+  display: none;
+}
+div.column li.gfield.uses-rich-editor div.tmce-active div.mce-toolbar-grp > div.mce-stack-layout > div.mce-toolbar.mce-last {
+  display: none;
+}
+div.column li.gfield.uses-rich-editor div.tmce-active div.mce-statusbar {
+  display: none;
+}
+div.column li.gfield.uses-rich-editor iframe {
+  width: 100% !important;
+}
+div.column li.gfield.uses-rich-editor span.gp-word-count-label {
+  margin-top: 0 !important;
+}
+@media only screen and (min-width: 641px) {
+  div.column li.gfield.gf_left_half.expands-to-two-thirds {
+    width: 67% !important;
+  }
+}
+@media only screen and (min-width: 641px) {
+  div.column li.gfield.gf_left_half.expands-to-two-thirds + li.gfield.gf_right_half {
+    width: 33% !important;
+  }
+}
+@media only screen and (min-width: 641px) {
+  div.column li.gfield.has-label-spacer > div.ginput_container {
+    margin-top: 21px;
+  }
+}
+@media only screen and (min-width: 792px) {
+  div.column li.gfield.has-label-spacer > div.ginput_container {
+    margin-top: 23px;
+  }
+}
+@media only screen and (min-width: 990px) {
+  div.column li.gfield.has-label-spacer > div.ginput_container {
+    margin-top: 21px;
+  }
+}
+@media only screen and (min-width: 1073px) {
+  div.column li.gfield.has-label-spacer > div.ginput_container {
+    margin-top: 23px;
+  }
+}
 div.column li.gfield > div.ginput_complex > span > label {
   color: #8e7f88;
 }
@@ -4899,30 +4953,6 @@ div.column li.gfield > div.ginput_container_select > div.chosen-container-single
 }
 div.column li.gfield > div.ginput_container_select > div.chosen-container-single.chosen-with-drop > a.chosen-single {
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.07) 20%, rgba(0, 0, 0, 0) 80%), linear-gradient(to bottom, #fff, #fff);
-}
-div.column li.gfield.uses-rich-editor div.tmce-active div.mce-menubar {
-  display: none;
-}
-div.column li.gfield.uses-rich-editor div.tmce-active div.mce-toolbar-grp > div.mce-stack-layout > div.mce-toolbar.mce-first div.mce-btn[aria-label="Blockquote"],
-div.column li.gfield.uses-rich-editor div.tmce-active div.mce-toolbar-grp > div.mce-stack-layout > div.mce-toolbar.mce-first div.mce-btn[aria-label="Insert/edit link"],
-div.column li.gfield.uses-rich-editor div.tmce-active div.mce-toolbar-grp > div.mce-stack-layout > div.mce-toolbar.mce-first div.mce-btn[aria-label="Remove link"],
-div.column li.gfield.uses-rich-editor div.tmce-active div.mce-toolbar-grp > div.mce-stack-layout > div.mce-toolbar.mce-first div.mce-btn[aria-label="Insert/edit image"],
-div.column li.gfield.uses-rich-editor div.tmce-active div.mce-toolbar-grp > div.mce-stack-layout > div.mce-toolbar.mce-first div.mce-btn[aria-label="Table"],
-div.column li.gfield.uses-rich-editor div.tmce-active div.mce-toolbar-grp > div.mce-stack-layout > div.mce-toolbar.mce-first div.mce-btn[aria-label="Toolbar Toggle"],
-div.column li.gfield.uses-rich-editor div.tmce-active div.mce-toolbar-grp > div.mce-stack-layout > div.mce-toolbar.mce-first div.mce-btn[aria-label="Fullscreen"] {
-  display: none;
-}
-div.column li.gfield.uses-rich-editor div.tmce-active div.mce-toolbar-grp > div.mce-stack-layout > div.mce-toolbar.mce-last {
-  display: none;
-}
-div.column li.gfield.uses-rich-editor div.tmce-active div.mce-statusbar {
-  display: none;
-}
-div.column li.gfield.uses-rich-editor iframe {
-  width: 100% !important;
-}
-div.column li.gfield.uses-rich-editor span.gp-word-count-label {
-  margin-top: 0 !important;
 }
 div.column li.gfield div.ginput_container_textarea > textarea {
   font-size: 16px;
