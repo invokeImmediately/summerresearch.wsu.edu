@@ -5007,6 +5007,12 @@ div.column ul.gform_fields > li.gfield.gfield_contains_required ul.gfield_checkb
 div.column ul.gform_fields > li.gfield.gfield_contains_required ul.gfield_radio:not(.gf-value-entered) {
   background-color: rgba(255, 0, 0, 0.1);
 }
+div.column ul.gform_fields > li.gfield.gfield_contains_required span.address_line_2 input {
+  background-color: #fff !important;
+}
+div.column ul.gform_fields > li.gfield.gfield_contains_required span.address_line_2 input:focus {
+  background-color: #edf3f4 !important;
+}
 .oue-gf-rqrd-input input,
 .oue-gf-rqrd-select input,
 .oue-gf-hghlghts-rqrd-input input,
