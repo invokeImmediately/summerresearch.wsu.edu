@@ -4109,7 +4109,7 @@ div.column ul li.no-bottom-pad {
   padding-bottom: 0;
 }
 @prnt p + & {
-  margin-top: 1rem;
+  margin-top: 0.5rem;
 }
 ul.content-boxes,
 div.column ul.event-boxes {
@@ -4479,7 +4479,19 @@ div.column dl.faq.blue dt.activated {
 div.column dl.faq.blue dt.activated:hover {
   background-color: #725764;
 }
-div.column dl.faq dd:not(:last-child) > p:last-child {
+div.column dl.faq dd {
+  padding-right: 1rem;
+  padding-left: 1rem;
+  margin-top: 0.25rem;
+}
+div.column dl.faq dd > p + p {
+  margin-top: 1rem;
+}
+div.column dl.faq dd > p + ul,
+div.column dl.faq dd > p + ol {
+  margin-top: 0.5rem;
+}
+div.column dl.faq dd:not(:last-child) > :last-child {
   margin-bottom: 1rem;
 }
 div.column dl.faq.toggled dd {
