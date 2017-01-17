@@ -6869,6 +6869,7 @@ div.iframe-wrapper > iframe {
     width: 698px;
     height: 436px;
     padding-bottom: 0;
+    border: 0;
   }
 }
 div.interactively-flipped-panels {
