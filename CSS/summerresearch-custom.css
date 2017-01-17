@@ -6986,35 +6986,35 @@ div.interactively-flipped-panels.fifths {
 }
 div.interactively-flipped-panels.fifths div.container {
   width: 100%;
-  padding-bottom: calc(20% - 0.8em);
+  padding-bottom: calc(20% - 1.6px);
 }
 @media all and (max-width: 1030px) and (min-width: 792px) {
   div.interactively-flipped-panels.fifths div.container {
     width: 100%;
-    padding-bottom: calc(20% - 0.8em);
+    padding-bottom: calc(20% - 1.6px);
   }
 }
 @media all and (max-width: 791px) and (min-width: 592px) {
   div.interactively-flipped-panels.fifths div.container {
     width: 100%;
-    padding-bottom: calc(20% - 0.8em);
+    padding-bottom: calc(20% - 1.6px);
   }
 }
 @media all and (max-width: 591px) and (min-width: 481px) {
   div.interactively-flipped-panels.fifths div.container {
     width: 100%;
-    padding-bottom: calc(20% - 0.8em);
+    padding-bottom: calc(20% - 1.6px);
   }
 }
 @media all and (max-width: 480px) {
   div.interactively-flipped-panels.fifths div.container {
     width: 100%;
-    padding-bottom: calc(20% - 0.8em);
+    padding-bottom: calc(20% - 1.6px);
   }
 }
 div.interactively-flipped-panels.fifths div.container div.panel-wrapper {
-  width: calc(20% - 0.8px);
-  padding-bottom: calc(20% - 0.8px);
+  width: calc(20% - 1.6px);
+  padding-bottom: calc(20% - 1.6px);
 }
 div.interactively-flipped-panels.fifths div.container div.panel-wrapper.top-left {
   top: 0;
@@ -7022,15 +7022,15 @@ div.interactively-flipped-panels.fifths div.container div.panel-wrapper.top-left
 }
 div.interactively-flipped-panels.fifths div.container div.panel-wrapper.top-right {
   top: 0;
-  left: calc(20% + 0.2px);
+  left: calc(20% + 0.4px);
 }
 div.interactively-flipped-panels.fifths div.container div.panel-wrapper.bottom-left {
   top: 0;
-  left: calc(40% + 0.4px);
+  left: calc(40% + 0.8px);
 }
 div.interactively-flipped-panels.fifths div.container div.panel-wrapper.bottom-right {
   top: 0;
-  left: calc(60% + 0.6px);
+  left: calc(60% + 1.2px);
 }
 div.interactively-flipped-panels.fifths div.container div.panel-wrapper div.panel div.rear h2 {
   font-size: 1.1em;
