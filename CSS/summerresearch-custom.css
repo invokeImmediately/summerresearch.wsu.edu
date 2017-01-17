@@ -6845,6 +6845,25 @@ div.column section.header-newsEvents {
  *  ║  ╘═» Customized here for use on the Summer Research website.                                 ║
  *  ╚══════════════════════════════════════════════════════════════════════════════════════════════╝
  */
+div.iframe-wrapper {
+  position: relative;
+  height: 0;
+  width: 97%;
+  margin-bottom: 0.5rem;
+  margin-right: auto;
+  margin-left: auto;
+  padding-bottom: 66.666667%;
+  overflow: hidden;
+  border: 1px solid #464e54;
+}
+div.iframe-wrapper > iframe {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  padding: 0;
+}
 div.interactively-flipped-panels {
   background: #5e6a71 url(/wp-content/uploads/sites/907/2016/05/texture_brushed-metal.jpg) repeat scroll left top;
 }
@@ -7025,25 +7044,6 @@ div.column ul.event-boxes > li > h4:nth-child(2) {
 }
 div.column ul.event-boxes > li > h4:nth-child(2) + * {
   margin-top: 0.5rem;
-}
-div.column ul.event-boxes > li > div.iframe-wrapper {
-  position: relative;
-  height: 0;
-  width: 97%;
-  margin-bottom: 0.5rem;
-  margin-right: auto;
-  margin-left: auto;
-  padding-bottom: 66.666667%;
-  overflow: hidden;
-  border: 1px solid #464e54;
-}
-div.column ul.event-boxes > li > div.iframe-wrapper > iframe {
-  position: absolute;
-  left: 0;
-  top: 0;
-  height: 100%;
-  width: 100%;
-  padding: 0;
 }
 div.column ul.event-boxes > li > p {
   padding-right: 0.5rem;
