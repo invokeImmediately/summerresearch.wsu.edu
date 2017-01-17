@@ -6981,6 +6981,9 @@ div.interactively-flipped-panels div.container div.panel-wrapper.bottom-right:ho
     padding-bottom: calc(100% * 4 + 3em);
   }
 }
+div.interactively-flipped-panels.fifths {
+  margin-top: 2em;
+}
 div.interactively-flipped-panels.fifths div.container {
   width: 100%;
   padding-bottom: calc(20% - 0.8em);
@@ -7029,6 +7032,12 @@ div.interactively-flipped-panels.fifths div.container div.panel-wrapper.bottom-r
   top: 0;
   left: calc(60% + 0.6em);
 }
+div.interactively-flipped-panels.fifths div.container div.panel-wrapper div.panel div.rear h2 {
+  font-size: 1.1em;
+}
+div.interactively-flipped-panels.fifths div.container div.panel-wrapper div.panel div.rear p {
+  font-size: 1em;
+}
 div.interactively-flipped-panels.fifths div.container div.panel-wrapper:hover {
   width: calc(20% - 0.8em);
 }
@@ -7037,12 +7046,6 @@ div.interactively-flipped-panels.fifths div.container div.panel-wrapper:hover {
     transition-delay: 0.0001s;
     -webkit-transition-delay: 0.0001s;
   }
-}
-div.interactively-flipped-panels.fifths div.container div.panel-wrapper:hover div.panel div.rear h2 {
-  font-size: 1.1em;
-}
-div.interactively-flipped-panels.fifths div.container div.panel-wrapper:hover div.panel div.rear p {
-  font-size: 1em;
 }
 @media all and (min-width: 481px) {
   div.interactively-flipped-panels.fifths div.container div.panel-wrapper:hover div.panel div.rear {
