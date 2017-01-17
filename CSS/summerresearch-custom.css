@@ -6981,6 +6981,20 @@ div.interactively-flipped-panels div.container div.panel-wrapper.bottom-right:ho
     padding-bottom: calc(100% * 4 + 3em);
   }
 }
+div.interactively-flipped-panels.fifths div.container div.panel-wrapper.top-left:hover,
+div.interactively-flipped-panels.fifths div.container div.panel-wrapper.top-right:hover,
+div.interactively-flipped-panels.fifths div.container div.panel-wrapper.bottom-left:hover,
+div.interactively-flipped-panels.fifths div.container div.panel-wrapper.bottom-right:hover {
+  padding-bottom: calc(50% - 1.5em);
+}
+@media all and (max-width: 480px) {
+  div.interactively-flipped-panels.fifths div.container div.panel-wrapper.top-left:hover,
+  div.interactively-flipped-panels.fifths div.container div.panel-wrapper.top-right:hover,
+  div.interactively-flipped-panels.fifths div.container div.panel-wrapper.bottom-left:hover,
+  div.interactively-flipped-panels.fifths div.container div.panel-wrapper.bottom-right:hover {
+    padding-bottom: 100%;
+  }
+}
 /*  ╔══════════════════════════════════════════════════════════════════════════════════════════════╗ 
  *  ║ #### CUSTOM STYLES ######################################################################### ║
  *  ╠==============================================================================================╣
