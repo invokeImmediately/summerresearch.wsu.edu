@@ -7038,6 +7038,7 @@ div.interactively-flipped-panels.fifths div.container div.panel-wrapper div.pane
   padding-left: 8px;
 }
 div.interactively-flipped-panels.fifths div.container div.panel-wrapper div.panel div.rear h2 {
+  margin-bottom: 0.25rem;
   font-size: 1em;
 }
 div.interactively-flipped-panels.fifths div.container div.panel-wrapper div.panel div.rear p {
