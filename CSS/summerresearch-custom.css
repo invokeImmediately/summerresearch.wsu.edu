@@ -6865,12 +6865,14 @@ div.iframe-wrapper > iframe {
   padding: 0;
 }
 div.iframe-wrapper.home {
+  width: 100%;
+  padding-bottom: 62.5%;
   border: 0;
 }
 @media all and (min-width: 760px) {
   div.iframe-wrapper.home {
-    width: 698px;
-    height: 436px;
+    width: 720px;
+    height: 450px;
     padding-bottom: 0;
   }
 }
