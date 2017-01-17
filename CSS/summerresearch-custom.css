@@ -6983,25 +6983,30 @@ div.interactively-flipped-panels div.container div.panel-wrapper.bottom-right:ho
 }
 div.interactively-flipped-panels.fifths div.container {
   width: 100%;
+  padding-bottom: calc(20% - 0.8em);
 }
 @media all and (max-width: 1030px) and (min-width: 792px) {
   div.interactively-flipped-panels.fifths div.container {
     width: 100%;
+    padding-bottom: calc(20% - 0.8em);
   }
 }
 @media all and (max-width: 791px) and (min-width: 592px) {
   div.interactively-flipped-panels.fifths div.container {
     width: 100%;
+    padding-bottom: calc(20% - 0.8em);
   }
 }
 @media all and (max-width: 591px) and (min-width: 481px) {
   div.interactively-flipped-panels.fifths div.container {
     width: 100%;
+    padding-bottom: calc(20% - 0.8em);
   }
 }
 @media all and (max-width: 480px) {
   div.interactively-flipped-panels.fifths div.container {
     width: 100%;
+    padding-bottom: calc(20% - 0.8em);
   }
 }
 div.interactively-flipped-panels.fifths div.container div.panel-wrapper {
@@ -7017,11 +7022,11 @@ div.interactively-flipped-panels.fifths div.container div.panel-wrapper.top-righ
 }
 div.interactively-flipped-panels.fifths div.container div.panel-wrapper.bottom-left {
   top: 0;
-  left: calc(40% + 1.2em);
+  left: calc(40% + 0.4em);
 }
 div.interactively-flipped-panels.fifths div.container div.panel-wrapper.bottom-right {
   top: 0;
-  left: calc(60% + 2.2em);
+  left: calc(60% + 0.6em);
 }
 @media all and (min-width: 481px) {
   div.interactively-flipped-panels.fifths div.container div.panel-wrapper:hover div.panel div.front {
