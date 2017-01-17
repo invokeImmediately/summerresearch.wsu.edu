@@ -6868,7 +6868,7 @@ div.iframe-wrapper.home {
   width: 100%;
   border: 0;
 }
-@media all and (min-width: 805px) {
+@media all and (min-width: 1003px), all and (max-width: 989px) and (min-width: 805px) {
   div.iframe-wrapper.home {
     width: 720px;
     height: 450px;
