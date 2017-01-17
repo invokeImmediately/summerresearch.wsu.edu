@@ -7013,8 +7013,8 @@ div.interactively-flipped-panels.fifths div.container {
   }
 }
 div.interactively-flipped-panels.fifths div.container div.panel-wrapper {
-  width: calc(20% - 0.8em);
-  padding-bottom: calc(20% - 0.8em);
+  width: calc(20% - 0.8px);
+  padding-bottom: calc(20% - 0.8px);
 }
 div.interactively-flipped-panels.fifths div.container div.panel-wrapper.top-left {
   top: 0;
@@ -7022,15 +7022,15 @@ div.interactively-flipped-panels.fifths div.container div.panel-wrapper.top-left
 }
 div.interactively-flipped-panels.fifths div.container div.panel-wrapper.top-right {
   top: 0;
-  left: calc(20% + 0.2em);
+  left: calc(20% + 0.2px);
 }
 div.interactively-flipped-panels.fifths div.container div.panel-wrapper.bottom-left {
   top: 0;
-  left: calc(40% + 0.4em);
+  left: calc(40% + 0.4px);
 }
 div.interactively-flipped-panels.fifths div.container div.panel-wrapper.bottom-right {
   top: 0;
-  left: calc(60% + 0.6em);
+  left: calc(60% + 0.6px);
 }
 div.interactively-flipped-panels.fifths div.container div.panel-wrapper div.panel div.rear h2 {
   font-size: 1.1em;
@@ -7039,7 +7039,7 @@ div.interactively-flipped-panels.fifths div.container div.panel-wrapper div.pane
   font-size: 1em;
 }
 div.interactively-flipped-panels.fifths div.container div.panel-wrapper:hover {
-  width: calc(20% - 0.8em);
+  width: calc(20% - 0.8px);
 }
 @media all and (min-width: 481px) {
   div.interactively-flipped-panels.fifths div.container div.panel-wrapper:hover div.panel div.front {
@@ -7057,8 +7057,8 @@ div.interactively-flipped-panels.fifths div.container div.panel-wrapper.top-left
 div.interactively-flipped-panels.fifths div.container div.panel-wrapper.top-right:hover,
 div.interactively-flipped-panels.fifths div.container div.panel-wrapper.bottom-left:hover,
 div.interactively-flipped-panels.fifths div.container div.panel-wrapper.bottom-right:hover {
-  width: calc(20% - 0.8em);
-  padding-bottom: calc(20% - 0.8em);
+  width: calc(20% - 0.8px);
+  padding-bottom: calc(20% - 0.8px);
 }
 @media all and (max-width: 480px) {
   div.interactively-flipped-panels.fifths div.container div.panel-wrapper.top-left:hover,
