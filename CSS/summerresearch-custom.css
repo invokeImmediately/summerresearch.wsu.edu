@@ -6994,9 +6994,9 @@ div.interactively-flipped-panels.fifths:before {
   color: #981e32;
   font-weight: bold;
   text-transform: uppercase;
-  -webkit-transform: translateY(-100%) translateY(-5px;
-  -moz-transform: translateY(-100%) translateY(-5px;
-  transform: translateY(-100%) translateY(-5px;
+  -webkit-transform: translateY(-100%) translateY(-5px);
+  -moz-transform: translateY(-100%) translateY(-5px);
+  transform: translateY(-100%) translateY(-5px);
 }
 div.interactively-flipped-panels.fifths div.container {
   width: 100%;
