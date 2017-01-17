@@ -6983,14 +6983,14 @@ div.interactively-flipped-panels div.container div.panel-wrapper.bottom-right:ho
 }
 @media all and (min-width: 481px) {
   div.interactively-flipped-panels.fifths div.container div.panel-wrapper:hover div.panel div.front {
-    transition-delay: 0s !important;
-    -webkit-transition-delay: 0s !important;
+    transition-delay: 0.0001s;
+    -webkit-transition-delay: 0.0001s;
   }
 }
 @media all and (min-width: 481px) {
   div.interactively-flipped-panels.fifths div.container div.panel-wrapper:hover div.panel div.rear {
-    transition-delay: 0s !important;
-    -webkit-transition-delay: 0s important;
+    transition-delay: 0.0001s;
+    -webkit-transition-delay: 0.0001s;
   }
 }
 div.interactively-flipped-panels.fifths div.container div.panel-wrapper.top-left:hover,
