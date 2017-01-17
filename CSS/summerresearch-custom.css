@@ -6982,7 +6982,7 @@ div.interactively-flipped-panels div.container div.panel-wrapper.bottom-right:ho
   }
 }
 div.interactively-flipped-panels.fifths {
-  margin-top: 2em;
+  margin-top: 2.9em;
 }
 div.interactively-flipped-panels.fifths:before {
   position: absolute;
@@ -6992,8 +6992,6 @@ div.interactively-flipped-panels.fifths:before {
   font-size: 0.9em;
   line-height: 0.9em;
   font-weight: bold;
-  font-family: 'Roboto Mono', monospace, sans-serif;
-  font-weight: 300;
   color: #981e32;
   text-transform: uppercase;
   -webkit-transform: translateY(-100%) translateY(-5px);
