@@ -7119,17 +7119,19 @@ div.interactively-flipped-panels.fifths div.container div.panel-wrapper:hover {
 div.interactively-flipped-panels.fifths div.container div.panel-wrapper.top-left:hover,
 div.interactively-flipped-panels.fifths div.container div.panel-wrapper.top-right:hover,
 div.interactively-flipped-panels.fifths div.container div.panel-wrapper.bottom-left:hover,
-div.interactively-flipped-panels.fifths div.container div.panel-wrapper.bottom-right:hover {
+div.interactively-flipped-panels.fifths div.container div.panel-wrapper.bottom-right:hover,
+div.interactively-flipped-panels.fifths div.container div.panel-wrapper.fifth:hover {
   width: calc(20% - 1.6px);
   padding-bottom: calc(20% - 1.6px);
 }
-@media all and (max-width: 480px) {
+@media (max-width: 591px) and (min-width: 481px), (max-width: 480px) {
   div.interactively-flipped-panels.fifths div.container div.panel-wrapper.top-left:hover,
   div.interactively-flipped-panels.fifths div.container div.panel-wrapper.top-right:hover,
   div.interactively-flipped-panels.fifths div.container div.panel-wrapper.bottom-left:hover,
-  div.interactively-flipped-panels.fifths div.container div.panel-wrapper.bottom-right:hover {
-    width: 100%;
-    padding-bottom: 100%;
+  div.interactively-flipped-panels.fifths div.container div.panel-wrapper.bottom-right:hover,
+  div.interactively-flipped-panels.fifths div.container div.panel-wrapper.fifth:hover {
+    width: calc(33% - 1.3333px);
+    padding-bottom: calc(33.3333% - 1.3333px);
   }
 }
 div.interactively-flipped-panels.fifths div.container div.panel-wrapper.top-left div.panel div.front {
@@ -7153,7 +7155,7 @@ div.interactively-flipped-panels.fifths div.container div.panel-wrapper.bottom-l
 div.interactively-flipped-panels.fifths div.container div.panel-wrapper.bottom-right div.panel div.front {
   background: url(/wp-content/uploads/sites/907/2017/01/homepage-buttons_summer-research-events_v02.jpg) no-repeat center center;
 }
-div.interactively-flipped-panels.fifths div.container div.panel-wrapper.bottom-right div.panel div.front {
+div.interactively-flipped-panels.fifths div.container div.panel-wrapper.bottom-right div.panel div.rear {
   background: url(/wp-content/uploads/sites/907/2017/01/homepage-buttons_summer-research-events_v02_hovered.jpg) no-repeat center center;
 }
 div.interactively-flipped-panels.fifths div.container div.panel-wrapper.fifth div.panel div.front {
