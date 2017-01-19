@@ -7047,12 +7047,14 @@ div.interactively-flipped-panels.fifths div.container div.panel-wrapper.bottom-r
   left: calc(60% + 1.2px);
 }
 div.interactively-flipped-panels.fifths div.container div.panel-wrapper div.panel div.front p {
+  font-family: 'Open Sans Condensed', 'Lucida Sans', sans-serif;
   color: #fff;
   font-size: 1.2em;
   font-weight: bold;
 }
 div.interactively-flipped-panels.fifths div.container div.panel-wrapper div.panel div.rear h2,
 div.interactively-flipped-panels.fifths div.container div.panel-wrapper div.panel div.rear p {
+  font-family: 'Open Sans Condensed', 'Lucida Sans', sans-serif;
   padding-right: 8px;
   padding-left: 8px;
 }
