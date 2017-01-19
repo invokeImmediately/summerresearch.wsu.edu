@@ -7017,18 +7017,24 @@ div.interactively-flipped-panels.fifths div.container {
 @media all and (max-width: 591px) and (min-width: 481px) {
   div.interactively-flipped-panels.fifths div.container {
     width: 100%;
-    padding-bottom: calc(20% - 1.6px);
+    padding-bottom: calc(67% + 1.3333 px);
   }
 }
 @media all and (max-width: 480px) {
   div.interactively-flipped-panels.fifths div.container {
     width: 100%;
-    padding-bottom: calc(20% - 1.6px);
+    padding-bottom: calc(67% + 1.3333 px);
   }
 }
 div.interactively-flipped-panels.fifths div.container div.panel-wrapper {
   width: calc(20% - 1.6px);
   padding-bottom: calc(20% - 1.6px);
+  margin: 0 !important;
+}
+@media (max-width: 591px) and (min-width: 481px), (max-width: 480px) {
+  div.interactively-flipped-panels.fifths div.container div.panel-wrapper {
+    width: calc(33% - 1.3333px);
+  }
 }
 div.interactively-flipped-panels.fifths div.container div.panel-wrapper.top-left {
   top: 0;
@@ -7038,13 +7044,42 @@ div.interactively-flipped-panels.fifths div.container div.panel-wrapper.top-righ
   top: 0;
   left: calc(20% + 0.4px);
 }
+@media (max-width: 591px) and (min-width: 481px), (max-width: 480px) {
+  div.interactively-flipped-panels.fifths div.container div.panel-wrapper.top-right {
+    left: calc(33% + 0.6667px);
+  }
+}
 div.interactively-flipped-panels.fifths div.container div.panel-wrapper.bottom-left {
   top: 0;
   left: calc(40% + 0.8px);
 }
+@media (max-width: 591px) and (min-width: 481px), (max-width: 480px) {
+  div.interactively-flipped-panels.fifths div.container div.panel-wrapper.bottom-left {
+    left: calc(67% + 1.3333px);
+  }
+}
 div.interactively-flipped-panels.fifths div.container div.panel-wrapper.bottom-right {
   top: 0;
   left: calc(60% + 1.2px);
+}
+@media (max-width: 591px) and (min-width: 481px), (max-width: 480px) {
+  div.interactively-flipped-panels.fifths div.container div.panel-wrapper.bottom-right {
+    top: calc(33% + 0.6667px);
+    left: 0;
+  }
+}
+div.interactively-flipped-panels.fifths div.container div.panel-wrapper.fifth {
+  float: none;
+  position: absolute;
+  top: 0;
+  left: calc(80% + 1.6px);
+  margin: 0;
+}
+@media (max-width: 591px) and (min-width: 481px), (max-width: 480px) {
+  div.interactively-flipped-panels.fifths div.container div.panel-wrapper.fifth {
+    top: calc(33% + 0.6667px);
+    left: calc(33% + 0.6667px);
+  }
 }
 div.interactively-flipped-panels.fifths div.container div.panel-wrapper div.panel div.front p {
   font-family: 'Open Sans Condensed', 'Lucida Sans', sans-serif;
@@ -7054,11 +7089,11 @@ div.interactively-flipped-panels.fifths div.container div.panel-wrapper div.pane
 }
 div.interactively-flipped-panels.fifths div.container div.panel-wrapper div.panel div.rear h2,
 div.interactively-flipped-panels.fifths div.container div.panel-wrapper div.panel div.rear p {
-  font-family: 'Open Sans Condensed', 'Lucida Sans', sans-serif;
   padding-right: 8px;
   padding-left: 8px;
 }
 div.interactively-flipped-panels.fifths div.container div.panel-wrapper div.panel div.rear h2 {
+  font-family: 'Open Sans Condensed', 'Lucida Sans', sans-serif;
   margin-bottom: 0.25rem;
   font-size: 1em;
 }
@@ -7084,8 +7119,8 @@ div.interactively-flipped-panels.fifths div.container div.panel-wrapper.top-left
 div.interactively-flipped-panels.fifths div.container div.panel-wrapper.top-right:hover,
 div.interactively-flipped-panels.fifths div.container div.panel-wrapper.bottom-left:hover,
 div.interactively-flipped-panels.fifths div.container div.panel-wrapper.bottom-right:hover {
-  width: calc(20% - 0.8px);
-  padding-bottom: calc(20% - 0.8px);
+  width: calc(20% - 1.6px);
+  padding-bottom: calc(20% - 1.6px);
 }
 @media all and (max-width: 480px) {
   div.interactively-flipped-panels.fifths div.container div.panel-wrapper.top-left:hover,
@@ -7099,14 +7134,32 @@ div.interactively-flipped-panels.fifths div.container div.panel-wrapper.bottom-r
 div.interactively-flipped-panels.fifths div.container div.panel-wrapper.top-left div.panel div.front {
   background: url(/wp-content/uploads/sites/907/2017/01/homepage-buttons_summer-research-opportunities_v02.jpg) no-repeat center center;
 }
+div.interactively-flipped-panels.fifths div.container div.panel-wrapper.top-left div.panel div.rear {
+  background: url(/wp-content/uploads/sites/907/2017/01/homepage-buttons_summer-research-opportunities_v02_hovered.jpg) no-repeat center center;
+}
 div.interactively-flipped-panels.fifths div.container div.panel-wrapper.top-right div.panel div.front {
   background: url(/wp-content/uploads/sites/907/2017/01/homepage-buttons_summer-in-pullman_v03.jpg) no-repeat center center;
+}
+div.interactively-flipped-panels.fifths div.container div.panel-wrapper.top-right div.panel div.rear {
+  background: url(/wp-content/uploads/sites/907/2017/01/homepage-buttons_summer-in-pullman_v03_hover.jpg) no-repeat center center;
 }
 div.interactively-flipped-panels.fifths div.container div.panel-wrapper.bottom-left div.panel div.front {
   background: url(/wp-content/uploads/sites/907/2017/01/homepage-buttons_summer-research-poster-symposium_v02.jpg) no-repeat center center;
 }
+div.interactively-flipped-panels.fifths div.container div.panel-wrapper.bottom-left div.panel div.rear {
+  background: url(/wp-content/uploads/sites/907/2017/01/homepage-buttons_summer-research-poster-symposium_v02_hovered.jpg) no-repeat center center;
+}
 div.interactively-flipped-panels.fifths div.container div.panel-wrapper.bottom-right div.panel div.front {
   background: url(/wp-content/uploads/sites/907/2017/01/homepage-buttons_summer-research-events_v02.jpg) no-repeat center center;
+}
+div.interactively-flipped-panels.fifths div.container div.panel-wrapper.bottom-right div.panel div.front {
+  background: url(/wp-content/uploads/sites/907/2017/01/homepage-buttons_summer-research-events_v02_hovered.jpg) no-repeat center center;
+}
+div.interactively-flipped-panels.fifths div.container div.panel-wrapper.fifth div.panel div.front {
+  background: url(/wp-content/uploads/sites/907/2017/01/homepage-buttons_summer-research-events_v02.jpg) no-repeat center center;
+}
+div.interactively-flipped-panels.fifths div.container div.panel-wrapper.fifth div.panel div.rear {
+  background: url(/wp-content/uploads/sites/907/2017/01/homepage-buttons_summer-research-events_v02_hovered.jpg) no-repeat center center;
 }
 /*  ╔══════════════════════════════════════════════════════════════════════════════════════════════╗ 
  *  ║ #### CUSTOM STYLES ######################################################################### ║
