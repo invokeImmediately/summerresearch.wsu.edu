@@ -7065,7 +7065,7 @@ div.interactively-flipped-panels.fifths div.container div.panel-wrapper.bottom-r
 }
 @media (max-width: 591px) and (min-width: 481px), (max-width: 480px) {
   div.interactively-flipped-panels.fifths div.container div.panel-wrapper.bottom-right {
-    top: calc(33% + 0.6667px);
+    top: calc(50% + 1px);
     left: 0;
   }
 }
@@ -7079,7 +7079,7 @@ div.interactively-flipped-panels.fifths div.container div.panel-wrapper.fifth {
 @media (max-width: 591px) and (min-width: 481px), (max-width: 480px) {
   div.interactively-flipped-panels.fifths div.container div.panel-wrapper.fifth {
     top: calc(100% + 2px);
-    left: calc(33% + 0.6667px);
+    left: calc(50% + 1px);
   }
 }
 div.interactively-flipped-panels.fifths div.container div.panel-wrapper div.panel div.front p {
