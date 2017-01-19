@@ -7017,13 +7017,13 @@ div.interactively-flipped-panels.fifths div.container {
 @media all and (max-width: 591px) and (min-width: 481px) {
   div.interactively-flipped-panels.fifths div.container {
     width: 100%;
-    padding-bottom: calc(67% + 1.3333 px);
+    padding-bottom: calc(67% + 1.3333px);
   }
 }
 @media all and (max-width: 480px) {
   div.interactively-flipped-panels.fifths div.container {
     width: 100%;
-    padding-bottom: calc(67% + 1.3333 px);
+    padding-bottom: calc(67% + 1.3333px);
   }
 }
 div.interactively-flipped-panels.fifths div.container div.panel-wrapper {
@@ -7034,6 +7034,7 @@ div.interactively-flipped-panels.fifths div.container div.panel-wrapper {
 @media (max-width: 591px) and (min-width: 481px), (max-width: 480px) {
   div.interactively-flipped-panels.fifths div.container div.panel-wrapper {
     width: calc(33% - 1.3333px);
+    padding-bottom: calc(33% - 1.3333px);
   }
 }
 div.interactively-flipped-panels.fifths div.container div.panel-wrapper.top-left {
@@ -7077,7 +7078,7 @@ div.interactively-flipped-panels.fifths div.container div.panel-wrapper.fifth {
 }
 @media (max-width: 591px) and (min-width: 481px), (max-width: 480px) {
   div.interactively-flipped-panels.fifths div.container div.panel-wrapper.fifth {
-    top: calc(33% + 0.6667px);
+    top: calc(100% + 2px);
     left: calc(33% + 0.6667px);
   }
 }
