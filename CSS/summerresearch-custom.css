@@ -555,6 +555,7 @@ section.column-one-with-bottom-margin > div.one {
 section:not(.row).article-header {
   height: 120px;
   margin-bottom: 1rem;
+  background-size: auto 100% !important;
 }
 section:not(.row).article-header div.header-content {
   position: relative;
@@ -563,31 +564,37 @@ section:not(.row).article-header div.header-content {
   margin-left: 1rem;
   transform: translateY(-50%);
 }
+section:not(.row).article-header div.header-content h1 {
+  font-size: 4.118rem;
+  line-height: 1.071em;
+}
+section:not(.row).article-header div.header-content h2 {
+  margin-bottom: .75rem;
+  font-size: 2.826rem;
+  line-height: 0.8em;
+  text-transform: uppercase;
+}
+section:not(.row).article-header div.header-content h3 {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 1.261rem;
+  text-transform: uppercase;
+}
 @media screen {
   section:not(.row).article-header div.header-content h1,
   section:not(.row).article-header div.header-content h2 {
     color: #fff;
   }
   section:not(.row).article-header div.header-content h1 {
-    font-size: 70px;
-    line-height: 1.071428571428571em;
     text-shadow: 0 1px 0 #afafaf, 0 2px 0 #989898, 0 3px 0 #7f7f7f, 0 4px 0 #686868, 0 5px 0 #4f4f4f, 0 6px 1px rgba(0, 0, 0, 0.1), 0 0 5px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.3), 0 3px 5px rgba(0, 0, 0, 0.2), 0 5px 10px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.2), 0 20px 20px rgba(0, 0, 0, 0.15);
   }
   section:not(.row).article-header div.header-content h2 {
-    margin-bottom: .75rem;
-    font-size: 3.0238rem;
-    line-height: 0.8em;
-    text-transform: uppercase;
     text-shadow: 0 0.6667px 0 #afafaf, 0 1.3333px 0 #989898, 0 2px 0 #7f7f7f, 0 2.6667px 0 #686868, 0 3.3333px 0 #4f4f4f, 0 4px 0.6667px rgba(0, 0, 0, 0.1), 0 0 3.3333px rgba(0, 0, 0, 0.1), 0 0.6667px 2px rgba(0, 0, 0, 0.3), 0 2px 3.3333px rgba(0, 0, 0, 0.2), 0 3.3333px 6.6667px rgba(0, 0, 0, 0.25), 0 6.6667px 6.6667px rgba(0, 0, 0, 0.2), 0 13.3333px 13.3333px rgba(0, 0, 0, 0.15);
   }
   section:not(.row).article-header div.header-content h3 {
     padding: .1rem .2rem .2rem;
-    margin-top: 0;
-    margin-bottom: 0;
     background-color: rgba(152, 30, 50, 0.95);
     border: 1px solid white;
-    font-size: 1.35rem;
-    text-transform: uppercase;
     color: #fff;
     text-shadow: 0 0.3333px 0 #afafaf, 0 0.6667px 0 #989898, 0 1px 0 #7f7f7f, 0 1.3333px 0 #686868, 0 1.6667px 0 #4f4f4f, 0 2px 0.3333px rgba(0, 0, 0, 0.1), 0 0 1.6667px rgba(0, 0, 0, 0.1), 0 0.3333px 1px rgba(0, 0, 0, 0.3), 0 1px 1.6667px rgba(0, 0, 0, 0.2), 0 1.6667px 3.3333px rgba(0, 0, 0, 0.25), 0 3.3333px 3.3333px rgba(0, 0, 0, 0.2), 0 6.6667px 6.6667px rgba(0, 0, 0, 0.15);
     /*.rgb-black(); text-shadow: 0 .5px 0 #aaa, 0 1px 0 #888,
@@ -599,6 +606,19 @@ section:not(.row).article-header div.header-content {
   }
   section:not(.row).article-header div.header-content h3 > mark.highlight {
     text-shadow: 0 0.3333px 0 #77898b, 0 0.6667px 0 #687779, 0 1px 0 #576365, 0 1.3333px 0 #475153, 0 1.6667px 0 #363e3f, 0 2px 0.3333px rgba(0, 0, 0, 0.1), 0 0 1.6667px rgba(0, 0, 0, 0.1), 0 0.3333px 1px rgba(0, 0, 0, 0.3), 0 1px 1.6667px rgba(0, 0, 0, 0.2), 0 1.6667px 3.3333px rgba(0, 0, 0, 0.25), 0 3.3333px 3.3333px rgba(0, 0, 0, 0.2), 0 6.6667px 6.6667px rgba(0, 0, 0, 0.15);
+  }
+}
+@media print {
+  section:not(.row).article-header {
+    background: transparent !important;
+  }
+  section:not(.row).article-header div.header-content {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  section:not(.row).article-header div.header-content h2,
+  section:not(.row).article-header div.header-content h3 {
+    padding-left: 0;
   }
 }
 section.halves div.column p:not([class*="center"]) {
@@ -3524,8 +3544,6 @@ main > div.page > section.row:last-child > div.column {
  */
 div.callout,
 span.callout {
-  position: absolute;
-  top: 50%;
   height: auto;
   padding: 10px;
   border: 1px solid #F1D031;
@@ -3537,31 +3555,58 @@ span.callout {
 }
 div.callout.left:before,
 div.callout.right:before,
+div.callout.top:before,
+div.callout.left:after,
+div.callout.right:after,
+div.callout.top:after,
+span.callout.left:before,
+span.callout.right:before,
+span.callout.top:before,
+span.callout.left:after,
+span.callout.right:after,
+span.callout.top:after {
+  content: "";
+  width: 0;
+  height: 0;
+  border: 10px solid transparent;
+}
+div.callout.left:before,
+div.callout.right:before,
 div.callout.left:after,
 div.callout.right:after,
 span.callout.left:before,
 span.callout.right:before,
 span.callout.left:after,
 span.callout.right:after {
-  content: "";
   position: absolute;
   top: 50%;
-  width: 0;
-  height: 0;
-  border: 10px solid transparent;
   -webkit-transform: translateY(-50%);
   -moz-transform: translateY(-50%);
   transform: translateY(-50%);
 }
+div.callout.top:before,
+div.callout.top:after,
+span.callout.top:before,
+span.callout.top:after {
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
 div.callout.left:after,
 div.callout.right:after,
+div.callout.top:after,
 span.callout.left:after,
-span.callout.right:after {
+span.callout.right:after,
+span.callout.top:after {
   border: 11px solid transparent;
   z-index: -1;
 }
 div.callout.left,
 span.callout.left {
+  position: absolute;
+  top: 50%;
   left: 0;
   -webkit-transform: translate(-100%,-50%) translateX(-10px);
   -moz-transform: translate(-100%,-50%) translateX(-10px);
@@ -3579,6 +3624,8 @@ span.callout.left:after {
 }
 div.callout.right,
 span.callout.right {
+  position: absolute;
+  top: 50%;
   right: 0;
   -webkit-transform: translate(100%,-50%) translateX(10px);
   -moz-transform: translate(100%,-50%) translateX(10px);
@@ -3593,6 +3640,25 @@ div.callout.right:after,
 span.callout.right:after {
   left: -22px;
   border-right: 11px solid #F1D031;
+}
+div.callout.top,
+span.callout.top {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  -webkit-transform: translate(-50%,-100%) translateY(-10px);
+  -moz-transform: translate(-50%,-100%) translateY(-10px);
+  transform: translate(-50%,-100%) translateY(-10px);
+}
+div.callout.top:before,
+span.callout.top:before {
+  bottom: -20px;
+  border-top: 10px solid #FFEF93;
+}
+div.callout.top:after,
+span.callout.top:after {
+  bottom: -22px;
+  border-top: 11px solid #F1D031;
 }
 /*  ┌──────────────────────────────────────────────────────────────────────────────────────────────┐
  *  │ ++++++++ div.interactively-flipped-panels ++++++++++++++++++++++++++++++++++++++++++++++++++ │
