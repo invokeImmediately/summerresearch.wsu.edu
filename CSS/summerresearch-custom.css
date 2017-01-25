@@ -31,172 +31,172 @@ div.column ul.event-boxes > li > h4:nth-child(2) {
   font-family: 'PT Serif', 'Palatino', serif;
 }
 .initially-hidden,
-div.column .initially-hidden {
+.column .initially-hidden {
   display: none;
 }
 .margin-centered,
-div.column .margin-centered,
+.column .margin-centered,
 img.shiftToCenter,
 img.shift-to-center {
   margin-right: auto;
   margin-left: auto;
 }
 .spaces-top-full,
-div.column .spaces-top-full {
+.column .spaces-top-full {
   margin-top: 4rem;
 }
 .spaces-top-nrml,
-div.column .spaces-top-nrml {
+.column .spaces-top-nrml {
   margin-top: 2rem;
 }
 .spaces-top-half,
-div.column .spaces-top-half {
+.column .spaces-top-half {
   margin-top: 1rem;
 }
 .spaces-top-qrtr,
-div.column .spaces-top-qrtr {
+.column .spaces-top-qrtr {
   margin-top: 0.5rem;
 }
 .spaces-top-none,
-div.column .spaces-top-none {
+.column .spaces-top-none {
   margin-top: 0rem !important;
 }
 .spaces-rgt-full,
-div.column .spaces-rgt-full {
+.column .spaces-rgt-full {
   margin-right: 4rem;
 }
 .spaces-rgt-nrml,
-div.column .spaces-rgt-nrml {
+.column .spaces-rgt-nrml {
   margin-right: 2rem;
 }
 .spaces-rgt-half,
-div.column .spaces-rgt-half {
+.column .spaces-rgt-half {
   margin-right: 1rem;
 }
 .spaces-rgt-qrtr,
-div.column .spaces-rgt-qrtr {
+.column .spaces-rgt-qrtr {
   margin-right: 0.5rem;
 }
 .spaces-rgt-none,
-div.column .spaces-rgt-none {
+.column .spaces-rgt-none {
   margin-right: 0rem !important;
 }
 .spaces-btm-full,
-div.column .spaces-btm-full {
+.column .spaces-btm-full {
   margin-bottom: 4rem;
 }
 .spaces-btm-nrml,
-div.column .spaces-btm-nrml {
+.column .spaces-btm-nrml {
   margin-bottom: 2rem;
 }
 .spaces-btm-half,
-div.column .spaces-btm-half {
+.column .spaces-btm-half {
   margin-bottom: 1rem;
 }
 .spaces-btm-qrtr,
-div.column .spaces-btm-qrtr {
+.column .spaces-btm-qrtr {
   margin-bottom: 0.5rem;
 }
 .spaces-btm-none,
-div.column .spaces-btm-none {
+.column .spaces-btm-none {
   margin-bottom: 0rem !important;
 }
 .spaces-lft-full,
-div.column .spaces-lft-full {
+.column .spaces-lft-full {
   margin-left: 4rem;
 }
 .spaces-lft-nrml,
-div.column .spaces-lft-nrml {
+.column .spaces-lft-nrml {
   margin-left: 2rem;
 }
 .spaces-lft-half,
-div.column .spaces-lft-half {
+.column .spaces-lft-half {
   margin-left: 1rem;
 }
 .spaces-lft-qrtr,
-div.column .spaces-lft-qrtr {
+.column .spaces-lft-qrtr {
   margin-left: 0.5rem;
 }
 .spaces-lft-none,
-div.column .spaces-lft-none {
+.column .spaces-lft-none {
   margin-left: 0rem !important;
 }
 .pads-top-nrml,
-div.column .pads-top-nrml {
+.column .pads-top-nrml {
   padding-top: 2rem;
 }
 .pads-top-half,
-div.column .pads-top-half {
+.column .pads-top-half {
   padding-top: 1rem;
 }
 .pads-rgt-nrml,
-div.column .pads-rgt-nrml {
+.column .pads-rgt-nrml {
   padding-right: 2rem;
 }
 .pads-rgt-half,
-div.column .pads-rgt-half {
+.column .pads-rgt-half {
   padding-right: 1rem;
 }
 .pads-btm-nrml,
-div.column .pads-btm-nrml {
+.column .pads-btm-nrml {
   padding-bottom: 2rem;
 }
 .pads-btm-half,
-div.column .pads-btm-half {
+.column .pads-btm-half {
   padding-bottom: 1rem;
 }
 .pads-lft-nrml,
-div.column .pads-lft-nrml {
+.column .pads-lft-nrml {
   padding-right: 2rem;
 }
 .pads-lft-half,
-div.column .pads-lft-half {
+.column .pads-lft-half {
   padding-right: 1rem;
 }
 .indent-1x,
-div.column .indent-1x {
+.column .indent-1x {
   padding-left: 2rem;
 }
 .indent-rgt-1x,
-div.column .indent-rgt-1x {
+.column .indent-rgt-1x {
   padding-right: 2rem;
 }
 .indent-2x,
-div.column .indent-2x {
+.column .indent-2x {
   padding-left: 4rem;
 }
 .indent-rgt-2x,
-div.column .indent-rgt-2x {
+.column .indent-rgt-2x {
   padding-right: 4rem;
 }
 .indent-3x,
-div.column .indent-3x {
+.column .indent-3x {
   padding-left: 6rem;
 }
 .indent-rgt-3x,
-div.column .indent-rgt-3x {
+.column .indent-rgt-3x {
   padding-right: 6rem;
 }
 .indent-4x,
-div.column .indent-4x {
+.column .indent-4x {
   padding-left: 8rem;
 }
 .indent-rgt-4x,
-div.column .indent-rgt-4x {
+.column .indent-rgt-4x {
   padding-right: 8rem;
 }
 .breaks-words,
-div.column .breaks-words {
+.column .breaks-words {
   word-wrap: break-word;
 }
 .centered,
-div.column .centered,
+.column .centered,
 .centers-text,
-div.column .centers-text {
+.column .centers-text {
   text-align: center;
 }
 .soft-gray-border,
-div.column .soft-gray-border {
+.column .soft-gray-border {
   border: 1px solid rgba(42, 48, 51, 0.5);
 }
 .has-pull-quote-bordering:not(.alt) {
@@ -2140,167 +2140,167 @@ footer.article-footer div.author-info {
  *     ├-------------------------------------------------------------------------------------------------┤
  */
 @media all {
-  section.row.single:not(.mimic-multi-column-sections) div.column p {
+  .row.single:not(.mimic-multi-column-sections) .column p {
     line-height: 1.275em;
     font-size: 1em;
   }
 }
 @media all and (min-width: 1073px) {
-  section.row.single:not(.mimic-multi-column-sections) div.column p {
+  .row.single:not(.mimic-multi-column-sections) .column p {
     font-size: 1.06609808em;
   }
 }
 @media all and (min-width: 990px) and (max-width: 1072px) {
-  section.row.single:not(.mimic-multi-column-sections) div.column p {
+  .row.single:not(.mimic-multi-column-sections) .column p {
     font-size: 1em;
   }
 }
 @media all and (min-width: 792px) and (max-width: 989px) {
-  section.row.single:not(.mimic-multi-column-sections) div.column p {
+  .row.single:not(.mimic-multi-column-sections) .column p {
     font-size: 1.06609808em;
   }
 }
 @media all and (min-width: 481px) and (max-width: 791px) {
-  section.row.single:not(.mimic-multi-column-sections) div.column p {
+  .row.single:not(.mimic-multi-column-sections) .column p {
     font-size: 1em;
   }
 }
 @media all and (min-width: 361px) and (max-width: 480px) {
-  section.row.single:not(.mimic-multi-column-sections) div.column p {
+  .row.single:not(.mimic-multi-column-sections) .column p {
     font-size: 0.938em;
   }
 }
 @media all and (max-width: 360px) {
-  section.row.single:not(.mimic-multi-column-sections) div.column p {
+  .row.single:not(.mimic-multi-column-sections) .column p {
     font-size: 0.879844em;
   }
 }
 @media all {
-  section.row.single.mimic-two-column-sections div.column p {
+  .row.single.mimic-two-column-sections .column p {
     line-height: 1.275em;
     font-size: 1em;
   }
 }
 @media all and (min-width: 1073px) {
-  section.row.single.mimic-two-column-sections div.column p {
+  .row.single.mimic-two-column-sections .column p {
     font-size: 1em;
   }
 }
 @media all and (min-width: 990px) and (max-width: 1072px) {
-  section.row.single.mimic-two-column-sections div.column p {
+  .row.single.mimic-two-column-sections .column p {
     font-size: 1em;
   }
 }
 @media all and (min-width: 792px) and (max-width: 989px) {
-  section.row.single.mimic-two-column-sections div.column p {
+  .row.single.mimic-two-column-sections .column p {
     font-size: 1em;
   }
 }
 @media all and (min-width: 481px) and (max-width: 791px) {
-  section.row.single.mimic-two-column-sections div.column p {
+  .row.single.mimic-two-column-sections .column p {
     font-size: 1em;
   }
 }
 @media all and (min-width: 361px) and (max-width: 480px) {
-  section.row.single.mimic-two-column-sections div.column p {
+  .row.single.mimic-two-column-sections .column p {
     font-size: 0.938em;
   }
 }
 @media all and (max-width: 360px) {
-  section.row.single.mimic-two-column-sections div.column p {
+  .row.single.mimic-two-column-sections .column p {
     font-size: 0.879844em;
   }
 }
 @media all {
-  section.row.side-right div.column p,
-  section.row.side-left div.column p,
-  section.row.halves div.column p {
+  .row.side-right.column p,
+  .row.side-left .column p,
+  .row.halves .column p {
     line-height: 1.275em;
     font-size: 1em;
   }
 }
 @media all and (min-width: 1073px) {
-  section.row.side-right div.column p,
-  section.row.side-left div.column p,
-  section.row.halves div.column p {
+  .row.side-right.column p,
+  .row.side-left .column p,
+  .row.halves .column p {
     font-size: 1em;
   }
 }
 @media all and (min-width: 990px) and (max-width: 1072px) {
-  section.row.side-right div.column p,
-  section.row.side-left div.column p,
-  section.row.halves div.column p {
+  .row.side-right.column p,
+  .row.side-left .column p,
+  .row.halves .column p {
     font-size: 1em;
   }
 }
 @media all and (min-width: 792px) and (max-width: 989px) {
-  section.row.side-right div.column p,
-  section.row.side-left div.column p,
-  section.row.halves div.column p {
+  .row.side-right.column p,
+  .row.side-left .column p,
+  .row.halves .column p {
     font-size: 1em;
   }
 }
 @media all and (min-width: 481px) and (max-width: 791px) {
-  section.row.side-right div.column p,
-  section.row.side-left div.column p,
-  section.row.halves div.column p {
+  .row.side-right.column p,
+  .row.side-left .column p,
+  .row.halves .column p {
     font-size: 1em;
   }
 }
 @media all and (min-width: 361px) and (max-width: 480px) {
-  section.row.side-right div.column p,
-  section.row.side-left div.column p,
-  section.row.halves div.column p {
+  .row.side-right.column p,
+  .row.side-left .column p,
+  .row.halves .column p {
     font-size: 0.938em;
   }
 }
 @media all and (max-width: 360px) {
-  section.row.side-right div.column p,
-  section.row.side-left div.column p,
-  section.row.halves div.column p {
+  .row.side-right.column p,
+  .row.side-left .column p,
+  .row.halves .column p {
     font-size: 0.879844em;
   }
 }
 @media all {
-  section.row.thirds div.column p,
-  section.row.quarters div.column p {
+  .row.thirds .column p,
+  .row.quarters .column p {
     line-height: 1.275em;
     font-size: 1em;
   }
 }
 @media all and (min-width: 1073px) {
-  section.row.thirds div.column p,
-  section.row.quarters div.column p {
+  .row.thirds .column p,
+  .row.quarters .column p {
     font-size: 1em;
   }
 }
 @media all and (min-width: 990px) and (max-width: 1072px) {
-  section.row.thirds div.column p,
-  section.row.quarters div.column p {
+  .row.thirds .column p,
+  .row.quarters .column p {
     font-size: 0.938em;
   }
 }
 @media all and (min-width: 792px) and (max-width: 989px) {
-  section.row.thirds div.column p,
-  section.row.quarters div.column p {
+  .row.thirds .column p,
+  .row.quarters .column p {
     font-size: 1em;
   }
 }
 @media all and (min-width: 481px) and (max-width: 791px) {
-  section.row.thirds div.column p,
-  section.row.quarters div.column p {
+  .row.thirds .column p,
+  .row.quarters .column p {
     font-size: 0.938em;
   }
 }
 @media all and (min-width: 361px) and (max-width: 480px) {
-  section.row.thirds div.column p,
-  section.row.quarters div.column p {
+  .row.thirds .column p,
+  .row.quarters .column p {
     font-size: 0.879844em;
   }
 }
 @media all and (max-width: 360px) {
-  section.row.thirds div.column p,
-  section.row.quarters div.column p {
+  .row.thirds .column p,
+  .row.quarters .column p {
     font-size: 0.879844em;
   }
 }
@@ -2324,167 +2324,167 @@ div.column p.half-margins:not(:last-child) {
   margin-bottom: 0.5rem;
 }
 @media all {
-  section.row.single:not(.mimic-multi-column-sections) div.column p.article-deck {
+  .row.single:not(.mimic-multi-column-sections) .column p.article-deck {
     line-height: 1.275em;
     font-size: 1.2em;
   }
 }
 @media all and (min-width: 1073px) {
-  section.row.single:not(.mimic-multi-column-sections) div.column p.article-deck {
+  .row.single:not(.mimic-multi-column-sections) .column p.article-deck {
     font-size: 1.2793177em;
   }
 }
 @media all and (min-width: 990px) and (max-width: 1072px) {
-  section.row.single:not(.mimic-multi-column-sections) div.column p.article-deck {
+  .row.single:not(.mimic-multi-column-sections) .column p.article-deck {
     font-size: 1.2em;
   }
 }
 @media all and (min-width: 792px) and (max-width: 989px) {
-  section.row.single:not(.mimic-multi-column-sections) div.column p.article-deck {
+  .row.single:not(.mimic-multi-column-sections) .column p.article-deck {
     font-size: 1.2793177em;
   }
 }
 @media all and (min-width: 481px) and (max-width: 791px) {
-  section.row.single:not(.mimic-multi-column-sections) div.column p.article-deck {
+  .row.single:not(.mimic-multi-column-sections) .column p.article-deck {
     font-size: 1.2em;
   }
 }
 @media all and (min-width: 361px) and (max-width: 480px) {
-  section.row.single:not(.mimic-multi-column-sections) div.column p.article-deck {
+  .row.single:not(.mimic-multi-column-sections) .column p.article-deck {
     font-size: 1.1256em;
   }
 }
 @media all and (max-width: 360px) {
-  section.row.single:not(.mimic-multi-column-sections) div.column p.article-deck {
+  .row.single:not(.mimic-multi-column-sections) .column p.article-deck {
     font-size: 1.0558128em;
   }
 }
 @media all {
-  section.row.single.mimic-two-column-sections div.column p.article-deck {
+  .row.single.mimic-two-column-sections .column p.article-deck {
     line-height: 1.275em;
     font-size: 1.2em;
   }
 }
 @media all and (min-width: 1073px) {
-  section.row.single.mimic-two-column-sections div.column p.article-deck {
+  .row.single.mimic-two-column-sections .column p.article-deck {
     font-size: 1.2em;
   }
 }
 @media all and (min-width: 990px) and (max-width: 1072px) {
-  section.row.single.mimic-two-column-sections div.column p.article-deck {
+  .row.single.mimic-two-column-sections .column p.article-deck {
     font-size: 1.2em;
   }
 }
 @media all and (min-width: 792px) and (max-width: 989px) {
-  section.row.single.mimic-two-column-sections div.column p.article-deck {
+  .row.single.mimic-two-column-sections .column p.article-deck {
     font-size: 1.2em;
   }
 }
 @media all and (min-width: 481px) and (max-width: 791px) {
-  section.row.single.mimic-two-column-sections div.column p.article-deck {
+  .row.single.mimic-two-column-sections .column p.article-deck {
     font-size: 1.2em;
   }
 }
 @media all and (min-width: 361px) and (max-width: 480px) {
-  section.row.single.mimic-two-column-sections div.column p.article-deck {
+  .row.single.mimic-two-column-sections .column p.article-deck {
     font-size: 1.1256em;
   }
 }
 @media all and (max-width: 360px) {
-  section.row.single.mimic-two-column-sections div.column p.article-deck {
+  .row.single.mimic-two-column-sections .column p.article-deck {
     font-size: 1.0558128em;
   }
 }
 @media all {
-  section.row.side-right div.column p.article-deck,
-  section.row.side-left div.column p.article-deck,
-  section.row.halves div.column p.article-deck {
+  .row.side-right.column p.article-deck,
+  .row.side-left .column p.article-deck,
+  .row.halves .column p.article-deck {
     line-height: 1.275em;
     font-size: 1.2em;
   }
 }
 @media all and (min-width: 1073px) {
-  section.row.side-right div.column p.article-deck,
-  section.row.side-left div.column p.article-deck,
-  section.row.halves div.column p.article-deck {
+  .row.side-right.column p.article-deck,
+  .row.side-left .column p.article-deck,
+  .row.halves .column p.article-deck {
     font-size: 1.2em;
   }
 }
 @media all and (min-width: 990px) and (max-width: 1072px) {
-  section.row.side-right div.column p.article-deck,
-  section.row.side-left div.column p.article-deck,
-  section.row.halves div.column p.article-deck {
+  .row.side-right.column p.article-deck,
+  .row.side-left .column p.article-deck,
+  .row.halves .column p.article-deck {
     font-size: 1.2em;
   }
 }
 @media all and (min-width: 792px) and (max-width: 989px) {
-  section.row.side-right div.column p.article-deck,
-  section.row.side-left div.column p.article-deck,
-  section.row.halves div.column p.article-deck {
+  .row.side-right.column p.article-deck,
+  .row.side-left .column p.article-deck,
+  .row.halves .column p.article-deck {
     font-size: 1.2em;
   }
 }
 @media all and (min-width: 481px) and (max-width: 791px) {
-  section.row.side-right div.column p.article-deck,
-  section.row.side-left div.column p.article-deck,
-  section.row.halves div.column p.article-deck {
+  .row.side-right.column p.article-deck,
+  .row.side-left .column p.article-deck,
+  .row.halves .column p.article-deck {
     font-size: 1.2em;
   }
 }
 @media all and (min-width: 361px) and (max-width: 480px) {
-  section.row.side-right div.column p.article-deck,
-  section.row.side-left div.column p.article-deck,
-  section.row.halves div.column p.article-deck {
+  .row.side-right.column p.article-deck,
+  .row.side-left .column p.article-deck,
+  .row.halves .column p.article-deck {
     font-size: 1.1256em;
   }
 }
 @media all and (max-width: 360px) {
-  section.row.side-right div.column p.article-deck,
-  section.row.side-left div.column p.article-deck,
-  section.row.halves div.column p.article-deck {
+  .row.side-right.column p.article-deck,
+  .row.side-left .column p.article-deck,
+  .row.halves .column p.article-deck {
     font-size: 1.0558128em;
   }
 }
 @media all {
-  section.row.thirds div.column p.article-deck,
-  section.row.quarters div.column p.article-deck {
+  .row.thirds .column p.article-deck,
+  .row.quarters .column p.article-deck {
     line-height: 1.275em;
     font-size: 1.2em;
   }
 }
 @media all and (min-width: 1073px) {
-  section.row.thirds div.column p.article-deck,
-  section.row.quarters div.column p.article-deck {
+  .row.thirds .column p.article-deck,
+  .row.quarters .column p.article-deck {
     font-size: 1.2em;
   }
 }
 @media all and (min-width: 990px) and (max-width: 1072px) {
-  section.row.thirds div.column p.article-deck,
-  section.row.quarters div.column p.article-deck {
+  .row.thirds .column p.article-deck,
+  .row.quarters .column p.article-deck {
     font-size: 1.1256em;
   }
 }
 @media all and (min-width: 792px) and (max-width: 989px) {
-  section.row.thirds div.column p.article-deck,
-  section.row.quarters div.column p.article-deck {
+  .row.thirds .column p.article-deck,
+  .row.quarters .column p.article-deck {
     font-size: 1.2em;
   }
 }
 @media all and (min-width: 481px) and (max-width: 791px) {
-  section.row.thirds div.column p.article-deck,
-  section.row.quarters div.column p.article-deck {
+  .row.thirds .column p.article-deck,
+  .row.quarters .column p.article-deck {
     font-size: 1.1256em;
   }
 }
 @media all and (min-width: 361px) and (max-width: 480px) {
-  section.row.thirds div.column p.article-deck,
-  section.row.quarters div.column p.article-deck {
+  .row.thirds .column p.article-deck,
+  .row.quarters .column p.article-deck {
     font-size: 1.0558128em;
   }
 }
 @media all and (max-width: 360px) {
-  section.row.thirds div.column p.article-deck,
-  section.row.quarters div.column p.article-deck {
+  .row.thirds .column p.article-deck,
+  .row.quarters .column p.article-deck {
     font-size: 1.0558128em;
   }
 }
@@ -2495,332 +2495,332 @@ div.column p.article-deck strong {
   color: #8f7e35;
 }
 @media all {
-  section.row.single:not(.mimic-multi-column-sections) div.column p.article-tagline {
+  .row.single:not(.mimic-multi-column-sections) .column p.article-tagline {
     line-height: 1.275em;
     font-size: 1.305em;
   }
 }
 @media all and (min-width: 1073px) {
-  section.row.single:not(.mimic-multi-column-sections) div.column p.article-tagline {
+  .row.single:not(.mimic-multi-column-sections) .column p.article-tagline {
     font-size: 1.391258em;
   }
 }
 @media all and (min-width: 990px) and (max-width: 1072px) {
-  section.row.single:not(.mimic-multi-column-sections) div.column p.article-tagline {
+  .row.single:not(.mimic-multi-column-sections) .column p.article-tagline {
     font-size: 1.305em;
   }
 }
 @media all and (min-width: 792px) and (max-width: 989px) {
-  section.row.single:not(.mimic-multi-column-sections) div.column p.article-tagline {
+  .row.single:not(.mimic-multi-column-sections) .column p.article-tagline {
     font-size: 1.391258em;
   }
 }
 @media all and (min-width: 481px) and (max-width: 791px) {
-  section.row.single:not(.mimic-multi-column-sections) div.column p.article-tagline {
+  .row.single:not(.mimic-multi-column-sections) .column p.article-tagline {
     font-size: 1.305em;
   }
 }
 @media all and (min-width: 361px) and (max-width: 480px) {
-  section.row.single:not(.mimic-multi-column-sections) div.column p.article-tagline {
+  .row.single:not(.mimic-multi-column-sections) .column p.article-tagline {
     font-size: 1.22409em;
   }
 }
 @media all and (max-width: 360px) {
-  section.row.single:not(.mimic-multi-column-sections) div.column p.article-tagline {
+  .row.single:not(.mimic-multi-column-sections) .column p.article-tagline {
     font-size: 1.14819642em;
   }
 }
 @media all {
-  section.row.single.mimic-two-column-sections div.column p.article-tagline {
+  .row.single.mimic-two-column-sections .column p.article-tagline {
     line-height: 1.275em;
     font-size: 1.305em;
   }
 }
 @media all and (min-width: 1073px) {
-  section.row.single.mimic-two-column-sections div.column p.article-tagline {
+  .row.single.mimic-two-column-sections .column p.article-tagline {
     font-size: 1.305em;
   }
 }
 @media all and (min-width: 990px) and (max-width: 1072px) {
-  section.row.single.mimic-two-column-sections div.column p.article-tagline {
+  .row.single.mimic-two-column-sections .column p.article-tagline {
     font-size: 1.305em;
   }
 }
 @media all and (min-width: 792px) and (max-width: 989px) {
-  section.row.single.mimic-two-column-sections div.column p.article-tagline {
+  .row.single.mimic-two-column-sections .column p.article-tagline {
     font-size: 1.305em;
   }
 }
 @media all and (min-width: 481px) and (max-width: 791px) {
-  section.row.single.mimic-two-column-sections div.column p.article-tagline {
+  .row.single.mimic-two-column-sections .column p.article-tagline {
     font-size: 1.305em;
   }
 }
 @media all and (min-width: 361px) and (max-width: 480px) {
-  section.row.single.mimic-two-column-sections div.column p.article-tagline {
+  .row.single.mimic-two-column-sections .column p.article-tagline {
     font-size: 1.22409em;
   }
 }
 @media all and (max-width: 360px) {
-  section.row.single.mimic-two-column-sections div.column p.article-tagline {
+  .row.single.mimic-two-column-sections .column p.article-tagline {
     font-size: 1.14819642em;
   }
 }
 @media all {
-  section.row.side-right div.column p.article-tagline,
-  section.row.side-left div.column p.article-tagline,
-  section.row.halves div.column p.article-tagline {
+  .row.side-right.column p.article-tagline,
+  .row.side-left .column p.article-tagline,
+  .row.halves .column p.article-tagline {
     line-height: 1.275em;
     font-size: 1.305em;
   }
 }
 @media all and (min-width: 1073px) {
-  section.row.side-right div.column p.article-tagline,
-  section.row.side-left div.column p.article-tagline,
-  section.row.halves div.column p.article-tagline {
+  .row.side-right.column p.article-tagline,
+  .row.side-left .column p.article-tagline,
+  .row.halves .column p.article-tagline {
     font-size: 1.305em;
   }
 }
 @media all and (min-width: 990px) and (max-width: 1072px) {
-  section.row.side-right div.column p.article-tagline,
-  section.row.side-left div.column p.article-tagline,
-  section.row.halves div.column p.article-tagline {
+  .row.side-right.column p.article-tagline,
+  .row.side-left .column p.article-tagline,
+  .row.halves .column p.article-tagline {
     font-size: 1.305em;
   }
 }
 @media all and (min-width: 792px) and (max-width: 989px) {
-  section.row.side-right div.column p.article-tagline,
-  section.row.side-left div.column p.article-tagline,
-  section.row.halves div.column p.article-tagline {
+  .row.side-right.column p.article-tagline,
+  .row.side-left .column p.article-tagline,
+  .row.halves .column p.article-tagline {
     font-size: 1.305em;
   }
 }
 @media all and (min-width: 481px) and (max-width: 791px) {
-  section.row.side-right div.column p.article-tagline,
-  section.row.side-left div.column p.article-tagline,
-  section.row.halves div.column p.article-tagline {
+  .row.side-right.column p.article-tagline,
+  .row.side-left .column p.article-tagline,
+  .row.halves .column p.article-tagline {
     font-size: 1.305em;
   }
 }
 @media all and (min-width: 361px) and (max-width: 480px) {
-  section.row.side-right div.column p.article-tagline,
-  section.row.side-left div.column p.article-tagline,
-  section.row.halves div.column p.article-tagline {
+  .row.side-right.column p.article-tagline,
+  .row.side-left .column p.article-tagline,
+  .row.halves .column p.article-tagline {
     font-size: 1.22409em;
   }
 }
 @media all and (max-width: 360px) {
-  section.row.side-right div.column p.article-tagline,
-  section.row.side-left div.column p.article-tagline,
-  section.row.halves div.column p.article-tagline {
+  .row.side-right.column p.article-tagline,
+  .row.side-left .column p.article-tagline,
+  .row.halves .column p.article-tagline {
     font-size: 1.14819642em;
   }
 }
 @media all {
-  section.row.thirds div.column p.article-tagline,
-  section.row.quarters div.column p.article-tagline {
+  .row.thirds .column p.article-tagline,
+  .row.quarters .column p.article-tagline {
     line-height: 1.275em;
     font-size: 1.305em;
   }
 }
 @media all and (min-width: 1073px) {
-  section.row.thirds div.column p.article-tagline,
-  section.row.quarters div.column p.article-tagline {
+  .row.thirds .column p.article-tagline,
+  .row.quarters .column p.article-tagline {
     font-size: 1.305em;
   }
 }
 @media all and (min-width: 990px) and (max-width: 1072px) {
-  section.row.thirds div.column p.article-tagline,
-  section.row.quarters div.column p.article-tagline {
+  .row.thirds .column p.article-tagline,
+  .row.quarters .column p.article-tagline {
     font-size: 1.22409em;
   }
 }
 @media all and (min-width: 792px) and (max-width: 989px) {
-  section.row.thirds div.column p.article-tagline,
-  section.row.quarters div.column p.article-tagline {
+  .row.thirds .column p.article-tagline,
+  .row.quarters .column p.article-tagline {
     font-size: 1.305em;
   }
 }
 @media all and (min-width: 481px) and (max-width: 791px) {
-  section.row.thirds div.column p.article-tagline,
-  section.row.quarters div.column p.article-tagline {
+  .row.thirds .column p.article-tagline,
+  .row.quarters .column p.article-tagline {
     font-size: 1.22409em;
   }
 }
 @media all and (min-width: 361px) and (max-width: 480px) {
-  section.row.thirds div.column p.article-tagline,
-  section.row.quarters div.column p.article-tagline {
+  .row.thirds .column p.article-tagline,
+  .row.quarters .column p.article-tagline {
     font-size: 1.14819642em;
   }
 }
 @media all and (max-width: 360px) {
-  section.row.thirds div.column p.article-tagline,
-  section.row.quarters div.column p.article-tagline {
+  .row.thirds .column p.article-tagline,
+  .row.quarters .column p.article-tagline {
     font-size: 1.14819642em;
   }
 }
 @media all {
-  section.row.single:not(.mimic-multi-column-sections) div.column p.article-tagline.home {
+  .row.single:not(.mimic-multi-column-sections) .column p.article-tagline.home {
     line-height: 1.275em;
     font-size: 1.71000023em;
   }
 }
 @media all and (min-width: 1073px) {
-  section.row.single:not(.mimic-multi-column-sections) div.column p.article-tagline.home {
+  .row.single:not(.mimic-multi-column-sections) .column p.article-tagline.home {
     font-size: 1.82302796em;
   }
 }
 @media all and (min-width: 990px) and (max-width: 1072px) {
-  section.row.single:not(.mimic-multi-column-sections) div.column p.article-tagline.home {
+  .row.single:not(.mimic-multi-column-sections) .column p.article-tagline.home {
     font-size: 1.71000023em;
   }
 }
 @media all and (min-width: 792px) and (max-width: 989px) {
-  section.row.single:not(.mimic-multi-column-sections) div.column p.article-tagline.home {
+  .row.single:not(.mimic-multi-column-sections) .column p.article-tagline.home {
     font-size: 1.82302796em;
   }
 }
 @media all and (min-width: 481px) and (max-width: 791px) {
-  section.row.single:not(.mimic-multi-column-sections) div.column p.article-tagline.home {
+  .row.single:not(.mimic-multi-column-sections) .column p.article-tagline.home {
     font-size: 1.71000023em;
   }
 }
 @media all and (min-width: 361px) and (max-width: 480px) {
-  section.row.single:not(.mimic-multi-column-sections) div.column p.article-tagline.home {
+  .row.single:not(.mimic-multi-column-sections) .column p.article-tagline.home {
     font-size: 1.60398021em;
   }
 }
 @media all and (max-width: 360px) {
-  section.row.single:not(.mimic-multi-column-sections) div.column p.article-tagline.home {
+  .row.single:not(.mimic-multi-column-sections) .column p.article-tagline.home {
     font-size: 1.50453344em;
   }
 }
 @media all {
-  section.row.single.mimic-two-column-sections div.column p.article-tagline.home {
+  .row.single.mimic-two-column-sections .column p.article-tagline.home {
     line-height: 1.275em;
     font-size: 1.71000023em;
   }
 }
 @media all and (min-width: 1073px) {
-  section.row.single.mimic-two-column-sections div.column p.article-tagline.home {
+  .row.single.mimic-two-column-sections .column p.article-tagline.home {
     font-size: 1.71000023em;
   }
 }
 @media all and (min-width: 990px) and (max-width: 1072px) {
-  section.row.single.mimic-two-column-sections div.column p.article-tagline.home {
+  .row.single.mimic-two-column-sections .column p.article-tagline.home {
     font-size: 1.71000023em;
   }
 }
 @media all and (min-width: 792px) and (max-width: 989px) {
-  section.row.single.mimic-two-column-sections div.column p.article-tagline.home {
+  .row.single.mimic-two-column-sections .column p.article-tagline.home {
     font-size: 1.71000023em;
   }
 }
 @media all and (min-width: 481px) and (max-width: 791px) {
-  section.row.single.mimic-two-column-sections div.column p.article-tagline.home {
+  .row.single.mimic-two-column-sections .column p.article-tagline.home {
     font-size: 1.71000023em;
   }
 }
 @media all and (min-width: 361px) and (max-width: 480px) {
-  section.row.single.mimic-two-column-sections div.column p.article-tagline.home {
+  .row.single.mimic-two-column-sections .column p.article-tagline.home {
     font-size: 1.60398021em;
   }
 }
 @media all and (max-width: 360px) {
-  section.row.single.mimic-two-column-sections div.column p.article-tagline.home {
+  .row.single.mimic-two-column-sections .column p.article-tagline.home {
     font-size: 1.50453344em;
   }
 }
 @media all {
-  section.row.side-right div.column p.article-tagline.home,
-  section.row.side-left div.column p.article-tagline.home,
-  section.row.halves div.column p.article-tagline.home {
+  .row.side-right.column p.article-tagline.home,
+  .row.side-left .column p.article-tagline.home,
+  .row.halves .column p.article-tagline.home {
     line-height: 1.275em;
     font-size: 1.71000023em;
   }
 }
 @media all and (min-width: 1073px) {
-  section.row.side-right div.column p.article-tagline.home,
-  section.row.side-left div.column p.article-tagline.home,
-  section.row.halves div.column p.article-tagline.home {
+  .row.side-right.column p.article-tagline.home,
+  .row.side-left .column p.article-tagline.home,
+  .row.halves .column p.article-tagline.home {
     font-size: 1.71000023em;
   }
 }
 @media all and (min-width: 990px) and (max-width: 1072px) {
-  section.row.side-right div.column p.article-tagline.home,
-  section.row.side-left div.column p.article-tagline.home,
-  section.row.halves div.column p.article-tagline.home {
+  .row.side-right.column p.article-tagline.home,
+  .row.side-left .column p.article-tagline.home,
+  .row.halves .column p.article-tagline.home {
     font-size: 1.71000023em;
   }
 }
 @media all and (min-width: 792px) and (max-width: 989px) {
-  section.row.side-right div.column p.article-tagline.home,
-  section.row.side-left div.column p.article-tagline.home,
-  section.row.halves div.column p.article-tagline.home {
+  .row.side-right.column p.article-tagline.home,
+  .row.side-left .column p.article-tagline.home,
+  .row.halves .column p.article-tagline.home {
     font-size: 1.71000023em;
   }
 }
 @media all and (min-width: 481px) and (max-width: 791px) {
-  section.row.side-right div.column p.article-tagline.home,
-  section.row.side-left div.column p.article-tagline.home,
-  section.row.halves div.column p.article-tagline.home {
+  .row.side-right.column p.article-tagline.home,
+  .row.side-left .column p.article-tagline.home,
+  .row.halves .column p.article-tagline.home {
     font-size: 1.71000023em;
   }
 }
 @media all and (min-width: 361px) and (max-width: 480px) {
-  section.row.side-right div.column p.article-tagline.home,
-  section.row.side-left div.column p.article-tagline.home,
-  section.row.halves div.column p.article-tagline.home {
+  .row.side-right.column p.article-tagline.home,
+  .row.side-left .column p.article-tagline.home,
+  .row.halves .column p.article-tagline.home {
     font-size: 1.60398021em;
   }
 }
 @media all and (max-width: 360px) {
-  section.row.side-right div.column p.article-tagline.home,
-  section.row.side-left div.column p.article-tagline.home,
-  section.row.halves div.column p.article-tagline.home {
+  .row.side-right.column p.article-tagline.home,
+  .row.side-left .column p.article-tagline.home,
+  .row.halves .column p.article-tagline.home {
     font-size: 1.50453344em;
   }
 }
 @media all {
-  section.row.thirds div.column p.article-tagline.home,
-  section.row.quarters div.column p.article-tagline.home {
+  .row.thirds .column p.article-tagline.home,
+  .row.quarters .column p.article-tagline.home {
     line-height: 1.275em;
     font-size: 1.71000023em;
   }
 }
 @media all and (min-width: 1073px) {
-  section.row.thirds div.column p.article-tagline.home,
-  section.row.quarters div.column p.article-tagline.home {
+  .row.thirds .column p.article-tagline.home,
+  .row.quarters .column p.article-tagline.home {
     font-size: 1.71000023em;
   }
 }
 @media all and (min-width: 990px) and (max-width: 1072px) {
-  section.row.thirds div.column p.article-tagline.home,
-  section.row.quarters div.column p.article-tagline.home {
+  .row.thirds .column p.article-tagline.home,
+  .row.quarters .column p.article-tagline.home {
     font-size: 1.60398021em;
   }
 }
 @media all and (min-width: 792px) and (max-width: 989px) {
-  section.row.thirds div.column p.article-tagline.home,
-  section.row.quarters div.column p.article-tagline.home {
+  .row.thirds .column p.article-tagline.home,
+  .row.quarters .column p.article-tagline.home {
     font-size: 1.71000023em;
   }
 }
 @media all and (min-width: 481px) and (max-width: 791px) {
-  section.row.thirds div.column p.article-tagline.home,
-  section.row.quarters div.column p.article-tagline.home {
+  .row.thirds .column p.article-tagline.home,
+  .row.quarters .column p.article-tagline.home {
     font-size: 1.60398021em;
   }
 }
 @media all and (min-width: 361px) and (max-width: 480px) {
-  section.row.thirds div.column p.article-tagline.home,
-  section.row.quarters div.column p.article-tagline.home {
+  .row.thirds .column p.article-tagline.home,
+  .row.quarters .column p.article-tagline.home {
     font-size: 1.50453344em;
   }
 }
 @media all and (max-width: 360px) {
-  section.row.thirds div.column p.article-tagline.home,
-  section.row.quarters div.column p.article-tagline.home {
+  .row.thirds .column p.article-tagline.home,
+  .row.quarters .column p.article-tagline.home {
     font-size: 1.50453344em;
   }
 }
@@ -2966,167 +2966,167 @@ div.column p.vpue-jump-bar.floating br:first-of-type {
   }
 }
 @media all {
-  section.row.single:not(.mimic-multi-column-sections) div.column p.vpue-jump-back {
+  .row.single:not(.mimic-multi-column-sections) .column p.vpue-jump-back {
     line-height: 1.275em;
     font-size: 0.6875em;
   }
 }
 @media all and (min-width: 1073px) {
-  section.row.single:not(.mimic-multi-column-sections) div.column p.vpue-jump-back {
+  .row.single:not(.mimic-multi-column-sections) .column p.vpue-jump-back {
     font-size: 0.73294243em;
   }
 }
 @media all and (min-width: 990px) and (max-width: 1072px) {
-  section.row.single:not(.mimic-multi-column-sections) div.column p.vpue-jump-back {
+  .row.single:not(.mimic-multi-column-sections) .column p.vpue-jump-back {
     font-size: 0.6875em;
   }
 }
 @media all and (min-width: 792px) and (max-width: 989px) {
-  section.row.single:not(.mimic-multi-column-sections) div.column p.vpue-jump-back {
+  .row.single:not(.mimic-multi-column-sections) .column p.vpue-jump-back {
     font-size: 0.73294243em;
   }
 }
 @media all and (min-width: 481px) and (max-width: 791px) {
-  section.row.single:not(.mimic-multi-column-sections) div.column p.vpue-jump-back {
+  .row.single:not(.mimic-multi-column-sections) .column p.vpue-jump-back {
     font-size: 0.6875em;
   }
 }
 @media all and (min-width: 361px) and (max-width: 480px) {
-  section.row.single:not(.mimic-multi-column-sections) div.column p.vpue-jump-back {
+  .row.single:not(.mimic-multi-column-sections) .column p.vpue-jump-back {
     font-size: 0.644875em;
   }
 }
 @media all and (max-width: 360px) {
-  section.row.single:not(.mimic-multi-column-sections) div.column p.vpue-jump-back {
+  .row.single:not(.mimic-multi-column-sections) .column p.vpue-jump-back {
     font-size: 0.60489275em;
   }
 }
 @media all {
-  section.row.single.mimic-two-column-sections div.column p.vpue-jump-back {
+  .row.single.mimic-two-column-sections .column p.vpue-jump-back {
     line-height: 1.275em;
     font-size: 0.6875em;
   }
 }
 @media all and (min-width: 1073px) {
-  section.row.single.mimic-two-column-sections div.column p.vpue-jump-back {
+  .row.single.mimic-two-column-sections .column p.vpue-jump-back {
     font-size: 0.6875em;
   }
 }
 @media all and (min-width: 990px) and (max-width: 1072px) {
-  section.row.single.mimic-two-column-sections div.column p.vpue-jump-back {
+  .row.single.mimic-two-column-sections .column p.vpue-jump-back {
     font-size: 0.6875em;
   }
 }
 @media all and (min-width: 792px) and (max-width: 989px) {
-  section.row.single.mimic-two-column-sections div.column p.vpue-jump-back {
+  .row.single.mimic-two-column-sections .column p.vpue-jump-back {
     font-size: 0.6875em;
   }
 }
 @media all and (min-width: 481px) and (max-width: 791px) {
-  section.row.single.mimic-two-column-sections div.column p.vpue-jump-back {
+  .row.single.mimic-two-column-sections .column p.vpue-jump-back {
     font-size: 0.6875em;
   }
 }
 @media all and (min-width: 361px) and (max-width: 480px) {
-  section.row.single.mimic-two-column-sections div.column p.vpue-jump-back {
+  .row.single.mimic-two-column-sections .column p.vpue-jump-back {
     font-size: 0.644875em;
   }
 }
 @media all and (max-width: 360px) {
-  section.row.single.mimic-two-column-sections div.column p.vpue-jump-back {
+  .row.single.mimic-two-column-sections .column p.vpue-jump-back {
     font-size: 0.60489275em;
   }
 }
 @media all {
-  section.row.side-right div.column p.vpue-jump-back,
-  section.row.side-left div.column p.vpue-jump-back,
-  section.row.halves div.column p.vpue-jump-back {
+  .row.side-right.column p.vpue-jump-back,
+  .row.side-left .column p.vpue-jump-back,
+  .row.halves .column p.vpue-jump-back {
     line-height: 1.275em;
     font-size: 0.6875em;
   }
 }
 @media all and (min-width: 1073px) {
-  section.row.side-right div.column p.vpue-jump-back,
-  section.row.side-left div.column p.vpue-jump-back,
-  section.row.halves div.column p.vpue-jump-back {
+  .row.side-right.column p.vpue-jump-back,
+  .row.side-left .column p.vpue-jump-back,
+  .row.halves .column p.vpue-jump-back {
     font-size: 0.6875em;
   }
 }
 @media all and (min-width: 990px) and (max-width: 1072px) {
-  section.row.side-right div.column p.vpue-jump-back,
-  section.row.side-left div.column p.vpue-jump-back,
-  section.row.halves div.column p.vpue-jump-back {
+  .row.side-right.column p.vpue-jump-back,
+  .row.side-left .column p.vpue-jump-back,
+  .row.halves .column p.vpue-jump-back {
     font-size: 0.6875em;
   }
 }
 @media all and (min-width: 792px) and (max-width: 989px) {
-  section.row.side-right div.column p.vpue-jump-back,
-  section.row.side-left div.column p.vpue-jump-back,
-  section.row.halves div.column p.vpue-jump-back {
+  .row.side-right.column p.vpue-jump-back,
+  .row.side-left .column p.vpue-jump-back,
+  .row.halves .column p.vpue-jump-back {
     font-size: 0.6875em;
   }
 }
 @media all and (min-width: 481px) and (max-width: 791px) {
-  section.row.side-right div.column p.vpue-jump-back,
-  section.row.side-left div.column p.vpue-jump-back,
-  section.row.halves div.column p.vpue-jump-back {
+  .row.side-right.column p.vpue-jump-back,
+  .row.side-left .column p.vpue-jump-back,
+  .row.halves .column p.vpue-jump-back {
     font-size: 0.6875em;
   }
 }
 @media all and (min-width: 361px) and (max-width: 480px) {
-  section.row.side-right div.column p.vpue-jump-back,
-  section.row.side-left div.column p.vpue-jump-back,
-  section.row.halves div.column p.vpue-jump-back {
+  .row.side-right.column p.vpue-jump-back,
+  .row.side-left .column p.vpue-jump-back,
+  .row.halves .column p.vpue-jump-back {
     font-size: 0.644875em;
   }
 }
 @media all and (max-width: 360px) {
-  section.row.side-right div.column p.vpue-jump-back,
-  section.row.side-left div.column p.vpue-jump-back,
-  section.row.halves div.column p.vpue-jump-back {
+  .row.side-right.column p.vpue-jump-back,
+  .row.side-left .column p.vpue-jump-back,
+  .row.halves .column p.vpue-jump-back {
     font-size: 0.60489275em;
   }
 }
 @media all {
-  section.row.thirds div.column p.vpue-jump-back,
-  section.row.quarters div.column p.vpue-jump-back {
+  .row.thirds .column p.vpue-jump-back,
+  .row.quarters .column p.vpue-jump-back {
     line-height: 1.275em;
     font-size: 0.6875em;
   }
 }
 @media all and (min-width: 1073px) {
-  section.row.thirds div.column p.vpue-jump-back,
-  section.row.quarters div.column p.vpue-jump-back {
+  .row.thirds .column p.vpue-jump-back,
+  .row.quarters .column p.vpue-jump-back {
     font-size: 0.6875em;
   }
 }
 @media all and (min-width: 990px) and (max-width: 1072px) {
-  section.row.thirds div.column p.vpue-jump-back,
-  section.row.quarters div.column p.vpue-jump-back {
+  .row.thirds .column p.vpue-jump-back,
+  .row.quarters .column p.vpue-jump-back {
     font-size: 0.644875em;
   }
 }
 @media all and (min-width: 792px) and (max-width: 989px) {
-  section.row.thirds div.column p.vpue-jump-back,
-  section.row.quarters div.column p.vpue-jump-back {
+  .row.thirds .column p.vpue-jump-back,
+  .row.quarters .column p.vpue-jump-back {
     font-size: 0.6875em;
   }
 }
 @media all and (min-width: 481px) and (max-width: 791px) {
-  section.row.thirds div.column p.vpue-jump-back,
-  section.row.quarters div.column p.vpue-jump-back {
+  .row.thirds .column p.vpue-jump-back,
+  .row.quarters .column p.vpue-jump-back {
     font-size: 0.644875em;
   }
 }
 @media all and (min-width: 361px) and (max-width: 480px) {
-  section.row.thirds div.column p.vpue-jump-back,
-  section.row.quarters div.column p.vpue-jump-back {
+  .row.thirds .column p.vpue-jump-back,
+  .row.quarters .column p.vpue-jump-back {
     font-size: 0.60489275em;
   }
 }
 @media all and (max-width: 360px) {
-  section.row.thirds div.column p.vpue-jump-back,
-  section.row.quarters div.column p.vpue-jump-back {
+  .row.thirds .column p.vpue-jump-back,
+  .row.quarters .column p.vpue-jump-back {
     font-size: 0.60489275em;
   }
 }
@@ -4322,190 +4322,190 @@ div.recent-updates p.recent-update-3 {
  *         └-----------------------------------------------------------------------------------------┘
  */
 @media all {
-  section.row.single:not(.mimic-multi-column-sections) div.column ul {
+  .row.single:not(.mimic-multi-column-sections) .column ul {
     line-height: 1.275em;
     font-size: 1em;
   }
 }
 @media all and (min-width: 1073px) {
-  section.row.single:not(.mimic-multi-column-sections) div.column ul {
+  .row.single:not(.mimic-multi-column-sections) .column ul {
     font-size: 1.06609808em;
   }
 }
 @media all and (min-width: 990px) and (max-width: 1072px) {
-  section.row.single:not(.mimic-multi-column-sections) div.column ul {
+  .row.single:not(.mimic-multi-column-sections) .column ul {
     font-size: 1em;
   }
 }
 @media all and (min-width: 792px) and (max-width: 989px) {
-  section.row.single:not(.mimic-multi-column-sections) div.column ul {
+  .row.single:not(.mimic-multi-column-sections) .column ul {
     font-size: 1.06609808em;
   }
 }
 @media all and (min-width: 481px) and (max-width: 791px) {
-  section.row.single:not(.mimic-multi-column-sections) div.column ul {
+  .row.single:not(.mimic-multi-column-sections) .column ul {
     font-size: 1em;
   }
 }
 @media all and (min-width: 361px) and (max-width: 480px) {
-  section.row.single:not(.mimic-multi-column-sections) div.column ul {
+  .row.single:not(.mimic-multi-column-sections) .column ul {
     font-size: 0.938em;
   }
 }
 @media all and (max-width: 360px) {
-  section.row.single:not(.mimic-multi-column-sections) div.column ul {
+  .row.single:not(.mimic-multi-column-sections) .column ul {
     font-size: 0.879844em;
   }
 }
 @media all {
-  section.row.single.mimic-two-column-sections div.column ul {
+  .row.single.mimic-two-column-sections .column ul {
     line-height: 1.275em;
     font-size: 1em;
   }
 }
 @media all and (min-width: 1073px) {
-  section.row.single.mimic-two-column-sections div.column ul {
+  .row.single.mimic-two-column-sections .column ul {
     font-size: 1em;
   }
 }
 @media all and (min-width: 990px) and (max-width: 1072px) {
-  section.row.single.mimic-two-column-sections div.column ul {
+  .row.single.mimic-two-column-sections .column ul {
     font-size: 1em;
   }
 }
 @media all and (min-width: 792px) and (max-width: 989px) {
-  section.row.single.mimic-two-column-sections div.column ul {
+  .row.single.mimic-two-column-sections .column ul {
     font-size: 1em;
   }
 }
 @media all and (min-width: 481px) and (max-width: 791px) {
-  section.row.single.mimic-two-column-sections div.column ul {
+  .row.single.mimic-two-column-sections .column ul {
     font-size: 1em;
   }
 }
 @media all and (min-width: 361px) and (max-width: 480px) {
-  section.row.single.mimic-two-column-sections div.column ul {
+  .row.single.mimic-two-column-sections .column ul {
     font-size: 0.938em;
   }
 }
 @media all and (max-width: 360px) {
-  section.row.single.mimic-two-column-sections div.column ul {
+  .row.single.mimic-two-column-sections .column ul {
     font-size: 0.879844em;
   }
 }
 @media all {
-  section.row.side-right div.column ul,
-  section.row.side-left div.column ul,
-  section.row.halves div.column ul {
+  .row.side-right.column ul,
+  .row.side-left .column ul,
+  .row.halves .column ul {
     line-height: 1.275em;
     font-size: 1em;
   }
 }
 @media all and (min-width: 1073px) {
-  section.row.side-right div.column ul,
-  section.row.side-left div.column ul,
-  section.row.halves div.column ul {
+  .row.side-right.column ul,
+  .row.side-left .column ul,
+  .row.halves .column ul {
     font-size: 1em;
   }
 }
 @media all and (min-width: 990px) and (max-width: 1072px) {
-  section.row.side-right div.column ul,
-  section.row.side-left div.column ul,
-  section.row.halves div.column ul {
+  .row.side-right.column ul,
+  .row.side-left .column ul,
+  .row.halves .column ul {
     font-size: 1em;
   }
 }
 @media all and (min-width: 792px) and (max-width: 989px) {
-  section.row.side-right div.column ul,
-  section.row.side-left div.column ul,
-  section.row.halves div.column ul {
+  .row.side-right.column ul,
+  .row.side-left .column ul,
+  .row.halves .column ul {
     font-size: 1em;
   }
 }
 @media all and (min-width: 481px) and (max-width: 791px) {
-  section.row.side-right div.column ul,
-  section.row.side-left div.column ul,
-  section.row.halves div.column ul {
+  .row.side-right.column ul,
+  .row.side-left .column ul,
+  .row.halves .column ul {
     font-size: 1em;
   }
 }
 @media all and (min-width: 361px) and (max-width: 480px) {
-  section.row.side-right div.column ul,
-  section.row.side-left div.column ul,
-  section.row.halves div.column ul {
+  .row.side-right.column ul,
+  .row.side-left .column ul,
+  .row.halves .column ul {
     font-size: 0.938em;
   }
 }
 @media all and (max-width: 360px) {
-  section.row.side-right div.column ul,
-  section.row.side-left div.column ul,
-  section.row.halves div.column ul {
+  .row.side-right.column ul,
+  .row.side-left .column ul,
+  .row.halves .column ul {
     font-size: 0.879844em;
   }
 }
 @media all {
-  section.row.thirds div.column ul,
-  section.row.quarters div.column ul {
+  .row.thirds .column ul,
+  .row.quarters .column ul {
     line-height: 1.275em;
     font-size: 1em;
   }
 }
 @media all and (min-width: 1073px) {
-  section.row.thirds div.column ul,
-  section.row.quarters div.column ul {
+  .row.thirds .column ul,
+  .row.quarters .column ul {
     font-size: 1em;
   }
 }
 @media all and (min-width: 990px) and (max-width: 1072px) {
-  section.row.thirds div.column ul,
-  section.row.quarters div.column ul {
+  .row.thirds .column ul,
+  .row.quarters .column ul {
     font-size: 0.938em;
   }
 }
 @media all and (min-width: 792px) and (max-width: 989px) {
-  section.row.thirds div.column ul,
-  section.row.quarters div.column ul {
+  .row.thirds .column ul,
+  .row.quarters .column ul {
     font-size: 1em;
   }
 }
 @media all and (min-width: 481px) and (max-width: 791px) {
-  section.row.thirds div.column ul,
-  section.row.quarters div.column ul {
+  .row.thirds .column ul,
+  .row.quarters .column ul {
     font-size: 0.938em;
   }
 }
 @media all and (min-width: 361px) and (max-width: 480px) {
-  section.row.thirds div.column ul,
-  section.row.quarters div.column ul {
+  .row.thirds .column ul,
+  .row.quarters .column ul {
     font-size: 0.879844em;
   }
 }
 @media all and (max-width: 360px) {
-  section.row.thirds div.column ul,
-  section.row.quarters div.column ul {
+  .row.thirds .column ul,
+  .row.quarters .column ul {
     font-size: 0.879844em;
   }
 }
-div.column ul {
+.column ul {
   padding-bottom: 0;
 }
-div.column ul ol,
-div.column ul ul {
+.column ul ol,
+.column ul ul {
   font-size: inherit  !important;
 }
-div.column ul.centered {
+.column ul.centered {
   text-align: center;
 }
-div.column ul + p {
+.column ul + p {
   margin-top: 1rem;
 }
-div.column ul li {
+.column ul li {
   line-height: inherit;
 }
-div.column ul li.no-bottom-pad {
+.column ul li.no-bottom-pad {
   padding-bottom: 0;
 }
-@prnt p + & {
+.column p + ul {
   margin-top: 0.5rem;
 }
 ul.content-boxes,
@@ -4585,8 +4585,8 @@ div.column ul.event-boxes > li > img {
   left: 10px;
   width: 106px;
 }
-ul.content-boxes > li > div.content,
-div.column ul.event-boxes > li > div.content {
+ul.content-boxes > li > .content,
+div.column ul.event-boxes > li > .content {
   position: relative;
   left: 121px;
   width: calc(100% - 136px);
@@ -4617,239 +4617,243 @@ ul.cascaded-layout > li.gutter-sizer {
  *         └-----------------------------------------------------------------------------------------┘
  */
 @media all {
-  section.row.single:not(.mimic-multi-column-sections) div.column ol {
+  .row.single:not(.mimic-multi-column-sections) .column ol {
     line-height: 1.275em;
     font-size: 1em;
   }
 }
 @media all and (min-width: 1073px) {
-  section.row.single:not(.mimic-multi-column-sections) div.column ol {
+  .row.single:not(.mimic-multi-column-sections) .column ol {
     font-size: 1.06609808em;
   }
 }
 @media all and (min-width: 990px) and (max-width: 1072px) {
-  section.row.single:not(.mimic-multi-column-sections) div.column ol {
+  .row.single:not(.mimic-multi-column-sections) .column ol {
     font-size: 1em;
   }
 }
 @media all and (min-width: 792px) and (max-width: 989px) {
-  section.row.single:not(.mimic-multi-column-sections) div.column ol {
+  .row.single:not(.mimic-multi-column-sections) .column ol {
     font-size: 1.06609808em;
   }
 }
 @media all and (min-width: 481px) and (max-width: 791px) {
-  section.row.single:not(.mimic-multi-column-sections) div.column ol {
+  .row.single:not(.mimic-multi-column-sections) .column ol {
     font-size: 1em;
   }
 }
 @media all and (min-width: 361px) and (max-width: 480px) {
-  section.row.single:not(.mimic-multi-column-sections) div.column ol {
+  .row.single:not(.mimic-multi-column-sections) .column ol {
     font-size: 0.938em;
   }
 }
 @media all and (max-width: 360px) {
-  section.row.single:not(.mimic-multi-column-sections) div.column ol {
+  .row.single:not(.mimic-multi-column-sections) .column ol {
     font-size: 0.879844em;
   }
 }
 @media all {
-  section.row.single.mimic-two-column-sections div.column ol {
+  .row.single.mimic-two-column-sections .column ol {
     line-height: 1.275em;
     font-size: 1em;
   }
 }
 @media all and (min-width: 1073px) {
-  section.row.single.mimic-two-column-sections div.column ol {
+  .row.single.mimic-two-column-sections .column ol {
     font-size: 1em;
   }
 }
 @media all and (min-width: 990px) and (max-width: 1072px) {
-  section.row.single.mimic-two-column-sections div.column ol {
+  .row.single.mimic-two-column-sections .column ol {
     font-size: 1em;
   }
 }
 @media all and (min-width: 792px) and (max-width: 989px) {
-  section.row.single.mimic-two-column-sections div.column ol {
+  .row.single.mimic-two-column-sections .column ol {
     font-size: 1em;
   }
 }
 @media all and (min-width: 481px) and (max-width: 791px) {
-  section.row.single.mimic-two-column-sections div.column ol {
+  .row.single.mimic-two-column-sections .column ol {
     font-size: 1em;
   }
 }
 @media all and (min-width: 361px) and (max-width: 480px) {
-  section.row.single.mimic-two-column-sections div.column ol {
+  .row.single.mimic-two-column-sections .column ol {
     font-size: 0.938em;
   }
 }
 @media all and (max-width: 360px) {
-  section.row.single.mimic-two-column-sections div.column ol {
+  .row.single.mimic-two-column-sections .column ol {
     font-size: 0.879844em;
   }
 }
 @media all {
-  section.row.side-right div.column ol,
-  section.row.side-left div.column ol,
-  section.row.halves div.column ol {
+  .row.side-right.column ol,
+  .row.side-left .column ol,
+  .row.halves .column ol {
     line-height: 1.275em;
     font-size: 1em;
   }
 }
 @media all and (min-width: 1073px) {
-  section.row.side-right div.column ol,
-  section.row.side-left div.column ol,
-  section.row.halves div.column ol {
+  .row.side-right.column ol,
+  .row.side-left .column ol,
+  .row.halves .column ol {
     font-size: 1em;
   }
 }
 @media all and (min-width: 990px) and (max-width: 1072px) {
-  section.row.side-right div.column ol,
-  section.row.side-left div.column ol,
-  section.row.halves div.column ol {
+  .row.side-right.column ol,
+  .row.side-left .column ol,
+  .row.halves .column ol {
     font-size: 1em;
   }
 }
 @media all and (min-width: 792px) and (max-width: 989px) {
-  section.row.side-right div.column ol,
-  section.row.side-left div.column ol,
-  section.row.halves div.column ol {
+  .row.side-right.column ol,
+  .row.side-left .column ol,
+  .row.halves .column ol {
     font-size: 1em;
   }
 }
 @media all and (min-width: 481px) and (max-width: 791px) {
-  section.row.side-right div.column ol,
-  section.row.side-left div.column ol,
-  section.row.halves div.column ol {
+  .row.side-right.column ol,
+  .row.side-left .column ol,
+  .row.halves .column ol {
     font-size: 1em;
   }
 }
 @media all and (min-width: 361px) and (max-width: 480px) {
-  section.row.side-right div.column ol,
-  section.row.side-left div.column ol,
-  section.row.halves div.column ol {
+  .row.side-right.column ol,
+  .row.side-left .column ol,
+  .row.halves .column ol {
     font-size: 0.938em;
   }
 }
 @media all and (max-width: 360px) {
-  section.row.side-right div.column ol,
-  section.row.side-left div.column ol,
-  section.row.halves div.column ol {
+  .row.side-right.column ol,
+  .row.side-left .column ol,
+  .row.halves .column ol {
     font-size: 0.879844em;
   }
 }
 @media all {
-  section.row.thirds div.column ol,
-  section.row.quarters div.column ol {
+  .row.thirds .column ol,
+  .row.quarters .column ol {
     line-height: 1.275em;
     font-size: 1em;
   }
 }
 @media all and (min-width: 1073px) {
-  section.row.thirds div.column ol,
-  section.row.quarters div.column ol {
+  .row.thirds .column ol,
+  .row.quarters .column ol {
     font-size: 1em;
   }
 }
 @media all and (min-width: 990px) and (max-width: 1072px) {
-  section.row.thirds div.column ol,
-  section.row.quarters div.column ol {
+  .row.thirds .column ol,
+  .row.quarters .column ol {
     font-size: 0.938em;
   }
 }
 @media all and (min-width: 792px) and (max-width: 989px) {
-  section.row.thirds div.column ol,
-  section.row.quarters div.column ol {
+  .row.thirds .column ol,
+  .row.quarters .column ol {
     font-size: 1em;
   }
 }
 @media all and (min-width: 481px) and (max-width: 791px) {
-  section.row.thirds div.column ol,
-  section.row.quarters div.column ol {
+  .row.thirds .column ol,
+  .row.quarters .column ol {
     font-size: 0.938em;
   }
 }
 @media all and (min-width: 361px) and (max-width: 480px) {
-  section.row.thirds div.column ol,
-  section.row.quarters div.column ol {
+  .row.thirds .column ol,
+  .row.quarters .column ol {
     font-size: 0.879844em;
   }
 }
 @media all and (max-width: 360px) {
-  section.row.thirds div.column ol,
-  section.row.quarters div.column ol {
+  .row.thirds .column ol,
+  .row.quarters .column ol {
     font-size: 0.879844em;
   }
 }
-div.column ol {
+.column ol {
   padding-bottom: 0;
 }
-div.column ol li {
+.column ol li {
   line-height: inherit;
 }
-div.column ol ol,
-div.column ol ul {
+.column ol ol,
+.column ol ul {
   font-size: inherit !important;
 }
-div.column ol ol {
+.column ol ol {
   list-style-type: lower-alpha;
 }
-div.column ol ol ol {
+.column ol ol ol {
   list-style-type: lower-roman;
 }
 /*         ┌-----------------------------------------------------------------------------------------┐
  *         │ ···· DEFINITION list elements and children ············································ │
  *         └-----------------------------------------------------------------------------------------┘
  */
-div.column dl.faq dt {
+.column dl.faq {
   position: relative;
-  width: calc(100% - 50px);
+}
+.column dl.faq dt {
+  position: relative;
+  width: calc(100% - 52px);
   padding: 5px 40px 5px 10px;
   margin: 5px 0;
   border: 1px solid #afb5b7;
   background-color: #d7dadb;
   font-weight: bold;
+  cursor: pointer;
   -webkit-transition: all 0.25s linear;
   -moz-transition: all 0.25s linear;
   transition: all 0.25s linear;
 }
 @media all {
-  div.column dl.faq dt {
+  .column dl.faq dt {
     line-height: 1.275em;
     font-size: 1em;
   }
 }
 @media all and (min-width: 1073px) {
-  div.column dl.faq dt {
+  .column dl.faq dt {
     font-size: 1.06609808em;
   }
 }
 @media all and (min-width: 990px) and (max-width: 1072px) {
-  div.column dl.faq dt {
+  .column dl.faq dt {
     font-size: 1em;
   }
 }
 @media all and (min-width: 792px) and (max-width: 989px) {
-  div.column dl.faq dt {
+  .column dl.faq dt {
     font-size: 1.06609808em;
   }
 }
 @media all and (min-width: 481px) and (max-width: 791px) {
-  div.column dl.faq dt {
+  .column dl.faq dt {
     font-size: 1em;
   }
 }
 @media all and (min-width: 361px) and (max-width: 480px) {
-  div.column dl.faq dt {
+  .column dl.faq dt {
     font-size: 0.938em;
   }
 }
 @media all and (max-width: 360px) {
-  div.column dl.faq dt {
+  .column dl.faq dt {
     font-size: 0.879844em;
   }
 }
-div.column dl.faq dt:after {
+.column dl.faq dt:after {
   content: "";
   position: absolute;
   top: 50%;
@@ -4867,67 +4871,148 @@ div.column dl.faq dt:after {
   -moz-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
-div.column dl.faq dt:hover {
+.column dl.faq dt:hover {
   background-color: #5e6a71;
   color: #fff;
 }
-div.column dl.faq dt:hover:after {
+.column dl.faq dt:hover:after {
   border-top: 8px solid #fff;
   border-right: 8px solid transparent;
   border-bottom: none;
   border-left: 8px solid transparent;
 }
-div.column dl.faq dt.activated {
+.column dl.faq dt.activated {
   background-color: #d3b0b8;
   color: #464e54;
   border-color: #b87f8c;
 }
-div.column dl.faq dt.activated:after {
+.column dl.faq dt.activated:after {
   border-top: none;
   border-right: 8px solid transparent;
   border-bottom: 8px solid #5e6a71;
   border-left: 8px solid transparent;
 }
-div.column dl.faq dt.activated:hover {
+.column dl.faq dt.activated:hover {
   background-color: #725764;
   color: #fff;
 }
-div.column dl.faq dt.activated:hover:after {
+.column dl.faq dt.activated:hover:after {
   border-top: none;
   border-right: 8px solid transparent;
   border-bottom: 8px solid #fff;
   border-left: 8px solid transparent;
 }
-div.column dl.faq.blue dt {
+.column dl.faq.blue dt {
   background-color: #d8ecf3;
   border-color: #9ed0e1;
 }
-div.column dl.faq.blue dt:hover {
+.column dl.faq.blue dt:hover {
   background-color: #3f6b72;
 }
-div.column dl.faq.blue dt.activated {
+.column dl.faq.blue dt.activated {
   background-color: #d3b0b8;
   border-color: #b87f8c;
 }
-div.column dl.faq.blue dt.activated:hover {
+.column dl.faq.blue dt.activated:hover {
   background-color: #725764;
 }
-div.column dl.faq dd {
+.column dl.faq dd {
   padding-right: 1rem;
   padding-left: 1rem;
   margin-top: 0.25rem;
 }
-div.column dl.faq dd > p + p {
+.column dl.faq dd > p + p {
   margin-top: 1rem;
 }
-div.column dl.faq dd > p + ul,
-div.column dl.faq dd > p + ol {
+.column dl.faq dd > p + ul,
+.column dl.faq dd > p + ol {
   margin-top: 0.5rem;
 }
-div.column dl.faq dd:not(:last-child) > :last-child {
+.column dl.faq dd:not(:last-child) > :last-child {
   margin-bottom: 1rem;
 }
-div.column dl.faq.toggled dd {
+.column dl.faq > .expand-all-button,
+.column dl.faq > .collapse-all-button {
+  display: none;
+  position: absolute;
+  top: 0;
+  padding: 5px;
+  border: 1px solid #afb5b7;
+  background-color: #d7dadb;
+  font-family: 'Roboto Mono', monospace, sans-serif;
+  font-weight: 300;
+  cursor: pointer;
+  -webkit-transform: translateY(-100%) translateY(-5px);
+  -moz-transform: translateY(-100%) translateY(-5px);
+  transform: translateY(-100%) translateY(-5px);
+  -webkit-transition: background-color 0.3s ease, border 0.3s ease, color 0.3s ease;
+  -moz-transition: background-color 0.3s ease, border 0.3s ease, color 0.3s ease;
+  transition: background-color 0.3s ease, border 0.3s ease, color 0.3s ease;
+}
+@media all {
+  .column dl.faq > .expand-all-button,
+  .column dl.faq > .collapse-all-button {
+    line-height: 12px;
+    font-size: 12px;
+  }
+}
+@media all and (min-width: 1073px) {
+  .column dl.faq > .expand-all-button,
+  .column dl.faq > .collapse-all-button {
+    font-size: 12px;
+  }
+}
+@media all and (min-width: 990px) and (max-width: 1072px) {
+  .column dl.faq > .expand-all-button,
+  .column dl.faq > .collapse-all-button {
+    font-size: 12px;
+  }
+}
+@media all and (min-width: 792px) and (max-width: 989px) {
+  .column dl.faq > .expand-all-button,
+  .column dl.faq > .collapse-all-button {
+    font-size: 12px;
+  }
+}
+@media all and (min-width: 481px) and (max-width: 791px) {
+  .column dl.faq > .expand-all-button,
+  .column dl.faq > .collapse-all-button {
+    font-size: 12px;
+  }
+}
+@media all and (min-width: 361px) and (max-width: 480px) {
+  .column dl.faq > .expand-all-button,
+  .column dl.faq > .collapse-all-button {
+    font-size: 11.256px;
+  }
+}
+@media all and (max-width: 360px) {
+  .column dl.faq > .expand-all-button,
+  .column dl.faq > .collapse-all-button {
+    font-size: 10.558128px;
+  }
+}
+.column dl.faq > .expand-all-button:hover,
+.column dl.faq > .collapse-all-button:hover {
+  background-color: #5e6a71;
+  color: #fff;
+}
+.column dl.faq.blue > .expand-all-button,
+.column dl.faq.blue > .collapse-all-button {
+  background-color: #d8ecf3;
+  border-color: #9ed0e1;
+}
+.column dl.faq.blue > .expand-all-button:hover,
+.column dl.faq.blue > .collapse-all-button:hover {
+  background-color: #3f6b72;
+}
+.column dl.faq > .expand-all-button {
+  left: 0;
+}
+.column dl.faq > .collapse-all-button {
+  right: 0;
+}
+.column dl.faq.toggled dd {
   display: none;
 }
 /*         ├---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  --- ┤
@@ -5688,6 +5773,42 @@ div.read-more-target {
 }
 div.column .gform_wrapper {
   max-width: 990px;
+}
+@media all {
+  div.column .gform_wrapper {
+    line-height: 1.275em;
+    font-size: 16px;
+  }
+}
+@media all and (min-width: 1073px) {
+  div.column .gform_wrapper {
+    font-size: 16px;
+  }
+}
+@media all and (min-width: 990px) and (max-width: 1072px) {
+  div.column .gform_wrapper {
+    font-size: 16px;
+  }
+}
+@media all and (min-width: 792px) and (max-width: 989px) {
+  div.column .gform_wrapper {
+    font-size: 16px;
+  }
+}
+@media all and (min-width: 481px) and (max-width: 791px) {
+  div.column .gform_wrapper {
+    font-size: 16px;
+  }
+}
+@media all and (min-width: 361px) and (max-width: 480px) {
+  div.column .gform_wrapper {
+    font-size: 15.008px;
+  }
+}
+@media all and (max-width: 360px) {
+  div.column .gform_wrapper {
+    font-size: 14.077504px;
+  }
 }
 div.column .gform_wrapper .field_sublabel_above .ginput_complex.ginput_container label {
   margin: 0;
