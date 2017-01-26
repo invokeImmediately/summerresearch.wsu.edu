@@ -4917,9 +4917,21 @@ ul.cascaded-layout > li.gutter-sizer {
   background-color: #725764;
 }
 .column dl.faq dd {
+  display: block;
+  max-height: 0;
   padding-right: 1rem;
   padding-left: 1rem;
+  margin-top: 0;
+  overflow: hidden;
+  opacity: 0;
+  -webkit-transition: margin 0.4s cubic-bezier(.02, .01, .47, 1), opacity 0.4s cubic-bezier(.02, .01, .47, 1);
+  -moz-transition: margin 0.4s cubic-bezier(.02, .01, .47, 1), opacity 0.4s cubic-bezier(.02, .01, .47, 1);
+  transition: margin 0.4s cubic-bezier(.02, .01, .47, 1), opacity 0.4s cubic-bezier(.02, .01, .47, 1);
+}
+.column dl.faq dd.revealed {
   margin-top: 0.25rem;
+  margin-bottom: 1rem;
+  opacity: 1;
 }
 .column dl.faq dd > p + p {
   margin-top: 1rem;
@@ -4927,9 +4939,6 @@ ul.cascaded-layout > li.gutter-sizer {
 .column dl.faq dd > p + ul,
 .column dl.faq dd > p + ol {
   margin-top: 0.5rem;
-}
-.column dl.faq dd:not(:last-child) > :last-child {
-  margin-bottom: 1rem;
 }
 .column dl.faq > .expand-all-button,
 .column dl.faq > .collapse-all-button {
@@ -5011,9 +5020,6 @@ ul.cascaded-layout > li.gutter-sizer {
 }
 .column dl.faq > .collapse-all-button {
   right: 0;
-}
-.column dl.faq.toggled dd {
-  display: none;
 }
 /*         ├---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  --- ┤
  *         │ ···· HYPERLINK elements contained within div.column elements ·························· │
