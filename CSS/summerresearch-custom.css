@@ -3672,9 +3672,11 @@ div.interactively-flipped-panels {
   top: 0;
   left: 0;
   width: 100%;
-  margin-top: 1em;
   margin-bottom: 1em;
   background-color: #5e6a71;
+}
+div.interactively-flipped-panels:not(.no-top-margin) {
+  margin-top: 1em;
 }
 div.interactively-flipped-panels div.container {
   position: relative;
@@ -3684,7 +3686,8 @@ div.interactively-flipped-panels div.container {
   height: 0;
   padding-bottom: 48%;
   padding-bottom: calc(((50% * 0.6) * 0.8 - 1.5em) * 2 + 3em);
-  margin: 1em auto;
+  margin-right: auto;
+  margin-left: auto;
   background: #fff;
   overflow: hidden;
 }
