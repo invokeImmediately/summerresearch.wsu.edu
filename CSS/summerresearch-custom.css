@@ -3661,13 +3661,13 @@ span.callout.top:after {
   border-top: 11px solid #F1D031;
 }
 /*  ┌──────────────────────────────────────────────────────────────────────────────────────────────┐
- *  │ ++++++++ div.interactively-flipped-panels ++++++++++++++++++++++++++++++++++++++++++++++++++ │
+ *  │ ++++++++ .interactively-flipped-panels +++++++++++++++++++++++++++++++++++++++++++++++++++++ │
  *  ├----------------------------------------------------------------------------------------------┤
  *  │ Content container that gradually fades into full view, persists for a short time, and then   │
  *  │ rapidly fades out, either automatically via CSS3, or upon user interaction via JavaScript.   │
  *  ├----------------------------------------------------------------------------------------------┤
  */
-div.interactively-flipped-panels {
+.interactively-flipped-panels {
   position: relative;
   top: 0;
   left: 0;
@@ -3675,10 +3675,10 @@ div.interactively-flipped-panels {
   margin-bottom: 1em;
   background-color: #5e6a71;
 }
-div.interactively-flipped-panels:not(.no-top-margin) {
+.interactively-flipped-panels:not(.no-top-margin) {
   margin-top: 1em;
 }
-div.interactively-flipped-panels div.container {
+.interactively-flipped-panels .container {
   position: relative;
   top: 0;
   left: 0;
@@ -3692,34 +3692,34 @@ div.interactively-flipped-panels div.container {
   overflow: hidden;
 }
 @media all and (max-width: 1030px) and (min-width: 792px) {
-  div.interactively-flipped-panels div.container {
+  .interactively-flipped-panels .container {
     width: 70%;
     padding-bottom: 56%;
     padding-bottom: calc(((50% * 0.7) * 0.8 - 1.5em) * 2 + 3em);
   }
 }
 @media all and (max-width: 791px) and (min-width: 592px) {
-  div.interactively-flipped-panels div.container {
+  .interactively-flipped-panels .container {
     width: 80%;
     padding-bottom: 64%;
     padding-bottom: calc(((50% * 0.8) * 0.8 - 1.5em) * 2 + 3em);
   }
 }
 @media all and (max-width: 591px) and (min-width: 481px) {
-  div.interactively-flipped-panels div.container {
+  .interactively-flipped-panels .container {
     width: 100%;
     padding-bottom: 80%;
     padding-bottom: calc((50% * 0.8 - 1.5em) * 2 + 3em);
   }
 }
 @media all and (max-width: 480px) {
-  div.interactively-flipped-panels div.container {
+  .interactively-flipped-panels .container {
     width: 100%;
     padding-bottom: 320%;
     padding-bottom: calc((100% * 0.8) * 4);
   }
 }
-div.interactively-flipped-panels div.container div.panel-wrapper {
+.interactively-flipped-panels .container .panel-wrapper {
   float: left;
   position: relative;
   height: 0;
@@ -3730,14 +3730,14 @@ div.interactively-flipped-panels div.container div.panel-wrapper {
   margin: 1em;
 }
 @media all and (max-width: 480px) {
-  div.interactively-flipped-panels div.container div.panel-wrapper {
+  .interactively-flipped-panels .container .panel-wrapper {
     padding-bottom: 76.9762%;
     padding-bottom: calc(100% * 0.8);
     margin: 0;
     width: 100%;
   }
 }
-div.interactively-flipped-panels div.container div.panel-wrapper.top-left {
+.interactively-flipped-panels .container .panel-wrapper.top-left {
   float: none;
   position: absolute;
   top: 1em;
@@ -3745,13 +3745,13 @@ div.interactively-flipped-panels div.container div.panel-wrapper.top-left {
   margin: 0;
 }
 @media all and (max-width: 480px) {
-  div.interactively-flipped-panels div.container div.panel-wrapper.top-left {
+  .interactively-flipped-panels .container .panel-wrapper.top-left {
     position: relative;
     top: 0;
     left: 0;
   }
 }
-div.interactively-flipped-panels div.container div.panel-wrapper.top-right {
+.interactively-flipped-panels .container .panel-wrapper.top-right {
   float: none;
   position: absolute;
   top: 1em;
@@ -3759,13 +3759,13 @@ div.interactively-flipped-panels div.container div.panel-wrapper.top-right {
   margin: 0;
 }
 @media all and (max-width: 480px) {
-  div.interactively-flipped-panels div.container div.panel-wrapper.top-right {
+  .interactively-flipped-panels .container .panel-wrapper.top-right {
     position: relative;
     top: 0;
     left: 0;
   }
 }
-div.interactively-flipped-panels div.container div.panel-wrapper.bottom-left {
+.interactively-flipped-panels .container .panel-wrapper.bottom-left {
   float: none;
   position: absolute;
   bottom: 1em;
@@ -3773,13 +3773,13 @@ div.interactively-flipped-panels div.container div.panel-wrapper.bottom-left {
   margin: 0;
 }
 @media all and (max-width: 480px) {
-  div.interactively-flipped-panels div.container div.panel-wrapper.bottom-left {
+  .interactively-flipped-panels .container .panel-wrapper.bottom-left {
     position: relative;
     top: 0;
     left: 0;
   }
 }
-div.interactively-flipped-panels div.container div.panel-wrapper.bottom-right {
+.interactively-flipped-panels .container .panel-wrapper.bottom-right {
   float: none;
   position: absolute;
   right: 1em;
@@ -3787,18 +3787,18 @@ div.interactively-flipped-panels div.container div.panel-wrapper.bottom-right {
   margin: 0;
 }
 @media all and (max-width: 480px) {
-  div.interactively-flipped-panels div.container div.panel-wrapper.bottom-right {
+  .interactively-flipped-panels .container .panel-wrapper.bottom-right {
     position: relative;
     top: 0;
     left: 0;
   }
 }
-div.interactively-flipped-panels div.container div.panel-wrapper div.panel {
+.interactively-flipped-panels .container .panel-wrapper .panel {
   position: absolute;
   width: 100%;
   height: 100%;
 }
-div.interactively-flipped-panels div.container div.panel-wrapper div.panel div.front {
+.interactively-flipped-panels .container .panel-wrapper .panel .front {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -3811,25 +3811,25 @@ div.interactively-flipped-panels div.container div.panel-wrapper div.panel div.f
   opacity: 1;
   text-transform: uppercase;
 }
-div.interactively-flipped-panels div.container div.panel-wrapper div.panel div.front p {
+.interactively-flipped-panels .container .panel-wrapper .panel .front p {
   padding: 0.25em;
   text-align: center;
   font-size: 2.5em;
   line-height: 1.175em;
 }
 @media all and (max-width: 1205px) and (min-width: 792px) {
-  div.interactively-flipped-panels div.container div.panel-wrapper div.panel div.front p {
+  .interactively-flipped-panels .container .panel-wrapper .panel .front p {
     font-size: 2.9046vw;
     /* 35px @ 1205px screen width */
   }
 }
 @media all and (max-width: 791px) {
-  div.interactively-flipped-panels div.container div.panel-wrapper div.panel div.front p {
+  .interactively-flipped-panels .container .panel-wrapper .panel .front p {
     font-size: 4.42478vw;
     /* 35px @ 791px screen width */
   }
 }
-div.interactively-flipped-panels div.container div.panel-wrapper div.panel div.rear {
+.interactively-flipped-panels .container .panel-wrapper .panel .rear {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -3841,14 +3841,14 @@ div.interactively-flipped-panels div.container div.panel-wrapper div.panel div.r
   opacity: 0;
   z-index: 9;
 }
-div.interactively-flipped-panels div.container div.panel-wrapper div.panel div.rear h2 {
+.interactively-flipped-panels .container .panel-wrapper .panel .rear h2 {
   color: inherit;
   margin-left: 0;
   padding-left: 20px;
   padding-right: 20px;
   text-align: left;
 }
-div.interactively-flipped-panels div.container div.panel-wrapper div.panel div.rear p {
+.interactively-flipped-panels .container .panel-wrapper .panel .rear p {
   font-size: 1.7em;
   line-height: 1.175em;
   padding-left: 20px;
@@ -3856,68 +3856,68 @@ div.interactively-flipped-panels div.container div.panel-wrapper div.panel div.r
   text-align: left;
 }
 @media all and (max-width: 1205px) and (min-width: 792px) {
-  div.interactively-flipped-panels div.container div.panel-wrapper div.panel div.rear p {
+  .interactively-flipped-panels .container .panel-wrapper .panel .rear p {
     font-size: 1.9751vw /* 23.7999992370605px @ 1205px screen width */;
   }
 }
 @media all and (max-width: 791px) {
-  div.interactively-flipped-panels div.container div.panel-wrapper div.panel div.rear p {
+  .interactively-flipped-panels .container .panel-wrapper .panel .rear p {
     font-size: 3.0088vw;
     /* 23.7999992370605px @ 791px screen width */
   }
 }
-div.interactively-flipped-panels div.container div.panel-wrapper div.panel div.rear p + p {
+.interactively-flipped-panels .container .panel-wrapper .panel .rear p + p {
   padding-top: 0;
 }
-div.interactively-flipped-panels div.container div.panel-wrapper div.panel.green div.rear {
+.interactively-flipped-panels .container .panel-wrapper .panel.green div.rear {
   background-color: #564c20;
   color: #fff;
 }
-div.interactively-flipped-panels div.container div.panel-wrapper div.panel.green div.front {
+.interactively-flipped-panels .container .panel-wrapper .panel.green div.front {
   background-color: #ada400;
   color: #000;
 }
-div.interactively-flipped-panels div.container div.panel-wrapper div.panel.yellow div.rear {
+.interactively-flipped-panels .container .panel-wrapper .panel.yellow div.rear {
   background-color: #77580c;
   color: #fff;
 }
-div.interactively-flipped-panels div.container div.panel-wrapper div.panel.yellow div.front {
+.interactively-flipped-panels .container .panel-wrapper .panel.yellow div.front {
   background-color: #ffb81c;
   color: #000;
 }
-div.interactively-flipped-panels div.container div.panel-wrapper div.panel.orange div.rear {
+.interactively-flipped-panels .container .panel-wrapper .panel.orange div.rear {
   background-color: #6d441f;
   color: #fff;
 }
-div.interactively-flipped-panels div.container div.panel-wrapper div.panel.orange div.front {
+.interactively-flipped-panels .container .panel-wrapper .panel.orange div.front {
   background-color: #f6861f;
   color: #000;
 }
-div.interactively-flipped-panels div.container div.panel-wrapper div.panel.blue div.rear {
+.interactively-flipped-panels .container .panel-wrapper .panel.blue div.rear {
   background-color: #2f5055;
   color: #fff;
 }
-div.interactively-flipped-panels div.container div.panel-wrapper div.panel.blue div.front {
+.interactively-flipped-panels .container .panel-wrapper .panel.blue div.front {
   background-color: #00a5bd;
   color: #000;
 }
-div.interactively-flipped-panels div.container div.panel-wrapper div.panel.gray div.rear {
+.interactively-flipped-panels .container .panel-wrapper .panel.gray div.rear {
   background-color: #2a3033;
   color: #fff;
 }
-div.interactively-flipped-panels div.container div.panel-wrapper div.panel.gray div.front {
+.interactively-flipped-panels .container .panel-wrapper .panel.gray div.front {
   background-color: #eff0f1;
   color: #000;
 }
-div.interactively-flipped-panels div.container div.panel-wrapper div.panel.crimson div.rear {
+.interactively-flipped-panels .container .panel-wrapper .panel.crimson div.rear {
   background-color: #981e32;
   color: #fff;
 }
-div.interactively-flipped-panels div.container div.panel-wrapper div.panel.crimson div.front {
+.interactively-flipped-panels .container .panel-wrapper .panel.crimson div.front {
   background-color: #c60c30;
   color: #000;
 }
-div.interactively-flipped-panels div.container div.panel-wrapper:hover {
+.interactively-flipped-panels .container .panel-wrapper:hover {
   float: none;
   position: absolute;
   width: 93.9525%;
@@ -3927,18 +3927,18 @@ div.interactively-flipped-panels div.container div.panel-wrapper:hover {
   z-index: 11;
 }
 @media all and (max-width: 480px) {
-  div.interactively-flipped-panels div.container div.panel-wrapper:hover {
+  .interactively-flipped-panels .container .panel-wrapper:hover {
     width: 100%;
     padding-bottom: 76.9762%;
     padding-bottom: calc(100% * 0.8);
   }
 }
-div.interactively-flipped-panels div.container div.panel-wrapper:hover div.panel div.front {
+.interactively-flipped-panels .container .panel-wrapper:hover .panel .front {
   opacity: 0;
   z-index: 0;
 }
 @media all and (min-width: 481px) {
-  div.interactively-flipped-panels div.container div.panel-wrapper:hover div.panel div.front {
+  .interactively-flipped-panels .container .panel-wrapper:hover .panel .front {
     transition-property: opacity, z-index;
     -webkit-transition-property: opacity, z-index;
     transition-delay: 0.5s, 0.5s;
@@ -3950,7 +3950,7 @@ div.interactively-flipped-panels div.container div.panel-wrapper:hover div.panel
   }
 }
 @media all and (max-width: 480px) {
-  div.interactively-flipped-panels div.container div.panel-wrapper:hover div.panel div.front {
+  .interactively-flipped-panels .container .panel-wrapper:hover .panel .front {
     transition-property: opacity, z-index;
     -webkit-transition-property: opacity, z-index;
     transition-duration: 0.25s, 0.25s;
@@ -3959,11 +3959,11 @@ div.interactively-flipped-panels div.container div.panel-wrapper:hover div.panel
     -webkit-transition-timing-function: linear, step-end;
   }
 }
-div.interactively-flipped-panels div.container div.panel-wrapper:hover div.panel div.rear {
+.interactively-flipped-panels .container .panel-wrapper:hover .panel .rear {
   opacity: 1;
 }
 @media all and (min-width: 481px) {
-  div.interactively-flipped-panels div.container div.panel-wrapper:hover div.panel div.rear {
+  .interactively-flipped-panels .container .panel-wrapper:hover .panel .rear {
     transition-property: opacity;
     -webkit-transition-property: opacity;
     transition-delay: 0.5s;
@@ -3975,7 +3975,7 @@ div.interactively-flipped-panels div.container div.panel-wrapper:hover div.panel
   }
 }
 @media all and (max-width: 480px) {
-  div.interactively-flipped-panels div.container div.panel-wrapper:hover div.panel div.rear {
+  .interactively-flipped-panels .container .panel-wrapper:hover .panel .rear {
     transition-property: opacity;
     -webkit-transition-property: opacity;
     transition-duration: 0s;
@@ -3984,10 +3984,10 @@ div.interactively-flipped-panels div.container div.panel-wrapper:hover div.panel
     -webkit-transition-timing-function: linear;
   }
 }
-div.interactively-flipped-panels div.container div.panel-wrapper.top-left:hover,
-div.interactively-flipped-panels div.container div.panel-wrapper.top-right:hover,
-div.interactively-flipped-panels div.container div.panel-wrapper.bottom-left:hover,
-div.interactively-flipped-panels div.container div.panel-wrapper.bottom-right:hover {
+.interactively-flipped-panels .container .panel-wrapper.top-left:hover,
+.interactively-flipped-panels .container .panel-wrapper.top-right:hover,
+.interactively-flipped-panels .container .panel-wrapper.bottom-left:hover,
+.interactively-flipped-panels .container .panel-wrapper.bottom-right:hover {
   width: calc(100% - 2em);
   padding-bottom: calc((50% * 0.8 - 2em) * 2 + 2em);
   -webkit-transition: width linear 0.25s, padding linear 0.25s;
@@ -3995,17 +3995,17 @@ div.interactively-flipped-panels div.container div.panel-wrapper.bottom-right:ho
   transition: width linear 0.25s, padding linear 0.25s;
 }
 @media all and (max-width: 480px) {
-  div.interactively-flipped-panels div.container div.panel-wrapper.top-left:hover,
-  div.interactively-flipped-panels div.container div.panel-wrapper.top-right:hover,
-  div.interactively-flipped-panels div.container div.panel-wrapper.bottom-left:hover,
-  div.interactively-flipped-panels div.container div.panel-wrapper.bottom-right:hover {
+  .interactively-flipped-panels .container .panel-wrapper.top-left:hover,
+  .interactively-flipped-panels .container .panel-wrapper.top-right:hover,
+  .interactively-flipped-panels .container .panel-wrapper.bottom-left:hover,
+  .interactively-flipped-panels .container .panel-wrapper.bottom-right:hover {
     position: relative;
     width: 100%;
     padding-bottom: calc(100% * 0.8);
   }
 }
 @media all and (max-width: 480px) {
-  div.interactively-flipped-panels div.container:hover {
+  .interactively-flipped-panels .container:hover {
     padding-bottom: 320%;
     padding-bottom: calc((100% * 0.8) * 4);
   }
