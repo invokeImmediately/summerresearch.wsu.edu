@@ -153,8 +153,9 @@
 			slctrLrgFrmtSection: ".large-format-friendly",
 			slctrColOne: ".column.one",
 			slctrColTwo: ".column.two",
-			activatingClass: "activated",
-			animSlideDrtn: 400,
+			dtActivatingClass: "activated",
+			ddRevealingClass: "revealed",
+			animSldDrtn: 400,
 			animHghtDrtn: 100
 		};
 		params.addDefinitionListButtons = {
@@ -162,8 +163,9 @@
 			expandAllClass: "expand-all-button",
 			collapseAllClass: "collapse-all-button",
 			btnDisablingClass: "disabled",
-			dtActivatingClass: params.initDefinitionLists.activatingClass,
-			animSlideDrtn: params.initDefinitionLists.animSlideDrtn
+			dtActivatingClass: params.initDefinitionLists.dtActivatingClass,
+			ddRevealingClass: params.initDefinitionLists.ddRevealingClass,
+			animSldDrtn: params.initDefinitionLists.animSldDrtn
 		};
 		params.initQuickTabs = {
 			slctrQtSctn: "section.row.single.quick-tabs"
@@ -272,8 +274,9 @@
 			theseParams.slctrLrgFrmtSection,
 			theseParams.slctrColOne,
 			theseParams.slctrColTwo,
-			theseParams.activatingClass,
-			theseParams.animSlideDrtn,
+			theseParams.dtActivatingClass,
+			theseParams.ddRevealingClass,
+			theseParams.animSldDrtn,
 			theseParams.animHghtDrtn
 		);
 
@@ -284,7 +287,8 @@
 			theseParams.collapseAllClass,
 			theseParams.btnDeactivatingClass,
 			theseParams.dtActivatingClass,
-			theseParams.animSlideDrtn
+			theseParams.ddRevealingClass,
+			theseParams.animSldDrtn
 		);
 		
 		theseParams = params.initQuickTabs;
@@ -401,10 +405,10 @@
 	 *   += collapseAllClass: CSS class for controlling the layout of collapse all buttons
 	 *   += btnDisablingClass: CSS class applied to disable expand/collapse all buttons
 	 *   += dtActivatingClass: CSS class used to indicate an active/expanded state for definition terms
-	 *   += animSlideDrtn: the animation speed by which definitions slide down into view
+	 *   += ddRevealingClass: CSS class used to realize a revealed, visible state on definitions
 	 */
     function addDefinitionListButtons(slctrDefList, expandAllClass, collapseAllClass, btnDisablingClass,
-	 dtActivatingClass, animSlideDrtn) {
+	 dtActivatingClass, ddRevealingClass, animSldDrtn) {
 		var thisFuncName = "addDefinitionListButtons";
 		var thisFuncDesc = "Automatically creates and binds events to expand/collapse all buttons designed for improving UX of OUE site definition lists";
 		
@@ -448,7 +452,11 @@
 						var $thisDefTerm = $(this);
 						if (!$thisDefTerm.hasClass(dtActivatingClass)) {
 							$thisDefTerm.addClass(dtActivatingClass);
-							$thisDefTerm.next("dd").stop().slideToggle(animSlideDrtn);
+							var $thisDefTermNext = $thisDefTerm.next("dd");
+							$thisDefTermNext.addClass(ddRevealingClass);
+							$thisDefTermNext.stop().animate({
+								maxHeight: $thisDefTermNext[0].scrollHeight
+							}, animSldDrtn);
 						}
 					});
 					// TODO: Enable buttons
@@ -472,7 +480,11 @@
 						var $thisDefTerm = $(this);
 						if ($thisDefTerm.hasClass(dtActivatingClass)) {
 							$thisDefTerm.removeClass(dtActivatingClass);
-							$thisDefTerm.next("dd").stop().slideToggle(animSlideDrtn);
+							var $thisDefTermNext = $thisDefTerm.next("dd");
+							$thisDefTermNext.removeClass(ddRevealingClass);
+							$thisDefTermNext.stop().animate({
+								maxHeight: 0
+							}, animSldDrtn);
 						}
 					});
 					// TODO: Enable buttons
@@ -529,18 +541,51 @@
         });
     }
     
-    function initDefinitionLists(slctrDefList, slctrLrgFrmtSection, slctrColOne, slctrColTwo, activatingClass,
-     animSlideDrtn, animHghtDrtn) {
-        $(slctrDefList + " dt").click(function() {
+    function initDefinitionLists(slctrDefList, slctrLrgFrmtSection, slctrColOne, slctrColTwo,
+     dtActivatingClass, ddRevealingClass, animHghtDrtn) {
+		var $listDts = $(slctrDefList + " dt");
+		$listDts.attr("tabindex", 0);
+        $listDts.click(function() {
             var $this = $(this);
-            $this.toggleClass(activatingClass);
-            $this.next("dd").slideToggle(animSlideDrtn, function () {
-                var $parent = $this.parents(slctrLrgFrmtSection + ">" + slctrColOne);
-                var $prntNxt = $parent.next(slctrColTwo);
-                $prntNxt.animate({height: $parent.css('height')}, animHghtDrtn);
-            });
+            $this.toggleClass(dtActivatingClass);
+			var $thisNext = $this.next("dd");
+            $thisNext.toggleClass(ddRevealingClass);
+			if ($thisNext.hasClass(ddRevealingClass)) {
+				$thisNext.stop().animate({
+					maxHeight: $thisNext[0].scrollHeight
+				});
+			} else {
+				$thisNext.stop().animate({
+					maxHeight: 0
+				});
+			}
+			var $parent = $this.parents(slctrLrgFrmtSection + ">" + slctrColOne);
+			var $prntNxt = $parent.next(slctrColTwo);
+			$prntNxt.delay(400).animate({height: $parent.css('height')}, animHghtDrtn);
         });
-        $(slctrDefList + " dd").hide(); // Definitions should be hidden by default.
+		$listDts.on("keydown", function(e) {
+			var regExMask = /Enter| /g;
+			if (regExMask.exec(e.key) != null) {
+				e.preventDefault();
+				var $this = $(this);
+				$this.toggleClass(dtActivatingClass);
+				var $thisNext = $this.next("dd");
+				$thisNext.toggleClass(ddRevealingClass);
+				if ($thisNext.hasClass(ddRevealingClass)) {
+					$thisNext.stop().animate({
+						maxHeight: $thisNext[0].scrollHeight
+					});
+				} else {
+					$thisNext.stop().animate({
+						maxHeight: 0
+					});
+				}
+				var $parent = $this.parents(slctrLrgFrmtSection + ">" + slctrColOne);
+				var $prntNxt = $parent.next(slctrColTwo);
+				$prntNxt.delay(400).animate({height: $parent.css('height')}, animHghtDrtn);
+			}
+		});
+        $(slctrDefList + " dd").removeClass(ddRevealingClass); // TODO: change implementation to height + overflow based approach
     }
     
     function initDropDownToggles(slctrToggle, slctrWhatsToggled, activatingClass, animDuration) {
@@ -784,7 +829,7 @@
 		var $expandAlls = $lists.children("." + expandAllClass);
 		var $collapseAlls = $lists.children("." + collapseAllClass);
 		$lists.animate({
-			marginTop: "+=29px"
+			marginTop: "+=39px"
 		}, animFadeInDrtn, function() {
 			$expandAlls.fadeIn(animFadeInDrtn);
 			$collapseAlls.fadeIn(animFadeInDrtn);
@@ -797,6 +842,10 @@
     function resizeLrgFrmtSideRight(slctrSideRight, slctrColOne, slctrColTwo, trggrWidth, animDuration) {
         finalizeLrgFrmtSideRight(slctrSideRight, slctrColOne, slctrColTwo, trggrWidth, animDuration);
     }
+	
+	/****************************************************************************************************
+	 * EFFECTS FUNCTIONS                                                                                *
+	 ****************************************************************************************************/
 })(jQuery);
 // See [https://github.com/invokeImmediately/distinguishedscholarships.wsu.edu] for repository of source code
 /************************************************************************************************************
@@ -1079,7 +1128,7 @@
     | Highlight required INPUTS until a value has been properly entered                                  |
     \****************************************************************************************************/
     function checkRqrdInpts ($fields) {
-        if (isJQuery($fields)) {
+        if ($.isJQueryObj($fields)) {
             $fields.each(function () {
                 var $thisInput = $(this);
 				if ($thisInput.val() == "") {
@@ -1093,7 +1142,7 @@
     }
 	
     function hghlghtRqrdInpts ($fields) {
-        if (isJQuery($fields)) {
+        if ($.isJQueryObj($fields)) {
             $fields.each(function () {
                 var $thisInput = $(this);
 				$thisInput.blur(function () {
@@ -1112,7 +1161,7 @@
     | Highlight required CHECKBOXES until at least one has been checked                                  |
     \****************************************************************************************************/
     function checkRqrdChckbxs ($fields) {
-        if (isJQuery($fields)) {
+        if ($.isJQueryObj($fields)) {
             $fields.each(function () {
                 var $this = $(this);
                 var $inputs = $this.find("input");
@@ -1133,7 +1182,7 @@
 	}
 
     function hghlghtRqrdChckbxs ($fields) {
-        if (isJQuery($fields)) {
+        if ($.isJQueryObj($fields)) {
             $fields.each(function () {
                 var $this = $(this);
                 var $inputs = $this.find("input");
@@ -1177,7 +1226,7 @@
     | Highlight required RICH TEXT EDITOR containters until a value has been properly entered            |
     \****************************************************************************************************/
 	function hghlghtRqrdRchTxtEdtrs($fields) {
-        if (isJQuery($fields) && $fields.length > 0) {
+        if ($.isJQueryObj($fields) && $fields.length > 0) {
             $fields.each(function () {
 				var $edtrFrm = $(this).find("iframe");
 				$edtrFrm.each(function () {
@@ -1201,7 +1250,7 @@
     | Highlight required SELECTS until at least one has been checked                                     |
     \****************************************************************************************************/
     function hghlghtRqrdSelects ($fields) {
-        if (isJQuery($fields)) {
+        if ($.isJQueryObj($fields)) {
             $fields.each(function () {
                 var $thisInput = $(this);
 				var $childSlctdOptn = $thisInput.find("option:selected");
