@@ -549,7 +549,7 @@ div.column article.post + article.post {
  *     │ ++++ SECTION selectors ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ │
  *     └─────────────────────────────────────────────────────────────────────────────────────────────────┘
  */
-section.column-one-with-bottom-margin > div.one {
+section.column-one-with-bottom-margin > .column.one {
   margin-bottom: 2rem;
 }
 section:not(.row).article-header {
@@ -557,41 +557,41 @@ section:not(.row).article-header {
   margin-bottom: 1rem;
   background-size: auto 100% !important;
 }
-section:not(.row).article-header div.header-content {
+section:not(.row).article-header .header-content {
   position: relative;
   top: 50%;
   margin-right: 1rem;
   margin-left: 1rem;
   transform: translateY(-50%);
 }
-section:not(.row).article-header div.header-content h1 {
+section:not(.row).article-header .header-content h1 {
   font-size: 4.118rem;
   line-height: 1.071em;
 }
-section:not(.row).article-header div.header-content h2 {
+section:not(.row).article-header .header-content h2 {
   margin-bottom: .75rem;
   font-size: 2.826rem;
   line-height: 0.8em;
   text-transform: uppercase;
 }
-section:not(.row).article-header div.header-content h3 {
+section:not(.row).article-header .header-content h3 {
   margin-top: 0;
   margin-bottom: 0;
   font-size: 1.261rem;
   text-transform: uppercase;
 }
 @media screen {
-  section:not(.row).article-header div.header-content h1,
-  section:not(.row).article-header div.header-content h2 {
+  section:not(.row).article-header .header-content h1,
+  section:not(.row).article-header .header-content h2 {
     color: #fff;
   }
-  section:not(.row).article-header div.header-content h1 {
+  section:not(.row).article-header .header-content h1 {
     text-shadow: 0 1px 0 #afafaf, 0 2px 0 #989898, 0 3px 0 #7f7f7f, 0 4px 0 #686868, 0 5px 0 #4f4f4f, 0 6px 1px rgba(0, 0, 0, 0.1), 0 0 5px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.3), 0 3px 5px rgba(0, 0, 0, 0.2), 0 5px 10px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.2), 0 20px 20px rgba(0, 0, 0, 0.15);
   }
-  section:not(.row).article-header div.header-content h2 {
+  section:not(.row).article-header .header-content h2 {
     text-shadow: 0 0.6667px 0 #afafaf, 0 1.3333px 0 #989898, 0 2px 0 #7f7f7f, 0 2.6667px 0 #686868, 0 3.3333px 0 #4f4f4f, 0 4px 0.6667px rgba(0, 0, 0, 0.1), 0 0 3.3333px rgba(0, 0, 0, 0.1), 0 0.6667px 2px rgba(0, 0, 0, 0.3), 0 2px 3.3333px rgba(0, 0, 0, 0.2), 0 3.3333px 6.6667px rgba(0, 0, 0, 0.25), 0 6.6667px 6.6667px rgba(0, 0, 0, 0.2), 0 13.3333px 13.3333px rgba(0, 0, 0, 0.15);
   }
-  section:not(.row).article-header div.header-content h3 {
+  section:not(.row).article-header .header-content h3 {
     padding: .1rem .2rem .2rem;
     background-color: rgba(152, 30, 50, 0.95);
     border: 1px solid white;
@@ -604,7 +604,7 @@ section:not(.row).article-header div.header-content h3 {
                      0 1px 2.5px rgba(@rval,@gval,@bval,.2),
                      0 0 .5px #000, 0 1.5px 1px #000;*/
   }
-  section:not(.row).article-header div.header-content h3 > mark.highlight {
+  section:not(.row).article-header .header-content h3 > mark.highlight {
     text-shadow: 0 0.3333px 0 #77898b, 0 0.6667px 0 #687779, 0 1px 0 #576365, 0 1.3333px 0 #475153, 0 1.6667px 0 #363e3f, 0 2px 0.3333px rgba(0, 0, 0, 0.1), 0 0 1.6667px rgba(0, 0, 0, 0.1), 0 0.3333px 1px rgba(0, 0, 0, 0.3), 0 1px 1.6667px rgba(0, 0, 0, 0.2), 0 1.6667px 3.3333px rgba(0, 0, 0, 0.25), 0 3.3333px 3.3333px rgba(0, 0, 0, 0.2), 0 6.6667px 6.6667px rgba(0, 0, 0, 0.15);
   }
 }
@@ -612,16 +612,16 @@ section:not(.row).article-header div.header-content h3 {
   section:not(.row).article-header {
     background: transparent !important;
   }
-  section:not(.row).article-header div.header-content {
+  section:not(.row).article-header .header-content {
     margin-left: 0;
     margin-right: 0;
   }
-  section:not(.row).article-header div.header-content h2,
-  section:not(.row).article-header div.header-content h3 {
+  section:not(.row).article-header .header-content h2,
+  section:not(.row).article-header .header-content h3 {
     padding-left: 0;
   }
 }
-section.halves div.column p:not([class*="center"]) {
+section.halves .column p:not([class*="center"]) {
   text-align: left;
 }
 @media (min-width: 1050px) {
@@ -633,8 +633,8 @@ section.halves div.column p:not([class*="center"]) {
   }
 }
 @media (min-width: 1050px) {
-  section.single.large-format-friendly div.column.one,
-  section.row.single.large-format-friendly div.column.one {
+  section.single.large-format-friendly .column.one,
+  section.row.single.large-format-friendly .column.one {
     float: none;
     margin-right: auto;
     margin-left: auto;
@@ -642,21 +642,21 @@ section.halves div.column p:not([class*="center"]) {
   }
 }
 @media (min-width: 990px) and (max-width: 1049px) {
-  section.single.large-format-friendly div.column.one,
-  section.row.single.large-format-friendly div.column.one {
+  section.single.large-format-friendly .column.one,
+  section.row.single.large-format-friendly .column.one {
     max-width: 800px;
   }
 }
 @media (min-width: 792px) and (max-width: 989px) {
-  section.single.large-format-friendly div.column.one,
-  section.row.single.large-format-friendly div.column.one {
+  section.single.large-format-friendly .column.one,
+  section.row.single.large-format-friendly .column.one {
     float: none;
     margin-right: auto;
     margin-left: auto;
     max-width: 800px;
   }
 }
-section.side-right div.column.two p {
+section.side-right .column.two p {
   text-align: left;
 }
 @media all and (min-width: 1051px) {
@@ -664,19 +664,19 @@ section.side-right div.column.two p {
   section.side-right.row.side-right.large-format-friendly:first-child {
     padding-top: 1rem;
   }
-  section.side-right.large-format-friendly div.column.one,
-  section.side-right.row.side-right.large-format-friendly div.column.one {
+  section.side-right.large-format-friendly .column.one,
+  section.side-right.row.side-right.large-format-friendly .column.one {
     width: 800px;
   }
-  section.side-right.large-format-friendly div.column.two,
-  section.side-right.row.side-right.large-format-friendly div.column.two {
+  section.side-right.large-format-friendly .column.two,
+  section.side-right.row.side-right.large-format-friendly .column.two {
     width: calc(100% -  800px );
     height: 0;
     position: relative;
     opacity: 0;
   }
-  section.side-right.large-format-friendly div.column.two:before,
-  section.side-right.row.side-right.large-format-friendly div.column.two:before {
+  section.side-right.large-format-friendly .column.two:before,
+  section.side-right.row.side-right.large-format-friendly .column.two:before {
     content: "";
     position: absolute;
     top: 0;
@@ -687,8 +687,8 @@ section.side-right div.column.two p {
   }
 }
 @media all and (max-width: 1050px) {
-  section.side-right.large-format-friendly div.column.one,
-  section.side-right.row.side-right.large-format-friendly div.column.one {
+  section.side-right.large-format-friendly .column.one,
+  section.side-right.row.side-right.large-format-friendly .column.one {
     width: 100%;
     max-width: 800px;
     float: none;
@@ -696,14 +696,14 @@ section.side-right div.column.two p {
     margin-left: auto;
     padding-right: 2rem;
   }
-  section.side-right.large-format-friendly div.column.two,
-  section.side-right.row.side-right.large-format-friendly div.column.two {
+  section.side-right.large-format-friendly .column.two,
+  section.side-right.row.side-right.large-format-friendly .column.two {
     display: none;
   }
 }
 @media all and (min-width: 1050px) {
-  section.side-right.pad-top.large-format-friendly div.column.two:before,
-  section.row.side-right.pad-top.large-format-friendly div.column.two:before {
+  section.side-right.pad-top.large-format-friendly .column.two:before,
+  section.row.side-right.pad-top.large-format-friendly .column.two:before {
     top: 1rem;
   }
 }
@@ -728,109 +728,114 @@ section.side-right div.column.two p {
   }
 }
 @media all and (min-width: 694px) {
-  section.thirds div.column p {
+  section.thirds .column p {
     text-align: left;
   }
 }
 @media all and (max-width: 360px) {
-  section.thirds div.column p {
+  section.thirds .column p {
     text-align: left;
   }
 }
-div.column section:not(:last-child) > *:last-child:not(.vpue-jump-bar) {
+.column section:not(:last-child) > *:last-child:not(.vpue-jump-bar) {
   padding-bottom: 0;
 }
-main section.row > div.column > p:not(.no-btm-margin),
-main section.row > div.column > article > div.article-body > p:not(.no-btm-margin),
-main section.row > div.column > article > div.article-summary > p:not(.no-btm-margin),
-main section.row > div.column > section > p:not(.no-btm-margin),
-main section.row > div.column table > tbody > tr > td > p:not(.no-btm-margin),
-main section.row > div.column > section > p:not(.no-btm-margin),
-main section.row > div.column > article > div.article-body > section > p:not(.no-btm-margin),
-main section.row > div.column > article > div.article-summary > section > p:not(.no-btm-margin),
-main section.row > div.column > section > section > p:not(.no-btm-margin),
-main section.row > div.column table > tbody > tr > td > section > p:not(.no-btm-margin),
-main section.row > div.column > ul:not(.no-btm-margin),
-main section.row > div.column > article > div.article-body > ul:not(.no-btm-margin),
-main section.row > div.column > article > div.article-summary > ul:not(.no-btm-margin),
-main section.row > div.column > section > ul:not(.no-btm-margin),
-main section.row > div.column table > tbody > tr > td > ul:not(.no-btm-margin),
-main section.row > div.column > section > ul:not(.no-btm-margin),
-main section.row > div.column > article > div.article-body > section > ul:not(.no-btm-margin),
-main section.row > div.column > article > div.article-summary > section > ul:not(.no-btm-margin),
-main section.row > div.column > section > section > ul:not(.no-btm-margin),
-main section.row > div.column table > tbody > tr > td > section > ul:not(.no-btm-margin),
-main section.row > div.column > ol:not(.no-btm-margin),
-main section.row > div.column > article > div.article-body > ol:not(.no-btm-margin),
-main section.row > div.column > article > div.article-summary > ol:not(.no-btm-margin),
-main section.row > div.column > section > ol:not(.no-btm-margin),
-main section.row > div.column table > tbody > tr > td > ol:not(.no-btm-margin),
-main section.row > div.column > section > ol:not(.no-btm-margin),
-main section.row > div.column > article > div.article-body > section > ol:not(.no-btm-margin),
-main section.row > div.column > article > div.article-summary > section > ol:not(.no-btm-margin),
-main section.row > div.column > section > section > ol:not(.no-btm-margin),
-main section.row > div.column table > tbody > tr > td > section > ol:not(.no-btm-margin),
-main section.row > div.column > div.gform_wrapper li.gfield_html > p:not(:last-child),
-main section.row > div.column > article > div.article-body > div.gform_wrapper li.gfield_html > p:not(:last-child),
-main section.row > div.column > article > div.article-summary > div.gform_wrapper li.gfield_html > p:not(:last-child),
-main section.row > div.column > section > div.gform_wrapper li.gfield_html > p:not(:last-child),
-main section.row > div.column table > tbody > tr > td > div.gform_wrapper li.gfield_html > p:not(:last-child) {
+main section.row > .column > p:not(.no-btm-margin),
+main section.row > .column > article > .article-body > p:not(.no-btm-margin),
+main section.row > .column > article > .article-summary > p:not(.no-btm-margin),
+main section.row > .column > section > p:not(.no-btm-margin),
+main section.row > .column table > tbody > tr > td > p:not(.no-btm-margin),
+main section.row > .column > section > p:not(.no-btm-margin),
+main section.row > .column > article > .article-body > section > p:not(.no-btm-margin),
+main section.row > .column > article > .article-summary > section > p:not(.no-btm-margin),
+main section.row > .column > section > section > p:not(.no-btm-margin),
+main section.row > .column table > tbody > tr > td > section > p:not(.no-btm-margin),
+main section.row > .column > ul:not(.no-btm-margin),
+main section.row > .column > article > .article-body > ul:not(.no-btm-margin),
+main section.row > .column > article > .article-summary > ul:not(.no-btm-margin),
+main section.row > .column > section > ul:not(.no-btm-margin),
+main section.row > .column table > tbody > tr > td > ul:not(.no-btm-margin),
+main section.row > .column > section > ul:not(.no-btm-margin),
+main section.row > .column > article > .article-body > section > ul:not(.no-btm-margin),
+main section.row > .column > article > .article-summary > section > ul:not(.no-btm-margin),
+main section.row > .column > section > section > ul:not(.no-btm-margin),
+main section.row > .column table > tbody > tr > td > section > ul:not(.no-btm-margin),
+main section.row > .column > ol:not(.no-btm-margin),
+main section.row > .column > article > .article-body > ol:not(.no-btm-margin),
+main section.row > .column > article > .article-summary > ol:not(.no-btm-margin),
+main section.row > .column > section > ol:not(.no-btm-margin),
+main section.row > .column table > tbody > tr > td > ol:not(.no-btm-margin),
+main section.row > .column > section > ol:not(.no-btm-margin),
+main section.row > .column > article > .article-body > section > ol:not(.no-btm-margin),
+main section.row > .column > article > .article-summary > section > ol:not(.no-btm-margin),
+main section.row > .column > section > section > ol:not(.no-btm-margin),
+main section.row > .column table > tbody > tr > td > section > ol:not(.no-btm-margin),
+main section.row > .column > .gform_wrapper .gfield_html > p:not(:last-child),
+main section.row > .column > article > .article-body > .gform_wrapper .gfield_html > p:not(:last-child),
+main section.row > .column > article > .article-summary > .gform_wrapper .gfield_html > p:not(:last-child),
+main section.row > .column > section > .gform_wrapper .gfield_html > p:not(:last-child),
+main section.row > .column table > tbody > tr > td > .gform_wrapper .gfield_html > p:not(:last-child),
+main section.row > .column > .gform_confirmation_wrapper p:not(:last-child),
+main section.row > .column > article > .article-body > .gform_confirmation_wrapper p:not(:last-child),
+main section.row > .column > article > .article-summary > .gform_confirmation_wrapper p:not(:last-child),
+main section.row > .column > section > .gform_confirmation_wrapper p:not(:last-child),
+main section.row > .column table > tbody > tr > td > .gform_confirmation_wrapper p:not(:last-child) {
   margin-bottom: 1rem;
 }
-main section.row > div.column > p + ul:not(.spaces-top-full),
-main section.row > div.column > article > div.article-body > p + ul:not(.spaces-top-full),
-main section.row > div.column > article > div.article-summary > p + ul:not(.spaces-top-full),
-main section.row > div.column > section > p + ul:not(.spaces-top-full),
-main section.row > div.column table > tbody > tr > td > p + ul:not(.spaces-top-full),
-main section.row > div.column > section > p + ul:not(.spaces-top-full),
-main section.row > div.column > article > div.article-body > section > p + ul:not(.spaces-top-full),
-main section.row > div.column > article > div.article-summary > section > p + ul:not(.spaces-top-full),
-main section.row > div.column > section > section > p + ul:not(.spaces-top-full),
-main section.row > div.column table > tbody > tr > td > section > p + ul:not(.spaces-top-full),
-main section.row > div.column > p + ol:not(.spaces-top-full),
-main section.row > div.column > article > div.article-body > p + ol:not(.spaces-top-full),
-main section.row > div.column > article > div.article-summary > p + ol:not(.spaces-top-full),
-main section.row > div.column > section > p + ol:not(.spaces-top-full),
-main section.row > div.column table > tbody > tr > td > p + ol:not(.spaces-top-full),
-main section.row > div.column > section > p + ol:not(.spaces-top-full),
-main section.row > div.column > article > div.article-body > section > p + ol:not(.spaces-top-full),
-main section.row > div.column > article > div.article-summary > section > p + ol:not(.spaces-top-full),
-main section.row > div.column > section > section > p + ol:not(.spaces-top-full),
-main section.row > div.column table > tbody > tr > td > section > p + ol:not(.spaces-top-full) {
+main section.row > .column > p + ul:not(.spaces-top-full),
+main section.row > .column > article > .article-body > p + ul:not(.spaces-top-full),
+main section.row > .column > article > .article-summary > p + ul:not(.spaces-top-full),
+main section.row > .column > section > p + ul:not(.spaces-top-full),
+main section.row > .column table > tbody > tr > td > p + ul:not(.spaces-top-full),
+main section.row > .column > section > p + ul:not(.spaces-top-full),
+main section.row > .column > article > .article-body > section > p + ul:not(.spaces-top-full),
+main section.row > .column > article > .article-summary > section > p + ul:not(.spaces-top-full),
+main section.row > .column > section > section > p + ul:not(.spaces-top-full),
+main section.row > .column table > tbody > tr > td > section > p + ul:not(.spaces-top-full),
+main section.row > .column > p + ol:not(.spaces-top-full),
+main section.row > .column > article > .article-body > p + ol:not(.spaces-top-full),
+main section.row > .column > article > .article-summary > p + ol:not(.spaces-top-full),
+main section.row > .column > section > p + ol:not(.spaces-top-full),
+main section.row > .column table > tbody > tr > td > p + ol:not(.spaces-top-full),
+main section.row > .column > section > p + ol:not(.spaces-top-full),
+main section.row > .column > article > .article-body > section > p + ol:not(.spaces-top-full),
+main section.row > .column > article > .article-summary > section > p + ol:not(.spaces-top-full),
+main section.row > .column > section > section > p + ol:not(.spaces-top-full),
+main section.row > .column table > tbody > tr > td > section > p + ol:not(.spaces-top-full) {
   margin-top: -0.66666667rem;
 }
-main section.row:last-child > div.column > p:last-child,
-main section.row:last-child > div.column > article > div.article-body > p:last-child,
-main section.row:last-child > div.column > article > div.article-summary > p:last-child,
-main section.row:last-child > div.column > section > p:last-child,
-main section.row:last-child > div.column > section > p:last-child,
-main section.row:last-child > div.column > article > div.article-body > section > p:last-child,
-main section.row:last-child > div.column > article > div.article-summary > section > p:last-child,
-main section.row:last-child > div.column > section > section > p:last-child,
-main section.row:last-child > div.column > ul:last-child,
-main section.row:last-child > div.column > article > div.article-body > ul:last-child,
-main section.row:last-child > div.column > article > div.article-summary > ul:last-child,
-main section.row:last-child > div.column > section > ul:last-child,
-main section.row:last-child > div.column > section > ul:last-child,
-main section.row:last-child > div.column > article > div.article-body > section > ul:last-child,
-main section.row:last-child > div.column > article > div.article-summary > section > ul:last-child,
-main section.row:last-child > div.column > section > section > ul:last-child,
-main section.row:last-child > div.column > ol:last-child,
-main section.row:last-child > div.column > article > div.article-body > ol:last-child,
-main section.row:last-child > div.column > article > div.article-summary > ol:last-child,
-main section.row:last-child > div.column > section > ol:last-child,
-main section.row:last-child > div.column > section > ol:last-child,
-main section.row:last-child > div.column > article > div.article-body > section > ol:last-child,
-main section.row:last-child > div.column > article > div.article-summary > section > ol:last-child,
-main section.row:last-child > div.column > section > section > ol:last-child {
+main section.row:last-child > .column > p:last-child,
+main section.row:last-child > .column > article > .article-body > p:last-child,
+main section.row:last-child > .column > article > .article-summary > p:last-child,
+main section.row:last-child > .column > section > p:last-child,
+main section.row:last-child > .column > section > p:last-child,
+main section.row:last-child > .column > article > .article-body > section > p:last-child,
+main section.row:last-child > .column > article > .article-summary > section > p:last-child,
+main section.row:last-child > .column > section > section > p:last-child,
+main section.row:last-child > .column > ul:last-child,
+main section.row:last-child > .column > article > .article-body > ul:last-child,
+main section.row:last-child > .column > article > .article-summary > ul:last-child,
+main section.row:last-child > .column > section > ul:last-child,
+main section.row:last-child > .column > section > ul:last-child,
+main section.row:last-child > .column > article > .article-body > section > ul:last-child,
+main section.row:last-child > .column > article > .article-summary > section > ul:last-child,
+main section.row:last-child > .column > section > section > ul:last-child,
+main section.row:last-child > .column > ol:last-child,
+main section.row:last-child > .column > article > .article-body > ol:last-child,
+main section.row:last-child > .column > article > .article-summary > ol:last-child,
+main section.row:last-child > .column > section > ol:last-child,
+main section.row:last-child > .column > section > ol:last-child,
+main section.row:last-child > .column > article > .article-body > section > ol:last-child,
+main section.row:last-child > .column > article > .article-summary > section > ol:last-child,
+main section.row:last-child > .column > section > section > ol:last-child {
   margin-bottom: 0;
 }
-main section.row > div.column table > tbody > tr > td > p:last-child,
-main section.row > div.column table > tbody > tr > td > section > p:last-child,
-main section.row > div.column table > tbody > tr > td > ul:last-child,
-main section.row > div.column table > tbody > tr > td > section > ul:last-child,
-main section.row > div.column table > tbody > tr > td > ol:last-child,
-main section.row > div.column table > tbody > tr > td > section > ol:last-child {
+main section.row > .column table > tbody > tr > td > p:last-child,
+main section.row > .column table > tbody > tr > td > section > p:last-child,
+main section.row > .column table > tbody > tr > td > ul:last-child,
+main section.row > .column table > tbody > tr > td > section > ul:last-child,
+main section.row > .column table > tbody > tr > td > ol:last-child,
+main section.row > .column table > tbody > tr > td > section > ol:last-child {
   margin-bottom: 0;
 }
 @media only screen and (min-width: 481px) and (max-width: 693px) {
@@ -1004,13 +1009,13 @@ main section.row > div.column table > tbody > tr > td > section > ol:last-child 
     padding-left: 0.25rem;
   }
 }
-section.has-linked-columns:not(.gutter) {
+.row.has-linked-columns:not(.gutter) {
   margin-top: 1rem;
 }
-section.has-linked-columns:not(.gutter):last-child {
+.row.has-linked-columns:not(.gutter):last-child {
   margin-bottom: 2rem;
 }
-section.has-linked-columns:not(.gutter) div.column {
+.row.has-linked-columns:not(.gutter) .column {
   position: relative;
   height: 0;
   padding-bottom: calc(33% - 2rem) !important;
@@ -1019,18 +1024,18 @@ section.has-linked-columns:not(.gutter) div.column {
   text-align: center;
 }
 @media all and (min-width: 694px) {
-  section.has-linked-columns:not(.gutter) div.column:not(:first-child) {
+  .row.has-linked-columns:not(.gutter) .column:not(:first-child) {
     border-left: 1px solid rgba(255, 255, 255, 0.7);
   }
 }
 @media all and (max-width: 693px) {
-  section.has-linked-columns:not(.gutter) div.column:not(:first-child) {
+  .row.has-linked-columns:not(.gutter) .column:not(:first-child) {
     border-top: 1px solid rgba(255, 255, 255, 0.7);
   }
 }
-section.has-linked-columns:not(.gutter) div.column > :first-child:not(header),
-section.has-linked-columns:not(.gutter) div.column > header:first-child + *,
-section.has-linked-columns:not(.gutter) div.column > .shift-to-bottom:first-of-type {
+.row.has-linked-columns:not(.gutter) .column > :first-child:not(header),
+.row.has-linked-columns:not(.gutter) .column > header:first-child + *,
+.row.has-linked-columns:not(.gutter) .column > .shift-to-bottom:first-of-type {
   position: absolute;
   left: 50%;
   width: calc(100% - 2rem);
@@ -1041,21 +1046,21 @@ section.has-linked-columns:not(.gutter) div.column > .shift-to-bottom:first-of-t
   pointer-events: none;
   z-index: 2;
 }
-section.has-linked-columns:not(.gutter) div.column > :first-child:not(header),
-section.has-linked-columns:not(.gutter) div.column > header:first-child + * {
+.row.has-linked-columns:not(.gutter) .column > :first-child:not(header),
+.row.has-linked-columns:not(.gutter) .column > header:first-child + * {
   top: 50%;
   -webkit-transform: translate(-50%, -50%);
   -moz-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
-section.has-linked-columns:not(.gutter) div.column > :first-child:not(header).shift-to-top,
-section.has-linked-columns:not(.gutter) div.column > header:first-child + *.shift-to-top {
+.row.has-linked-columns:not(.gutter) .column > :first-child:not(header).shift-to-top,
+.row.has-linked-columns:not(.gutter) .column > header:first-child + *.shift-to-top {
   top: 1rem;
   -webkit-transform: translateX(-50%);
   -moz-transform: translateX(-50%);
   transform: translateX(-50%);
 }
-section.has-linked-columns:not(.gutter) div.column > .shift-to-bottom:first-of-type {
+.row.has-linked-columns:not(.gutter) .column > .shift-to-bottom:first-of-type {
   bottom: 1rem;
   border-top: 1px solid #fff;
   margin-bottom: 0 !important;
@@ -1064,30 +1069,30 @@ section.has-linked-columns:not(.gutter) div.column > .shift-to-bottom:first-of-t
   -moz-transform: translateX(-50%);
   transform: translateX(-50%);
 }
-section.has-linked-columns:not(.gutter) div.column:hover {
+.row.has-linked-columns:not(.gutter) .column:hover {
   background-size: 110% auto;
   -webkit-transition: all 1s ease;
   -moz-transition: all 1s ease;
   transition: all 1s ease;
 }
-section.has-linked-columns:not(.gutter) div.column:hover > :first-child:not(header),
-section.has-linked-columns:not(.gutter) div.column:hover > header:first-child + *,
-section.has-linked-columns:not(.gutter) div.column:hover > .shift-to-bottom:first-of-type {
+.row.has-linked-columns:not(.gutter) .column:hover > :first-child:not(header),
+.row.has-linked-columns:not(.gutter) .column:hover > header:first-child + *,
+.row.has-linked-columns:not(.gutter) .column:hover > .shift-to-bottom:first-of-type {
   color: #c60c30;
   -webkit-transition: all 0.3s linear;
   -moz-transition: all 0.3s linear;
   transition: all 0.3s linear;
 }
-section.has-linked-columns:not(.gutter) div.column:hover > .shift-to-bottom:first-of-type {
+.row.has-linked-columns:not(.gutter) .column:hover > .shift-to-bottom:first-of-type {
   border-top: 1px solid #c60c30;
 }
-section.has-linked-columns:not(.gutter) div.column * {
+.row.has-linked-columns:not(.gutter) .column * {
   text-align: inherit;
 }
-section.has-linked-columns:not(.gutter) div.column a {
+.row.has-linked-columns:not(.gutter) .column a {
   display: none;
 }
-section.has-linked-columns:not(.gutter) div.column > :last-child > a:first-of-type {
+.row.has-linked-columns:not(.gutter) .column > :last-child > a:first-of-type {
   display: block;
   position: absolute;
   top: 0;
@@ -1099,41 +1104,41 @@ section.has-linked-columns:not(.gutter) div.column > :last-child > a:first-of-ty
   box-shadow: none;
   z-index: 1;
 }
-section.has-linked-columns:not(.gutter) div.column > :last-child > a:first-of-type:hover {
+.row.has-linked-columns:not(.gutter) .column > :last-child > a:first-of-type:hover {
   background-color: rgba(255, 255, 255, 0.33);
   text-shadow: none;
   -webkit-transition: all 0.3s linear;
   -moz-transition: all 0.3s linear;
   transition: all 0.3s linear;
 }
-section.has-linked-columns:not(.gutter) div.column.bg-pinned-at-left {
+.row.has-linked-columns:not(.gutter) .column.bg-pinned-at-left {
   background-position: left top;
 }
-section.has-linked-columns:not(.gutter) div.column.bg-pinned-toward-left {
+.row.has-linked-columns:not(.gutter) .column.bg-pinned-toward-left {
   background-position: 25% top;
 }
-section.has-linked-columns:not(.gutter) div.column.bg-pinned-at-right {
+.row.has-linked-columns:not(.gutter) .column.bg-pinned-at-right {
   background-position: right top;
 }
-section.has-linked-columns:not(.gutter) div.column.bg-pinned-toward-right {
+.row.has-linked-columns:not(.gutter) .column.bg-pinned-toward-right {
   background-position: 75% top;
 }
-section.has-linked-columns:not(.gutter) div.column.has-crimson-bg:after,
-section.has-linked-columns:not(.gutter) div.column.has-gray-bg:after,
-section.has-linked-columns:not(.gutter) div.column.has-yellow-bg:after,
-section.has-linked-columns:not(.gutter) div.column.has-blue-bg:after,
-section.has-linked-columns:not(.gutter) div.column.has-orange-bg:after,
-section.has-linked-columns:not(.gutter) div.column.has-green-bg:after,
-section.has-linked-columns:not(.gutter) div.column.has-cyan-bg:after,
-section.has-linked-columns:not(.gutter) div.column.has-black-bg:after,
-section.has-linked-columns:not(.gutter) div.column.has-crimson-bg:before,
-section.has-linked-columns:not(.gutter) div.column.has-gray-bg:before,
-section.has-linked-columns:not(.gutter) div.column.has-yellow-bg:before,
-section.has-linked-columns:not(.gutter) div.column.has-blue-bg:before,
-section.has-linked-columns:not(.gutter) div.column.has-orange-bg:before,
-section.has-linked-columns:not(.gutter) div.column.has-green-bg:before,
-section.has-linked-columns:not(.gutter) div.column.has-cyan-bg:before,
-section.has-linked-columns:not(.gutter) div.column.has-black-bg:before {
+.row.has-linked-columns:not(.gutter) .column.has-crimson-bg:after,
+.row.has-linked-columns:not(.gutter) .column.has-gray-bg:after,
+.row.has-linked-columns:not(.gutter) .column.has-yellow-bg:after,
+.row.has-linked-columns:not(.gutter) .column.has-blue-bg:after,
+.row.has-linked-columns:not(.gutter) .column.has-orange-bg:after,
+.row.has-linked-columns:not(.gutter) .column.has-green-bg:after,
+.row.has-linked-columns:not(.gutter) .column.has-cyan-bg:after,
+.row.has-linked-columns:not(.gutter) .column.has-black-bg:after,
+.row.has-linked-columns:not(.gutter) .column.has-crimson-bg:before,
+.row.has-linked-columns:not(.gutter) .column.has-gray-bg:before,
+.row.has-linked-columns:not(.gutter) .column.has-yellow-bg:before,
+.row.has-linked-columns:not(.gutter) .column.has-blue-bg:before,
+.row.has-linked-columns:not(.gutter) .column.has-orange-bg:before,
+.row.has-linked-columns:not(.gutter) .column.has-green-bg:before,
+.row.has-linked-columns:not(.gutter) .column.has-cyan-bg:before,
+.row.has-linked-columns:not(.gutter) .column.has-black-bg:before {
   content: "";
   position: absolute;
   top: 0;
@@ -1143,334 +1148,334 @@ section.has-linked-columns:not(.gutter) div.column.has-black-bg:before {
   pointer-events: none;
   opacity: 1;
 }
-section.has-linked-columns:not(.gutter) div.column.has-crimson-bg:before,
-section.has-linked-columns:not(.gutter) div.column.has-gray-bg:before,
-section.has-linked-columns:not(.gutter) div.column.has-yellow-bg:before,
-section.has-linked-columns:not(.gutter) div.column.has-blue-bg:before,
-section.has-linked-columns:not(.gutter) div.column.has-orange-bg:before,
-section.has-linked-columns:not(.gutter) div.column.has-green-bg:before,
-section.has-linked-columns:not(.gutter) div.column.has-cyan-bg:before,
-section.has-linked-columns:not(.gutter) div.column.has-black-bg:before {
+.row.has-linked-columns:not(.gutter) .column.has-crimson-bg:before,
+.row.has-linked-columns:not(.gutter) .column.has-gray-bg:before,
+.row.has-linked-columns:not(.gutter) .column.has-yellow-bg:before,
+.row.has-linked-columns:not(.gutter) .column.has-blue-bg:before,
+.row.has-linked-columns:not(.gutter) .column.has-orange-bg:before,
+.row.has-linked-columns:not(.gutter) .column.has-green-bg:before,
+.row.has-linked-columns:not(.gutter) .column.has-cyan-bg:before,
+.row.has-linked-columns:not(.gutter) .column.has-black-bg:before {
   opacity: 0;
 }
-section.has-linked-columns:not(.gutter) div.column.has-crimson-bg:hover:after,
-section.has-linked-columns:not(.gutter) div.column.has-gray-bg:hover:after,
-section.has-linked-columns:not(.gutter) div.column.has-yellow-bg:hover:after,
-section.has-linked-columns:not(.gutter) div.column.has-blue-bg:hover:after,
-section.has-linked-columns:not(.gutter) div.column.has-orange-bg:hover:after,
-section.has-linked-columns:not(.gutter) div.column.has-green-bg:hover:after,
-section.has-linked-columns:not(.gutter) div.column.has-cyan-bg:hover:after,
-section.has-linked-columns:not(.gutter) div.column.has-black-bg:hover:after,
-section.has-linked-columns:not(.gutter) div.column.has-crimson-bg:hover:before,
-section.has-linked-columns:not(.gutter) div.column.has-gray-bg:hover:before,
-section.has-linked-columns:not(.gutter) div.column.has-yellow-bg:hover:before,
-section.has-linked-columns:not(.gutter) div.column.has-blue-bg:hover:before,
-section.has-linked-columns:not(.gutter) div.column.has-orange-bg:hover:before,
-section.has-linked-columns:not(.gutter) div.column.has-green-bg:hover:before,
-section.has-linked-columns:not(.gutter) div.column.has-cyan-bg:hover:before,
-section.has-linked-columns:not(.gutter) div.column.has-black-bg:hover:before {
+.row.has-linked-columns:not(.gutter) .column.has-crimson-bg:hover:after,
+.row.has-linked-columns:not(.gutter) .column.has-gray-bg:hover:after,
+.row.has-linked-columns:not(.gutter) .column.has-yellow-bg:hover:after,
+.row.has-linked-columns:not(.gutter) .column.has-blue-bg:hover:after,
+.row.has-linked-columns:not(.gutter) .column.has-orange-bg:hover:after,
+.row.has-linked-columns:not(.gutter) .column.has-green-bg:hover:after,
+.row.has-linked-columns:not(.gutter) .column.has-cyan-bg:hover:after,
+.row.has-linked-columns:not(.gutter) .column.has-black-bg:hover:after,
+.row.has-linked-columns:not(.gutter) .column.has-crimson-bg:hover:before,
+.row.has-linked-columns:not(.gutter) .column.has-gray-bg:hover:before,
+.row.has-linked-columns:not(.gutter) .column.has-yellow-bg:hover:before,
+.row.has-linked-columns:not(.gutter) .column.has-blue-bg:hover:before,
+.row.has-linked-columns:not(.gutter) .column.has-orange-bg:hover:before,
+.row.has-linked-columns:not(.gutter) .column.has-green-bg:hover:before,
+.row.has-linked-columns:not(.gutter) .column.has-cyan-bg:hover:before,
+.row.has-linked-columns:not(.gutter) .column.has-black-bg:hover:before {
   -webkit-transition: all 0.3s linear;
   -moz-transition: all 0.3s linear;
   transition: all 0.3s linear;
 }
-section.has-linked-columns:not(.gutter) div.column.has-crimson-bg:hover:after,
-section.has-linked-columns:not(.gutter) div.column.has-gray-bg:hover:after,
-section.has-linked-columns:not(.gutter) div.column.has-yellow-bg:hover:after,
-section.has-linked-columns:not(.gutter) div.column.has-blue-bg:hover:after,
-section.has-linked-columns:not(.gutter) div.column.has-orange-bg:hover:after,
-section.has-linked-columns:not(.gutter) div.column.has-green-bg:hover:after,
-section.has-linked-columns:not(.gutter) div.column.has-cyan-bg:hover:after,
-section.has-linked-columns:not(.gutter) div.column.has-black-bg:hover:after {
+.row.has-linked-columns:not(.gutter) .column.has-crimson-bg:hover:after,
+.row.has-linked-columns:not(.gutter) .column.has-gray-bg:hover:after,
+.row.has-linked-columns:not(.gutter) .column.has-yellow-bg:hover:after,
+.row.has-linked-columns:not(.gutter) .column.has-blue-bg:hover:after,
+.row.has-linked-columns:not(.gutter) .column.has-orange-bg:hover:after,
+.row.has-linked-columns:not(.gutter) .column.has-green-bg:hover:after,
+.row.has-linked-columns:not(.gutter) .column.has-cyan-bg:hover:after,
+.row.has-linked-columns:not(.gutter) .column.has-black-bg:hover:after {
   opacity: 0;
 }
-section.has-linked-columns:not(.gutter) div.column.has-crimson-bg:hover:before,
-section.has-linked-columns:not(.gutter) div.column.has-gray-bg:hover:before,
-section.has-linked-columns:not(.gutter) div.column.has-yellow-bg:hover:before,
-section.has-linked-columns:not(.gutter) div.column.has-blue-bg:hover:before,
-section.has-linked-columns:not(.gutter) div.column.has-orange-bg:hover:before,
-section.has-linked-columns:not(.gutter) div.column.has-green-bg:hover:before,
-section.has-linked-columns:not(.gutter) div.column.has-cyan-bg:hover:before,
-section.has-linked-columns:not(.gutter) div.column.has-black-bg:hover:before {
+.row.has-linked-columns:not(.gutter) .column.has-crimson-bg:hover:before,
+.row.has-linked-columns:not(.gutter) .column.has-gray-bg:hover:before,
+.row.has-linked-columns:not(.gutter) .column.has-yellow-bg:hover:before,
+.row.has-linked-columns:not(.gutter) .column.has-blue-bg:hover:before,
+.row.has-linked-columns:not(.gutter) .column.has-orange-bg:hover:before,
+.row.has-linked-columns:not(.gutter) .column.has-green-bg:hover:before,
+.row.has-linked-columns:not(.gutter) .column.has-cyan-bg:hover:before,
+.row.has-linked-columns:not(.gutter) .column.has-black-bg:hover:before {
   opacity: 1;
 }
-section.has-linked-columns:not(.gutter) div.column.has-crimson-bg:after {
+.row.has-linked-columns:not(.gutter) .column.has-crimson-bg:after {
   background: linear-gradient(to bottom, rgba(152, 30, 50, 0), rgba(152, 30, 50, 0.2) 50%, #981e32);
 }
-section.has-linked-columns:not(.gutter) div.column.has-crimson-bg:before {
+.row.has-linked-columns:not(.gutter) .column.has-crimson-bg:before {
   background: linear-gradient(to top, rgba(152, 30, 50, 0), rgba(152, 30, 50, 0.2) 50%, #981e32);
 }
-section.has-linked-columns:not(.gutter) div.column.has-gray-bg:after {
+.row.has-linked-columns:not(.gutter) .column.has-gray-bg:after {
   background: linear-gradient(to bottom, rgba(181, 186, 190, 0), rgba(181, 186, 190, 0.2) 50%, #b5babe);
 }
-section.has-linked-columns:not(.gutter) div.column.has-gray-bg:before {
+.row.has-linked-columns:not(.gutter) .column.has-gray-bg:before {
   background: linear-gradient(to top, rgba(181, 186, 190, 0), rgba(181, 186, 190, 0.2) 50%, #b5babe);
 }
-section.has-linked-columns:not(.gutter) div.column.has-gray-bg:hover > :first-child:not(header),
-section.has-linked-columns:not(.gutter) div.column.has-gray-bg:hover > header:first-child + *,
-section.has-linked-columns:not(.gutter) div.column.has-gray-bg:hover > .shift-to-bottom:first-of-type {
+.row.has-linked-columns:not(.gutter) .column.has-gray-bg:hover > :first-child:not(header),
+.row.has-linked-columns:not(.gutter) .column.has-gray-bg:hover > header:first-child + *,
+.row.has-linked-columns:not(.gutter) .column.has-gray-bg:hover > .shift-to-bottom:first-of-type {
   color: #b5babe;
 }
-section.has-linked-columns:not(.gutter) div.column.has-gray-bg:hover > .shift-to-bottom:first-of-type {
+.row.has-linked-columns:not(.gutter) .column.has-gray-bg:hover > .shift-to-bottom:first-of-type {
   border-top: 1px solid #b5babe;
 }
-section.has-linked-columns:not(.gutter) div.column.has-yellow-bg:after {
+.row.has-linked-columns:not(.gutter) .column.has-yellow-bg:after {
   background: linear-gradient(to bottom, rgba(255, 184, 28, 0), rgba(255, 184, 28, 0.2) 50%, #ffb81c);
 }
-section.has-linked-columns:not(.gutter) div.column.has-yellow-bg:before {
+.row.has-linked-columns:not(.gutter) .column.has-yellow-bg:before {
   background: linear-gradient(to top, rgba(255, 184, 28, 0), rgba(255, 184, 28, 0.2) 50%, #ffb81c);
 }
-section.has-linked-columns:not(.gutter) div.column.has-yellow-bg:hover > :first-child:not(header),
-section.has-linked-columns:not(.gutter) div.column.has-yellow-bg:hover > header:first-child + *,
-section.has-linked-columns:not(.gutter) div.column.has-yellow-bg:hover > .shift-to-bottom:first-of-type {
+.row.has-linked-columns:not(.gutter) .column.has-yellow-bg:hover > :first-child:not(header),
+.row.has-linked-columns:not(.gutter) .column.has-yellow-bg:hover > header:first-child + *,
+.row.has-linked-columns:not(.gutter) .column.has-yellow-bg:hover > .shift-to-bottom:first-of-type {
   color: #ffb81c;
 }
-section.has-linked-columns:not(.gutter) div.column.has-yellow-bg:hover > .shift-to-bottom:first-of-type {
+.row.has-linked-columns:not(.gutter) .column.has-yellow-bg:hover > .shift-to-bottom:first-of-type {
   border-top: 1px solid #ffb81c;
 }
-section.has-linked-columns:not(.gutter) div.column.has-blue-bg:after {
+.row.has-linked-columns:not(.gutter) .column.has-blue-bg:after {
   background: linear-gradient(to bottom, rgba(0, 165, 189, 0), rgba(0, 165, 189, 0.2) 50%, #00a5bd);
 }
-section.has-linked-columns:not(.gutter) div.column.has-blue-bg:before {
+.row.has-linked-columns:not(.gutter) .column.has-blue-bg:before {
   background: linear-gradient(to top, rgba(0, 165, 189, 0), rgba(0, 165, 189, 0.2) 50%, #00a5bd);
 }
-section.has-linked-columns:not(.gutter) div.column.has-blue-bg:hover > :first-child:not(header),
-section.has-linked-columns:not(.gutter) div.column.has-blue-bg:hover > header:first-child + *,
-section.has-linked-columns:not(.gutter) div.column.has-blue-bg:hover > .shift-to-bottom:first-of-type {
+.row.has-linked-columns:not(.gutter) .column.has-blue-bg:hover > :first-child:not(header),
+.row.has-linked-columns:not(.gutter) .column.has-blue-bg:hover > header:first-child + *,
+.row.has-linked-columns:not(.gutter) .column.has-blue-bg:hover > .shift-to-bottom:first-of-type {
   color: #00a5bd;
 }
-section.has-linked-columns:not(.gutter) div.column.has-blue-bg:hover > .shift-to-bottom:first-of-type {
+.row.has-linked-columns:not(.gutter) .column.has-blue-bg:hover > .shift-to-bottom:first-of-type {
   border-top: 1px solid #00a5bd;
 }
-section.has-linked-columns:not(.gutter) div.column.has-green-bg:after {
+.row.has-linked-columns:not(.gutter) .column.has-green-bg:after {
   background: linear-gradient(to bottom, rgba(173, 164, 0, 0), rgba(173, 164, 0, 0.2) 50%, #ada400);
 }
-section.has-linked-columns:not(.gutter) div.column.has-green-bg:before {
+.row.has-linked-columns:not(.gutter) .column.has-green-bg:before {
   background: linear-gradient(to top, rgba(173, 164, 0, 0), rgba(173, 164, 0, 0.2) 50%, #ada400);
 }
-section.has-linked-columns:not(.gutter) div.column.has-green-bg:hover > :first-child:not(header),
-section.has-linked-columns:not(.gutter) div.column.has-green-bg:hover > header:first-child + *,
-section.has-linked-columns:not(.gutter) div.column.has-green-bg:hover > .shift-to-bottom:first-of-type {
+.row.has-linked-columns:not(.gutter) .column.has-green-bg:hover > :first-child:not(header),
+.row.has-linked-columns:not(.gutter) .column.has-green-bg:hover > header:first-child + *,
+.row.has-linked-columns:not(.gutter) .column.has-green-bg:hover > .shift-to-bottom:first-of-type {
   color: #ada400;
 }
-section.has-linked-columns:not(.gutter) div.column.has-green-bg:hover > .shift-to-bottom:first-of-type {
+.row.has-linked-columns:not(.gutter) .column.has-green-bg:hover > .shift-to-bottom:first-of-type {
   border-top: 1px solid #ada400;
 }
-section.has-linked-columns:not(.gutter) div.column.has-orange-bg:after {
+.row.has-linked-columns:not(.gutter) .column.has-orange-bg:after {
   background: linear-gradient(to bottom, rgba(246, 134, 31, 0), rgba(246, 134, 31, 0.2) 50%, #f6861f);
 }
-section.has-linked-columns:not(.gutter) div.column.has-orange-bg:before {
+.row.has-linked-columns:not(.gutter) .column.has-orange-bg:before {
   background: linear-gradient(to top, rgba(246, 134, 31, 0), rgba(246, 134, 31, 0.2) 50%, #f6861f);
 }
-section.has-linked-columns:not(.gutter) div.column.has-orange-bg:hover > :first-child:not(header),
-section.has-linked-columns:not(.gutter) div.column.has-orange-bg:hover > header:first-child + *,
-section.has-linked-columns:not(.gutter) div.column.has-orange-bg:hover > .shift-to-bottom:first-of-type {
+.row.has-linked-columns:not(.gutter) .column.has-orange-bg:hover > :first-child:not(header),
+.row.has-linked-columns:not(.gutter) .column.has-orange-bg:hover > header:first-child + *,
+.row.has-linked-columns:not(.gutter) .column.has-orange-bg:hover > .shift-to-bottom:first-of-type {
   color: #f6861f;
 }
-section.has-linked-columns:not(.gutter) div.column.has-orange-bg:hover > .shift-to-bottom:first-of-type {
+.row.has-linked-columns:not(.gutter) .column.has-orange-bg:hover > .shift-to-bottom:first-of-type {
   border-top: 1px solid #f6861f;
 }
-section.has-linked-columns:not(.gutter) div.column.has-cyan-bg:after {
+.row.has-linked-columns:not(.gutter) .column.has-cyan-bg:after {
   background: linear-gradient(to bottom, rgba(0, 173, 164, 0), rgba(0, 173, 164, 0.2) 50%, #00ada4);
 }
-section.has-linked-columns:not(.gutter) div.column.has-cyan-bg:before {
+.row.has-linked-columns:not(.gutter) .column.has-cyan-bg:before {
   background: linear-gradient(to top, rgba(0, 173, 164, 0), rgba(0, 173, 164, 0.2) 50%, #00ada4);
 }
-section.has-linked-columns:not(.gutter) div.column.has-cyan-bg:hover > :first-child:not(header),
-section.has-linked-columns:not(.gutter) div.column.has-cyan-bg:hover > header:first-child + *,
-section.has-linked-columns:not(.gutter) div.column.has-cyan-bg:hover > .shift-to-bottom:first-of-type {
+.row.has-linked-columns:not(.gutter) .column.has-cyan-bg:hover > :first-child:not(header),
+.row.has-linked-columns:not(.gutter) .column.has-cyan-bg:hover > header:first-child + *,
+.row.has-linked-columns:not(.gutter) .column.has-cyan-bg:hover > .shift-to-bottom:first-of-type {
   color: #00ada4;
 }
-section.has-linked-columns:not(.gutter) div.column.has-cyan-bg:hover > .shift-to-bottom:first-of-type {
+.row.has-linked-columns:not(.gutter) .column.has-cyan-bg:hover > .shift-to-bottom:first-of-type {
   border-top: 1px solid #00ada4;
 }
-section.has-linked-columns:not(.gutter).thirds + section.has-linked-columns:not(.gutter).thirds.thirds,
-section.has-linked-columns:not(.gutter).thirds + section.has-linked-columns:not(.gutter).quarters.thirds,
-section.has-linked-columns:not(.gutter).quarters + section.has-linked-columns:not(.gutter).thirds.thirds,
-section.has-linked-columns:not(.gutter).quarters + section.has-linked-columns:not(.gutter).quarters.thirds,
-section.has-linked-columns:not(.gutter).thirds + section.has-linked-columns:not(.gutter).thirds.quarters,
-section.has-linked-columns:not(.gutter).thirds + section.has-linked-columns:not(.gutter).quarters.quarters,
-section.has-linked-columns:not(.gutter).quarters + section.has-linked-columns:not(.gutter).thirds.quarters,
-section.has-linked-columns:not(.gutter).quarters + section.has-linked-columns:not(.gutter).quarters.quarters {
+.row.has-linked-columns:not(.gutter).thirds + .row.has-linked-columns:not(.gutter).thirds.thirds,
+.row.has-linked-columns:not(.gutter).thirds + .row.has-linked-columns:not(.gutter).quarters.thirds,
+.row.has-linked-columns:not(.gutter).quarters + .row.has-linked-columns:not(.gutter).thirds.thirds,
+.row.has-linked-columns:not(.gutter).quarters + .row.has-linked-columns:not(.gutter).quarters.thirds,
+.row.has-linked-columns:not(.gutter).thirds + .row.has-linked-columns:not(.gutter).thirds.quarters,
+.row.has-linked-columns:not(.gutter).thirds + .row.has-linked-columns:not(.gutter).quarters.quarters,
+.row.has-linked-columns:not(.gutter).quarters + .row.has-linked-columns:not(.gutter).thirds.quarters,
+.row.has-linked-columns:not(.gutter).quarters + .row.has-linked-columns:not(.gutter).quarters.quarters {
   border-top: 1px solid rgba(255, 255, 255, 0.7);
   margin-top: 0 !important;
 }
-section.has-linked-columns:not(.gutter).thirds div.column,
-section.has-linked-columns:not(.gutter).quarters div.column {
+.row.has-linked-columns:not(.gutter).thirds .column,
+.row.has-linked-columns:not(.gutter).quarters .column {
   padding-bottom: calc(33% - 2rem) !important;
   background-size: auto 100%;
 }
 @media all and (min-width: 694px) and (max-width: 791px) {
-  section.has-linked-columns:not(.gutter).thirds div.column,
-  section.has-linked-columns:not(.gutter).quarters div.column {
+  .row.has-linked-columns:not(.gutter).thirds .column,
+  .row.has-linked-columns:not(.gutter).quarters .column {
     padding-bottom: calc(40% - 2rem) !important;
   }
 }
 @media all and (max-width: 693px) {
-  section.has-linked-columns:not(.gutter).thirds div.column,
-  section.has-linked-columns:not(.gutter).quarters div.column {
+  .row.has-linked-columns:not(.gutter).thirds .column,
+  .row.has-linked-columns:not(.gutter).quarters .column {
     background-size: 100% auto;
   }
 }
 @media all and (max-width: 400px) {
-  section.has-linked-columns:not(.gutter).thirds div.column > :first-child:not(header).shift-to-top,
-  section.has-linked-columns:not(.gutter).quarters div.column > :first-child:not(header).shift-to-top,
-  section.has-linked-columns:not(.gutter).thirds div.column > header:first-child + *.shift-to-top,
-  section.has-linked-columns:not(.gutter).quarters div.column > header:first-child + *.shift-to-top {
+  .row.has-linked-columns:not(.gutter).thirds .column > :first-child:not(header).shift-to-top,
+  .row.has-linked-columns:not(.gutter).quarters .column > :first-child:not(header).shift-to-top,
+  .row.has-linked-columns:not(.gutter).thirds .column > header:first-child + *.shift-to-top,
+  .row.has-linked-columns:not(.gutter).quarters .column > header:first-child + *.shift-to-top {
     top: 0.5rem;
   }
-  section.has-linked-columns:not(.gutter).thirds div.column > .shift-to-bottom:first-of-type,
-  section.has-linked-columns:not(.gutter).quarters div.column > .shift-to-bottom:first-of-type {
+  .row.has-linked-columns:not(.gutter).thirds .column > .shift-to-bottom:first-of-type,
+  .row.has-linked-columns:not(.gutter).quarters .column > .shift-to-bottom:first-of-type {
     bottom: 0.5rem;
   }
 }
-section.has-linked-columns:not(.gutter).thirds div.column:hover,
-section.has-linked-columns:not(.gutter).quarters div.column:hover {
+.row.has-linked-columns:not(.gutter).thirds .column:hover,
+.row.has-linked-columns:not(.gutter).quarters .column:hover {
   background-size: auto 110%;
 }
-section.has-linked-columns:not(.gutter).thirds div.column.has-crimson-bg:after,
-section.has-linked-columns:not(.gutter).quarters div.column.has-crimson-bg:after {
+.row.has-linked-columns:not(.gutter).thirds .column.has-crimson-bg:after,
+.row.has-linked-columns:not(.gutter).quarters .column.has-crimson-bg:after {
   background: linear-gradient(to bottom, rgba(152, 30, 50, 0), rgba(152, 30, 50, 0.2) 50%, #981e32 80%);
 }
 @media (max-width: 480px) {
-  section.has-linked-columns:not(.gutter).thirds div.column.has-crimson-bg:after,
-  section.has-linked-columns:not(.gutter).quarters div.column.has-crimson-bg:after {
+  .row.has-linked-columns:not(.gutter).thirds .column.has-crimson-bg:after,
+  .row.has-linked-columns:not(.gutter).quarters .column.has-crimson-bg:after {
     background: linear-gradient(to bottom, rgba(152, 30, 50, 0), rgba(152, 30, 50, 0.2) 40%, #981e32 67%);
   }
 }
-section.has-linked-columns:not(.gutter).thirds div.column.has-crimson-bg:before,
-section.has-linked-columns:not(.gutter).quarters div.column.has-crimson-bg:before {
+.row.has-linked-columns:not(.gutter).thirds .column.has-crimson-bg:before,
+.row.has-linked-columns:not(.gutter).quarters .column.has-crimson-bg:before {
   background: linear-gradient(to top, rgba(152, 30, 50, 0), rgba(152, 30, 50, 0.2) 50%, #981e32 80%);
 }
-section.has-linked-columns:not(.gutter).thirds div.column.has-gray-bg:after,
-section.has-linked-columns:not(.gutter).quarters div.column.has-gray-bg:after {
+.row.has-linked-columns:not(.gutter).thirds .column.has-gray-bg:after,
+.row.has-linked-columns:not(.gutter).quarters .column.has-gray-bg:after {
   background: linear-gradient(to bottom, rgba(181, 186, 190, 0), rgba(181, 186, 190, 0.2) 50%, #b5babe 80%);
 }
 @media (max-width: 480px) {
-  section.has-linked-columns:not(.gutter).thirds div.column.has-gray-bg:after,
-  section.has-linked-columns:not(.gutter).quarters div.column.has-gray-bg:after {
+  .row.has-linked-columns:not(.gutter).thirds .column.has-gray-bg:after,
+  .row.has-linked-columns:not(.gutter).quarters .column.has-gray-bg:after {
     background: linear-gradient(to bottom, rgba(181, 186, 190, 0), rgba(181, 186, 190, 0.2) 40%, #b5babe 67%);
   }
 }
-section.has-linked-columns:not(.gutter).thirds div.column.has-gray-bg:before,
-section.has-linked-columns:not(.gutter).quarters div.column.has-gray-bg:before {
+.row.has-linked-columns:not(.gutter).thirds .column.has-gray-bg:before,
+.row.has-linked-columns:not(.gutter).quarters .column.has-gray-bg:before {
   background: linear-gradient(to top, rgba(181, 186, 190, 0), rgba(181, 186, 190, 0.2) 50%, #b5babe 80%);
 }
-section.has-linked-columns:not(.gutter).thirds div.column.has-yellow-bg:after,
-section.has-linked-columns:not(.gutter).quarters div.column.has-yellow-bg:after {
+.row.has-linked-columns:not(.gutter).thirds .column.has-yellow-bg:after,
+.row.has-linked-columns:not(.gutter).quarters .column.has-yellow-bg:after {
   background: linear-gradient(to bottom, rgba(255, 184, 28, 0), rgba(255, 184, 28, 0.2) 50%, #ffb81c 80%);
 }
 @media (max-width: 480px) {
-  section.has-linked-columns:not(.gutter).thirds div.column.has-yellow-bg:after,
-  section.has-linked-columns:not(.gutter).quarters div.column.has-yellow-bg:after {
+  .row.has-linked-columns:not(.gutter).thirds .column.has-yellow-bg:after,
+  .row.has-linked-columns:not(.gutter).quarters .column.has-yellow-bg:after {
     background: linear-gradient(to bottom, rgba(255, 184, 28, 0), rgba(255, 184, 28, 0.2) 40%, #ffb81c 67%);
   }
 }
-section.has-linked-columns:not(.gutter).thirds div.column.has-yellow-bg:before,
-section.has-linked-columns:not(.gutter).quarters div.column.has-yellow-bg:before {
+.row.has-linked-columns:not(.gutter).thirds .column.has-yellow-bg:before,
+.row.has-linked-columns:not(.gutter).quarters .column.has-yellow-bg:before {
   background: linear-gradient(to top, rgba(255, 184, 28, 0), rgba(255, 184, 28, 0.2) 50%, #ffb81c 80%);
 }
-section.has-linked-columns:not(.gutter).thirds div.column.has-blue-bg:after,
-section.has-linked-columns:not(.gutter).quarters div.column.has-blue-bg:after {
+.row.has-linked-columns:not(.gutter).thirds .column.has-blue-bg:after,
+.row.has-linked-columns:not(.gutter).quarters .column.has-blue-bg:after {
   background: linear-gradient(to bottom, rgba(0, 165, 189, 0), rgba(0, 165, 189, 0.2) 50%, #00a5bd 80%);
 }
 @media (max-width: 480px) {
-  section.has-linked-columns:not(.gutter).thirds div.column.has-blue-bg:after,
-  section.has-linked-columns:not(.gutter).quarters div.column.has-blue-bg:after {
+  .row.has-linked-columns:not(.gutter).thirds .column.has-blue-bg:after,
+  .row.has-linked-columns:not(.gutter).quarters .column.has-blue-bg:after {
     background: linear-gradient(to bottom, rgba(0, 165, 189, 0), rgba(0, 165, 189, 0.2) 40%, #00a5bd 67%);
   }
 }
-section.has-linked-columns:not(.gutter).thirds div.column.has-blue-bg:before,
-section.has-linked-columns:not(.gutter).quarters div.column.has-blue-bg:before {
+.row.has-linked-columns:not(.gutter).thirds .column.has-blue-bg:before,
+.row.has-linked-columns:not(.gutter).quarters .column.has-blue-bg:before {
   background: linear-gradient(to top, rgba(0, 165, 189, 0), rgba(0, 165, 189, 0.2) 50%, #00a5bd 80%);
 }
-section.has-linked-columns:not(.gutter).thirds div.column.has-green-bg:after,
-section.has-linked-columns:not(.gutter).quarters div.column.has-green-bg:after {
+.row.has-linked-columns:not(.gutter).thirds .column.has-green-bg:after,
+.row.has-linked-columns:not(.gutter).quarters .column.has-green-bg:after {
   background: linear-gradient(to bottom, rgba(173, 164, 0, 0), rgba(173, 164, 0, 0.2) 50%, #ada400 80%);
 }
 @media (max-width: 480px) {
-  section.has-linked-columns:not(.gutter).thirds div.column.has-green-bg:after,
-  section.has-linked-columns:not(.gutter).quarters div.column.has-green-bg:after {
+  .row.has-linked-columns:not(.gutter).thirds .column.has-green-bg:after,
+  .row.has-linked-columns:not(.gutter).quarters .column.has-green-bg:after {
     background: linear-gradient(to bottom, rgba(173, 164, 0, 0), rgba(173, 164, 0, 0.2) 40%, #ada400 67%);
   }
 }
-section.has-linked-columns:not(.gutter).thirds div.column.has-green-bg:before,
-section.has-linked-columns:not(.gutter).quarters div.column.has-green-bg:before {
+.row.has-linked-columns:not(.gutter).thirds .column.has-green-bg:before,
+.row.has-linked-columns:not(.gutter).quarters .column.has-green-bg:before {
   background: linear-gradient(to top, rgba(173, 164, 0, 0), rgba(173, 164, 0, 0.2) 50%, #ada400 80%);
 }
-section.has-linked-columns:not(.gutter).thirds div.column.has-orange-bg:after,
-section.has-linked-columns:not(.gutter).quarters div.column.has-orange-bg:after {
+.row.has-linked-columns:not(.gutter).thirds .column.has-orange-bg:after,
+.row.has-linked-columns:not(.gutter).quarters .column.has-orange-bg:after {
   background: linear-gradient(to bottom, rgba(246, 134, 31, 0), rgba(246, 134, 31, 0.2) 50%, #f6861f 80%);
 }
 @media (max-width: 480px) {
-  section.has-linked-columns:not(.gutter).thirds div.column.has-orange-bg:after,
-  section.has-linked-columns:not(.gutter).quarters div.column.has-orange-bg:after {
+  .row.has-linked-columns:not(.gutter).thirds .column.has-orange-bg:after,
+  .row.has-linked-columns:not(.gutter).quarters .column.has-orange-bg:after {
     background: linear-gradient(to bottom, rgba(246, 134, 31, 0), rgba(246, 134, 31, 0.2) 40%, #f6861f 67%);
   }
 }
-section.has-linked-columns:not(.gutter).thirds div.column.has-orange-bg:before,
-section.has-linked-columns:not(.gutter).quarters div.column.has-orange-bg:before {
+.row.has-linked-columns:not(.gutter).thirds .column.has-orange-bg:before,
+.row.has-linked-columns:not(.gutter).quarters .column.has-orange-bg:before {
   background: linear-gradient(to top, rgba(246, 134, 31, 0), rgba(246, 134, 31, 0.2) 50%, #f6861f 80%);
 }
-section.has-linked-columns:not(.gutter).thirds div.column.has-cyan-bg:after,
-section.has-linked-columns:not(.gutter).quarters div.column.has-cyan-bg:after {
+.row.has-linked-columns:not(.gutter).thirds .column.has-cyan-bg:after,
+.row.has-linked-columns:not(.gutter).quarters .column.has-cyan-bg:after {
   background: linear-gradient(to bottom, rgba(0, 173, 164, 0), rgba(0, 173, 164, 0.2) 50%, #00ada4 80%);
 }
 @media (max-width: 480px) {
-  section.has-linked-columns:not(.gutter).thirds div.column.has-cyan-bg:after,
-  section.has-linked-columns:not(.gutter).quarters div.column.has-cyan-bg:after {
+  .row.has-linked-columns:not(.gutter).thirds .column.has-cyan-bg:after,
+  .row.has-linked-columns:not(.gutter).quarters .column.has-cyan-bg:after {
     background: linear-gradient(to bottom, rgba(0, 173, 164, 0), rgba(0, 173, 164, 0.2) 40%, #00ada4 67%);
   }
 }
-section.has-linked-columns:not(.gutter).thirds div.column.has-cyan-bg:before,
-section.has-linked-columns:not(.gutter).quarters div.column.has-cyan-bg:before {
+.row.has-linked-columns:not(.gutter).thirds .column.has-cyan-bg:before,
+.row.has-linked-columns:not(.gutter).quarters .column.has-cyan-bg:before {
   background: linear-gradient(to top, rgba(0, 173, 164, 0), rgba(0, 173, 164, 0.2) 50%, #00ada4 80%);
 }
 @media all and (min-width: 694px) {
-  section.has-linked-columns:not(.gutter).for-faculty div.column:not(:first-child) {
+  .row.has-linked-columns:not(.gutter).for-faculty .column:not(:first-child) {
     border-left: 10px solid #ffffff;
   }
 }
 @media all and (max-width: 693px) {
-  section.has-linked-columns:not(.gutter).for-faculty div.column:not(:first-child) {
+  .row.has-linked-columns:not(.gutter).for-faculty .column:not(:first-child) {
     border-top: 10px solid #ffffff;
   }
 }
-section.has-linked-columns:not(.gutter).for-faculty div.column.has-black-bg:after {
+.row.has-linked-columns:not(.gutter).for-faculty .column.has-black-bg:after {
   background: linear-gradient(to top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2) 50%, rgba(0, 0, 0, 0.7) 70%);
 }
 @media (max-width: 480px) {
-  section.has-linked-columns:not(.gutter).for-faculty div.column.has-black-bg:after {
+  .row.has-linked-columns:not(.gutter).for-faculty .column.has-black-bg:after {
     background: linear-gradient(to top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2) 40%, rgba(0, 0, 0, 0.7) 67%);
   }
 }
-section.has-linked-columns:not(.gutter).for-faculty div.column.has-black-bg:before {
+.row.has-linked-columns:not(.gutter).for-faculty .column.has-black-bg:before {
   background: linear-gradient(to top, rgba(152, 30, 50, 0), rgba(152, 30, 50, 0.2) 50%, rgba(152, 30, 50, 0.7) 70%);
 }
 @media (max-width: 480px) {
-  section.has-linked-columns:not(.gutter).for-faculty div.column.has-black-bg:before {
+  .row.has-linked-columns:not(.gutter).for-faculty .column.has-black-bg:before {
     background: linear-gradient(to top, rgba(152, 30, 50, 0), rgba(152, 30, 50, 0.2) 40%, rgba(152, 30, 50, 0.7) 67%);
   }
 }
-section.has-linked-columns:not(.gutter).for-faculty + section.has-linked-columns:not(.gutter).for-faculty.thirds,
-section.has-linked-columns:not(.gutter).for-faculty + section.has-linked-columns:not(.gutter).for-faculty.quarters {
+.row.has-linked-columns:not(.gutter).for-faculty + .row.has-linked-columns:not(.gutter).for-faculty.thirds,
+.row.has-linked-columns:not(.gutter).for-faculty + .row.has-linked-columns:not(.gutter).for-faculty.quarters {
   border-top: 10px solid #ffffff;
 }
 @media (max-width: 693px) {
-  section.has-linked-columns:not(.gutter).for-faculty.quarters div.column {
+  .row.has-linked-columns:not(.gutter).for-faculty.quarters .column {
     background-size: auto 100%;
   }
-  section.has-linked-columns:not(.gutter).for-faculty.quarters div.column:hover {
+  .row.has-linked-columns:not(.gutter).for-faculty.quarters .column:hover {
     background-size: auto 110%;
   }
-  section.has-linked-columns:not(.gutter).for-faculty.quarters div.column:nth-child(2) {
+  .row.has-linked-columns:not(.gutter).for-faculty.quarters .column:nth-child(2) {
     border-top: none !important;
   }
-  section.has-linked-columns:not(.gutter).for-faculty.quarters div.column:nth-child(3),
-  section.has-linked-columns:not(.gutter).for-faculty.quarters div.column:nth-child(4) {
+  .row.has-linked-columns:not(.gutter).for-faculty.quarters .column:nth-child(3),
+  .row.has-linked-columns:not(.gutter).for-faculty.quarters .column:nth-child(4) {
     border-top: 10px solid #ffffff !important;
   }
-  section.has-linked-columns:not(.gutter).for-faculty.quarters div.column:nth-child(2),
-  section.has-linked-columns:not(.gutter).for-faculty.quarters div.column:nth-child(4) {
+  .row.has-linked-columns:not(.gutter).for-faculty.quarters .column:nth-child(2),
+  .row.has-linked-columns:not(.gutter).for-faculty.quarters .column:nth-child(4) {
     border-left: 10px solid #ffffff !important;
   }
 }
