@@ -4607,6 +4607,21 @@ div.column ul.event-boxes > li + li {
 ul.external-links li {
   list-style-image: url(/wp-content/uploads/sites/906/2015/08/external-link-bullet.png);
 }
+@media print {
+  ul.cascaded-layout[style] {
+    height: auto !important;
+  }
+}
+@media print {
+  ul.cascaded-layout > li {
+    position: relative !important;
+    display: block !important;
+    left: 0 !important;
+    top: auto !important;
+    width: 100% !important;
+    float: left;
+  }
+}
 ul.cascaded-layout > li.cascade-sizer,
 ul.cascaded-layout > li.gutter-sizer {
   height: 0 !important;
@@ -5042,6 +5057,11 @@ div.column a {
   -webkit-transition: all .3s ease;
   -moz-transition: all .3s ease;
   transition: all .3s ease;
+}
+@media print {
+  div.column a {
+    box-shadow: none;
+  }
 }
 div.column a:hover {
   border-bottom-right-radius: 0;
