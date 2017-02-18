@@ -4607,11 +4607,23 @@ div.recent-updates p.recent-update-3 {
  */
 /*     └─────────────────────────────────────────────────────────────────────────────────────────────────┘
  */
-/*         ├---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  --- ┤
- *         │ ···· HYPERLINK elements contained within div.column elements ·························· │
- *         ├---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  --- ┤
+/*     ┌─────────────────────────────────────────────────────────────────────────────────────────────────┐
+ *     │ ++++++++ HYPERLINKS +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ │
+ *     ├-------------------------------------------------------------------------------------------------┤
+ *     │ Rule-sets for styling hyperlink elements within OUE pages built using the WSU Spine theme for   │
+ *     │ WordPress.                                                                                      │
+ *     │  ╘═» This file assumes the following LESS files have been imported upstream:                    │
+ *     │        • //github.com/invokeImmediately/WSU-UE---CSS/animations.less                            │
+ *     │        • //github.com/invokeImmediately/WSU-UE---CSS/color-palette.less                         │
+ *     │        • //github.com/invokeImmediately/WSU-UE---CSS/fonts.less                                 │
+ *     │        • //github.com/invokeImmediately/WSU-UE---CSS/mixins.less                                │
+ *     ├-------------------------------------------------------------------------------------------------┤
  */
-div.column a {
+/*         ┌-----------------------------------------------------------------------------------------┐
+ *         │ ···· HYPERLINK elements contained within .column classed elements ····················· │
+ *         └-----------------------------------------------------------------------------------------┘
+ */
+.column a {
   border-bottom-right-radius: 0.25em;
   border-bottom-left-radius: 0.25em;
   border-bottom: 0.0625em solid #981e32;
@@ -4623,11 +4635,11 @@ div.column a {
   transition: all .3s ease;
 }
 @media print {
-  div.column a {
+  .column a {
     box-shadow: none;
   }
 }
-div.column a:hover {
+.column a:hover {
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0;
   border-color: transparent;
@@ -4636,29 +4648,29 @@ div.column a:hover {
   color: #c60c30;
   text-shadow: 0.0625em 0.0625em 0.0625em rgba(152, 30, 50, 0.3);
 }
-div.column a.subtle-link {
+.column a.subtle-link {
   border-bottom: 0.0625em solid rgba(152, 30, 50, 0);
   box-shadow: inset 0 -0.3125em 0 rgba(152, 30, 50, 0);
 }
-div.column a.subtle-link.no-highlight:hover {
+.column a.subtle-link.no-highlight:hover {
   background-color: rgba(239, 120, 121, 0);
 }
-div.column a.pop-out-link {
+.column a.pop-out-link {
   -webkit-transition: color .4s linear, background .4s ease-in, font-size .25s linear;
   -moz-transition: color .4s linear, background .4s ease-in, font-size .25s linear;
   transition: color .4s linear, background .4s ease-in, font-size .25s linear;
 }
-div.column a.pop-out-link.subtle-link {
+.column a.pop-out-link.subtle-link {
   border-bottom: 0.0625em solid rgba(152, 30, 50, 0);
   box-shadow: inset 0 -0.3125em 0 rgba(152, 30, 50, 0);
 }
-div.column a.pop-out-link:hover {
+.column a.pop-out-link:hover {
   background-color: rgba(211, 130, 53, 0.1);
   font-size: 1.05em;
   line-height: calc(1.05em * 1.05);
   color: #f6861f;
 }
-div.column a.dark-red-button {
+.column a.dark-red-button {
   display: block;
   padding: .5em 1em;
   border-radius: 0;
@@ -4672,10 +4684,10 @@ div.column a.dark-red-button {
   -moz-transition: "~background-color .3333s linear";
   transition: "~background-color .3333s linear";
 }
-div.column a.dark-red-button:hover {
+.column a.dark-red-button:hover {
   background-color: #c60c30;
 }
-div.column a img {
+.column a img {
   border: 0.0625em solid rgba(94, 106, 113, 0.5);
   box-shadow: 2px 2px 2px rgba(94, 106, 113, 0.25);
   text-decoration: none;
@@ -4683,14 +4695,14 @@ div.column a img {
   -moz-transition: border .4s linear, box-shadow .4s ease-in;
   transition: border .4s linear, box-shadow .4s ease-in;
 }
-div.column a img:hover {
+.column a img:hover {
   border: 0.0625em solid #981e32;
   box-shadow: 2px 2px 2px rgba(152, 30, 50, 0.3333);
 }
-div.column a[data-title] {
+.column a[data-title] {
   position: relative;
 }
-div.column a[data-title]:hover:after {
+.column a[data-title]:hover:after {
   content: attr(data-title);
   position: absolute;
   left: 5px;
@@ -4706,37 +4718,41 @@ div.column a[data-title]:hover:after {
   color: #464e54;
   z-index: 20;
 }
-div.column:hover a.loud-link {
+.column:hover a.loud-link {
   border-bottom: 0.0625em solid rgba(198, 12, 48, 0.2);
   box-shadow: inset 0 -0.3125em 0 rgba(198, 12, 48, 0.2);
 }
-div.column h1 > a,
-div.column h2 > a,
-div.column h3 > a,
-div.column h4 > a,
-div.gform_heading h3.gform_title > a {
+.column h1 > a,
+.column h2 > a,
+.column h3 > a,
+.column h4 > a,
+.gform_heading h3.gform_title > a {
   line-height: 1.35em;
 }
-div.column h1 > a:not(.stays-underlined),
-div.column h2 > a:not(.stays-underlined),
-div.column h3 > a:not(.stays-underlined),
-div.column h4 > a:not(.stays-underlined),
-div.column h1 > a:not(.stays-underlined):hover,
-div.column h2 > a:not(.stays-underlined):hover,
-div.column h3 > a:not(.stays-underlined):hover,
-div.column h4 > a:not(.stays-underlined):hover,
-div.gform_heading h3.gform_title > a:not(.stays-underlined),
-div.gform_heading h3.gform_title > a:not(.stays-underlined):hover {
+.column h1 > a:not(.stays-underlined),
+.column h2 > a:not(.stays-underlined),
+.column h3 > a:not(.stays-underlined),
+.column h4 > a:not(.stays-underlined),
+.column h1 > a:not(.stays-underlined):hover,
+.column h2 > a:not(.stays-underlined):hover,
+.column h3 > a:not(.stays-underlined):hover,
+.column h4 > a:not(.stays-underlined):hover,
+.gform_heading h3.gform_title > a:not(.stays-underlined),
+.gform_heading h3.gform_title > a:not(.stays-underlined):hover {
   border-bottom: none;
   box-shadow: none;
 }
-div.column h1 > a:not(.stays-underlined):hover,
-div.column h2 > a:not(.stays-underlined):hover,
-div.column h3 > a:not(.stays-underlined):hover,
-div.column h4 > a:not(.stays-underlined):hover,
-div.gform_heading h3.gform_title > a:not(.stays-underlined):hover {
+.column h1 > a:not(.stays-underlined):hover,
+.column h2 > a:not(.stays-underlined):hover,
+.column h3 > a:not(.stays-underlined):hover,
+.column h4 > a:not(.stays-underlined):hover,
+.gform_heading h3.gform_title > a:not(.stays-underlined):hover {
   background: transparent;
 }
+/*         ┌-----------------------------------------------------------------------------------------┐
+ *         │ ···· CSS3-DRIVEN TOOLTIPS ····························································· │
+ *         └-----------------------------------------------------------------------------------------┘
+ */
 a.vpue-tooltip {
   position: relative;
   border-bottom: dotted 1px #b67233;
@@ -4817,6 +4833,12 @@ a.vpue-tooltip span b {
   border-top: 1px solid #925b29;
   border-right: 1px solid #925b29;
 }
+/*         ┌-----------------------------------------------------------------------------------------┐
+ *         │ ···· INCLUSIONAL MIXINS ······························································· │
+ *         └-----------------------------------------------------------------------------------------┘
+ */
+/*     └─────────────────────────────────────────────────────────────────────────────────────────────────┘
+ */
 strong.opening-line {
   font-size: 1.0625em;
   color: #72652a;
@@ -5070,22 +5092,26 @@ figure figcaption {
   font-size: 0.85em;
   text-align: center;
 }
-/*  ┌──────────────────────────────────────────────────────────────────────────────────────────────┐
- *  │ ++++++++ div.column ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ │
- *  │ ++++++++ TABLES     ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ │
- *  ├----------------------------------------------------------------------------------------------┤
- *  │ Styling for tables intended as children of div.column elements as defined in the WSU Spine   │
- *  │ Theme for WordPress.                                                                         │
- *  ├----------------------------------------------------------------------------------------------┤
+/*     ┌─────────────────────────────────────────────────────────────────────────────────────────────────┐
+ *     │ ++++++++ TABLES +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ │
+ *     ├-------------------------------------------------------------------------------------------------┤
+ *     │ Rule-sets for styling table elements within OUE pages built using the WSU Spine theme for       │
+ *     │ WordPress.                                                                                      │
+ *     │  ╘═» This file assumes the following LESS files have been imported upstream:                    │
+ *     │        • //github.com/invokeImmediately/WSU-UE---CSS/animations.less                            │
+ *     │        • //github.com/invokeImmediately/WSU-UE---CSS/color-palette.less                         │
+ *     │        • //github.com/invokeImmediately/WSU-UE---CSS/fonts.less                                 │
+ *     │        • //github.com/invokeImmediately/WSU-UE---CSS/mixins.less                                │
+ *     ├-------------------------------------------------------------------------------------------------┤
  */
-div.column table.plain {
+.column table.plain {
   background: #fff url(/wp-content/uploads/sites/906/2015/08/bg-dark.jpg) repeat fixed left top;
   border-collapse: separate;
   border-spacing: 0;
   border-top: 1px solid #5e6a71;
   border-bottom: 1px solid #5e6a71;
 }
-div.column table.plain thead tr th {
+.column table.plain thead tr th {
   padding-top: .25rem;
   padding-left: .25rem;
   padding-bottom: .25rem;
@@ -5093,7 +5119,7 @@ div.column table.plain thead tr th {
   border-bottom: 1px solid #B6BCBF;
   text-align: inherit;
 }
-div.column table.plain tbody tr td {
+.column table.plain tbody tr td {
   padding-top: .25rem;
   padding-left: .25rem;
   padding-bottom: .25rem;
@@ -5103,7 +5129,7 @@ div.column table.plain tbody tr td {
   text-align: inherit;
   vertical-align: top;
 }
-div.column table.plain tbody tr:nth-of-type(2n) td {
+.column table.plain tbody tr:nth-of-type(2n) td {
   padding-top: .25rem;
   padding-left: .25rem;
   padding-bottom: .25rem;
@@ -5113,14 +5139,14 @@ div.column table.plain tbody tr:nth-of-type(2n) td {
   text-align: inherit;
   vertical-align: top;
 }
-div.column table.peopleList {
+.column table.peopleList {
   width: 100%;
   background: #fff;
   border-collapse: separate;
   border-spacing: 0;
   border-top: 1px solid #e5e5e5;
 }
-div.column table.peopleList tbody td {
+.column table.peopleList tbody td {
   width: 80%;
   padding-bottom: 3pt;
   padding-top: 3pt;
@@ -5128,36 +5154,36 @@ div.column table.peopleList tbody td {
   vertical-align: middle;
   /* background: #c75d61; */
 }
-div.column table.peopleList tbody td:first-of-type {
+.column table.peopleList tbody td:first-of-type {
   width: 20%;
   text-align: center;
 }
-div.column table.wsu-blue-theme {
+.column table.wsu-blue-theme {
   width: 100%;
   border-collapse: separate;
   border-spacing: 0;
   border-top: 1px solid #3f6b72;
 }
-div.column table.wsu-blue-theme:not(.no-bottom-border) {
+.column table.wsu-blue-theme:not(.no-bottom-border) {
   border-bottom: 1px solid #3f6b72;
 }
 @media all and (min-width: 891px) {
-  div.column table.wsu-blue-theme {
+  .column table.wsu-blue-theme {
     font-size: 14px;
   }
 }
 @media all and (max-width: 890px) {
-  div.column table.wsu-blue-theme {
+  .column table.wsu-blue-theme {
     font-size: 12px;
   }
 }
-div.column table.wsu-blue-theme > thead > tr > th {
+.column table.wsu-blue-theme > thead > tr > th {
   padding: 3px;
   background-color: #2f5055;
   vertical-align: bottom;
   color: #fff;
 }
-div.column table.wsu-blue-theme > thead > tr.supra-header-row > th {
+.column table.wsu-blue-theme > thead > tr.supra-header-row > th {
   padding-top: 1em;
   padding-right: 0.5em;
   padding-left: 1.5em;
@@ -5168,7 +5194,7 @@ div.column table.wsu-blue-theme > thead > tr.supra-header-row > th {
   font-weight: bold;
   color: #fff;
 }
-div.column table.wsu-blue-theme:not(.has-row-spans) > tbody > tr:nth-child(2n) > td {
+.column table.wsu-blue-theme:not(.has-row-spans) > tbody > tr:nth-child(2n) > td {
   padding-top: 3px;
   padding-right: 0.5em;
   padding-bottom: 0.5em;
@@ -5178,7 +5204,7 @@ div.column table.wsu-blue-theme:not(.has-row-spans) > tbody > tr:nth-child(2n) >
   vertical-align: top;
   line-height: normal;
 }
-div.column table.wsu-blue-theme:not(.has-row-spans) > tbody > tr:nth-child(2n + 1) > td {
+.column table.wsu-blue-theme:not(.has-row-spans) > tbody > tr:nth-child(2n + 1) > td {
   padding-top: 3px;
   padding-right: 0.5em;
   padding-bottom: 0.5em;
@@ -5188,7 +5214,7 @@ div.column table.wsu-blue-theme:not(.has-row-spans) > tbody > tr:nth-child(2n + 
   vertical-align: top;
   line-height: normal;
 }
-div.column table.wsu-blue-theme.has-row-spans > tbody:nth-child(2n) > tr > td {
+.column table.wsu-blue-theme.has-row-spans > tbody:nth-child(2n) > tr > td {
   padding-top: 3px;
   padding-right: 0.5em;
   padding-bottom: 0.5em;
@@ -5198,7 +5224,7 @@ div.column table.wsu-blue-theme.has-row-spans > tbody:nth-child(2n) > tr > td {
   vertical-align: top;
   line-height: normal;
 }
-div.column table.wsu-blue-theme.has-row-spans > tbody:nth-child(2n + 1) > tr > td {
+.column table.wsu-blue-theme.has-row-spans > tbody:nth-child(2n + 1) > tr > td {
   padding-top: 3px;
   padding-right: 0.5em;
   padding-bottom: 0.5em;
@@ -5208,7 +5234,7 @@ div.column table.wsu-blue-theme.has-row-spans > tbody:nth-child(2n + 1) > tr > t
   vertical-align: top;
   line-height: normal;
 }
-div.column table.wsu-gray-theme {
+.column table.wsu-gray-theme {
   width: 100%;
   border-collapse: separate;
   border-spacing: 0;
@@ -5217,22 +5243,22 @@ div.column table.wsu-gray-theme {
   vertical-align: top;
 }
 @media all and (min-width: 891px) {
-  div.column table.wsu-gray-theme {
+  .column table.wsu-gray-theme {
     font-size: 14px;
   }
 }
 @media all and (max-width: 890px) {
-  div.column table.wsu-gray-theme {
+  .column table.wsu-gray-theme {
     font-size: 12px;
   }
 }
-div.column table.wsu-gray-theme > thead > tr > th {
+.column table.wsu-gray-theme > thead > tr > th {
   padding: 3px;
   background-color: #5e6a71;
   vertical-align: top;
   color: #fff;
 }
-div.column table.wsu-gray-theme > thead > tr.sub-heading-row > th {
+.column table.wsu-gray-theme > thead > tr.sub-heading-row > th {
   padding: 3px;
   background-color: #000;
   vertical-align: bottom;
@@ -5240,18 +5266,22 @@ div.column table.wsu-gray-theme > thead > tr.sub-heading-row > th {
   font-weight: bold;
   color: #fff;
 }
-div.column table.wsu-gray-theme > tbody > tr:nth-child(2n) > td {
+.column table.wsu-gray-theme > tbody > tr:nth-child(2n) > td {
   padding: 3px;
   background-color: #fff;
   vertical-align: top;
   line-height: normal;
 }
-div.column table.wsu-gray-theme > tbody > tr:nth-child(2n + 1) > td {
+.column table.wsu-gray-theme > tbody > tr:nth-child(2n + 1) > td {
   padding: 3px;
   background-color: #d7dadb;
   vertical-align: top;
   line-height: normal;
 }
+/*         ┌-----------------------------------------------------------------------------------------┐
+ *         │ ···· INCLUSIONAL MIXINS ······························································· │
+ *         └-----------------------------------------------------------------------------------------┘
+ */
 /*  └──────────────────────────────────────────────────────────────────────────────────────────────┘
  */
 /*  ╔════════════════════════════════════════════════════════════════════════════════════════════════════════╗ 
