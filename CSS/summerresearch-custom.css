@@ -2503,19 +2503,49 @@ p.article-tagline:not(.has-no-bordering).alt:after {
 .column p.vpue-jump-bar.floating br:first-of-type {
   display: none;
 }
-@media all and (max-width: 480px) {
+@media all and (min-width: 990px) {
+  body.admin-bar .column p.vpue-jump-bar.floating {
+    top: 32px;
+  }
+}
+@media all and (max-width: 989px) {
   .column p.vpue-jump-bar.floating {
-    -webkit-transform: translateX(-50%) translateY(-100%) translateY(20px);
-    -moz-transform: translateX(-50%) translateY(-100%) translateY(20px);
-    transform: translateX(-50%) translateY(-100%) translateY(20px);
+    padding-bottom: calc( 0.75rem  + 5px);
+    -webkit-transform: translateX(-50%) translateY(-100%) translateY(15px);
+    -moz-transform: translateX(-50%) translateY(-100%) translateY(15px);
+    transform: translateX(-50%) translateY(-100%) translateY(15px);
     -webkit-transition: all 0.3s ease;
     -moz-transition: all 0.3s ease;
     transition: all 0.3s ease;
+  }
+  .column p.vpue-jump-bar.floating:after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 0;
+    height: 0;
+    border-top: 5px solid #2a3033;
+    border-right: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-left: 5px solid transparent;
+    -webkit-transform: translate(-50%, 0);
+    -moz-transform: translate(-50%, 0);
+    transform: translate(-50%, 0);
   }
   .column p.vpue-jump-bar.floating:hover {
     -webkit-transform: translateX(-50%);
     -moz-transform: translateX(-50%);
     transform: translateX(-50%);
+  }
+  .column p.vpue-jump-bar.floating:hover:after {
+    border-top: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-bottom: 5px solid #2a3033;
+    border-left: 5px solid transparent;
+    -webkit-transform: translate(-50%, -5px);
+    -moz-transform: translate(-50%, -5px);
+    transform: translate(-50%, -5px);
   }
 }
 @media all {
@@ -5292,6 +5322,9 @@ figure figcaption {
   vertical-align: top;
   line-height: normal;
 }
+.column table.wsu-blue-theme.has-row-spans > tbody:nth-child(2n) > tr.alt > td {
+  background-color: #f2f2f2;
+}
 .column table.wsu-blue-theme.has-row-spans > tbody:nth-child(2n + 1) > tr > td {
   padding-top: 3px;
   padding-right: 0.5em;
@@ -5301,6 +5334,9 @@ figure figcaption {
   text-indent: -1em;
   vertical-align: top;
   line-height: normal;
+}
+.column table.wsu-blue-theme.has-row-spans > tbody:nth-child(2n + 1) > tr.alt > td {
+  background-color: #c3d6d9;
 }
 .column table.wsu-gray-theme {
   width: 100%;
