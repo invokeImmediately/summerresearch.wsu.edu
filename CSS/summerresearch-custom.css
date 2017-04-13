@@ -45,113 +45,177 @@ img.shift-to-center {
 .column .spaces-top-full {
   margin-top: 4rem;
 }
-.spaces-top-nrml,
-.column .spaces-top-nrml {
-  margin-top: 2rem;
-}
-.spaces-top-half,
-.column .spaces-top-half {
-  margin-top: 1rem;
-}
-.spaces-top-qrtr,
-.column .spaces-top-qrtr {
-  margin-top: 0.5rem;
-}
-.spaces-top-none,
-.column .spaces-top-none {
-  margin-top: 0rem !important;
-}
 .spaces-rgt-full,
 .column .spaces-rgt-full {
   margin-right: 4rem;
-}
-.spaces-rgt-nrml,
-.column .spaces-rgt-nrml {
-  margin-right: 2rem;
-}
-.spaces-rgt-half,
-.column .spaces-rgt-half {
-  margin-right: 1rem;
-}
-.spaces-rgt-qrtr,
-.column .spaces-rgt-qrtr {
-  margin-right: 0.5rem;
-}
-.spaces-rgt-none,
-.column .spaces-rgt-none {
-  margin-right: 0rem !important;
 }
 .spaces-btm-full,
 .column .spaces-btm-full {
   margin-bottom: 4rem;
 }
-.spaces-btm-nrml,
-.column .spaces-btm-nrml {
-  margin-bottom: 2rem;
-}
-.spaces-btm-half,
-.column .spaces-btm-half {
-  margin-bottom: 1rem;
-}
-.spaces-btm-qrtr,
-.column .spaces-btm-qrtr {
-  margin-bottom: 0.5rem;
-}
-.spaces-btm-none,
-.column .spaces-btm-none {
-  margin-bottom: 0rem !important;
-}
 .spaces-lft-full,
 .column .spaces-lft-full {
   margin-left: 4rem;
+}
+.spaces-top-nrml,
+.column .spaces-top-nrml {
+  margin-top: 2rem;
+}
+.spaces-rgt-nrml,
+.column .spaces-rgt-nrml {
+  margin-right: 2rem;
+}
+.spaces-btm-nrml,
+.column .spaces-btm-nrml {
+  margin-bottom: 2rem;
 }
 .spaces-lft-nrml,
 .column .spaces-lft-nrml {
   margin-left: 2rem;
 }
+.spaces-top-half,
+.column .spaces-top-half {
+  margin-top: 1rem;
+}
+.spaces-rgt-half,
+.column .spaces-rgt-half {
+  margin-right: 1rem;
+}
+.spaces-btm-half,
+.column .spaces-btm-half {
+  margin-bottom: 1rem;
+}
 .spaces-lft-half,
 .column .spaces-lft-half {
   margin-left: 1rem;
+}
+.spaces-top-qrtr,
+.column .spaces-top-qrtr {
+  margin-top: 0.5rem;
+}
+.spaces-rgt-qrtr,
+.column .spaces-rgt-qrtr {
+  margin-right: 0.5rem;
+}
+.spaces-btm-qrtr,
+.column .spaces-btm-qrtr {
+  margin-bottom: 0.5rem;
 }
 .spaces-lft-qrtr,
 .column .spaces-lft-qrtr {
   margin-left: 0.5rem;
 }
+.spaces-top-8th,
+.column .spaces-top-8th {
+  margin-top: 0.25rem;
+}
+.spaces-rgt-8th,
+.column .spaces-rgt-8th {
+  margin-right: 0.25rem;
+}
+.spaces-btm-8th,
+.column .spaces-btm-8th {
+  margin-bottom: 0.25rem;
+}
+.spaces-lft-8th,
+.column .spaces-lft-8th {
+  margin-left: 0.25rem;
+}
+.spaces-top-none,
+.column .spaces-top-none {
+  margin-top: 0rem !important;
+}
+.spaces-rgt-none,
+.column .spaces-rgt-none {
+  margin-right: 0rem !important;
+}
+.spaces-btm-none,
+.column .spaces-btm-none {
+  margin-bottom: 0rem !important;
+}
 .spaces-lft-none,
 .column .spaces-lft-none {
   margin-left: 0rem !important;
+}
+.pads-top-full,
+.column .pads-top-full {
+  padding-top: 4rem;
+}
+.pads-rgt-full,
+.column .pads-rgt-full {
+  padding-right: 4rem;
+}
+.pads-btm-full,
+.column .pads-btm-full {
+  padding-bottom: 4rem;
+}
+.pads-lft-full,
+.column .pads-lft-full {
+  padding-right: 4rem;
 }
 .pads-top-nrml,
 .column .pads-top-nrml {
   padding-top: 2rem;
 }
-.pads-top-half,
-.column .pads-top-half {
-  padding-top: 1rem;
-}
 .pads-rgt-nrml,
 .column .pads-rgt-nrml {
   padding-right: 2rem;
-}
-.pads-rgt-half,
-.column .pads-rgt-half {
-  padding-right: 1rem;
 }
 .pads-btm-nrml,
 .column .pads-btm-nrml {
   padding-bottom: 2rem;
 }
-.pads-btm-half,
-.column .pads-btm-half {
-  padding-bottom: 1rem;
-}
 .pads-lft-nrml,
 .column .pads-lft-nrml {
   padding-right: 2rem;
 }
+.pads-top-half,
+.column .pads-top-half {
+  padding-top: 1rem;
+}
+.pads-rgt-half,
+.column .pads-rgt-half {
+  padding-right: 1rem;
+}
+.pads-btm-half,
+.column .pads-btm-half {
+  padding-bottom: 1rem;
+}
 .pads-lft-half,
 .column .pads-lft-half {
   padding-right: 1rem;
+}
+.pads-top-qrtr,
+.column .pads-top-qrtr {
+  padding-top: 0.5rem;
+}
+.pads-rgt-qrtr,
+.column .pads-rgt-qrtr {
+  padding-right: 0.5rem;
+}
+.pads-btm-qrtr,
+.column .pads-btm-qrtr {
+  padding-bottom: 0.5rem;
+}
+.pads-lft-qrtr,
+.column .pads-lft-qrtr {
+  padding-right: 0.5rem;
+}
+.pads-top-8th,
+.column .pads-top-8th {
+  padding-top: 0.25rem;
+}
+.pads-rgt-8th,
+.column .pads-rgt-8th {
+  padding-right: 0.25rem;
+}
+.pads-btm-8th,
+.column .pads-btm-8th {
+  padding-bottom: 0.25rem;
+}
+.pads-lft-8th,
+.column .pads-lft-8th {
+  padding-right: 0.25rem;
 }
 .indent-1x,
 .column .indent-1x {
