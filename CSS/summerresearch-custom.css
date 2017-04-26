@@ -1,3 +1,7 @@
+/*! ╔═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗ 
+*   ║ OUE-WIDE CUSTOM LAYOUTS ############################################################################################# ║
+*   ╚═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝
+*/
 @import url(https://fonts.googleapis.com/css?family=Roboto+Mono:300|Roboto+Condensed:400,700|Roboto+Slab|PT+Serif);
 .has-mono-font {
   font-family: 'Roboto Mono', monospace, sans-serif;
@@ -11,7 +15,7 @@ body,
 .column h4,
 .column,
 header.main-header,
-div.column,
+.column,
 .gform_heading h3.gform_title {
   font-family: 'Open Sans', 'Lucida Sans', sans-serif;
 }
@@ -21,7 +25,7 @@ div.column,
 .has-alt-font,
 .column p.article-tagline.sans,
 span.accentuated-text,
-div.column ul.event-boxes > li > h4:nth-child(2) {
+.column ul.event-boxes > li > h4:nth-child(2) {
   font-family: 'Open Sans Condensed', 'Lucida Sans', sans-serif;
 }
 .has-subst-font {
@@ -3175,12 +3179,12 @@ body.single-post .column p.article-media-contacts + :not(.article-media-contacts
   margin-top: 0.5rem;
 }
 ul.content-boxes,
-div.column ul.event-boxes {
+.column ul.event-boxes {
   padding-right: 0;
   padding-left: 0;
 }
 ul.content-boxes > li,
-div.column ul.event-boxes > li {
+.column ul.event-boxes > li {
   position: relative;
   min-height: 320px;
   border-radius: 4px;
@@ -3192,67 +3196,67 @@ div.column ul.event-boxes > li {
 }
 @media all and (max-width: 1205px) {
   ul.content-boxes > li,
-  div.column ul.event-boxes > li {
+  .column ul.event-boxes > li {
     overflow-x: auto;
   }
 }
 @media all {
   ul.content-boxes > li p,
-  div.column ul.event-boxes > li p {
+  .column ul.event-boxes > li p {
     line-height: 1.275em;
     font-size: 0.938em;
   }
 }
 @media all and (min-width: 1073px) {
   ul.content-boxes > li p,
-  div.column ul.event-boxes > li p {
+  .column ul.event-boxes > li p {
     font-size: 1em;
   }
 }
 @media all and (min-width: 990px) and (max-width: 1072px) {
   ul.content-boxes > li p,
-  div.column ul.event-boxes > li p {
+  .column ul.event-boxes > li p {
     font-size: 0.938em;
   }
 }
 @media all and (min-width: 792px) and (max-width: 989px) {
   ul.content-boxes > li p,
-  div.column ul.event-boxes > li p {
+  .column ul.event-boxes > li p {
     font-size: 1em;
   }
 }
 @media all and (min-width: 481px) and (max-width: 791px) {
   ul.content-boxes > li p,
-  div.column ul.event-boxes > li p {
+  .column ul.event-boxes > li p {
     font-size: 0.938em;
   }
 }
 @media all and (min-width: 361px) and (max-width: 480px) {
   ul.content-boxes > li p,
-  div.column ul.event-boxes > li p {
+  .column ul.event-boxes > li p {
     font-size: 0.879844em;
   }
 }
 @media all and (max-width: 360px) {
   ul.content-boxes > li p,
-  div.column ul.event-boxes > li p {
+  .column ul.event-boxes > li p {
     font-size: 0.82529367em;
   }
 }
 ul.content-boxes > li p.email,
-div.column ul.event-boxes > li p.email {
+.column ul.event-boxes > li p.email {
   font-size: 0.9em;
   font-weight: bold;
 }
 ul.content-boxes > li > img,
-div.column ul.event-boxes > li > img {
+.column ul.event-boxes > li > img {
   position: absolute;
   top: 10px;
   left: 10px;
   width: 106px;
 }
 ul.content-boxes > li > .content,
-div.column ul.event-boxes > li > .content {
+.column ul.event-boxes > li > .content {
   position: relative;
   left: 121px;
   width: calc(100% - 136px);
@@ -3260,7 +3264,7 @@ div.column ul.event-boxes > li > .content {
   padding: 10px 10px 10px 5px;
 }
 ul.content-boxes > li + li,
-div.column ul.event-boxes > li + li {
+.column ul.event-boxes > li + li {
   margin-top: 2rem;
 }
 ul.external-links li {
@@ -6824,6 +6828,14 @@ div.auto-scroller ul li {
   list-style-type: none;
   list-style-image: none;
 }
+/*! ╚═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝
+*/
+/*! ╔═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗
+*   ║ LAYOUTS SPECIFIC TO THE SUMMER RESEARCH WEBSITE ##################################################################### ║
+*   ╠═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
+*   ║ #### 1.1) Sections: Body & Page Level ############################################################################### ║
+*   ╠═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
+*/
 @media all and (max-width: 1440px) {
   body {
     background: #b5babe;
@@ -6858,114 +6870,293 @@ main {
   background-position: right bottom;
   background-attachment: fixed;
 }
+/*! ╠═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
+*   ║ #### 1.2) Sections: Headers ######################################################################################### ║
+*   ╠═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
+*/
 header.main-header {
   background: #981e32 url(/wp-content/uploads/sites/50/2015/04/seamless-marble-texture_528x528.png) repeat scroll left top;
   color: #fff !important;
+}
+body.page.has-short-main-header main > header.main-header {
+  height: 85px;
+}
+body.page.has-short-main-header main > header.main-header > div.header-group {
+  padding-bottom: 1em !important;
+}
+body.page.has-short-main-header main .row.halves.article-header {
+  position: relative;
+  height: 230px;
+}
+body.page.has-short-main-header main .row.halves.article-header.gutter .column:not(.gutterless) {
+  padding-left: 0;
+  padding-right: 0;
+}
+body.page.has-short-main-header main .row.halves.article-header.pad-top .column {
+  padding-top: 0;
+}
+body.page.has-short-main-header main .row.halves.article-header .column.one {
+  position: absolute;
+  right: 40%;
+  left: 0;
+  width: auto;
+  height: 100%;
+  padding-left: 0;
+  padding-right: 0;
+  background: #5e6a71;
+}
+body.page.has-short-main-header main .row.halves.article-header .column.one > h1 {
+  position: absolute;
+  top: 50%;
+  right: 2rem;
+  left: 2rem;
+  margin-bottom: 0.35em;
+  color: #fff;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+@media (max-width: 693px) {
+  body.page.has-short-main-header main .row.halves.article-header .column.one > h1 {
+    font-size: 6.5vw;
+    right: 1rem;
+    left: 1rem;
+  }
+}
+body.page.has-short-main-header main .row.halves.article-header .column.one > :not(h1) {
+  display: none;
+}
+body.page.has-short-main-header main .row.halves.article-header .column.two {
+  position: absolute;
+  right: 0;
+  left: 60%;
+  width: auto;
+  height: 100%;
+  background-color: #8d959a;
+  background-position: center center;
+  background-size: cover;
+}
+@media (max-width: 693px) {
+  body.page.has-short-main-header main .row.halves.article-header .column.one,
+  body.page.has-short-main-header main .row.halves.article-header .column.two {
+    float: left;
+    clear: none;
+  }
 }
 .main-header sub:not(.unset),
 .main-header sup:not(.unset) {
   color: #fff !important;
 }
-/*  ╔══════════════════════════════════════════════════════════════════════════════════════════════╗ 
- *  ║ #### ASIDE.ARTICLE-SIDEBAR ################################################################# ║
- *  ╠==============================================================================================╣
- *  ║ Containers designed to be used as custom sidebars within a div.column element.               ║
- *  ║  ╘═» Customized here for use on the Summer Research website.                                 ║
- *  ╚══════════════════════════════════════════════════════════════════════════════════════════════╝
- */
-div.column aside {
+.column section.header-newsEvents {
+  background: url(/wp-content/uploads/sites/50/2015/10/section-bar.png) no-repeat left top, url(/wp-content/uploads/sites/50/2015/10/section-bar.png) no-repeat right top, url(/wp-content/uploads/sites/50/2015/06/wpbg-news-events-v2.png) no-repeat center;
+}
+/*! ╠═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
+*   ║ #### 1.3) Sections: Asides ########################################################################################## ║
+*   ╠═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
+*/
+.column aside {
   font-size: .8rem;
 }
-div.column aside + aside {
+.column aside + aside {
   margin-top: 2rem;
 }
-div.column aside p,
-div.column aside ul {
+.column aside p,
+.column aside ul {
   font-size: inherit;
 }
-div.column aside p:not(:last-child),
-div.column aside ul:not(:last-child) {
+.column aside p:not(:last-child),
+.column aside ul:not(:last-child) {
   margin-bottom: 0.8rem;
 }
-div.column aside p:last-child:not(.no-bottom-pad),
-div.column aside ul:last-child:not(.no-bottom-pad) {
+.column aside p:last-child:not(.no-bottom-pad),
+.column aside ul:last-child:not(.no-bottom-pad) {
   padding-bottom: 0;
 }
-div.column aside.article-sidebar {
+.column aside.article-sidebar {
   background: #f8f1eb url(/wp-content/uploads/sites/907/2015/09/tileable-concrete-texture_128x128.png) left top repeat;
 }
-div.column aside.article-sidebar.green-marble {
+.column aside.article-sidebar.green-marble {
   background: #e3dfcd url(/wp-content/uploads/sites/907/2015/09/seamless-marble-texture_528x528.png) left top repeat;
   border: 1px solid #afa370;
   box-shadow: 3px 3px 3px rgba(57, 50, 21, 0.3333);
 }
-div.column aside.article-sidebar.bluish-gray {
+.column aside.article-sidebar.bluish-gray {
   background: #edf3f4 url(/wp-content/uploads/sites/907/2015/09/vertically-tileable-gray-acrylic_opacity-0.15.png) left top repeat-y;
   background-size: 100% auto;
   border: 1px solid #464e54;
   box-shadow: 3px 3px 3px rgba(42, 48, 51, 0.3333);
 }
-div.column div.bluish-gray-acrylic-sidebar p,
-div.column div.green-marble-sidebar p,
-div.column div.gray-acrylic-sidebar p {
+.column div.bluish-gray-acrylic-sidebar p,
+.column div.green-marble-sidebar p,
+.column div.gray-acrylic-sidebar p {
   font-size: .75rem;
 }
-div.column div.bluish-gray-acrylic-sidebar h2 + hr,
-div.column div.green-marble-sidebar h2 + hr,
-div.column div.gray-acrylic-sidebar h2 + hr {
+.column div.bluish-gray-acrylic-sidebar h2 + hr,
+.column div.green-marble-sidebar h2 + hr,
+.column div.gray-acrylic-sidebar h2 + hr {
   margin-top: .25rem;
   background-color: rgba(70, 78, 84, 0.75);
 }
-div.column div.bluish-gray-acrylic-sidebar h3,
-div.column div.green-marble-sidebar h3,
-div.column div.gray-acrylic-sidebar h3 {
+.column div.bluish-gray-acrylic-sidebar h3,
+.column div.green-marble-sidebar h3,
+.column div.gray-acrylic-sidebar h3 {
   font-size: 1.275rem;
 }
-div.column div.bluish-gray-acrylic-sidebar h4,
-div.column div.green-marble-sidebar h4,
-div.column div.gray-acrylic-sidebar h4 {
+.column div.bluish-gray-acrylic-sidebar h4,
+.column div.green-marble-sidebar h4,
+.column div.gray-acrylic-sidebar h4 {
   font-size: 1.05rem;
 }
-div.column section.header-newsEvents {
-  background: url(/wp-content/uploads/sites/50/2015/10/section-bar.png) no-repeat left top, url(/wp-content/uploads/sites/50/2015/10/section-bar.png) no-repeat right top, url(/wp-content/uploads/sites/50/2015/06/wpbg-news-events-v2.png) no-repeat center;
+/*! ╠═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
+*   ║ #### 2.1) Content Grouping: Paragraphs ############################################################################## ║
+*   ╠═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
+*/
+.column p.rounded-box {
+  border: 1px solid #d9d9d9;
+  border-radius: 7px;
+  padding: 7px;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
 }
-/*  ╔══════════════════════════════════════════════════════════════════════════════════════════════╗ 
- *  ║ #### DIV STYLES ############################################################################ ║
- *  ╠==============================================================================================╣
- *  ║ Containers designed to be used as custom sidebars within a div.column element.               ║
- *  ║  ╘═» Customized here for use on the Summer Research website.                                 ║
- *  ╚══════════════════════════════════════════════════════════════════════════════════════════════╝
- */
-div.iframe-wrapper {
-  position: relative;
-  height: 0;
-  width: 97%;
-  margin-bottom: 0.5rem;
-  margin-right: auto;
-  margin-left: auto;
-  padding-bottom: 66.666667%;
-  overflow: hidden;
-  border: 1px solid #464e54;
+.column p.rounded-box > img {
+  border-radius: 7px;
+  margin: 4px;
 }
-div.iframe-wrapper > iframe {
-  position: absolute;
-  left: 0;
-  top: 0;
-  height: 100%;
-  width: 100%;
-  padding: 0;
+/*! ╠═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
+*   ║ #### 2.2) Content Grouping: Lists ################################################################################### ║
+*   ╠═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
+*/
+.column ul:not(.content-boxes):not(.event-boxes):not(.program-info) li {
+  list-style-image: url(/wp-content/uploads/sites/50/2015/05/ico-cougar-bullet-point.png);
 }
-div.iframe-wrapper.home {
-  width: 100%;
-  border: 0;
+.column ul:not(.content-boxes):not(.event-boxes):not(.program-info).gray-bullets li {
+  list-style-image: url(/wp-content/uploads/sites/50/2016/01/ico-cougar-bullet-point_gray.png);
 }
-@media all and (min-width: 1003px), all and (max-width: 989px) and (min-width: 805px) {
-  div.iframe-wrapper.home {
-    width: 720px;
-    height: 450px;
-    padding-bottom: 0;
+.column ul.event-boxes > li {
+  float: left;
+  width: calc(49% - 14px);
+  min-height: 198px;
+  margin-bottom: 2%;
+}
+@media all and (max-width: 693px) {
+  .column ul.event-boxes > li {
+    width: calc(98% - 14px);
   }
 }
+@media all and (max-width: 1205px) {
+  .column ul.event-boxes > li {
+    overflow-x: visible;
+  }
+}
+.column ul.event-boxes > li.full-width {
+  width: 98%;
+}
+.column ul.event-boxes > li + li {
+  margin-top: 0;
+}
+.column ul.event-boxes > li > h3:first-child {
+  padding: 0.5rem;
+  margin: 0;
+  background-color: rgba(0, 165, 189, 0.5);
+  border-top: 1px solid rgba(0, 165, 189, 0);
+  border-top-right-radius: 4px;
+  border-top-left-radius: 4px;
+  font-weight: bold;
+  font-size: 1.45em;
+  text-transform: none;
+  color: #3f6b72;
+}
+.column ul.event-boxes > li > h4:nth-child(2) {
+  padding: 0.3rem 0.5rem;
+  margin-bottom: 0;
+  margin-top: 0;
+  background-color: rgba(0, 165, 189, 0.75);
+  font-weight: 700;
+  font-size: 1.15em;
+  color: #edf3f4;
+}
+.column ul.event-boxes > li > h4:nth-child(2) + * {
+  margin-top: 0.5rem;
+}
+.column ul.event-boxes > li > p {
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
+  font-size: 0.95em;
+}
+.column ul.event-boxes > li > p:not(.centered):not(.centers-text) {
+  text-align: left;
+}
+.column ul.event-boxes > li > p:not(:last-child):not(.no-btm-spacing) {
+  margin-bottom: 1rem;
+}
+.column ul.event-boxes > li > *:last-child {
+  padding-bottom: 0.5rem;
+}
+.column ul.event-boxes > li:not(.deadline):nth-child(4n + 1) > h3:first-child {
+  background-color: rgba(255, 184, 28, 0.5);
+  color: #9e7510;
+}
+.column ul.event-boxes > li:not(.deadline):nth-child(4n + 1) > h4:nth-child(2) {
+  background-color: rgba(255, 184, 28, 0.75);
+  color: #f9f4e7;
+}
+.column ul.event-boxes > li:not(.deadline):nth-child(4n + 2) > h3:first-child {
+  background-color: rgba(173, 164, 0, 0.5);
+  color: #72652a;
+}
+.column ul.event-boxes > li:not(.deadline):nth-child(4n + 2) > h4:nth-child(2) {
+  background-color: rgba(173, 164, 0, 0.75);
+  color: #f4f2eb;
+}
+.column ul.event-boxes > li:not(.deadline):nth-child(4n + 3) > h3:first-child {
+  background-color: rgba(246, 134, 31, 0.5);
+  color: #925b29;
+}
+.column ul.event-boxes > li:not(.deadline):nth-child(4n + 3) > h4:nth-child(2) {
+  background-color: rgba(246, 134, 31, 0.75);
+  color: #f8f1eb;
+}
+.column ul.event-boxes > li.deadline > h3:first-child {
+  background-color: rgba(0, 0, 0, 0.95);
+  color: #fff;
+}
+.column ul.event-boxes > li.deadline > h4:nth-child(2) {
+  background-color: rgba(0, 0, 0, 0.75);
+  color: #fff;
+}
+ul.program-info {
+  padding-right: 0;
+  padding-left: 0;
+}
+ul.program-info > li {
+  float: left;
+  width: calc(49% - 14px);
+  margin-bottom: 2%;
+  border: 1px solid #d9d9d9;
+  border-radius: 7px;
+  list-style-type: none;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+  padding: 7px;
+  text-align: left;
+}
+@media all and (max-width: 693px) {
+  ul.program-info > li {
+    width: calc(98% - 14px);
+  }
+}
+ul.program-info > li > img {
+  border-radius: 7px;
+  margin: 4px 4px 4px 7px;
+}
+ul.program-info > li > a {
+  word-wrap: break-word;
+}
+ul.program-info > li.gutter-sizer {
+  width: calc(2% + 14px) !important;
+}
+/*! ╠═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
+*   ║ #### 2.3) Content Grouping: Interactive Containers ################################################################## ║
+*   ╠═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
+*/
 div.interactively-flipped-panels {
   background: #5e6a71 url(/wp-content/uploads/sites/907/2016/05/texture_brushed-metal.jpg) repeat scroll left top;
 }
@@ -7262,154 +7453,39 @@ div.interactively-flipped-panels.fifths div.container div.panel-wrapper.fifth di
 div.interactively-flipped-panels.fifths div.container div.panel-wrapper.fifth div.panel div.rear {
   background: url(/wp-content/uploads/sites/907/2017/01/homepage-buttons_summer-research-events_v02_hovered.jpg) no-repeat center center;
 }
-/*  ╔══════════════════════════════════════════════════════════════════════════════════════════════╗ 
- *  ║ #### CUSTOM STYLES ######################################################################### ║
- *  ╠==============================================================================================╣
- *  ║ Custom styles intended only for the Summer Research website.                                 ║
- *  ╚══════════════════════════════════════════════════════════════════════════════════════════════╝
- */
-div.column p.rounded-box {
-  border: 1px solid #d9d9d9;
-  border-radius: 7px;
-  padding: 7px;
-  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+/*! ╠═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
+*   ║ #### 3.1) Embedded Content: Iframes ################################################################################# ║
+*   ╠═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
+*/
+div.iframe-wrapper {
+  position: relative;
+  height: 0;
+  width: 97%;
+  margin-bottom: 0.5rem;
+  margin-right: auto;
+  margin-left: auto;
+  padding-bottom: 66.666667%;
+  overflow: hidden;
+  border: 1px solid #464e54;
 }
-div.column p.rounded-box > img {
-  border-radius: 7px;
-  margin: 4px;
+div.iframe-wrapper > iframe {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  padding: 0;
 }
-/*  ╔══════════════════════════════════════════════════════════════════════════════════════════════╗ 
- *  ║ #### LIST STYLES ########################################################################### ║
- *  ╠==============================================================================================╣
- *  ║ Containers designed to be used as custom sidebars within a div.column element.               ║
- *  ║  ╘═» Customized here for use on the Summer Research website.                                 ║
- *  ╚══════════════════════════════════════════════════════════════════════════════════════════════╝
- */
-div.column ul:not(.content-boxes):not(.event-boxes):not(.program-info) li {
-  list-style-image: url(/wp-content/uploads/sites/50/2015/05/ico-cougar-bullet-point.png);
+div.iframe-wrapper.home {
+  width: 100%;
+  border: 0;
 }
-div.column ul:not(.content-boxes):not(.event-boxes):not(.program-info).gray-bullets li {
-  list-style-image: url(/wp-content/uploads/sites/50/2016/01/ico-cougar-bullet-point_gray.png);
-}
-div.column ul.event-boxes > li {
-  float: left;
-  width: calc(49% - 14px);
-  min-height: 198px;
-  margin-bottom: 2%;
-}
-@media all and (max-width: 693px) {
-  div.column ul.event-boxes > li {
-    width: calc(98% - 14px);
+@media all and (min-width: 1003px), all and (max-width: 989px) and (min-width: 805px) {
+  div.iframe-wrapper.home {
+    width: 720px;
+    height: 450px;
+    padding-bottom: 0;
   }
 }
-@media all and (max-width: 1205px) {
-  div.column ul.event-boxes > li {
-    overflow-x: visible;
-  }
-}
-div.column ul.event-boxes > li.full-width {
-  width: 98%;
-}
-div.column ul.event-boxes > li + li {
-  margin-top: 0;
-}
-div.column ul.event-boxes > li > h3:first-child {
-  padding: 0.5rem;
-  margin: 0;
-  background-color: rgba(0, 165, 189, 0.5);
-  border-top: 1px solid rgba(0, 165, 189, 0);
-  border-top-right-radius: 4px;
-  border-top-left-radius: 4px;
-  font-weight: bold;
-  font-size: 1.45em;
-  text-transform: none;
-  color: #3f6b72;
-}
-div.column ul.event-boxes > li > h4:nth-child(2) {
-  padding: 0.3rem 0.5rem;
-  margin-bottom: 0;
-  margin-top: 0;
-  background-color: rgba(0, 165, 189, 0.75);
-  font-weight: 700;
-  font-size: 1.15em;
-  color: #edf3f4;
-}
-div.column ul.event-boxes > li > h4:nth-child(2) + * {
-  margin-top: 0.5rem;
-}
-div.column ul.event-boxes > li > p {
-  padding-right: 0.5rem;
-  padding-left: 0.5rem;
-  font-size: 0.95em;
-}
-div.column ul.event-boxes > li > p:not(.centered):not(.centers-text) {
-  text-align: left;
-}
-div.column ul.event-boxes > li > p:not(:last-child):not(.no-btm-spacing) {
-  margin-bottom: 1rem;
-}
-div.column ul.event-boxes > li > *:last-child {
-  padding-bottom: 0.5rem;
-}
-div.column ul.event-boxes > li:not(.deadline):nth-child(4n + 1) > h3:first-child {
-  background-color: rgba(255, 184, 28, 0.5);
-  color: #9e7510;
-}
-div.column ul.event-boxes > li:not(.deadline):nth-child(4n + 1) > h4:nth-child(2) {
-  background-color: rgba(255, 184, 28, 0.75);
-  color: #f9f4e7;
-}
-div.column ul.event-boxes > li:not(.deadline):nth-child(4n + 2) > h3:first-child {
-  background-color: rgba(173, 164, 0, 0.5);
-  color: #72652a;
-}
-div.column ul.event-boxes > li:not(.deadline):nth-child(4n + 2) > h4:nth-child(2) {
-  background-color: rgba(173, 164, 0, 0.75);
-  color: #f4f2eb;
-}
-div.column ul.event-boxes > li:not(.deadline):nth-child(4n + 3) > h3:first-child {
-  background-color: rgba(246, 134, 31, 0.5);
-  color: #925b29;
-}
-div.column ul.event-boxes > li:not(.deadline):nth-child(4n + 3) > h4:nth-child(2) {
-  background-color: rgba(246, 134, 31, 0.75);
-  color: #f8f1eb;
-}
-div.column ul.event-boxes > li.deadline > h3:first-child {
-  background-color: rgba(0, 0, 0, 0.95);
-  color: #fff;
-}
-div.column ul.event-boxes > li.deadline > h4:nth-child(2) {
-  background-color: rgba(0, 0, 0, 0.75);
-  color: #fff;
-}
-ul.program-info {
-  padding-right: 0;
-  padding-left: 0;
-}
-ul.program-info > li {
-  float: left;
-  width: calc(49% - 14px);
-  margin-bottom: 2%;
-  border: 1px solid #d9d9d9;
-  border-radius: 7px;
-  list-style-type: none;
-  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
-  padding: 7px;
-  text-align: left;
-}
-@media all and (max-width: 693px) {
-  ul.program-info > li {
-    width: calc(98% - 14px);
-  }
-}
-ul.program-info > li > img {
-  border-radius: 7px;
-  margin: 4px 4px 4px 7px;
-}
-ul.program-info > li > a {
-  word-wrap: break-word;
-}
-ul.program-info > li.gutter-sizer {
-  width: calc(2% + 14px) !important;
-}
+/*! ╚═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝
+*/
