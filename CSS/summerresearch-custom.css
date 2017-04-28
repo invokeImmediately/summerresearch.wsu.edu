@@ -4865,7 +4865,7 @@ div.recent-updates p.recent-update-3 {
 .column a.dark-red-button:hover {
   background-color: #c60c30;
 }
-.column a img {
+.column a img:not(.no-border) {
   border: 0.0625em solid rgba(94, 106, 113, 0.5);
   box-shadow: 2px 2px 2px rgba(94, 106, 113, 0.25);
   text-decoration: none;
@@ -4873,7 +4873,7 @@ div.recent-updates p.recent-update-3 {
   -moz-transition: border .4s linear, box-shadow .4s ease-in;
   transition: border .4s linear, box-shadow .4s ease-in;
 }
-.column a img:hover {
+.column a img:not(.no-border):hover {
   border: 0.0625em solid #981e32;
   box-shadow: 2px 2px 2px rgba(152, 30, 50, 0.3333);
 }
