@@ -5271,7 +5271,7 @@ img.symbolic-image {
     display: none;
   }
 }
-@media all and (min-width: 481px) {
+@media all and (max-width: 480px) {
   img.hide-on-mobile {
     display: none;
   }
