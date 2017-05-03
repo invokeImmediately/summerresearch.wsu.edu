@@ -5266,6 +5266,16 @@ img.symbolic-image {
     width: 96px;
   }
 }
+@media all and (min-width: 481px) {
+  img.show-on-mobile {
+    display: none;
+  }
+}
+@media all and (min-width: 481px) {
+  img.hide-on-mobile {
+    display: none;
+  }
+}
 figure figcaption {
   font-size: 0.85em;
   text-align: center;
