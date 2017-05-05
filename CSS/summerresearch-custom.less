@@ -1,19 +1,34 @@
+/*! ╔═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗ 
+*   ║ OUE-WIDE CUSTOM LAYOUTS ############################################################################################# ║
+*   ╚═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝
+*/
 @grid-behavior: "hybrid";
 @import "..\WSU-UE---CSS\wp-master-style-sheet.less";
 
+/*! ╚═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝
+*/
+
+/*! ╔═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗
+*   ║ LAYOUTS SPECIFIC TO THE SUMMER RESEARCH WEBSITE ##################################################################### ║
+*   ╠═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
+*   ║ #### 1.1) Sections: Body & Page Level ############################################################################### ║
+*   ╠═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
+*/
 body {
-    @media all and (max-width: @v-wdscrn-bckgrnd) {
-        background: @hex-light-gray;
-    }
-    @media all and (min-width: (@v-wdscrn-bckgrnd+1)) and (max-width: @v-wuxga-width) {
-        background: @hex-light-gray url(/wp-content/uploads/sites/907/2016/05/tileable-eroded-scratch-metal-texture_wuxga.jpg) repeat-y fixed right top;
-    }
-    @media all and (min-width: (@v-wuxga-width+1)) and (max-width: @v-wqxga-width) {
-        background: @hex-light-gray url(/wp-content/uploads/sites/907/2016/05/tileable-eroded-scratch-metal-texture_wqxga.jpg) repeat-y fixed right top;
-    }
-    @media all and (min-width: (@v-wqxga-width+1)) {
-        background: @hex-light-gray url(/wp-content/uploads/sites/907/2016/05/tileable-eroded-scratch-metal-texture_wqxga.jpg) repeat-y fixed 1080px top;
-    }
+    @media all {
+		@media (max-width: @v-wdscrn-bckgrnd) {
+			background: @hex-light-gray;
+		}
+		@media (min-width: (@v-wdscrn-bckgrnd + 1)) and (max-width: @v-wuxga-width) {
+			background: @hex-light-gray url(/wp-content/uploads/sites/907/2016/05/tileable-eroded-scratch-metal-texture_wuxga.jpg) repeat-y fixed right top;
+		}
+		@media (min-width: (@v-wuxga-width + 1)) and (max-width: @v-wqxga-width) {
+			background: @hex-light-gray url(/wp-content/uploads/sites/907/2016/05/tileable-eroded-scratch-metal-texture_wqxga.jpg) repeat-y fixed right top;
+		}
+		@media (min-width: (@v-wqxga-width + 1)) {
+			background: @hex-light-gray url(/wp-content/uploads/sites/907/2016/05/tileable-eroded-scratch-metal-texture_wqxga.jpg) repeat-y fixed 1080px top;
+		}
+	}
 }
 
 main {
@@ -33,24 +48,38 @@ main {
 	background-attachment: fixed;
 }
 
+/*! ╠═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
+*   ║ #### 1.2) Sections: Headers ######################################################################################### ║
+*   ╠═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
+*/
 header.main-header {
     &:extend(.has-dflt-font);
 	background: #981e32 url(/wp-content/uploads/sites/50/2015/04/seamless-marble-texture_528x528.png) repeat scroll left top;
 	color: #fff !important;
 }
 
+.use-sectional-article-headers();
+
 .main-header sub:not(.unset), .main-header sup:not(.unset) {
 	color: #fff !important;
 }
 
-/*  ╔══════════════════════════════════════════════════════════════════════════════════════════════╗ 
- *  ║ #### ASIDE.ARTICLE-SIDEBAR ################################################################# ║
- *  ╠==============================================================================================╣
- *  ║ Containers designed to be used as custom sidebars within a div.column element.               ║
- *  ║  ╘═» Customized here for use on the Summer Research website.                                 ║
- *  ╚══════════════════════════════════════════════════════════════════════════════════════════════╝
- */
-div.column {
+.column {
+	&:extend(.has-dflt-font);
+	section {
+		&.header-newsEvents {
+			background: url(/wp-content/uploads/sites/50/2015/10/section-bar.png) no-repeat left top,
+                url(/wp-content/uploads/sites/50/2015/10/section-bar.png) no-repeat right top,
+                url(/wp-content/uploads/sites/50/2015/06/wpbg-news-events-v2.png) no-repeat center;
+		}
+	}
+}
+
+/*! ╠═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
+*   ║ #### 1.3) Sections: Asides ########################################################################################## ║
+*   ╠═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
+*/
+.column {
 	aside {
 		font-size: .8rem;
         &+aside {
@@ -82,7 +111,7 @@ div.column {
 	}
 }
 
-div.column {
+.column {
 	div.bluish-gray-acrylic-sidebar, div.green-marble-sidebar, div.gray-acrylic-sidebar {
 		p {
 			font-size: .75rem;
@@ -100,54 +129,166 @@ div.column {
 	}
 }
 
-div.column {
-	&:extend(.has-dflt-font);
-	section {
-		&.header-newsEvents {
-			background: url(/wp-content/uploads/sites/50/2015/10/section-bar.png) no-repeat left top,
-                url(/wp-content/uploads/sites/50/2015/10/section-bar.png) no-repeat right top,
-                url(/wp-content/uploads/sites/50/2015/06/wpbg-news-events-v2.png) no-repeat center;
-		}
-	}
+/*! ╠═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
+*   ║ #### 2.1) Content Grouping: Paragraphs ############################################################################## ║
+*   ╠═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
+*/
+.column p.rounded-box {
+    border: 1px solid #d9d9d9;
+    border-radius: 7px;
+    padding: 7px;
+    box-shadow: 1px 1px 1px rgba(0,0,0,0.2);
+    & > img {
+        border-radius: 7px;
+        margin: 4px;
+    }
 }
 
-/*  ╔══════════════════════════════════════════════════════════════════════════════════════════════╗ 
- *  ║ #### DIV STYLES ############################################################################ ║
- *  ╠==============================================================================================╣
- *  ║ Containers designed to be used as custom sidebars within a div.column element.               ║
- *  ║  ╘═» Customized here for use on the Summer Research website.                                 ║
- *  ╚══════════════════════════════════════════════════════════════════════════════════════════════╝
- */
-div.iframe-wrapper {
-	position: relative;
-	height: 0;
-	width: 97%;
-	margin-bottom: (@v-dflt-spcng / 4);
-	margin-right: auto;
-	margin-left: auto;
-	padding-bottom: 66.666667%;
-	overflow: hidden;
-	border: 1px solid @hex-darker-gray;
-	& > iframe {
-		position: absolute;
-			left: 0;
-			 top: 0;
-		height: 100%;
-		 width: 100%;
-		padding: 0;
-	}
-	&.home {
-		width: 100%;
-		border: 0;
-		@media all and (min-width: 1003px),
-		all and (max-width: @v-spn-thrshld) and (min-width: 805px) {
-			width: 720px;
-			height: 450px;
-			padding-bottom: 0;
-		}
-	}
+/*! ╠═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
+*   ║ #### 2.2) Content Grouping: Lists ################################################################################### ║
+*   ╠═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
+*/
+.column ul:not(.content-boxes):not(.event-boxes):not(.program-info) {
+    li { list-style-image: url(/wp-content/uploads/sites/50/2015/05/ico-cougar-bullet-point.png); }
+    &.gray-bullets {
+        li { list-style-image: url(/wp-content/uploads/sites/50/2016/01/ico-cougar-bullet-point_gray.png); }
+    }
 }
 
+.column ul.event-boxes {
+    &:extend(ul.content-boxes all);
+    & > li {
+        float: left;
+        width: ~"calc(49% - 14px)";
+        @media all and (max-width: @v-rghtclmn-thrshld) {
+            width: ~"calc(98% - 14px)";
+        }
+        min-height: 198px;
+        margin-bottom: 2%;
+        @media all and (max-width: @v-bckgrnd-thrshld) {
+            overflow-x: visible;
+        }
+        &.full-width {
+            width: 98%;
+        }
+        & + li {
+            margin-top: 0;
+        }
+        & > h3:first-child {
+            padding: (@v-dflt-spcng / 4);
+            margin: 0;
+            .rgb-accent-blue(); background-color: rgba(@rval, @gval, @bval, 0.5);
+            border-top: 1px solid rgba(@rval, @gval, @bval, 0.0);
+            border-top-right-radius: 4px;
+             border-top-left-radius: 4px;
+            font-weight: bold;
+              font-size: 1.45em;
+            text-transform: none;
+            color: @hex-dark-blue;
+        }
+        & > h4:nth-child(2) {
+            &:extend(.has-alt-font);
+            padding: (@v-dflt-spcng * 3 / 20) (@v-dflt-spcng / 4);
+            margin-bottom: 0;
+               margin-top: 0;
+            .rgb-accent-blue(); background-color: rgba(@rval, @gval, @bval, 0.75);
+            font-weight: 700;
+              font-size: 1.15em;
+            color: @hex-bright-blue;
+            & + * {
+                margin-top: (@v-dflt-spcng / 4);
+            }
+        }
+        & > p {
+			&:not(.centered):not(.centers-text) {
+				text-align: left;
+			}
+            padding-right: (@v-dflt-spcng / 4);
+             padding-left: (@v-dflt-spcng / 4);
+            font-size: 0.95em;
+			&:not(:last-child):not(.no-btm-spacing) {
+                margin-bottom: @v-btm-mrgns;
+			}
+        }
+        & > *:last-child {
+            padding-bottom: (@v-dflt-spcng / 4);
+        }
+        &:not(.deadline):nth-child(4n + 1) {
+            & > h3:first-child {
+                background-color: rgba(red(@hex-accent-yellow), green(@hex-accent-yellow), blue(@hex-accent-yellow), 0.5);
+                color: @hex-dark-yellow;
+            }
+            & > h4:nth-child(2) {
+                background-color: rgba(red(@hex-accent-yellow), green(@hex-accent-yellow), blue(@hex-accent-yellow), 0.75);
+                color: @hex-bright-yellow;
+            }
+        }
+        &:not(.deadline):nth-child(4n + 2) {
+            & > h3:first-child {
+                background-color: rgba(red(@hex-accent-green), green(@hex-accent-green), blue(@hex-accent-green), 0.5);
+                color: @hex-dark-green;
+            }
+            & > h4:nth-child(2) {
+                background-color: rgba(red(@hex-accent-green), green(@hex-accent-green), blue(@hex-accent-green), 0.75);
+                color: @hex-bright-green;
+            }
+        }
+        &:not(.deadline):nth-child(4n + 3) {
+            & > h3:first-child {
+                background-color: rgba(red(@hex-accent-orange), green(@hex-accent-orange), blue(@hex-accent-orange), 0.5);
+                color: @hex-dark-orange;
+            }
+            & > h4:nth-child(2) {
+                background-color: rgba(red(@hex-accent-orange), green(@hex-accent-orange), blue(@hex-accent-orange), 0.75);
+                color: @hex-bright-orange;
+            }
+        }
+		&.deadline {
+            & > h3:first-child {
+                background-color: rgba(red(@hex-black), green(@hex-black), blue(@hex-black), 0.95);
+                color: @hex-white;
+            }
+            & > h4:nth-child(2) {
+                background-color: rgba(red(@hex-black), green(@hex-black), blue(@hex-black), 0.75);
+                color: @hex-white;
+            }
+		}
+    }
+}
+
+ul.program-info {
+    padding-right: 0;
+    padding-left: 0;
+    & > li {
+        float: left;
+        width: ~"calc(49% - 14px)";
+        @media all and (max-width: @v-rghtclmn-thrshld) {
+            width: ~"calc(98% - 14px)";
+        }
+        margin-bottom: 2%;
+        border: 1px solid #d9d9d9;
+        border-radius: 7px;
+        list-style-type: none;
+        box-shadow: 1px 1px 1px rgba(red(@hex-black), green(@hex-black), blue(@hex-black), 0.2);
+		padding: 7px;
+		text-align: left;
+		& > img {
+			border-radius: 7px;
+			margin: 4px 4px 4px 7px;
+		}
+		& > a {
+			word-wrap: break-word;
+		}
+		&.gutter-sizer {
+			width: ~"calc(2% + 14px) !important";
+		}
+    }
+}
+
+/*! ╠═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
+*   ║ #### 2.3) Content Grouping: Interactive Containers ################################################################## ║
+*   ╠═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
+*/
 div.interactively-flipped-panels {
     background: @hex-dark-gray url(/wp-content/uploads/sites/907/2016/05/texture_brushed-metal.jpg) repeat scroll left top ;
     div.container {
@@ -432,7 +573,7 @@ div.interactively-flipped-panels {
 							background: url(/wp-content/uploads/sites/907/2017/01/homepage-buttons_summer-research-poster-symposium_v02.jpg) no-repeat center center;
 						}
 						div.rear {
-							background: url(/wp-content/uploads/sites/907/2017/01/homepage-buttons_summer-research-poster-symposium_v02_hovered.jpg) no-repeat center center;
+ 							background: url(/wp-content/uploads/sites/907/2017/01/homepage-buttons_summer-research-poster-symposium_v02_hovered.jpg) no-repeat center center;
 						}
 					}
 				}
@@ -451,170 +592,45 @@ div.interactively-flipped-panels {
 	}
 }
 
-/*  ╔══════════════════════════════════════════════════════════════════════════════════════════════╗ 
- *  ║ #### CUSTOM STYLES ######################################################################### ║
- *  ╠==============================================================================================╣
- *  ║ Custom styles intended only for the Summer Research website.                                 ║
- *  ╚══════════════════════════════════════════════════════════════════════════════════════════════╝
- */
-div.column p.rounded-box {
-    border: 1px solid #d9d9d9;
-    border-radius: 7px;
-    padding: 7px;
-    box-shadow: 1px 1px 1px rgba(0,0,0,0.2);
-    & > img {
-        border-radius: 7px;
-        margin: 4px;
-    }
+/*! ╠═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
+*   ║ #### 3.1) Embedded Content: Iframes ################################################################################# ║
+*   ╠═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
+*/
+div.iframe-wrapper {
+	position: relative;
+	height: 0;
+	width: 97%;
+	margin-bottom: (@v-dflt-spcng / 4);
+	margin-right: auto;
+	margin-left: auto;
+	padding-bottom: 66.666667%;
+	overflow: hidden;
+	border: 1px solid @hex-darker-gray;
+	& > iframe {
+		position: absolute;
+			left: 0;
+			 top: 0;
+		height: 100%;
+		 width: 100%;
+		padding: 0;
+	}
+	&.home {
+		width: 100%;
+		border: 0;
+		@media all and (min-width: 1003px),
+		all and (max-width: @v-spn-thrshld) and (min-width: 805px) {
+			width: 720px;
+			height: 450px;
+			padding-bottom: 0;
+		}
+	}
 }
 
-/*  ╔══════════════════════════════════════════════════════════════════════════════════════════════╗ 
- *  ║ #### LIST STYLES ########################################################################### ║
- *  ╠==============================================================================================╣
- *  ║ Containers designed to be used as custom sidebars within a div.column element.               ║
- *  ║  ╘═» Customized here for use on the Summer Research website.                                 ║
- *  ╚══════════════════════════════════════════════════════════════════════════════════════════════╝
- */
-div.column ul:not(.content-boxes):not(.event-boxes):not(.program-info) {
-    li { list-style-image: url(/wp-content/uploads/sites/50/2015/05/ico-cougar-bullet-point.png); }
-    &.gray-bullets {
-        li { list-style-image: url(/wp-content/uploads/sites/50/2016/01/ico-cougar-bullet-point_gray.png); }
-    }
-}
-//
-//     ┌─────────────────────────────────────────────────────────────────────────────────────────────────┐
-//     │ ++++ Custom UL selectors ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ │
-//     └─────────────────────────────────────────────────────────────────────────────────────────────────┘
-//
-div.column ul.event-boxes {
-    &:extend(ul.content-boxes all);
-}
+/*! ╠═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
+*   ║ #### 4.1) Layouts included via LESS mixins ########################################################################## ║
+*   ╠═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
+*/
+.use-linked-columns();
 
-div.column ul.event-boxes {
-    & > li {
-        float: left;
-        width: ~"calc(49% - 14px)";
-        @media all and (max-width: @v-rghtclmn-thrshld) {
-            width: ~"calc(98% - 14px)";
-        }
-        min-height: 198px;
-        margin-bottom: 2%;
-        @media all and (max-width: @v-bckgrnd-thrshld) {
-            overflow-x: visible;
-        }
-        &.full-width {
-            width: 98%;
-        }
-        & + li {
-            margin-top: 0;
-        }
-        & > h3:first-child {
-            padding: (@v-dflt-spcng / 4);
-            margin: 0;
-            .rgb-accent-blue(); background-color: rgba(@rval, @gval, @bval, 0.5);
-            border-top: 1px solid rgba(@rval, @gval, @bval, 0.0);
-            border-top-right-radius: 4px;
-             border-top-left-radius: 4px;
-            font-weight: bold;
-              font-size: 1.45em;
-            text-transform: none;
-            color: @hex-dark-blue;
-        }
-        & > h4:nth-child(2) {
-            &:extend(.has-alt-font);
-            padding: (@v-dflt-spcng * 3 / 20) (@v-dflt-spcng / 4);
-            margin-bottom: 0;
-               margin-top: 0;
-            .rgb-accent-blue(); background-color: rgba(@rval, @gval, @bval, 0.75);
-            font-weight: 700;
-              font-size: 1.15em;
-            color: @hex-bright-blue;
-            & + * {
-                margin-top: (@v-dflt-spcng / 4);
-            }
-        }
-        & > p {
-			&:not(.centered):not(.centers-text) {
-				text-align: left;
-			}
-            padding-right: (@v-dflt-spcng / 4);
-             padding-left: (@v-dflt-spcng / 4);
-            font-size: 0.95em;
-			&:not(:last-child):not(.no-btm-spacing) {
-                margin-bottom: @v-btm-mrgns;
-			}
-        }
-        & > *:last-child {
-            padding-bottom: (@v-dflt-spcng / 4);
-        }
-        &:not(.deadline):nth-child(4n + 1) {
-            & > h3:first-child {
-                background-color: rgba(red(@hex-accent-yellow), green(@hex-accent-yellow), blue(@hex-accent-yellow), 0.5);
-                color: @hex-dark-yellow;
-            }
-            & > h4:nth-child(2) {
-                background-color: rgba(red(@hex-accent-yellow), green(@hex-accent-yellow), blue(@hex-accent-yellow), 0.75);
-                color: @hex-bright-yellow;
-            }
-        }
-        &:not(.deadline):nth-child(4n + 2) {
-            & > h3:first-child {
-                background-color: rgba(red(@hex-accent-green), green(@hex-accent-green), blue(@hex-accent-green), 0.5);
-                color: @hex-dark-green;
-            }
-            & > h4:nth-child(2) {
-                background-color: rgba(red(@hex-accent-green), green(@hex-accent-green), blue(@hex-accent-green), 0.75);
-                color: @hex-bright-green;
-            }
-        }
-        &:not(.deadline):nth-child(4n + 3) {
-            & > h3:first-child {
-                background-color: rgba(red(@hex-accent-orange), green(@hex-accent-orange), blue(@hex-accent-orange), 0.5);
-                color: @hex-dark-orange;
-            }
-            & > h4:nth-child(2) {
-                background-color: rgba(red(@hex-accent-orange), green(@hex-accent-orange), blue(@hex-accent-orange), 0.75);
-                color: @hex-bright-orange;
-            }
-        }
-		&.deadline {
-            & > h3:first-child {
-                background-color: rgba(red(@hex-black), green(@hex-black), blue(@hex-black), 0.95);
-                color: @hex-white;
-            }
-            & > h4:nth-child(2) {
-                background-color: rgba(red(@hex-black), green(@hex-black), blue(@hex-black), 0.75);
-                color: @hex-white;
-            }
-		}
-    }
-}
-
-ul.program-info {
-    padding-right: 0;
-     padding-left: 0;
-    & > li {
-        float: left;
-        width: ~"calc(49% - 14px)";
-        @media all and (max-width: @v-rghtclmn-thrshld) {
-            width: ~"calc(98% - 14px)";
-        }
-        margin-bottom: 2%;
-        border: 1px solid #d9d9d9;
-        border-radius: 7px;
-        list-style-type: none;
-        box-shadow: 1px 1px 1px rgba(red(@hex-black), green(@hex-black), blue(@hex-black), 0.2);
-		padding: 7px;
-		text-align: left;
-		& > img {
-			border-radius: 7px;
-			margin: 4px 4px 4px 7px;
-		}
-		& > a {
-			word-wrap: break-word;
-		}
-		&.gutter-sizer {
-			width: ~"calc(2% + 14px) !important";
-		}
-    }
-}
+/*! ╚═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝
+*/
