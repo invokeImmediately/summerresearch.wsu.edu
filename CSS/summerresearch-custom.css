@@ -6993,6 +6993,10 @@ body.page.has-short-main-header main .row.halves.article-header .column.one > h1
     left: 1rem;
   }
 }
+body.page.has-short-main-header main .row.halves.article-header .column.one > h1 > span.location {
+  font-size: 0.5em;
+  color: #eff0f1;
+}
 body.page.has-short-main-header main .row.halves.article-header .column.one > :not(h1) {
   display: none;
 }
