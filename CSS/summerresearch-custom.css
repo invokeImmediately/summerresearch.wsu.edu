@@ -6993,6 +6993,7 @@ body.page.has-short-main-header main .row.halves.article-header .column.one head
   }
 }
 body.page.has-short-main-header main .row.halves.article-header .column.one h1 {
+  margin-top: 0;
   color: #fff;
 }
 @media (max-width: 693px) {
@@ -7001,6 +7002,7 @@ body.page.has-short-main-header main .row.halves.article-header .column.one h1 {
   }
 }
 body.page.has-short-main-header main .row.halves.article-header .column.one p.parent-page {
+  margin-bottom: 0.125em;
   color: #eff0f1;
 }
 @media (max-width: 693px) {
