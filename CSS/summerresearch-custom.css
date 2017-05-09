@@ -7006,10 +7006,10 @@ body.page.has-short-main-header main .row.halves.article-header .column.one p.lo
     font-size: 3.25vw;
   }
 }
-body.page.has-short-main-header main .row.halves.article-header .column.one > :not(:first-child) {
+body.page.has-short-main-header main .row.halves.article-header .column.one > :not(:first-child):not(header:first-child + *) {
   display: none;
 }
-body.page.has-short-main-header main .row.halves.article-header .column.one > :first-child:not(h1):not(div) {
+body.page.has-short-main-header main .row.halves.article-header .column.one > :not(h1):not(div) {
   display: none;
 }
 body.page.has-short-main-header main .row.halves.article-header .column.two {
