@@ -6975,7 +6975,8 @@ body.page.has-short-main-header main .row.halves.article-header .column.one {
   padding-right: 0;
   background: #5e6a71;
 }
-body.page.has-short-main-header main .row.halves.article-header .column.one > :first-child {
+body.page.has-short-main-header main .row.halves.article-header .column.one > :first-child,
+body.page.has-short-main-header main .row.halves.article-header .column.one header:first-child + * {
   position: absolute;
   top: 50%;
   right: 2rem;
@@ -6985,7 +6986,8 @@ body.page.has-short-main-header main .row.halves.article-header .column.one > :f
   transform: translateY(-50%);
 }
 @media (max-width: 693px) {
-  body.page.has-short-main-header main .row.halves.article-header .column.one > :first-child {
+  body.page.has-short-main-header main .row.halves.article-header .column.one > :first-child,
+  body.page.has-short-main-header main .row.halves.article-header .column.one header:first-child + * {
     right: 1rem;
     left: 1rem;
   }
