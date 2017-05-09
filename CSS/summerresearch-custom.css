@@ -6975,29 +6975,41 @@ body.page.has-short-main-header main .row.halves.article-header .column.one {
   padding-right: 0;
   background: #5e6a71;
 }
-body.page.has-short-main-header main .row.halves.article-header .column.one > h1 {
+body.page.has-short-main-header main .row.halves.article-header .column.one > :first-child {
   position: absolute;
   top: 50%;
   right: 2rem;
   left: 2rem;
-  margin-bottom: 0.35em;
-  color: #fff;
   -webkit-transform: translateY(-50%);
   -moz-transform: translateY(-50%);
   transform: translateY(-50%);
 }
 @media (max-width: 693px) {
-  body.page.has-short-main-header main .row.halves.article-header .column.one > h1 {
-    font-size: 6.5vw;
+  body.page.has-short-main-header main .row.halves.article-header .column.one > :first-child {
     right: 1rem;
     left: 1rem;
   }
 }
-body.page.has-short-main-header main .row.halves.article-header .column.one > h1 > span.location {
-  font-size: 0.5em;
+body.page.has-short-main-header main .row.halves.article-header .column.one h1 {
+  color: #fff;
+}
+@media (max-width: 693px) {
+  body.page.has-short-main-header main .row.halves.article-header .column.one h1 {
+    font-size: 6.5vw;
+  }
+}
+body.page.has-short-main-header main .row.halves.article-header .column.one p.location {
   color: #eff0f1;
 }
-body.page.has-short-main-header main .row.halves.article-header .column.one > :not(h1) {
+@media (max-width: 693px) {
+  body.page.has-short-main-header main .row.halves.article-header .column.one p.location {
+    font-size: 3.25vw;
+  }
+}
+body.page.has-short-main-header main .row.halves.article-header .column.one > :not(:first-child) {
+  display: none;
+}
+body.page.has-short-main-header main .row.halves.article-header .column.one > :first-child:not(h1):not(div) {
   display: none;
 }
 body.page.has-short-main-header main .row.halves.article-header .column.two {
