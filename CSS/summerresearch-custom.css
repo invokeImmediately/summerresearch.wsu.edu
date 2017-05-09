@@ -7000,11 +7000,11 @@ body.page.has-short-main-header main .row.halves.article-header .column.one h1 {
     font-size: 6.5vw;
   }
 }
-body.page.has-short-main-header main .row.halves.article-header .column.one p.location {
+body.page.has-short-main-header main .row.halves.article-header .column.one p.parent-page {
   color: #eff0f1;
 }
 @media (max-width: 693px) {
-  body.page.has-short-main-header main .row.halves.article-header .column.one p.location {
+  body.page.has-short-main-header main .row.halves.article-header .column.one p.parent-page {
     font-size: 3.25vw;
   }
 }
