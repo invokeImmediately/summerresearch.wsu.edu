@@ -51,6 +51,7 @@
 	}
 	
     function InitFacultyEmailAutoEntry(slctrSelectBox, slctrHiddenFields) {
+		// TODO: Update for Summer 2017
 		$(slctrSelectBox).each(function () {
 			var $selectField = $(this);
 			var $emailField = $selectField.next(slctrHiddenFields);
@@ -71,6 +72,7 @@
     }
 	
 	function fillHiddenFields(fieldsToFill) {
+		// TODO: Update for Summer 2017
 		if(fieldsToFill instanceof FieldsToFill && fieldsToFill.isValid()) {
 			switch(fieldsToFill.selectionMade) {
 				case "Atmospheric Chemistry and Climate Change: Measurements and Modeling in the Pacific Northwest (Shelley Pressley)":
