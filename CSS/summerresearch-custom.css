@@ -2060,6 +2060,7 @@ footer.article-footer div.author-info {
   font-size: 0.9em;
 }
 .column p.vpue-jump-bar {
+  position: relative;
   padding: 0 1rem 1rem;
   margin: 2rem;
   background-color: rgba(0, 165, 189, 0.5);
@@ -3246,85 +3247,88 @@ ul.content-boxes,
 ul.content-boxes > li,
 .column ul.event-boxes > li {
   position: relative;
+  list-style-type: none;
+}
+ul.content-boxes > li:not(.blank),
+.column ul.event-boxes > li:not(.blank) {
   min-height: 320px;
   border-radius: 4px;
   box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.22);
   -webkit-box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.22);
   border-top: 1px solid rgba(0, 0, 0, 0.1);
   background-color: #fff;
-  list-style-type: none;
 }
 @media all and (max-width: 1205px) {
-  ul.content-boxes > li,
-  .column ul.event-boxes > li {
+  ul.content-boxes > li:not(.blank),
+  .column ul.event-boxes > li:not(.blank) {
     overflow-x: auto;
   }
 }
 @media all {
-  ul.content-boxes > li p,
-  .column ul.event-boxes > li p {
+  ul.content-boxes > li:not(.blank) p,
+  .column ul.event-boxes > li:not(.blank) p {
     line-height: 1.275em;
     font-size: 0.938em;
   }
 }
 @media all and (min-width: 1073px) {
-  ul.content-boxes > li p,
-  .column ul.event-boxes > li p {
+  ul.content-boxes > li:not(.blank) p,
+  .column ul.event-boxes > li:not(.blank) p {
     font-size: 1em;
   }
 }
 @media all and (min-width: 990px) and (max-width: 1072px) {
-  ul.content-boxes > li p,
-  .column ul.event-boxes > li p {
+  ul.content-boxes > li:not(.blank) p,
+  .column ul.event-boxes > li:not(.blank) p {
     font-size: 0.938em;
   }
 }
 @media all and (min-width: 792px) and (max-width: 989px) {
-  ul.content-boxes > li p,
-  .column ul.event-boxes > li p {
+  ul.content-boxes > li:not(.blank) p,
+  .column ul.event-boxes > li:not(.blank) p {
     font-size: 1em;
   }
 }
 @media all and (min-width: 481px) and (max-width: 791px) {
-  ul.content-boxes > li p,
-  .column ul.event-boxes > li p {
+  ul.content-boxes > li:not(.blank) p,
+  .column ul.event-boxes > li:not(.blank) p {
     font-size: 0.938em;
   }
 }
 @media all and (min-width: 361px) and (max-width: 480px) {
-  ul.content-boxes > li p,
-  .column ul.event-boxes > li p {
+  ul.content-boxes > li:not(.blank) p,
+  .column ul.event-boxes > li:not(.blank) p {
     font-size: 0.879844em;
   }
 }
 @media all and (max-width: 360px) {
-  ul.content-boxes > li p,
-  .column ul.event-boxes > li p {
+  ul.content-boxes > li:not(.blank) p,
+  .column ul.event-boxes > li:not(.blank) p {
     font-size: 0.82529367em;
   }
 }
-ul.content-boxes > li p.email,
-.column ul.event-boxes > li p.email {
+ul.content-boxes > li:not(.blank) p.email,
+.column ul.event-boxes > li:not(.blank) p.email {
   font-size: 0.9em;
   font-weight: bold;
 }
-ul.content-boxes > li > img,
-.column ul.event-boxes > li > img {
+ul.content-boxes > li:not(.blank) > img,
+.column ul.event-boxes > li:not(.blank) > img {
   position: absolute;
   top: 10px;
   left: 10px;
   width: 106px;
 }
-ul.content-boxes > li > .content,
-.column ul.event-boxes > li > .content {
+ul.content-boxes > li:not(.blank) > .content,
+.column ul.event-boxes > li:not(.blank) > .content {
   position: relative;
   left: 121px;
   width: calc(100% - 136px);
   min-width: 189px;
   padding: 10px 10px 10px 5px;
 }
-ul.content-boxes > li + li,
-.column ul.event-boxes > li + li {
+ul.content-boxes > li:not(.blank) + li,
+.column ul.event-boxes > li:not(.blank) + li {
   margin-top: 2rem;
 }
 ul.external-links li {
@@ -3334,6 +3338,9 @@ ul.external-links li {
   ul.cascaded-layout[style] {
     height: auto !important;
   }
+}
+ul.cascaded-layout > li {
+  list-style-type: none;
 }
 @media print {
   ul.cascaded-layout > li {
@@ -3356,6 +3363,34 @@ ul.cascaded-layout > li.gutter-sizer {
 }
 ul.cascaded-layout > li.gutter-sizer {
   width: 2% !important;
+}
+ul.cascaded-layout.blank {
+  padding: 0;
+  margin-top: 1rem !important;
+  font-size: 1rem !important;
+}
+ul.cascaded-layout.blank > li {
+  float: left;
+  width: 48.5%;
+  margin-bottom: 3%;
+  list-style-type: none;
+}
+@media all and (max-width: 693px) {
+  ul.cascaded-layout.blank > li {
+    width: 96%;
+    margin-bottom: 6%;
+  }
+}
+@media all and (max-width: 1205px) {
+  ul.cascaded-layout.blank > li {
+    overflow-x: visible;
+  }
+}
+ul.cascaded-layout.blank > li + li {
+  margin-top: 0;
+}
+ul.cascaded-layout.blank > li.gutter-sizer {
+  width: 3% !important;
 }
 /*         ┌-----------------------------------------------------------------------------------------┐
  *         │ ···· ORDERED list elements ···························································· │
