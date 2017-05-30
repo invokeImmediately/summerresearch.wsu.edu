@@ -4073,7 +4073,7 @@ section.pad-top div.column.half-pad {
     max-width: 792px;
   }
 }
-main > div.page > section.row:last-child > div.column {
+main > .page > .row:last-child > .column:last-child {
   padding-bottom: 2rem;
 }
 /*         └-----------------------------------------------------------------------------------------┘        
