@@ -41,7 +41,8 @@ span.accentuated-text,
 .margin-centered,
 .column .margin-centered,
 img.shiftToCenter,
-img.shift-to-center {
+img.shift-to-center,
+#binder.fluid.max-1188 .row.halves .column img.auto-scaled {
   margin-right: auto;
   margin-left: auto;
 }
@@ -5372,6 +5373,9 @@ img.symbolic-image {
   img.hide-on-mobile {
     display: none;
   }
+}
+#binder.fluid.max-1188 .row.halves .column img.auto-scaled {
+  max-width: 444px;
 }
 figure figcaption {
   font-size: 0.85em;
