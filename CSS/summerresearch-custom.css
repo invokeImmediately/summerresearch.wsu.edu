@@ -2848,13 +2848,13 @@ p.article-tagline:not(.has-no-bordering).alt:after {
   right: 3px;
   background-color: rgba(70, 78, 84, 0.75757576);
 }
-.column h1 + p.article-tagline:not(.has-no-bordering),
-.column h2 + p.article-tagline:not(.has-no-bordering),
-.column h3 + p.article-tagline:not(.has-no-bordering),
-.column h4 + p.article-tagline:not(.has-no-bordering),
-.column h5 + p.article-tagline:not(.has-no-bordering),
-.column h6 + p.article-tagline:not(.has-no-bordering),
-.gform_heading h3.gform_title + p.article-tagline:not(.has-no-bordering) {
+.column h1 + p.article-tagline:not(.has-no-bordering):not(.alt),
+.column h2 + p.article-tagline:not(.has-no-bordering):not(.alt),
+.column h3 + p.article-tagline:not(.has-no-bordering):not(.alt),
+.column h4 + p.article-tagline:not(.has-no-bordering):not(.alt),
+.column h5 + p.article-tagline:not(.has-no-bordering):not(.alt),
+.column h6 + p.article-tagline:not(.has-no-bordering):not(.alt),
+.gform_heading h3.gform_title + p.article-tagline:not(.has-no-bordering):not(.alt) {
   margin-top: 1.33333333rem;
 }
 @media all {
