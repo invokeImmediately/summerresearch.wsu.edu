@@ -7164,13 +7164,13 @@ body.page.has-short-main-header main .row.halves.article-header .column.two {
 }
 .column ul.event-boxes > li {
   float: left;
-  width: calc(49% - 14px);
+  width: 49%;
   min-height: 198px;
   margin-bottom: 2%;
 }
 @media all and (max-width: 693px) {
   .column ul.event-boxes > li {
-    width: calc(98% - 14px);
+    width: 98%;
   }
 }
 @media all and (max-width: 1205px) {
