@@ -5375,6 +5375,7 @@ img.symbolic-image {
   }
 }
 #binder.fluid.max-1188 .row.halves .column img.auto-scaled {
+  display: block;
   max-width: 444px;
 }
 figure figcaption {
@@ -7179,7 +7180,7 @@ body.page.has-short-main-header main .row.halves.article-header .column.two {
   }
 }
 .column ul.event-boxes > li.full-width {
-  width: 98%;
+  width: 100%;
 }
 .column ul.event-boxes > li + li {
   margin-top: 0 !important;
