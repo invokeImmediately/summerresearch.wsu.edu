@@ -4076,6 +4076,11 @@ section.pad-top div.column.half-pad {
 main > .page > .row:last-child > .column:last-child {
   padding-bottom: 2rem;
 }
+@media all and (min-width: 694px) {
+  main > .page > .row:last-child.halves > .column:first-child {
+    padding-bottom: 2rem;
+  }
+}
 /*         └-----------------------------------------------------------------------------------------┘        
  */
 div.callout,
