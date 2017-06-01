@@ -159,9 +159,9 @@ header.main-header {
     &:extend(ul.content-boxes all);
     & > li {
         float: left;
-        width: ~"calc(49% - 14px)";
+		width: 49%;
         @media all and (max-width: @v-rghtclmn-thrshld) {
-            width: ~"calc(98% - 14px)";
+			width: 98%;
         }
         min-height: 198px;
         margin-bottom: 2%;
@@ -169,10 +169,10 @@ header.main-header {
             overflow-x: visible;
         }
         &.full-width {
-            width: 98%;
+            width: 100%;
         }
         & + li {
-            margin-top: 0;
+            margin-top: 0 !important;
         }
         & > h3:first-child {
             padding: (@v-dflt-spcng / 4);
