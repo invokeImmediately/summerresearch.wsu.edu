@@ -1765,7 +1765,19 @@ e===O?(h=c===H?L:K,j[h]="50%",j[ib+"-"+h]=-Math.round(b[c===H?0:1]/2)+i):(h=f._p
 	function resortListsWithExpiredItems(clssExpired) {
 		var $expiredItems = $("." + clssExpired);
 		var $listsWithExpiredItems = $expiredItems.parent("ul");
-		
+		$listsWithExpiredItems.each(function() {
+			var $thisList = $(this);
+			if (!$thisList.hasClass('cascaded-layout')) {
+				var $listItems = $thisList.children("li"),
+					$lastItem = $listItems.eq($listItems.length - 1);
+				for (var idx = 0; idx < $listItems.length; idx++) {
+					var $curItem = $listItems.eq(idx);
+					if ($curItem.hasClass(clssExpired)) {
+						$curItem.detach().insertAfter($lastItem);
+					}
+				}
+			}
+		});
 		// TODO: move expired list items to the back of the list, then redo layouts on any lists controlled by masonry JS.
 	}
 
