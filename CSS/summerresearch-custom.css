@@ -7807,7 +7807,7 @@ div.iframe-wrapper.home {
   -moz-transition: opacity 0.3333s ease;
   transition: opacity 0.3333s ease;
 }
-.has-expiration .is-expired {
+.has-expiration.is-expired {
   opacity: 0.5 !important;
 }
 /*! ╠═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
