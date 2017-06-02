@@ -6,7 +6,9 @@ concat([
  '../WSU-UE---JS/jQuery.forms.js',
  '../WSU-UE---JS/jQuery.qTip.js',
  '../WSU-UE---JS/jQuery.autoScrollingImages.js',
- '../WSU-UE---JS/jQuery.masonry.min.js',
+ '../../imagesloaded/imagesloaded.pkgd.min.js',
+ '../../masonry/dist/masonry.pkgd.min.js',
+ '../WSU-UE---JS/jQuery.masonry-custom.js',
  './sumres-custom.js'
  ], './wp-custom-js-source.js', function() {
     console.log('Concatenation complete.');     
