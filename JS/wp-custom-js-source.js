@@ -952,11 +952,11 @@
 			$('div.column.one').first().parent('section').before('<section class="row single gutter pad-top"><div class="column one"><section class="article-header header-newsEvents"><div class="header-content"><h2>News</h2><h3>What We and Our Students Have Accomplished</h3></div></section></div></section>');
 			break;
 		}
-		InitExpiringItems(".has-expiration", "expirationDate");
-		InitFacultyEmailAutoEntry("li.gfield.sets-faculty-email", "li.gform_hidden");
+		initExpiringItems(".has-expiration", "expirationDate", "is-expired");
+		initFacultyEmailAutoEntry("li.gfield.sets-faculty-email", "li.gform_hidden");
 	});
 
-	function InitExpiringItems(slctrExpiringElems, dataAttrExprtnDate) {
+	function initExpiringItems(slctrExpiringElems, dataAttrExprtnDate, clssExpired) {
 		var today = new Date();
 		var $expiringElems = $(slctrExpiringElems);
 		$expiringElems.each(function () {
@@ -966,9 +966,10 @@
                 // TODO: use regex to enforce correct date format strings
                 var exprtnDateObj = new Date(exprtnDateVal);
                 if (today > exprtnDateObj) {
-                    $this.animate({
+                    /*$this.animate({
                         "opacity": "0.5"
-                    }, 333);
+                    }, 333);*/
+					$this.addClass(clssExpired);
                 }
             } 
 		});
@@ -984,7 +985,7 @@
 		return this.selectionMade != "" && this.$emailInputBox.length > 0 && this.$nameInputBox.length > 0;
 	}
 	
-    function InitFacultyEmailAutoEntry(slctrSelectBox, slctrHiddenFields) {
+    function initFacultyEmailAutoEntry(slctrSelectBox, slctrHiddenFields) {
 		// TODO: Update for Summer 2017
 		$(slctrSelectBox).each(function () {
 			var $selectField = $(this);
