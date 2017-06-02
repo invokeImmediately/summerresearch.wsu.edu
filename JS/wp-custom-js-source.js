@@ -1766,16 +1766,17 @@ e===O?(h=c===H?L:K,j[h]="50%",j[ib+"-"+h]=-Math.round(b[c===H?0:1]/2)+i):(h=f._p
 		var $expiredItems = $("." + clssExpired);
 		var $listsWithExpiredItems = $expiredItems.parent("ul");
 		$listsWithExpiredItems.each(function() {
-			var $thisList = $(this);
-			if (!$thisList.hasClass('cascaded-layout')) {
-				var $listItems = $thisList.children("li"),
-					$lastItem = $listItems.eq($listItems.length - 1);
-				for (var idx = 0; idx < $listItems.length; idx++) {
-					var $curItem = $listItems.eq(idx);
-					if ($curItem.hasClass(clssExpired)) {
-						$curItem.detach().insertAfter($lastItem);
-					}
+			var $thisList = $(this),
+				$listItems = $thisList.children("li"),
+				$lastItem = $listItems.eq($listItems.length - 1);
+			for (var idx = 0; idx < $listItems.length; idx++) {
+				var $curItem = $listItems.eq(idx);
+				if ($curItem.hasClass(clssExpired)) {
+					$curItem.detach().insertAfter($lastItem);
 				}
+			}
+			if ($thisList.hasClass("cascaded-layout")) {
+				$thisList.masonry("layout");
 			}
 		});
 		// TODO: move expired list items to the back of the list, then redo layouts on any lists controlled by masonry JS.
