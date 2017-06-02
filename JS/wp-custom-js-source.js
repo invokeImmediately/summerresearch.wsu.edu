@@ -966,13 +966,17 @@
                 // TODO: use regex to enforce correct date format strings
                 var exprtnDateObj = new Date(exprtnDateVal);
                 if (today > exprtnDateObj) {
-                    /*$this.animate({
-                        "opacity": "0.5"
-                    }, 333);*/
 					$this.addClass(clssExpired);
                 }
             } 
 		});
+		resortListsWithExpiredItems(clssExpired);
+	}
+	
+	function resortListsWithExpiredItems(clssExpired) {
+		var $expiredItems = $("." + clssExpired);
+		var $listsWithExpiredItems = $expiredItems.parent("ul");
+		console.log("Number of lists with expired items: " + $listsWithExpiredItems.length);
 	}
 
 	var FieldsToFill = function (selectionMade, $emailInputBox, $nameInputBox) {
