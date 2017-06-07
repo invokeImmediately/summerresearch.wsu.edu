@@ -18,11 +18,11 @@
 			$('div.column.one').first().parent('section').before('<section class="row single gutter pad-top"><div class="column one"><section class="article-header header-newsEvents"><div class="header-content"><h2>News</h2><h3>What We and Our Students Have Accomplished</h3></div></section></div></section>');
 			break;
 		}
-		InitExpiringItems(".has-expiration", "expirationDate");
-		InitFacultyEmailAutoEntry("li.gfield.sets-faculty-email", "li.gform_hidden");
+		initExpiringItems(".has-expiration", "expirationDate", "is-expired");
+		initFacultyEmailAutoEntry("li.gfield.sets-faculty-email", "li.gform_hidden");
 	});
 
-	function InitExpiringItems(slctrExpiringElems, dataAttrExprtnDate) {
+	function initExpiringItems(slctrExpiringElems, dataAttrExprtnDate, clssExpired) {
 		var today = new Date();
 		var $expiringElems = $(slctrExpiringElems);
 		$expiringElems.each(function () {
@@ -32,12 +32,41 @@
                 // TODO: use regex to enforce correct date format strings
                 var exprtnDateObj = new Date(exprtnDateVal);
                 if (today > exprtnDateObj) {
-                    $this.animate({
-                        "opacity": "0.5"
-                    }, 333);
+					$this.addClass(clssExpired);
                 }
             } 
 		});
+		resortListsWithExpiredItems(clssExpired);
+	}
+	
+	function resortListsWithExpiredItems(clssExpired) {
+		var $expiredItems = $("." + clssExpired);
+		var $listsWithExpiredItems = $expiredItems.parent("ul");
+		$listsWithExpiredItems.each(function() {
+			var $thisList = $(this);
+			if (!$thisList.hasClass('cascaded-layout')) {
+				var $listItems = $thisList.children("li"),
+					$lastItem = $listItems.eq($listItems.length - 1);
+				for (var idx = 0; idx < $listItems.length; idx++) {
+					var $curItem = $listItems.eq(idx);
+					if ($curItem.hasClass(clssExpired)) {
+						$curItem.detach().insertAfter($lastItem);
+					}
+				}
+			} else {
+				var $listItems = $thisList.children("li"),
+					$lastItem = $listItems.eq($listItems.length - 1);
+				for (var idx = 0; idx < $listItems.length; idx++) {
+					var $curItem = $listItems.eq(idx);
+					if ($curItem.hasClass(clssExpired)) {
+						var $clonedItem = $curItem.clone();
+						$thisList.append($clonedItem).masonry("appended", $clonedItem);
+						$thisList.masonry("remove", $curItem).masonry("layout");
+					}
+				}
+			}
+		});
+		// TODO: move expired list items to the back of the list, then redo layouts on any lists controlled by masonry JS.
 	}
 
 	var FieldsToFill = function (selectionMade, $emailInputBox, $nameInputBox) {
@@ -50,7 +79,7 @@
 		return this.selectionMade != "" && this.$emailInputBox.length > 0 && this.$nameInputBox.length > 0;
 	}
 	
-    function InitFacultyEmailAutoEntry(slctrSelectBox, slctrHiddenFields) {
+    function initFacultyEmailAutoEntry(slctrSelectBox, slctrHiddenFields) {
 		// TODO: Update for Summer 2017
 		$(slctrSelectBox).each(function () {
 			var $selectField = $(this);
