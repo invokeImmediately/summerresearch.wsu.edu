@@ -8364,5 +8364,30 @@ div.iframe-wrapper.home {
     border-left: 10px solid #ffffff !important;
   }
 }
+.column p.notice {
+  position: relative;
+  width: 80%;
+  width: calc(90% - 2 * 1rem - 32px);
+  padding: 1rem;
+  padding-right: calc(1rem + 32px);
+  margin-left: auto;
+  margin-right: auto;
+  background-color: rgba(198, 12, 48, 0.2);
+  border-radius: 10px;
+}
+.column p.notice:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 32px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  background: rgba(152, 30, 50, 0.3333) url(/wp-content/uploads/sites/907/2017/06/icon_genericons-neue_notice_v5.png) 4px 1rem no-repeat;
+}
+.column p.notice.is-expired {
+  display: none;
+}
 /*! ╚═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝
 */
