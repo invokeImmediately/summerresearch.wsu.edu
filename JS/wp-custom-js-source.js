@@ -1767,6 +1767,7 @@ function adjustScrollingAfterAnchor() {
 	if ($wpadminbar.length && $wpadminbar.css("top") === "0px") {
 		scrollingAdjustment += $wpadminbar.outerHeight();
 	}
+	//TODO: rewrite logic; floating toolbar logic shouldn't be nested
 	if ($spineHeader.length) {
 		if($spineHeader.width() != windowWidth) {
 			if ($floatingToc.length && currentScrollPos > tocTrigger) {
