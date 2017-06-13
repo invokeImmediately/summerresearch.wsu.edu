@@ -1,13 +1,12 @@
-// See [https://github.com/invokeImmediately/distinguishedscholarships.wsu.edu] for repository of source code
-/*!**********************************************************************************************************
- * CUSTOM JQUERY-BASED DYNAMIC CONTENT                                                                      *
- ************************************************************************************************************/
-(function ($) {
+// -----------------------------------------------------------------------------
+// CUSTOM JQUERY-BASED DYNAMIC CONTENT
+// -----------------------------------------------------------------------------
+// See [https://github.com/invokeImmediately/distinguishedscholarships.wsu.edu]
+// for a repository of source code.
+( function( $ ) {
 
-/**
- * IIFE for wrapping statements to be executed once the DOM is ready 
- */
-$(function () {
+// IIFE for wrapping statements to be executed once the DOM is ready 
+$( function() {
 
 	// Tweak HTML source to work around some quirks of WordPress setup                            *
 	var siteURL = window.location.pathname;
@@ -23,22 +22,26 @@ $(function () {
 	}
 
 	initAnchorFix();
-	initDelayedNotices("p.notice", "is-delayed");
 	initExpiringItems(".has-expiration", "expirationDate", "is-expired");
 	initFacultyEmailAutoEntry("li.gfield.sets-faculty-email", "li.gform_hidden");
 });
 
-// Bind a function to the hashchange event for applying corrections to scrolling
-// position after an anchor has been navigated to. This is necessary because on
-// OUE websites built using the WSU Spine framework, there are instances where
-// elements end up covering the anchor at the top of the screen.
+// Bind a function to window loaded event
+$( window ).on( "load", function() {
+	initDelayedNotices("p.notice", "is-delayed", 500);
+});
+	
+// Binds a function to the hashchange event for applying corrections to
+// scrolling position after an anchor has been navigated to. This is necessary
+// because on OUE websites built using the WSU Spine framework, there are
+// instances where elements end up covering the anchor at the top of the screen.
 function initAnchorFix() {
 	window.onhashchange = adjustScrollingAfterNavToAnchor;
 }
 
-// Function bound to the hashchange event that applying corrections to scrolling
-// position after an anchor has been navigated to. Compensates for instances
-// where elements end up covering the anchor at the top of the screen.
+// Function to be bound to the hashchange event; applyies corrections to
+// scrolling position after an anchor has been navigated to. Compensates for
+// instances where elements end up covering the anchor at the top of the screen.
 function adjustScrollingAfterNavToAnchor() {
 	var currentScrollPos;	// Uncorrected scrolling position that resulted
 							// after navigating to the anchor.
@@ -112,14 +115,25 @@ function adjustScrollingAfterNavToAnchor() {
 	$("html, body").scrollTop( updatedScrollPos );
 }
 
-function initDelayedNotices(slctrNotices, clssIsDelayed) {
-	var $delayedNotices = $(slctrNotices + "." + clssIsDelayed);
-	var $this;
-	$delayedNotices.each(function () {
-		$this = $(this);
-		setTimeout(function() {
-			$this.removeClass(clssIsDelayed);
-		}, 500);
+// Initialize notice elements whose display should be delayed by a set amount
+// after the page has loaded.
+function initDelayedNotices(slctrNotices, clssIsDelayed, noticeDelay) {
+	var $delayedNotices;	// jQuery object refernce to all delayed notice
+							// elements.
+	
+	var $this;	// jQuery object reference to element from which currently
+				//  active execution context was invoked.
+
+	var noticeDelay;	// Number of milliseconds to wait before
+										// displaying notices after page load.
+
+	
+	$delayedNotices = $(slctrNotices + "." + clssIsDelayed);
+	$delayedNotices.each( function () {
+		$this = $( this );
+		setTimeout( function() {
+			$this.removeClass( clssIsDelayed );
+		}, noticeDelay );
 	});
 }
 
@@ -272,4 +286,4 @@ function fillHiddenFields(fieldsToFill) {
 	}
 }
 
-})(jQuery);
+})( jQuery );
