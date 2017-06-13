@@ -1759,7 +1759,7 @@ function adjustScrollingAfterAnchor() {
 	var windowWidth = $(window).width();
 	var scrollingAdjustment = 0;
 	var $wpadminbar = $("#wpadminbar");
-	var $spineHeader = $("#spine").children(".spine-header");
+	var $spineHeader = $("#spine").find(".spine-header");
 	var $toc = $(".vpue-jump-bar").first();
 	var tocTrigger = $toc.offset().top + $toc.height() + 100;
 	var $floatingToc = $(".vpue-jump-bar.floating");
@@ -1769,13 +1769,10 @@ function adjustScrollingAfterAnchor() {
 	}
 	if ($spineHeader.length) {
 		if($spineHeader.width() != windowWidth) {
-			console.log("Spine not a factor.");			
 			if ($floatingToc.length && currentScrollPos > tocTrigger) {
 				scrollingAdjustment += $floatingToc.outerHeight();
-				console.log("Adjusting for floating TOC position.");
 			}
 		} else {
-			console.log("Spine is a factor.");			
 			scrollingAdjustment += $spineHeader.outerHeight();
 			if ($floatingToc.length && currentScrollPos - scrollingAdjustment > tocTrigger) {
 				scrollingAdjustment += 15;
