@@ -1775,6 +1775,7 @@ function adjustScrollingAfterAnchor() {
 				console.log("Adjusting for floating TOC position.");
 			}
 		} else {
+			console.log("Spine is a factor.");			
 			scrollingAdjustment += $spineHeader.outerHeight();
 			if ($floatingToc.length && currentScrollPos - scrollingAdjustment > tocTrigger) {
 				scrollingAdjustment += 15;
