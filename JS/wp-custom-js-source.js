@@ -1768,21 +1768,18 @@ function adjustScrollingAfterAnchor() {
 	if ($wpadminbar.length && $wpadminbar.css("top") === "0px") {
 		scrollingAdjustment += $wpadminbar.outerHeight();
 	}
-	if ($spineHeader.length && $spineHeader.width() != windowWidth) {
-		if ($floatingToc.length && currentScrollPos > tocTrigger) {
-			scrollingAdjustment += $floatingToc.outerHeight();
-			console.log("Adjusting for floating TOC position.");
-		}
-	} else {
-		$spineHeader = $spine.children(".spine-header");
-		if ($spineHeader.length) {
+	if ($spineHeader.length) {
+		if($spineHeader.width() != windowWidth) {
+			if ($floatingToc.length && currentScrollPos > tocTrigger) {
+				scrollingAdjustment += $floatingToc.outerHeight();
+				console.log("Adjusting for floating TOC position.");
+			}
+		} else {
 			scrollingAdjustment += $spineHeader.outerHeight();
-			console.log("Spine accounted for.");
+			if ($floatingToc.length && currentScrollPos - scrollingAdjustment > tocTrigger) {
+				scrollingAdjustment += 15;
+			}				
 		}
-		if ($floatingToc.length && currentScrollPos - scrollingAdjustment > tocTrigger) {
-			scrollingAdjustment += 15;
-			console.log("Extra spacing added.");
-		}				
 	}
 	updatedScrollPos = currentScrollPos >= scrollingAdjustment ? currentScrollPos - scrollingAdjustment : 0;
 	$("html, body").scrollTop(updatedScrollPos);
