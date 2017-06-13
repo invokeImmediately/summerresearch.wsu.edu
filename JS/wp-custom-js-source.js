@@ -1751,6 +1751,7 @@ function initAnchorFix(slctrToc) {
 	var $toc = $(slctrToc);
 	if($toc.length) {
 		window.onhashchange = adjustScrollingAfterAnchor;
+		console.log("Attempting to set up adjustment of scrolling.")
 	}
 }
 
