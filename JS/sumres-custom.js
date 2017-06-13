@@ -34,39 +34,40 @@ $( window ).on( "load", function() {
 // Binds a function to the hashchange event for applying corrections to
 // scrolling position after an anchor has been navigated to. This is necessary
 // because on OUE websites built using the WSU Spine framework, there are
-// instances where elements end up covering the anchor at the top of the screen.
+// instances where elements end up covering the anchor at the top of the screen
 function initAnchorFix() {
 	window.onhashchange = adjustScrollingAfterNavToAnchor;
 }
 
 // Function to be bound to the hashchange event; applyies corrections to
 // scrolling position after an anchor has been navigated to. Compensates for
-// instances where elements end up covering the anchor at the top of the screen.
+// instances where elements end up covering the anchor at the top of the screen
 function adjustScrollingAfterNavToAnchor() {
+
 	var currentScrollPos;	// Uncorrected scrolling position that resulted
-							// after navigating to the anchor.
+							// after navigating to the anchor
 
 	var windowWidth;	// Browser window width is checked against spine header
-						// width to test for mobile/tablet mode.
+						// width to test for mobile/tablet mode
 
 	var scrollingAdjustment;	// Calculated number of pixels needed to move up
-								// the page and bring the anchor back into view.
+								// the page and bring the anchor back into view
 
 	var $wpadminbar;	// jQuery object: WordPress admin bar that floats at top
-						// or bottom of screen.
+						// or bottom of screen
 
 	var $spineHeader;	// jQuery object: spine header element that floats at
 						// top of screen on mobile/tablet.
 
-	var $toc;	// jQuery object: fixed TOC element located toward top of page.
+	var $toc;	// jQuery object: fixed TOC element located toward top of page
 
 	var tocTrigger;	// Scrolling position where, once reached, the floating
-					// TOC is brought into view.
+					// TOC is brought into view
 
-	var $floatingToc;	// jQuery object: floating TOC element.
+	var $floatingToc;	// jQuery object: floating TOC element
 
 	var updatedScrollPos;		// Corrected scrolling position whereat the
-								// anchor is visible at top of page.
+								// anchor is visible at top of page
 
 	// Get the current, uncorrected scrolling position 
 	currentScrollPos = ( $(window).scrollTop() || $( "body" ).scrollTop() );
@@ -90,7 +91,7 @@ function adjustScrollingAfterNavToAnchor() {
 		// We are in desktop view and the spine is positioned to the left of the
 		// main content area. The only possible correction that needs to be
 		// applied on OUE websites is to compensate for a floating TOC element
-		// that is hovering over main content at the top of the screen.
+		// that is hovering over main content at the top of the screen
 		if ( $floatingToc.length && currentScrollPos > tocTrigger ) {
 			scrollingAdjustment += $floatingToc.outerHeight() + 8;
 		}
@@ -100,7 +101,7 @@ function adjustScrollingAfterNavToAnchor() {
 		// the screen & covering main content area. It is also possible that a
 		// correction needs to be applied for a floating TOC element that is
 		// peeking out from under the spine header and is also covering main
-		// content.
+		// content
 		scrollingAdjustment += $spineHeader.outerHeight();
 		if ( $floatingToc.length && currentScrollPos > tocTrigger ) {
 			scrollingAdjustment += 23;
@@ -118,16 +119,15 @@ function adjustScrollingAfterNavToAnchor() {
 // Initialize notice elements whose display should be delayed by a set amount
 // after the page has loaded.
 function initDelayedNotices(slctrNotices, clssIsDelayed, noticeDelay) {
-	var $delayedNotices;	// jQuery object refernce to all delayed notice
-							// elements.
-	
-	var $this;	// jQuery object reference to element from which currently
-				//  active execution context was invoked.
 
-	var noticeDelay;	// Number of milliseconds to wait before
-										// displaying notices after page load.
-
+	var $delayedNotices;	// jQuery object: all delayed notice elements
 	
+	var $this;	// jQuery object: element from which currently active execution
+				// context was invoked
+
+	var noticeDelay;	// Number of milliseconds to wait before displaying
+						//  notices after page load
+
 	$delayedNotices = $(slctrNotices + "." + clssIsDelayed);
 	$delayedNotices.each( function () {
 		$this = $( this );
@@ -137,25 +137,39 @@ function initDelayedNotices(slctrNotices, clssIsDelayed, noticeDelay) {
 	});
 }
 
-function initExpiringItems(slctrExpiringElems, dataAttrExprtnDate, clssExpired) {
-	var today = new Date();
-	var $expiringElems = $(slctrExpiringElems);
-	var $this;
-	var exprtnDateVal;
-	var exprtnDateObj;
-	$expiringElems.each(function () {
-		$this = $(this);
-		exprtnDateVal = $this.data(dataAttrExprtnDate);
-		if (exprtnDateVal != undefined) {
+function initExpiringItems(slctrExpiringElems, dataAttrExprtnDate,
+		clssExpired) {
+
+	var today;	// Date object constructed from today's date; used to determine
+				// whether elements have expired
+
+	var $expiringElems;	// jQuery object: all elements for which an expiration
+						// date has been set
+
+	var $this;	// jQuery object: element from which currently active execution
+				// context was invoked
+
+	var exprtnDateVal;	// The value of an element's expiration date as set
+						// through jQuery data storage
+
+	var exprtnDateObj;	// A date object constructed from the value of an
+						// element's expiration date
+	
+	today = new Date();
+	$expiringElems = $( slctrExpiringElems );
+	$expiringElems.each( function() {
+		$this = $( this );
+		exprtnDateVal = $this.data( dataAttrExprtnDate );
+		if ( exprtnDateVal != undefined ) {
 
 			// TODO: use regex to enforce correct date format strings
-			exprtnDateObj = new Date(exprtnDateVal);
-			if (today > exprtnDateObj) {
-				$this.addClass(clssExpired);
+			exprtnDateObj = new Date( exprtnDateVal );
+			if ( today > exprtnDateObj ) {
+				$this.addClass( clssExpired );
 			}
 		} 
 	});
-	resortListsWithExpiredItems(clssExpired);
+	resortListsWithExpiredItems( clssExpired );
 }
 
 function resortListsWithExpiredItems(clssExpired) {
