@@ -30,7 +30,7 @@ $( function() {
 $( window ).on( "load", function() {
 	initDelayedNotices("p.notice", "is-delayed", 500);
 });
-	
+
 // Binds a function to the hashchange event for applying corrections to
 // scrolling position after an anchor has been navigated to. This is necessary
 // because on OUE websites built using the WSU Spine framework, there are
@@ -121,9 +121,9 @@ function adjustScrollingAfterNavToAnchor() {
 function initDelayedNotices(slctrNotices, clssIsDelayed, noticeDelay) {
 
 	var $delayedNotices;	// jQuery object: all delayed notice elements
-	
-	var $this;	// jQuery object: element from which currently active execution
-				// context was invoked
+
+	var $this;	// jQuery object: element from which active execution context
+				// was invoked
 
 	var noticeDelay;	// Number of milliseconds to wait before displaying
 						//  notices after page load
@@ -137,6 +137,8 @@ function initDelayedNotices(slctrNotices, clssIsDelayed, noticeDelay) {
 	});
 }
 
+// Initialize elements for which an expiration date has been set so that the
+// desired behavior is triggered once the item has expired.
 function initExpiringItems(slctrExpiringElems, dataAttrExprtnDate,
 		clssExpired) {
 
@@ -146,15 +148,15 @@ function initExpiringItems(slctrExpiringElems, dataAttrExprtnDate,
 	var $expiringElems;	// jQuery object: all elements for which an expiration
 						// date has been set
 
-	var $this;	// jQuery object: element from which currently active execution
-				// context was invoked
+	var $this;	// jQuery object: element from which active execution context
+				// was invoked
 
 	var exprtnDateVal;	// The value of an element's expiration date as set
 						// through jQuery data storage
 
 	var exprtnDateObj;	// A date object constructed from the value of an
 						// element's expiration date
-	
+
 	today = new Date();
 	$expiringElems = $( slctrExpiringElems );
 	$expiringElems.each( function() {
@@ -172,15 +174,42 @@ function initExpiringItems(slctrExpiringElems, dataAttrExprtnDate,
 	resortListsWithExpiredItems( clssExpired );
 }
 
+// Improve user experience by resorting list elements containing expired list
+// items such that upcoming, unexpired list items appear at the top of the list
+// and are not obscured by already outdated items
 function resortListsWithExpiredItems(clssExpired) {
-	var $expiredItems = $("." + clssExpired);
-	var $listsWithExpiredItems = $expiredItems.parent("ul");
-	var $thisList;
-	var $listItems;
-	var $lastItem;
-	var $curItem;
-	var $clonedItem;
-	var idx;
+
+	var $expiredItems;	// jQuery object: all list item elements with an
+						// expiration date. Used to find all list elements
+						// containing such items.
+
+	var $listsWithExpiredItems;	// jQuery object: all lists containing elements
+								// with current execution context was invoked
+
+	var $thisList;	// jQuery object: list element from which active execution
+					// context was invoked
+
+	var $listItems;	// jQuery object: used once a list containing expiring items
+					// has invoked an execution context to store all of the
+					// child list items of the invoking list
+
+	var $lastItem;	// jQuery object: used while iterating over the child list
+					// items of a parent list element that contains expiring
+					// items; serves as reference to the last item at the end of
+					// the list
+
+	var $curItem;	// jQuery object: used while iterating over the child list
+					// items of a parent list element that contains expiring
+					// items; serves as reference to the curret item being
+					// considered during iteration
+
+	var $clonedItem;	// jQuery object: used to create a clone of an expired
+						// list item while it is being moved to the end of a list
+
+	var idx;	// Iterator index
+
+	$expiredItems = $( "li." + clssExpired );
+	$listsWithExpiredItems = $expiredItems.parent( "ul" );
 	$listsWithExpiredItems.each(function() {
 		$thisList = $(this);
 		if (!$thisList.hasClass('cascaded-layout')) {
@@ -189,6 +218,11 @@ function resortListsWithExpiredItems(clssExpired) {
 			for (idx = 0; idx < $listItems.length; idx++) {
 				$curItem = $listItems.eq(idx);
 				if ($curItem.hasClass(clssExpired)) {
+					
+					// This method of moving items is done intentionally to
+					// result in a reverse chronological sorting of expired
+					// items, where the most recently expired item is displayed
+					// first in sequence
 					$curItem.detach().insertAfter($lastItem);
 				}
 			}
@@ -198,6 +232,10 @@ function resortListsWithExpiredItems(clssExpired) {
 			for (idx = 0; idx < $listItems.length; idx++) {
 				$curItem = $listItems.eq(idx);
 				if ($curItem.hasClass(clssExpired)) {
+
+					// TODO: This method of moving items will result in a
+					// chronological sorting, which is different from above;
+					// may want to consider refactoring.
 					$clonedItem = $curItem.clone();
 					$thisList.append($clonedItem).masonry("appended", $clonedItem);
 					$thisList.masonry("remove", $curItem).masonry("layout");
@@ -205,8 +243,6 @@ function resortListsWithExpiredItems(clssExpired) {
 			}
 		}
 	});
-
-	// TODO: move expired list items to the back of the list, then redo layouts on any lists controlled by masonry JS.
 }
 
 function initFacultyEmailAutoEntry(slctrSelectBox, slctrHiddenFields) {
