@@ -1760,7 +1760,7 @@ function adjustScrollingAfterAnchor() {
 	var $wpadminbar = $("#wpadminbar");
 	var $spine = $("#spine");
 	var $spineHeader;
-	var $toc = $(".vpue-jump-bar:not(.floating)");
+	var $toc = $(".vpue-jump-bar").first();
 	var tocTrigger = $toc.offset().top + $toc.height() + 100;
 	var $floatingToc = $(".vpue-jump-bar.floating");
 	var updatedScrollPos;
@@ -1778,9 +1778,9 @@ function adjustScrollingAfterAnchor() {
 		}
 		if ($floatingToc.length && currentScrollPos - scrollingAdjustment > tocTrigger) {
 			scrollingAdjustment += 15;
+			console.log("Extra spacing added.");
 		}				
 	}
-	//TODO: handle two cases, where spine is
 	updatedScrollPos = currentScrollPos >= scrollingAdjustment ? currentScrollPos - scrollingAdjustment : 0;
 	$("html, body").scrollTop(updatedScrollPos);
 }
