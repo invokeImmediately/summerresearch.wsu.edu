@@ -8257,7 +8257,11 @@ div.iframe-wrapper.home {
 	transition: opacity .5s ease;
 }
 
-.has-expiration.is-expired {
+.has-expiration.is-expired:not(.has-exceptions) {
+	opacity: .5 !important;
+}
+
+.has-expiration.is-expired.has-exceptions :not(.is-excepted) {
 	opacity: .5 !important;
 }
 
@@ -8808,6 +8812,49 @@ div.iframe-wrapper.home {
 	.row.has-linked-columns:not(.gutter).for-faculty.quarters .column:nth-child(2),.row.has-linked-columns:not(.gutter).for-faculty.quarters .column:nth-child(4) {
 		border-left: 10px solid #fff !important;
 	}
+}
+
+.column p.notice {
+	position: relative;
+	width: 80%;
+	width: calc(90% - 2 * 1rem - 32px);
+	padding: 1rem;
+	padding-right: calc(1rem + 32px);
+	margin-left: auto;
+	margin-right: auto;
+	background-color: rgba(198,12,48,.2);
+	border-radius: 10px;
+}
+
+.column p.notice:before {
+	content: "";
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	width: 32px;
+	border-top-right-radius: 10px;
+	border-bottom-right-radius: 10px;
+	background: rgba(152,30,50,.3333) url(/wp-content/uploads/sites/907/2017/06/icon_genericons-neue_notice_v5.png) 4px 1rem no-repeat;
+}
+
+.column p.notice.has-expiration {
+	-webkit-transition: all .3s ease;
+	-moz-transition: all .3s ease;
+	transition: all .3s ease;
+}
+
+.column p.notice.has-expiration.is-expired {
+	display: none;
+}
+
+.column p.notice.has-expiration.is-delayed {
+	height: 0;
+	padding-top: 0;
+	padding-bottom: 0;
+	margin-top: 0;
+	margin-bottom: 0;
+	overflow: hidden;
 }
 
 /*! ╚═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝
