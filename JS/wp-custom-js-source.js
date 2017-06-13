@@ -1762,6 +1762,7 @@ function initExpiringItems(slctrExpiringElems, dataAttrExprtnDate, clssExpired) 
 	var $expiringElems = $(slctrExpiringElems);
 	var $this;
 	var exprtnDateVal;
+	var exprtnDateObj;
 	$expiringElems.each(function () {
 		$this = $(this);
 		exprtnDateVal = $this.data(dataAttrExprtnDate);
