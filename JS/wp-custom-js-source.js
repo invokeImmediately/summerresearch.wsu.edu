@@ -1756,10 +1756,10 @@ function initAnchorFix(slctrToc) {
 
 function adjustScrollingAfterAnchor() {
 	var currentScrollPos = ($(window).scrollTop() || $("body").scrollTop());
+	var windowWidth = $(window).width();
 	var scrollingAdjustment = 0;
 	var $wpadminbar = $("#wpadminbar");
-	var $spine = $("#spine");
-	var $spineHeader;
+	var $spineHeader = $("#spine").children(".spine-header");
 	var $toc = $(".vpue-jump-bar").first();
 	var tocTrigger = $toc.offset().top + $toc.height() + 100;
 	var $floatingToc = $(".vpue-jump-bar.floating");
@@ -1768,7 +1768,7 @@ function adjustScrollingAfterAnchor() {
 	if ($wpadminbar.length && $wpadminbar.css("top") === "0px") {
 		scrollingAdjustment += $wpadminbar.outerHeight();
 	}
-	if ($spine.length && $spine.css("top") !== "50px") {
+	if ($spineHeader.length && $spineHeader.width() != windowWidth) {
 		if ($floatingToc.length && currentScrollPos > tocTrigger) {
 			scrollingAdjustment += $floatingToc.outerHeight();
 			console.log("Adjusting for floating TOC position.");
