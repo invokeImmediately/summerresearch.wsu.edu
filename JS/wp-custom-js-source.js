@@ -1774,7 +1774,7 @@ function adjustScrollingAfterAnchor() {
 			}
 		} else {
 			scrollingAdjustment += $spineHeader.outerHeight();
-			if ($floatingToc.length && currentScrollPos - scrollingAdjustment > tocTrigger) {
+			if ($floatingToc.length && currentScrollPos > tocTrigger) {
 				scrollingAdjustment += 15;
 			}				
 		}
