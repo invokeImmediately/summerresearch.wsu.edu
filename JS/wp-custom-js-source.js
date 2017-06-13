@@ -1764,12 +1764,12 @@ function adjustScrollingAfterAnchor() {
 	var tocTrigger = $toc.offset().top + $toc.height() + 100;
 	var $floatingToc = $(".vpue-jump-bar.floating");
 	var updatedScrollPos;
-	console.log(tocTrigger);
 	if ($wpadminbar.length && $wpadminbar.css("top") === "0px") {
 		scrollingAdjustment += $wpadminbar.outerHeight();
 	}
 	if ($spineHeader.length) {
 		if($spineHeader.width() != windowWidth) {
+			console.log("Spine not a factor.");			
 			if ($floatingToc.length && currentScrollPos > tocTrigger) {
 				scrollingAdjustment += $floatingToc.outerHeight();
 				console.log("Adjusting for floating TOC position.");
