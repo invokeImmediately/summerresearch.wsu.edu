@@ -1770,7 +1770,7 @@ function adjustScrollingAfterAnchor() {
 			scrollingAdjustment += $floatingToc.outerHeight();
 		}
 	} else {
-		$spineHeader = $spine.child(".spine-header");
+		$spineHeader = $spine.children(".spine-header");
 		if ($spineHeader.length) {
 			scrollingAdjustment += $spineHeader.outerHeight();
 		}
