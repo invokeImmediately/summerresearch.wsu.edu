@@ -1766,7 +1766,7 @@ function adjustScrollingAfterAnchor() {
 		scrollingAdjustment += $wpadminbar.outerHeight();
 	}
 	if ($spine.length && $spine.css("top") !== "50px") {
-		if ($floatingToc.length && $floatingToc.css("display") !== "none") {
+		if ($floatingToc.length && $floatingToc.css("display") != "none") {
 			scrollingAdjustment += $floatingToc.outerHeight();
 		}
 	} else {
@@ -1774,7 +1774,7 @@ function adjustScrollingAfterAnchor() {
 		if ($spineHeader.length) {
 			scrollingAdjustment += $spineHeader.outerHeight();
 		}
-		if ($floatingToc.length && $floatingToc.css("display") !== "none") {
+		if ($floatingToc.length && $floatingToc.css("display") != "none") {
 			scrollingAdjustment += 15;
 		}				
 	}
