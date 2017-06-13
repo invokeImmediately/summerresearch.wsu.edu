@@ -1747,7 +1747,7 @@ $(function () {
 });
 
 function initDelayedNotices(slctrNotices, clssIsDelayed) {
-	var $delayedNotices = $(slctrNotices + "." clssIsDelayed);
+	var $delayedNotices = $(slctrNotices + "." + clssIsDelayed);
 	var $this;
 	$delayedNotices.each(function () {
 		$this = $(this);
