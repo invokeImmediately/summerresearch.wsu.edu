@@ -1758,14 +1758,27 @@ function adjustScrollingAfterAnchor() {
 	var currentScrollPos = ($(window).scrollTop() || $("body").scrollTop());
 	var scrollingAdjustment = 0;
 	var $wpadminbar = $("#wpadminbar");
+	var $spine = $("#spine");
+	var $spineHeader;
 	var $floatingToc = $(".vpue-jump-bar.floating");
 	var updatedScrollPos;
 	if ($wpadminbar.length && $wpadminbar.css("top") === "0px") {
 		scrollingAdjustment += $wpadminbar.outerHeight();
 	}
-	if ($floatingToc.length && $floatingToc.css("display") !== "none") {
-		scrollingAdjustment += $floatingToc.outerHeight();
+	if ($spine.length && $spine.css("top") !== "50px") {
+		if ($floatingToc.length && $floatingToc.css("display") !== "none") {
+			scrollingAdjustment += $floatingToc.outerHeight();
+		}
+	} else {
+		$spineHeader = $spine.child(".spine-header");
+		if ($spineHeader.length) {
+			scrollingAdjustment += $spineHeader.outerHeight();
+		}
+		if ($floatingToc.length && $floatingToc.css("display") !== "none") {
+			scrollingAdjustment += 15;
+		}				
 	}
+	//TODO: handle two cases, where spine is
 	updatedScrollPos = currentScrollPos >= scrollingAdjustment ? currentScrollPos - scrollingAdjustment : 0;
 	$("html, body").scrollTop(updatedScrollPos);
 }
