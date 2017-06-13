@@ -1754,7 +1754,7 @@ function initAnchorFix(slctrToc) {
 	}
 }
 
-function adjustScrollingAfterAnchor(e) {
+function adjustScrollingAfterAnchor() {
 	var currentScrollPos = ($(window).scrollTop() || $("body").scrollTop());
 	var updatedScrollPos = currentScrollPos >= 40 ? currentScrollPos - 40 : 0;
 	$("html, body").scrollTop(updatedScrollPos);
