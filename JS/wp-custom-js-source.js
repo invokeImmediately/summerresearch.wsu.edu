@@ -1767,18 +1767,15 @@ function adjustScrollingAfterAnchor() {
 	if ($wpadminbar.length && $wpadminbar.css("top") === "0px") {
 		scrollingAdjustment += $wpadminbar.outerHeight();
 	}
-	//TODO: rewrite logic; floating toolbar logic shouldn't be nested
-	if ($spineHeader.length) {
-		if($spineHeader.width() != windowWidth) {
-			if ($floatingToc.length && currentScrollPos > tocTrigger) {
-				scrollingAdjustment += $floatingToc.outerHeight();
-			}
-		} else {
-			scrollingAdjustment += $spineHeader.outerHeight();
-			if ($floatingToc.length && currentScrollPos > tocTrigger) {
-				scrollingAdjustment += 15;
-			}				
+	if($spineHeader.width() != windowWidth) {
+		if ($floatingToc.length && currentScrollPos > tocTrigger) {
+			scrollingAdjustment += $floatingToc.outerHeight() + 8;
 		}
+	} else {
+		scrollingAdjustment += $spineHeader.outerHeight();
+		if ($floatingToc.length && currentScrollPos > tocTrigger) {
+			scrollingAdjustment += 23;
+		}				
 	}
 	updatedScrollPos = currentScrollPos >= scrollingAdjustment ? currentScrollPos - scrollingAdjustment : 0;
 	$("html, body").scrollTop(updatedScrollPos);
