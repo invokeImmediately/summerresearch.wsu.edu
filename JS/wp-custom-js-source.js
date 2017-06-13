@@ -1753,7 +1753,7 @@ function initDelayedNotices(slctrNotices, clssIsDelayed) {
 		$this = $(this);
 		setTimeout(function() {
 			$this.removeClass(clssIsDelayed);
-		});
+		}, 500);
 	});
 }
 
