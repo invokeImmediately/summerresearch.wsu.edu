@@ -1760,13 +1760,15 @@ function adjustScrollingAfterAnchor() {
 	var $wpadminbar = $("#wpadminbar");
 	var $spine = $("#spine");
 	var $spineHeader;
+	var $toc = $(".vpue-jump-bar:not(.floating)");
+	var tocTrigger = $toc.offset().top + $toc.height() + 100;
 	var $floatingToc = $(".vpue-jump-bar.floating");
 	var updatedScrollPos;
 	if ($wpadminbar.length && $wpadminbar.css("top") === "0px") {
 		scrollingAdjustment += $wpadminbar.outerHeight();
 	}
 	if ($spine.length && $spine.css("top") !== "50px") {
-		if ($floatingToc.length && $floatingToc.css("display") != "none") {
+		if ($floatingToc.length && currentScrollPos > tocTrigger) {
 			scrollingAdjustment += $floatingToc.outerHeight();
 		}
 	} else {
@@ -1774,7 +1776,7 @@ function adjustScrollingAfterAnchor() {
 		if ($spineHeader.length) {
 			scrollingAdjustment += $spineHeader.outerHeight();
 		}
-		if ($floatingToc.length && $floatingToc.css("display") != "none") {
+		if ($floatingToc.length && currentScrollPos - scrollingAdjustment > tocTrigger) {
 			scrollingAdjustment += 15;
 		}				
 	}
