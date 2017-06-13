@@ -1758,6 +1758,7 @@ function adjustScrollingAfterAnchor(e) {
 	var currentScrollPos = ($(window).scrollTop() || $("body").scrollTop());
 	var updatedScrollPos = currentScrollPos >= 40 ? currentScrollPos - 40 : 0;
 	$("html, body").scrollTop(updatedScrollPos);
+	console.log("Scrolling adjusted.")
 }
 
 function initDelayedNotices(slctrNotices, clssIsDelayed) {
