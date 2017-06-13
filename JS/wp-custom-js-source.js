@@ -1741,7 +1741,7 @@ $(function () {
 		$('div.column.one').first().parent('section').before('<section class="row single gutter pad-top"><div class="column one"><section class="article-header header-newsEvents"><div class="header-content"><h2>News</h2><h3>What We and Our Students Have Accomplished</h3></div></section></div></section>');
 		break;
 	}
-	initAnchorFix("vpue-jump-bar");
+	initAnchorFix(".vpue-jump-bar");
 	initDelayedNotices("p.notice", "is-delayed");
 	initExpiringItems(".has-expiration", "expirationDate", "is-expired");
 	initFacultyEmailAutoEntry("li.gfield.sets-faculty-email", "li.gform_hidden");
@@ -1751,7 +1751,6 @@ function initAnchorFix(slctrToc) {
 	var $toc = $(slctrToc);
 	if($toc.length) {
 		window.onhashchange = adjustScrollingAfterAnchor;
-		console.log("Attempting to set up adjustment of scrolling.")
 	}
 }
 
@@ -1759,7 +1758,6 @@ function adjustScrollingAfterAnchor() {
 	var currentScrollPos = ($(window).scrollTop() || $("body").scrollTop());
 	var updatedScrollPos = currentScrollPos >= 40 ? currentScrollPos - 40 : 0;
 	$("html, body").scrollTop(updatedScrollPos);
-	console.log("Scrolling adjusted.")
 }
 
 function initDelayedNotices(slctrNotices, clssIsDelayed) {
