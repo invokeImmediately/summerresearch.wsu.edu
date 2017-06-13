@@ -1775,6 +1775,7 @@ function adjustScrollingAfterAnchor() {
 		$spineHeader = $spine.children(".spine-header");
 		if ($spineHeader.length) {
 			scrollingAdjustment += $spineHeader.outerHeight();
+			console.log("Spine accounted for.");
 		}
 		if ($floatingToc.length && currentScrollPos - scrollingAdjustment > tocTrigger) {
 			scrollingAdjustment += 15;
