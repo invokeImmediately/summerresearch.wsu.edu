@@ -314,10 +314,10 @@ var FieldsToFill = function (selectionMade, $emailInputBox, $nameInputBox) {
 	this.selectionMade = typeof selectionMade === "string" ?
 		selectionMade :
 		"";
-	this.$emailInputBox = isJQuery($emailInputBox) ?
+	this.$emailInputBox = $.isJQueryObj($emailInputBox) ?
 		$emailInputBox :
 		$();
-	this.$nameInputBox = isJQuery($nameInputBox) ?
+	this.$nameInputBox = $.isJQueryObj($nameInputBox) ?
 		$nameInputBox :
 		$();
 }
@@ -333,6 +333,7 @@ FieldsToFill.prototype.isValid = function () {
 // End of specification for FieldsToFill class.
 // -↑-↑-↑-↑-↑-↑-↑-↑-↑-↑-↑-↑-↑-↑-↑-↑-↑-↑-↑-↑-↑-↑-↑-↑-↑-↑-↑-↑-↑-↑-↑-↑-↑-↑-↑-↑-↑-↑-
 
+// 
 function fillHiddenFields(fieldsToFill) {
 	// TODO: Update for Summer 2017
 	if(fieldsToFill instanceof FieldsToFill && fieldsToFill.isValid()) {
