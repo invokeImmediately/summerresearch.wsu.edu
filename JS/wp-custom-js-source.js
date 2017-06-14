@@ -1753,7 +1753,7 @@ $( function() {
 $( window ).on( "load", function() {
 	initDelayedNotices("p.notice", "is-delayed", 500);
 });
-	
+
 // Binds a function to the hashchange event for applying corrections to
 // scrolling position after an anchor has been navigated to. This is necessary
 // because on OUE websites built using the WSU Spine framework, there are
@@ -1844,9 +1844,9 @@ function adjustScrollingAfterNavToAnchor() {
 function initDelayedNotices(slctrNotices, clssIsDelayed, noticeDelay) {
 
 	var $delayedNotices;	// jQuery object: all delayed notice elements
-	
-	var $this;	// jQuery object: element from which currently active execution
-				// context was invoked
+
+	var $this;	// jQuery object: element from which active execution context
+				// was invoked
 
 	var noticeDelay;	// Number of milliseconds to wait before displaying
 						//  notices after page load
@@ -1860,6 +1860,8 @@ function initDelayedNotices(slctrNotices, clssIsDelayed, noticeDelay) {
 	});
 }
 
+// Initialize elements for which an expiration date has been set so that the
+// desired behavior is triggered once the item has expired.
 function initExpiringItems(slctrExpiringElems, dataAttrExprtnDate,
 		clssExpired) {
 
@@ -1869,15 +1871,15 @@ function initExpiringItems(slctrExpiringElems, dataAttrExprtnDate,
 	var $expiringElems;	// jQuery object: all elements for which an expiration
 						// date has been set
 
-	var $this;	// jQuery object: element from which currently active execution
-				// context was invoked
+	var $this;	// jQuery object: element from which active execution context
+				// was invoked
 
 	var exprtnDateVal;	// The value of an element's expiration date as set
 						// through jQuery data storage
 
 	var exprtnDateObj;	// A date object constructed from the value of an
 						// element's expiration date
-	
+
 	today = new Date();
 	$expiringElems = $( slctrExpiringElems );
 	$expiringElems.each( function() {
@@ -1895,15 +1897,42 @@ function initExpiringItems(slctrExpiringElems, dataAttrExprtnDate,
 	resortListsWithExpiredItems( clssExpired );
 }
 
+// Improve user experience by resorting list elements containing expired list
+// items such that upcoming, unexpired list items appear at the top of the list
+// and are not obscured by already outdated items
 function resortListsWithExpiredItems(clssExpired) {
-	var $expiredItems = $("." + clssExpired);
-	var $listsWithExpiredItems = $expiredItems.parent("ul");
-	var $thisList;
-	var $listItems;
-	var $lastItem;
-	var $curItem;
-	var $clonedItem;
-	var idx;
+
+	var $expiredItems;	// jQuery object: all list item elements with an
+						// expiration date. Used to find all list elements
+						// containing such items.
+
+	var $listsWithExpiredItems;	// jQuery object: all lists containing elements
+								// with current execution context was invoked
+
+	var $thisList;	// jQuery object: list element from which active execution
+					// context was invoked
+
+	var $listItems;	// jQuery object: used once a list containing expiring items
+					// has invoked an execution context to store all of the
+					// child list items of the invoking list
+
+	var $lastItem;	// jQuery object: used while iterating over the child list
+					// items of a parent list element that contains expiring
+					// items; serves as reference to the last item at the end of
+					// the list
+
+	var $curItem;	// jQuery object: used while iterating over the child list
+					// items of a parent list element that contains expiring
+					// items; serves as reference to the curret item being
+					// considered during iteration
+
+	var $clonedItem;	// jQuery object: used to create a clone of an expired
+						// list item while it is being moved to the end of a list
+
+	var idx;	// Iterator index
+
+	$expiredItems = $( "li." + clssExpired );
+	$listsWithExpiredItems = $expiredItems.parent( "ul" );
 	$listsWithExpiredItems.each(function() {
 		$thisList = $(this);
 		if (!$thisList.hasClass('cascaded-layout')) {
@@ -1912,6 +1941,11 @@ function resortListsWithExpiredItems(clssExpired) {
 			for (idx = 0; idx < $listItems.length; idx++) {
 				$curItem = $listItems.eq(idx);
 				if ($curItem.hasClass(clssExpired)) {
+					
+					// This method of moving items is done intentionally to
+					// result in a reverse chronological sorting of expired
+					// items, where the most recently expired item is displayed
+					// first in sequence
 					$curItem.detach().insertAfter($lastItem);
 				}
 			}
@@ -1921,57 +1955,108 @@ function resortListsWithExpiredItems(clssExpired) {
 			for (idx = 0; idx < $listItems.length; idx++) {
 				$curItem = $listItems.eq(idx);
 				if ($curItem.hasClass(clssExpired)) {
+
+					// TODO: This method of moving items will result in a
+					// chronological sorting, which is different from above;
+					// may want to consider refactoring.
 					$clonedItem = $curItem.clone();
-					$thisList.append($clonedItem).masonry("appended", $clonedItem);
+					$thisList.append($clonedItem).masonry("appended",
+						$clonedItem);
 					$thisList.masonry("remove", $curItem).masonry("layout");
 				}
 			}
 		}
 	});
-
-	// TODO: move expired list items to the back of the list, then redo layouts on any lists controlled by masonry JS.
 }
 
+// Initialize automatic population of abstract submission form fields related
+// to contacting the mentor of a student based on what project they are a part
+// of. This is done to minimize the potential for errors in form input.
 function initFacultyEmailAutoEntry(slctrSelectBox, slctrHiddenFields) {
-	var $selectField;
-	var $emailField;
-	var $facultyNameField;
-	var $selectBox;
-	var $emailInputBox;
-	var $nameInputBox;
-	var selectionMade;
-	var fieldsToFill;
 
-	// TODO: Update for Summer 2017
-	$(slctrSelectBox).each(function () {
+	var $selectField;	// jQuery object: the drop-down selection field through
+						// which the user chooses their project
+
+	var $emailField;	// jQuery object: a hidden email field that is the
+						// immediate sibling following the visible selection
+						// field in the DOM
+
+	var $facultyNameField;	// jQuery object: a hidden text input field that is
+							// the immediate sibling following the hidden email
+							// field in the DOM; stores mentor's name
+
+	var $selectBox;	// jQuery object: the input element within the project
+					// selection field that is visible to the user
+
+	var $emailInputBox;	// jQuery object: the input element within the mentor's
+						// email field which is hidden from the user
+
+	var $nameInputBox;	// jQuery object: the input element within the mentor's
+						// name field which is hidden from the user
+
+	var selectionMade;	// Holds the value of the project selectied by the user
+
+	var fieldsToFill;	// Object representing the form fields to be
+						// automatically filled by JS
+
+	// If it exists on the page, find the project selection field and bind its
+	// change event to a function that automatically populates hidden fields
+	// that store the mentor's contact email and name
+	$( slctrSelectBox ).each(function () {
 		$selectField = $(this);
 		$emailField = $selectField.next(slctrHiddenFields);
-		if($emailField.length > 0) {
+		if ( $emailField.length > 0 ) {
 			$facultyNameField = $emailField.next(slctrHiddenFields);
-			if($facultyNameField.length > 0) {
-				$selectBox = $selectField.find("select").first();
-				$emailInputBox = $emailField.find("input[type='hidden']").first();
-				$nameInputBox = $facultyNameField.find("input[type='hidden']").first();
-				$selectBox.change(function() {
+			if ( $facultyNameField.length > 0 ) {
+				$selectBox = $selectField.find( "select" ).first();
+				$emailInputBox = $emailField.
+					find( "input[type='hidden']" ).
+					first();
+				$nameInputBox = $facultyNameField.
+					find( "input[type='hidden']" ).
+					first();
+				$selectBox.change( function() {
 					selectionMade = $(this).val();
-					fieldsToFill = new FieldsToFill(selectionMade, $emailInputBox, $nameInputBox);
-					fillHiddenFields(fieldsToFill);
+					fieldsToFill = new FieldsToFill(
+						selectionMade,
+						$emailInputBox,
+						$nameInputBox
+					);
+					fillHiddenFields( fieldsToFill );
 				});			
 			}
 		}
 	});
 }
 
+// -↓-↓-↓-↓-↓-↓-↓-↓-↓-↓-↓-↓-↓-↓-↓-↓-↓-↓-↓-↓-↓-↓-↓-↓-↓-↓-↓-↓-↓-↓-↓-↓-↓-↓-↓-↓-↓-↓-
+// CLASS SPECIFICATION: FieldsToFill
+// Used to store jQuery objects for gravity forms fields that are automatically
+// populated with a mentor's correct email and name.
 var FieldsToFill = function (selectionMade, $emailInputBox, $nameInputBox) {
-	this.selectionMade = typeof selectionMade == "string" ? selectionMade : "";
-	this.$emailInputBox = isJQuery($emailInputBox) ? $emailInputBox : $();
-	this.$nameInputBox = isJQuery($nameInputBox) ? $nameInputBox : $();
+	this.selectionMade = typeof selectionMade === "string" ?
+		selectionMade :
+		"";
+	this.$emailInputBox = $.isJQueryObj($emailInputBox) ?
+		$emailInputBox :
+		$();
+	this.$nameInputBox = $.isJQueryObj($nameInputBox) ?
+		$nameInputBox :
+		$();
 }
 
+// METHOD: isValid
+// Indicates whether the instance of FieldsToFill has been properly constructed
+// with valid references to jQuery objects
 FieldsToFill.prototype.isValid = function () {
-	return this.selectionMade != "" && this.$emailInputBox.length > 0 && this.$nameInputBox.length > 0;
+	return this.selectionMade != "" && this.$emailInputBox.length > 0 &&
+		this.$nameInputBox.length > 0;
 }
 
+// End of specification for FieldsToFill class.
+// -↑-↑-↑-↑-↑-↑-↑-↑-↑-↑-↑-↑-↑-↑-↑-↑-↑-↑-↑-↑-↑-↑-↑-↑-↑-↑-↑-↑-↑-↑-↑-↑-↑-↑-↑-↑-↑-↑-
+
+// 
 function fillHiddenFields(fieldsToFill) {
 	// TODO: Update for Summer 2017
 	if(fieldsToFill instanceof FieldsToFill && fieldsToFill.isValid()) {
@@ -1984,6 +2069,10 @@ function fillHiddenFields(fieldsToFill) {
 				fieldsToFill.$emailInputBox.val("samantha.gizerian@wsu.edu");
 				fieldsToFill.$nameInputBox.val("Samantha");
 				break;
+			case "Engineering Tools for Disease Diagnostics and Treatment (Nehal Abu-Lail)":
+				fieldsToFill.$emailInputBox.val("nehal@wsu.edu");
+				fieldsToFill.$nameInputBox.val("Nehal");
+				break;
 			case "Gerontechnology-focused Summer Undergraduate Research Experience (GSUR) (Diane Cook & Maureen Schmitter-Edgecombe)":
 				fieldsToFill.$emailInputBox.val("djcook@wsu.edu");
 				fieldsToFill.$nameInputBox.val("Diane and Maureen");
@@ -1991,14 +2080,6 @@ function fillHiddenFields(fieldsToFill) {
 			case "Landscape Ecology and Ecosystem Dynamics in the Columbia River Basin: Integrating Terrestrial and Aquatic Perspectives (Gretchen Rollwagen-Bollens)":
 				fieldsToFill.$emailInputBox.val("rollboll@wsu.edu");
 				fieldsToFill.$nameInputBox.val("Gretchen");
-				break;
-			case "Materials Under Extreme Conditions (Y. M. Gupta)":
-				fieldsToFill.$emailInputBox.val("shock@wsu.edu");
-				fieldsToFill.$nameInputBox.val("Professor Gupta");
-				break;
-			case "New-generation Power-efficient Computer Systems Design (Partha Pande)":
-				fieldsToFill.$emailInputBox.val("partha_pande@wsu.edu");
-				fieldsToFill.$nameInputBox.val("Partha");
 				break;
 			case "Northwest Advanced Renewables Alliance (NARA) (Shelley Pressley)":
 				fieldsToFill.$emailInputBox.val("spressley@wsu.edu");
@@ -2008,10 +2089,22 @@ function fillHiddenFields(fieldsToFill) {
 				fieldsToFill.$emailInputBox.val("adhingra@wsu.edu");
 				fieldsToFill.$nameInputBox.val("Amit");
 				break;
+			case "REgional Approaches to Climate CHange (REACCH) (Shelley Pressley)":
+				fieldsToFill.$emailInputBox.val("spressley@wsu.edu");
+				fieldsToFill.$nameInputBox.val("Shelley");
+				break;
+			case "Research Opportunities for Native Undergraduate Students (Amit Dhingra and Lori Carris)":
+				fieldsToFill.$emailInputBox.val("adhingra@wsu.edu");
+				fieldsToFill.$nameInputBox.val("Amit and Lori");
+				break;
 			case "Smart Environments (Larry Holder)":
 				fieldsToFill.$emailInputBox.val("holder@wsu.edu");
 				fieldsToFill.$nameInputBox.val("Larry");
 				break;
+//			case "Summer Undergraduate Research Fellowship (SURF)":
+//				fieldsToFill.$emailInputBox.val("SURF@pharmacy.wsu.edu");
+//				fieldsToFill.$nameInputBox.val("SURF program");
+//				break;
 			case "USPRISM: U.S.-Scotland Program for Research on Integration of Renewable Energy Resources and SMart Grid (Ali Mehrizi-Sani)":
 				fieldsToFill.$emailInputBox.val("mehrizi@eecs.wsu.edu");
 				fieldsToFill.$nameInputBox.val("Ali");
