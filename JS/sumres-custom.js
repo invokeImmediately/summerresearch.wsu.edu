@@ -333,7 +333,8 @@ FieldsToFill.prototype.isValid = function () {
 // End of specification for FieldsToFill class.
 // -↑-↑-↑-↑-↑-↑-↑-↑-↑-↑-↑-↑-↑-↑-↑-↑-↑-↑-↑-↑-↑-↑-↑-↑-↑-↑-↑-↑-↑-↑-↑-↑-↑-↑-↑-↑-↑-↑-
 
-// 
+// Fills hidden fields on the gravity form for abstract submission. Fields are
+// related to inforation about the faculty member who mentors the student.
 function fillHiddenFields(fieldsToFill) {
 	// TODO: Update for Summer 2017
 	if(fieldsToFill instanceof FieldsToFill && fieldsToFill.isValid()) {
