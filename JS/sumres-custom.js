@@ -345,6 +345,10 @@ function fillHiddenFields(fieldsToFill) {
 				fieldsToFill.$emailInputBox.val("samantha.gizerian@wsu.edu");
 				fieldsToFill.$nameInputBox.val("Samantha");
 				break;
+			case "Engineering Tools for Disease Diagnostics and Treatment (Nehal Abu-Lail)":
+				fieldsToFill.$emailInputBox.val("nehal@wsu.edu");
+				fieldsToFill.$nameInputBox.val("Nehal");
+				break;
 			case "Gerontechnology-focused Summer Undergraduate Research Experience (GSUR) (Diane Cook & Maureen Schmitter-Edgecombe)":
 				fieldsToFill.$emailInputBox.val("djcook@wsu.edu");
 				fieldsToFill.$nameInputBox.val("Diane and Maureen");
@@ -352,14 +356,6 @@ function fillHiddenFields(fieldsToFill) {
 			case "Landscape Ecology and Ecosystem Dynamics in the Columbia River Basin: Integrating Terrestrial and Aquatic Perspectives (Gretchen Rollwagen-Bollens)":
 				fieldsToFill.$emailInputBox.val("rollboll@wsu.edu");
 				fieldsToFill.$nameInputBox.val("Gretchen");
-				break;
-			case "Materials Under Extreme Conditions (Y. M. Gupta)":
-				fieldsToFill.$emailInputBox.val("shock@wsu.edu");
-				fieldsToFill.$nameInputBox.val("Professor Gupta");
-				break;
-			case "New-generation Power-efficient Computer Systems Design (Partha Pande)":
-				fieldsToFill.$emailInputBox.val("partha_pande@wsu.edu");
-				fieldsToFill.$nameInputBox.val("Partha");
 				break;
 			case "Northwest Advanced Renewables Alliance (NARA) (Shelley Pressley)":
 				fieldsToFill.$emailInputBox.val("spressley@wsu.edu");
@@ -369,10 +365,22 @@ function fillHiddenFields(fieldsToFill) {
 				fieldsToFill.$emailInputBox.val("adhingra@wsu.edu");
 				fieldsToFill.$nameInputBox.val("Amit");
 				break;
+			case "REgional Approaches to Climate CHange (REACCH) (Shelley Pressley)":
+				fieldsToFill.$emailInputBox.val("spressley@wsu.edu");
+				fieldsToFill.$nameInputBox.val("Shelley");
+				break;
+			case "Research Opportunities for Native Undergraduate Students (Amit Dhingra and Lori Carris)":
+				fieldsToFill.$emailInputBox.val("adhingra@wsu.edu");
+				fieldsToFill.$nameInputBox.val("Amit and Lori");
+				break;
 			case "Smart Environments (Larry Holder)":
 				fieldsToFill.$emailInputBox.val("holder@wsu.edu");
 				fieldsToFill.$nameInputBox.val("Larry");
 				break;
+//			case "Summer Undergraduate Research Fellowship (SURF)":
+//				fieldsToFill.$emailInputBox.val("SURF@pharmacy.wsu.edu");
+//				fieldsToFill.$nameInputBox.val("SURF program");
+//				break;
 			case "USPRISM: U.S.-Scotland Program for Research on Integration of Renewable Energy Resources and SMart Grid (Ali Mehrizi-Sani)":
 				fieldsToFill.$emailInputBox.val("mehrizi@eecs.wsu.edu");
 				fieldsToFill.$nameInputBox.val("Ali");
