@@ -237,7 +237,8 @@ function resortListsWithExpiredItems(clssExpired) {
 					// chronological sorting, which is different from above;
 					// may want to consider refactoring.
 					$clonedItem = $curItem.clone();
-					$thisList.append($clonedItem).masonry("appended", $clonedItem);
+					$thisList.append($clonedItem).masonry("appended",
+						$clonedItem);
 					$thisList.masonry("remove", $curItem).masonry("layout");
 				}
 			}
@@ -245,30 +246,60 @@ function resortListsWithExpiredItems(clssExpired) {
 	});
 }
 
+// Initialize automatic population of abstract submission form fields related
+// to contacting the mentor of a student based on what project they are a part
+// of. This is done to minimize the potential for errors in form input.
 function initFacultyEmailAutoEntry(slctrSelectBox, slctrHiddenFields) {
-	var $selectField;
-	var $emailField;
-	var $facultyNameField;
-	var $selectBox;
-	var $emailInputBox;
-	var $nameInputBox;
-	var selectionMade;
-	var fieldsToFill;
 
-	// TODO: Update for Summer 2017
-	$(slctrSelectBox).each(function () {
+	var $selectField;	// jQuery object: the drop-down selection field through
+						// which the user chooses their project
+
+	var $emailField;	// jQuery object: a hidden email field that is the
+						// immediate sibling following the visible selection
+						// field in the DOM
+
+	var $facultyNameField;	// jQuery object: a hidden text input field that is
+							// the immediate sibling following the hidden email
+							// field in the DOM; stores mentor's name
+
+	var $selectBox;	// jQuery object: the input element within the project
+					// selection field that is visible to the user
+
+	var $emailInputBox;	// jQuery object: the input element within the mentor's
+						// email field which is hidden from the user
+
+	var $nameInputBox;	// jQuery object: the input element within the mentor's
+						// name field which is hidden from the user
+
+	var selectionMade;	// Holds the value of the project selectied by the user
+
+	var fieldsToFill;	// Object representing the form fields to be
+						// automatically filled by JS
+
+	// If it exists on the page, find the project selection field and bind its
+	// change event to a function that automatically populates hidden fields
+	// that store the mentor's contact email and name
+	$( slctrSelectBox ).each(function () {
 		$selectField = $(this);
 		$emailField = $selectField.next(slctrHiddenFields);
-		if($emailField.length > 0) {
+		if ( $emailField.length > 0 ) {
 			$facultyNameField = $emailField.next(slctrHiddenFields);
-			if($facultyNameField.length > 0) {
-				$selectBox = $selectField.find("select").first();
-				$emailInputBox = $emailField.find("input[type='hidden']").first();
-				$nameInputBox = $facultyNameField.find("input[type='hidden']").first();
-				$selectBox.change(function() {
+			if ( $facultyNameField.length > 0 ) {
+				$selectBox = $selectField.find( "select" ).first();
+				$emailInputBox = $emailField.
+					find( "input[type='hidden']" ).
+					first();
+				$nameInputBox = $facultyNameField.
+					find( "input[type='hidden']" ).
+					first();
+				$selectBox.change( function() {
 					selectionMade = $(this).val();
-					fieldsToFill = new FieldsToFill(selectionMade, $emailInputBox, $nameInputBox);
-					fillHiddenFields(fieldsToFill);
+					fieldsToFill = new FieldsToFill(
+						selectionMade,
+						$emailInputBox,
+						$nameInputBox
+					);
+					fillHiddenFields( fieldsToFill );
 				});			
 			}
 		}
@@ -276,13 +307,20 @@ function initFacultyEmailAutoEntry(slctrSelectBox, slctrHiddenFields) {
 }
 
 var FieldsToFill = function (selectionMade, $emailInputBox, $nameInputBox) {
-	this.selectionMade = typeof selectionMade == "string" ? selectionMade : "";
-	this.$emailInputBox = isJQuery($emailInputBox) ? $emailInputBox : $();
-	this.$nameInputBox = isJQuery($nameInputBox) ? $nameInputBox : $();
+	this.selectionMade = typeof selectionMade === "string" ?
+		selectionMade :
+		"";
+	this.$emailInputBox = isJQuery($emailInputBox) ?
+		$emailInputBox :
+		$();
+	this.$nameInputBox = isJQuery($nameInputBox) ?
+		$nameInputBox :
+		$();
 }
 
 FieldsToFill.prototype.isValid = function () {
-	return this.selectionMade != "" && this.$emailInputBox.length > 0 && this.$nameInputBox.length > 0;
+	return this.selectionMade != "" && this.$emailInputBox.length > 0 &&
+		this.$nameInputBox.length > 0;
 }
 
 function fillHiddenFields(fieldsToFill) {
