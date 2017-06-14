@@ -306,6 +306,10 @@ function initFacultyEmailAutoEntry(slctrSelectBox, slctrHiddenFields) {
 	});
 }
 
+// -↓-↓-↓-↓-↓-↓-↓-↓-↓-↓-↓-↓-↓-↓-↓-↓-↓-↓-↓-↓-↓-↓-↓-↓-↓-↓-↓-↓-↓-↓-↓-↓-↓-↓-↓-↓-↓-↓-
+// CLASS SPECIFICATION: FieldsToFill
+// Used to store jQuery objects for gravity forms fields that are automatically
+// populated with a mentor's correct email and name.
 var FieldsToFill = function (selectionMade, $emailInputBox, $nameInputBox) {
 	this.selectionMade = typeof selectionMade === "string" ?
 		selectionMade :
@@ -318,10 +322,16 @@ var FieldsToFill = function (selectionMade, $emailInputBox, $nameInputBox) {
 		$();
 }
 
+// METHOD: isValid
+// Indicates whether the instance of FieldsToFill has been properly constructed
+// with valid references to jQuery objects
 FieldsToFill.prototype.isValid = function () {
 	return this.selectionMade != "" && this.$emailInputBox.length > 0 &&
 		this.$nameInputBox.length > 0;
 }
+
+// End of specification for FieldsToFill class.
+// -↑-↑-↑-↑-↑-↑-↑-↑-↑-↑-↑-↑-↑-↑-↑-↑-↑-↑-↑-↑-↑-↑-↑-↑-↑-↑-↑-↑-↑-↑-↑-↑-↑-↑-↑-↑-↑-↑-
 
 function fillHiddenFields(fieldsToFill) {
 	// TODO: Update for Summer 2017
