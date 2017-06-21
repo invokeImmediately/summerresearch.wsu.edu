@@ -1,27 +1,26 @@
 /*! ╔═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗
 *   ║ MASTER STYLE SHEET for WSU Office of Undergraduate Education Websites ############################################### ║
 *   ╠=======================================================================================================================╣
-*   ║ AUTHOR: Daniel Rieck <daniel.rieck@wsu.edu> (https://github.com/invokeImmediately)                                    ║
+*   ║ AUTHOR: Daniel Rieck [daniel.rieck@wsu.edu] (https://github.com/invokeImmediately)                                    ║
 *   ║                                                                                                                       ║
 *   ║ DESCRIPTION: Intended for use with all elements regardless of semantics                                               ║
 *   ║                                                                                                                       ║
 *   ║ LAYOUT: This document is laid out according to the W3C HTML5 language specification (please see                       ║
-*   ║          https://www.w3.org/TR/html5/ for more information). rulesets are generally declared in the                   ║
-*   ║          same sequence as their matching elements appear in the HTML5 spec. Moreover, style                           ║
-*   ║          declarations are made according to browser rendering sequence; styles for controlling layout                 ║
-*   ║          are followed by those related to painting and then by those associated with dynamic changes to               ║
-*   ║          the DOM tree.                                                                                                ║
+*   ║          https://www.w3.org/TR/html5/ for more information). Rulesets are generally declared in the same sequence as  ║
+*   ║          their matching elements appear in the HTML5 spec. Moreover, style declarations are made according to browser ║
+*   ║          rendering sequence; styles for controlling layout are followed by those related to painting and then by      ║
+*   ║          those associated with dynamic behaviors to the DOM tree.                                                     ║
 *   ╚═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝
 */
 /*!   ╔═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗
-*     ║ #### GLOBAL LESS VARIABLES, LESS MIXINS, AND CLASS SPECIFIC rulesets ############################################ ║
+*     ║ #### Global LESS VARIABLES, LESS MIXINS, and CLASS SPECIFIC rulesets ############################################ ║
 *     ╠===================================================================================================================╣
 *     ║ LESS variables and mixins and low-specificity CSS3 rulesets designed for either styling nodes without             ║
 *     ║ regard to semantics or being included within LESS dependencies.                                                   ║
 *     ╚═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝
 */
 /*!     ┌───────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
-*       │ ++++ ADDITIONAL FONTS +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ │
+*       │ ++++ Additional FONTS +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ │
 *       │   CSS classes and LESS variables and parametric mixins designed for inclusion in dependencies to facilitate   │
 *       │   typographical design of dependent layouts.                                                                  │
 *       └───────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
@@ -702,7 +701,7 @@ header:first-child + .has-pull-quote-bordering:not(.alt) {
 /*!   ╔═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗ 
 *     ║ #### SEMANTICALLY SPECIFIC RULESETS: DOCUMENT SECTIONS ########################################################## ║
 *     ╠===================================================================================================================╣
-*     ║ rulesets that target section-level nodes.                                                                         ║
+*     ║ Rulesets that target section-level nodes.                                                                         ║
 *     ╚═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝
 */
 /*!     ┌───────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
@@ -2118,7 +2117,7 @@ footer.article-footer div.author-info {
 /*!   ╔═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗ 
 *     ║ #### CONTENT GROUPING NODES ##################################################################################### ║
 *     ╠===================================================================================================================╣
-*     ║ rulesets that target nodes for grouping content.                                                                  ║
+*     ║ Rulesets that target nodes for grouping content.                                                                  ║
 *     ╚═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝
 */
 /*!  ┌──────────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
@@ -5247,7 +5246,7 @@ div.recent-updates p.recent-update-3 {
 /*!   ╔═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗ 
 *     ║ #### TEXT-LEVEL NODES ########################################################################################### ║
 *     ╠===================================================================================================================╣
-*     ║ rulesets that target nodes with text-level semantics.                                                             ║
+*     ║ Rulesets that target nodes with text-level semantics.                                                             ║
 *     ╚═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝
 */
 /*     ┌─────────────────────────────────────────────────────────────────────────────────────────────────┐
@@ -5589,7 +5588,7 @@ cite.article-author {
 /*!   ╔═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗ 
 *     ║ #### EMBEDDED CONTENT ########################################################################################### ║
 *     ╠===================================================================================================================╣
-*     ║ rulesets that target nodes representing embedded content.                                                         ║
+*     ║ Rulesets that target nodes representing embedded content.                                                         ║
 *     ╚═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝
 */
 /*     ┌─────────────────────────────────────────────────────────────────────────────────────────────────┐
@@ -5842,7 +5841,7 @@ figure figcaption {
 /*!   ╔═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗ 
 *     ║ #### TABULAR DATA ############################################################################################### ║
 *     ╠===================================================================================================================╣
-*     ║ rulesets that nodes for representing tabular data.                                                                ║
+*     ║ Rulesets that nodes for representing tabular data.                                                                ║
 *     ╚═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝
 */
 /*     ┌─────────────────────────────────────────────────────────────────────────────────────────────────┐
@@ -6522,7 +6521,7 @@ div.read-more-target {
 /*!   ╔═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗ 
 *     ║ #### SCRIPTING ################################################################################################## ║
 *     ╠===================================================================================================================╣
-*     ║ rulesets for interactive elements that do not function as intended without the support of JavaScript.             ║
+*     ║ Rulesets for interactive elements that do not function as intended without the support of JavaScript.             ║
 *     ╚═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝
 */
 /*!     ┌───────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
