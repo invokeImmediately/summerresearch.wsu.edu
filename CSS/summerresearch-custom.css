@@ -2,6 +2,34 @@
 *   ║ OUE-WIDE CUSTOM LAYOUTS ############################################################################################# ║
 *   ╚═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝
 */
+/*! ╔═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗
+*   ║ MASTER STYLE SHEET for WSU Office of Undergraduate Education Websites ############################################### ║
+*   ╠=======================================================================================================================╣
+*   ║ AUTHOR: Daniel Rieck <daniel.rieck@wsu.edu> (https://github.com/invokeImmediately)                                    ║
+*   ║                                                                                                                       ║
+*   ║ DESCRIPTION: Intended for use with all elements regardless of semantics                                               ║
+*   ║                                                                                                                       ║
+*   ║ LAYOUT: This document is laid out according to the W3C HTML5 language specification (please see                       ║
+*   ║          https://www.w3.org/TR/html5/ for more information). rulesets are generally declared in the                   ║
+*   ║          same sequence as their matching elements appear in the HTML5 spec. Moreover, style                           ║
+*   ║          declarations are made according to browser rendering sequence; styles for controlling layout                 ║
+*   ║          are followed by those related to painting and then by those associated with dynamic changes to               ║
+*   ║          the DOM tree.                                                                                                ║
+*   ╚═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝
+*/
+/*!   ╔═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗
+*     ║ #### GLOBAL LESS VARIABLES, LESS MIXINS, AND CLASS SPECIFIC rulesets ############################################ ║
+*     ╠===================================================================================================================╣
+*     ║ LESS variables and mixins and low-specificity CSS3 rulesets designed for either styling nodes without             ║
+*     ║ regard to semantics or being included within LESS dependencies.                                                   ║
+*     ╚═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝
+*/
+/*!     ┌───────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
+*       │ ++++ ADDITIONAL FONTS +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ │
+*       │   CSS classes and LESS variables and parametric mixins designed for inclusion in dependencies to facilitate   │
+*       │   typographical design of dependent layouts.                                                                  │
+*       └───────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
+*/
 @import url(https://fonts.googleapis.com/css?family=Roboto+Mono:300|Roboto+Condensed:400,700|Roboto+Slab|PT+Serif);
 .has-mono-font {
   font-family: 'Roboto Mono', monospace, sans-serif;
@@ -321,6 +349,10 @@ header:first-child + .has-pull-quote-bordering:not(.alt) {
   right: 3px;
   background-color: rgba(70, 78, 84, 0.75757576);
 }
+/*!     ┌───────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
+*       │ ++++ ANIMATIONS +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ │
+*       └───────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
+*/
 .fade-in-from-top {
   opacity: 0;
   -webkit-animation: anim-fade-in-from-top 1s linear 1;
@@ -548,6 +580,10 @@ header:first-child + .has-pull-quote-bordering:not(.alt) {
     border-color: rgba(141, 203, 241, 0.5);
   }
 }
+/*!     ┌───────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
+*       │ ++++ CLASS SPECIFIC rulesets ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ │
+*       └───────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
+*/
 :target:not(.no-anchor-highlighting) {
   position: relative;
 }
@@ -667,22 +703,40 @@ header:first-child + .has-pull-quote-bordering:not(.alt) {
   height: auto;
   visibility: visible;
 }
+/*!   ╔═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗ 
+*     ║ #### SEMANTICALLY SPECIFIC RULESETS: DOCUMENT SECTIONS ########################################################## ║
+*     ╠===================================================================================================================╣
+*     ║ rulesets that target section-level nodes.                                                                         ║
+*     ╚═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝
+*/
+/*!     ┌───────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
+*       │ ++++ HTML rulesets ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ │
+*       └───────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
+*/
 html {
   font-size: 17px;
 }
-div.column article.post {
+/*!     ┌───────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
+*       │ ++++ BODY rulesets ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ │
+*       └───────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
+*/
+/*!     ┌───────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
+*       │ ++++ ARTICLE rulesets +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ │
+*       └───────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
+*/
+.column article.post {
   padding: 1em;
   border: 1px solid rgba(0, 0, 0, 0.3333);
   border-radius: 5px;
   background-color: #fff;
   box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.25);
 }
-div.column article.post + article.post {
+.column article.post + article.post {
   margin-top: 1.5em;
 }
-/*!  ┌──────────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
-*    │ SECTIONS +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ │
-*    └──────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
+/*!     ┌───────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
+*       │ SECTIONS ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ │
+*       └───────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
 */
 section.column-one-with-bottom-margin > .column.one {
   margin-bottom: 2rem;
@@ -735,12 +789,6 @@ section:not(.row).article-header .header-content h3 {
     border: 1px solid white;
     color: #fff;
     text-shadow: 0 0.3333px 0 #afafaf, 0 0.6667px 0 #989898, 0 1px 0 #7f7f7f, 0 1.3333px 0 #686868, 0 1.6667px 0 #4f4f4f, 0 2px 0.3333px rgba(0, 0, 0, 0.1), 0 0 1.6667px rgba(0, 0, 0, 0.1), 0 0.3333px 1px rgba(0, 0, 0, 0.3), 0 1px 1.6667px rgba(0, 0, 0, 0.2), 0 1.6667px 3.3333px rgba(0, 0, 0, 0.25), 0 3.3333px 3.3333px rgba(0, 0, 0, 0.2), 0 6.6667px 6.6667px rgba(0, 0, 0, 0.15);
-    /*.rgb-black(); text-shadow: 0 .5px 0 #aaa, 0 1px 0 #888,
-						 0 1.5px .5px rgba(@rval,@gval,@bval,.1),
-						 0 0 2.5px rgba(@rval,@gval,@bval,.1),
-						 0 .5px 1.5px rgba(@rval,@gval,@bval,.3),
-						 0 1px 2.5px rgba(@rval,@gval,@bval,.2),
-						 0 0 .5px #000, 0 1.5px 1px #000;*/
   }
   section:not(.row).article-header .header-content h3 > mark.highlight {
     text-shadow: 0 0.3333px 0 #77898b, 0 0.6667px 0 #687779, 0 1px 0 #576365, 0 1.3333px 0 #475153, 0 1.6667px 0 #363e3f, 0 2px 0.3333px rgba(0, 0, 0, 0.1), 0 0 1.6667px rgba(0, 0, 0, 0.1), 0 0.3333px 1px rgba(0, 0, 0, 0.3), 0 1px 1.6667px rgba(0, 0, 0, 0.2), 0 1.6667px 3.3333px rgba(0, 0, 0, 0.25), 0 3.3333px 3.3333px rgba(0, 0, 0, 0.2), 0 6.6667px 6.6667px rgba(0, 0, 0, 0.15);
@@ -878,10 +926,6 @@ section.side-right .column.two p {
 .column section:not(:last-child) > *:last-child:not(.vpue-jump-bar) {
   padding-bottom: 0;
 }
-/*         ┌-----------------------------------------------------------------------------------------┐
- *         │ ···· SPACING OVERWRITES to improve responsive design ·································· │
- *         └-----------------------------------------------------------------------------------------┘
- */
 main section.row > .column > p:not(.no-btm-margin),
 main section.row > .column > article > .article-body > p:not(.no-btm-margin),
 main section.row > .column > article > .article-summary > p:not(.no-btm-margin),
@@ -972,42 +1016,226 @@ main section.row > .column table > tbody > tr > td > div > p + ol:not(.spaces-to
   margin-top: -0.66666667rem;
 }
 main section.row:last-child > .column > p:last-child,
-main section.row:last-child > .column > article > .article-body > p:last-child,
-main section.row:last-child > .column > article > .article-summary > p:last-child,
+main section.row:last-child > .column > .column > article > .article-body > p:last-child,
+main section.row:last-child > .column > .column > article > .article-summary > p:last-child,
+main section.row:last-child > .column > .column > section > p:last-child,
 main section.row:last-child > .column > section > p:last-child,
-main section.row:last-child > .column > section > p:last-child,
-main section.row:last-child > .column > article > .article-body > section > p:last-child,
-main section.row:last-child > .column > article > .article-summary > section > p:last-child,
-main section.row:last-child > .column > section > section > p:last-child,
+main section.row:last-child > .column > .column > article > .article-body > section > p:last-child,
+main section.row:last-child > .column > .column > article > .article-summary > section > p:last-child,
+main section.row:last-child > .column > .column > section > section > p:last-child,
 main section.row:last-child > .column > div > p:last-child,
-main section.row:last-child > .column > article > .article-body > div > p:last-child,
-main section.row:last-child > .column > article > .article-summary > div > p:last-child,
-main section.row:last-child > .column > section > div > p:last-child,
+main section.row:last-child > .column > .column > article > .article-body > div > p:last-child,
+main section.row:last-child > .column > .column > article > .article-summary > div > p:last-child,
+main section.row:last-child > .column > .column > section > div > p:last-child,
 main section.row:last-child > .column > ul:last-child,
-main section.row:last-child > .column > article > .article-body > ul:last-child,
-main section.row:last-child > .column > article > .article-summary > ul:last-child,
+main section.row:last-child > .column > .column > article > .article-body > ul:last-child,
+main section.row:last-child > .column > .column > article > .article-summary > ul:last-child,
+main section.row:last-child > .column > .column > section > ul:last-child,
 main section.row:last-child > .column > section > ul:last-child,
-main section.row:last-child > .column > section > ul:last-child,
-main section.row:last-child > .column > article > .article-body > section > ul:last-child,
-main section.row:last-child > .column > article > .article-summary > section > ul:last-child,
-main section.row:last-child > .column > section > section > ul:last-child,
+main section.row:last-child > .column > .column > article > .article-body > section > ul:last-child,
+main section.row:last-child > .column > .column > article > .article-summary > section > ul:last-child,
+main section.row:last-child > .column > .column > section > section > ul:last-child,
 main section.row:last-child > .column > div > ul:last-child,
-main section.row:last-child > .column > article > .article-body > div > ul:last-child,
-main section.row:last-child > .column > article > .article-summary > div > ul:last-child,
-main section.row:last-child > .column > section > div > ul:last-child,
+main section.row:last-child > .column > .column > article > .article-body > div > ul:last-child,
+main section.row:last-child > .column > .column > article > .article-summary > div > ul:last-child,
+main section.row:last-child > .column > .column > section > div > ul:last-child,
 main section.row:last-child > .column > ol:last-child,
-main section.row:last-child > .column > article > .article-body > ol:last-child,
-main section.row:last-child > .column > article > .article-summary > ol:last-child,
+main section.row:last-child > .column > .column > article > .article-body > ol:last-child,
+main section.row:last-child > .column > .column > article > .article-summary > ol:last-child,
+main section.row:last-child > .column > .column > section > ol:last-child,
 main section.row:last-child > .column > section > ol:last-child,
-main section.row:last-child > .column > section > ol:last-child,
-main section.row:last-child > .column > article > .article-body > section > ol:last-child,
-main section.row:last-child > .column > article > .article-summary > section > ol:last-child,
-main section.row:last-child > .column > section > section > ol:last-child,
+main section.row:last-child > .column > .column > article > .article-body > section > ol:last-child,
+main section.row:last-child > .column > .column > article > .article-summary > section > ol:last-child,
+main section.row:last-child > .column > .column > section > section > ol:last-child,
 main section.row:last-child > .column > div > ol:last-child,
-main section.row:last-child > .column > article > .article-body > div > ol:last-child,
-main section.row:last-child > .column > article > .article-summary > div > ol:last-child,
-main section.row:last-child > .column > section > div > ol:last-child {
+main section.row:last-child > .column > .column > article > .article-body > div > ol:last-child,
+main section.row:last-child > .column > .column > article > .article-summary > div > ol:last-child,
+main section.row:last-child > .column > .column > section > div > ol:last-child {
   margin-bottom: 0;
+}
+@media all and (max-width: 693px) {
+  main section.row:last-child.halves > .column:not(:last-child) > p:last-child,
+  main section.row:last-child.thirds > .column:not(:last-child) > p:last-child,
+  main section.row:last-child.quarters > .column:not(:last-child) > p:last-child,
+  main section.row:last-child.side-right > .column:not(:last-child) > p:last-child,
+  main section.row:last-child.side-left > .column:not(:last-child) > p:last-child,
+  main section.row:last-child.halves > .column:not(:last-child) > article > .article-body > p:last-child,
+  main section.row:last-child.thirds > .column:not(:last-child) > article > .article-body > p:last-child,
+  main section.row:last-child.quarters > .column:not(:last-child) > article > .article-body > p:last-child,
+  main section.row:last-child.side-right > .column:not(:last-child) > article > .article-body > p:last-child,
+  main section.row:last-child.side-left > .column:not(:last-child) > article > .article-body > p:last-child,
+  main section.row:last-child.halves > .column:not(:last-child) > article > .article-summary > p:last-child,
+  main section.row:last-child.thirds > .column:not(:last-child) > article > .article-summary > p:last-child,
+  main section.row:last-child.quarters > .column:not(:last-child) > article > .article-summary > p:last-child,
+  main section.row:last-child.side-right > .column:not(:last-child) > article > .article-summary > p:last-child,
+  main section.row:last-child.side-left > .column:not(:last-child) > article > .article-summary > p:last-child,
+  main section.row:last-child.halves > .column:not(:last-child) > section > p:last-child,
+  main section.row:last-child.thirds > .column:not(:last-child) > section > p:last-child,
+  main section.row:last-child.quarters > .column:not(:last-child) > section > p:last-child,
+  main section.row:last-child.side-right > .column:not(:last-child) > section > p:last-child,
+  main section.row:last-child.side-left > .column:not(:last-child) > section > p:last-child,
+  main section.row:last-child.halves > .column:not(:last-child) > section > p:last-child,
+  main section.row:last-child.thirds > .column:not(:last-child) > section > p:last-child,
+  main section.row:last-child.quarters > .column:not(:last-child) > section > p:last-child,
+  main section.row:last-child.side-right > .column:not(:last-child) > section > p:last-child,
+  main section.row:last-child.side-left > .column:not(:last-child) > section > p:last-child,
+  main section.row:last-child.halves > .column:not(:last-child) > article > .article-body > section > p:last-child,
+  main section.row:last-child.thirds > .column:not(:last-child) > article > .article-body > section > p:last-child,
+  main section.row:last-child.quarters > .column:not(:last-child) > article > .article-body > section > p:last-child,
+  main section.row:last-child.side-right > .column:not(:last-child) > article > .article-body > section > p:last-child,
+  main section.row:last-child.side-left > .column:not(:last-child) > article > .article-body > section > p:last-child,
+  main section.row:last-child.halves > .column:not(:last-child) > article > .article-summary > section > p:last-child,
+  main section.row:last-child.thirds > .column:not(:last-child) > article > .article-summary > section > p:last-child,
+  main section.row:last-child.quarters > .column:not(:last-child) > article > .article-summary > section > p:last-child,
+  main section.row:last-child.side-right > .column:not(:last-child) > article > .article-summary > section > p:last-child,
+  main section.row:last-child.side-left > .column:not(:last-child) > article > .article-summary > section > p:last-child,
+  main section.row:last-child.halves > .column:not(:last-child) > section > section > p:last-child,
+  main section.row:last-child.thirds > .column:not(:last-child) > section > section > p:last-child,
+  main section.row:last-child.quarters > .column:not(:last-child) > section > section > p:last-child,
+  main section.row:last-child.side-right > .column:not(:last-child) > section > section > p:last-child,
+  main section.row:last-child.side-left > .column:not(:last-child) > section > section > p:last-child,
+  main section.row:last-child.halves > .column:not(:last-child) > div > p:last-child,
+  main section.row:last-child.thirds > .column:not(:last-child) > div > p:last-child,
+  main section.row:last-child.quarters > .column:not(:last-child) > div > p:last-child,
+  main section.row:last-child.side-right > .column:not(:last-child) > div > p:last-child,
+  main section.row:last-child.side-left > .column:not(:last-child) > div > p:last-child,
+  main section.row:last-child.halves > .column:not(:last-child) > article > .article-body > div > p:last-child,
+  main section.row:last-child.thirds > .column:not(:last-child) > article > .article-body > div > p:last-child,
+  main section.row:last-child.quarters > .column:not(:last-child) > article > .article-body > div > p:last-child,
+  main section.row:last-child.side-right > .column:not(:last-child) > article > .article-body > div > p:last-child,
+  main section.row:last-child.side-left > .column:not(:last-child) > article > .article-body > div > p:last-child,
+  main section.row:last-child.halves > .column:not(:last-child) > article > .article-summary > div > p:last-child,
+  main section.row:last-child.thirds > .column:not(:last-child) > article > .article-summary > div > p:last-child,
+  main section.row:last-child.quarters > .column:not(:last-child) > article > .article-summary > div > p:last-child,
+  main section.row:last-child.side-right > .column:not(:last-child) > article > .article-summary > div > p:last-child,
+  main section.row:last-child.side-left > .column:not(:last-child) > article > .article-summary > div > p:last-child,
+  main section.row:last-child.halves > .column:not(:last-child) > section > div > p:last-child,
+  main section.row:last-child.thirds > .column:not(:last-child) > section > div > p:last-child,
+  main section.row:last-child.quarters > .column:not(:last-child) > section > div > p:last-child,
+  main section.row:last-child.side-right > .column:not(:last-child) > section > div > p:last-child,
+  main section.row:last-child.side-left > .column:not(:last-child) > section > div > p:last-child,
+  main section.row:last-child.halves > .column:not(:last-child) > ul:last-child,
+  main section.row:last-child.thirds > .column:not(:last-child) > ul:last-child,
+  main section.row:last-child.quarters > .column:not(:last-child) > ul:last-child,
+  main section.row:last-child.side-right > .column:not(:last-child) > ul:last-child,
+  main section.row:last-child.side-left > .column:not(:last-child) > ul:last-child,
+  main section.row:last-child.halves > .column:not(:last-child) > article > .article-body > ul:last-child,
+  main section.row:last-child.thirds > .column:not(:last-child) > article > .article-body > ul:last-child,
+  main section.row:last-child.quarters > .column:not(:last-child) > article > .article-body > ul:last-child,
+  main section.row:last-child.side-right > .column:not(:last-child) > article > .article-body > ul:last-child,
+  main section.row:last-child.side-left > .column:not(:last-child) > article > .article-body > ul:last-child,
+  main section.row:last-child.halves > .column:not(:last-child) > article > .article-summary > ul:last-child,
+  main section.row:last-child.thirds > .column:not(:last-child) > article > .article-summary > ul:last-child,
+  main section.row:last-child.quarters > .column:not(:last-child) > article > .article-summary > ul:last-child,
+  main section.row:last-child.side-right > .column:not(:last-child) > article > .article-summary > ul:last-child,
+  main section.row:last-child.side-left > .column:not(:last-child) > article > .article-summary > ul:last-child,
+  main section.row:last-child.halves > .column:not(:last-child) > section > ul:last-child,
+  main section.row:last-child.thirds > .column:not(:last-child) > section > ul:last-child,
+  main section.row:last-child.quarters > .column:not(:last-child) > section > ul:last-child,
+  main section.row:last-child.side-right > .column:not(:last-child) > section > ul:last-child,
+  main section.row:last-child.side-left > .column:not(:last-child) > section > ul:last-child,
+  main section.row:last-child.halves > .column:not(:last-child) > section > ul:last-child,
+  main section.row:last-child.thirds > .column:not(:last-child) > section > ul:last-child,
+  main section.row:last-child.quarters > .column:not(:last-child) > section > ul:last-child,
+  main section.row:last-child.side-right > .column:not(:last-child) > section > ul:last-child,
+  main section.row:last-child.side-left > .column:not(:last-child) > section > ul:last-child,
+  main section.row:last-child.halves > .column:not(:last-child) > article > .article-body > section > ul:last-child,
+  main section.row:last-child.thirds > .column:not(:last-child) > article > .article-body > section > ul:last-child,
+  main section.row:last-child.quarters > .column:not(:last-child) > article > .article-body > section > ul:last-child,
+  main section.row:last-child.side-right > .column:not(:last-child) > article > .article-body > section > ul:last-child,
+  main section.row:last-child.side-left > .column:not(:last-child) > article > .article-body > section > ul:last-child,
+  main section.row:last-child.halves > .column:not(:last-child) > article > .article-summary > section > ul:last-child,
+  main section.row:last-child.thirds > .column:not(:last-child) > article > .article-summary > section > ul:last-child,
+  main section.row:last-child.quarters > .column:not(:last-child) > article > .article-summary > section > ul:last-child,
+  main section.row:last-child.side-right > .column:not(:last-child) > article > .article-summary > section > ul:last-child,
+  main section.row:last-child.side-left > .column:not(:last-child) > article > .article-summary > section > ul:last-child,
+  main section.row:last-child.halves > .column:not(:last-child) > section > section > ul:last-child,
+  main section.row:last-child.thirds > .column:not(:last-child) > section > section > ul:last-child,
+  main section.row:last-child.quarters > .column:not(:last-child) > section > section > ul:last-child,
+  main section.row:last-child.side-right > .column:not(:last-child) > section > section > ul:last-child,
+  main section.row:last-child.side-left > .column:not(:last-child) > section > section > ul:last-child,
+  main section.row:last-child.halves > .column:not(:last-child) > div > ul:last-child,
+  main section.row:last-child.thirds > .column:not(:last-child) > div > ul:last-child,
+  main section.row:last-child.quarters > .column:not(:last-child) > div > ul:last-child,
+  main section.row:last-child.side-right > .column:not(:last-child) > div > ul:last-child,
+  main section.row:last-child.side-left > .column:not(:last-child) > div > ul:last-child,
+  main section.row:last-child.halves > .column:not(:last-child) > article > .article-body > div > ul:last-child,
+  main section.row:last-child.thirds > .column:not(:last-child) > article > .article-body > div > ul:last-child,
+  main section.row:last-child.quarters > .column:not(:last-child) > article > .article-body > div > ul:last-child,
+  main section.row:last-child.side-right > .column:not(:last-child) > article > .article-body > div > ul:last-child,
+  main section.row:last-child.side-left > .column:not(:last-child) > article > .article-body > div > ul:last-child,
+  main section.row:last-child.halves > .column:not(:last-child) > article > .article-summary > div > ul:last-child,
+  main section.row:last-child.thirds > .column:not(:last-child) > article > .article-summary > div > ul:last-child,
+  main section.row:last-child.quarters > .column:not(:last-child) > article > .article-summary > div > ul:last-child,
+  main section.row:last-child.side-right > .column:not(:last-child) > article > .article-summary > div > ul:last-child,
+  main section.row:last-child.side-left > .column:not(:last-child) > article > .article-summary > div > ul:last-child,
+  main section.row:last-child.halves > .column:not(:last-child) > section > div > ul:last-child,
+  main section.row:last-child.thirds > .column:not(:last-child) > section > div > ul:last-child,
+  main section.row:last-child.quarters > .column:not(:last-child) > section > div > ul:last-child,
+  main section.row:last-child.side-right > .column:not(:last-child) > section > div > ul:last-child,
+  main section.row:last-child.side-left > .column:not(:last-child) > section > div > ul:last-child,
+  main section.row:last-child.halves > .column:not(:last-child) > ol:last-child,
+  main section.row:last-child.thirds > .column:not(:last-child) > ol:last-child,
+  main section.row:last-child.quarters > .column:not(:last-child) > ol:last-child,
+  main section.row:last-child.side-right > .column:not(:last-child) > ol:last-child,
+  main section.row:last-child.side-left > .column:not(:last-child) > ol:last-child,
+  main section.row:last-child.halves > .column:not(:last-child) > article > .article-body > ol:last-child,
+  main section.row:last-child.thirds > .column:not(:last-child) > article > .article-body > ol:last-child,
+  main section.row:last-child.quarters > .column:not(:last-child) > article > .article-body > ol:last-child,
+  main section.row:last-child.side-right > .column:not(:last-child) > article > .article-body > ol:last-child,
+  main section.row:last-child.side-left > .column:not(:last-child) > article > .article-body > ol:last-child,
+  main section.row:last-child.halves > .column:not(:last-child) > article > .article-summary > ol:last-child,
+  main section.row:last-child.thirds > .column:not(:last-child) > article > .article-summary > ol:last-child,
+  main section.row:last-child.quarters > .column:not(:last-child) > article > .article-summary > ol:last-child,
+  main section.row:last-child.side-right > .column:not(:last-child) > article > .article-summary > ol:last-child,
+  main section.row:last-child.side-left > .column:not(:last-child) > article > .article-summary > ol:last-child,
+  main section.row:last-child.halves > .column:not(:last-child) > section > ol:last-child,
+  main section.row:last-child.thirds > .column:not(:last-child) > section > ol:last-child,
+  main section.row:last-child.quarters > .column:not(:last-child) > section > ol:last-child,
+  main section.row:last-child.side-right > .column:not(:last-child) > section > ol:last-child,
+  main section.row:last-child.side-left > .column:not(:last-child) > section > ol:last-child,
+  main section.row:last-child.halves > .column:not(:last-child) > section > ol:last-child,
+  main section.row:last-child.thirds > .column:not(:last-child) > section > ol:last-child,
+  main section.row:last-child.quarters > .column:not(:last-child) > section > ol:last-child,
+  main section.row:last-child.side-right > .column:not(:last-child) > section > ol:last-child,
+  main section.row:last-child.side-left > .column:not(:last-child) > section > ol:last-child,
+  main section.row:last-child.halves > .column:not(:last-child) > article > .article-body > section > ol:last-child,
+  main section.row:last-child.thirds > .column:not(:last-child) > article > .article-body > section > ol:last-child,
+  main section.row:last-child.quarters > .column:not(:last-child) > article > .article-body > section > ol:last-child,
+  main section.row:last-child.side-right > .column:not(:last-child) > article > .article-body > section > ol:last-child,
+  main section.row:last-child.side-left > .column:not(:last-child) > article > .article-body > section > ol:last-child,
+  main section.row:last-child.halves > .column:not(:last-child) > article > .article-summary > section > ol:last-child,
+  main section.row:last-child.thirds > .column:not(:last-child) > article > .article-summary > section > ol:last-child,
+  main section.row:last-child.quarters > .column:not(:last-child) > article > .article-summary > section > ol:last-child,
+  main section.row:last-child.side-right > .column:not(:last-child) > article > .article-summary > section > ol:last-child,
+  main section.row:last-child.side-left > .column:not(:last-child) > article > .article-summary > section > ol:last-child,
+  main section.row:last-child.halves > .column:not(:last-child) > section > section > ol:last-child,
+  main section.row:last-child.thirds > .column:not(:last-child) > section > section > ol:last-child,
+  main section.row:last-child.quarters > .column:not(:last-child) > section > section > ol:last-child,
+  main section.row:last-child.side-right > .column:not(:last-child) > section > section > ol:last-child,
+  main section.row:last-child.side-left > .column:not(:last-child) > section > section > ol:last-child,
+  main section.row:last-child.halves > .column:not(:last-child) > div > ol:last-child,
+  main section.row:last-child.thirds > .column:not(:last-child) > div > ol:last-child,
+  main section.row:last-child.quarters > .column:not(:last-child) > div > ol:last-child,
+  main section.row:last-child.side-right > .column:not(:last-child) > div > ol:last-child,
+  main section.row:last-child.side-left > .column:not(:last-child) > div > ol:last-child,
+  main section.row:last-child.halves > .column:not(:last-child) > article > .article-body > div > ol:last-child,
+  main section.row:last-child.thirds > .column:not(:last-child) > article > .article-body > div > ol:last-child,
+  main section.row:last-child.quarters > .column:not(:last-child) > article > .article-body > div > ol:last-child,
+  main section.row:last-child.side-right > .column:not(:last-child) > article > .article-body > div > ol:last-child,
+  main section.row:last-child.side-left > .column:not(:last-child) > article > .article-body > div > ol:last-child,
+  main section.row:last-child.halves > .column:not(:last-child) > article > .article-summary > div > ol:last-child,
+  main section.row:last-child.thirds > .column:not(:last-child) > article > .article-summary > div > ol:last-child,
+  main section.row:last-child.quarters > .column:not(:last-child) > article > .article-summary > div > ol:last-child,
+  main section.row:last-child.side-right > .column:not(:last-child) > article > .article-summary > div > ol:last-child,
+  main section.row:last-child.side-left > .column:not(:last-child) > article > .article-summary > div > ol:last-child,
+  main section.row:last-child.halves > .column:not(:last-child) > section > div > ol:last-child,
+  main section.row:last-child.thirds > .column:not(:last-child) > section > div > ol:last-child,
+  main section.row:last-child.quarters > .column:not(:last-child) > section > div > ol:last-child,
+  main section.row:last-child.side-right > .column:not(:last-child) > section > div > ol:last-child,
+  main section.row:last-child.side-left > .column:not(:last-child) > section > div > ol:last-child {
+    margin-bottom: 1rem;
+  }
 }
 main section.row > .column table > tbody > tr > td > p:last-child,
 main section.row > .column table > tbody > tr > td > section > p:last-child,
@@ -1191,15 +1419,9 @@ main section.row > .column table > tbody > tr > td > div > ol:last-child {
     padding-left: 0.25rem;
   }
 }
-/*         ┌-----------------------------------------------------------------------------------------┐
- *         │ ···· LINKED COLUMNS content group ····················································· │
- *         └-----------------------------------------------------------------------------------------┘
- */
-/*!  └──────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
-*/
-/*!   ┌───────────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
-*     │ ASIDES layouts ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ │
-*     └───────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
+/*!  ┌──────────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
+*    │ ASIDE layouts ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ │
+*    └──────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
 */
 aside.widget {
   box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.9), 0 0 0 2px rgba(0, 0, 0, 0.2), 3px 4px 4px rgba(0, 0, 0, 0.25) !important;
@@ -1320,7 +1542,8 @@ aside.widget_archive label.screen-reader-text {
 .row.side-right .column.two aside p:not(.centered) {
   text-align: left;
 }
-body.single-post #wsuwp-main .row .column.one aside {
+body.single-post #wsuwp-main .row .column.one aside,
+.column > aside.quote {
   float: right;
   clear: right;
   width: 33%;
@@ -1333,7 +1556,8 @@ body.single-post #wsuwp-main .row .column.one aside {
   font-size: 0.9rem;
 }
 @media all and (max-width: 693px) {
-  body.single-post #wsuwp-main .row .column.one aside {
+  body.single-post #wsuwp-main .row .column.one aside,
+  .column > aside.quote {
     width: 94%;
     width: calc(100% - 0.5rem * 2);
     margin-top: 1rem;
@@ -1343,7 +1567,9 @@ body.single-post #wsuwp-main .row .column.one aside {
 body.blog .article-summary aside {
   display: none;
 }
-/*!   └───────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
+/*!     ┌───────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
+*       │ ++++ H1-H6 & HEADER rulesets ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ │
+*       └───────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
 */
 .column h1 {
   padding-bottom: 0;
@@ -1357,7 +1583,6 @@ body.blog .article-summary aside {
 @media all {
   .column h1 {
     line-height: 1.1em;
-    font-size: 2.82352941em;
   }
 }
 @media all and (min-width: 1073px) {
@@ -1411,7 +1636,6 @@ body.blog .article-summary aside {
 @media all {
   .column h2 {
     line-height: 1.1em;
-    font-size: 2.07058824em;
   }
 }
 @media all and (min-width: 1073px) {
@@ -1447,7 +1671,6 @@ body.blog .article-summary aside {
 @media all {
   .column h2.article-title {
     line-height: 1.1em;
-    font-size: 0.82823529em;
   }
 }
 @media all and (min-width: 1073px) {
@@ -1483,7 +1706,14 @@ body.blog .article-summary aside {
 .column h2.centered {
   text-align: center;
 }
-.column h2.fancy {
+.column h2.narrower-top-margin {
+  margin-top: 1.25rem;
+}
+.column h2.no-top-margin {
+  margin-top: 0;
+}
+.column h2.fancy,
+.column.show-header.has-fancy-header > header:first-child > h2 {
   position: relative;
   padding: 0.3333rem 0.5rem;
   margin-left: -0.5rem;
@@ -1491,13 +1721,16 @@ body.blog .article-summary aside {
   margin-right: -0.5rem;
   background-color: rgba(94, 106, 113, 0.2);
 }
-.column h2.fancy.with-top-border {
+.column h2.fancy.with-top-border,
+.column.show-header.has-fancy-header > header:first-child > h2 {
   padding-top: 0.5rem;
 }
-.column h2.fancy.with-top-border:not(:first-child) {
+.column h2.fancy.with-top-border:not(:first-child),
+.column.show-header.has-fancy-header > header:first-child > h2:not(:first-child) {
   margin-top: 2rem;
 }
-.column h2.fancy.with-top-border::before {
+.column h2.fancy.with-top-border::before,
+.column.show-header.has-fancy-header > header:first-child > h2::before {
   content: "";
   position: absolute;
   top: 0;
@@ -1507,12 +1740,6 @@ body.blog .article-summary aside {
   border-top: 1px solid rgba(70, 78, 84, 0.6667);
   border-bottom: 1px solid rgba(70, 78, 84, 0.3333);
   border-top-width: 2px;
-}
-.column h2.narrower-top-margin {
-  margin-top: 1.25rem;
-}
-.column h2.no-top-margin {
-  margin-top: 0;
 }
 .column h2:first-child,
 .column header:first-child + h2,
@@ -1543,7 +1770,6 @@ h2.article-title a {
   .column h3,
   .gform_heading h3.gform_title {
     line-height: 1.1em;
-    font-size: 1.6em;
   }
 }
 @media all and (min-width: 1073px) {
@@ -1594,7 +1820,13 @@ h2.article-title a {
 .gform_heading h3.gform_title.no-top-margin {
   margin-top: 0;
 }
+.column h3.lowercase,
+.column.show-header.has-lowercase-header > header:first-child > h3,
+.gform_heading h3.gform_title.lowercase {
+  text-transform: none;
+}
 .column h3.fancy,
+.column.show-header.has-fancy-header > header:first-child > h3,
 .column h4.fancy,
 .gform_heading h3.gform_title.fancy,
 .gform_heading h3.gform_title {
@@ -1606,6 +1838,7 @@ h2.article-title a {
   background-color: rgba(219, 120, 121, 0.075);
 }
 .column h3.fancy.with-top-border,
+.column.show-header.has-fancy-header > header:first-child > h3,
 .column h4.fancy.with-top-border,
 .gform_heading h3.gform_title.fancy.with-top-border,
 .gform_heading h3.gform_title.with-top-border,
@@ -1613,6 +1846,7 @@ h2.article-title a {
   padding-top: 0.4375rem;
 }
 .column h3.fancy.with-top-border:not(:first-child),
+.column.show-header.has-fancy-header > header:first-child > h3:not(:first-child),
 .column h4.fancy.with-top-border:not(:first-child),
 .gform_heading h3.gform_title.fancy.with-top-border:not(:first-child),
 .gform_heading h3.gform_title.with-top-border:not(:first-child),
@@ -1620,6 +1854,7 @@ h2.article-title a {
   margin-top: 2rem;
 }
 .column h3.fancy.with-top-border::before,
+.column.show-header.has-fancy-header > header:first-child > h3::before,
 .column h4.fancy.with-top-border::before,
 .gform_heading h3.gform_title.fancy.with-top-border::before,
 .gform_heading h3.gform_title.with-top-border::before,
@@ -1651,7 +1886,6 @@ h2.article-title a {
 @media all {
   .column h4 {
     line-height: 1.2em;
-    font-size: 1.31764706em;
   }
 }
 @media all and (min-width: 1073px) {
@@ -1715,7 +1949,6 @@ body.blog .column header.article-header + * {
   .column header.article-header h1.article-title,
   .column header.article-header h2.article-title {
     line-height: 1.1em;
-    font-size: 1.5em;
   }
 }
 @media all and (min-width: 1073px) {
@@ -1796,7 +2029,6 @@ header.main-header .sup-header-default {
   header.main-header .sub-header-default,
   header.main-header .sub-header {
     line-height: 0.9em;
-    font-size: 2.35294118rem;
   }
 }
 @media all and (min-width: 1073px) {
@@ -1887,6 +2119,12 @@ header.main-header .header-group {
 footer.article-footer div.author-info {
   display: none;
 }
+/*!   ╔═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗ 
+*     ║ #### CONTENT GROUPING NODES ##################################################################################### ║
+*     ╠===================================================================================================================╣
+*     ║ rulesets that target nodes for grouping content.                                                                  ║
+*     ╚═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝
+*/
 /*!  ┌──────────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
 *    │ PARAGRAPHS +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ │
 *    └──────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
@@ -1894,7 +2132,6 @@ footer.article-footer div.author-info {
 @media all {
   .row.single:not(.mimic-multi-column-sections) .column p {
     line-height: 1.375em;
-    font-size: 1em;
   }
 }
 @media all and (min-width: 1073px) {
@@ -1930,7 +2167,6 @@ footer.article-footer div.author-info {
 @media all {
   .row.single.mimic-two-column-sections .column p {
     line-height: 1.375em;
-    font-size: 1em;
   }
 }
 @media all and (min-width: 1073px) {
@@ -1968,7 +2204,6 @@ footer.article-footer div.author-info {
   .row.side-left .column p,
   .row.halves .column p {
     line-height: 1.375em;
-    font-size: 1em;
   }
 }
 @media all and (min-width: 1073px) {
@@ -2017,7 +2252,6 @@ footer.article-footer div.author-info {
   .row.thirds .column p,
   .row.quarters .column p {
     line-height: 1.375em;
-    font-size: 1em;
   }
 }
 @media all and (min-width: 1073px) {
@@ -2206,7 +2440,6 @@ footer.article-footer div.author-info {
 @media all {
   .column p.banner-text {
     line-height: 1.375em;
-    font-size: 1.25em;
   }
 }
 @media all and (min-width: 1073px) {
@@ -2268,7 +2501,6 @@ footer.article-footer div.author-info {
 @media all {
   .column p.banner-text-orange-with-towers {
     line-height: 1.375em;
-    font-size: 1.25em;
   }
 }
 @media all and (min-width: 1073px) {
@@ -2304,7 +2536,6 @@ footer.article-footer div.author-info {
 @media all {
   .row.single:not(.mimic-multi-column-sections) .column p.article-deck {
     line-height: 1.375em;
-    font-size: 1.2em;
   }
 }
 @media all and (min-width: 1073px) {
@@ -2340,7 +2571,6 @@ footer.article-footer div.author-info {
 @media all {
   .row.single.mimic-two-column-sections .column p.article-deck {
     line-height: 1.375em;
-    font-size: 1.2em;
   }
 }
 @media all and (min-width: 1073px) {
@@ -2378,7 +2608,6 @@ footer.article-footer div.author-info {
   .row.side-left .column p.article-deck,
   .row.halves .column p.article-deck {
     line-height: 1.375em;
-    font-size: 1.2em;
   }
 }
 @media all and (min-width: 1073px) {
@@ -2427,7 +2656,6 @@ footer.article-footer div.author-info {
   .row.thirds .column p.article-deck,
   .row.quarters .column p.article-deck {
     line-height: 1.375em;
-    font-size: 1.2em;
   }
 }
 @media all and (min-width: 1073px) {
@@ -2475,7 +2703,6 @@ footer.article-footer div.author-info {
 @media all {
   .row.single:not(.mimic-multi-column-sections) .column p.article-tagline {
     line-height: 1.375em;
-    font-size: 1.305em;
   }
 }
 @media all and (min-width: 1073px) {
@@ -2511,7 +2738,6 @@ footer.article-footer div.author-info {
 @media all {
   .row.single.mimic-two-column-sections .column p.article-tagline {
     line-height: 1.375em;
-    font-size: 1.305em;
   }
 }
 @media all and (min-width: 1073px) {
@@ -2549,7 +2775,6 @@ footer.article-footer div.author-info {
   .row.side-left .column p.article-tagline,
   .row.halves .column p.article-tagline {
     line-height: 1.375em;
-    font-size: 1.305em;
   }
 }
 @media all and (min-width: 1073px) {
@@ -2598,7 +2823,6 @@ footer.article-footer div.author-info {
   .row.thirds .column p.article-tagline,
   .row.quarters .column p.article-tagline {
     line-height: 1.375em;
-    font-size: 1.305em;
   }
 }
 @media all and (min-width: 1073px) {
@@ -2640,7 +2864,6 @@ footer.article-footer div.author-info {
 @media all {
   .row.single:not(.mimic-multi-column-sections) .column p.article-tagline.home {
     line-height: 1.375em;
-    font-size: 1.71000023em;
   }
 }
 @media all and (min-width: 1073px) {
@@ -2676,7 +2899,6 @@ footer.article-footer div.author-info {
 @media all {
   .row.single.mimic-two-column-sections .column p.article-tagline.home {
     line-height: 1.375em;
-    font-size: 1.71000023em;
   }
 }
 @media all and (min-width: 1073px) {
@@ -2714,7 +2936,6 @@ footer.article-footer div.author-info {
   .row.side-left .column p.article-tagline.home,
   .row.halves .column p.article-tagline.home {
     line-height: 1.375em;
-    font-size: 1.71000023em;
   }
 }
 @media all and (min-width: 1073px) {
@@ -2763,7 +2984,6 @@ footer.article-footer div.author-info {
   .row.thirds .column p.article-tagline.home,
   .row.quarters .column p.article-tagline.home {
     line-height: 1.375em;
-    font-size: 1.71000023em;
   }
 }
 @media all and (min-width: 1073px) {
@@ -2882,7 +3102,6 @@ p.article-tagline:not(.has-no-bordering).alt:after {
 @media all {
   .row.single:not(.mimic-multi-column-sections) .column p.vpue-jump-back {
     line-height: 1.375em;
-    font-size: 0.6875em;
   }
 }
 @media all and (min-width: 1073px) {
@@ -2918,7 +3137,6 @@ p.article-tagline:not(.has-no-bordering).alt:after {
 @media all {
   .row.single.mimic-two-column-sections .column p.vpue-jump-back {
     line-height: 1.375em;
-    font-size: 0.6875em;
   }
 }
 @media all and (min-width: 1073px) {
@@ -2956,7 +3174,6 @@ p.article-tagline:not(.has-no-bordering).alt:after {
   .row.side-left .column p.vpue-jump-back,
   .row.halves .column p.vpue-jump-back {
     line-height: 1.375em;
-    font-size: 0.6875em;
   }
 }
 @media all and (min-width: 1073px) {
@@ -3005,7 +3222,6 @@ p.article-tagline:not(.has-no-bordering).alt:after {
   .row.thirds .column p.vpue-jump-back,
   .row.quarters .column p.vpue-jump-back {
     line-height: 1.375em;
-    font-size: 0.6875em;
   }
 }
 @media all and (min-width: 1073px) {
@@ -3051,7 +3267,6 @@ p.article-tagline:not(.has-no-bordering).alt:after {
 @media all {
   .row.single:not(.mimic-multi-column-sections) .column p.article-media-contacts {
     line-height: 1.375em;
-    font-size: 0.8rem;
   }
 }
 @media all and (min-width: 1073px) {
@@ -3087,7 +3302,6 @@ p.article-tagline:not(.has-no-bordering).alt:after {
 @media all {
   .row.single.mimic-two-column-sections .column p.article-media-contacts {
     line-height: 1.375em;
-    font-size: 0.8rem;
   }
 }
 @media all and (min-width: 1073px) {
@@ -3125,7 +3339,6 @@ p.article-tagline:not(.has-no-bordering).alt:after {
   .row.side-left .column p.article-media-contacts,
   .row.halves .column p.article-media-contacts {
     line-height: 1.375em;
-    font-size: 0.8rem;
   }
 }
 @media all and (min-width: 1073px) {
@@ -3174,7 +3387,6 @@ p.article-tagline:not(.has-no-bordering).alt:after {
   .row.thirds .column p.article-media-contacts,
   .row.quarters .column p.article-media-contacts {
     line-height: 1.375em;
-    font-size: 0.8rem;
   }
 }
 @media all and (min-width: 1073px) {
@@ -3233,7 +3445,6 @@ body.single-post .column p.article-media-contacts + :not(.article-media-contacts
 @media all {
   .row.single:not(.mimic-multi-column-sections) .column ul {
     line-height: 1.375em;
-    font-size: 1em;
   }
 }
 @media all and (min-width: 1073px) {
@@ -3269,7 +3480,6 @@ body.single-post .column p.article-media-contacts + :not(.article-media-contacts
 @media all {
   .row.single.mimic-two-column-sections .column ul {
     line-height: 1.375em;
-    font-size: 1em;
   }
 }
 @media all and (min-width: 1073px) {
@@ -3307,7 +3517,6 @@ body.single-post .column p.article-media-contacts + :not(.article-media-contacts
   .row.side-left .column ul,
   .row.halves .column ul {
     line-height: 1.375em;
-    font-size: 1em;
   }
 }
 @media all and (min-width: 1073px) {
@@ -3356,7 +3565,6 @@ body.single-post .column p.article-media-contacts + :not(.article-media-contacts
   .row.thirds .column ul,
   .row.quarters .column ul {
     line-height: 1.375em;
-    font-size: 1em;
   }
 }
 @media all and (min-width: 1073px) {
@@ -3443,7 +3651,6 @@ ul.content-boxes > li,
   ul.content-boxes > li p,
   .column ul.event-boxes > li p {
     line-height: 1.375em;
-    font-size: 0.938em;
   }
 }
 @media all and (min-width: 1073px) {
@@ -3570,7 +3777,6 @@ ul.cascaded-layout.blank > li.gutter-sizer {
 @media all {
   .row.single:not(.mimic-multi-column-sections) .column ol {
     line-height: 1.375em;
-    font-size: 1em;
   }
 }
 @media all and (min-width: 1073px) {
@@ -3606,7 +3812,6 @@ ul.cascaded-layout.blank > li.gutter-sizer {
 @media all {
   .row.single.mimic-two-column-sections .column ol {
     line-height: 1.375em;
-    font-size: 1em;
   }
 }
 @media all and (min-width: 1073px) {
@@ -3644,7 +3849,6 @@ ul.cascaded-layout.blank > li.gutter-sizer {
   .row.side-left .column ol,
   .row.halves .column ol {
     line-height: 1.375em;
-    font-size: 1em;
   }
 }
 @media all and (min-width: 1073px) {
@@ -3693,7 +3897,6 @@ ul.cascaded-layout.blank > li.gutter-sizer {
   .row.thirds .column ol,
   .row.quarters .column ol {
     line-height: 1.375em;
-    font-size: 1em;
   }
 }
 @media all and (min-width: 1073px) {
@@ -3767,7 +3970,6 @@ ul.cascaded-layout.blank > li.gutter-sizer {
 @media all {
   .column dl.faq dt {
     line-height: 1.375em;
-    font-size: 1em;
   }
 }
 @media all and (min-width: 1073px) {
@@ -3909,7 +4111,6 @@ ul.cascaded-layout.blank > li.gutter-sizer {
   .column dl.faq > .expand-all-button,
   .column dl.faq > .collapse-all-button {
     line-height: 12px;
-    font-size: 12px;
   }
 }
 @media all and (min-width: 1073px) {
@@ -4095,36 +4296,17 @@ div.award-banner {
     width: 70%;
   }
 }
+/*!       ┌-----------------------------------------------------------------------------------------------------------┐
+*         │ ···· (div).column rulesets ·············································································· │
+*         └-----------------------------------------------------------------------------------------------------------┘
+*/
 section.pad-top.half-pad,
 section.pad-top div.column.half-pad {
   padding-top: 1rem;
 }
-/*         ┌-----------------------------------------------------------------------------------------┐
- *         │ ···· div.column ······································································· │
- *         ├---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  --- ┤
- *         │ Highly specific styling applied to div.column container elements as specified in the    │
- *         │ WSU Spine WordPress Theme.                                                              │
- *         ├---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  --- ┤
- */
 .column {
   font-size: 1rem;
   color: #464e54;
-  /*         ├---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  --- ┤
- *         │············ GENERIC CLASSES for div.column content containers ························· │
- *         ├---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  --- ┤
- */
-  /*         ├---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  --- ┤
- *         │···· HORIZONTAL RULE children of div.column elements ··································· │
- *         ├---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  --- ┤
- */
-  /*         ├---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  --- ┤
-	 *         │ ···· SECTION children of div.column elements ·········································· │
-	 *         ├---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  --- ┤
-	 */
-  /*         ├---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  --- ┤
-	 *         │ ···· ADDITIONAL CLASSES for elements contained within div.column elements ············· │
-	 *         ├---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  --- ┤
-	 */
 }
 .column:nth-child(1) {
   margin-top: 0;
@@ -4243,16 +4425,28 @@ section.pad-top div.column.half-pad {
     max-width: 792px;
   }
 }
-main > .page > .row:last-child > .column:last-child {
+body.home main > .page > .row:last-child > .column:last-child,
+body.page main > .page > .row:last-child > .column:last-child {
   padding-bottom: 2rem;
 }
 @media all and (min-width: 694px) {
-  main > .page > .row:last-child.halves > .column:first-child {
+  body.home main > .page > .row:last-child.halves > .column:first-child,
+  body.page main > .page > .row:last-child.halves > .column:first-child {
     padding-bottom: 2rem;
   }
 }
-/*         └-----------------------------------------------------------------------------------------┘        
- */
+@media all and (min-width: 694px) {
+  body.home main > .page > .row:last-child.thirds > .column:first-child,
+  body.page main > .page > .row:last-child.thirds > .column:first-child {
+    padding-bottom: 2rem;
+  }
+}
+@media all and (min-width: 694px) {
+  body.home main > .page > .row:last-child.thirds > .column:nth-child(2),
+  body.page main > .page > .row:last-child.thirds > .column:nth-child(2) {
+    padding-bottom: 2rem;
+  }
+}
 div.callout,
 span.callout {
   height: auto;
@@ -4844,11 +5038,21 @@ div.page-covering-notice-js div.notice-content p + p {
  * Styling and animations for the CSS3-driven "recent updates" section of the homepage.
  * ===============================================================================================================
  */
+.row.single.has-recent-updates {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  background-color: #eff0f1;
+}
 div.recent-updates {
   position: relative;
   left: 0;
   top: 0;
-  height: 2em;
+  height: 4em;
+}
+@media all and (max-width: 693px) {
+  div.recent-updates {
+    height: 7em;
+  }
 }
 div.recent-updates p + p {
   margin-top: 0;
@@ -5040,24 +5244,16 @@ div.recent-updates p.recent-update-3 {
     z-index: 1;
   }
 }
-/*     ┌─────────────────────────────────────────────────────────────────────────────────────────────────┐
- *     │ ++++++++ MAIN +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ │
- *     ├-------------------------------------------------------------------------------------------------┤
- *     │ Rule-sets for styling main elements within OUE pages built using the WSU Spine theme for        │
- *     │ WordPress.                                                                                      │
- *     │  ╘═» This file assumes the following LESS files have been imported upstream:                    │
- *     │        • //github.com/invokeImmediately/WSU-UE---CSS/animations.less                            │
- *     │        • //github.com/invokeImmediately/WSU-UE---CSS/color-palette.less                         │
- *     │        • //github.com/invokeImmediately/WSU-UE---CSS/fonts.less                                 │
- *     │        • //github.com/invokeImmediately/WSU-UE---CSS/mixins.less                                │
- *     ├-------------------------------------------------------------------------------------------------┤
- */
-/*         ┌-----------------------------------------------------------------------------------------┐
- *         │ ···· Style rule-sets wrapped in INCLUSIONAL MIXINS ···································· │
- *         └-----------------------------------------------------------------------------------------┘
- */
-/*     └─────────────────────────────────────────────────────────────────────────────────────────────────┘
- */
+/*   ┌──────────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
+*    │ MAIN +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ │
+*    └──────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
+*/
+/*!   ╔═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗ 
+*     ║ #### TEXT-LEVEL NODES ########################################################################################### ║
+*     ╠===================================================================================================================╣
+*     ║ rulesets that target nodes with text-level semantics.                                                             ║
+*     ╚═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝
+*/
 /*     ┌─────────────────────────────────────────────────────────────────────────────────────────────────┐
  *     │ ++++++++ HYPERLINKS +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ │
  *     ├-------------------------------------------------------------------------------------------------┤
@@ -5290,6 +5486,10 @@ a.vpue-tooltip span b {
 	 */
 /*     └─────────────────────────────────────────────────────────────────────────────────────────────────┘
  */
+/*!     ┌───────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
+*       │ ++++ STRONG rulesets ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ │
+*       └───────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
+*/
 strong.opening-line {
   font-size: 1.0625em;
   color: #72652a;
@@ -5299,11 +5499,19 @@ strong.stands-out {
   font-family: 'Roboto Condensed', 'Lucida Sans', sans-serif;
   font-size: 1.2em;
 }
+/*!     ┌───────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
+*       │ ++++ MARK rulesets ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ │
+*       └───────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
+*/
 mark.highlight {
   background-color: transparent;
   font-style: normal;
   color: #AEC7CB;
 }
+/*!     ┌───────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
+*       │ ++++ SPAN rulesets ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ │
+*       └───────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
+*/
 /*     ┌─────────────────────────────────────────────────────────────────────────────────────────────────┐
  *     │ ++++ SPAN selectors +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ │
  *     └─────────────────────────────────────────────────────────────────────────────────────────────────┘
@@ -5375,9 +5583,19 @@ span.has-tooltip:hover {
     font-size: 0.9em;
   }
 }
+/*!     ┌───────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
+*       │ ++++ CITE rulesets ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ │
+*       └───────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
+*/
 cite.article-author {
   display: none;
 }
+/*!   ╔═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗ 
+*     ║ #### EMBEDDED CONTENT ########################################################################################### ║
+*     ╠===================================================================================================================╣
+*     ║ rulesets that target nodes representing embedded content.                                                         ║
+*     ╚═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝
+*/
 /*     ┌─────────────────────────────────────────────────────────────────────────────────────────────────┐
  *     │ ++++ IMG selectors ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ │
  *     └─────────────────────────────────────────────────────────────────────────────────────────────────┘
@@ -5625,6 +5843,12 @@ figure figcaption {
 }
 /*     └─────────────────────────────────────────────────────────────────────────────────────────────────┘
  */
+/*!   ╔═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗ 
+*     ║ #### TABULAR DATA ############################################################################################### ║
+*     ╠===================================================================================================================╣
+*     ║ rulesets that nodes for representing tabular data.                                                                ║
+*     ╚═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝
+*/
 /*     ┌─────────────────────────────────────────────────────────────────────────────────────────────────┐
  *     │ ++++++++ TABLES +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ │
  *     ├-------------------------------------------------------------------------------------------------┤
@@ -5825,12 +6049,16 @@ figure figcaption {
  */
 /*  └──────────────────────────────────────────────────────────────────────────────────────────────┘
  */
-/*  ╔════════════════════════════════════════════════════════════════════════════════════════════════════════╗ 
- *  ║ #### INPUT FORMS ##################################################################################### ║
- *  ╠========================================================================================================╣
- *  ║ Styling applied to input elements to which the gravity form classes have been applied.                 ║
- *  ╚════════════════════════════════════════════════════════════════════════════════════════════════════════╝
- */
+/*!   ╔═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗ 
+*     ║ #### FORMS ###################################################################################################### ║
+*     ╠===================================================================================================================╣
+*     ║ Styling applied to nodes representing a form's user interface.                                                    ║
+*     ╚═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝
+*/
+/*!     ┌───────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
+*       │ FORM ELEMENT LAYOUTS ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ │
+*       └───────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
+*/
 input.read-more-state {
   display: none;
 }
@@ -5946,7 +6174,6 @@ div.read-more-target {
 @media all {
   .column .gform_wrapper {
     line-height: 1.375em;
-    font-size: 16px;
   }
 }
 @media all and (min-width: 1073px) {
@@ -6296,12 +6523,20 @@ div.read-more-target {
     opacity: 1;
   }
 }
-/*  ╔═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗ 
- *  ║ #### SCRIPTING ###################################################################################################### ║
- *  ╠=======================================================================================================================╣
- *  ║ Rule-sets for interactive elements that do not function as intended without the support of JavaScript.                ║
- *  ╚═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝
- */
+/*!   ╔═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗ 
+*     ║ #### SCRIPTING ################################################################################################## ║
+*     ╠===================================================================================================================╣
+*     ║ rulesets for interactive elements that do not function as intended without the support of JavaScript.             ║
+*     ╚═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝
+*/
+/*!     ┌───────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
+*       │ ++++ CLASS SPECIFIC rulesets related to script-driven elements ++++++++++++++++++++++++++++++++++++++++++++++ │
+*       └───────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
+*/
+/*!       ┌-----------------------------------------------------------------------------------------------------------┐
+*         │ ···· Drop-down toggle: upon click, either drops down or pulls up a related element ······················ │
+*         └-----------------------------------------------------------------------------------------------------------┘
+*/
 .drop-down-toggle {
   position: relative;
   -webkit-transition: all 0.3s ease;
@@ -6469,6 +6704,14 @@ div.read-more-target {
   border-bottom: 1px solid rgba(0, 165, 189, 0.2);
   border-left: 1px solid rgba(0, 165, 189, 0.2);
 }
+/*!       ┌-----------------------------------------------------------------------------------------------------------┐
+*         │ ···· Subtle Panels: Content panels with highly faded appearence until mousehover ························ │
+*         └-----------------------------------------------------------------------------------------------------------┘
+*/
+/*!       ┌-----------------------------------------------------------------------------------------------------------┐
+*         │ ···· Flipped content panels ············································································· │
+*         └-----------------------------------------------------------------------------------------------------------┘
+*/
 .flipped-content-back {
   display: none;
   width: 100%;
@@ -7092,6 +7335,14 @@ x:-o-prefocus {
     right: 4px;
   }
 }
+/*!     ┌───────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
+*       │ ++++ DIV rulesets +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ │
+*       └───────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
+*/
+/*!       ┌-----------------------------------------------------------------------------------------------------------┐
+*         │ ···· Auto-scrolling image containers ···································································· │
+*         └-----------------------------------------------------------------------------------------------------------┘
+*/
 div.auto-scroller {
   position: relative;
 }
