@@ -6315,7 +6315,7 @@ div.read-more-target {
   }
 }
 .column li.gfield > div.ginput_complex > span > label {
-  color: #25070c;
+  color: #360b12;
 }
 .column li.gfield > div.ginput_container_select > div.chosen-container {
   width: 100% !important;
@@ -6357,7 +6357,7 @@ div.read-more-target {
 .column ul.gform_fields.top_label > li.gfield > div.gfield_description {
   padding: 0;
   margin: 0;
-  color: #25070c;
+  color: #360b12;
 }
 .column ul.gform_fields.top_label > li.gfield > div.gfield_description ul li {
   list-style: disc inside none !important;
