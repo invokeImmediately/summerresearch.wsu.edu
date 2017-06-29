@@ -8065,7 +8065,8 @@ div.iframe-wrapper.home {
 .has-expiration.is-expired.has-exceptions :not(.is-excepted) {
   opacity: 0.5 !important;
 }
-.photo-release-agreement-example {
+.gform_wrapper form li.photo-release-agreement-example,
+.gform_wrapper li.photo-release-agreement-example {
   padding: 2rem !important;
   margin: 2rem !important;
   border: 1px solid rgba(0, 0, 0, 0.5);
