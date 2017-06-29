@@ -6360,7 +6360,7 @@ div.read-more-target {
   color: #8e7f88;
 }
 .column ul.gform_fields.top_label > li.gfield > div.gfield_description ul li {
-  list-style-type: disc inside none;
+  list-style-type: disc inside none !important;
 }
 .column ul.gform_fields.top_label > li.gfield > div.gfield_description p + ul {
   margin-top: 0;
