@@ -8072,6 +8072,10 @@ div.iframe-wrapper.home {
   border: 1px solid rgba(0, 0, 0, 0.5);
   border-radius: 0.47058824rem;
 }
+.gform_wrapper form li.photo-release-agreement-example p + p,
+.gform_wrapper li.photo-release-agreement-example p + p {
+  margin-top: 1rem;
+}
 /*!   ╔═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗
 *     ║ #### Layouts included via LESS mixins ########################################################################### ║
 *     ╚═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝
