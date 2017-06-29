@@ -6260,12 +6260,6 @@ div.read-more-target {
     width: 100%;
   }
 }
-.column .gform_wrapper .gfield_description li {
-  list-style-type: disc inside none !important;
-}
-.column .gform_wrapper .gfield_description p + ul {
-  margin-top: 0;
-}
 .column li.gfield.uses-rich-editor div.tmce-active div.mce-menubar {
   display: none;
 }
@@ -6364,6 +6358,12 @@ div.read-more-target {
   padding: 0;
   margin: 0;
   color: #8e7f88;
+}
+.column ul.gform_fields.top_label > li.gfield > div.gfield_description ul li {
+  list-style: disc inside none !important;
+}
+.column ul.gform_fields.top_label > li.gfield > div.gfield_description p + ul {
+  margin-top: 0;
 }
 .column ul.gform_fields.top_label > li.gfield > div.ginput_complex {
   margin-top: 0;
