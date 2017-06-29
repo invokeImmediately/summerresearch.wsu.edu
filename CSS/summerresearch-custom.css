@@ -6359,6 +6359,12 @@ div.read-more-target {
   margin: 0;
   color: #8e7f88;
 }
+.column ul.gform_fields.top_label > li.gfield > div.gfield_description ul li {
+  list-style-type: disc inside none;
+}
+.column ul.gform_fields.top_label > li.gfield > div.gfield_description p + ul {
+  margin-top: 0;
+}
 .column ul.gform_fields.top_label > li.gfield > div.ginput_complex {
   margin-top: 0;
 }
