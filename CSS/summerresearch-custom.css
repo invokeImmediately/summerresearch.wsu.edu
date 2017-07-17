@@ -4188,12 +4188,9 @@ div.award-banner {
   margin-top: 1rem;
   margin-bottom: 1rem;
 }
-/*         ┌-----------------------------------------------------------------------------------------┐
-           │ ···· Builder Template Slideshows ······················································ │
-           ├---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  --- ┤
-           │ Styling modifications of builder template slideshows added through the WordPress        │
-           │ interface.                                                                              │
-           └-----------------------------------------------------------------------------------------┘        
+/*!       ┌-----------------------------------------------------------------------------------------------------------┐
+*         │ ···· Builder Template Slideshows ········································································ │
+*         └-----------------------------------------------------------------------------------------------------------┘
 */
 @media all and (min-width: 361px) and (max-width: 480px) {
   .column .builder-section-content.cycle-slideshow {
@@ -4209,16 +4206,15 @@ div.award-banner {
 }
 .column .builder-banner-content {
   padding: 0 0 10px 0;
-  font-size: 1rem;
-  line-height: 1.35rem;
+  font-size: 1.5rem;
+  line-height: 1.35em;
   border: 0;
   -webkit-transition: font-size .15s linear, line-height .15s linear;
   -moz-transition: font-size .15s linear, line-height .15s linear;
   transition: font-size .15s linear, line-height .15s linear;
 }
 .column .builder-banner-content:hover {
-  font-size: 1.3333rem;
-  line-height: 1.799955rem;
+  font-size: 2rem;
 }
 .column .builder-banner-content:hover > div.builder-banner-inner-content {
   background-color: rgba(0, 0, 0, 0.9);
@@ -4233,8 +4229,8 @@ div.award-banner {
 }
 .column .builder-banner-inner-content p {
   padding: 10px;
-  font-size: inherit;
-  line-height: inherit;
+  font-size: inherit !important;
+  line-height: inherit !important;
   text-align: center;
 }
 .column .builder-banner-inner-content p:last-child:not(.no-bottom-pad) {
@@ -4262,12 +4258,12 @@ div.award-banner {
 }
 @media all and (max-width: 1204px) {
   .column .builder-banner-content {
-    font-size: 1.3278vw;
-    line-height: 1.79253vw;
+    font-size: 2.1179vw;
+    line-height: 2.8592vw;
   }
   .column .builder-banner-content:hover {
-    font-size: 1.7704vw;
-    line-height: 2.39004vw;
+    font-size: 2.8239vw;
+    line-height: 3.8122vw;
   }
   .column .builder-banner-inner-content p {
     padding: 1.0vw;
@@ -4278,12 +4274,22 @@ div.award-banner {
 }
 @media all and (max-width: 989px) {
   .column .builder-banner-content {
-    font-size: 12px;
-    line-height: 16.2px;
+    font-size: 2.5784vw;
+    line-height: 3.4808vw;
   }
   .column .builder-banner-content:hover {
-    font-size: 14px;
-    line-height: 18.9px;
+    font-size: 3.4379vw;
+    line-height: 4.6411vw;
+  }
+}
+@media all and (max-width: 480px) {
+  .column .builder-banner-content {
+    font-size: 5.1568vw;
+    line-height: 6.9616vw;
+  }
+  .column .builder-banner-content:hover {
+    font-size: 6.8758vw;
+    line-height: 9.2822vw;
   }
 }
 @media all and (min-width: 906px) {
@@ -4426,7 +4432,11 @@ body.page main > .page > .row:last-child > .column:last-child {
 }
 @media all and (min-width: 694px) {
   body.home main > .page > .row:last-child.halves > .column:first-child,
-  body.page main > .page > .row:last-child.halves > .column:first-child {
+  body.page main > .page > .row:last-child.halves > .column:first-child,
+  body.home main > .page > .row:last-child.side-right > .column:first-child,
+  body.page main > .page > .row:last-child.side-right > .column:first-child,
+  body.home main > .page > .row:last-child.side-left > .column:first-child,
+  body.page main > .page > .row:last-child.side-left > .column:first-child {
     padding-bottom: 2rem;
   }
 }
@@ -7423,16 +7433,21 @@ body.page.has-short-main-header main > header.main-header {
 body.page.has-short-main-header main > header.main-header > div.header-group {
   padding-bottom: 1em !important;
 }
-body.page.has-short-main-header main .row.halves.article-header {
+body.page.has-short-main-header main .row.halves.article-header,
+body.page.has-short-main-header main .row.single.article-header {
   position: relative;
-  height: 230px;
 }
-body.page.has-short-main-header main .row.halves.article-header.gutter .column:not(.gutterless) {
+body.page.has-short-main-header main .row.halves.article-header.gutter .column:not(.gutterless),
+body.page.has-short-main-header main .row.single.article-header.gutter .column:not(.gutterless) {
   padding-left: 0;
   padding-right: 0;
 }
-body.page.has-short-main-header main .row.halves.article-header.pad-top .column {
+body.page.has-short-main-header main .row.halves.article-header.pad-top .column,
+body.page.has-short-main-header main .row.single.article-header.pad-top .column {
   padding-top: 0;
+}
+body.page.has-short-main-header main .row.halves.article-header {
+  height: 230px;
 }
 body.page.has-short-main-header main .row.halves.article-header .column.one {
   position: absolute;
@@ -7500,6 +7515,73 @@ body.page.has-short-main-header main .row.halves.article-header .column.two {
   body.page.has-short-main-header main .row.halves.article-header .column.two {
     float: left;
     clear: none;
+  }
+}
+body.page.has-short-main-header main .row.single.article-header {
+  height: 340px;
+}
+body.page.has-short-main-header main .row.single.article-header .column {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #8d959a;
+  background-position: center center;
+  background-size: cover;
+}
+body.page.has-short-main-header main .row.single.article-header .column.show-header > header {
+  box-sizing: border-box;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  padding: 2rem 2rem 0;
+}
+@media all and (max-width: 480px) {
+  body.page.has-short-main-header main .row.single.article-header .column.show-header > header {
+    padding-left: .5rem;
+  }
+}
+body.page.has-short-main-header main .row.single.article-header .column.show-header > header > * {
+  color: #fff;
+  margin: 0;
+  line-height: ;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+@media all {
+  body.page.has-short-main-header main .row.single.article-header .column.show-header > header > * {
+    line-height: 0.9em;
+  }
+}
+@media all and (min-width: 1073px) {
+  body.page.has-short-main-header main .row.single.article-header .column.show-header > header > * {
+    font-size: 3.5rem;
+  }
+}
+@media all and (min-width: 990px) and (max-width: 1072px) {
+  body.page.has-short-main-header main .row.single.article-header .column.show-header > header > * {
+    font-size: 3.5rem;
+  }
+}
+@media all and (min-width: 792px) and (max-width: 989px) {
+  body.page.has-short-main-header main .row.single.article-header .column.show-header > header > * {
+    font-size: 3.5rem;
+  }
+}
+@media all and (min-width: 481px) and (max-width: 791px) {
+  body.page.has-short-main-header main .row.single.article-header .column.show-header > header > * {
+    font-size: 3.5rem;
+  }
+}
+@media all and (min-width: 361px) and (max-width: 480px) {
+  body.page.has-short-main-header main .row.single.article-header .column.show-header > header > * {
+    font-size: 2.850001rem;
+  }
+}
+@media all and (max-width: 360px) {
+  body.page.has-short-main-header main .row.single.article-header .column.show-header > header > * {
+    font-size: 2.500001rem;
   }
 }
 .main-header sub:not(.unset),
