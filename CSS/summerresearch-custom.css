@@ -81,6 +81,10 @@ img.shift-to-center,
 .column .spaces-btm-full {
   margin-bottom: 4rem;
 }
+.spaces-btm-full.forces-spacing,
+.column .spaces-btm-full.forces-spacing {
+  margin-bottom: 4rem !important;
+}
 .spaces-lft-full,
 .column .spaces-lft-full {
   margin-left: 4rem;
@@ -96,6 +100,10 @@ img.shift-to-center,
 .spaces-btm-nrml,
 .column .spaces-btm-nrml {
   margin-bottom: 2rem;
+}
+.spaces-btm-nrml.forces-spacing,
+.column .spaces-btm-nrml.forces-spacing {
+  margin-bottom: 2rem !important;
 }
 .spaces-lft-nrml,
 .column .spaces-lft-nrml {
@@ -113,6 +121,10 @@ img.shift-to-center,
 .column .spaces-btm-half {
   margin-bottom: 1rem;
 }
+.spaces-btm-half.forces-spacing,
+.column .spaces-btm-half.forces-spacing {
+  margin-bottom: 1rem !important;
+}
 .spaces-lft-half,
 .column .spaces-lft-half {
   margin-left: 1rem;
@@ -128,6 +140,10 @@ img.shift-to-center,
 .spaces-btm-qrtr,
 .column .spaces-btm-qrtr {
   margin-bottom: 0.5rem;
+}
+.spaces-btm-qrtr.forces-spacing,
+.column .spaces-btm-qrtr.forces-spacing {
+  margin-bottom: 0.5rem !important;
 }
 .spaces-lft-qrtr,
 .column .spaces-lft-qrtr {
@@ -145,6 +161,10 @@ img.shift-to-center,
 .column .spaces-btm-8th {
   margin-bottom: 0.25rem;
 }
+.spaces-btm-8th.forces-spacing,
+.column .spaces-btm-8th.forces-spacing {
+  margin-bottom: 0.25rem !important;
+}
 .spaces-lft-8th,
 .column .spaces-lft-8th {
   margin-left: 0.25rem;
@@ -159,6 +179,10 @@ img.shift-to-center,
 }
 .spaces-btm-none,
 .column .spaces-btm-none {
+  margin-bottom: 0rem !important;
+}
+.spaces-btm-none.forces-spacing,
+.column .spaces-btm-none.forces-spacing {
   margin-bottom: 0rem !important;
 }
 .spaces-lft-none,
@@ -5729,11 +5753,20 @@ img.has-spacing.at-right.thin {
 img.has-spacing.at-bottom {
   margin-bottom: 1rem;
 }
+img.has-spacing.at-bottom.forces-spacing {
+  margin-bottom: 1rem !important;
+}
 img.has-spacing.at-bottom.thick {
   margin-bottom: 2rem;
 }
+img.has-spacing.at-bottom.thick.forces-spacing {
+  margin-bottom: 2rem !important;
+}
 img.has-spacing.at-bottom.thin {
   margin-bottom: 0.5rem;
+}
+img.has-spacing.at-bottom.thin.forces-spacing {
+  margin-bottom: 0.5rem !important;
 }
 img.has-spacing.at-left {
   margin-left: 1rem;
