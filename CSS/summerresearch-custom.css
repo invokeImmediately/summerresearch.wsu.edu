@@ -8938,11 +8938,23 @@ div.iframe-wrapper.home {
 }
 .row.article-notice.ruby .column {
   background: #c60c30 url(/wp-content/uploads/sites/907/2017/08/texture_unheated-ruby.png) no-repeat scroll left top;
-  font-size: 1.5em;
+  font-size: 1.5rem;
 }
 .row.article-notice.ruby .column > p {
   padding-right: 2rem;
   padding-left: 2rem;
   color: #fff;
   text-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
+}
+@media all and (max-width: 480px) {
+  .row.article-notice.ruby .column > p {
+    padding-right: 1rem;
+    padding-left: 1rem;
+  }
+}
+@media all and (max-width: 360px) {
+  .row.article-notice.ruby .column > p {
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
+  }
 }
