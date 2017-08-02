@@ -8936,10 +8936,13 @@ div.iframe-wrapper.home {
     padding-bottom: 0.33333333rem !important;
   }
 }
-.row.article-notice.ruby div.column {
+.row.article-notice.ruby .column {
   background: #c60c30 url(/wp-content/uploads/sites/907/2017/08/texture_unheated-ruby.png) no-repeat scroll left top;
+  font-size: 1.5em;
 }
-.row.article-notice.ruby div.column > p {
+.row.article-notice.ruby .column > p {
+  padding-right: 2rem;
+  padding-left: 2rem;
   color: #fff;
   text-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
 }
