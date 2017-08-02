@@ -8981,8 +8981,8 @@ div.iframe-wrapper.home {
   }
 }
 .column p.notice.download {
-  background-color: #f6f6f6;
+  background-color: #eff0f1;
 }
 .column p.notice.download:before {
-  background: #5e6a71 url(/wp-content/uploads/sites/907/2017/08/texture_unheated-ruby.png) 4px 1rem no-repeat;
+  background: #5e6a71 url(/wp-content/uploads/sites/907/2017/08/icon_genericons-neue_download-notice_gray.png) 4px 1rem no-repeat;
 }
