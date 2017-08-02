@@ -8897,6 +8897,7 @@ div.iframe-wrapper.home {
   height: 100%;
   width: 100%;
   border-bottom: none;
+  border-radius: 10px;
   color: transparent;
   box-shadow: none;
   z-index: 1;
