@@ -8902,7 +8902,7 @@ div.iframe-wrapper.home {
   z-index: 1;
 }
 .column p.notice.linked a:first-of-type:hover {
-  background-color: rgba(255, 255, 255, 0.33);
+  background-color: rgba(198, 12, 48, 0.33);
   text-shadow: none;
   -webkit-transition: all 0.3s linear;
   -moz-transition: all 0.3s linear;
