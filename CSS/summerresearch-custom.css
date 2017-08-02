@@ -8886,6 +8886,28 @@ div.iframe-wrapper.home {
   border-bottom-right-radius: 10px;
   background: rgba(152, 30, 50, 0.3333) url(/wp-content/uploads/sites/907/2017/06/icon_genericons-neue_notice_v5.png) 4px 1rem no-repeat;
 }
+.column p.notice.linked a {
+  display: none;
+}
+.column p.notice.linked a:first-of-type {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  border-bottom: none;
+  color: transparent;
+  box-shadow: none;
+  z-index: 1;
+}
+.column p.notice.linked a:first-of-type:hover {
+  background-color: rgba(255, 255, 255, 0.33);
+  text-shadow: none;
+  -webkit-transition: all 0.3s linear;
+  -moz-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+}
 .column p.notice.has-expiration {
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
@@ -8957,4 +8979,10 @@ div.iframe-wrapper.home {
     padding-right: 0.5rem;
     padding-left: 0.5rem;
   }
+}
+.column p.notice.download {
+  background-color: #f6f6f6;
+}
+.column p.notice.download:before {
+  background: #5e6a71 url(/wp-content/uploads/sites/907/2017/08/texture_unheated-ruby.png) 4px 1rem no-repeat;
 }
