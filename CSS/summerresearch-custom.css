@@ -8898,6 +8898,7 @@ div.iframe-wrapper.home {
   width: 100%;
   border-bottom: none;
   border-radius: 10px;
+  background-blend-mode: multiply;
   color: transparent;
   box-shadow: none;
   z-index: 1;
