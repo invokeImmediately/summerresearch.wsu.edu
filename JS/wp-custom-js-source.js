@@ -1743,7 +1743,7 @@ e===O?(h=c===H?L:K,j[h]="50%",j[ib+"-"+h]=-Math.round(b[c===H?0:1]/2)+i):(h=f._p
                     if(event.offset.totalDays > 0) {
                         format = "%-D day%!D and " + format;
                     }
-                    format = format + parsedMsg;
+                    format = "<strong>" + format + "</strong>" + parsedMsg;
                     $(this).html(event.strftime(format));
                 }).on("finish.countdown", function(event) {
                     $(this).html(expiredMsg);
