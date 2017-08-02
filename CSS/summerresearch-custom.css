@@ -8908,6 +8908,13 @@ div.iframe-wrapper.home {
   -moz-transition: all 0.3s linear;
   transition: all 0.3s linear;
 }
+.column p.notice.linked .hyperlink-simulator {
+  border-bottom-right-radius: 0.25em;
+  border-bottom-left-radius: 0.25em;
+  border-bottom: 0.0625em solid #981e32;
+  box-shadow: inset 0 -0.3125em 0 rgba(152, 30, 50, 0.15);
+  color: #981e32;
+}
 .column p.notice.has-expiration {
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
