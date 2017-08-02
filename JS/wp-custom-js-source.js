@@ -1738,7 +1738,7 @@ e===O?(h=c===H?L:K,j[h]="50%",j[ib+"-"+h]=-Math.round(b[c===H?0:1]/2)+i):(h=f._p
             var expiredMsg = $countdownClock.data("expired-message");
             if(countdownTarget && pendingMsg && expiredMsg) {
                 $countdownClock.countdown(countdownTarget).on("update.countdown", function(event) {
-					var parsedMsg = pendingMsg.replace("[", "<").replace("]", ">");
+					var parsedMsg = pendingMsg.replace(/\[/g, "<").replace(/\]/g, ">");
                     var format = "%H:%M:%S";
                     if(event.offset.totalDays > 0) {
                         format = "%-D day%!D and " + format;
