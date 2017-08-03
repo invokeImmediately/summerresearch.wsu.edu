@@ -8995,3 +8995,11 @@ div.iframe-wrapper.home {
 .column p.notice.download:before {
   background: #5e6a71 url(/wp-content/uploads/sites/907/2017/08/icon_genericons-neue_download-notice_gray.png) 4px 1rem no-repeat;
 }
+.column p.notice.news-link {
+  background-color: #eff0f1;
+  padding-right: calc(1rem + 72px);
+}
+.column p.notice.news-link:before {
+  width: 72px;
+  background: #5e6a71 url(/wp-content/uploads/sites/907/2017/08/icon_view-more-news.png) 4px 1rem no-repeat;
+}
