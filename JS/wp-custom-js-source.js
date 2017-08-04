@@ -1807,12 +1807,12 @@ function processCountdownTimerMsg ($countdownTimerMsg) {
 	if ( $.isJQueryObj($countdownTimerMsg) && $countdownTimerMsg.length === 1 ) {
 		
 		// Invoke The Final Countdown plugin on the object after parsing the necessary data.
-		countdownTarget = $countdownClock.data( 'countdown' );
+		countdownTarget = $countdownTimerMsg.data( 'countdown' );
 		// TODO: Add appending and prepending of message strings
-		pendingMsg = $countdownClock.data( 'pending-message' );
-		expiredMsg = $countdownClock.data( 'expired-message' );
+		pendingMsg = $countdownTimerMsg.data( 'pending-message' );
+		expiredMsg = $countdownTimerMsg.data( 'expired-message' );
 		if( countdownTarget && pendingMsg && expiredMsg ) {
-			$countdownClock.countdown( countdownTarget ).on( 'update.countdown', function( event ) {
+			$countdownTimerMsg.countdown( countdownTarget ).on( 'update.countdown', function( event ) {
 				parsedMsg = pendingMsg.replace( /\[/g, '<' ).replace( /\]/g, '>' );
 				format = '%H:%M:%S';
 				if( event.offset.totalDays > 0 ) {
