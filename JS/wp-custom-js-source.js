@@ -1744,48 +1744,113 @@ e===O?(h=c===H?L:K,j[h]="50%",j[ib+"-"+h]=-Math.round(b[c===H?0:1]/2)+i):(h=f._p
  * CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 !function(a){"use strict";"function"==typeof define&&define.amd?define(["jquery"],a):a(jQuery)}(function(a){"use strict";function b(a){if(a instanceof Date)return a;if(String(a).match(g))return String(a).match(/^[0-9]*$/)&&(a=Number(a)),String(a).match(/\-/)&&(a=String(a).replace(/\-/g,"/")),new Date(a);throw new Error("Couldn't cast `"+a+"` to a date object.")}function c(a){var b=a.toString().replace(/([.?*+^$[\]\\(){}|-])/g,"\\$1");return new RegExp(b)}function d(a){return function(b){var d=b.match(/%(-|!)?[A-Z]{1}(:[^;]+;)?/gi);if(d)for(var f=0,g=d.length;f<g;++f){var h=d[f].match(/%(-|!)?([a-zA-Z]{1})(:[^;]+;)?/),j=c(h[0]),k=h[1]||"",l=h[3]||"",m=null;h=h[2],i.hasOwnProperty(h)&&(m=i[h],m=Number(a[m])),null!==m&&("!"===k&&(m=e(l,m)),""===k&&m<10&&(m="0"+m.toString()),b=b.replace(j,m.toString()))}return b=b.replace(/%%/,"%")}}function e(a,b){var c="s",d="";return a&&(a=a.replace(/(:|;|\s)/gi,"").split(/\,/),1===a.length?c=a[0]:(d=a[0],c=a[1])),Math.abs(b)>1?c:d}var f=[],g=[],h={precision:100,elapse:!1,defer:!1};g.push(/^[0-9]*$/.source),g.push(/([0-9]{1,2}\/){2}[0-9]{4}( [0-9]{1,2}(:[0-9]{2}){2})?/.source),g.push(/[0-9]{4}([\/\-][0-9]{1,2}){2}( [0-9]{1,2}(:[0-9]{2}){2})?/.source),g=new RegExp(g.join("|"));var i={Y:"years",m:"months",n:"daysToMonth",d:"daysToWeek",w:"weeks",W:"weeksToMonth",H:"hours",M:"minutes",S:"seconds",D:"totalDays",I:"totalHours",N:"totalMinutes",T:"totalSeconds"},j=function(b,c,d){this.el=b,this.$el=a(b),this.interval=null,this.offset={},this.options=a.extend({},h),this.firstTick=!0,this.instanceNumber=f.length,f.push(this),this.$el.data("countdown-instance",this.instanceNumber),d&&("function"==typeof d?(this.$el.on("update.countdown",d),this.$el.on("stoped.countdown",d),this.$el.on("finish.countdown",d)):this.options=a.extend({},h,d)),this.setFinalDate(c),this.options.defer===!1&&this.start()};a.extend(j.prototype,{start:function(){null!==this.interval&&clearInterval(this.interval);var a=this;this.update(),this.interval=setInterval(function(){a.update.call(a)},this.options.precision)},stop:function(){clearInterval(this.interval),this.interval=null,this.dispatchEvent("stoped")},toggle:function(){this.interval?this.stop():this.start()},pause:function(){this.stop()},resume:function(){this.start()},remove:function(){this.stop.call(this),f[this.instanceNumber]=null,delete this.$el.data().countdownInstance},setFinalDate:function(a){this.finalDate=b(a)},update:function(){if(0===this.$el.closest("html").length)return void this.remove();var a,b=new Date;return a=this.finalDate.getTime()-b.getTime(),a=Math.ceil(a/1e3),a=!this.options.elapse&&a<0?0:Math.abs(a),this.totalSecsLeft===a||this.firstTick?void(this.firstTick=!1):(this.totalSecsLeft=a,this.elapsed=b>=this.finalDate,this.offset={seconds:this.totalSecsLeft%60,minutes:Math.floor(this.totalSecsLeft/60)%60,hours:Math.floor(this.totalSecsLeft/60/60)%24,days:Math.floor(this.totalSecsLeft/60/60/24)%7,daysToWeek:Math.floor(this.totalSecsLeft/60/60/24)%7,daysToMonth:Math.floor(this.totalSecsLeft/60/60/24%30.4368),weeks:Math.floor(this.totalSecsLeft/60/60/24/7),weeksToMonth:Math.floor(this.totalSecsLeft/60/60/24/7)%4,months:Math.floor(this.totalSecsLeft/60/60/24/30.4368),years:Math.abs(this.finalDate.getFullYear()-b.getFullYear()),totalDays:Math.floor(this.totalSecsLeft/60/60/24),totalHours:Math.floor(this.totalSecsLeft/60/60),totalMinutes:Math.floor(this.totalSecsLeft/60),totalSeconds:this.totalSecsLeft},void(this.options.elapse||0!==this.totalSecsLeft?this.dispatchEvent("update"):(this.stop(),this.dispatchEvent("finish"))))},dispatchEvent:function(b){var c=a.Event(b+".countdown");c.finalDate=this.finalDate,c.elapsed=this.elapsed,c.offset=a.extend({},this.offset),c.strftime=d(this.offset),this.$el.trigger(c)}}),a.fn.countdown=function(){var b=Array.prototype.slice.call(arguments,0);return this.each(function(){var c=a(this).data("countdown-instance");if(void 0!==c){var d=f[c],e=b[0];j.prototype.hasOwnProperty(e)?d[e].apply(d,b.slice(1)):null===String(e).match(/^[$A-Z_][0-9A-Z_$]*$/i)?(d.setFinalDate.call(d,e),d.start()):a.error("Method %s does not exist on jQuery.countdown".replace(/\%s/gi,e))}else new j(this,b[0],b[1])})}});/*!
- * Application of imagesLoaded & Masonry libraries to WSU OUE websites.
- * Author: Daniel Rieck [daniel.rieck@wsu.edu] (https://github.com/invokeImmediately)
+ * jQuery.countdown-custom.js DESCRIPTION: 
+ *     Application of "The Final Countdown" jQuery plugin, written by Edson Hilios, to WSU OUE
+ *     websites. (Please see https://github.com/hilios/jQuery.countdown for Edson's repository for
+ *     "The Final Countdown.") 
+ *
+ * AUTHOR: Daniel Rieck [daniel.rieck@wsu.edu] (https://github.com/invokeImmediately)
  */
 ( function ($) {
 
+var thisFileName = 'jQuery.countdown-custom';
 var animationTiming = 400;	// Controls the speed at which jQuery-induced countdown animations occur
 
-/* DOM IS READY: Code executed after the DOM is ready for use. */
+// ---- DOM IS READY: Code executed after the DOM is ready for use. --------------------------------
 $( function () {
-	var $countdownClock = $("#countdown-clock");
+
+	// TODO: Also implement a class based approach
+	var $countdownClock = $( '#countdown-clock' );
+	processCountdownTimerMsg( $countdownClock );
+} );
+
+// ---- WINDOW LOADED: Code executed after the browser window has fully loaded ---------------------
+$( window ).on( 'load', function () {
+	var $countdownClock = $( '#countdown-clock' );
+	var $countdownParent = $countdownClock.parents( 'section' ).first();
+
+	//TODO: Implement showing/hiding times for countdown timers.
+//	var hideUntilTime = $countdownClock.data( 'hide-until' );
+//	var showUntilTime = $countdownClock.data( 'show-until' );
+	var hideCountdown = false;
+
+//	if (hideUntilTime) {
+//		
+//	}
+
+	if ( !hideCountdown ) {
+		$countdownParent.show( animationTiming );
+	}
+} );
+
+// ---- IIFE-localized definitions of FUNCTIONS USED IN THIS SCRIPT --------------------------------
+
+/**
+ *  processCountdownTimer DESCRIPTION: Invokes the "The Final Countdown" jQuery plugin on
+ *      appropriate elements within the DOM.
+ *  
+ *  ARGUMENTS:
+ *      $countdownTimer: a single jQuery object containing an element on which the plugin will be
+ *                       invoked.
+ */
+function processCountdownTimerMsg ($countdownTimerMsg) {
+	var fnctnName = 'processCountdownTimer';
+	var fnctnDesc = 'Invokes the "The Final Countdown" jQuery plugin on appropriate elements ' +
+					'within the DOM.';
 	var countdownTarget;
 	var pendingMsg;
 	var expiredMsg;
 	var parsedMsg;
 	var format;
-	if( $countdownClock ) {
-		countdownTarget = $countdownClock.data( "countdown" );
-		pendingMsg = $countdownClock.data( "pending-message" );
-		expiredMsg = $countdownClock.data( "expired-message" );
+
+	// Check integrity of argument
+	if ( $.isJQueryObj($countdownTimerMsg) && $countdownTimerMsg.length === 1 ) {
+		
+		// Invoke The Final Countdown plugin on the object after parsing the necessary data.
+		countdownTarget = $countdownClock.data( 'countdown' );
+		// TODO: Add appending and prepending of message strings
+		pendingMsg = $countdownClock.data( 'pending-message' );
+		expiredMsg = $countdownClock.data( 'expired-message' );
 		if( countdownTarget && pendingMsg && expiredMsg ) {
-			$countdownClock.countdown( countdownTarget ).on( "update.countdown", function( event ) {
-				parsedMsg = pendingMsg.replace( /\[/g, "<" ).replace( /\]/g, ">" );
-				format = "%H:%M:%S";
+			$countdownClock.countdown( countdownTarget ).on( 'update.countdown', function( event ) {
+				parsedMsg = pendingMsg.replace( /\[/g, '<' ).replace( /\]/g, '>' );
+				format = '%H:%M:%S';
 				if( event.offset.totalDays > 0 ) {
-					format = "%-D day%!D and " + format;
+					format = '%-D day%!D and ' + format;
 				}
-				format = "<strong>" + format + "</strong>" + parsedMsg;
+				format = '<strong>' + format + '</strong>' + parsedMsg;
 				$( this ).html( event.strftime( format ) );
-			} ).on("finish.countdown", function( event ) {
-				parsedMsg = expiredMsg.replace( /\[/g, "<" ).replace( /\]/g, ">" );
+			} ).on('finish.countdown', function( event ) {
+				parsedMsg = expiredMsg.replace( /\[/g, '<' ).replace( /\]/g, '>' );
 				$( this ).html( parsedMsg );
 			} );
+		} else {
+
+			// TODO: Expand error reporting to achieve optimal granularity for troubleshooting.
+			$.logError( thisFileName, fnctnName, fnctnDesc,
+				'Because I encountered a problem with expected data attributes, I am unable to ' +
+				'proceed with invocation of The Final Countdown on the jQuery object I am ' +
+				'currently working with.\n\tHere\'s information on the variables I am handling:'
+			);
+			console.log( $countdownTimerMsg, pendingMsg, expiredMsg );
+		}
+	} else {
+
+		// Report appropriate problem with argument integrity
+		if ( !$.isJQueryObj( $countdownTimerMsg ) ) {
+			errorMsg = 
+			$.logError( thisFileName, fnctnName, fnctnDesc,
+				'I was passed an invalid argument for $countdownTimerMsg, which appears below:'
+			);
+			console.log( $countdownTimerMsg );
+		} else {
+			$.logError( thisFileName, fnctnName, fnctnDesc,
+				'I was expecting a single jQuery object as an argument for $countdownTimerMsg. ' +
+				'Instead, I was passed a jQuery object with a length of ' + $countdownTimerMsg.length
+			);
 		}
 	}
-} );
-
-/* WINDOW LOADED: Code executed after the browser window has fully loaded. */
-$( window ).on( "load", function () {
-	var $countdownClock = $( "#countdown-clock" );
-	var $countdownParent = $countdownClock.parents( "section" ).first();
-	$countdownParent.show( animationTiming );
-} );
+}
 
 } )( jQuery );
 // -----------------------------------------------------------------------------
