@@ -773,6 +773,20 @@ html {
 .column article.post + article.post {
   margin-top: 1.5em;
 }
+.row.new-article-section {
+  padding: 1rem;
+}
+.row.new-article-section h1,
+.row.new-article-section h2,
+.row.new-article-section h3,
+.row.new-article-section h4,
+.row.new-article-section h5,
+.row.new-article-section h6 {
+  padding: 0;
+  margin: 0;
+  color: inherit;
+  text-align: center;
+}
 /*!     ┌───────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
 *       │ SECTIONS ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ │
 *       └───────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
@@ -965,11 +979,17 @@ section.side-right .column.two p {
 .column section:not(:last-child) > *:last-child:not(.vpue-jump-bar) {
   padding-bottom: 0;
 }
+.row.has-charcoal-background {
+  background-color: #2f3438;
+}
+.row.has-charcoal-background .column {
+  color: #fff;
+}
 .row.has-gray-background {
   background-color: #eff0f1;
 }
 .row.has-crimson-background {
-  background-color: #eff0f1;
+  background-color: #981e32;
 }
 .row.has-crimson-background .column {
   color: #fff;
@@ -1302,6 +1322,15 @@ main section.row > .column table > tbody > tr > td > section > ol:last-child,
 main section.row > .column table > tbody > tr > td > div > ol:last-child {
   margin-bottom: 0;
 }
+.h1-header + section.pad-top .column {
+  padding-top: 2rem;
+}
+.h1-header + section.pad-top.short .column {
+  padding-top: 1rem;
+}
+.h1-header + section.pad-top.tall .column {
+  padding-top: 4rem;
+}
 @media only screen and (min-width: 481px) and (max-width: 693px) {
   .gutter .column:not(.gutterless),
   .guttered {
@@ -1473,10 +1502,51 @@ main section.row > .column table > tbody > tr > td > div > ol:last-child {
     padding-left: 0.25rem;
   }
 }
+@media all and (max-width: 693px) {
+  .row:not(.pad-top).halves .one ~ .column,
+  .row:not(.pad-top).thirds .one ~ .column,
+  .row:not(.pad-top).quarters .one ~ .column,
+  .row:not(.pad-top).side-right .one ~ .column,
+  .row:not(.pad-top).side-left .one ~ .column {
+    margin-top: 2rem;
+  }
+}
 /*!  ┌──────────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
 *    │ ASIDE layouts ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ │
 *    └──────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
 */
+aside.shield-themed {
+  padding: 0.5rem;
+  border-left: 4px solid #8d959a;
+  background: #eff0f1;
+  color: #464e54;
+  font-size: 0.925rem;
+}
+aside.shield-themed > h1:first-child,
+aside.shield-themed > h2:first-child,
+aside.shield-themed > h3:first-child,
+aside.shield-themed > h4:first-child,
+aside.shield-themed > h5:first-child,
+aside.shield-themed > h6:first-child,
+aside.shield-themed > header:first-child > * {
+  box-sizing: content-box;
+  width: 100%;
+  padding: 0.5rem;
+  margin-top: -0.5rem;
+  margin-left: -0.5rem;
+  margin-bottom: 0.5rem;
+  background-color: #981e32;
+  color: #fff;
+}
+aside.shield-themed p + * {
+  margin-top: 1em;
+}
+aside.shield-themed p + .has-learn-more-link {
+  margin-top: 0.33333333em;
+}
+aside.shield-themed:not(:last-child) {
+  margin-bottom: 2rem;
+}
 aside.widget {
   box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.9), 0 0 0 2px rgba(0, 0, 0, 0.2), 3px 4px 4px rgba(0, 0, 0, 0.25) !important;
 }
@@ -1586,14 +1656,14 @@ aside.widget_archive label.screen-reader-text {
     transform: none;
   }
 }
-.row.side-right .column.two aside {
+.row.side-right .column.two aside:not(.shield-themed):not(.shield-themed) {
   padding: 1rem;
   background: rgba(215, 218, 219, 0.8);
   border-radius: 4px;
   -webkit-box-shadow: 0px 0px 0px 1px rgba(255, 255, 255, 0.9), 0px 0px 0px 2px rgba(0, 0, 0, 0.2);
   box-shadow: 0px 0px 0px 1px rgba(255, 255, 255, 0.9), 0px 0px 0px 2px rgba(0, 0, 0, 0.2);
 }
-.row.side-right .column.two aside p:not(.centered) {
+.row.side-right .column.two aside:not(.shield-themed):not(.shield-themed) p:not(.centered) {
   text-align: left;
 }
 body.single-post #wsuwp-main .row .column.one aside,
@@ -1767,23 +1837,29 @@ body.blog .article-summary aside {
   margin-top: 0;
 }
 .column h2.fancy,
+.column h2.solid,
 .column.show-header.has-fancy-header > header:first-child > h2 {
   position: relative;
-  padding: 0.3333rem 0.5rem;
+  padding: 0.33333333rem 0.5rem 0.55rem;
   margin-left: -0.5rem;
   margin-bottom: 1rem;
   margin-right: -0.5rem;
   background-color: rgba(94, 106, 113, 0.2);
+  background: linear-gradient(to right, transparent, rgba(94, 106, 113, 0.075) 5%, rgba(94, 106, 113, 0.075) 50%, rgba(94, 106, 113, 0.225));
+  border-bottom: 2px solid rgba(94, 106, 113, 0.075);
 }
 .column h2.fancy.with-top-border,
+.column h2.solid,
 .column.show-header.has-fancy-header > header:first-child > h2 {
   padding-top: 0.5rem;
 }
 .column h2.fancy.with-top-border:not(:first-child),
+.column h2.solid:not(:first-child),
 .column.show-header.has-fancy-header > header:first-child > h2:not(:first-child) {
   margin-top: 2rem;
 }
 .column h2.fancy.with-top-border::before,
+.column h2.solid::before,
 .column.show-header.has-fancy-header > header:first-child > h2::before {
   content: "";
   position: absolute;
@@ -1880,37 +1956,47 @@ h2.article-title a {
   text-transform: none;
 }
 .column h3.fancy,
+.column h3.solid,
 .column.show-header.has-fancy-header > header:first-child > h3,
 .column h4.fancy,
 .gform_heading h3.gform_title.fancy,
+.gform_heading h3.gform_title.solid,
 .gform_heading h3.gform_title {
   position: relative;
-  padding: 0.3333rem 0.5rem;
+  padding: 0.33333333rem 0.5rem 0.45rem 0;
   margin-left: 0;
   margin-bottom: 1rem;
   margin-right: 0;
-  background-color: rgba(219, 120, 121, 0.075);
+  background-color: rgba(198, 12, 48, 0.075);
+  background: linear-gradient(to right, transparent, rgba(219, 120, 121, 0.075) 5%, rgba(219, 120, 121, 0.075) 50%, rgba(219, 120, 121, 0.225));
+  border-bottom: 2px solid rgba(198, 12, 48, 0.075);
 }
 .column h3.fancy.with-top-border,
+.column h3.solid,
 .column.show-header.has-fancy-header > header:first-child > h3,
 .column h4.fancy.with-top-border,
 .gform_heading h3.gform_title.fancy.with-top-border,
+.gform_heading h3.gform_title.solid,
 .gform_heading h3.gform_title.with-top-border,
 .gform_heading h3.gform_title {
   padding-top: 0.4375rem;
 }
 .column h3.fancy.with-top-border:not(:first-child),
+.column h3.solid:not(:first-child),
 .column.show-header.has-fancy-header > header:first-child > h3:not(:first-child),
 .column h4.fancy.with-top-border:not(:first-child),
 .gform_heading h3.gform_title.fancy.with-top-border:not(:first-child),
+.gform_heading h3.gform_title.solid:not(:first-child),
 .gform_heading h3.gform_title.with-top-border:not(:first-child),
 .gform_heading h3.gform_title:not(:first-child) {
   margin-top: 2rem;
 }
 .column h3.fancy.with-top-border::before,
+.column h3.solid::before,
 .column.show-header.has-fancy-header > header:first-child > h3::before,
 .column h4.fancy.with-top-border::before,
 .gform_heading h3.gform_title.fancy.with-top-border::before,
+.gform_heading h3.gform_title.solid::before,
 .gform_heading h3.gform_title.with-top-border::before,
 .gform_heading h3.gform_title::before {
   content: "";
@@ -3212,7 +3298,8 @@ p.article-tagline:not(.has-no-bordering).crimson.alt:after {
 p.article-tagline:not(.has-no-bordering).crimson .has-gray-text {
   color: #464e54;
 }
-p.article-tagline.bold {
+p.article-tagline.bold,
+p.article-tagline .has-bold-text {
   font-weight: bold;
 }
 @media all {
@@ -5443,6 +5530,10 @@ div.recent-updates p.recent-update-3 {
   line-height: calc(1.05em * 1.05);
   color: #f6861f;
 }
+.column a.learn-more {
+  font-weight: bold;
+  font-size: 0.925em;
+}
 .column a.dark-red-button {
   display: block;
   padding: .5em 1em;
@@ -7507,6 +7598,14 @@ x:-o-prefocus {
     right: 4px;
   }
 }
+/*!       ┌-----------------------------------------------------------------------------------------------------------┐
+*         │ ···· Tribe Events Calendars ············································································· │
+*         └-----------------------------------------------------------------------------------------------------------┘
+*/
+/*!     ┌───────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
+*       │ ARTICLES ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ │
+*       └───────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
+*/
 /*!     ┌───────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
 *       │ ++++ DIV rulesets +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ │
 *       └───────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
@@ -8627,6 +8726,12 @@ div.iframe-wrapper.home {
 .row.has-linked-columns:not(.gutter).single .column > .shift-to-bottom:first-of-type {
   max-width: none;
 }
+@media all and (min-width: 1205px) {
+  #binder.max-1386 .row.has-linked-columns:not(.gutter).halves {
+    padding-bottom: 0 !important;
+    height: 327px;
+  }
+}
 .row.has-linked-columns:not(.gutter).thirds + .row.has-linked-columns:not(.gutter).thirds.thirds,
 .row.has-linked-columns:not(.gutter).thirds + .row.has-linked-columns:not(.gutter).quarters.thirds,
 .row.has-linked-columns:not(.gutter).quarters + .row.has-linked-columns:not(.gutter).thirds.thirds,
@@ -8776,6 +8881,18 @@ div.iframe-wrapper.home {
 @media all and (max-width: 480px) {
   .row.has-linked-columns:not(.gutter).thirds .column {
     padding-bottom: calc(40% - 2rem) !important;
+  }
+}
+@media all and (min-width: 1205px) {
+  #binder.max-1386 .row.has-linked-columns:not(.gutter).thirds .column {
+    padding-bottom: 0 !important;
+    height: 330px;
+  }
+}
+@media all and (min-width: 1205px) {
+  #binder.max-1386 .row.has-linked-columns:not(.gutter).quarters .column {
+    padding-bottom: 0 !important;
+    height: 293px;
   }
 }
 .row.has-linked-columns:not(.gutter).has-title {
