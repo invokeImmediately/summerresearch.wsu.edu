@@ -759,6 +759,14 @@ html {
 *       │ ++++ BODY rulesets ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ │
 *       └───────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
 */
+@media only screen and (min-width: 990px) {
+  body.use-max-width-1386 #binder.max-1188 {
+    max-width: 1386px;
+  }
+  body.use-max-width-1386 #binder.max-1188 .row {
+    max-width: 1386px;
+  }
+}
 /*!     ┌───────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
 *       │ ARTICLES ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ │
 *       └───────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
@@ -1559,6 +1567,10 @@ main section.row > .column table > tbody > tr > td > div > ol:last-child {
     margin-top: 2rem;
   }
 }
+/*!     ┌───────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
+*       │ EVENTS CALENDAR PLUGIN ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ │
+*       └───────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
+*/
 /*!  ┌──────────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
 *    │ ASIDE layouts ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ │
 *    └──────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
@@ -6628,6 +6640,11 @@ div.read-more-target {
 .column .gform_wrapper .gform_body > ul > li.gf-bckgrnd-field {
   display: none !important;
 }
+@media only screen and (min-width: 641px) {
+  .column .gform_wrapper .top_label li ul.gfield_radio {
+    width: 100%;
+  }
+}
 .column .gform_wrapper #extensions_message {
   padding-left: 1rem;
 }
@@ -6645,22 +6662,22 @@ div.read-more-target {
     width: 100%;
   }
 }
-.column li.gfield.uses-rich-editor div.tmce-active div.mce-menubar {
+.column li.gfield.uses-rich-editor .tmce-active .mce-menubar {
   display: none;
 }
-.column li.gfield.uses-rich-editor div.tmce-active div.mce-toolbar-grp > div.mce-stack-layout > div.mce-toolbar.mce-first div.mce-btn[aria-label="Blockquote"],
-.column li.gfield.uses-rich-editor div.tmce-active div.mce-toolbar-grp > div.mce-stack-layout > div.mce-toolbar.mce-first div.mce-btn[aria-label="Insert/edit link"],
-.column li.gfield.uses-rich-editor div.tmce-active div.mce-toolbar-grp > div.mce-stack-layout > div.mce-toolbar.mce-first div.mce-btn[aria-label="Remove link"],
-.column li.gfield.uses-rich-editor div.tmce-active div.mce-toolbar-grp > div.mce-stack-layout > div.mce-toolbar.mce-first div.mce-btn[aria-label="Insert/edit image"],
-.column li.gfield.uses-rich-editor div.tmce-active div.mce-toolbar-grp > div.mce-stack-layout > div.mce-toolbar.mce-first div.mce-btn[aria-label="Table"],
-.column li.gfield.uses-rich-editor div.tmce-active div.mce-toolbar-grp > div.mce-stack-layout > div.mce-toolbar.mce-first div.mce-btn[aria-label="Toolbar Toggle"],
-.column li.gfield.uses-rich-editor div.tmce-active div.mce-toolbar-grp > div.mce-stack-layout > div.mce-toolbar.mce-first div.mce-btn[aria-label="Fullscreen"] {
+.column li.gfield.uses-rich-editor .tmce-active .mce-toolbar-grp > .mce-stack-layout > .mce-toolbar.mce-first .mce-btn[aria-label="Blockquote"],
+.column li.gfield.uses-rich-editor .tmce-active .mce-toolbar-grp > .mce-stack-layout > .mce-toolbar.mce-first .mce-btn[aria-label="Insert/edit link"],
+.column li.gfield.uses-rich-editor .tmce-active .mce-toolbar-grp > .mce-stack-layout > .mce-toolbar.mce-first .mce-btn[aria-label="Remove link"],
+.column li.gfield.uses-rich-editor .tmce-active .mce-toolbar-grp > .mce-stack-layout > .mce-toolbar.mce-first .mce-btn[aria-label="Insert/edit image"],
+.column li.gfield.uses-rich-editor .tmce-active .mce-toolbar-grp > .mce-stack-layout > .mce-toolbar.mce-first .mce-btn[aria-label="Table"],
+.column li.gfield.uses-rich-editor .tmce-active .mce-toolbar-grp > .mce-stack-layout > .mce-toolbar.mce-first .mce-btn[aria-label="Toolbar Toggle"],
+.column li.gfield.uses-rich-editor .tmce-active .mce-toolbar-grp > .mce-stack-layout > .mce-toolbar.mce-first .mce-btn[aria-label="Fullscreen"] {
   display: none;
 }
-.column li.gfield.uses-rich-editor div.tmce-active div.mce-toolbar-grp > div.mce-stack-layout > div.mce-toolbar.mce-last {
+.column li.gfield.uses-rich-editor .tmce-active .mce-toolbar-grp > .mce-stack-layout > .mce-toolbar.mce-last {
   display: none;
 }
-.column li.gfield.uses-rich-editor div.tmce-active div.mce-statusbar {
+.column li.gfield.uses-rich-editor .tmce-active .mce-statusbar {
   display: none;
 }
 .column li.gfield.uses-rich-editor iframe {
@@ -6727,7 +6744,6 @@ div.read-more-target {
 }
 .column li.gfield div.ginput_container_textarea > textarea {
   font-size: 16px;
-  font-family: Georgia, "Times New Roman", "Bitstream Charter", Times, serif;
 }
 .column ul.gform_fields.top_label > li.gfield.gfield_error.gf_left_half,
 .column ul.gform_fields.top_label > li.gfield.gfield_error.gf_right_half {
