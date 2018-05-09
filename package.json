@@ -1,0 +1,22 @@
+{
+  "name": "summerresearch.wsu.edu",
+  "version": "1.0.0",
+  "description": "Website of the WSU Summer Undergraduate Research program",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/invokeImmediately/summerresearch.wsu.edu.git"
+  },
+  "keywords": [
+    "WSU"
+  ],
+  "author": "Daniel Rieck <danielcrieck@gmail.com> (https://www.linkedin.com/in/danielcrieck/)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/invokeImmediately/summerresearch.wsu.edu/issues"
+  },
+  "homepage": "https://github.com/invokeImmediately/summerresearch.wsu.edu#readme"
+}
