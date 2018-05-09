@@ -4,6 +4,7 @@ concat([
  '../WSU-UE---JS/jQuery.oue-custom.js',
  '../WSU-UE---JS/jQuery.textResize.js',
  '../WSU-UE---JS/jQuery.forms.js',
+ '../../qTip2/dist/jquery.qtip.min.js',
  '../WSU-UE---JS/jQuery.qTip.js',
  '../WSU-UE---JS/jQuery.autoScrollingImages.js',
  '../../imagesloaded/imagesloaded.pkgd.min.js',
