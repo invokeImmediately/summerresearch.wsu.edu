@@ -20,14 +20,14 @@
   },
   "homepage": "https://github.com/invokeImmediately/summerresearch.wsu.edu#readme",
   "devDependencies": {
-    "gulp": "^4.0.0",
+    "gulp": "github:gulpjs/gulp#4.0",
     "gulp-clean-css": "^3.9.4",
     "gulp-concat": "^2.6.1",
     "gulp-dest": "^0.2.3",
     "gulp-extname": "^0.2.2",
     "gulp-group-css-media-queries": "^1.2.2",
     "gulp-insert": "^0.5.0",
-    "gulp-insert-lines": "0.0.4",
+    "gulp-insert-lines": "github:invokeImmediately/gulp-insert-lines",
     "gulp-less": "^3.5.0",
     "gulp-regex-replace": "^0.2.3",
     "gulp-replace": "^0.6.1"
