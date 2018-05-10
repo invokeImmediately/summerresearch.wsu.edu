@@ -1,4 +1,5 @@
 @grid-behavior: "hybrid";
+@oue-rules-wrapper: ~"";
 @import "..\WSU-UE---CSS\wp-master-style-sheet.less";
 
 /*! ╔═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗
@@ -11,16 +12,16 @@
 */
 body {
 	@media all {
-		@media (max-width: @v-wdscrn-bckgrnd) {
+		@media (max-width: @desktop-width) {
 			background: @hex-light-gray;
 		}
-		@media (min-width: (@v-wdscrn-bckgrnd + 1)) and (max-width: @v-wuxga-width) {
+		@media (min-width: (@desktop-width + 1)) and (max-width: @wuxga-width) {
 			background: @hex-light-gray url(/wp-content/uploads/sites/907/2016/05/tileable-eroded-scratch-metal-texture_wuxga.jpg) repeat-y fixed right top;
 		}
-		@media (min-width: (@v-wuxga-width + 1)) and (max-width: @v-wqxga-width) {
+		@media (min-width: (@wuxga-width + 1)) and (max-width: @wqxga-width) {
 			background: @hex-light-gray url(/wp-content/uploads/sites/907/2016/05/tileable-eroded-scratch-metal-texture_wqxga.jpg) repeat-y fixed right top;
 		}
-		@media (min-width: (@v-wqxga-width + 1)) {
+		@media (min-width: (@wqxga-width + 1)) {
 			background: @hex-light-gray url(/wp-content/uploads/sites/907/2016/05/tileable-eroded-scratch-metal-texture_wqxga.jpg) repeat-y fixed 1080px top;
 		}
 	}
@@ -31,7 +32,7 @@ main {
 }
 
 #binder {
-	@media all and (min-width: (@v-wdscrn-bckgrnd+1)) {
+	@media all and (min-width: (@desktop-width+1)) {
 		border-right: 1px solid rgba(red(@hex-black), green(@hex-black), blue(@hex-black), 0.5);
 		box-shadow: 5px 0 5px rgba(red(@hex-darkest-gray), green(@hex-darkest-gray), blue(@hex-darkest-gray), 0.5);
 	}
@@ -155,12 +156,12 @@ header.main-header {
 	& > li {
 		float: left;
 		width: 49%;
-		@media all and (max-width: @v-rghtclmn-thrshld) {
+		@media all and (max-width: @column-floating-threshold) {
 			width: 98%;
 		}
 		min-height: 198px;
 		margin-bottom: 2%;
-		@media all and (max-width: @v-bckgrnd-thrshld) {
+		@media all and (max-width: @background-width-threshold) {
 			overflow-x: visible;
 		}
 		&.full-width {
@@ -261,7 +262,7 @@ ul.program-info {
 	& > li {
 		float: left;
 		width: ~"calc(49% - 14px)";
-		@media all and (max-width: @v-rghtclmn-thrshld) {
+		@media all and (max-width: @column-floating-threshold) {
 			width: ~"calc(98% - 14px)";
 		}
 		margin-bottom: 2%;
@@ -617,7 +618,7 @@ div.iframe-wrapper {
 		width: 100%;
 		border: 0;
 		@media all and (min-width: 1003px),
-		all and (max-width: @v-spn-thrshld) and (min-width: 805px) {
+		all and (max-width: @spine-threshold) and (min-width: 805px) {
 			width: 720px;
 			height: 450px;
 			padding-bottom: 0;
@@ -660,9 +661,7 @@ li.photo-release-agreement-example {
 */
 .use-linked-columns();
 
-.use-paragraph-notices(
-	url(/wp-content/uploads/sites/907/2017/06/icon_genericons-neue_notice_v5.png)
-);
+.use-paragraph-notices(url(/wp-content/uploads/sites/907/2017/06/icon_genericons-neue_notice_v5.png));
 .column p.notice {
 	&.has-expiration {
 		.transition(~"all 0.3s ease");
@@ -680,10 +679,7 @@ li.photo-release-agreement-example {
 	}
 }
 
-.use-article-notices(
-	url(/wp-content/uploads/sites/907/2017/08/texture_brushed-gold.png),
-	url(/wp-content/uploads/sites/907/2017/08/texture_unheated-ruby.png)
-);
+.use-article-notices(url(/wp-content/uploads/sites/907/2017/08/texture_brushed-gold.png), url(/wp-content/uploads/sites/907/2017/08/texture_unheated-ruby.png));
 
 .add-download-notice(
 	@hex-bright-gray,
