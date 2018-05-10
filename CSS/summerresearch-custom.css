@@ -6261,7 +6261,6 @@ body.user-is-tabbing .column a:focus::after {
 .column a.non-text-link {
   border: none;
   box-shadow: none;
-  display: inline-block;
   position: relative;
 }
 .column a.non-text-link::before {
@@ -6294,6 +6293,9 @@ body.user-is-tabbing .column a:focus::after {
 }
 .column a.non-text-link:hover img {
   box-shadow: 0 3px #f45372;
+}
+a.non-text-link {
+  display: inline-block;
 }
 /**   ----------------------------------------------------------------------------------------------
 ***   >>> §5.2: Strong elements
@@ -8481,19 +8483,24 @@ div.auto-scroller ul li {
 /*    ───────────────────────────────────────────────────────────────────────────────────────────
 **    TABLE OF CONTENTS:
 **    ───────────────────────────────────────────────────────────────────────────────────────────
-**    §1: Widths...............................................................................30
-**    §2: Typography...........................................................................30
-**        >>> §1.1: Font Sizing................................................................34
-**        >>> §1.2: Line Heights..............................................................180
-**        >>> §1.3: Bolding...................................................................226
-**        >>> §1.4: Text transformation.......................................................255
-**    §3: Spacing.............................................................................266
-**    §4: Floating............................................................................289
-**    §5: Display.............................................................................349
+**    §1: Widths...............................................................................35
+**        >>> §1.1: Percent widths.............................................................39
+**        >>> §1.2: Max widths.................................................................79
+**    §2: Typography...........................................................................86
+**        >>> §1.1: Font Sizing................................................................90
+**        >>> §1.2: Line Heights..............................................................147
+**        >>> §1.3: Bolding...................................................................193
+**        >>> §1.4: Text transformation.......................................................222
+**    §3: Spacing.............................................................................233
+**    §4: Floating............................................................................256
+**    §5: Display.............................................................................272
 **    ───────────────────────────────────────────────────────────────────────────────────────────
 */
 /*    ----------------------------------------------------------------------------------------------
 **    §1: Widths
+*/
+/*      ····························································································
+**      >>> §1.1: Percent widths
 */
 .width--5pct {
   width: 5%;
@@ -8555,6 +8562,12 @@ div.auto-scroller ul li {
 .width--100pct {
   width: 100%;
 }
+/*      ····························································································
+**      >>> §1.2: Max widths
+*/
+.max-width--none {
+  max-width: none;
+}
 /*    ----------------------------------------------------------------------------------------------
 **    §2: Typography
 */
@@ -8572,242 +8585,62 @@ div.auto-scroller ul li {
 .font-size--400mx {
   font-size: 0.4em;
 }
-.font-size--425mx {
-  font-size: 0.425em;
-}
-.font-size--450mx {
-  font-size: 0.45em;
-}
-.font-size--475mx {
-  font-size: 0.475em;
-}
 .font-size--500mx {
   font-size: 0.5em;
-}
-.font-size--525mx {
-  font-size: 0.525em;
-}
-.font-size--550mx {
-  font-size: 0.55em;
-}
-.font-size--575mx {
-  font-size: 0.575em;
 }
 .font-size--600mx {
   font-size: 0.6em;
 }
-.font-size--625mx {
-  font-size: 0.625em;
-}
-.font-size--650mx {
-  font-size: 0.65em;
-}
-.font-size--675mx {
-  font-size: 0.675em;
-}
 .font-size--700mx {
   font-size: 0.7em;
-}
-.font-size--725mx {
-  font-size: 0.725em;
-}
-.font-size--750mx {
-  font-size: 0.75em;
-}
-.font-size--775mx {
-  font-size: 0.775em;
 }
 .font-size--800mx {
   font-size: 0.8em;
 }
-.font-size--825mx {
-  font-size: 0.825em;
-}
-.font-size--850mx {
-  font-size: 0.85em;
-}
-.font-size--875mx {
-  font-size: 0.875em;
-}
 .font-size--900mx {
   font-size: 0.9em;
-}
-.font-size--925mx {
-  font-size: 0.925em;
-}
-.font-size--950mx {
-  font-size: 0.95em;
-}
-.font-size--975mx {
-  font-size: 0.975em;
 }
 .font-size--1000mx {
   font-size: 1em;
 }
-.font-size--1025mx {
-  font-size: 1.025em;
-}
-.font-size--1050mx {
-  font-size: 1.05em;
-}
-.font-size--1075mx {
-  font-size: 1.075em;
-}
 .font-size--1100mx {
   font-size: 1.1em;
-}
-.font-size--1125mx {
-  font-size: 1.125em;
-}
-.font-size--1150mx {
-  font-size: 1.15em;
-}
-.font-size--1175mx {
-  font-size: 1.175em;
 }
 .font-size--1200mx {
   font-size: 1.2em;
 }
-.font-size--1225mx {
-  font-size: 1.225em;
-}
-.font-size--1250mx {
-  font-size: 1.25em;
-}
-.font-size--1275mx {
-  font-size: 1.275em;
-}
 .font-size--1300mx {
   font-size: 1.3em;
-}
-.font-size--1325mx {
-  font-size: 1.325em;
-}
-.font-size--1350mx {
-  font-size: 1.35em;
-}
-.font-size--1375mx {
-  font-size: 1.375em;
 }
 .font-size--1400mx {
   font-size: 1.4em;
 }
-.font-size--1425mx {
-  font-size: 1.425em;
-}
-.font-size--1450mx {
-  font-size: 1.45em;
-}
-.font-size--1475mx {
-  font-size: 1.475em;
-}
 .font-size--1500mx {
   font-size: 1.5em;
-}
-.font-size--1525mx {
-  font-size: 1.525em;
-}
-.font-size--1550mx {
-  font-size: 1.55em;
-}
-.font-size--1575mx {
-  font-size: 1.575em;
 }
 .font-size--1600mx {
   font-size: 1.6em;
 }
-.font-size--1625mx {
-  font-size: 1.625em;
-}
-.font-size--1650mx {
-  font-size: 1.65em;
-}
-.font-size--1675mx {
-  font-size: 1.675em;
-}
 .font-size--1700mx {
   font-size: 1.7em;
-}
-.font-size--1725mx {
-  font-size: 1.725em;
-}
-.font-size--1750mx {
-  font-size: 1.75em;
-}
-.font-size--1775mx {
-  font-size: 1.775em;
 }
 .font-size--1800mx {
   font-size: 1.8em;
 }
-.font-size--1825mx {
-  font-size: 1.825em;
-}
-.font-size--1850mx {
-  font-size: 1.85em;
-}
-.font-size--1875mx {
-  font-size: 1.875em;
-}
 .font-size--1900mx {
   font-size: 1.9em;
-}
-.font-size--1925mx {
-  font-size: 1.925em;
-}
-.font-size--1950mx {
-  font-size: 1.95em;
-}
-.font-size--1975mx {
-  font-size: 1.975em;
 }
 .font-size--2000mx {
   font-size: 2em;
 }
-.font-size--2025mx {
-  font-size: 2.025em;
-}
-.font-size--2050mx {
-  font-size: 2.05em;
-}
-.font-size--2075mx {
-  font-size: 2.075em;
-}
 .font-size--2100mx {
   font-size: 2.1em;
-}
-.font-size--2125mx {
-  font-size: 2.125em;
-}
-.font-size--2150mx {
-  font-size: 2.15em;
-}
-.font-size--2175mx {
-  font-size: 2.175em;
 }
 .font-size--2200mx {
   font-size: 2.2em;
 }
-.font-size--2225mx {
-  font-size: 2.225em;
-}
-.font-size--2250mx {
-  font-size: 2.25em;
-}
-.font-size--2275mx {
-  font-size: 2.275em;
-}
 .font-size--2300mx {
   font-size: 2.3em;
-}
-.font-size--2325mx {
-  font-size: 2.325em;
-}
-.font-size--2350mx {
-  font-size: 2.35em;
-}
-.font-size--2375mx {
-  font-size: 2.375em;
 }
 .font-size--2400mx {
   font-size: 2.4em;
@@ -8934,65 +8767,53 @@ div.auto-scroller ul li {
 .column * + .spacing--0mx {
   margin-top: 0em;
 }
-.column * + .spacing--100mx {
-  margin-top: 0.1em;
-}
-.column * + .spacing--200mx {
-  margin-top: 0.2em;
-}
-.column * + .spacing--300mx {
-  margin-top: 0.3em;
-}
-.column * + .spacing--400mx {
-  margin-top: 0.4em;
+.column * + .spacing--250mx {
+  margin-top: 0.25em;
 }
 .column * + .spacing--500mx {
   margin-top: 0.5em;
 }
-.column * + .spacing--600mx {
-  margin-top: 0.6em;
-}
-.column * + .spacing--700mx {
-  margin-top: 0.7em;
-}
-.column * + .spacing--800mx {
-  margin-top: 0.8em;
-}
-.column * + .spacing--900mx {
-  margin-top: 0.9em;
+.column * + .spacing--750mx {
+  margin-top: 0.75em;
 }
 .column * + .spacing--1000mx {
   margin-top: 1em;
 }
-.column * + .spacing--1100mx {
-  margin-top: 1.1em;
-}
-.column * + .spacing--1200mx {
-  margin-top: 1.2em;
-}
-.column * + .spacing--1300mx {
-  margin-top: 1.3em;
-}
-.column * + .spacing--1400mx {
-  margin-top: 1.4em;
+.column * + .spacing--1250mx {
+  margin-top: 1.25em;
 }
 .column * + .spacing--1500mx {
   margin-top: 1.5em;
 }
-.column * + .spacing--1600mx {
-  margin-top: 1.6em;
-}
-.column * + .spacing--1700mx {
-  margin-top: 1.7em;
-}
-.column * + .spacing--1800mx {
-  margin-top: 1.8em;
-}
-.column * + .spacing--1900mx {
-  margin-top: 1.9em;
+.column * + .spacing--1750mx {
+  margin-top: 1.75em;
 }
 .column * + .spacing--2000mx {
   margin-top: 2em;
+}
+.column * + .spacing--2250mx {
+  margin-top: 2.25em;
+}
+.column * + .spacing--2500mx {
+  margin-top: 2.5em;
+}
+.column * + .spacing--2750mx {
+  margin-top: 2.75em;
+}
+.column * + .spacing--3000mx {
+  margin-top: 3em;
+}
+.column * + .spacing--3250mx {
+  margin-top: 3.25em;
+}
+.column * + .spacing--3500mx {
+  margin-top: 3.5em;
+}
+.column * + .spacing--3750mx {
+  margin-top: 3.75em;
+}
+.column * + .spacing--4000mx {
+  margin-top: 4em;
 }
 /*    ----------------------------------------------------------------------------------------------
 **    §4: Floating
