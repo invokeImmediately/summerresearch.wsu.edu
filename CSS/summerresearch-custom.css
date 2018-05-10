@@ -10581,14 +10581,13 @@ div.iframe-wrapper.home {
   background-size: cover;
   border-bottom-left-radius: 15px;
   border-bottom-right-radius: 15px;
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
-  color: #464e54;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
+  color: #000;
 }
 .row.article-notice .column > p {
-  color: #464e54;
-  font-size: 1.13656512em;
+  color: inherit;
+  font-size: 1.4em;
   letter-spacing: 0.5px;
-  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.5);
 }
 .row.article-notice .column > :first-child {
   padding-top: 1rem !important;
@@ -10609,12 +10608,11 @@ div.iframe-wrapper.home {
 }
 .row.article-notice.ruby .column {
   background: #c60c30 url(/wp-content/uploads/sites/907/2017/08/texture_unheated-ruby.png) no-repeat scroll left top;
-  font-size: 1.5rem;
+  color: #fff;
 }
 .row.article-notice.ruby .column > p {
   padding-right: 2rem;
   padding-left: 2rem;
-  color: #fff;
   text-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
 }
 @media all and (max-width: 480px) {
