@@ -5882,7 +5882,7 @@ body.user-is-tabbing .column a:focus::after {
 .column a.non-text-link:hover img {
   box-shadow: 0 3px #f45372;
 }
-a.non-text-link {
+.non-text-link {
   display: inline-block;
 }
 /*    ----------------------------------------------------------------------------------------------
