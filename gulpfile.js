@@ -12,7 +12,7 @@ var replace = require( 'gulp-replace' );
 var concat = require( 'gulp-concat' );
 
 gulp.task( 'buildMinCss', function () {
-	gulp.src( './CSS/*.less' )
+	return gulp.src( './CSS/*.less' )
 		.pipe( lessc( {
 			paths: ['./WSU-UE---CSS/']
 		} ) )
@@ -32,7 +32,7 @@ gulp.task( 'buildMinCss', function () {
 
 // TODO: Copied from distinguishedscholarships.wsu.edu; update for this site
 gulp.task( 'buildMinJs', function () {
-	gulp.src( [
+	return gulp.src( [
 			'./JS/dsp-custom.js',
 			'./WSU-UE---JS/jQuery.oue-custom.js',
 			'./WSU-UE---JS/jQuery.animatedCalendar.js',
