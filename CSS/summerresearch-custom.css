@@ -1395,16 +1395,6 @@ section.side-right .column.two p {
     width: 100%;
   }
 }
-@media all and (min-width: 694px) {
-  section.thirds .column p {
-    text-align: left;
-  }
-}
-@media all and (max-width: 360px) {
-  section.thirds .column p {
-    text-align: left;
-  }
-}
 .column section:not(:last-child) > *:last-child:not(.vpue-jump-bar) {
   padding-bottom: 0;
 }
