@@ -9351,9 +9351,11 @@ div.iframe-wrapper.home {
 }
 .has-expiration.is-expired:not(.has-exceptions) {
   opacity: 0.5 !important;
+  text-decoration: line-through;
 }
 .has-expiration.is-expired.has-exceptions :not(.is-excepted) {
   opacity: 0.5 !important;
+  text-decoration: line-through;
 }
 .gform_wrapper form li.photo-release-agreement-example,
 .gform_wrapper li.photo-release-agreement-example {
