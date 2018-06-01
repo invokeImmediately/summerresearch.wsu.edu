@@ -634,10 +634,12 @@ div.iframe-wrapper {
 	.transition(~"opacity 0.5s ease");
 	&.is-expired:not(.has-exceptions) {
 		opacity: 0.5 !important;
+		text-decoration: line-through;
 	}
 	&.is-expired.has-exceptions {
 		:not(.is-excepted) {
 			opacity: 0.5 !important;
+			text-decoration: line-through;
 		}
 	}
 }
