@@ -2270,6 +2270,10 @@ function fillHiddenFields(fieldsToFill) {
 				fieldsToFill.$emailInputBox.val("spressley@wsu.edu");
 				fieldsToFill.$nameInputBox.val("Shelley");
 				break;
+			case "Bioplastics & Biocomposites (Vikram Yadama)":
+				fieldsToFill.$emailInputBox.val("vyadama@wsu.edu");
+				fieldsToFill.$nameInputBox.val("Vikram");
+				break;
 			case "Biomedicine Summer Undergraduate Research Experience (Samantha Gizerian)":
 				fieldsToFill.$emailInputBox.val("samantha.gizerian@wsu.edu");
 				fieldsToFill.$nameInputBox.val("Samantha");
@@ -2280,7 +2284,7 @@ function fillHiddenFields(fieldsToFill) {
 				break;
 			case "Gerontechnology-focused Summer Undergraduate Research Experience (GSUR) (Diane Cook & Maureen Schmitter-Edgecombe)":
 				fieldsToFill.$emailInputBox.val("djcook@wsu.edu");
-				fieldsToFill.$nameInputBox.val("Diane and Maureen");
+				fieldsToFill.$nameInputBox.val("Diane, Maureen, and Aaron");
 				break;
 			case "Landscape Ecology and Ecosystem Dynamics in the Columbia River Basin: Integrating Terrestrial and Aquatic Perspectives (Gretchen Rollwagen-Bollens)":
 				fieldsToFill.$emailInputBox.val("rollboll@wsu.edu");
@@ -2297,6 +2301,10 @@ function fillHiddenFields(fieldsToFill) {
 			case "REgional Approaches to Climate CHange (REACCH) (Shelley Pressley)":
 				fieldsToFill.$emailInputBox.val("spressley@wsu.edu");
 				fieldsToFill.$nameInputBox.val("Shelley");
+				break;
+			case "Research and Extension Experiences for Undergraduates, Food Systems Program (Doug Collins)":
+				fieldsToFill.$emailInputBox.val("dpcollins@wsu.edu");
+				fieldsToFill.$nameInputBox.val("Doug");
 				break;
 			case "Research Opportunities for Native Undergraduate Students (Amit Dhingra and Lori Carris)":
 				fieldsToFill.$emailInputBox.val("adhingra@wsu.edu");
