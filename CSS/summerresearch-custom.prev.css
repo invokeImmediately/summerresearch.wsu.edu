@@ -1,4 +1,4 @@
-﻿@import  'https://fonts.googleapis.com/css?family=Roboto+Mono:300|Roboto+Condensed:400,700|Roboto+Slab|PT+Serif';
+﻿@import  "https://fonts.googleapis.com/css?family=Roboto+Mono:300|Roboto+Condensed:400,700|Roboto+Slab|PT+Serif";
 
 /*! Built with the LESS CSS preprocessor [http://lesscss.org/]. Please see [https://github.com/invokeImmediately/summerresearch.wsu.edu] for a repository of source code. */
 /* Built with the LESS CSS preprocessor [http://lesscss.org/]. Please see [https://github.com/invokeImmediately/summerresearch.wsu.edu] for a repository of source code. */
@@ -6554,10 +6554,12 @@ div.iframe-wrapper.home {
 
 .has-expiration.is-expired:not(.has-exceptions) {
 	opacity: .5 !important;
+	text-decoration: line-through;
 }
 
 .has-expiration.is-expired.has-exceptions :not(.is-excepted) {
 	opacity: .5 !important;
+	text-decoration: line-through;
 }
 
 .gform_wrapper form li.photo-release-agreement-example,.gform_wrapper li.photo-release-agreement-example {
@@ -7053,6 +7055,8 @@ div.iframe-wrapper.home {
 .row.article-notice .column>p {
 	color: inherit;
 	font-size: 1.4em;
+	padding-right: 2rem;
+	padding-left: 2rem;
 	letter-spacing: .5px;
 }
 
@@ -7071,8 +7075,6 @@ div.iframe-wrapper.home {
 }
 
 .row.article-notice.ruby .column>p {
-	padding-right: 2rem;
-	padding-left: 2rem;
 	text-shadow: 0 1px 1px rgba(0,0,0,.5);
 }
 
@@ -8004,7 +8006,7 @@ div.iframe-wrapper.home {
 		background: linear-gradient(to top,rgba(152,30,50,0),rgba(152,30,50,.2) 40%,rgba(152,30,50,.7) 67%);
 	}
 	
-	.row.article-notice.ruby .column>p {
+	.row.article-notice .column>p {
 		padding-right: 1rem;
 		padding-left: 1rem;
 	}
@@ -8146,7 +8148,7 @@ div.iframe-wrapper.home {
 		font-size: 1.68367482rem;
 	}
 	
-	.row.article-notice.ruby .column>p {
+	.row.article-notice .column>p {
 		padding-right: .5rem;
 		padding-left: .5rem;
 	}
@@ -9177,4 +9179,8 @@ div.iframe-wrapper.home {
 		-moz-transform: none;
 		transform: none;
 	}
+}
+
+.gform_wrapper .chosen-container .chosen-results {
+	max-height: 320px;
 }
