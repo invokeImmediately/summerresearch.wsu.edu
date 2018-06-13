@@ -38,51 +38,51 @@
 ***  -----------------
 ***  OUE-MASTER §1:  Global Less variables and Less mixins/utility classes.....................91
 ***    >>> §1.1: Additional fonts..............................................................95
-***    >>> §1.2: Color variables and mixins...................................................103
-***    >>> §1.3: All other Less variables.....................................................109
-***    >>> §1.4: Miscellaneous mixins.........................................................115
-***    >>> §1.5: Utility mixins...............................................................121
-***    >>> §1.6: Animation utility classes....................................................127
-***  OUE-MASTER §2: Anchor pseudoclass........................................................133
-***  OUE-MASTER §3: Document section nodes....................................................160
-***    >>> §3.1: HTML element.................................................................164
-***    >>> §3.2: Body element.................................................................172
-***    >>> §3.3: Article elements.............................................................190
-***    >>> §3.4: Section elements.............................................................196
-***    >>> §3.5: Aside elements...............................................................204
-***    >>> §3.6: Heading elements.............................................................210
-***    >>> §3.7: Footer elements..............................................................216
-***  OUE-MASTER §4: Content grouping nodes....................................................226
-***    >>> §4.1: Paragraph elements...........................................................230
-***    >>> §4.2: List elements................................................................236
-***    >>> §4.3: Div elements.................................................................242
-***      >>> §4.3.1: News posts...............................................................246
-***      >>> §4.3.2: Banner slideshows........................................................257
-***      >>> §4.3.3: Columns..................................................................263
-***      >>> §4.3.4: Flippable content panels.................................................269
-***      >>> §4.3.5: Page covering notices....................................................275
-***      >>> §4.3.6: Recent updates...........................................................281
-***    >>> §4.4: Main element.................................................................287
-***  OUE-MASTER §5: Text-level nodes..........................................................293
-***    >>> §5.1: Hyperlink elements...........................................................297
-***    >>> §5.2: Strong elements..............................................................303
-***    >>> §5.3: Mark elements................................................................318
-***    >>> §5.4: Span elements................................................................328
-***    >>> §5.5: Cite elements................................................................334
-***  OUE-MASTER §6: Embedded content nodes....................................................342
-***    >>> §6.1: Image elements...............................................................346
-***    >>> §6.2: Iframe elements..............................................................352
-***  OUE-MASTER §7: Tabular data nodes........................................................358
-***  OUE-MASTER §8: Form nodes................................................................364
-***  OUE-MASTER §9: Scripted elements.........................................................370
-***    >>> §9.1: Toggled drop-down panels.....................................................374
-***    >>> §9.2: Subtle panels................................................................380
-***    >>> §9.3: Flippable content panels.....................................................421
-***    >>> §9.4: QTip driven tooltips.........................................................430
-***    >>> §9.5: Quick-tabs panels............................................................434
-***    >>> §9.6: Trive Events Calendars.......................................................440
-***    >>> §9.7: Auto-scrolling image panels..................................................446
-***  OUE-MASTER §10: Utility classes..........................................................474
+***    >>> §1.2: Color variables and mixins...................................................101
+***    >>> §1.3: All other Less variables.....................................................107
+***    >>> §1.4: Miscellaneous mixins.........................................................113
+***    >>> §1.5: Utility mixins...............................................................119
+***    >>> §1.6: Animation utility classes....................................................125
+***  OUE-MASTER §2: Anchor pseudoclass........................................................131
+***  OUE-MASTER §3: Document section nodes....................................................158
+***    >>> §3.1: HTML element.................................................................162
+***    >>> §3.2: Body element.................................................................170
+***    >>> §3.3: Article elements.............................................................188
+***    >>> §3.4: Section elements.............................................................194
+***    >>> §3.5: Aside elements...............................................................202
+***    >>> §3.6: Heading elements.............................................................208
+***    >>> §3.7: Footer elements..............................................................214
+***  OUE-MASTER §4: Content grouping nodes....................................................224
+***    >>> §4.1: Paragraph elements...........................................................228
+***    >>> §4.2: List elements................................................................234
+***    >>> §4.3: Div elements.................................................................240
+***      >>> §4.3.1: News posts...............................................................254
+***      >>> §4.3.2: Banner slideshows........................................................265
+***      >>> §4.3.3: Columns..................................................................271
+***      >>> §4.3.4: Flippable content panels.................................................277
+***      >>> §4.3.5: Page covering notices....................................................283
+***      >>> §4.3.6: Recent updates...........................................................289
+***    >>> §4.4: Main element.................................................................295
+***  OUE-MASTER §5: Text-level nodes..........................................................301
+***    >>> §5.1: Hyperlink elements...........................................................305
+***    >>> §5.2: Strong elements..............................................................311
+***    >>> §5.3: Mark elements................................................................326
+***    >>> §5.4: Span elements................................................................336
+***    >>> §5.5: Cite elements................................................................342
+***  OUE-MASTER §6: Embedded content nodes....................................................350
+***    >>> §6.1: Image elements...............................................................354
+***    >>> §6.2: Iframe elements..............................................................360
+***  OUE-MASTER §7: Tabular data nodes........................................................366
+***  OUE-MASTER §8: Form nodes................................................................372
+***  OUE-MASTER §9: Scripted elements.........................................................378
+***    >>> §9.1: Toggled drop-down panels.....................................................382
+***    >>> §9.2: Subtle panels................................................................388
+***    >>> §9.3: Flippable content panels.....................................................429
+***    >>> §9.4: QTip driven tooltips.........................................................438
+***    >>> §9.5: Quick-tabs panels............................................................444
+***    >>> §9.6: Trive Events Calendars.......................................................450
+***    >>> §9.7: Auto-scrolling image panels..................................................456
+***  OUE-MASTER §10: Utility classes..........................................................484
 **/
 /** ================================================================================================
 *** OUE-MASTER §1:  Global Less variables and Less mixins/utility classes
@@ -660,33 +660,29 @@ img.shift-to-center,
 /*    ───────────────────────────────────────────────────────────────────────────────────────────
 **    TABLE OF CONTENTS:
 **    ───────────────────────────────────────────────────────────────────────────────────────────
-**    §1: Width................................................................................34
-**    §2: Margins..............................................................................68
-**        >>> §2.1: In units of "em"...........................................................72
+**    §1: Width................................................................................38
+**    §2: Margins..............................................................................72
+**        >>> §2.1: In units of "em"...........................................................76
 **        >>> §2.2: In units of "rem".........................................................165
-**    §3: Spacing.............................................................................302
-**        >>> §3.1: In units of "em"..........................................................306
-**        >>> §3.2: In units of "rem".........................................................341
-**    §4: Typography..........................................................................396
-**        >>> §4.1: Typograhy: Font Sizing....................................................400
-**        >>> §4.2: Line heights..............................................................603
-**        >>> §4.3: Bolding...................................................................668
+**    §3: Spacing.............................................................................254
+**        >>> §3.1: In units of "em"..........................................................258
+**        >>> §3.2: In units of "rem".........................................................289
+**    §4: Padding.............................................................................320
+**        >>> §4.1: In units of "em"..........................................................324
+**        >>> §4.2: In units of "rem".........................................................413
+**    §5: Typography..........................................................................476
+**        >>> §5.1: Typograhy: Font Sizing....................................................480
+**        >>> §5.2: Line heights..............................................................683
+**        >>> §5.3: Bolding...................................................................748
+**    §6: Functional CSS......................................................................763
+**        >>> §6.1: Card styling..............................................................767
 **    ───────────────────────────────────────────────────────────────────────────────────────────
 */
 /*    ----------------------------------------------------------------------------------------------
 **    §1: Width
 */
 /*    ----------------------------------------------------------------------------------------------
-**    §1: Margins
-*/
-/*      ····························································································
-**      >>> §1.1: In units of "em"
-*/
-/*      ····························································································
-**      >>> §1.2: In units of "rem"
-*/
-/*    ----------------------------------------------------------------------------------------------
-**    §2: Spacing
+**    §2: Margins
 */
 /*      ····························································································
 **      >>> §2.1: In units of "em"
@@ -695,16 +691,40 @@ img.shift-to-center,
 **      >>> §2.2: In units of "rem"
 */
 /*    ----------------------------------------------------------------------------------------------
-**    §3: Typography
+**    §3: Spacing
 */
 /*      ····························································································
-**      >>> §3.1: Font Sizing
+**      >>> §3.1: In units of "em"
 */
 /*      ····························································································
-**      >>> §3.2: Line heights
+**      >>> §3.2: In units of "rem"
+*/
+/*    ----------------------------------------------------------------------------------------------
+**    §4: Padding
 */
 /*      ····························································································
-**      >>> §3.3: Bolding
+**      >>> §4.1: In units of "em"
+*/
+/*      ····························································································
+**      >>> §4.2: In units of "rem"
+*/
+/*    ----------------------------------------------------------------------------------------------
+**    §5: Typography
+*/
+/*      ····························································································
+**      >>> §5.1: Font Sizing
+*/
+/*      ····························································································
+**      >>> §5.2: Line heights
+*/
+/*      ····························································································
+**      >>> §5.3: Bolding
+*/
+/*    ----------------------------------------------------------------------------------------------
+**    §6: Functional CSS
+*/
+/*      ····························································································
+**      >>> §6.1: Card styling
 */
 /**   ----------------------------------------------------------------------------------------------
 ***   >>> §1.6: Animation utility classes
@@ -1190,18 +1210,19 @@ html {
 /**   ───────────────────────────────────────────────────────────────────────────────────────────
 ***   TABLE OF CONTENTS:
 ***   ───────────────────────────────────────────────────────────────────────────────────────────
-***   §1: Utility classes......................................................................39
-***   §2: Legacy article headers...............................................................49
-***   §3: Large-format friendly sections......................................................132
-***   §4: Styles for "Thirds" Spine builder sections..........................................234
-***   §5: Section coloring....................................................................285
-***   §6: Spacing overrides to improve responsive design of WSU Spine builder template........319
-***   §7: Gutter padding overrides to improve mobile design of WSU Spine builder template.....405
-***   §8: Column stacking overrides to improve mobile design of WSU Spine builder template....626
-***   §9: Linked column styling...............................................................645
-***   §10: Accessibility friendly utility classes............................................1528
-***      >>> §10.1: Font-sizing variables for columns........................................1532
-***      >>> §10.2: Default font sizes for column elements...................................1546
+***   OUE-SECTIONS §1: Utility classes.........................................................34
+***   OUE-SECTIONS §2: Legacy article headers..................................................44
+***   OUE-SECTIONS §3: Halves builder sections................................................127
+***   OUE-SECTIONS §4: Side-right builder sections............................................139
+***   OUE-SECTIONS §5: Thirds builder sections................................................151
+***   OUE-SECTIONS §6: Section coloring.......................................................188
+***   OUE-SECTIONS §7: Spacing overrides to improve responsive design.........................222
+***   OUE-SECTIONS §8: Gutter padding overrides to improve mobile design......................308
+***   OUE-SECTIONS §9: Column stacking overrides to improve mobile design.....................529
+***   OUE-SECTIONS §10: Linked column styling.................................................551
+**    OUE-SECTIONS §11: Accessibility friendly utility classes...............................1434
+**      >>> §11.1: Font-sizing variables for columns.........................................1438
+**      >>> §11.2: Default font sizes for column elements....................................1452
 **/
 /**   ----------------------------------------------------------------------------------------------
 ***   OUE-SECTIONS §1: Utility classes
@@ -1211,10 +1232,13 @@ section {
 ***   OUE-SECTIONS §2: Legacy article headers
 **/
   /**   ----------------------------------------------------------------------------------------------
-***   OUE-SECTIONS §3: Large-format friendly sections
+***   OUE-SECTIONS §3: Halves builder sections
 **/
   /**   ----------------------------------------------------------------------------------------------
-***   OUE-SECTIONS §4: Styles for "Thirds" Spine builder sections
+***   OUE-SECTIONS §4: Side-right builder sections
+**/
+  /**   ----------------------------------------------------------------------------------------------
+***   OUE-SECTIONS §5: Thirds builder sections
 **/
 }
 section.column-one-with-bottom-margin > .column.one {
@@ -1289,88 +1313,8 @@ section:not(.row).article-header .header-content h3 {
 section.halves .column p:not([class*="center"]) {
   text-align: left;
 }
-@media all and (min-width: 1050px) {
-  section.halves.large-format-friendly,
-  section.halves.row.large-format-friendly {
-    margin-right: auto;
-    margin-left: auto;
-    max-width: 800px !important;
-  }
-}
-@media all and (min-width: 1050px) {
-  section.single.large-format-friendly .column.one,
-  section.row.single.large-format-friendly .column.one {
-    float: none;
-    margin-right: auto;
-    margin-left: auto;
-    max-width: 800px;
-  }
-}
-@media all and (min-width: 990px) and (max-width: 1049px) {
-  section.single.large-format-friendly .column.one,
-  section.row.single.large-format-friendly .column.one {
-    max-width: 800px;
-  }
-}
-@media all and (min-width: 792px) and (max-width: 989px) {
-  section.single.large-format-friendly .column.one,
-  section.row.single.large-format-friendly .column.one {
-    float: none;
-    margin-right: auto;
-    margin-left: auto;
-    max-width: 800px;
-  }
-}
 section.side-right .column.two p {
   text-align: left;
-}
-@media all and (min-width: 1051px) {
-  section.side-right.large-format-friendly:first-child,
-  section.side-right.row.side-right.large-format-friendly:first-child {
-    padding-top: 1rem;
-  }
-  section.side-right.large-format-friendly .column.one,
-  section.side-right.row.side-right.large-format-friendly .column.one {
-    width: 800px;
-  }
-  section.side-right.large-format-friendly .column.two,
-  section.side-right.row.side-right.large-format-friendly .column.two {
-    width: calc(100% -  800px );
-    height: 0;
-    position: relative;
-    opacity: 0;
-  }
-  section.side-right.large-format-friendly .column.two:before,
-  section.side-right.row.side-right.large-format-friendly .column.two:before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 1rem;
-    right: 0;
-    bottom: 0;
-    background: #eff0f1;
-  }
-}
-@media all and (max-width: 1050px) {
-  section.side-right.large-format-friendly .column.one,
-  section.side-right.row.side-right.large-format-friendly .column.one {
-    width: 100%;
-    max-width: 800px;
-    float: none;
-    margin-right: auto;
-    margin-left: auto;
-    padding-right: 2rem;
-  }
-  section.side-right.large-format-friendly .column.two,
-  section.side-right.row.side-right.large-format-friendly .column.two {
-    display: none;
-  }
-}
-@media all and (min-width: 1050px) {
-  section.side-right.pad-top.large-format-friendly .column.two:before,
-  section.row.side-right.pad-top.large-format-friendly .column.two:before {
-    top: 1rem;
-  }
 }
 @media all and (min-width: 694px) {
   section.thirds img.show-when-adjacent {
@@ -1396,7 +1340,7 @@ section.side-right .column.two p {
   padding-bottom: 0;
 }
 /**   ----------------------------------------------------------------------------------------------
-***   OUE-SECTIONS §5: Section coloring
+***   OUE-SECTIONS §6: Section coloring
 **/
 .row.has-charcoal-background {
   background-color: #2f3438;
@@ -1420,7 +1364,7 @@ section.side-right .column.two p {
   color: #fff;
 }
 /**   ----------------------------------------------------------------------------------------------
-***   OUE-SECTIONS §6: Spacing overrides to improve responsive design of WSU Spine builder template
+***   OUE-SECTIONS §7: Spacing overrides to improve responsive design of WSU Spine builder template
 **/
 main section.row > .column > ul:not(.no-btm-margin),
 main section.row > .column > article > .article-body > ul:not(.no-btm-margin),
@@ -1535,7 +1479,7 @@ main section.row > .column table > tbody > tr > td > div > ol:last-child {
   padding-top: 4rem;
 }
 /**   ----------------------------------------------------------------------------------------------
-***   OUE-SECTIONS §7: Gutter padding overrides to improve mobile design of WSU Spine builder 
+***   OUE-SECTIONS §8: Gutter padding overrides to improve mobile design of WSU Spine builder 
 ***   template
 **/
 @media only screen and (min-width: 481px) and (max-width: 693px) {
@@ -1718,7 +1662,7 @@ main section.row > .column table > tbody > tr > td > div > ol:last-child {
   }
 }
 /**   ----------------------------------------------------------------------------------------------
-***   OUE-SECTIONS §8: Column stacking overrides to improve mobile design of WSU Spine builder 
+***   OUE-SECTIONS §9: Column stacking overrides to improve mobile design of WSU Spine builder 
 ***   template
 **/
 @media all and (max-width: 693px) {
@@ -1731,17 +1675,17 @@ main section.row > .column table > tbody > tr > td > div > ol:last-child {
   }
 }
 /**   ----------------------------------------------------------------------------------------------
-***   OUE-SECTIONS §9: Linked column styling
+***   OUE-SECTIONS §10: Linked column styling
 **/
-/*    ----------------------------------------------------------------------------------------------
-**    OUE-SECTIONS §10: Accessibility friendly utility classes
-*/
-/*      ····························································································
-**      >>> §10.1: Font-sizing variables for columns
-*/
-/*      ····························································································
-**      >>> §10.2: Default font sizes for column elements
-*/
+/**   ----------------------------------------------------------------------------------------------
+***   OUE-SECTIONS §11: Accessibility friendly utility classes
+**/
+/**     ····························································································
+***     >>> §11.1: Font-sizing variables for columns
+**/
+/**     ····························································································
+***     >>> §11.2: Default font sizes for column elements
+**/
 .row.single .column,
 .row.halves .column,
 .row.thirds .column,
@@ -2741,10 +2685,11 @@ footer.article-footer div.author-info {
 /*    ───────────────────────────────────────────────────────────────────────────────────────────
 **    TABLE OF CONTENTS:
 **    ───────────────────────────────────────────────────────────────────────────────────────────
-**      OUE-PARAGRAPHS §1: Legacy style declarations (prior to a11y redesign)..................36
-**      OUE PARAGRAPHS §2: Paragraph based notices............................................332
-**      OUE PARAGRAPHS §3: Accessibility friendly classes.....................................425
-**       >>> §3.1: Style Defaults.............................................................632
+**      §1: Legacy style declarations (prior to a11y redesign).................................36
+**       >>> §1.1: Inclusional mixins.........................................................???
+**      §2: Paragraph based notices...........................................................324
+**      §3: Accessibility friendly classes....................................................417
+**       >>> §3.1: Style Defaults.............................................................621
 */
 /*    ----------------------------------------------------------------------------------------------
 **    OUE-PARAGRAPHS §1: Legacy style declarations (prior to a11y redesign)
@@ -4357,6 +4302,9 @@ ol {
 /**   ----------------------------------------------------------------------------------------------
 ***   >>> §4.3: Div elements
 **/
+.column > * + div {
+  margin-top: 1em;
+}
 /**     ····························································································
 ***     >>> §4.3.1: News posts
 **/
@@ -6674,22 +6622,22 @@ input.read-more-state ~ p label.read-more-trigger:before {
   content: 'Show more';
 }
 label.read-more-trigger {
-  display: inline-block;
-  position: relative;
-  padding: 0 .5rem;
-  background-color: rgba(255, 184, 28, 0.25);
-  border: 1px solid #2a3033;
-  border-radius: .25rem;
-  font-size: .9rem;
-  line-height: 2;
-  color: #5e6a71;
-  -webkit-transition: all 0.3333s ease;
-  -moz-transition: all 0.3333s ease;
-  transition: all 0.3333s ease;
   -webkit-animation: orange-glow 5s linear infinite;
   -moz-animation: orange-glow 5s linear infinite;
   animation: orange-glow 5s linear infinite;
+  background-color: rgba(255, 184, 28, 0.25);
+  border: 1px solid #2a3033;
+  border-radius: .25rem;
+  color: #5e6a71;
   cursor: pointer;
+  display: inline-block;
+  font-size: .9rem;
+  line-height: 2;
+  padding: 0 .5rem;
+  position: relative;
+  -webkit-transition: all 0.3333s ease;
+  -moz-transition: all 0.3333s ease;
+  transition: all 0.3333s ease;
 }
 @-webkit-keyframes orange-glow {
   0% {
@@ -6740,13 +6688,13 @@ label.read-more-trigger {
   }
 }
 label.read-more-trigger:after {
-  content: "";
-  position: absolute;
-  top: 2px;
-  right: 2px;
-  bottom: 0;
-  left: 2px;
   border-radius: 0.25rem;
+  bottom: 0;
+  content: "";
+  left: 2px;
+  position: absolute;
+  right: 2px;
+  top: 2px;
   background: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.1) 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.1));
 }
 label.read-more-trigger:hover {
@@ -6754,19 +6702,18 @@ label.read-more-trigger:hover {
   -moz-animation: none;
   animation: none;
   background-color: #ffb81c;
-  box-shadow: 0 0 18px rgba(255, 184, 28, 0.6667);
   border: 1px solid #2a3033;
+  box-shadow: 0 0 18px rgba(255, 184, 28, 0.6667);
   color: #2a3033;
 }
 div.read-more-target {
   height: 0;
-  overflow: hidden;
   margin-top: .5rem;
   opacity: 0;
-  transition: .333s ease;
-  -webkit-transition: .333s ease;
-  -moz-transition: .333s ease;
-  -o-transition: .333s ease;
+  overflow: hidden;
+  -webkit-transition: all .333s ease;
+  -moz-transition: all .333s ease;
+  transition: all .333s ease;
 }
 .read-more-state:checked ~ p label.read-more-trigger:before {
   content: 'Show less';
@@ -6777,59 +6724,54 @@ div.read-more-target {
 .column .gform_wrapper {
   max-width: 990px;
 }
-@media all {
-  .column .gform_wrapper {
-    line-height: 1.5em;
-  }
-}
-@media all and (min-width: 1073px) {
-  .column .gform_wrapper {
-    font-size: 16px;
-  }
-}
-@media all and (min-width: 990px) and (max-width: 1072px) {
-  .column .gform_wrapper {
-    font-size: 16px;
-  }
-}
-@media all and (min-width: 792px) and (max-width: 989px) {
-  .column .gform_wrapper {
-    font-size: 16px;
-  }
-}
-@media all and (min-width: 481px) and (max-width: 791px) {
-  .column .gform_wrapper {
-    font-size: 16px;
-  }
-}
-@media all and (min-width: 361px) and (max-width: 480px) {
-  .column .gform_wrapper {
-    font-size: 15.008px;
-  }
-}
-@media all and (max-width: 360px) {
-  .column .gform_wrapper {
-    font-size: 14.077504px;
-  }
+.column .gform_wrapper #extensions_message {
+  padding-left: 1rem;
 }
 .column .gform_wrapper .field_sublabel_above .ginput_complex.ginput_container label {
   margin: 0;
 }
-.column .gform_wrapper .gsection {
-  margin-top: 2rem;
+.column .gform_wrapper .gfield_checkbox li {
   margin-bottom: 0;
 }
 .column .gform_wrapper .gfield_checkbox li label,
 .column .gform_wrapper .gfield_radio li label {
   font-weight: normal;
 }
-.column .gform_wrapper .gfield_checkbox li {
-  margin-bottom: 0;
+.column .gform_wrapper .gfield_description {
+  max-width: 80ch;
+}
+.column .gform_wrapper .gform_body > ul > li.has-top-border:not(.gsection):not(.gfield_html) + li:not(.gsection)::before,
+.column .gform_wrapper .gform_body > ul > li.has-top-spacer:not(.gsection):not(.gfield_html) + li:not(.gsection)::before {
+  content: "";
+  display: block;
+  height: 0;
+  margin: 2rem auto 0;
+  width: 95%;
+}
+.column .gform_wrapper .gform_body > ul > li.has-top-border:not(.gsection):not(.gfield_html) + li:not(.gsection)::before {
+  border-bottom: 1px dashed rgba(160, 160, 160, 0.25);
+  border-top: 1px dashed rgba(94, 106, 113, 0.3333);
+}
+.column .gform_wrapper .gform_body > ul > li.gf-bckgrnd-field {
+  display: none !important;
 }
 .column .gform_wrapper .ginput_complex span.ginput_full:not(:first-of-type) label,
 .column .gform_wrapper .ginput_complex span.ginput_left:not(:first-of-type) label,
 .column .gform_wrapper .ginput_complex span.ginput_right:not(:nth-of-type(2)) label {
   margin-top: 0.4em;
+}
+.column .gform_wrapper .gsection {
+  margin-bottom: 0;
+  margin-top: 2rem;
+}
+@media only screen and (min-width: 641px) {
+  .column .gform_wrapper .top_label li ul.gfield_radio {
+    width: 100%;
+  }
+}
+.column .gform_wrapper h2.fancy {
+  margin-right: 0;
+  margin-left: 0;
 }
 .column .gform_wrapper label.gfield_label {
   margin-top: 0;
@@ -6838,33 +6780,6 @@ div.read-more-target {
 }
 .column .gform_wrapper ul:last-child {
   padding-bottom: 0;
-}
-.column .gform_wrapper .gform_body > ul > li.has-top-border:not(.gsection):not(.gfield_html) + li:not(.gsection)::before,
-.column .gform_wrapper .gform_body > ul > li.has-top-spacer:not(.gsection):not(.gfield_html) + li:not(.gsection)::before {
-  content: "";
-  display: block;
-  width: 95%;
-  height: 0;
-  margin: 2rem auto 0;
-}
-.column .gform_wrapper .gform_body > ul > li.has-top-border:not(.gsection):not(.gfield_html) + li:not(.gsection)::before {
-  border-top: 1px dashed rgba(94, 106, 113, 0.3333);
-  border-bottom: 1px dashed rgba(160, 160, 160, 0.25);
-}
-.column .gform_wrapper .gform_body > ul > li.gf-bckgrnd-field {
-  display: none !important;
-}
-@media only screen and (min-width: 641px) {
-  .column .gform_wrapper .top_label li ul.gfield_radio {
-    width: 100%;
-  }
-}
-.column .gform_wrapper #extensions_message {
-  padding-left: 1rem;
-}
-.column .gform_wrapper h2.fancy {
-  margin-right: 0;
-  margin-left: 0;
 }
 @media only screen and (min-width: 641px) {
   .column .gform_wrapper.gf_browser_chrome .gform_body {
@@ -6886,6 +6801,9 @@ div.read-more-target {
 .column li.gfield.uses-rich-editor .tmce-active .mce-toolbar-grp > .mce-stack-layout > .mce-toolbar.mce-first .mce-btn[aria-label="Table"],
 .column li.gfield.uses-rich-editor .tmce-active .mce-toolbar-grp > .mce-stack-layout > .mce-toolbar.mce-first .mce-btn[aria-label="Toolbar Toggle"],
 .column li.gfield.uses-rich-editor .tmce-active .mce-toolbar-grp > .mce-stack-layout > .mce-toolbar.mce-first .mce-btn[aria-label="Fullscreen"] {
+  display: none;
+}
+.column li.gfield.uses-rich-editor .tmce-active .mce-toolbar-grp > .mce-stack-layout > .mce-toolbar.mce-first #mceu_0 {
   display: none;
 }
 .column li.gfield.uses-rich-editor .tmce-active .mce-toolbar-grp > .mce-stack-layout > .mce-toolbar.mce-last {
@@ -6937,8 +6855,8 @@ div.read-more-target {
   width: 100% !important;
 }
 .column li.gfield > div.ginput_container_select > div.chosen-container-single > a.chosen-single {
-  height: 1.98em;
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 20%, rgba(0, 0, 0, 0.038) 50%, rgba(0, 0, 0, 0.07) 52%, rgba(0, 0, 0, 0.045) 100%), linear-gradient(to bottom, #fff, #fff);
+  height: 1.98em;
   line-height: 1.98em;
 }
 .column li.gfield > div.ginput_container_select > div.chosen-container-single > a.chosen-single:hover {
@@ -6985,11 +6903,7 @@ div.read-more-target {
 }
 .column ul.gform_fields.top_label > li.gfield + li.gfield:not(.gsection),
 .column ul.gform_fields.top_label li.gfield:first-child {
-  margin-top: 0.5rem;
-}
-.column ul.gform_fields.top_label > li.gfield + li.gfield:not(.gsection).forces-spacing,
-.column ul.gform_fields.top_label li.gfield:first-child.forces-spacing {
-  margin-top: 0.5rem !important;
+  margin-top: 0.5em;
 }
 .column ul.gform_fields > li.gfield.gfield_contains_required input,
 .column ul.gform_fields > li.gfield.gfield_contains_required select,
@@ -7909,19 +7823,22 @@ div.auto-scroller ul li {
 /*    ───────────────────────────────────────────────────────────────────────────────────────────
 **    TABLE OF CONTENTS:
 **    ───────────────────────────────────────────────────────────────────────────────────────────
-**    §1: Widths...............................................................................37
-**        >>> §1.1: Percent widths.............................................................41
-**        >>> §1.2: Max widths.................................................................81
-**    §2: Typography...........................................................................88
-**        >>> §2.1: Font Sizing................................................................92
-**        >>> §2.2: Line Heights..............................................................149
-**        >>> §2.3: Bolding...................................................................195
-**        >>> §2.4: Text transformation.......................................................224
-**        >>> §2.5: Text alignment............................................................236
-**    §3: Spacing.............................................................................256
-**    §4: Floating............................................................................279
-**    §5: Display.............................................................................295
-**    §6: Margins.............................................................................315
+**    §1: Widths...............................................................................40
+**        >>> §1.1: Percent widths.............................................................44
+**        >>> §1.2: Max widths.................................................................84
+**    §2: Typography...........................................................................91
+**        >>> §2.1: Font Sizing................................................................95
+**        >>> §2.2: Line Heights..............................................................152
+**        >>> §2.3: Bolding...................................................................198
+**        >>> §2.4: Text transformation.......................................................227
+**        >>> §2.5: Text alignment............................................................239
+**    §3: Spacing.............................................................................259
+**    §4: Floating............................................................................280
+**    §5: Display.............................................................................296
+**    §6: Margins.............................................................................316
+**    §7: Padding.............................................................................352
+**    §8: Functional CSS......................................................................386
+**        >>> §8.1: Card styling..............................................................390
 **    ───────────────────────────────────────────────────────────────────────────────────────────
 */
 /*    ----------------------------------------------------------------------------------------------
@@ -8222,38 +8139,20 @@ div.auto-scroller ul li {
 .column * + .spacing--1000mx {
   margin-top: 1em;
 }
-.column * + .spacing--1250mx {
-  margin-top: 1.25em;
-}
 .column * + .spacing--1500mx {
   margin-top: 1.5em;
-}
-.column * + .spacing--1750mx {
-  margin-top: 1.75em;
 }
 .column * + .spacing--2000mx {
   margin-top: 2em;
 }
-.column * + .spacing--2250mx {
-  margin-top: 2.25em;
-}
 .column * + .spacing--2500mx {
   margin-top: 2.5em;
-}
-.column * + .spacing--2750mx {
-  margin-top: 2.75em;
 }
 .column * + .spacing--3000mx {
   margin-top: 3em;
 }
-.column * + .spacing--3250mx {
-  margin-top: 3.25em;
-}
 .column * + .spacing--3500mx {
   margin-top: 3.5em;
-}
-.column * + .spacing--3750mx {
-  margin-top: 3.75em;
 }
 .column * + .spacing--4000mx {
   margin-top: 4em;
@@ -8286,8 +8185,11 @@ div.auto-scroller ul li {
   display: none;
 }
 /*    ----------------------------------------------------------------------------------------------
-**    §5: Margins
+**    §6: Margins
 */
+.margin--0mx {
+  margin: 0em;
+}
 .margin-bottom--0mx {
   margin-bottom: 0em;
 }
@@ -8299,6 +8201,9 @@ div.auto-scroller ul li {
 }
 .margin-top--0mx {
   margin-top: 0em;
+}
+.margin--250mx {
+  margin: 0.25em;
 }
 .margin-bottom--250mx {
   margin-bottom: 0.25em;
@@ -8312,6 +8217,9 @@ div.auto-scroller ul li {
 .margin-top--250mx {
   margin-top: 0.25em;
 }
+.margin--500mx {
+  margin: 0.5em;
+}
 .margin-bottom--500mx {
   margin-bottom: 0.5em;
 }
@@ -8323,6 +8231,9 @@ div.auto-scroller ul li {
 }
 .margin-top--500mx {
   margin-top: 0.5em;
+}
+.margin--750mx {
+  margin: 0.75em;
 }
 .margin-bottom--750mx {
   margin-bottom: 0.75em;
@@ -8336,6 +8247,9 @@ div.auto-scroller ul li {
 .margin-top--750mx {
   margin-top: 0.75em;
 }
+.margin--1000mx {
+  margin: 1em;
+}
 .margin-bottom--1000mx {
   margin-bottom: 1em;
 }
@@ -8348,17 +8262,8 @@ div.auto-scroller ul li {
 .margin-top--1000mx {
   margin-top: 1em;
 }
-.margin-bottom--1250mx {
-  margin-bottom: 1.25em;
-}
-.margin-left--1250mx {
-  margin-left: 1.25em;
-}
-.margin-right--1250mx {
-  margin-right: 1.25em;
-}
-.margin-top--1250mx {
-  margin-top: 1.25em;
+.margin--1500mx {
+  margin: 1.5em;
 }
 .margin-bottom--1500mx {
   margin-bottom: 1.5em;
@@ -8372,17 +8277,8 @@ div.auto-scroller ul li {
 .margin-top--1500mx {
   margin-top: 1.5em;
 }
-.margin-bottom--1750mx {
-  margin-bottom: 1.75em;
-}
-.margin-left--1750mx {
-  margin-left: 1.75em;
-}
-.margin-right--1750mx {
-  margin-right: 1.75em;
-}
-.margin-top--1750mx {
-  margin-top: 1.75em;
+.margin--2000mx {
+  margin: 2em;
 }
 .margin-bottom--2000mx {
   margin-bottom: 2em;
@@ -8396,17 +8292,8 @@ div.auto-scroller ul li {
 .margin-top--2000mx {
   margin-top: 2em;
 }
-.margin-bottom--2250mx {
-  margin-bottom: 2.25em;
-}
-.margin-left--2250mx {
-  margin-left: 2.25em;
-}
-.margin-right--2250mx {
-  margin-right: 2.25em;
-}
-.margin-top--2250mx {
-  margin-top: 2.25em;
+.margin--2500mx {
+  margin: 2.5em;
 }
 .margin-bottom--2500mx {
   margin-bottom: 2.5em;
@@ -8420,17 +8307,8 @@ div.auto-scroller ul li {
 .margin-top--2500mx {
   margin-top: 2.5em;
 }
-.margin-bottom--2750mx {
-  margin-bottom: 2.75em;
-}
-.margin-left--2750mx {
-  margin-left: 2.75em;
-}
-.margin-right--2750mx {
-  margin-right: 2.75em;
-}
-.margin-top--2750mx {
-  margin-top: 2.75em;
+.margin--3000mx {
+  margin: 3em;
 }
 .margin-bottom--3000mx {
   margin-bottom: 3em;
@@ -8444,17 +8322,8 @@ div.auto-scroller ul li {
 .margin-top--3000mx {
   margin-top: 3em;
 }
-.margin-bottom--3250mx {
-  margin-bottom: 3.25em;
-}
-.margin-left--3250mx {
-  margin-left: 3.25em;
-}
-.margin-right--3250mx {
-  margin-right: 3.25em;
-}
-.margin-top--3250mx {
-  margin-top: 3.25em;
+.margin--3500mx {
+  margin: 3.5em;
 }
 .margin-bottom--3500mx {
   margin-bottom: 3.5em;
@@ -8468,17 +8337,8 @@ div.auto-scroller ul li {
 .margin-top--3500mx {
   margin-top: 3.5em;
 }
-.margin-bottom--3750mx {
-  margin-bottom: 3.75em;
-}
-.margin-left--3750mx {
-  margin-left: 3.75em;
-}
-.margin-right--3750mx {
-  margin-right: 3.75em;
-}
-.margin-top--3750mx {
-  margin-top: 3.75em;
+.margin--4000mx {
+  margin: 4em;
 }
 .margin-bottom--4000mx {
   margin-bottom: 4em;
@@ -8495,6 +8355,158 @@ div.auto-scroller ul li {
 .margin--centered {
   margin-left: auto;
   margin-right: auto;
+}
+/*    ----------------------------------------------------------------------------------------------
+**    §7: Padding
+*/
+.padding--0mx {
+  padding: 0em;
+}
+.padding-bottom--0mx {
+  padding-bottom: 0em;
+}
+.padding-left--0mx {
+  padding-left: 0em;
+}
+.padding-right--0mx {
+  padding-right: 0em;
+}
+.padding-top--0mx {
+  padding-top: 0em;
+}
+.padding--250mx {
+  padding: 0.25em;
+}
+.padding-bottom--250mx {
+  padding-bottom: 0.25em;
+}
+.padding-left--250mx {
+  padding-left: 0.25em;
+}
+.padding-right--250mx {
+  padding-right: 0.25em;
+}
+.padding-top--250mx {
+  padding-top: 0.25em;
+}
+.padding--500mx {
+  padding: 0.5em;
+}
+.padding-bottom--500mx {
+  padding-bottom: 0.5em;
+}
+.padding-left--500mx {
+  padding-left: 0.5em;
+}
+.padding-right--500mx {
+  padding-right: 0.5em;
+}
+.padding-top--500mx {
+  padding-top: 0.5em;
+}
+.padding--750mx {
+  padding: 0.75em;
+}
+.padding-bottom--750mx {
+  padding-bottom: 0.75em;
+}
+.padding-left--750mx {
+  padding-left: 0.75em;
+}
+.padding-right--750mx {
+  padding-right: 0.75em;
+}
+.padding-top--750mx {
+  padding-top: 0.75em;
+}
+.padding--1000mx {
+  padding: 1em;
+}
+.padding-bottom--1000mx {
+  padding-bottom: 1em;
+}
+.padding-left--1000mx {
+  padding-left: 1em;
+}
+.padding-right--1000mx {
+  padding-right: 1em;
+}
+.padding-top--1000mx {
+  padding-top: 1em;
+}
+.padding--1500mx {
+  padding: 1.5em;
+}
+.padding-bottom--1500mx {
+  padding-bottom: 1.5em;
+}
+.padding-left--1500mx {
+  padding-left: 1.5em;
+}
+.padding-right--1500mx {
+  padding-right: 1.5em;
+}
+.padding-top--1500mx {
+  padding-top: 1.5em;
+}
+.padding--2000mx {
+  padding: 2em;
+}
+.padding-bottom--2000mx {
+  padding-bottom: 2em;
+}
+.padding-left--2000mx {
+  padding-left: 2em;
+}
+.padding-right--2000mx {
+  padding-right: 2em;
+}
+.padding-top--2000mx {
+  padding-top: 2em;
+}
+/*    ----------------------------------------------------------------------------------------------
+**    §8: Functional CSS
+*/
+/*      ····························································································
+**      >>> §8.1: Card styling
+*/
+.style--card {
+  background-color: #ffffff;
+  border: 1px solid #464e54;
+  box-shadow: 0 1px 8px 1px rgba(0, 0, 0, 0.22);
+  border-radius: 4px;
+}
+.style-card__title {
+  background-color: #d7dadb;
+  color: #2a3033;
+  padding: 0.25em;
+  text-transform: none;
+}
+.style-card__title:first-child {
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  margin: 0;
+}
+.style--card__sub-title {
+  background-color: #5e6a71;
+  color: #ffffff;
+  font-size: 1.1em;
+  font-weight: 700;
+  margin-bottom: 0em;
+  margin-top: 0em;
+  letter-spacing: 1px;
+  padding: 0.25em;
+  word-spacing: 1px;
+}
+.style--card__sub-title + * {
+  margin-top: 0.5em;
+}
+.style--card__text {
+  padding-left: 0.25em;
+  padding-right: 0.25em;
+}
+.style--card__list {
+  padding-right: 0.25em;
 }
 /*! ╔═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗
 *   ║ LAYOUTS SPECIFIC TO THE SUMMER RESEARCH WEBSITE ##################################################################### ║
