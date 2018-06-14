@@ -1955,12 +1955,12 @@ $( function() {
 
 	initAnchorFix();
 	initExpiringItems(".has-expiration", "expirationDate", "is-expired");
-	initFacultyEmailAutoEntry("li.gfield.sets-faculty-email", "li.gform_hidden");
 });
 
 // Bind a function to window loaded event
 $( window ).on( "load", function() {
 	initDelayedNotices("p.notice", "is-delayed", 500);
+	initFacultyEmailAutoEntry("li.gfield.sets-faculty-email", "li.gform_hidden");
 });
 
 // Binds a function to the hashchange event for applying corrections to
@@ -2224,6 +2224,16 @@ function initFacultyEmailAutoEntry(slctrSelectBox, slctrHiddenFields) {
 				$nameInputBox = $facultyNameField.
 					find( "input[type='hidden']" ).
 					first();
+
+				// Initialize the field just in case.
+				fieldsToFill = new FieldsToFill(
+					$selectBox.val(),
+					$emailInputBox,
+					$nameInputBox
+				);
+				fillHiddenFields( fieldsToFill );
+
+				// Setup an event handler for when the user changes the selection.
 				$selectBox.change( function() {
 					selectionMade = $(this).val();
 					fieldsToFill = new FieldsToFill(
