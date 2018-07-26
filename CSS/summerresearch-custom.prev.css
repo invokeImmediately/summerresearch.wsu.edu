@@ -2,14 +2,20 @@
 
 /* Built with the LESS CSS preprocessor [http://lesscss.org/]. Please see [https://github.com/invokeImmediately/summerresearch.wsu.edu] for a repository of source code. */
 /*! ================================================================================================
-*** MASTER STYLE SHEET for WSU Office of Undergraduate Education Websites (OUE-MASTER)
+*** MASTER STYLE SHEET for WSU Office of Undergraduate Education (OUE) Websites
 *** ================================================================================================
 ***   AUTHOR: Daniel Rieck [daniel.rieck@wsu.edu] (https://github.com/invokeImmediately)            
 ***
-***   CONTENTS: CSS compiled from Less language extension of CSS.
+***   SUMMARY: CSS code built from precompiled CSS that was written in the Less language extension
+***     of CSS.
+***
+***   DESCRIPTION: Intended for use with all WSUWP websites associated with the WSU Office of 
+***     Undergraduate Education, a unit within the Office of the Provost. (Please see 
+***     https://web.wsu.edu and https://vpue.wsu.edu/oue for more information.) It is designed to 
+***     be applied via the WSUWP CSS Stylesheet Editor functioning in in add-on mode.
 ***
 ***   GIT REPOSITORY: https://github.com/invokeImmediately/wsu-ue---css/
-***     See git repository for fully documented, precompiled source code.
+***     (Please see above git repository for fully documented, precompiled source code.)
 *** ================================================================================================
 **/
 .has-mono-font {
@@ -1692,7 +1698,10 @@ body.single-post .column p.article-media-contacts+:not(.article-media-contacts) 
 }
 
 /*!     ····························································································
-***     >>> §3.1: Style Defaults
+***     >>> §1.1: Inclusional mixins
+**/
+/*!     ····························································································
+***     >>> §2.1: Style Defaults
 **/
 p {
 	font-size: 1em;
@@ -7777,7 +7786,7 @@ div.iframe-wrapper.home {
 
 .column .notice.news-link::before {
 	width: 72px;
-	background: #5e6a71 url(/wp-content/uploads/sites/907/2017/08/icon_view-more-news.png) 4px 4px no-repeat;
+	background: #5e6a71 url(/wp-content/uploads/sites/907/2017/08/icon_view-more-news.png) 4px center no-repeat;
 }
 
 /*! ╔═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗
