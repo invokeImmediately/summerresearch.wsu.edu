@@ -1,25 +1,27 @@
-/** ┌────────────────────────────────────────────────────────────────────────────────────────────┐
-*** │ FILENAME: wp-master-stylesheet.less                                                        │
-*** └────────────────────────────────────────────────────────────────────────────────────────────┘
+/** ┌──────────────────────────────────────────────────────────────────────────────────────────────┐
+*** │ FILENAME: wp-master-stylesheet.less                                                          │
+*** └──────────────────────────────────────────────────────────────────────────────────────────────┘
 **/
 /*! ================================================================================================
-*** MASTER STYLE SHEET for WSU Office of Undergraduate Education Websites (OUE-MASTER)
+*** MASTER STYLE SHEET for WSU Office of Undergraduate Education (OUE) Websites
 *** ================================================================================================
 ***   AUTHOR: Daniel Rieck [daniel.rieck@wsu.edu] (https://github.com/invokeImmediately)            
 ***
-***   CONTENTS: CSS compiled from Less language extension of CSS.
+***   SUMMARY: CSS code built from precompiled CSS that was written in the Less language extension
+***     of CSS.
 ***
-***   GIT REPOSITORY: https://github.com/invokeImmediately/wsu-ue---css/
-***     See git repository for fully documented, precompiled source code.
-*** ================================================================================================
-**/
-/**   MORE ABOUT THIS FILE
-***   --------------------
 ***   DESCRIPTION: Intended for use with all WSUWP websites associated with the WSU Office of 
 ***     Undergraduate Education, a unit within the Office of the Provost. (Please see 
 ***     https://web.wsu.edu and https://vpue.wsu.edu/oue for more information.) It is designed to 
 ***     be applied via the WSUWP CSS Stylesheet Editor functioning in in add-on mode.
 ***
+***   GIT REPOSITORY: https://github.com/invokeImmediately/wsu-ue---css/
+***     (Please see above git repository for fully documented, precompiled source code.)
+*** ================================================================================================
+**/
+/** ================================================================================================
+*** ADDITIONAL DESIGN COMMENTS
+*** ================================================================================================
 ***   DESIGN PHILOSOPHY: This stylesheet mixes semantic with functional CSS. The Spine Theme for 
 ***     WSUWP takes a semantic approach to styling; thus, this add-on style sheet necessarily 
 ***     contains some semantic styling of its own. Specifically, semantic CSS is utilized to 
@@ -42,59 +44,64 @@
 ***     associated with dynamic behaviors to the DOM tree.
 *** ================================================================================================
 **/
-/**  TABLE OF CONTENTS:
-***  -----------------
-***  OUE-MASTER §1:  Global Less variables and Less mixins/utility classes....................100
-***    >>> §1.1: Additional fonts.............................................................104
-***    >>> §1.2: Color variables and mixins...................................................110
-***    >>> §1.3: All other Less variables.....................................................116
-***    >>> §1.4: Miscellaneous mixins.........................................................122
-***    >>> §1.5: Utility mixins...............................................................128
-***    >>> §1.6: Animation utility classes....................................................134
-***  OUE-MASTER §2: Anchor pseudoclass........................................................140
-***  OUE-MASTER §3: Document section nodes....................................................167
-***    >>> §3.1: HTML element.................................................................171
-***    >>> §3.2: Body element.................................................................179
-***    >>> §3.3: Article elements.............................................................197
-***    >>> §3.4: Section elements.............................................................203
-***    >>> §3.5: Aside elements...............................................................211
-***    >>> §3.6: Heading elements.............................................................217
-***    >>> §3.7: Footer elements..............................................................223
-***  OUE-MASTER §4: Content grouping nodes....................................................233
-***    >>> §4.1: Paragraph elements...........................................................237
-***    >>> §4.2: Hr elements..................................................................243
-***    >>> §4.3: List elements................................................................249
-***    >>> §4.4: Div elements.................................................................255
-***      >>> §4.4.1: News posts...............................................................269
-***      >>> §4.4.2: Banner slideshows........................................................280
-***      >>> §4.4.3: Columns..................................................................286
-***      >>> §4.4.4: Flippable content panels.................................................292
-***      >>> §4.4.5: Page covering notices....................................................298
-***      >>> §4.4.6: Recent updates...........................................................304
-***    >>> §4.5: Main element.................................................................310
-***  OUE-MASTER §5: Text-level nodes..........................................................316
-***    >>> §5.1: Hyperlink elements...........................................................320
-***    >>> §5.2: Strong elements..............................................................326
-***    >>> §5.3: Mark elements................................................................341
-***    >>> §5.4: Span elements................................................................351
-***    >>> §5.5: Cite elements................................................................357
-***  OUE-MASTER §6: Embedded content nodes....................................................365
-***    >>> §6.1: Image elements...............................................................369
-***    >>> §6.2: Iframe elements..............................................................375
-***  OUE-MASTER §7: Tabular data nodes........................................................381
-***  OUE-MASTER §8: Form nodes................................................................387
-***  OUE-MASTER §9: Scripted elements.........................................................393
-***    >>> §9.1: Toggled drop-down panels.....................................................397
-***    >>> §9.2: Subtle panels................................................................403
-***    >>> §9.3: Flippable content panels.....................................................444
-***    >>> §9.4: QTip driven tooltips.........................................................453
-***    >>> §9.5: Quick-tabs panels............................................................459
-***    >>> §9.6: Trive Events Calendars.......................................................465
-***    >>> §9.7: Auto-scrolling image panels..................................................471
-***  OUE-MASTER §10: Utility classes..........................................................499
+/**  ───────────────────────────────────────────────────────────────────────────────────────────────
+***  TABLE OF CONTENTS:
+***  ────────────────────────────────────────────────────────────────────────────────────────────
+***  §1:  Global Less variables and Less mixins/utility classes...............................107
+***    >>> §1.1: Additional fonts.............................................................111
+***    >>> §1.2: Color variables and mixins...................................................117
+***    >>> §1.3: All other Less variables.....................................................123
+***    >>> §1.4: Miscellaneous mixins.........................................................129
+***    >>> §1.5: Utility mixins...............................................................135
+***    >>> §1.6: Animation utility classes....................................................141
+***  §2: Anchor pseudoclass...................................................................147
+***  §3: Document section nodes...............................................................174
+***    >>> §3.1: HTML element.................................................................178
+***    >>> §3.2: Body element.................................................................186
+***    >>> §3.3: Article elements.............................................................204
+***    >>> §3.4: Section elements.............................................................210
+***    >>> §3.5: Aside elements...............................................................218
+***    >>> §3.6: Heading elements.............................................................225
+***    >>> §3.7: Header elements..............................................................231
+***    >>> §3.8: Footer elements..............................................................237
+***  §4: Content grouping nodes...............................................................247
+***    >>> §4.1: Paragraph elements...........................................................251
+***    >>> §4.2: Hr elements..................................................................257
+***    >>> §4.3: List elements................................................................263
+***    >>> §4.4: Div elements.................................................................269
+***       └> §4.4.1: News posts...............................................................283
+***       └> §4.4.2: Banner slideshows........................................................294
+***       └> §4.4.3: Columns..................................................................300
+***       └> §4.4.4: Flippable content panels.................................................306
+***       └> §4.4.5: Page covering notices....................................................312
+***       └> §4.4.6: Recent updates...........................................................318
+***    >>> §4.5: Main element.................................................................324
+***  §5: Text-level nodes.....................................................................330
+***    >>> §5.1: Hyperlink elements...........................................................334
+***    >>> §5.2: Strong elements..............................................................340
+***    >>> §5.3: Mark elements................................................................355
+***    >>> §5.4: Span elements................................................................365
+***    >>> §5.5: Cite elements................................................................371
+***  §6: Embedded content nodes...............................................................379
+***    >>> §6.1: Image elements...............................................................383
+***    >>> §6.2: Iframe elements..............................................................389
+***  §7: Tabular data nodes...................................................................395
+***  §8: Form nodes...........................................................................401
+***  §9: Scripted elements....................................................................407
+***    >>> §9.1: Toggled drop-down panels.....................................................411
+***    >>> §9.2: Subtle panels................................................................417
+***    >>> §9.3: Flippable content panels.....................................................458
+***    >>> §9.4: QTip driven tooltips.........................................................467
+***    >>> §9.5: Quick-tabs panels............................................................473
+***    >>> §9.6: Trive Events Calendars.......................................................479
+***    >>> §9.7: Auto-scrolling image panels..................................................485
+***  §10: Functional CSS......................................................................513
+***    >>> §9.1: Website notices..............................................................517
+***  §11: Utility classes.....................................................................523
+***  ───────────────────────────────────────────────────────────────────────────────────────────────
 **/
 /** ================================================================================================
-*** OUE-MASTER §1:  Global Less variables and Less mixins/utility classes
+*** §1:  Global Less variables and Less mixins/utility classes
 **/
 /**   ----------------------------------------------------------------------------------------------
 ***   >>> §1.1: Additional fonts
@@ -979,7 +986,7 @@ img.shift-to-center,
   }
 }
 /** ================================================================================================
-*** OUE-MASTER §2: Anchor pseudoclass
+*** §2: Anchor pseudoclass
 **/
 :target:not(.no-anchor-highlighting) {
   position: relative;
@@ -1101,7 +1108,7 @@ img.shift-to-center,
   visibility: visible;
 }
 /** ================================================================================================
-*** OUE-MASTER §3: Document section nodes
+*** §3: Document section nodes
 **/
 /**   ----------------------------------------------------------------------------------------------
 ***   >>> §3.1: HTML element
@@ -1962,42 +1969,39 @@ body.blog .article-summary aside {
 /**   ----------------------------------------------------------------------------------------------
 ***   >>> §3.6: Heading elements
 **/
-/*  ┌────────────────────────────────────────────────────────────────────────────────────────────┐
-**  │ FILENAME: headers.less                                                                     │
-**  │                                                                                            │
-**  │ AUTHOR: Daniel Rieck <daniel.rieck@wsu.edu> (https://github.com/invokeImmediately)         │
-**  │                                                                                            │
-**  │ DESCRIPTION: Embodies styles for heading and header elements of WSU Office of              │
-**  │   Undergraduate Education web pages built using the builder template of the Spine parent   │
-**  │   theme of WSUWP. Styles are designed to accompany or supersede styling associated with    │
-**  │   the theme.                                                                               │
-**  └────────────────────────────────────────────────────────────────────────────────────────────┘
+/*  ┌──────────────────────────────────────────────────────────────────────────────────────────────┐
+**  │ FILENAME: headeings.less                                                                     │
+**  │                                                                                              │
+**  │ AUTHOR: Daniel Rieck <daniel.rieck@wsu.edu> (https://github.com/invokeImmediately)           │
+**  │                                                                                              │
+**  │ DESCRIPTION: Contains style rules for presenting headings on WSU Office of Undergraduate     │
+**  │   Education web pages built using the builder template of the Spine parent theme of WSUWP.   │
+**  │   Styles are designed to accompany or supersede styling associated with the theme.           │
+**  └──────────────────────────────────────────────────────────────────────────────────────────────┘
 */
-/*    ─────────────────────────────────────────────────────────────────────────────────────────── 
+/*    ────────────────────────────────────────────────────────────────────────────────────────────── 
 **    TABLE OF CONTENTS:
 **    ───────────────────────────────────────────────────────────────────────────────────────────
-**    OUE-HEADINGS §1: [h1] elements...........................................................41
-**    OUE-HEADINGS §2: [h2] elements...........................................................62
-**    OUE-HEADINGS §3: [h3] elements..........................................................143
-**    OUE-HEADINGS §4: [h4] elements..........................................................210
-**    OUE-HEADINGS §5: [hN] elements..........................................................241
-**    OUE-HEADINGS §6: [header] elements......................................................274
-**    OUE-HEADINGS §7: Accessibility friendly classes.........................................338
-**      >>> §7.1: Spacing.....................................................................342
-**      >>> §7.2: Font sizing.................................................................357
-**      >>> §7.3: Line heights................................................................386
-**      >>> §7.4: Coloring....................................................................403
-**        ├> §7.4a: Defaults..................................................................406
-**        └> §7.4b: Utility classes...........................................................496
-**      >>> §7.5: Text transformation.........................................................615
-**    OUE-HEADINGS §8: Article Header Blocks, Elements, & Modifiers...........................628
-**    OUE-HEADINGS §9: (Legacy) Sectional article headers.....................................658
+**    §1: h1 elements..........................................................................38
+**    §2: h2 elements..........................................................................54
+**    §3: h3 elements.........................................................................130
+**    §4: h4 elements.........................................................................191
+**    §5: hN elements.........................................................................216
+**    §6: Accessibility friendly classes......................................................249
+**      >>> §6.1: Spacing.....................................................................253
+**      >>> §6.2: Font sizing.................................................................268
+**      >>> §6.3: Line heights................................................................297
+**      >>> §6.4: Coloring....................................................................314
+**         →→→ §6.4a: Defaults................................................................318
+**         →→→ §6.4b: Utility classes.........................................................411
+**      >>> §6.5: Text transformation.........................................................532
+**    ──────────────────────────────────────────────────────────────────────────────────────────────
 */
 /*  ================================================================================================
-**  SEMANTIC CSS FOR STYLING OUE HEADING & HEADER ELEMENTS
+**  SEMANTIC CSS FOR STYLING OUE HEADING ELEMENTS
 */
 /*    ----------------------------------------------------------------------------------------------
-**    OUE-HEADINGS §1: [h1] elements
+**    §1: h1 elements
 */
 .column h1 {
   font-weight: 700;
@@ -2006,7 +2010,7 @@ body.blog .article-summary aside {
   text-align: center;
 }
 /*    ----------------------------------------------------------------------------------------------
-**    OUE-HEADINGS §2: [h2] elements
+**    §2: h2 elements
 */
 .column h2 {
   font-weight: 700;
@@ -2092,7 +2096,7 @@ h2.article-title a {
   border-bottom: none;
 }
 /*    ----------------------------------------------------------------------------------------------
-**    OUE-HEADINGS §3: [h3] elements
+**    §3: h3 elements
 */
 .column h3.centered,
 .gform_heading h3.gform_title.centered {
@@ -2138,7 +2142,7 @@ h2.article-title a {
   width: 100%;
 }
 /*    ----------------------------------------------------------------------------------------------
-**    OUE-HEADINGS §4: [h4] elements
+**    §4: h4 elements
 */
 .column h4 {
   font-weight: 600;
@@ -2150,7 +2154,7 @@ h2.article-title a {
   color: #464e54;
 }
 /*    ----------------------------------------------------------------------------------------------
-**    OUE-HEADINGS §5: [hN] elements
+**    §5: hN elements
 */
 .column h1.crimson,
 .column h2.crimson {
@@ -2211,142 +2215,10 @@ body.blog .column header.article-header + * {
   }
 }
 /*    ----------------------------------------------------------------------------------------------
-**    OUE-HEADINGS §6: [header] elements
-*/
-header.main-header .sup-header-default {
-  margin-bottom: .5rem;
-}
-@media all {
-  header.main-header .sup-header-default {
-    font-size: 0.9rem;
-  }
-}
-@media all and (min-width: 1073px) {
-  header.main-header .sup-header-default {
-    font-size: 0.9rem;
-  }
-}
-@media all and (min-width: 990px) and (max-width: 1072px) {
-  header.main-header .sup-header-default {
-    font-size: 0.8442rem;
-  }
-}
-@media all and (min-width: 792px) and (max-width: 989px) {
-  header.main-header .sup-header-default {
-    font-size: 0.9rem;
-  }
-}
-@media all and (min-width: 481px) and (max-width: 791px) {
-  header.main-header .sup-header-default {
-    font-size: 0.8442rem;
-  }
-}
-@media all and (min-width: 361px) and (max-width: 480px) {
-  header.main-header .sup-header-default {
-    font-size: 0.7918596rem;
-  }
-}
-@media all and (max-width: 360px) {
-  header.main-header .sup-header-default {
-    font-size: 0.7918596rem;
-  }
-}
-@media all {
-  header.main-header .sub-header-default,
-  header.main-header .sub-header {
-    line-height: 0.9em;
-  }
-}
-@media all and (min-width: 1073px) {
-  header.main-header .sub-header-default,
-  header.main-header .sub-header {
-    font-size: 2.35294118rem;
-  }
-}
-@media all and (min-width: 990px) and (max-width: 1072px) {
-  header.main-header .sub-header-default,
-  header.main-header .sub-header {
-    font-size: 2.20705882rem;
-  }
-}
-@media all and (min-width: 792px) and (max-width: 989px) {
-  header.main-header .sub-header-default,
-  header.main-header .sub-header {
-    font-size: 2.35294118rem;
-  }
-}
-@media all and (min-width: 481px) and (max-width: 791px) {
-  header.main-header .sub-header-default,
-  header.main-header .sub-header {
-    font-size: 2.20705882rem;
-  }
-}
-@media all and (min-width: 361px) and (max-width: 480px) {
-  header.main-header .sub-header-default,
-  header.main-header .sub-header {
-    font-size: 2.07022118rem;
-  }
-}
-@media all and (max-width: 360px) {
-  header.main-header .sub-header-default,
-  header.main-header .sub-header {
-    font-size: 2.07022118rem;
-  }
-}
-@media all and (min-width: 1050px) {
-  header.main-header.centered {
-    text-align: center;
-  }
-}
-@media all and (min-width: 990px) and (max-width: 1049px) {
-  header.main-header.centered {
-    text-align: left;
-  }
-}
-@media all and (min-width: 792px) and (max-width: 989px) {
-  header.main-header.centered {
-    text-align: center;
-  }
-}
-@media all and (max-width: 791px) {
-  header.main-header.centered {
-    text-align: left;
-  }
-}
-header.main-header .header-group {
-  text-align: inherit;
-}
-@media all and (min-width: 1050px) {
-  header.main-header .header-group.centered {
-    left: 50%;
-    width: 100%;
-    -webkit-transform: translateX(-50%);
-    -moz-transform: translateX(-50%);
-    transform: translateX(-50%);
-  }
-}
-@media all and (min-width: 792px) and (max-width: 989px) {
-  header.main-header .header-group.centered {
-    left: 50%;
-    width: 100%;
-    -webkit-transform: translateX(-50%);
-    -moz-transform: translateX(-50%);
-    transform: translateX(-50%);
-  }
-}
-.column:not(.show-header) > header:first-child {
-  display: none;
-}
-.column header:first-child + h1,
-.column header:first-child + h2.fancy.with-top-border,
-.column header:first-child + h3.fancy.with-top-border {
-  margin-top: 0;
-}
-/*    ----------------------------------------------------------------------------------------------
-**    OUE-HEADINGS §7: Accessibility friendly classes
+**    §6: Accessibility friendly classes
 */
 /*      ····························································································
-**      >>> §7.1: Spacing
+**      >>> §6.1: Spacing
 */
 h1,
 h2,
@@ -2366,7 +2238,7 @@ h6 {
   margin-top: 1em;
 }
 /*      ····························································································
-**      >>> §7.2: Font sizing
+**      >>> §6.2: Font sizing
 */
 h1 {
   font-size: 2.4em;
@@ -2387,7 +2259,7 @@ h6 {
   font-size: 1.4em;
 }
 /*      ····························································································
-**      >>> §7.3: Line heights
+**      >>> §6.3: Line heights
 */
 h1,
 h2,
@@ -2406,7 +2278,10 @@ h6.linked-text {
   line-height: 1.375em;
 }
 /*      ····························································································
-**      >>> §7.4: Coloring
+**      >>> §6.4: Coloring
+*/
+/*         · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · ·
+**         →→→ §6.4a: Defaults
 */
 h1,
 h2,
@@ -2456,6 +2331,9 @@ h4.solid::before {
   border-top: 2px solid rgba(70, 78, 84, 0.6667);
   border-bottom: 1px solid rgba(70, 78, 84, 0.3333);
 }
+/*         · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · ·
+**         →→→ §6.4b: Utility classes
+*/
 h1.solid,
 h2.solid,
 h3.solid,
@@ -2610,15 +2488,178 @@ h6.crimson-text.solid::before {
   border-bottom: 1px solid rgba(152, 30, 50, 0.3333);
 }
 /*      ····························································································
-**      >>> §7.5: Text transformation
+**      >>> §6.5: Text transformation
 */
 h1,
 h2,
 h3 {
   text-transform: uppercase;
 }
+/**   ----------------------------------------------------------------------------------------------
+***   >>> §3.7: Header elements
+**/
+/*  ┌──────────────────────────────────────────────────────────────────────────────────────────────┐
+**  │ FILENAME: headers.less                                                                       │
+**  │                                                                                              │
+**  │ AUTHOR: Daniel Rieck <daniel.rieck@wsu.edu> (https://github.com/invokeImmediately)           │
+**  │                                                                                              │
+**  │ DESCRIPTION: Embodies style rules for presenting headers on WSU Office of Undergraduate      │
+**  │   Education web pages built using the builder template of the Spine parent theme of WSUWP.   │
+**  │   Styles are designed to accompany or supersede styling associated with the theme.           │
+**  └──────────────────────────────────────────────────────────────────────────────────────────────┘
+*/
+/*    ──────────────────────────────────────────────────────────────────────────────────────────────
+**    TABLE OF CONTENTS:
+**    ───────────────────────────────────────────────────────────────────────────────────────────
+**    §1: Main header.........................................................................338
+**      >>> §7.1: Spacing.....................................................................342
+**      >>> §7.2: Font sizing.................................................................357
+**      >>> §7.3: Line heights................................................................386
+**      >>> §7.4: Coloring....................................................................403
+**        ├> §7.4a: Defaults..................................................................406
+**        └> §7.4b: Utility classes...........................................................496
+**      >>> §7.5: Text transformation.........................................................615
+**    OUE-HEADINGS §8: Article Header Blocks, Elements, & Modifiers...........................628
+**    OUE-HEADINGS §9: (Legacy) Sectional article headers.....................................658
+**    ──────────────────────────────────────────────────────────────────────────────────────────────
+*/
+/*  ================================================================================================
+**  SEMANTIC CSS FOR STYLING OUE HEADER ELEMENTS
+*/
 /*    ----------------------------------------------------------------------------------------------
-**    OUE-HEADINGS §8: Article Header Blocks, Elements, & Modifiers
+**    §1: Main header
+*/
+header.main-header .sup-header-default {
+  margin-bottom: .5rem;
+}
+@media all {
+  header.main-header .sup-header-default {
+    font-size: 0.9rem;
+  }
+}
+@media all and (min-width: 1073px) {
+  header.main-header .sup-header-default {
+    font-size: 0.9rem;
+  }
+}
+@media all and (min-width: 990px) and (max-width: 1072px) {
+  header.main-header .sup-header-default {
+    font-size: 0.8442rem;
+  }
+}
+@media all and (min-width: 792px) and (max-width: 989px) {
+  header.main-header .sup-header-default {
+    font-size: 0.9rem;
+  }
+}
+@media all and (min-width: 481px) and (max-width: 791px) {
+  header.main-header .sup-header-default {
+    font-size: 0.8442rem;
+  }
+}
+@media all and (min-width: 361px) and (max-width: 480px) {
+  header.main-header .sup-header-default {
+    font-size: 0.7918596rem;
+  }
+}
+@media all and (max-width: 360px) {
+  header.main-header .sup-header-default {
+    font-size: 0.7918596rem;
+  }
+}
+@media all {
+  header.main-header .sub-header-default,
+  header.main-header .sub-header {
+    line-height: 0.9em;
+  }
+}
+@media all and (min-width: 1073px) {
+  header.main-header .sub-header-default,
+  header.main-header .sub-header {
+    font-size: 2.35294118rem;
+  }
+}
+@media all and (min-width: 990px) and (max-width: 1072px) {
+  header.main-header .sub-header-default,
+  header.main-header .sub-header {
+    font-size: 2.20705882rem;
+  }
+}
+@media all and (min-width: 792px) and (max-width: 989px) {
+  header.main-header .sub-header-default,
+  header.main-header .sub-header {
+    font-size: 2.35294118rem;
+  }
+}
+@media all and (min-width: 481px) and (max-width: 791px) {
+  header.main-header .sub-header-default,
+  header.main-header .sub-header {
+    font-size: 2.20705882rem;
+  }
+}
+@media all and (min-width: 361px) and (max-width: 480px) {
+  header.main-header .sub-header-default,
+  header.main-header .sub-header {
+    font-size: 2.07022118rem;
+  }
+}
+@media all and (max-width: 360px) {
+  header.main-header .sub-header-default,
+  header.main-header .sub-header {
+    font-size: 2.07022118rem;
+  }
+}
+@media all and (min-width: 1050px) {
+  header.main-header.centered {
+    text-align: center;
+  }
+}
+@media all and (min-width: 990px) and (max-width: 1049px) {
+  header.main-header.centered {
+    text-align: left;
+  }
+}
+@media all and (min-width: 792px) and (max-width: 989px) {
+  header.main-header.centered {
+    text-align: center;
+  }
+}
+@media all and (max-width: 791px) {
+  header.main-header.centered {
+    text-align: left;
+  }
+}
+header.main-header .header-group {
+  text-align: inherit;
+}
+@media all and (min-width: 1050px) {
+  header.main-header .header-group.centered {
+    left: 50%;
+    width: 100%;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    transform: translateX(-50%);
+  }
+}
+@media all and (min-width: 792px) and (max-width: 989px) {
+  header.main-header .header-group.centered {
+    left: 50%;
+    width: 100%;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    transform: translateX(-50%);
+  }
+}
+.column:not(.show-header) > header:first-child {
+  display: none;
+}
+.column header:first-child + h1,
+.column header:first-child + h2.fancy.with-top-border,
+.column header:first-child + h3.fancy.with-top-border {
+  margin-top: 0;
+}
+/*    ----------------------------------------------------------------------------------------------
+**    §2: Article Header Blocks, Elements, & Modifiers
 */
 /*!Example from SASS:
 ** .person { }
@@ -2633,16 +2674,16 @@ h3 {
   line-height: 1.375em;
 }
 /*    ----------------------------------------------------------------------------------------------
-**    OUE-HEADINGS §9: (Legacy) Sectional article headers (inclusional via Less mixin)
+**    §3: Sectional article headers (inclusional via Less mixin)
 */
 /**   ----------------------------------------------------------------------------------------------
-***   >>> §3.7: Footer elements
+***   >>> §3.8: Footer elements
 **/
 footer.article-footer div.author-info {
   display: none;
 }
 /** ================================================================================================
-*** OUE-MASTER §4: Content grouping nodes
+*** §4: Content grouping nodes
 **/
 /**   ----------------------------------------------------------------------------------------------
 ***   >>> §4.1: Paragraph elements
@@ -2657,20 +2698,19 @@ footer.article-footer div.author-info {
 **  │   associated with the Spine parent theme.                                                  │
 **  └────────────────────────────────────────────────────────────────────────────────────────────┘
 */
-/*  ================================================================================================
-**  SEMANTIC CSS FOR STYLING OUE PARAGRAPHS
-*/
 /*    ───────────────────────────────────────────────────────────────────────────────────────────
 **    TABLE OF CONTENTS:
 **    ───────────────────────────────────────────────────────────────────────────────────────────
-**      §1: Legacy style declarations (prior to a11y redesign).................................36
-**       >>> §1.1: Inclusional mixins.........................................................???
-**      §2: Paragraph based notices...........................................................324
-**      §3: Accessibility friendly classes....................................................417
-**       >>> §3.1: Style Defaults.............................................................621
+**      §1: Legacy style declarations (prior to a11y redesign).................................26
+**       >>> §1.1: Inclusional mixins.........................................................205
+**      §2: Accessibility friendly classes....................................................238
+**       >>> §2.1: Style Defaults.............................................................242
+*/
+/*  ================================================================================================
+**  SEMANTIC CSS STYLE RULES FOR PRESENTING PARAGRAPHS ON OUE WEBSITES
 */
 /*    ----------------------------------------------------------------------------------------------
-**    OUE-PARAGRAPHS §1: Legacy style declarations (prior to a11y redesign)
+**    §1: Legacy style declarations (prior to a11y redesign)
 */
 .column p.vpue-jump-bar {
   background-color: rgba(0, 165, 189, 0.5);
@@ -3730,14 +3770,14 @@ body.single-post .column p.article-media-contacts + :not(.article-media-contacts
   border-top: 1px solid rgba(127, 127, 127, 0.2);
   padding-top: 15px;
 }
+/*!     ····························································································
+***     >>> §1.1: Inclusional mixins
+**/
 /*    ----------------------------------------------------------------------------------------------
-**    OUE PARAGRAPHS §2: Paragraph based notices
-*/
-/*    ----------------------------------------------------------------------------------------------
-**    OUE PARAGRAPHS §3: Accessibility friendly classes
+**    OUE PARAGRAPHS §2: Accessibility friendly classes
 */
 /*!     ····························································································
-***     >>> §3.1: Style Defaults
+***     >>> §2.1: Style Defaults
 **/
 p {
   font-size: 1em;
@@ -4199,7 +4239,7 @@ ol {
   margin-top: 1em;
 }
 /**     ····························································································
-***     >>> §4.4.1: News posts
+***      └> §4.4.1: News posts
 **/
 /*  ┌────────────────────────────────────────────────────────────────────────────────────────────┐
 **  │ FILENAME: news-posts.less                                                                  │
@@ -4314,7 +4354,7 @@ body.single-post .main-header + .featured-image {
   margin-bottom: 1rem;
 }
 /**     ····························································································
-***     >>> §4.4.2: Banner slideshows
+***      └> §4.4.2: Banner slideshows
 **/
 /*  ┌────────────────────────────────────────────────────────────────────────────────────────────┐
 **  │ FILENAME: div.cycle-slideshow.less                                                         │
@@ -4453,7 +4493,7 @@ body.single-post .main-header + .featured-image {
   }
 }
 /**     ····························································································
-***     >>> §4.4.3: Columns
+***      └> §4.4.3: Columns
 **/
 /*  ┌────────────────────────────────────────────────────────────────────────────────────────────┐
 **  │ FILENAME: div.column.less                                                                  │
@@ -4673,7 +4713,7 @@ span.callout.top:after {
   border-top: 11px solid #F1D031;
 }
 /**     ····························································································
-***     >>> §4.4.4: Flippable content panels
+***      └> §4.4.4: Flippable content panels
 **/
 /*  ┌────────────────────────────────────────────────────────────────────────────────────────────┐
 **  │ FILENAME: interactively-flipped-panels                                                     │
@@ -5035,7 +5075,7 @@ span.callout.top:after {
   }
 }
 /**     ····························································································
-***     >>> §4.4.5: Page covering notices
+***      └> §4.4.5: Page covering notices
 **/
 /*  ┌────────────────────────────────────────────────────────────────────────────────────────────┐
 **  │ FILENAME: page-covering-notice.less                                                        │
@@ -5157,7 +5197,7 @@ span.callout.top:after {
   margin-top: 1em !important;
 }
 /**     ····························································································
-***     >>> §4.4.6: Recent updates
+***      └> §4.4.6: Recent updates
 **/
 /*  ┌────────────────────────────────────────────────────────────────────────────────────────────┐
 **  │ FILENAME: recent-updates.less                                                              │
@@ -5401,7 +5441,7 @@ span.callout.top:after {
 **  SEMANTIC CSS FOR STYLING THE OUE MAIN ELEMENT
 */
 /** ================================================================================================
-*** OUE-MASTER §5: Text-level nodes
+*** §5: Text-level nodes
 **/
 /**   ----------------------------------------------------------------------------------------------
 ***   >>> §5.1: Hyperlink elements
@@ -5803,7 +5843,7 @@ cite.article-author {
   display: none;
 }
 /** ================================================================================================
-*** OUE-MASTER §6: Embedded content nodes
+*** §6: Embedded content nodes
 **/
 /**   ----------------------------------------------------------------------------------------------
 ***   >>> §6.1: Image elements
@@ -6222,7 +6262,7 @@ figure figcaption {
   padding-bottom: 56.25%;
 }
 /** ================================================================================================
-*** OUE-MASTER §7: Tabular data nodes
+*** §7: Tabular data nodes
 **/
 /*  ┌────────────────────────────────────────────────────────────────────────────────────────────┐
 **  │ FILENAME: tables.less                                                                      │
@@ -6430,7 +6470,7 @@ figure figcaption {
 **    OUE-TABLES §2: Optional styling of tables via inclusional mixins
 */
 /** ================================================================================================
-*** OUE-MASTER §8: Form nodes
+*** §8: Form nodes
 **/
 /*  ┌────────────────────────────────────────────────────────────────────────────────────────────┐
 **  │ FILENAME: forms.less                                                                       │
@@ -6899,7 +6939,7 @@ div.read-more-target {
   }
 }
 /** ================================================================================================
-*** OUE-MASTER §9: Scripted elements
+*** §9: Scripted elements
 **/
 /**   ----------------------------------------------------------------------------------------------
 ***   >>> §9.1: Toggled drop-down panels
@@ -7645,7 +7685,33 @@ div.auto-scroller ul li {
   list-style-image: none;
 }
 /** ================================================================================================
-*** OUE-MASTER §10: Utility classes
+*** §10: Functional CSS
+**/
+/**   ----------------------------------------------------------------------------------------------
+***   >>> §10.1: Website notices
+**/
+/*  ┌────────────────────────────────────────────────────────────────────────────────────────────┐
+**  │ FILENAME: notices.less                                                                     │
+**  │                                                                                            │
+**  │ AUTHOR: Daniel Rieck <daniel.rieck@wsu.edu> (https://github.com/invokeImmediately)         │
+**  │                                                                                            │
+**  │ DESCRIPTION: Functional CSS style rules for presenting notices on OUE web pages built      │
+**  │   using the WSU Spine theme for WordPress.                                                 │
+**  └────────────────────────────────────────────────────────────────────────────────────────────┘
+*/
+/*    ─────────────────────────────────────────────────────────────────────────────────────────── 
+**    TABLE OF CONTENTS:
+**    ───────────────────────────────────────────────────────────────────────────────────────────
+**    §1: Basic notices........................................................................27
+**    §2: Linked notices.......................................................................57
+**    §3: Mixin .add-download-notice..........................................................124
+**    §4: Mixin add-new-notice-class..........................................................140
+*/
+/*  ================================================================================================
+**  FUNCTIONAL CSS STYLE RULES FOR PRESENTING OUE NOTICES
+*/
+/** ================================================================================================
+*** §11: Utility classes
 **/
 /*  ┌────────────────────────────────────────────────────────────────────────────────────────────┐
 **  │ FILENAME: utility-classes.less                                                             │
@@ -8884,13 +8950,13 @@ div.auto-scroller ul li {
 .bg-color--orange--tint {
   background-color: #feefe2;
 }
-/*! ╔═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗
-*   ║ LAYOUTS SPECIFIC TO THE SUMMER RESEARCH WEBSITE ##################################################################### ║
-*   ╚═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝
+/*! ╔══════════════════════════════════════════════════════════════════════════════════════════════╗
+*   ║ LAYOUTS SPECIFIC TO THE SUMMER RESEARCH WEBSITE ############################################ ║
+*   ╚══════════════════════════════════════════════════════════════════════════════════════════════╝
 */
-/*!   ╔═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗
-*     ║ #### Sections: Body & Page Level ################################################################################ ║
-*     ╚═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝
+/*!   ╔════════════════════════════════════════════════════════════════════════════════════════════╗
+*     ║ #### Sections: Body & Page Level ######################################################### ║
+*     ╚════════════════════════════════════════════════════════════════════════════════════════════╝
 */
 @media all and (max-width: 1073px) {
   body {
@@ -8926,9 +8992,9 @@ main {
   background-position: right bottom;
   background-attachment: fixed;
 }
-/*!   ╔═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗
-*     ║ #### Sections: Headers ########################################################################################## ║
-*     ╚═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝
+/*!   ╔════════════════════════════════════════════════════════════════════════════════════════════╗
+*     ║ #### Sections: Headers ################################################################### ║
+*     ╚════════════════════════════════════════════════════════════════════════════════════════════╝
 */
 header.main-header {
   background: #981e32 url(/wp-content/uploads/sites/50/2015/04/seamless-marble-texture_528x528.png) repeat scroll left top;
@@ -9187,9 +9253,9 @@ header.main-header {
 .column section.header-newsEvents {
   background: url(/wp-content/uploads/sites/50/2015/10/section-bar.png) no-repeat left top, url(/wp-content/uploads/sites/50/2015/10/section-bar.png) no-repeat right top, url(/wp-content/uploads/sites/50/2015/06/wpbg-news-events-v2.png) no-repeat center;
 }
-/*!   ╔═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗
-*     ║ #### Sections: Asides ########################################################################################### ║
-*     ╚═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝
+/*!   ╔════════════════════════════════════════════════════════════════════════════════════════════╗
+*     ║ #### Sections: Asides #################################################################### ║
+*     ╚════════════════════════════════════════════════════════════════════════════════════════════╝
 */
 .column aside {
   font-size: .8rem;
@@ -9244,9 +9310,9 @@ header.main-header {
 .column div.gray-acrylic-sidebar h4 {
   font-size: 1.05rem;
 }
-/*!   ╔═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗
-*     ║ #### Content Grouping: Paragraphs ############################################################################### ║
-*     ╚═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝
+/*!   ╔════════════════════════════════════════════════════════════════════════════════════════════╗
+*     ║ #### Content Grouping: Paragraphs ######################################################## ║
+*     ╚════════════════════════════════════════════════════════════════════════════════════════════╝
 */
 .column p.rounded-box {
   border: 1px solid #d9d9d9;
@@ -9258,10 +9324,10 @@ header.main-header {
   border-radius: 7px;
   margin: 4px;
 }
-/*!   ╔═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗
-*     ║ #### Content Grouping: Lists #################################################################################### ║
-*     ╚═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝
-*/
+/**   ╔════════════════════════════════════════════════════════════════════════════════════════════╗
+***   ║ #### Content Grouping: Lists ############################################################# ║
+***   ╚════════════════════════════════════════════════════════════════════════════════════════════╝
+**/
 .column ul:not(.content-boxes):not(.event-boxes):not(.program-info) li {
   list-style-image: url(/wp-content/uploads/sites/50/2015/05/ico-cougar-bullet-point.png);
 }
@@ -9395,8 +9461,8 @@ ul.program-info > li.gutter-sizer {
   width: calc(2% + 14px) !important;
 }
 /*!   ╔═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗
-*     ║ #### Content Grouping: Interactive Containers ################################################################### ║
-*     ╚═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝
+**    ║ #### Content Grouping: Interactive Containers ################################################################### ║
+**    ╚═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝
 */
 div.interactively-flipped-panels {
   background: #5e6a71 url(/wp-content/uploads/sites/907/2016/05/texture_brushed-metal.jpg) repeat scroll left top;
@@ -10333,6 +10399,9 @@ div.iframe-wrapper.home {
     border-left: 10px solid #ffffff !important;
   }
 }
+/*    ----------------------------------------------------------------------------------------------
+**    §1: Basic notices
+*/
 .column .notice {
   background-color: rgba(198, 12, 48, 0.2);
   border-radius: 10px;
@@ -10343,6 +10412,9 @@ div.iframe-wrapper.home {
   position: relative;
   width: 80%;
   width: calc(90% - 2 * 1rem - 32px);
+  /*    ----------------------------------------------------------------------------------------------
+**    §2: Linked notices
+*/
 }
 .column .notice::before {
   bottom: 0;
@@ -10409,6 +10481,12 @@ div.iframe-wrapper.home {
   box-shadow: inset 0 -0.3125em 0 rgba(152, 30, 50, 0.15);
   color: #981e32;
 }
+/*    ----------------------------------------------------------------------------------------------
+**    §3: Mixin .add-download-notice
+*/
+/*    ----------------------------------------------------------------------------------------------
+**    §4: Mixin add-new-notice-class
+*/
 .column p.notice.has-expiration {
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
@@ -10491,5 +10569,5 @@ div.iframe-wrapper.home {
 }
 .column .notice.news-link::before {
   width: 72px;
-  background: #5e6a71 url(/wp-content/uploads/sites/907/2017/08/icon_view-more-news.png) 4px 4px no-repeat;
+  background: #5e6a71 url(/wp-content/uploads/sites/907/2017/08/icon_view-more-news.png) 4px center no-repeat;
 }
