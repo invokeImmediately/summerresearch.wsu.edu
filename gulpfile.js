@@ -1,39 +1,54 @@
-var compiledCssSrcFileName = 'summerresearch-custom.css';
-var minCssFileHeaderStr = '/* Built with the LESS CSS preprocessor [http://lesscss.org/]. Please see [https://github.com/invokeImmediately/summerresearch.wsu.edu] for a repository of source code. */\r\n';
-var gulp = require( 'gulp' );
-var lessc = require( 'gulp-less' );
-var gcmq = require( 'gulp-group-css-media-queries' );
-var insertLines = require( 'gulp-insert-lines' );
+'use strict';
+
+/* -------------------------------------------------------------------------------------------------
+** Variable Declarations
+*/
+
+// Gulp task dependencies
 var cleanCss = require( 'gulp-clean-css' );
-var insert = require( 'gulp-insert' );
-var extName = require( 'gulp-extname' );
-var compiledJsBuildName = 'dsp-custom-build.js';
-var replace = require( 'gulp-replace' );
 var concat = require( 'gulp-concat' );
+var extName = require( 'gulp-extname' );
+var gcmq = require( 'gulp-group-css-media-queries' );
+var gulp = require( 'gulp' );
+var insert = require( 'gulp-insert' );
+var insertLines = require( 'gulp-insert-lines' );
+var lessc = require( 'gulp-less' );
+var replace = require( 'gulp-replace' );
+var uglifyJs = require( 'gulp-uglify' );
+var pump = require( 'pump' );
 
-gulp.task( 'buildMinCss', function () {
-	return gulp.src( './CSS/*.less' )
-		.pipe( lessc( {
-			paths: ['./WSU-UE---CSS/']
-		} ) )
-		.pipe( replace( /^ (?! )/gm, '' ) )
-		.pipe( gulp.dest( './CSS/' ) )
-		.pipe( gcmq() )
-		.pipe( insertLines( {
+/* -------------------------------------------------------------------------------------------------
+** Function declarations
+*/
+
+function getCssBuildSettings() {
+	return {
+		commentRemovalNeedle: /^(?:[ \t]*)?\/\*[^!].*$\n(?:^\*\*?[^/].*$\n)*\*\*?\/\n\n?/gm,
+		dependenciesPath: './WSU-UE---CSS/',
+		destFolder: './CSS/',
+		fontImportStr: '@import url(\'https://fonts.googleapis.com/css?family=Roboto+Mono:300|Robot\
+o+Condensed:400,700|Roboto+Slab|PT+Serif\');\r\n',
+		insertingMediaQuerySectionHeader: {
 			'before': /^@media/,
-			'lineBefore': '/*! ╔═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗\r\n*   ║ MEDIA QUERIES ####################################################################################################### ║\r\n*   ╚═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝\r\n*/',
+			'lineBefore': '/*! ╔═══════════════════════════════════════════════════════════════════\
+════════════════════════════════════════════════════╗\r\n*   ║ MEDIA QUERIES ######################\
+################################################################################# ║\r\n*   ╚═══════\
+═══════════════════════════════════════════════════════════════════════════════════════════════════\
+═════════════╝\r\n*/',
 			'stopAfterFirstMatch': true
-		} ) )
-		.pipe( cleanCss() )
-		.pipe( insert.prepend( minCssFileHeaderStr ) )
-		.pipe( extName( '.min.css' ) )
-		.pipe( gulp.dest( './CSS/' ) );
-} );
+		},
+		minCssFileExtension: '.min.css',
+		minCssFileHeaderStr: '/* Built with the LESS CSS preprocessor [http://lesscss.org/]. Please\
+ see [https://github.com/invokeImmediately/summerresearch.wsu.edu] for a repository of source code.\
+ */\r\n',
+		sourceFile: './CSS/summerresearch-custom.less'
+	};
+}
 
-// TODO: Copied from distinguishedscholarships.wsu.edu; update for this site
-gulp.task( 'buildMinJs', function () {
-	return gulp.src( [
-			'./JS/dsp-custom.js',
+function getJsBuildSettings() {
+	return {
+		buildDependenciesList: [
+			'./JS/sumres-custom.js',
 			'./WSU-UE---JS/jQuery.oue-custom.js',
 			'./WSU-UE---JS/jQuery.animatedCalendar.js',
 			'./WSU-UE---JS/jQuery.autoScrollingImages.js',
@@ -49,11 +64,14 @@ gulp.task( 'buildMinJs', function () {
 			'../imagesloaded/imagesloaded.pkgd.min.js',
 			'../masonry/dist/masonry.pkgd.min.js',
 			'./WSU-UE---JS/jQuery.masonry-custom.js'
-		] )
-		.pipe( replace( /^(\/\*)(?!!)/g, fixFileHeaderComments ) )
-		.pipe( concat( compiledJsBuildName ) )
-		.pipe( gulp.dest( './JS/' ) );
-} );
+		],
+		commentNeedle: /^(\/\*)(?!!)/g,
+		compiledJsFileName: 'sumres-build.js',
+		destFolder: './JS/',
+		minJsFileExtension: '.min.js',
+		replaceCallback: fixFileHeaderComments
+	};
+}
 
 function fixFileHeaderComments ( match, p1, offset, string ) {
 	var replacementStr = match;
@@ -62,3 +80,53 @@ function fixFileHeaderComments ( match, p1, offset, string ) {
 	}
 	return replacementStr;
 }
+
+function setUpCssBuildTask( settings ) {
+	gulp.task( 'buildMinCss', function ( callBack ) {
+		pump( [
+				gulp.src( settings.sourceFile ),
+				lessc( {
+					paths: [settings.dependenciesPath]
+				} ),
+				replace( settings.commentRemovalNeedle, '' ),
+				insert.prepend( settings.fontImportStr ),
+				insert.prepend( settings.minCssFileHeaderStr ),
+				gulp.dest( settings.destFolder ),
+				gcmq(),
+				insertLines( settings.insertingMediaQuerySectionHeader ),
+				cleanCss(),
+				extName( settings.minCssFileExtension ),
+				gulp.dest( settings.destFolder )
+			],
+			callBack
+		);
+	} );
+}
+
+function setUpJsBuildTask( settings ) {
+	gulp.task( 'buildMinJs', function ( callBack ) {
+		pump( [
+				gulp.src( settings.buildDependenciesList ),
+				replace( settings.commentNeedle, settings.replaceCallback ),
+				concat( settings.compiledJsFileName ),
+				gulp.dest( settings.destFolder ),
+				uglifyJs( {
+					output: {
+						comments: /^!/
+					},
+					toplevel: true,
+				} ),
+				extName( settings.minJsFileExtension ),
+				gulp.dest( settings.destFolder )
+			],
+			callBack
+		);
+	} );
+}
+
+/* -------------------------------------------------------------------------------------------------
+** Main execution sequence
+*/
+
+setUpCssBuildTask( getCssBuildSettings() );
+setUpJsBuildTask( getJsBuildSettings() );
