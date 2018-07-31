@@ -48,7 +48,6 @@ o+Condensed:400,700|Roboto+Slab|PT+Serif\');\r\n',
 function getJsBuildSettings() {
 	return {
 		buildDependenciesList: [
-			'./JS/sumres-custom.js',
 			'./WSU-UE---JS/jQuery.oue-custom.js',
 			'./WSU-UE---JS/jQuery.animatedCalendar.js',
 			'./WSU-UE---JS/jQuery.autoScrollingImages.js',
@@ -63,7 +62,8 @@ function getJsBuildSettings() {
 			'./WSU-UE---JS/jQuery.textResize.js',
 			'../imagesloaded/imagesloaded.pkgd.min.js',
 			'../masonry/dist/masonry.pkgd.min.js',
-			'./WSU-UE---JS/jQuery.masonry-custom.js'
+			'./WSU-UE---JS/jQuery.masonry-custom.js',
+			'./JS/sumres-custom.js'
 		],
 		commentNeedle: /^(\/\*)(?!!)/g,
 		compiledJsFileName: 'sumres-build.js',
