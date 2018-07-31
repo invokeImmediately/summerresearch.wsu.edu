@@ -1,73 +1,115 @@
-// -----------------------------------------------------------------------------
-// CUSTOM JQUERY-BASED DYNAMIC CONTENT
-// -----------------------------------------------------------------------------
-// See [https://github.com/invokeImmediately/distinguishedscholarships.wsu.edu]
-// for a repository of source code.
+/*! This custom JavaScript code has been minified with gulp-uglify. Please see [https://github.com/i
+**  nvokeImmediately/summerresearch.wsu.edu] for a repository of fully documented source code.
+*/
+
+/*  ┌──────────────────────────────────────────────────────────────────────────────────────────────┐
+**  │ FILENAME: sumres-custom.less                                                                 │
+**  │                                                                                              │
+**  │ AUTHOR: Daniel Rieck <daniel.rieck@wsu.edu> (https://github.com/invokeImmediately)           │
+**  │                                                                                              │
+**  │ SUMMARY: Custom JS code specific to the WSU Summer Undergraduate Research program website.   │
+**  └──────────────────────────────────────────────────────────────────────────────────────────────┘
+*/
+
+/*  ────────────────────────────────────────────────────────────────────────────────────────────────
+**  Table of Contents
+**  ─────────────────────────────────────────────────────────────────────────────────────────────
+**  Main execution section.....................................................................42
+**    DOM-ready execution block................................................................47
+**    Execution block bound to window load event...............................................56
+**  Function definition section................................................................62
+**    addPageHeaderToNews......................................................................67
+**    adjustScrollingAfterNavToAnchor..........................................................89
+**    fillHiddenFields........................................................................166
+**    initAnchorVisibilityFix.................................................................243
+**    initDelayedNotices......................................................................252
+**    resortListsWithExpiredItems.............................................................316
+**    initFacultyEmailAutoEntry...............................................................390
+**  Class definition section..................................................................455
+**    FieldsToFill............................................................................467
+**    FieldsToFill.prototype.isValid..........................................................485
+**  ────────────────────────────────────────────────────────────────────────────────────────────────
+*/
+
+/**
+ * An IIFE that contains custom JS code specific to summerresearch.wsu.edu.
+ *
+ * @link	https://github.com/invokeImmediately/distinguishedscholarships.wsu.edu
+ * 
+ * @param	{object}	$	Alias for the jQuery interface.
+ */
 ( function( $ ) {
 
-// IIFE for wrapping statements to be executed once the DOM is ready 
+'use strict';
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
+// MAIN EXECUTION ↓↓↓
+
+/**
+ * Uses the jQuery interface to execute a block of statements once the DOM is ready.
+ */
 $( function() {
-
-	// Tweak HTML source to work around some quirks of WordPress setup                            *
-	var siteURL = window.location.pathname;
-	switch (siteURL) {
-		/* case '/':
-			$('#menu-item-35').remove();
-			$('#spine-sitenav ul li').first().css('border-top', 'none');
-			$('#spine-sitenav').addClass('homeless');
-			break;*/
-		case '/news/':
-			$('div.column.one').first().parent('section').before('<section class="row single gutter pad-top"><div class="column one"><section class="article-header header-newsEvents"><div class="header-content"><h2>News</h2><h3>What We and Our Students Have Accomplished</h3></div></section></div></section>');
-			break;
-	}
-
-	initAnchorFix();
+	addPageHeaderToNews();
+	initAnchorVisibilityFix();
 	initExpiringItems(".has-expiration", "expirationDate", "is-expired");
+} );
+
+/**
+ * Binds a series of execution statements to window loaded event.
+ */
+$( window ).on( "load", function() {
+	initDelayedNotices("p.notice", "is-delayed", 500);
 	initFacultyEmailAutoEntry("li.gfield.sets-faculty-email", "li.gform_hidden");
 });
 
-// Bind a function to window loaded event
-$( window ).on( "load", function() {
-	initDelayedNotices("p.notice", "is-delayed", 500);
-});
+////////////////////////////////////////////////////////////////////////////////////////////////////
+// FUNCTION DEFINITIONS ↓↓↓
 
-// Binds a function to the hashchange event for applying corrections to
-// scrolling position after an anchor has been navigated to. This is necessary
-// because on OUE websites built using the WSU Spine framework, there are
-// instances where elements end up covering the anchor at the top of the screen
-function initAnchorFix() {
-	window.onhashchange = adjustScrollingAfterNavToAnchor;
+/**
+ * Adds a page header containing navigational context to the news section of the website.
+ */
+function addPageHeaderToNews() {
+	// Tweak HTML source to work around some quirks of WordPress setup.
+	var siteURL = window.location.pathname;
+	switch (siteURL) {
+		case '/news/':
+			$('div.column.one').first().parent('section').before('<section class="row page-header p\
+age-header--news"><div class="column one page-header__column-1"><h1 class="page-header__text-title"\
+>News</h1></div></section>');
+			break;
+	}
 }
 
-// Function to be bound to the hashchange event; applyies corrections to
-// scrolling position after an anchor has been navigated to. Compensates for
-// instances where elements end up covering the anchor at the top of the screen
+/**
+ * Applies corrections to window scrolling position to keep an anchor that the user has navigated to
+ * in view.
+ */
 function adjustScrollingAfterNavToAnchor() {
+	var currentScrollPos;		// Uncorrected scrolling position that resulted after navigating to
+								// the anchor.
 
-	var currentScrollPos;	// Uncorrected scrolling position that resulted
-							// after navigating to the anchor
+	var windowWidth;			// Browser window width is checked against spine header width to
+								// test for mobile/tablet mode.
 
-	var windowWidth;	// Browser window width is checked against spine header
-						// width to test for mobile/tablet mode
+	var scrollingAdjustment;	// Calculated number of pixels needed to move up the page and bring
+								// the anchor back into view.
 
-	var scrollingAdjustment;	// Calculated number of pixels needed to move up
-								// the page and bring the anchor back into view
+	var $wpadminbar;			// jQuery object: WordPress admin bar that floats at top or bottom
+								// of screen.
 
-	var $wpadminbar;	// jQuery object: WordPress admin bar that floats at top
-						// or bottom of screen
+	var $spineHeader;			// jQuery object: spine header element that floats at top of screen
+								// on mobile/tablet.
 
-	var $spineHeader;	// jQuery object: spine header element that floats at
-						// top of screen on mobile/tablet.
+	var $toc;					// jQuery object: fixed table of contents element located toward top
+								// of page.
 
-	var $toc;	// jQuery object: fixed TOC element located toward top of page
+	var tocTrigger;				// Scrolling position where, once reached, the floating table of
+								// contents is brought into view.
 
-	var tocTrigger;	// Scrolling position where, once reached, the floating
-					// TOC is brought into view
+	var $floatingToc;			// The jQuery object for the floating table of contents element.
 
-	var $floatingToc;	// jQuery object: floating TOC element
-
-	var updatedScrollPos;		// Corrected scrolling position whereat the
-								// anchor is visible at top of page
+	var updatedScrollPos;		// Corrected scrolling position whereat the anchor is visible at top
+								// of page.
 
 	// Get the current, uncorrected scrolling position 
 	currentScrollPos = ( $(window).scrollTop() || $( "body" ).scrollTop() );
@@ -79,8 +121,8 @@ function adjustScrollingAfterNavToAnchor() {
 		scrollingAdjustment += $wpadminbar.outerHeight();
 	}
 
-	// If necessary, compensate for the floating spine menu and the OUE-specific
-	// floating TOC feature
+	// If necessary, compensate for the floating spine menu and the OUE-specific floating
+	// table of contents feature.
 	windowWidth = $( window ).width();
 	$spineHeader = $( "#spine" ).find(".spine-header");
 	$toc = $( ".vpue-jump-bar" ).first();
@@ -88,36 +130,123 @@ function adjustScrollingAfterNavToAnchor() {
 	$floatingToc = $( ".vpue-jump-bar.floating" );
 	if( $spineHeader.width() != windowWidth ) {
 
-		// We are in desktop view and the spine is positioned to the left of the
-		// main content area. The only possible correction that needs to be
-		// applied on OUE websites is to compensate for a floating TOC element
-		// that is hovering over main content at the top of the screen
+		// We are in desktop view and the spine is positioned to the left of the main content area.
+		// The only possible correction that needs to be applied on OUE websites is to compensate
+		// for a floating TOC element that is hovering over main content at the top of the screen.
 		if ( $floatingToc.length && currentScrollPos > tocTrigger ) {
 			scrollingAdjustment += $floatingToc.outerHeight() + 8;
 		}
 	} else {
 
-		// We are in mobile/tablet view and the spine is floating at the top of
-		// the screen & covering main content area. It is also possible that a
-		// correction needs to be applied for a floating TOC element that is
-		// peeking out from under the spine header and is also covering main
-		// content
+		// We are in mobile/tablet view and the spine is floating at the top of the screen and
+		// covering main content area. It is also possible that a correction needs to be applied for
+		// a floating TOC element that is peeking out from under the spine header and is also
+		// covering main content.
 		scrollingAdjustment += $spineHeader.outerHeight();
 		if ( $floatingToc.length && currentScrollPos > tocTrigger ) {
 			scrollingAdjustment += 23;
 		}				
 	}
 
-	// Correct the scrolling position to bring the anchored element back into
-	// view at visible top of screen
+	// Correct the scrolling position to bring the anchored element back into view at visible top
+	// of screen.
 	updatedScrollPos = currentScrollPos >= scrollingAdjustment ?
 		currentScrollPos - scrollingAdjustment :
 		0;
 	$("html, body").scrollTop( updatedScrollPos );
 }
 
-// Initialize notice elements whose display should be delayed by a set amount
-// after the page has loaded.
+/**
+ * Fills hidden fields on the gravity form for abstract submission.
+ *
+ * @param {Object}	fieldsToFill	A properly constructed FieldsToFill object.
+ */
+function fillHiddenFields(fieldsToFill) {
+	// TODO: Update for Summer 2017
+	if(fieldsToFill instanceof FieldsToFill && fieldsToFill.isValid()) {
+		switch(fieldsToFill.selectionMade) {
+			case "Atmospheric Chemistry and Climate Change: Measurements and Modeling in the Pacifi\
+c Northwest (Shelley Pressley)":
+				fieldsToFill.$emailInputBox.val("spressley@wsu.edu");
+				fieldsToFill.$nameInputBox.val("Shelley");
+				break;
+			case "Bioplastics & Biocomposites (Vikram Yadama)":
+				fieldsToFill.$emailInputBox.val("vyadama@wsu.edu");
+				fieldsToFill.$nameInputBox.val("Vikram");
+				break;
+			case "Biomedicine Summer Undergraduate Research Experience (Samantha Gizerian)":
+				fieldsToFill.$emailInputBox.val("samantha.gizerian@wsu.edu");
+				fieldsToFill.$nameInputBox.val("Samantha");
+				break;
+			case "Engineering Tools for Disease Diagnostics and Treatment (Nehal Abu-Lail)":
+				fieldsToFill.$emailInputBox.val("nehal@wsu.edu");
+				fieldsToFill.$nameInputBox.val("Nehal");
+				break;
+			case "Gerontechnology-focused Summer Undergraduate Research Experience (GSUR) (Diane Co\
+ok & Maureen Schmitter-Edgecombe)":
+				fieldsToFill.$emailInputBox.val("djcook@wsu.edu");
+				fieldsToFill.$nameInputBox.val("Diane, Maureen, and Aaron");
+				break;
+			case "Landscape Ecology and Ecosystem Dynamics in the Columbia River Basin: Integrating\
+ Terrestrial and Aquatic Perspectives (Gretchen Rollwagen-Bollens)":
+				fieldsToFill.$emailInputBox.val("rollboll@wsu.edu");
+				fieldsToFill.$nameInputBox.val("Gretchen");
+				break;
+			case "Northwest Advanced Renewables Alliance (NARA) (Shelley Pressley)":
+				fieldsToFill.$emailInputBox.val("spressley@wsu.edu");
+				fieldsToFill.$nameInputBox.val("Shelley");
+				break;
+			case "Plant Genomics and Biotechnology (Amit Dhingra)":
+				fieldsToFill.$emailInputBox.val("adhingra@wsu.edu");
+				fieldsToFill.$nameInputBox.val("Amit");
+				break;
+			case "REgional Approaches to Climate CHange (REACCH) (Shelley Pressley)":
+				fieldsToFill.$emailInputBox.val("spressley@wsu.edu");
+				fieldsToFill.$nameInputBox.val("Shelley");
+				break;
+			case "Research and Extension Experiences for Undergraduates, Food Systems Program (Doug\
+ Collins)":
+				fieldsToFill.$emailInputBox.val("dpcollins@wsu.edu");
+				fieldsToFill.$nameInputBox.val("Doug");
+				break;
+			case "Research Opportunities for Native Undergraduate Students (Amit Dhingra and Lori C\
+arris)":
+				fieldsToFill.$emailInputBox.val("adhingra@wsu.edu");
+				fieldsToFill.$nameInputBox.val("Amit and Lori");
+				break;
+			case "Smart Environments (Larry Holder)":
+				fieldsToFill.$emailInputBox.val("holder@wsu.edu");
+				fieldsToFill.$nameInputBox.val("Larry");
+				break;
+//			case "Summer Undergraduate Research Fellowship (SURF)":
+//				fieldsToFill.$emailInputBox.val("SURF@pharmacy.wsu.edu");
+//				fieldsToFill.$nameInputBox.val("SURF program");
+//				break;
+			case "USPRISM: U.S.-Scotland Program for Research on Integration of Renewable Energy Re\
+sources and SMart Grid (Ali Mehrizi-Sani)":
+				fieldsToFill.$emailInputBox.val("mehrizi@eecs.wsu.edu");
+				fieldsToFill.$nameInputBox.val("Ali");
+				break;
+			default:
+				fieldsToFill.$emailInputBox.val("");
+				fieldsToFill.$nameInputBox.val("");
+		}
+	}
+}
+
+/**
+ * Binds a callback to the window's hashchange event that will keep an anchor that the user has
+ * navigated to in view.
+ */
+function initAnchorVisibilityFix() {
+	// TODO: Change approach to depend on jQuery(window).on(…)
+	window.onhashchange = adjustScrollingAfterNavToAnchor;
+}
+
+/**
+ * Initializes notice elements, which are initially hidden but come into view after a set amount
+ * of time after the page has loaded.
+ */
 function initDelayedNotices(slctrNotices, clssIsDelayed, noticeDelay) {
 
 	var $delayedNotices;	// jQuery object: all delayed notice elements
@@ -137,10 +266,10 @@ function initDelayedNotices(slctrNotices, clssIsDelayed, noticeDelay) {
 	});
 }
 
-// Initialize elements for which an expiration date has been set so that the
-// desired behavior is triggered once the item has expired.
-function initExpiringItems(slctrExpiringElems, dataAttrExprtnDate,
-		clssExpired) {
+/* Initializes elements for which an expiration date has been set so that the desired behavior is
+ * triggered once the item has expired.
+ */
+function initExpiringItems(slctrExpiringElems, dataAttrExprtnDate, clssExpired) {
 
 	var today;	// Date object constructed from today's date; used to determine
 				// whether elements have expired
@@ -174,37 +303,38 @@ function initExpiringItems(slctrExpiringElems, dataAttrExprtnDate,
 	resortListsWithExpiredItems( clssExpired );
 }
 
-// Improve user experience by resorting list elements containing expired list
-// items such that upcoming, unexpired list items appear at the top of the list
-// and are not obscured by already outdated items
+/**
+ * Improves user experience by sorting lists with chronologically expired elements.
+ *
+ * After sorting, upcoming/unexpired list items will appear at the top of the list. Expired items
+ * will be moved to the bottom of the list and will appear in reverse chronological order. This
+ * sorting process will automatically recognize when a Masonry JS list is in use and trigger its
+ * layout function after sorting.
+ */
 function resortListsWithExpiredItems(clssExpired) {
+	var $expiredItems;			// jQuery object: all list item elements with an expiration date.
+								// Used to find all list elements containing such items.
 
-	var $expiredItems;	// jQuery object: all list item elements with an
-						// expiration date. Used to find all list elements
-						// containing such items.
+	var $listsWithExpiredItems;	// jQuery object: all lists containing elements with current
+								// execution context was invoked.
 
-	var $listsWithExpiredItems;	// jQuery object: all lists containing elements
-								// with current execution context was invoked
+	var $thisList;				// jQuery object: list element from which active execution context
+								// was invoked.
 
-	var $thisList;	// jQuery object: list element from which active execution
-					// context was invoked
+	var $listItems;				// jQuery object: used once a list containing expiring items has
+								// invoked an execution context to store all of the child list items
+								// of the invoking list.
 
-	var $listItems;	// jQuery object: used once a list containing expiring items
-					// has invoked an execution context to store all of the
-					// child list items of the invoking list
+	var $lastItem;				// jQuery object: used while iterating over the child list items of
+								// a parent list element that contains expiring items; serves as
+								// reference to the last item at the end of the list.
 
-	var $lastItem;	// jQuery object: used while iterating over the child list
-					// items of a parent list element that contains expiring
-					// items; serves as reference to the last item at the end of
-					// the list
+	var $curItem;				// jQuery object: used while iterating over the child list items of
+								// a parent list element that contains expiring items; serves as
+								// reference to the curret item being considered during iteration.
 
-	var $curItem;	// jQuery object: used while iterating over the child list
-					// items of a parent list element that contains expiring
-					// items; serves as reference to the curret item being
-					// considered during iteration
-
-	var $clonedItem;	// jQuery object: used to create a clone of an expired
-						// list item while it is being moved to the end of a list
+	var $clonedItem;			// jQuery object: used to create a clone of an expired
+								// list item while it is being moved to the end of a list.
 
 	var idx;	// Iterator index
 
@@ -246,39 +376,42 @@ function resortListsWithExpiredItems(clssExpired) {
 	});
 }
 
-// Initialize automatic population of abstract submission form fields related
-// to contacting the mentor of a student based on what project they are a part
-// of. This is done to minimize the potential for errors in form input.
+/**
+ * Minimizes user input errors by automatically filling in hidden fields for a research mentor's
+ * name and email.
+ *
+ * @param {string}	slctrSelectBox		Selector string for matching the mentor/project selection
+ *										box on the form.
+ * @param {string}	slctrHiddenFields	Selector string for matching the hidden fields for the
+ *										mentor's name and email address.
+ */
 function initFacultyEmailAutoEntry(slctrSelectBox, slctrHiddenFields) {
+	var $selectField;		// jQuery object: the drop-down selection field through which the user
+							// chooses their project.
 
-	var $selectField;	// jQuery object: the drop-down selection field through
-						// which the user chooses their project
+	var $emailField;		// jQuery object: a hidden email field that is the immediate sibling
+							// following the visible selection field in the DOM.
 
-	var $emailField;	// jQuery object: a hidden email field that is the
-						// immediate sibling following the visible selection
-						// field in the DOM
+	var $facultyNameField;	// jQuery object: a hidden text input field that is the immediate
+							// sibling following the hidden email field in the DOM; stores mentor's
+							// name.
 
-	var $facultyNameField;	// jQuery object: a hidden text input field that is
-							// the immediate sibling following the hidden email
-							// field in the DOM; stores mentor's name
+	var $selectBox;			// jQuery object: the input element within the project selection field
+							// that is visible to the user.
 
-	var $selectBox;	// jQuery object: the input element within the project
-					// selection field that is visible to the user
+	var $emailInputBox;		// jQuery object: the input element within the mentor's email field
+							// which is hidden from the user.
 
-	var $emailInputBox;	// jQuery object: the input element within the mentor's
-						// email field which is hidden from the user
+	var $nameInputBox;		// jQuery object: the input element within the mentor's name field which
+							// is hidden from the user.
 
-	var $nameInputBox;	// jQuery object: the input element within the mentor's
-						// name field which is hidden from the user
+	var selectionMade;		// Holds the value of the project selectied by the user.
 
-	var selectionMade;	// Holds the value of the project selectied by the user
+	var fieldsToFill;		// Object representing the form fields to be automatically filled by JS.
 
-	var fieldsToFill;	// Object representing the form fields to be
-						// automatically filled by JS
-
-	// If it exists on the page, find the project selection field and bind its
-	// change event to a function that automatically populates hidden fields
-	// that store the mentor's contact email and name
+	// If it exists on the page, find the project selection field and bind its change event to a
+	// function that automatically populates hidden fields that store the mentor's contact email
+	// and name.
 	$( slctrSelectBox ).each(function () {
 		$selectField = $(this);
 		$emailField = $selectField.next(slctrHiddenFields);
@@ -292,6 +425,16 @@ function initFacultyEmailAutoEntry(slctrSelectBox, slctrHiddenFields) {
 				$nameInputBox = $facultyNameField.
 					find( "input[type='hidden']" ).
 					first();
+
+				// Initialize the field just in case.
+				fieldsToFill = new FieldsToFill(
+					$selectBox.val(),
+					$emailInputBox,
+					$nameInputBox
+				);
+				fillHiddenFields( fieldsToFill );
+
+				// Setup an event handler for when the user changes the selection.
 				$selectBox.change( function() {
 					selectionMade = $(this).val();
 					fieldsToFill = new FieldsToFill(
@@ -306,10 +449,19 @@ function initFacultyEmailAutoEntry(slctrSelectBox, slctrHiddenFields) {
 	});
 }
 
-// -↓-↓-↓-↓-↓-↓-↓-↓-↓-↓-↓-↓-↓-↓-↓-↓-↓-↓-↓-↓-↓-↓-↓-↓-↓-↓-↓-↓-↓-↓-↓-↓-↓-↓-↓-↓-↓-↓-
-// CLASS SPECIFICATION: FieldsToFill
-// Used to store jQuery objects for gravity forms fields that are automatically
-// populated with a mentor's correct email and name.
+////////////////////////////////////////////////////////////////////////////////////////////////////
+// CLASS DEFINITIONS ↓↓↓
+
+/**
+ * Stores jQuery objects for gravity form fields to be autofileld with a mentor's correct name
+ * and email.
+ *
+ * @class
+ *
+ * @param {string}	selectionMade	The mentor/project selected by the user.
+ * @param {Object}	$emailInputBox	jQuery object for the mentor's hidden email field on the form.
+ * @param {Object}	$nameInputBox	jQuery object for the mentor's hidden name field on the form.
+ */
 var FieldsToFill = function (selectionMade, $emailInputBox, $nameInputBox) {
 	this.selectionMade = typeof selectionMade === "string" ?
 		selectionMade :
@@ -322,76 +474,15 @@ var FieldsToFill = function (selectionMade, $emailInputBox, $nameInputBox) {
 		$();
 }
 
-// METHOD: isValid
-// Indicates whether the instance of FieldsToFill has been properly constructed
-// with valid references to jQuery objects
+/**
+ * Indicates whether the instance of FieldsToFill has been properly constructed with valid
+ * references to jQuery objects.
+ * 
+ * @returns {boolean}
+ */
 FieldsToFill.prototype.isValid = function () {
 	return this.selectionMade != "" && this.$emailInputBox.length > 0 &&
 		this.$nameInputBox.length > 0;
-}
-
-// End of specification for FieldsToFill class.
-// -↑-↑-↑-↑-↑-↑-↑-↑-↑-↑-↑-↑-↑-↑-↑-↑-↑-↑-↑-↑-↑-↑-↑-↑-↑-↑-↑-↑-↑-↑-↑-↑-↑-↑-↑-↑-↑-↑-
-
-// Fills hidden fields on the gravity form for abstract submission. Fields are
-// related to inforation about the faculty member who mentors the student.
-function fillHiddenFields(fieldsToFill) {
-	// TODO: Update for Summer 2017
-	if(fieldsToFill instanceof FieldsToFill && fieldsToFill.isValid()) {
-		switch(fieldsToFill.selectionMade) {
-			case "Atmospheric Chemistry and Climate Change: Measurements and Modeling in the Pacific Northwest (Shelley Pressley)":
-				fieldsToFill.$emailInputBox.val("spressley@wsu.edu");
-				fieldsToFill.$nameInputBox.val("Shelley");
-				break;
-			case "Biomedicine Summer Undergraduate Research Experience (Samantha Gizerian)":
-				fieldsToFill.$emailInputBox.val("samantha.gizerian@wsu.edu");
-				fieldsToFill.$nameInputBox.val("Samantha");
-				break;
-			case "Engineering Tools for Disease Diagnostics and Treatment (Nehal Abu-Lail)":
-				fieldsToFill.$emailInputBox.val("nehal@wsu.edu");
-				fieldsToFill.$nameInputBox.val("Nehal");
-				break;
-			case "Gerontechnology-focused Summer Undergraduate Research Experience (GSUR) (Diane Cook & Maureen Schmitter-Edgecombe)":
-				fieldsToFill.$emailInputBox.val("djcook@wsu.edu");
-				fieldsToFill.$nameInputBox.val("Diane and Maureen");
-				break;
-			case "Landscape Ecology and Ecosystem Dynamics in the Columbia River Basin: Integrating Terrestrial and Aquatic Perspectives (Gretchen Rollwagen-Bollens)":
-				fieldsToFill.$emailInputBox.val("rollboll@wsu.edu");
-				fieldsToFill.$nameInputBox.val("Gretchen");
-				break;
-			case "Northwest Advanced Renewables Alliance (NARA) (Shelley Pressley)":
-				fieldsToFill.$emailInputBox.val("spressley@wsu.edu");
-				fieldsToFill.$nameInputBox.val("Shelley");
-				break;
-			case "Plant Genomics and Biotechnology (Amit Dhingra)":
-				fieldsToFill.$emailInputBox.val("adhingra@wsu.edu");
-				fieldsToFill.$nameInputBox.val("Amit");
-				break;
-			case "REgional Approaches to Climate CHange (REACCH) (Shelley Pressley)":
-				fieldsToFill.$emailInputBox.val("spressley@wsu.edu");
-				fieldsToFill.$nameInputBox.val("Shelley");
-				break;
-			case "Research Opportunities for Native Undergraduate Students (Amit Dhingra and Lori Carris)":
-				fieldsToFill.$emailInputBox.val("adhingra@wsu.edu");
-				fieldsToFill.$nameInputBox.val("Amit and Lori");
-				break;
-			case "Smart Environments (Larry Holder)":
-				fieldsToFill.$emailInputBox.val("holder@wsu.edu");
-				fieldsToFill.$nameInputBox.val("Larry");
-				break;
-//			case "Summer Undergraduate Research Fellowship (SURF)":
-//				fieldsToFill.$emailInputBox.val("SURF@pharmacy.wsu.edu");
-//				fieldsToFill.$nameInputBox.val("SURF program");
-//				break;
-			case "USPRISM: U.S.-Scotland Program for Research on Integration of Renewable Energy Resources and SMart Grid (Ali Mehrizi-Sani)":
-				fieldsToFill.$emailInputBox.val("mehrizi@eecs.wsu.edu");
-				fieldsToFill.$nameInputBox.val("Ali");
-				break;
-			default:
-				fieldsToFill.$emailInputBox.val("");
-				fieldsToFill.$nameInputBox.val("");
-		}
-	}
 }
 
 })( jQuery );
