@@ -6667,19 +6667,26 @@ div.auto-scroller ul li {
 .page-header {
   height: 230px;
   position: relative;
-  width: 1188px;
+  width: 100%;
+  background-position: center center;
+  background-size: auto 100%;
 }
 .page-header__column-1 {
   background-color: rgba(0, 0, 0, 0.75);
-  bottom: 0;
+  top: 50%;
   box-sizing: border-box;
   color: #ffffff;
   display: block;
   left: 0;
   margin: 0 2rem;
   padding: 0.5rem;
-  position: absolute;
   text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.75);
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+.page-header .page-header__column-1 {
+  position: absolute;
 }
 .page-header__text-title,
 .page-header__text-breadcrumb {
@@ -8607,6 +8614,9 @@ div.iframe-wrapper.home {
 .gform_wrapper form .photo-release-agreement-example p + p,
 .gform_wrapper .photo-release-agreement-example p + p {
   margin-top: 1rem;
+}
+.page-header--news {
+  background-image: url(/wp-content/uploads/sites/907/2018/07/article-banner_news_stack-of-newspapers_1188x230.jpg);
 }
 .row.has-linked-columns:not(.gutter) {
   margin-top: 1rem;
