@@ -1,6 +1,8 @@
 ﻿@import  'https://fonts.googleapis.com/css?family=Roboto+Mono:300|Roboto+Condensed:400,700|Roboto+Slab|PT+Serif';
 
-/* Built with the LESS CSS preprocessor [http://lesscss.org/]. Please see [https://github.com/invokeImmediately/summerresearch.wsu.edu] for a repository of source code. */
+/*! ================================================================================================
+**  STYLE RULES SPECIFIC TO THE SUMMER RESEARCH WEBSITE
+*/
 /*! ================================================================================================
 *** MASTER STYLE SHEET for WSU Office of Undergraduate Education (OUE) Websites
 *** ================================================================================================
@@ -1258,6 +1260,12 @@ body.blog .column header.article-header+* {
 	padding-top: 15px;
 }
 
+.hN--subtitle {
+	display: block;
+	font-size: .4em;
+	line-height: 1.375em;
+}
+
 h1,h2,h3,h4,h5,h6 {
 	padding: 0;
 	margin: 0;
@@ -1450,19 +1458,6 @@ header.main-header .header-group {
 
 .column header:first-child+h1,.column header:first-child+h2.fancy.with-top-border,.column header:first-child+h3.fancy.with-top-border {
 	margin-top: 0;
-}
-
-/*!Example from SASS:
-** .person { }
-**  .person__face {
-**    .person--handsome & { }
-**  }
-**.person--handsome { }
-*/
-.hN--subtitle {
-	display: block;
-	font-size: .4em;
-	line-height: 1.375em;
 }
 
 footer.article-footer div.author-info {
@@ -5150,6 +5145,38 @@ div.auto-scroller ul li {
 	margin-top: 0;
 }
 
+.page-header {
+	height: 230px;
+	position: relative;
+	width: 100%;
+	background-position: center center;
+	background-size: auto 100%;
+}
+
+.page-header__column-1 {
+	background-color: rgba(0,0,0,.75);
+	top: 50%;
+	box-sizing: border-box;
+	color: #fff;
+	display: block;
+	left: 0;
+	margin: 0 2rem;
+	padding: .5rem;
+	text-shadow: 1px 1px 8px rgba(0,0,0,.75);
+	-webkit-transform: translateY(-50%);
+	-moz-transform: translateY(-50%);
+	transform: translateY(-50%);
+}
+
+.page-header .page-header__column-1 {
+	position: absolute;
+}
+
+.page-header__text-breadcrumb,.page-header__text-title {
+	color: inherit;
+	text-shadow: inherit;
+}
+
 .width--5pct {
 	width: 5%;
 }
@@ -6592,14 +6619,6 @@ div.auto-scroller ul li {
 	background-color: #feefe2;
 }
 
-/*! ╔══════════════════════════════════════════════════════════════════════════════════════════════╗
-*   ║ LAYOUTS SPECIFIC TO THE SUMMER RESEARCH WEBSITE ############################################ ║
-*   ╚══════════════════════════════════════════════════════════════════════════════════════════════╝
-*/
-/*!   ╔════════════════════════════════════════════════════════════════════════════════════════════╗
-*     ║ #### Sections: Body & Page Level ######################################################### ║
-*     ╚════════════════════════════════════════════════════════════════════════════════════════════╝
-*/
 main {
 	background: #fff url(/wp-content/uploads/sites/907/2016/05/tileable-papar-texture_500x500_opacity-0.5.png) left top repeat;
 }
@@ -6610,12 +6629,12 @@ main {
 	background-attachment: fixed;
 }
 
-/*!   ╔════════════════════════════════════════════════════════════════════════════════════════════╗
-*     ║ #### Sections: Headers ################################################################### ║
-*     ╚════════════════════════════════════════════════════════════════════════════════════════════╝
-*/
 header.main-header {
 	background: #981e32 url(/wp-content/uploads/sites/50/2015/04/seamless-marble-texture_528x528.png) repeat scroll left top;
+	color: #fff !important;
+}
+
+.main-header sub:not(.unset),.main-header sup:not(.unset) {
 	color: #fff !important;
 }
 
@@ -6753,18 +6772,10 @@ header.main-header {
 	text-transform: none;
 }
 
-.main-header sub:not(.unset),.main-header sup:not(.unset) {
-	color: #fff !important;
-}
-
 .column section.header-newsEvents {
 	background: url(/wp-content/uploads/sites/50/2015/10/section-bar.png) no-repeat left top, url(/wp-content/uploads/sites/50/2015/10/section-bar.png) no-repeat right top, url(/wp-content/uploads/sites/50/2015/06/wpbg-news-events-v2.png) no-repeat center;
 }
 
-/*!   ╔════════════════════════════════════════════════════════════════════════════════════════════╗
-*     ║ #### Sections: Asides #################################################################### ║
-*     ╚════════════════════════════════════════════════════════════════════════════════════════════╝
-*/
 .column aside {
 	font-size: .8rem;
 }
@@ -6819,10 +6830,6 @@ header.main-header {
 	font-size: 1.05rem;
 }
 
-/*!   ╔════════════════════════════════════════════════════════════════════════════════════════════╗
-*     ║ #### Content Grouping: Paragraphs ######################################################## ║
-*     ╚════════════════════════════════════════════════════════════════════════════════════════════╝
-*/
 .column p.rounded-box {
 	border: 1px solid #d9d9d9;
 	border-radius: 7px;
@@ -6978,10 +6985,6 @@ ul.program-info>li.gutter-sizer {
 	width: calc(2% + 14px) !important;
 }
 
-/*!   ╔═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗
-**    ║ #### Content Grouping: Interactive Containers ################################################################### ║
-**    ╚═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝
-*/
 div.interactively-flipped-panels {
 	background: #5e6a71 url(/wp-content/uploads/sites/907/2016/05/texture_brushed-metal.jpg) repeat scroll left top;
 }
@@ -7175,10 +7178,6 @@ div.interactively-flipped-panels.fifths div.container div.panel-wrapper.fifth di
 	background: url(/wp-content/uploads/sites/907/2017/01/homepage-buttons_summer-research-events_v02_hovered.jpg) no-repeat center center;
 }
 
-/*!   ╔═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗
-*     ║ #### Embedded Content: Iframes ################################################################################## ║
-*     ╚═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝
-*/
 div.iframe-wrapper {
 	position: relative;
 	height: 0;
@@ -7205,10 +7204,6 @@ div.iframe-wrapper.home {
 	border: 0;
 }
 
-/*!   ╔═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗
-*     ║ #### Custom, generic layouts #################################################################################### ║
-*     ╚═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝
-*/
 .has-expiration {
 	-webkit-transition: opacity .5s ease;
 	-moz-transition: opacity .5s ease;
@@ -7225,21 +7220,21 @@ div.iframe-wrapper.home {
 	text-decoration: line-through;
 }
 
-.gform_wrapper form li.photo-release-agreement-example,.gform_wrapper li.photo-release-agreement-example {
+.gform_wrapper .photo-release-agreement-example,.gform_wrapper form .photo-release-agreement-example {
 	padding: 2rem !important;
 	margin: 2rem !important;
 	border: 1px solid rgba(0,0,0,.5);
 	border-radius: .47058824rem;
 }
 
-.gform_wrapper form li.photo-release-agreement-example p+p,.gform_wrapper li.photo-release-agreement-example p+p {
+.gform_wrapper .photo-release-agreement-example p+p,.gform_wrapper form .photo-release-agreement-example p+p {
 	margin-top: 1rem;
 }
 
-/*!   ╔═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗
-*     ║ #### Layouts included via LESS mixins ########################################################################### ║
-*     ╚═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝
-*/
+.page-header--news {
+	background-image: url(/wp-content/uploads/sites/907/2018/07/article-banner_news_stack-of-newspapers_1188x230.jpg);
+}
+
 .row.has-linked-columns:not(.gutter) {
 	margin-top: 1rem;
 }
