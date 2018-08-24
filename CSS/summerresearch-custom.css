@@ -1,9 +1,6 @@
 /* Built with the LESS CSS preprocessor [http://lesscss.org/]. Please see [https://github.com/invokeImmediately/summerresearch.wsu.edu] for a repository of source code. */
 @import url('https://fonts.googleapis.com/css?family=Roboto+Mono:300|Roboto+Condensed:400,700|Roboto+Slab|PT+Serif');
 /*! ================================================================================================
-**  STYLE RULES SPECIFIC TO THE SUMMER RESEARCH WEBSITE
-*/
-/*! ================================================================================================
 *** MASTER STYLE SHEET for WSU Office of Undergraduate Education (OUE) Websites
 *** ================================================================================================
 ***   AUTHOR: Daniel Rieck [daniel.rieck@wsu.edu] (https://github.com/invokeImmediately)            
@@ -8131,6 +8128,13 @@ div.auto-scroller ul li {
 .bgc--orange--tint {
   background-color: #feefe2;
 }
+/*! ================================================================================================
+*** STYLE RULES SPECIFIC TO THE SUMMER RESEARCH WEBSITE
+*** ================================================================================================
+***   GIT REPOSITORY: https://github.com/invokeImmediately/summerresearch.wsu.edu/
+***     (Please see above git repository for fully documented, precompiled source code.)
+*** ================================================================================================
+**/
 @media all and (max-width: 1073px) {
   body {
     background: #b5babe;
@@ -9702,4 +9706,12 @@ div.iframe-wrapper.home {
 .column .notice.news-link::before {
   width: 72px;
   background: #5e6a71 url(/wp-content/uploads/sites/907/2017/08/icon_view-more-news.png) 4px center no-repeat;
+}
+.column .notice.yellow-download-notice {
+  background-color: #f9f4e7;
+  padding-right: calc(1rem + 32px);
+}
+.column .notice.yellow-download-notice::before {
+  width: 32px;
+  background: #ffb81c url(/wp-content/uploads/sites/907/2018/08/icon_genericons-neue_download-notice_yellow.png) 4px center no-repeat;
 }
