@@ -38,9 +38,9 @@ o+Condensed:400,700|Roboto+Slab|PT+Serif\');\r\n',
 			'stopAfterFirstMatch': true
 		},
 		minCssFileExtension: '.min.css',
-		minCssFileHeaderStr: '/* Built with the LESS CSS preprocessor [http://lesscss.org/]. Please\
- see [https://github.com/invokeImmediately/summerresearch.wsu.edu] for a repository of source code.\
- */\r\n',
+		minCssFileHeaderStr: '/*! Built with the Less CSS preprocessor [http://lesscss.org/]. Pleas\
+e see [https://github.com/invokeImmediately/summerresearch.wsu.edu] for a repository of source code\
+. */\r\n',
 		sourceFile: './CSS/summerresearch-custom.less'
 	};
 }
