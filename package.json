@@ -20,7 +20,7 @@
   },
   "homepage": "https://github.com/invokeImmediately/summerresearch.wsu.edu#readme",
   "devDependencies": {
-    "gulp": "github:gulpjs/gulp#4.0",
+    "gulp": "^4.0.0",
     "gulp-clean-css": "^3.9.4",
     "gulp-concat": "^2.6.1",
     "gulp-dest": "^0.2.3",
