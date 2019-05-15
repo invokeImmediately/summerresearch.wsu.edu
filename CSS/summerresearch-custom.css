@@ -489,17 +489,6 @@ section.side-right .column.two p {
 main .row {
   font-size: 1rem;
 }
-main .row > .column table > tbody > tr > td > p:last-child,
-main .row > .column table > tbody > tr > td > section > p:last-child,
-main .row > .column table > tbody > tr > td > div > p:last-child,
-main .row > .column table > tbody > tr > td > ul:last-child,
-main .row > .column table > tbody > tr > td > section > ul:last-child,
-main .row > .column table > tbody > tr > td > div > ul:last-child,
-main .row > .column table > tbody > tr > td > ol:last-child,
-main .row > .column table > tbody > tr > td > section > ol:last-child,
-main .row > .column table > tbody > tr > td > div > ol:last-child {
-  margin-bottom: 0;
-}
 .h1-header + section.pad-top .column {
   padding-top: 2rem;
 }
@@ -3438,7 +3427,7 @@ a.vpue-tooltip span b {
   background-color: rgba(198, 12, 48, 0.15);
   border-color: #c60c30;
   border-radius: 0;
-  box-shadow: inset 0 -2px 0 transparent;
+  box-shadow: inset 0 -1px 0 transparent;
   text-shadow: 1px 1px 2px rgba(152, 30, 50, 0.3);
 }
 .column a.gform_anchor {
@@ -3502,6 +3491,7 @@ body.user-is-tabbing .column a:focus::after {
 }
 .column a.non-text-link:hover img,
 .column .article-thumbnail a:hover img {
+  border-color: #f45372;
   box-shadow: 0 3px #f45372;
 }
 .column a.non-text-link.--not-baseline::before,
@@ -3571,8 +3561,8 @@ span.has-tool-tip,
 span.has-tooltip {
   position: relative;
   margin-bottom: -3px;
-  border-bottom: 1px dotted rgba(0, 165, 189, 0.25);
-  color: #00a5bd;
+  border-bottom: 1px dotted rgba(0, 70, 189, 0.85);
+  color: #0046bd;
   transition-property: color, background, border-color;
   -webkit-transition-property: color, background, border-color;
   transition-duration: 0.3s, 0.3s, 0.3s;
@@ -3582,9 +3572,9 @@ span.has-tooltip {
 }
 span.has-tool-tip:hover,
 span.has-tooltip:hover {
-  background-color: rgba(0, 165, 189, 0.2);
-  border-color: rgba(0, 165, 189, 0.67);
-  color: #2f5055;
+  background-color: rgba(88, 149, 255, 0.1);
+  border-color: rgba(88, 149, 255, 0.85);
+  color: #5895ff;
 }
 @media all and (max-width: 989px) {
   span.hides-with-spine {
@@ -5639,22 +5629,22 @@ div.auto-scroller ul li {
 }
 @media all and (min-width: 481px) {
   .show-on-mobile {
-    display: none;
+    display: none !important;
   }
 }
 @media all and (max-width: 480px) {
   .hide-on-mobile {
-    display: none;
+    display: none !important;
   }
 }
 @media all and (min-width: 792px) {
   .show-on-tablet {
-    display: none;
+    display: none !important;
   }
 }
 @media all and (max-width: 791px) {
   .hide-on-tablet {
-    display: none;
+    display: none !important;
   }
 }
 .dy--flex {
