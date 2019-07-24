@@ -1009,6 +1009,7 @@ h3.solid::before,
 h4.solid::before,
 h5.solid::before,
 h6.solid::before {
+  box-sizing: border-box;
   content: "";
   left: 0;
   height: 100%;
