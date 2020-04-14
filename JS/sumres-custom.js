@@ -1,31 +1,27 @@
-/*! This custom JavaScript code has been minified with gulp-uglify. Please see [https://github.com/i
-**  nvokeImmediately/summerresearch.wsu.edu] for a repository of fully documented source code.
-*/
-
-/*  ┌──────────────────────────────────────────────────────────────────────────────────────────────┐
-**  │ FILENAME: sumres-custom.less                                                                 │
-**  │                                                                                              │
-**  │ AUTHOR: Daniel Rieck <daniel.rieck@wsu.edu> (https://github.com/invokeImmediately)           │
-**  │                                                                                              │
-**  │ SUMMARY: Custom JS code specific to the WSU Summer Undergraduate Research program website.   │
-**  └──────────────────────────────────────────────────────────────────────────────────────────────┘
-*/
+/*!
+ * sumres-custom.js: Site-specific JS for the WSUWP website of the [Summer Undergraduate Research
+ * program](https://summerresearch.wsu.edu).
+ *
+ * @author - Daniel Rieck ( danielcrieck@gmail.com ) [https://github.com/invokeImmediately]
+ * @todo - Revise the inline documentation of this file to break down 
+ */
 
 /*  ────────────────────────────────────────────────────────────────────────────────────────────────
 **  Table of Contents
 **  ─────────────────────────────────────────────────────────────────────────────────────────────
-**  Main execution section.....................................................................42
-**    DOM-ready execution block................................................................47
-**    Execution block bound to window load event...............................................56
-**  Function definition section................................................................62
+**  §1: Main execution.........................................................................42
+**    §1.1: DOM-ready Execution Block..........................................................47
+**    §1.2: Window Loaded Event Binding........................................................56
+**  §2: Function Definitions...................................................................62
+**    §2.1: For Calendar Enhancements............................................................
+**      §2.1.1: resortListsWithExpiredItems...................................................316
 **    addPageHeaderToNews......................................................................67
 **    adjustScrollingAfterNavToAnchor..........................................................89
 **    fillHiddenFields........................................................................166
 **    initAnchorVisibilityFix.................................................................243
 **    initDelayedNotices......................................................................252
-**    resortListsWithExpiredItems.............................................................316
 **    initFacultyEmailAutoEntry...............................................................390
-**  Class definition section..................................................................455
+**  Class Definition Section..................................................................455
 **    FieldsToFill............................................................................467
 **    FieldsToFill.prototype.isValid..........................................................485
 **  ────────────────────────────────────────────────────────────────────────────────────────────────
@@ -43,7 +39,10 @@
 'use strict';
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
-// MAIN EXECUTION ↓↓↓
+// §1: Main Execution
+
+//   -----------------------------------------------------------------------------------------------
+//   §1.1: DOM-ready Execution
 
 /**
  * Uses the jQuery interface to execute a block of statements once the DOM is ready.
@@ -53,6 +52,9 @@ $( function() {
 	initAnchorVisibilityFix();
 	initExpiringItems(".has-expiration", "expirationDate", "is-expired");
 } );
+
+//   -----------------------------------------------------------------------------------------------
+//   §1.2: Window Loaded Event Binding
 
 /**
  * Binds a series of execution statements to window loaded event.
@@ -155,6 +157,9 @@ function adjustScrollingAfterNavToAnchor() {
 		0;
 	$("html, body").scrollTop( updatedScrollPos );
 }
+
+//   -----------------------------------------------------------------------------------------------
+//   §1.1: DOM-ready Execution
 
 /**
  * Fills hidden fields on the gravity form for abstract submission.
