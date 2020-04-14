@@ -26,11 +26,11 @@
 ***    >>> §5.1: Interactive containers.......................................................353
 ***  §6: Styling at the embedded content level................................................660
 ***    >>> §6.1: Tabular data.................................................................664
-***  §7: Styling included via Less mixins.....................................................698
-***  §8: Site-specific semantic CSS styling...................................................733
+***  §7: Site-specific semantic CSS styling...................................................698
+***  §8: Styling included via Less mixins.....................................................733
+***  §9: Header styling hotfix................................................................791
 ***  ───────────────────────────────────────────────────────────────────────────────────────────────
 **/
-
 
 /**   ----------------------------------------------------------------------------------------------
 ***   §1: Settings for global Less variables
@@ -44,7 +44,7 @@
 **/
 
 @import "..\WSU-UE---CSS\variables.less";
-@import "..\WSU-UE---CSS\wp-master-style-sheet.less";
+@import "..\WSU-UE---CSS\css-build-entry-point.less";
 
 /*! ================================================================================================
 *** STYLE RULES SPECIFIC TO THE SUMMER RESEARCH WEBSITE
@@ -760,6 +760,7 @@ div.iframe-wrapper {
 
 .add-download-notice(
 	@hex-bright-gray,
+	@hex-darkest-gray,
 	@hex-dark-gray,
 	url(/wp-content/uploads/sites/907/2017/08/icon_genericons-neue_download-notice_gray.png)
 );
@@ -767,6 +768,7 @@ div.iframe-wrapper {
 .add-new-notice-class(
 	news-link,
 	@hex-bright-gray,
+	@hex-darkest-gray,
 	@hex-dark-gray,
 	url(/wp-content/uploads/sites/907/2017/08/icon_view-more-news.png),
 	100px,
@@ -777,9 +779,18 @@ div.iframe-wrapper {
 .add-new-notice-class(
 	yellow-download-notice,
 	@hex-bright-yellow,
+	@hex-dark-yellow,
 	@hex-accent-yellow,
 	url(/wp-content/uploads/sites/907/2018/08/icon_genericons-neue_download-notice_yellow.png),
 	32px,
 	24px,
 	"centered"
 );
+
+/**   ----------------------------------------------------------------------------------------------
+***   §9: Header styling hotfix
+**/
+
+.column > header:first-child {
+	display: none;
+}
