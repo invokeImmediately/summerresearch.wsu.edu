@@ -16,9 +16,7 @@
 ***  §2: Import of OUE-wide style rules........................................................43
 ***  §3: Styling at body & page level..........................................................58
 ***  §4: Styling at the section level..........................................................96
-***    >>> §4.1: Headers......................................................................100
-***       →→→ §4.1.1: Main header.............................................................104
-***       →→→ §4.1.2: Sectional headers.......................................................118
+***    >>> §4.1: Sectional headers............................................................118
 ***    >>> §4.2: Asides.......................................................................135
 ***  §5: Styling at the content grouping level................................................189
 ***    >>> §5.1: Lists........................................................................193
@@ -29,6 +27,7 @@
 ***  §7: Site-specific semantic CSS styling...................................................698
 ***  §8: Styling included via Less mixins.....................................................733
 ***  §9: Header styling hotfix................................................................791
+***  §10: Summer Research calendar............................................................791
 ***  ───────────────────────────────────────────────────────────────────────────────────────────────
 **/
 
@@ -44,6 +43,8 @@
 **/
 
 @import "..\WSU-UE---CSS\variables.less";
+@use-design__daesa-main-headers: false;
+@use-design__provost-main-headers: true;
 @import "..\WSU-UE---CSS\css-build-entry-point.less";
 
 /*! ================================================================================================
@@ -97,25 +98,7 @@ main {
 **/
 
 /**     ····························································································
-***     >>> §4.1: Headers
-**/
-
-/**        · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · ·
-***        →→→ §4.1.1: Main header
-**/
-
-header.main-header {
-	&:extend(.has-dflt-font);
-	background: #981e32 url(/wp-content/uploads/sites/50/2015/04/seamless-marble-texture_528x528.png) repeat scroll left top;
-	color: #fff !important;
-}
-
-.main-header sub:not(.unset), .main-header sup:not(.unset) {
-	color: #fff !important;
-}
-
-/**        · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · ·
-***        →→→ §4.1.2: Sectional headers
+***     >>> §4.1: Sectional headers
 **/
 
 .use-sectional-article-headers();
@@ -794,3 +777,31 @@ div.iframe-wrapper {
 .column > header:first-child {
 	display: none;
 }
+
+/** ================================================================================================
+*** §10: Summer Research Calendar
+**/
+
+@rs-sum-res-calendar: {
+	.single-tribe_events,
+	.post-type-archive-tribe_events {
+		.main-header .header-group .sub-header {
+			&.sub-header::before {
+				border-left: 1px solid #fff;
+				content: "Division of Academic Engagement and Student Achievement";
+				display: inline;
+				font-weight: 300;
+				line-height: 1.4em;
+				margin-left: 1em;
+				margin-top: -.2em;
+				padding-left: 1.25em;
+				text-transform: uppercase;
+			}
+
+			.sub-header-default {
+				visibility: hidden;
+			}
+		}
+	}
+};
+@rs-sum-res-calendar();
