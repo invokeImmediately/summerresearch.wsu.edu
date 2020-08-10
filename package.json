@@ -28,6 +28,7 @@
     "gulp-insert": "^0.5.0",
     "gulp-insert-lines": "github:invokeImmediately/gulp-insert-lines",
     "gulp-less": "^4.0.1",
+    "gulp-notify": "^3.2.0",
     "gulp-replace": "^0.6.1",
     "gulp-uglify": "^3.0.2",
     "pump": "^3.0.0"
