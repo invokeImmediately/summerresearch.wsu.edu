@@ -6,26 +6,25 @@
  * @todo - Revise the inline documentation of this file to break down 
  */
 
-/*  ────────────────────────────────────────────────────────────────────────────────────────────────
-**  Table of Contents
-**  ─────────────────────────────────────────────────────────────────────────────────────────────
-**  §1: Main execution.........................................................................42
-**    §1.1: DOM-ready Execution Block..........................................................47
-**    §1.2: Window Loaded Event Binding........................................................56
-**  §2: Function Definitions...................................................................62
-**    §2.1: For Calendar Enhancements............................................................
-**      §2.1.1: resortListsWithExpiredItems...................................................316
-**    addPageHeaderToNews......................................................................67
-**    adjustScrollingAfterNavToAnchor..........................................................89
-**    fillHiddenFields........................................................................166
-**    initAnchorVisibilityFix.................................................................243
-**    initDelayedNotices......................................................................252
-**    initFacultyEmailAutoEntry...............................................................390
-**  Class Definition Section..................................................................455
-**    FieldsToFill............................................................................467
-**    FieldsToFill.prototype.isValid..........................................................485
-**  ────────────────────────────────────────────────────────────────────────────────────────────────
-*/
+////////////////////////////////////////////////////////////////////////////////////////////////////
+// TABLE OF CONTENTS
+// -----------------
+//  §1: Main execution.........................................................................41
+//    §1.1: DOM-ready Execution Block..........................................................44
+//    §1.2: Window Loaded Event Binding........................................................56
+//  §2: Function Definitions...................................................................67
+//    §2.1: addPageHeaderToNews................................................................71
+//    §2.2: adjustScrollingAfterNavToAnchor....................................................89
+//    §2.3: fillHiddenFields..................................................................168
+//    §2.4: initAnchorVisibilityFix...........................................................195
+//    §2.5: initDelayedNotices................................................................207
+//    §2.6: initExpiringItems.................................................................233
+//    §2.7: resortListsWithExpiredItems.......................................................273
+//    §2.8: initFacultyEmailAutoEntry.........................................................349
+//  §3: Class Definition Section..............................................................425
+//    §3.1: FieldsToFill......................................................................428
+//    §3.2: FieldsToFill.prototype.isValid....................................................453
+////////////////////////////////////////////////////////////////////////////////////////////////////
 
 /**
  * An IIFE that contains custom JS code specific to summerresearch.wsu.edu.
@@ -39,10 +38,10 @@
 'use strict';
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
-// §1: Main Execution
+// §1: MAIN EXECUTION
 
-//   -----------------------------------------------------------------------------------------------
-//   §1.1: DOM-ready Execution
+////////
+// §1.1: DOM-ready Execution
 
 /**
  * Uses the jQuery interface to execute a block of statements once the DOM is ready.
@@ -53,8 +52,8 @@ $( function() {
 	initExpiringItems(".has-expiration", "expirationDate", "is-expired");
 } );
 
-//   -----------------------------------------------------------------------------------------------
-//   §1.2: Window Loaded Event Binding
+////////
+// §1.2: Window Loaded Event Binding
 
 /**
  * Binds a series of execution statements to window loaded event.
@@ -65,7 +64,11 @@ $( window ).on( "load", function() {
 });
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
-// FUNCTION DEFINITIONS ↓↓↓
+// §2: FUNCTION DEFINITIONS
+
+
+////////
+// §2.1: addPageHeaderToNews
 
 /**
  * Adds a page header containing navigational context to the news section of the website.
@@ -81,6 +84,9 @@ age-header--news"><div class="column one page-header__column-1"><h1 class="page-
 			break;
 	}
 }
+
+////////
+// §2.2: adjustScrollingAfterNavToAnchor
 
 /**
  * Applies corrections to window scrolling position to keep an anchor that the user has navigated to
@@ -158,8 +164,8 @@ function adjustScrollingAfterNavToAnchor() {
 	$("html, body").scrollTop( updatedScrollPos );
 }
 
-//   -----------------------------------------------------------------------------------------------
-//   §1.1: DOM-ready Execution
+////////
+// §2.3: fillHiddenFields
 
 /**
  * Fills hidden fields on the gravity form for abstract submission.
@@ -169,50 +175,10 @@ function adjustScrollingAfterNavToAnchor() {
 function fillHiddenFields(fieldsToFill) {
 	if(fieldsToFill instanceof FieldsToFill && fieldsToFill.isValid()) {
 		switch(fieldsToFill.selectionMade) {
-			case "Bioplastics & Biocomposites (Vikram Yadama)":
-				fieldsToFill.$emailInputBox.val("vyadama@wsu.edu");
-				fieldsToFill.$nameInputBox.val("Vikram");
-				break;
-			case "Engineering Tools for Disease Diagnostics and Treatment (Neil Ivory)":
-				fieldsToFill.$emailInputBox.val("cfivory@wsu.edu");
-				fieldsToFill.$nameInputBox.val("Neil");
-				break;
-			case "Gerontechnology-focused Summer Undergraduate Research Experience (GSUR) (Diane Co\
-ok & Maureen Schmitter-Edgecombe)":
-				fieldsToFill.$emailInputBox.val("djcook@wsu.edu");
-				fieldsToFill.$nameInputBox.val("Diane and Maureen");
-				break;
-			case "IRES/USPRISM: U.S.-Scotland Program for Research on Integration of Renewable Ener\
-gy Resources and SMart Grid (Ali Mehrizi-Sani)":
-				fieldsToFill.$emailInputBox.val("mehrizi@eecs.wsu.edu");
-				fieldsToFill.$nameInputBox.val("Ali");
-				break;
-			case "Multidisciplinary Undergraduate Research Training in Wearable Computing (Hassan G\
-hasemzadeh)":
+			case "Multidisciplinary Undergraduate Research Training in Wearable Computing " +
+					"(Hassan Ghasemzadeh)":
 				fieldsToFill.$emailInputBox.val("hassan.ghasemzadeh@wsu.edu");
 				fieldsToFill.$nameInputBox.val("Hassan");
-				break;
-			case "Northwest Advanced Renewables Alliance (NARA) (Shelley Pressley)":
-				fieldsToFill.$emailInputBox.val("spressley@wsu.edu");
-				fieldsToFill.$nameInputBox.val("Shelley");
-				break;
-			case "Plant Genomics and Biotechnology (Amit Dhingra)":
-				fieldsToFill.$emailInputBox.val("adhingra@wsu.edu");
-				fieldsToFill.$nameInputBox.val("Amit");
-				break;
-			case "Research Opportunities for Native Undergraduate Students (Amit Dhingra & Lori Car\
-ris)":
-				fieldsToFill.$emailInputBox.val("adhingra@wsu.edu");
-				fieldsToFill.$nameInputBox.val("Amit and Lori");
-				break;
-			case "Summer Undergraduate Research Fellowship, or SURF (Kay Meier)":
-				fieldsToFill.$emailInputBox.val("kmeier@wsu.edu");
-				fieldsToFill.$nameInputBox.val("Kay");
-				break;
-			case "Sustainable High-value Horticulture & Processing Systems in Washington State (Dou\
-g Collins)":
-				fieldsToFill.$emailInputBox.val("dpcollins@wsu.edu");
-				fieldsToFill.$nameInputBox.val("Doug");
 				break;
 			case "Undergraduate Research in Smart Environments (Larry Holder)":
 				fieldsToFill.$emailInputBox.val("holder@wsu.edu");
@@ -225,6 +191,9 @@ g Collins)":
 	}
 }
 
+////////
+// §2.4: initAnchorVisibilityFix
+
 /**
  * Binds a callback to the window's hashchange event that will keep an anchor that the user has
  * navigated to in view.
@@ -233,6 +202,9 @@ function initAnchorVisibilityFix() {
 	// TODO: Change approach to depend on jQuery(window).on(…)
 	window.onhashchange = adjustScrollingAfterNavToAnchor;
 }
+
+////////
+// §2.5: initDelayedNotices
 
 /**
  * Initializes notice elements, which are initially hidden but come into view after a set amount
@@ -256,6 +228,9 @@ function initDelayedNotices(slctrNotices, clssIsDelayed, noticeDelay) {
 		}, noticeDelay );
 	});
 }
+
+////////
+// §2.6: initExpiringItems
 
 /* Initializes elements for which an expiration date has been set so that the desired behavior is
  * triggered once the item has expired.
@@ -293,6 +268,9 @@ function initExpiringItems(slctrExpiringElems, dataAttrExprtnDate, clssExpired) 
 	});
 	resortListsWithExpiredItems( clssExpired );
 }
+
+////////
+// §2.7: resortListsWithExpiredItems
 
 /**
  * Improves user experience by sorting lists with chronologically expired elements.
@@ -366,6 +344,9 @@ function resortListsWithExpiredItems(clssExpired) {
 		}
 	});
 }
+
+////////
+// §2.8: initFacultyEmailAutoEntry
 
 /**
  * Minimizes user input errors by automatically filling in hidden fields for a research mentor's
@@ -441,7 +422,10 @@ function initFacultyEmailAutoEntry(slctrSelectBox, slctrHiddenFields) {
 }
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
-// CLASS DEFINITIONS ↓↓↓
+// §3: CLASS DEFINITIONS
+
+////////
+// §3.1: FieldsToFill
 
 /**
  * Stores jQuery objects for gravity form fields to be autofileld with a mentor's correct name
@@ -465,6 +449,9 @@ var FieldsToFill = function (selectionMade, $emailInputBox, $nameInputBox) {
 		$();
 }
 
+////////
+// §3.2: FieldsToFill.prototype.isValid
+
 /**
  * Indicates whether the instance of FieldsToFill has been properly constructed with valid
  * references to jQuery objects.
@@ -472,8 +459,7 @@ var FieldsToFill = function (selectionMade, $emailInputBox, $nameInputBox) {
  * @returns {boolean}
  */
 FieldsToFill.prototype.isValid = function () {
-	return this.selectionMade != "" && this.$emailInputBox.length > 0 &&
-		this.$nameInputBox.length > 0;
+	return this.$emailInputBox.length > 0 && this.$nameInputBox.length > 0;
 }
 
 })( jQuery );
