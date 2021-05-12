@@ -6,6 +6,8 @@
  * Gulp automation task definition file for setting up tasks that build CSS and JS files for use on
  *   the WSUWP website of the WSU Summer Research Program.
  *
+ * @version 1.0.0
+ *
  * @author Daniel Rieck [daniel.rieck@wsu.edu] (https://github.com/invokeImmediately)
  * @link https://github.com/invokeImmediately/summerresearch.wsu.edu/blob/master/gulpfile.js
  * @license MIT - Copyright (c) 2021 Washington State University
@@ -26,11 +28,11 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 // TABLE OF CONTENTS
 // -----------------
-// §1: Gulp task dependencies..................................................................43
-// §2: Specificiation of build settings .......................................................48
-//   §2.1: getCssBuildSettings()...............................................................51
-//   §2.2: getJsBuildSettings()...............................................................103
-// §3: Entry point: Set up of build taks......................................................135
+// §1: Gulp task dependencies..................................................................44
+// §2: Specification of build settings ........................................................49
+//   §2.1: getCssBuildSettings()...............................................................52
+//   §2.2: getJsBuildSettings()...............................................................129
+// §3: Entry point: Set up of build task......................................................161
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 
 ( function() {
@@ -44,7 +46,7 @@
 var gulpBuilder = require( './WSU-DAESA-JS/gulpCssJsBuilder.js' );
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
-// §2: Specificiation of build settings
+// §2: Specification of build settings
 
 ////////
 // §2.1: getCssBuildSettings()
@@ -156,7 +158,7 @@ function getJsBuildSettings() {
 }
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
-// §3: Entry point: Set up of build taks
+// §3: Entry point: Set up of build task
 
 gulpBuilder.setUpCssBuildTask( getCssBuildSettings() );
 gulpBuilder.setUpJsBuildTask( getJsBuildSettings() );
