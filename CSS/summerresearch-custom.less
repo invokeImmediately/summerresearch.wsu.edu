@@ -1,62 +1,98 @@
 /** ┌──────────────────────────────────────────────────────────────────────────────────────────────┐
-*** │ FILENAME: summerresearch-custom.less                                                         │
-*** │                                                                                              │
-*** │ AUTHOR: Daniel Rieck <daniel.rieck@wsu.edu> (https://github.com/invokeImmediately)           │
-*** │                                                                                              │
-*** │ SUMMARY: Style rules for presenting content on the website for the WSU Summer Undergraduate  │
-*** │   Research Program, which is built using the builder template of the Spine parent theme of   │
-*** │   WSUWP. Styles are designed to accompany or supersede styling associated with the theme.    │
+***   ▄▀▀▀ █  █ ▐▀▄▀▌▐▀▄▀▌█▀▀▀ █▀▀▄ █▀▀▄ █▀▀▀ ▄▀▀▀ █▀▀▀ ▄▀▀▄ █▀▀▄ ▄▀▀▀ █  █
+***   ▀▀▀█ █  █ █ ▀ ▌█ ▀ ▌█▀▀  █▄▄▀ █▄▄▀ █▀▀  ▀▀▀█ █▀▀  █▄▄█ █▄▄▀ █    █▀▀█ ▀▀
+***   ▀▀▀   ▀▀  █   ▀█   ▀▀▀▀▀ ▀  ▀▄▀  ▀▄▀▀▀▀ ▀▀▀  ▀▀▀▀ █  ▀ ▀  ▀▄ ▀▀▀ █  ▀
+***
+***         ▄▀▀▀ █  █ ▄▀▀▀▐▀█▀▌▄▀▀▄ ▐▀▄▀▌   █    █▀▀▀ ▄▀▀▀ ▄▀▀▀
+***         █    █  █ ▀▀▀█  █  █  █ █ ▀ ▌   █  ▄ █▀▀  ▀▀▀█ ▀▀▀█
+***          ▀▀▀  ▀▀  ▀▀▀   █   ▀▀  █   ▀ ▀ ▀▀▀  ▀▀▀▀ ▀▀▀  ▀▀▀
+*** 
+***   See persistent section header comment below (§2) for additional information and license.
 *** └──────────────────────────────────────────────────────────────────────────────────────────────┘
-**/
-
-/**  ───────────────────────────────────────────────────────────────────────────────────────────────
 ***  TABLE OF CONTENTS:
 ***  ────────────────────────────────────────────────────────────────────────────────────────────
-***  §1: Settings for global Less variables....................................................36
-***  §2: Import of OUE-wide style rules........................................................43
-***  §3: Styling at body & page level..........................................................58
-***  §4: Styling at the section level..........................................................96
-***    >>> §4.1: Sectional headers............................................................118
-***    >>> §4.2: Asides.......................................................................135
-***  §5: Styling at the content grouping level................................................189
-***    >>> §5.1: Lists........................................................................193
-***    >>> §5.1: Paragraphs...................................................................208
-***    >>> §5.1: Interactive containers.......................................................353
-***  §6: Styling at the embedded content level................................................660
-***    >>> §6.1: Tabular data.................................................................664
-***  §7: Site-specific semantic CSS styling...................................................698
-***  §8: Styling included via Less mixins.....................................................733
-***  §9: Header styling hotfix................................................................791
-***  §10: Summer Research calendar............................................................791
+***  §1: Build entry point from DAESA's CSS development project................................34
+***  §2: Persistent section header comment for unit specific styling...........................54
+***  §3: Styling at body & page level..........................................................95
+***  §4: Styling at the section level.........................................................133
+***    >>> §4.1: Sectional headers............................................................137
+***    >>> §4.2: Asides.......................................................................154
+***  §5: Styling at the content grouping level................................................208
+***    >>> §5.1: Lists........................................................................212
+***    >>> §5.1: Paragraphs...................................................................227
+***    >>> §5.1: Interactive containers.......................................................372
+***  §6: Styling at the embedded content level................................................679
+***    >>> §6.1: Tabular data.................................................................683
+***  §7: Site-specific semantic CSS styling...................................................717
+***  §8: Styling included via Less mixins.....................................................752
+***  §9: Header styling hotfix................................................................810
+***  §10: Summer Research calendar............................................................818
 ***  ───────────────────────────────────────────────────────────────────────────────────────────────
 **/
 
-/**   ----------------------------------------------------------------------------------------------
-***   §1: Settings for global Less variables
+/** ================================================================================================
+*** §1: Build entry point from DAESA's CSS development project
 **/
 
+// Set Grid behavior to match the Spine theme's hybrid mode.
 @grid-behavior: "hybrid";
+
+// Specify an empty OUE rules wrapping class, as one is not needed on the UGR website.
 @oue-rules-wrapper: ~"";
 
-/**   ----------------------------------------------------------------------------------------------
-***   §2: Import of OUE-wide style rules
-**/
+// Pull in our default build settings.
+@import "..\WSU-DAESA-CSS\Settings\build-settings.less";
 
-@import "..\WSU-UE---CSS\variables.less";
+// Specify any overrides to the default build settings.
 @use-design__daesa-main-headers: false;
 @use-design__provost-main-headers: true;
-@import "..\WSU-UE---CSS\css-build-entry-point.less";
+
+// Pull in the custom styling that is used on all DAESA websites.
+@import "..\WSU-DAESA-CSS\build-entry-point.less";
+
+/** ================================================================================================
+*** §2: Persistent section header comment for unit specific styling
+**/
 
 /*! ================================================================================================
-*** STYLE RULES SPECIFIC TO THE SUMMER RESEARCH WEBSITE
+*** ▄▀▀▀ █  █ ▐▀▄▀▌▐▀▄▀▌█▀▀▀ █▀▀▄    █▀▀▄ █▀▀▀ ▄▀▀▀ █▀▀▀ ▄▀▀▄ █▀▀▄ ▄▀▀▀ █  █
+*** ▀▀▀█ █  █ █ ▀ ▌█ ▀ ▌█▀▀  █▄▄▀    █▄▄▀ █▀▀  ▀▀▀█ █▀▀  █▄▄█ █▄▄▀ █    █▀▀█
+*** ▀▀▀   ▀▀  █   ▀█   ▀▀▀▀▀ ▀  ▀▄   ▀  ▀▄▀▀▀▀ ▀▀▀  ▀▀▀▀ █  ▀ ▀  ▀▄ ▀▀▀ █  ▀
+***
+***       ▄▀▀▀ █  █ ▄▀▀▀▐▀█▀▌▄▀▀▄ ▐▀▄▀▌   ▄▀▀▀▐▀█▀▌█  █ █    ▀█▀ ▐▀▀▄ █▀▀▀
+***       █    █  █ ▀▀▀█  █  █  █ █ ▀ ▌   ▀▀▀█  █  ▀▄▄█ █  ▄  █  █  ▐ █ ▀▄
+***        ▀▀▀  ▀▀  ▀▀▀   █   ▀▀  █   ▀   ▀▀▀   █  ▄▄▄▀ ▀▀▀  ▀▀▀ ▀  ▐ ▀▀▀▀
 *** ================================================================================================
-***   GIT REPOSITORY: https://github.com/invokeImmediately/summerresearch.wsu.edu/
-***     (Please see above git repository for fully documented, precompiled source code.)
+*** CSS code designed for use on Washington State University's Summer Research Program website that
+***    was built from precompiled CSS written in the Less language extension of CSS.
+***
+*** Fully documented, precompiled source code from which this section of the custom stylesheet was
+***   built is developed and maintained on the linked GitHub project.
+***
+*** @version 1.0.0
+***
+*** @link https://summerresearch.wsu.edu
+*** @link https://github.com/invokeImmediately/summerresearch.wsu.edu/
+*** @author Daniel Rieck [daniel.rieck@wsu.edu] (https://github.com/invokeImmediately)
+*** @license MIT Copyright (c) 2021 Washington State University
+***   Permission is hereby granted, free of charge, to any person obtaining a copy of this software
+***     and associated documentation files (the "Software"), to deal in the Software without
+***     restriction, including without limitation the rights to use, copy, modify, merge, publish,
+***     distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom
+***     the Software is furnished to do so, subject to the following conditions:
+***   The above copyright notice and this permission notice shall be included in all copies or
+***     substantial portions of the Software.
+***   THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING
+***     BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+***     NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY
+***     CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE,
+***     ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+***     SOFTWARE.
 *** ================================================================================================
 **/
 
-/**   ----------------------------------------------------------------------------------------------
-***   §3: Styling at body & page level
+/** ================================================================================================
+*** §3: Styling at body & page level
 **/
 
 body {
@@ -77,7 +113,7 @@ body {
 }
 
 main {
-	background: @hex-white url(/wp-content/uploads/sites/907/2016/05/tileable-papar-texture_500x500_opacity-0.5.png) left top repeat;
+	background: @hex-white;
 }
 
 #binder {
