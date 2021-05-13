@@ -6,7 +6,7 @@
  * Gulp automation task definition file for setting up tasks that build CSS and JS files for use on
  *   the WSUWP website of the WSU Summer Research Program.
  *
- * @version 1.0.0
+ * @version 1.0.0-rc0.0.1
  *
  * @author Daniel Rieck [daniel.rieck@wsu.edu] (https://github.com/invokeImmediately)
  * @link https://github.com/invokeImmediately/summerresearch.wsu.edu/blob/master/gulpfile.js
@@ -32,7 +32,7 @@
 // §2: Specification of build settings ........................................................49
 //   §2.1: getCssBuildSettings()...............................................................52
 //   §2.2: getJsBuildSettings()...............................................................129
-// §3: Entry point: Set up of build task......................................................161
+// §3: Entry point: Set up of build task......................................................160
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 
 ( function() {
@@ -136,17 +136,16 @@ function getCssBuildSettings() {
 function getJsBuildSettings() {
 	return {
 		buildDependenciesList: [
-			'./WSU-UE---JS/jQuery.oue-custom.js',
-			'./WSU-UE---JS/jQuery.autoScrollingImages.js',
-			'./WSU-UE---JS/jQuery.cookieObjs.js',
-			'./WSU-UE---JS/jQuery.forms.js',
+			'./WSU-DAESA-JS/jQuery.daesa-custom.js',
+			'./WSU-DAESA-JS/jQuery.autoScrollingImages.js',
+			'./WSU-DAESA-JS/jQuery.cookieObjs.js',
+			'./WSU-DAESA-JS/jQuery.forms.js',
 			'../jQuery.AreYouSure/jquery.are-you-sure.js',
-			'./WSU-UE---JS/jQuery.are-you-sure.js',
-			'./WSU-UE---JS/jquery.media.js',
+			'./WSU-DAESA-JS/jQuery.are-you-sure.js',
+			'./WSU-DAESA-JS/jquery.media.js',
 			'../qTip2/dist/jquery.qtip.min.js',
-			'./WSU-UE---JS/jQuery.qTip.js',
-			'./WSU-UE---JS/jQuery.textResize.js',
-			'./WSU-UE---JS/jQuery.masonry-custom.js',
+			'./WSU-DAESA-JS/jQuery.qTip.js',
+			'./WSU-DAESA-JS/jQuery.masonry-custom.js',
 			'./JS/sumres-custom.js'
 		],
 		commentNeedle: /^(\/\*)(?!!)/g,
