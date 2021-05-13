@@ -1,32 +1,37 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto+Condensed:400,400i,700,700i|PT+Serif:400,400i,700,700i|Roboto+Mono:400,400i,700,700i&display=swap');
 /*! ================================================================================================
-*** WSU DAESA Styling Section
+*** █▀▀▄ ▄▀▀▄ █▀▀▀ ▄▀▀▀ ▄▀▀▄   ▄▀▀▀ █  █ ▄▀▀▀▐▀█▀▌▄▀▀▄ ▐▀▄▀▌   ▄▀▀▀▐▀█▀▌█  █ █    ▀█▀ ▐▀▀▄ █▀▀▀
+*** █  █ █▄▄█ █▀▀  ▀▀▀█ █▄▄█   █    █  █ ▀▀▀█  █  █  █ █ ▀ ▌   ▀▀▀█  █  ▀▄▄█ █  ▄  █  █  ▐ █ ▀▄
+*** ▀▀▀  █  ▀ ▀▀▀▀ ▀▀▀  █  ▀    ▀▀▀  ▀▀  ▀▀▀   █   ▀▀  █   ▀   ▀▀▀   █  ▄▄▄▀ ▀▀▀  ▀▀▀ ▀  ▐ ▀▀▀▀
 *** ================================================================================================
-*** SUMMARY: The following section of this stylesheet contains CSS code written for use on all
-***   websites designed, built, and maintained by the Divsion of Academic Engagement and Student
-***   Achievement (DAESA) in the Office of the Provost at Washington State University (WSU).
+*** The following section of this stylesheet contains CSS code written for use on all websites
+***   designed, built, and maintained by the Divsion of Academic Engagement and Student Achievement
+***   (DAESA) in the Office of the Provost at Washington State University (WSU).
 ***
-*** DESCRIPTION: The CSS code in the following section was generated from precompiled CSS written in
-***   the Less language extension of CSS. It is designed to be applied via the WSUWP CSS Stylesheet
-***   Editor functioning in add-on mode.
+*** The CSS code in the following section was generated from precompiled CSS written in the Less
+***   language extension of CSS. It is designed to be applied via the WSUWP CSS Stylesheet Editor
+***   functioning in add-on mode.
 ***
-***   Please refer to the GitHub proejct at https://github.com/invokeImmediately/WSU-UE---CSS/ for
-***   fully documented, precompiled source code.  
-***     
-*** AUTHOR: Daniel Rieck [daniel.rieck@wsu.edu] (https://github.com/invokeImmediately)
+*** Please refer to the linked GitHub project for fully documented, precompiled source code.
 ***
-*** LICENSE: ISC - Copyright (c) 2020 Daniel C. Rieck.
+*** @version 1.0.1-rc1
 ***
-***   Permission to use, copy, modify, and/or distribute this software for any purpose with or
-***   without fee is hereby granted, provided that the above copyright notice and this permission
-***   notice appear in all copies.
-***
-***   THE SOFTWARE IS PROVIDED "AS IS" AND DANIEL C. RIECK DISCLAIMS ALL WARRANTIES WITH REGARD TO
-***   THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS. IN NO EVENT
-***   SHALL DANIEL C. RIECK BE LIABLE FOR ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR
-***   ANY DAMAGES WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF
-***   CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR
-***   PERFORMANCE OF THIS SOFTWARE.
+*** @link https://github.com/invokeImmediately/WSU-DAESA-CSS
+*** @author Daniel Rieck [daniel.rieck@wsu.edu] (https://github.com/invokeImmediately)
+*** @license MIT Copyright (c) 2021 Washington State University
+***   Permission is hereby granted, free of charge, to any person obtaining a copy of this software
+***     and associated documentation files (the "Software"), to deal in the Software without
+***     restriction, including without limitation the rights to use, copy, modify, merge, publish,
+***     distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom
+***     the Software is furnished to do so, subject to the following conditions:
+***   The above copyright notice and this permission notice shall be included in all copies or
+***     substantial portions of the Software.
+***   THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING
+***     BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+***     NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY
+***     CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE,
+***     ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+***     SOFTWARE.
 *** ================================================================================================
 **/
 
@@ -34,7 +39,11 @@
 .ff--sans,
 body,
 .column {
-  font-family: 'Open Sans', 'Lucida Sans', 'Lucida Grande', sans-serif;
+  font-family: 'Montserrat', 'Open Sans', sans-serif;
+}
+
+.ff--sans-2 {
+  font-family: 'Open Sans', sans-serif;
 }
 
 .has-dflt-font.serif,
@@ -46,8 +55,6 @@ body,
 
 .has-alt-font,
 .ff--condensed,
-.has-subst-font,
-.ff--condensed-2,
 span.accentuated-text,
 .column ul.event-boxes > li > h4:nth-child(2),
 .row.article-notice .column > p {
@@ -1003,6 +1010,7 @@ h6.crimson-text.solid::before {
 .main-header sub:not(.unset),
 .main-header sup:not(.unset) {
   color: #fff !important;
+  font-family: 'Open Sans', sans-serif;
 }
 
 .main-header .header-group {
@@ -1472,255 +1480,6 @@ ul.cascaded-layout.blank > li.gutter-sizer {
   margin-top: 1em;
 }
 
-.article-body {
-  position: relative;
-  line-height: 1.5em;
-}
-
-.article-footer {
-  border-top: 1px solid #d7dadb;
-}
-
-.blog .article-header:not(.row),
-.archive.category .article-header:not(.row),
-.archive.tag .article-header:not(.row),
-.single-post.post-template-default .article-header:not(.row) {
-  background-color: #eff0f1;
-  border-bottom: 1px solid rgba(127, 127, 127, 0.2);
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
-  margin-left: -1em;
-  margin-right: -1em;
-  margin-top: -1em;
-  padding-left: 1em;
-  padding-right: 1em;
-  padding-top: 1em;
-}
-
-.blog .article-header:not(.row) + *,
-.archive.category .article-header:not(.row) + *,
-.archive.tag .article-header:not(.row) + *,
-.single-post.post-template-default .article-header:not(.row) + * {
-  margin-top: 1em;
-}
-
-.column .article-header:not(.row) .article-title,
-.column .article-header:not(.row) .article-title {
-  font-size: 2em;
-  line-height: 1.1em;
-}
-
-.column .article-header:not(.row) .article-title a,
-.column .article-header:not(.row) .article-title a {
-  font-weight: bold;
-}
-
-.article-sub-heading {
-  border-bottom: 1px solid rgba(127, 127, 127, 0.2);
-  padding-bottom: 1rem;
-  margin-bottom: 1rem;
-}
-
-.article-summary {
-  line-height: 1.5em;
-}
-
-.article-summary .article-media-contacts,
-.article-summary .article-sidebar,
-.article-summary .article-sub-heading,
-.article-summary figure:not(.article-thumbnail),
-.article-summary img,
-.article-summary object,
-.article-summary > h3,
-.article-summary .photo-caption {
-  display: none;
-}
-
-.article-summary .attachment-spine-thumbnail_size {
-  display: block;
-}
-
-.column .article-summary .article-media-contacts + :not(.article-media-contacts) {
-  margin-top: 0;
-}
-
-.single-post .article-media-contacts {
-  font-size: 0.9em;
-}
-
-* + .single-post .article-media-contacts {
-  margin-top: 1em;
-}
-
-.single-post .column .article-media-contacts + :not(.article-media-contacts) {
-  border-top: 1px solid rgba(127, 127, 127, 0.2);
-  padding-top: 15px;
-}
-
-.single-post .main-header + .featured-image {
-  display: none;
-}
-
-.single-post .article-header:not(.row),
-.summary-divided .article-header:not(.row),
-.single-post .article-header .article-title,
-.summary-divided .article-header .article-title {
-  margin-bottom: 15px;
-}
-
-.single-post .article-footer,
-.summary-divided .article-footer {
-  margin-top: 15px;
-}
-
-.widget {
-  background-color: #eff0f1;
-  border-radius: 5px;
-  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.9), 0 0 0 2px rgba(0, 0, 0, 0.2), 3px 4px 4px rgba(0, 0, 0, 0.25) !important;
-  padding: 1em;
-  overflow: hidden;
-}
-
-.widget.widget_recent_entries ul {
-  padding: 0;
-}
-
-.widget.widget_recent_entries ul li {
-  padding-bottom: 1em;
-}
-
-.widget.widget_recent_entries .post-date:before {
-  font-weight: bold;
-  content: "/ ";
-}
-
-.widget.widget_tag_cloud a {
-  border-bottom: none;
-  box-shadow: none;
-}
-
-.widget + .widget {
-  margin-top: 2rem;
-}
-
-.widget header {
-  background-color: #d7dadb;
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
-  border-bottom: 1px solid rgba(103, 103, 103, 0.2);
-  font-size: 1rem;
-  font-weight: bold;
-  margin: -1rem -1rem 0.5rem;
-  padding: 0.5rem 1rem;
-}
-
-.widget ul li {
-  list-style: disc inside none;
-}
-
-.widget_archive label.screen-reader-text {
-  display: none;
-}
-
-.wsuwp-json--headlines .content-item-byline-author {
-  display: none;
-}
-
-.wsuwp-json--headlines .content-item-byline-date {
-  display: block;
-  padding-bottom: 0.25em;
-  margin-top: 0.5em;
-  margin-bottom: 0.75em;
-  color: #737373;
-  text-transform: uppercase;
-}
-
-.wsuwp-json--headlines .content-item-byline-date:before {
-  content: "Posted on ";
-}
-
-.wsuwp-json--headlines .content-item-excerpt .article-media-contacts,
-.wsuwp-json--headlines .content-item-excerpt .article-sidebar,
-.wsuwp-json--headlines .content-item-excerpt .photo-caption,
-.wsuwp-json--headlines .content-item-excerpt .more-link,
-.wsuwp-json--headlines .content-item-excerpt img,
-.wsuwp-json--headlines .content-item-excerpt object,
-.wsuwp-json--headlines .content-item-excerpt > h3 {
-  display: none;
-}
-
-.wsuwp-json--headlines .content-item-excerpt .content-item-read-story {
-  display: inline-block;
-}
-
-.wsuwp-json--headlines .content-item-excerpt > * + *,
-.wsuwp-json--headlines .content-item-excerpt .content-item-read-story {
-  margin-top: 1em;
-}
-
-.wsuwp-json--headlines .content-item-title {
-  font-size: 1.325em;
-  font-weight: bold;
-  line-height: 1.4em;
-  line-height: calc(1.4em + 1px);
-}
-
-.wsuwp-json--headlines .content-item-title a {
-  border-bottom-color: transparent;
-  box-shadow: none;
-  text-decoration: underline;
-}
-
-.wsuwp-json--headlines .content-item-title a:hover {
-  text-decoration: none;
-}
-
-.wsuwp-json--headlines .content-item-thumbnail {
-  float: right;
-  margin-bottom: 0.5em;
-  margin-left: 0.5em;
-  max-width: 136px;
-  min-width: 96px;
-  width: 28.5%;
-}
-
-.wsuwp-json--headlines .wsuwp-content-syndicate-item {
-  box-sizing: border-box;
-  line-height: 1.5em;
-  list-style-image: none !important;
-}
-
-.wsuwp-json--headlines * + .wsuwp-content-syndicate-item {
-  margin-top: 1em;
-}
-
-.wsuwp-json--headlines .wsuwp-content-syndicate-list {
-  display: flex;
-  flex-wrap: wrap;
-  list-style-type: none;
-  padding: 0;
-}
-
-.wsuwp-json--headlines.layout--2-columns .wsuwp-content-syndicate-list {
-  font-size: 0.9em;
-  max-width: none !important;
-}
-
-.wsuwp-json--headlines.layout--2-columns .wsuwp-content-syndicate-item {
-  padding-bottom: 2em;
-  padding-right: 2em;
-  width: 50%;
-}
-
-.wsuwp-json--headlines.layout--2-columns * + .wsuwp-content-syndicate-item {
-  margin-top: 0;
-}
-
-.award-banner {
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-}
-
 .builder-banner-content {
   border: 0;
   bottom: 0;
@@ -1831,7 +1590,7 @@ ul.cascaded-layout.blank > li.gutter-sizer {
 
 .column {
   color: #2a3033;
-  font-family: 'Open Sans', 'Lucida Sans', 'Lucida Grande', sans-serif;
+  font-family: 'Montserrat', 'Open Sans', sans-serif;
   font-weight: 300;
 }
 
@@ -2450,27 +2209,40 @@ main > .page > .row:last-child > .column:last-child {
 }
 
 .column a {
-  border: 1px solid transparent;
-  border-bottom-color: #981e32;
-  border-left: 0;
-  border-right: 0;
+  border-bottom: 1px solid #981e32;
   text-decoration: none;
-  transition: color .4s, background 0.4s, border 0.1s;
+  transition: color .2s ease, background 0.2s ease, border-width .05s;
 }
 
+.column a:focus,
 .column a:hover {
-  background-color: rgba(198, 12, 48, 0.15);
+  background-color: rgba(198, 12, 48, 0.1);
   border-bottom-width: 3px;
   border-color: #c60c30;
   text-shadow: 1px 1px 2px rgba(152, 30, 50, 0.3);
+}
+
+.column a:not([class*="fw--"]) {
+  font-weight: 400;
 }
 
 .column a.gform_anchor {
   border: none;
 }
 
-.column strong a {
-  font-weight: bold;
+.column h1 a:not([class*="fw--"]),
+.column h2 a:not([class*="fw--"]),
+.column h3 a:not([class*="fw--"]),
+.column h4 a:not([class*="fw--"]),
+.column h5 a:not([class*="fw--"]),
+.column h6 a:not([class*="fw--"]),
+.gform_heading h3.gform_title a:not([class*="fw--"]) {
+  font-weight: inherit;
+}
+
+.column strong a:not([class*="fw--"]),
+.column b a:not([class*="fw--"]) {
+  font-weight: 700;
 }
 
 .column a.pop-out-link {
@@ -2608,6 +2380,47 @@ main > .page > .row:last-child > .column:last-child {
 .gform_heading h3.gform_title a:not(.non-text-link):hover {
   border-bottom: 4px solid #c60c30;
   text-decoration: none;
+}
+
+.simple-button {
+  border-radius: 4px;
+  display: inline-block;
+  margin-bottom: 9px;
+  padding: 0.5rem 1rem;
+}
+
+.simple-button:not(:hover) {
+  background-color: #eff0f1;
+  border: 1px solid #a60f2d;
+  box-shadow: 0 12px 16px 2px rgba(0, 0, 0, 0.03), 0 5px 22px 4px rgba(0, 0, 0, 0.03), 0 6px 13px 0 rgba(0, 0, 0, 0.02);
+}
+
+.simple-button:hover {
+  background-color: #eff0f1;
+  border: 1px solid #ca1237;
+  box-shadow: 0 12px 16px 2px rgba(202, 18, 55, 0.05), 0 5px 22px 4px rgba(202, 18, 55, 0.05), 0 6px 13px 0 rgba(202, 18, 55, 0.02);
+}
+
+.column .simple-button:hover {
+  border-bottom-width: 1px;
+  text-shadow: none;
+}
+
+.simple-button.simple-button--crimson:not(:hover) {
+  background-color: #a60f2d;
+  border: 0;
+  color: white;
+}
+
+.simple-button.simple-button--crimson:hover {
+  background-color: #ca1237;
+  border: 0;
+  box-shadow: 0 5px 18px rgba(202, 18, 55, 0.4);
+  color: white;
+}
+
+.column .simple-button.simple-button--crimson:hover {
+  border-bottom-width: 0;
 }
 
 strong.opening-line {
@@ -3844,6 +3657,255 @@ div.auto-scroller ul li {
   list-style-image: none;
 }
 
+.article-body {
+  position: relative;
+  line-height: 1.5em;
+}
+
+.article-footer {
+  border-top: 1px solid #d7dadb;
+}
+
+.blog .article-header:not(.row),
+.archive.category .article-header:not(.row),
+.archive.tag .article-header:not(.row),
+.single-post.post-template-default .article-header:not(.row) {
+  background-color: #eff0f1;
+  border-bottom: 1px solid rgba(127, 127, 127, 0.2);
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  margin-left: -1em;
+  margin-right: -1em;
+  margin-top: -1em;
+  padding-left: 1em;
+  padding-right: 1em;
+  padding-top: 1em;
+}
+
+.blog .article-header:not(.row) + *,
+.archive.category .article-header:not(.row) + *,
+.archive.tag .article-header:not(.row) + *,
+.single-post.post-template-default .article-header:not(.row) + * {
+  margin-top: 1em;
+}
+
+.column .article-header:not(.row) .article-title,
+.column .article-header:not(.row) .article-title {
+  font-size: 2em;
+  line-height: 1.1em;
+}
+
+.column .article-header:not(.row) .article-title a,
+.column .article-header:not(.row) .article-title a {
+  font-weight: bold;
+}
+
+.article-sub-heading {
+  border-bottom: 1px solid rgba(127, 127, 127, 0.2);
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+}
+
+.article-summary {
+  line-height: 1.5em;
+}
+
+.article-summary .article-media-contacts,
+.article-summary .article-sidebar,
+.article-summary .article-sub-heading,
+.article-summary figure:not(.article-thumbnail),
+.article-summary img,
+.article-summary object,
+.article-summary > h3,
+.article-summary .photo-caption {
+  display: none;
+}
+
+.article-summary .attachment-spine-thumbnail_size {
+  display: block;
+}
+
+.column .article-summary .article-media-contacts + :not(.article-media-contacts) {
+  margin-top: 0;
+}
+
+.single-post .article-media-contacts {
+  font-size: 0.9em;
+}
+
+* + .single-post .article-media-contacts {
+  margin-top: 1em;
+}
+
+.single-post .column .article-media-contacts + :not(.article-media-contacts) {
+  border-top: 1px solid rgba(127, 127, 127, 0.2);
+  padding-top: 15px;
+}
+
+.single-post .main-header + .featured-image {
+  display: none;
+}
+
+.single-post .article-header:not(.row),
+.summary-divided .article-header:not(.row),
+.single-post .article-header .article-title,
+.summary-divided .article-header .article-title {
+  margin-bottom: 15px;
+}
+
+.single-post .article-footer,
+.summary-divided .article-footer {
+  margin-top: 15px;
+}
+
+.widget {
+  background-color: #eff0f1;
+  border-radius: 5px;
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.9), 0 0 0 2px rgba(0, 0, 0, 0.2), 3px 4px 4px rgba(0, 0, 0, 0.25) !important;
+  padding: 1em;
+  overflow: hidden;
+}
+
+.widget.widget_recent_entries ul {
+  padding: 0;
+}
+
+.widget.widget_recent_entries ul li {
+  padding-bottom: 1em;
+}
+
+.widget.widget_recent_entries .post-date:before {
+  font-weight: bold;
+  content: "/ ";
+}
+
+.widget.widget_tag_cloud a {
+  border-bottom: none;
+  box-shadow: none;
+}
+
+.widget + .widget {
+  margin-top: 2rem;
+}
+
+.widget header {
+  background-color: #d7dadb;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  border-bottom: 1px solid rgba(103, 103, 103, 0.2);
+  font-size: 1rem;
+  font-weight: bold;
+  margin: -1rem -1rem 0.5rem;
+  padding: 0.5rem 1rem;
+}
+
+.widget ul li {
+  list-style: disc inside none;
+}
+
+.widget_archive label.screen-reader-text {
+  display: none;
+}
+
+.wsuwp-json--headlines .content-item-byline-author {
+  display: none;
+}
+
+.wsuwp-json--headlines .content-item-byline-date {
+  display: block;
+  padding-bottom: 0.25em;
+  margin-top: 0.5em;
+  margin-bottom: 0.75em;
+  color: #737373;
+  text-transform: uppercase;
+}
+
+.wsuwp-json--headlines .content-item-byline-date:before {
+  content: "Posted on ";
+}
+
+.wsuwp-json--headlines .content-item-excerpt .article-media-contacts,
+.wsuwp-json--headlines .content-item-excerpt .article-sidebar,
+.wsuwp-json--headlines .content-item-excerpt .photo-caption,
+.wsuwp-json--headlines .content-item-excerpt .more-link,
+.wsuwp-json--headlines .content-item-excerpt img,
+.wsuwp-json--headlines .content-item-excerpt object,
+.wsuwp-json--headlines .content-item-excerpt > h3 {
+  display: none;
+}
+
+.wsuwp-json--headlines .content-item-excerpt .content-item-read-story {
+  display: inline-block;
+}
+
+.wsuwp-json--headlines .content-item-excerpt > * + *,
+.wsuwp-json--headlines .content-item-excerpt .content-item-read-story {
+  margin-top: 1em;
+}
+
+.wsuwp-json--headlines .content-item-title {
+  font-size: 1.325em;
+  font-weight: bold;
+  line-height: 1.4em;
+  line-height: calc(1.4em + 1px);
+}
+
+.wsuwp-json--headlines .content-item-title a {
+  border-bottom-color: transparent;
+  box-shadow: none;
+  text-decoration: underline;
+}
+
+.wsuwp-json--headlines .content-item-title a:hover {
+  text-decoration: none;
+}
+
+.wsuwp-json--headlines .content-item-thumbnail {
+  float: right;
+  margin-bottom: 0.5em;
+  margin-left: 0.5em;
+  max-width: 136px;
+  min-width: 96px;
+  width: 28.5%;
+}
+
+.wsuwp-json--headlines .wsuwp-content-syndicate-item {
+  box-sizing: border-box;
+  line-height: 1.5em;
+  list-style-image: none !important;
+}
+
+.wsuwp-json--headlines * + .wsuwp-content-syndicate-item {
+  margin-top: 1em;
+}
+
+.wsuwp-json--headlines .wsuwp-content-syndicate-list {
+  display: flex;
+  flex-wrap: wrap;
+  list-style-type: none;
+  padding: 0;
+}
+
+.wsuwp-json--headlines.layout--2-columns .wsuwp-content-syndicate-list {
+  font-size: 0.9em;
+  max-width: none !important;
+}
+
+.wsuwp-json--headlines.layout--2-columns .wsuwp-content-syndicate-item {
+  padding-bottom: 2em;
+  padding-right: 2em;
+  width: 50%;
+}
+
+.wsuwp-json--headlines.layout--2-columns * + .wsuwp-content-syndicate-item {
+  margin-top: 0;
+}
+
+.award-banner {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
 .style--card,
 .daesa-card {
   box-shadow: 0 12px 16px 2px rgba(0, 0, 0, 0.03), 0 5px 22px 4px rgba(0, 0, 0, 0.03), 0 6px 13px 0 rgba(0, 0, 0, 0.02);
@@ -4258,8 +4320,12 @@ div.auto-scroller ul li {
   width: 25%;
 }
 
-.w--30pct {
+.w--33pct {
   width: 30%;
+}
+
+.w--35pct {
+  width: 33.33%;
 }
 
 .w--35pct {
@@ -4288,6 +4354,10 @@ div.auto-scroller ul li {
 
 .w--65pct {
   width: 65%;
+}
+
+.w--66pct {
+  width: 66.66%;
 }
 
 .w--70pct {
@@ -4327,7 +4397,7 @@ div.auto-scroller ul li {
 }
 
 .mw--64px {
-  max-width: 64px !important;
+  max-width: 64px;
 }
 
 .w--80px {
@@ -4339,7 +4409,7 @@ div.auto-scroller ul li {
 }
 
 .mw--80px {
-  max-width: 80px !important;
+  max-width: 80px;
 }
 
 .w--96px {
@@ -4351,7 +4421,7 @@ div.auto-scroller ul li {
 }
 
 .mw--96px {
-  max-width: 96px !important;
+  max-width: 96px;
 }
 
 .w--112px {
@@ -4363,7 +4433,7 @@ div.auto-scroller ul li {
 }
 
 .mw--112px {
-  max-width: 112px !important;
+  max-width: 112px;
 }
 
 .w--128px {
@@ -4375,7 +4445,7 @@ div.auto-scroller ul li {
 }
 
 .mw--128px {
-  max-width: 128px !important;
+  max-width: 128px;
 }
 
 .w--144px {
@@ -4387,7 +4457,7 @@ div.auto-scroller ul li {
 }
 
 .mw--144px {
-  max-width: 144px !important;
+  max-width: 144px;
 }
 
 .w--160px {
@@ -4399,7 +4469,7 @@ div.auto-scroller ul li {
 }
 
 .mw--160px {
-  max-width: 160px !important;
+  max-width: 160px;
 }
 
 .w--176px {
@@ -4411,7 +4481,7 @@ div.auto-scroller ul li {
 }
 
 .mw--176px {
-  max-width: 176px !important;
+  max-width: 176px;
 }
 
 .w--192px {
@@ -4423,7 +4493,7 @@ div.auto-scroller ul li {
 }
 
 .mw--192px {
-  max-width: 192px !important;
+  max-width: 192px;
 }
 
 .w--208px {
@@ -4435,7 +4505,7 @@ div.auto-scroller ul li {
 }
 
 .mw--208px {
-  max-width: 208px !important;
+  max-width: 208px;
 }
 
 .w--224px {
@@ -4447,7 +4517,7 @@ div.auto-scroller ul li {
 }
 
 .mw--224px {
-  max-width: 224px !important;
+  max-width: 224px;
 }
 
 .w--240px {
@@ -4459,7 +4529,7 @@ div.auto-scroller ul li {
 }
 
 .mw--240px {
-  max-width: 240px !important;
+  max-width: 240px;
 }
 
 .w--256px {
@@ -4471,7 +4541,7 @@ div.auto-scroller ul li {
 }
 
 .mw--256px {
-  max-width: 256px !important;
+  max-width: 256px;
 }
 
 .w--288px {
@@ -4483,7 +4553,7 @@ div.auto-scroller ul li {
 }
 
 .mw--288px {
-  max-width: 288px !important;
+  max-width: 288px;
 }
 
 .w--320px {
@@ -4495,7 +4565,7 @@ div.auto-scroller ul li {
 }
 
 .mw--320px {
-  max-width: 320px !important;
+  max-width: 320px;
 }
 
 .w--384px {
@@ -4507,7 +4577,7 @@ div.auto-scroller ul li {
 }
 
 .mw--384px {
-  max-width: 384px !important;
+  max-width: 384px;
 }
 
 .w--448px {
@@ -4519,7 +4589,7 @@ div.auto-scroller ul li {
 }
 
 .mw--448px {
-  max-width: 448px !important;
+  max-width: 448px;
 }
 
 .w--512px {
@@ -4531,7 +4601,7 @@ div.auto-scroller ul li {
 }
 
 .mw--512px {
-  max-width: 512px !important;
+  max-width: 512px;
 }
 
 .w--576px {
@@ -4543,7 +4613,7 @@ div.auto-scroller ul li {
 }
 
 .mw--576px {
-  max-width: 576px !important;
+  max-width: 576px;
 }
 
 .w--640px {
@@ -4555,7 +4625,19 @@ div.auto-scroller ul li {
 }
 
 .mw--640px {
-  max-width: 640px !important;
+  max-width: 640px;
+}
+
+.w--704px {
+  width: 704px;
+}
+
+.mnw--704px {
+  min-width: 704px;
+}
+
+.mw--704px {
+  max-width: 704px;
 }
 
 .w--768px {
@@ -4567,7 +4649,7 @@ div.auto-scroller ul li {
 }
 
 .mw--768px {
-  max-width: 768px !important;
+  max-width: 768px;
 }
 
 .w--832px {
@@ -4579,7 +4661,7 @@ div.auto-scroller ul li {
 }
 
 .mw--832px {
-  max-width: 832px !important;
+  max-width: 832px;
 }
 
 .w--896px {
@@ -4591,7 +4673,7 @@ div.auto-scroller ul li {
 }
 
 .mw--896px {
-  max-width: 896px !important;
+  max-width: 896px;
 }
 
 .w--960px {
@@ -4603,7 +4685,7 @@ div.auto-scroller ul li {
 }
 
 .mw--960px {
-  max-width: 960px !important;
+  max-width: 960px;
 }
 
 .mw--none {
@@ -4611,11 +4693,27 @@ div.auto-scroller ul li {
 }
 
 .mw--80ch {
-  max-width: 80ch !important;
+  max-width: 80ch;
+}
+
+.mw--75ch {
+  max-width: 75ch;
+}
+
+.mw--70ch {
+  max-width: 70ch;
+}
+
+.mw--65ch {
+  max-width: 65ch;
+}
+
+.mw--60ch {
+  max-width: 60ch;
 }
 
 .w--auto {
-  width: auto !important;
+  width: auto;
 }
 
 .h--64px {
@@ -4845,87 +4943,87 @@ div.auto-scroller ul li {
   font-size: 1.4em;
 }
 
-.lh--1000mx {
+.lh--667mx {
   line-height: 1em;
 }
 
-.lh--1025mx {
+.lh--700mx {
   line-height: 1.05em;
 }
 
-.lh--1050mx {
+.lh--733mx {
   line-height: 1.1em;
 }
 
-.lh--1075mx {
+.lh--767mx {
   line-height: 1.15em;
 }
 
-.lh--1100mx {
+.lh--800mx {
   line-height: 1.2em;
 }
 
-.lh--1125mx {
+.lh--833mx {
   line-height: 1.25em;
 }
 
-.lh--1150mx {
+.lh--867mx {
   line-height: 1.3em;
 }
 
-.lh--1175mx {
+.lh--900mx {
   line-height: 1.35em;
 }
 
-.lh--1200mx {
+.lh--933mx {
   line-height: 1.4em;
 }
 
-.lh--1225mx {
+.lh--967mx {
   line-height: 1.45em;
 }
 
-.lh--1250mx {
+.lh--1000mx {
   line-height: 1.5em;
 }
 
-.lh--1275mx {
+.lh--1033mx {
   line-height: 1.55em;
 }
 
-.lh--1300mx {
+.lh--1067mx {
   line-height: 1.6em;
 }
 
-.lh--1325mx {
+.lh--1100mx {
   line-height: 1.65em;
 }
 
-.lh--1350mx {
+.lh--1133mx {
   line-height: 1.7em;
 }
 
-.lh--1375mx {
+.lh--1167mx {
   line-height: 1.75em;
 }
 
-.lh--1400mx {
+.lh--1200mx {
   line-height: 1.8em;
 }
 
-.lh--1425mx {
+.lh--1233mx {
   line-height: 1.85em;
 }
 
-.lh--1450mx {
+.lh--1267mx {
   line-height: 1.9em;
 }
 
-.lh--1475mx {
+.lh--1300mx {
   line-height: 1.95em;
 }
 
-.lh--1500mx {
+.lh--1333mx {
   line-height: 2em;
 }
 
@@ -4993,8 +5091,16 @@ div.auto-scroller ul li {
   margin-top: 1em;
 }
 
+.column * + .sv--1250mx {
+  margin-top: 1.25em;
+}
+
 .column * + .sv--1500mx {
   margin-top: 1.5em;
+}
+
+.column * + .sv--1750mx {
+  margin-top: 1.75em;
 }
 
 .column * + .sv--2000mx {
@@ -5278,6 +5384,26 @@ div.auto-scroller ul li {
   margin-top: 1em;
 }
 
+.ma--1250mx {
+  margin: 1.25em;
+}
+
+.mb--1250mx {
+  margin-bottom: 1.25em;
+}
+
+.ml--1250mx {
+  margin-left: 1.25em;
+}
+
+.mr--1250mx {
+  margin-right: 1.25em;
+}
+
+.mt--1250mx {
+  margin-top: 1.25em;
+}
+
 .ma--1500mx {
   margin: 1.5em;
 }
@@ -5296,6 +5422,26 @@ div.auto-scroller ul li {
 
 .mt--1500mx {
   margin-top: 1.5em;
+}
+
+.ma--1750mx {
+  margin: 1.75em;
+}
+
+.mb--1750mx {
+  margin-bottom: 1.75em;
+}
+
+.ml--1750mx {
+  margin-left: 1.75em;
+}
+
+.mr--1750mx {
+  margin-right: 1.75em;
+}
+
+.mt--1750mx {
+  margin-top: 1.75em;
 }
 
 .ma--2000mx {
@@ -6087,15 +6233,44 @@ div.auto-scroller ul li {
 }
 
 /*! ================================================================================================
-*** STYLE RULES SPECIFIC TO THE SUMMER RESEARCH WEBSITE
+*** ▄▀▀▀ █  █ ▐▀▄▀▌▐▀▄▀▌█▀▀▀ █▀▀▄    █▀▀▄ █▀▀▀ ▄▀▀▀ █▀▀▀ ▄▀▀▄ █▀▀▄ ▄▀▀▀ █  █
+*** ▀▀▀█ █  █ █ ▀ ▌█ ▀ ▌█▀▀  █▄▄▀    █▄▄▀ █▀▀  ▀▀▀█ █▀▀  █▄▄█ █▄▄▀ █    █▀▀█
+*** ▀▀▀   ▀▀  █   ▀█   ▀▀▀▀▀ ▀  ▀▄   ▀  ▀▄▀▀▀▀ ▀▀▀  ▀▀▀▀ █  ▀ ▀  ▀▄ ▀▀▀ █  ▀
+***
+***       ▄▀▀▀ █  █ ▄▀▀▀▐▀█▀▌▄▀▀▄ ▐▀▄▀▌   ▄▀▀▀▐▀█▀▌█  █ █    ▀█▀ ▐▀▀▄ █▀▀▀
+***       █    █  █ ▀▀▀█  █  █  █ █ ▀ ▌   ▀▀▀█  █  ▀▄▄█ █  ▄  █  █  ▐ █ ▀▄
+***        ▀▀▀  ▀▀  ▀▀▀   █   ▀▀  █   ▀   ▀▀▀   █  ▄▄▄▀ ▀▀▀  ▀▀▀ ▀  ▐ ▀▀▀▀
 *** ================================================================================================
-***   GIT REPOSITORY: https://github.com/invokeImmediately/summerresearch.wsu.edu/
-***     (Please see above git repository for fully documented, precompiled source code.)
+*** CSS code designed for use on Washington State University's Summer Research Program website that
+***    was built from precompiled CSS written in the Less language extension of CSS.
+***
+*** Fully documented, precompiled source code from which this section of the custom stylesheet was
+***   built is developed and maintained on the linked GitHub project.
+***
+*** @version 1.0.0
+***
+*** @link https://summerresearch.wsu.edu
+*** @link https://github.com/invokeImmediately/summerresearch.wsu.edu/
+*** @author Daniel Rieck [daniel.rieck@wsu.edu] (https://github.com/invokeImmediately)
+*** @license MIT Copyright (c) 2021 Washington State University
+***   Permission is hereby granted, free of charge, to any person obtaining a copy of this software
+***     and associated documentation files (the "Software"), to deal in the Software without
+***     restriction, including without limitation the rights to use, copy, modify, merge, publish,
+***     distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom
+***     the Software is furnished to do so, subject to the following conditions:
+***   The above copyright notice and this permission notice shall be included in all copies or
+***     substantial portions of the Software.
+***   THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING
+***     BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+***     NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY
+***     CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE,
+***     ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+***     SOFTWARE.
 *** ================================================================================================
 **/
 
 main {
-  background: #fff url(/wp-content/uploads/sites/907/2016/05/tileable-papar-texture_500x500_opacity-0.5.png) left top repeat;
+  background: #fff;
 }
 
 #jacket {
@@ -7348,32 +7523,34 @@ div.iframe-wrapper.home {
 }
 
 /*! ================================================================================================
-*** Media queries section
+*** ▐▀▄▀▌█▀▀▀ █▀▀▄ ▀█▀ ▄▀▀▄   ▄▀▀▄ █  █ █▀▀▀ █▀▀▄ ▀█▀ █▀▀▀ ▄▀▀▀   ▄▀▀▀ █▀▀▀ ▄▀▀▀▐▀█▀▌▀█▀ ▄▀▀▄ ▐▀▀▄
+*** █ ▀ ▌█▀▀  █  █  █  █▄▄█   █  █ █  █ █▀▀  █▄▄▀  █  █▀▀  ▀▀▀█   ▀▀▀█ █▀▀  █     █   █  █  █ █  ▐
+*** █   ▀▀▀▀▀ ▀▀▀  ▀▀▀ █  ▀    ▀█▄  ▀▀  ▀▀▀▀ ▀  ▀▄▀▀▀ ▀▀▀▀ ▀▀▀    ▀▀▀  ▀▀▀▀  ▀▀▀  █  ▀▀▀  ▀▀  ▀  ▐
 *** ================================================================================================
-*** SUMMARY: Media queries built from precompiled CSS written in the Less language extension of
-***   CSS. Queries in this section are a combination of those designed for use on all websites
-***   managed by WSU DAESA and those intended specifically for use on the Summer Research Program
-***   website.
+*** Media queries built from precompiled CSS written in the Less language extension of CSS. Queries
+***   in this section are a combination of those designed for use on DAESA websites and those
+***   intended specifically for use on the Summer Research Program website.
 ***
-*** DESCRIPTION: Fully documented, precompiled source code from which this section of the custom
-***   stylesheet was built is developed and maintained on the following two GitHub projects:
-***     https://github.com/invokeImmediately/WSU-UE---CSS/
-***     https://github.com/invokeImmediately/summerresearch.wsu.edu/
+*** Fully documented, precompiled source code from which this section of stylesheet was developed
+***   is maintained on the following two GitHub projects:
+***   - https://github.com/invokeImmediately/WSU-DAESA-CSS/
+***   - https://github.com/invokeImmediately/summerresearch.wsu.edu/
 ***
-*** AUTHOR: Daniel Rieck [daniel.rieck@wsu.edu] (https://github.com/invokeImmediately)
-***
-*** LICENSE: ISC - Copyright (c) 2020 Daniel C. Rieck.
-***
-***   Permission to use, copy, modify, and/or distribute this software for any purpose with or
-***   without fee is hereby granted, provided that the above copyright notice and this permission
-***   notice appear in all copies.
-***
-***   THE SOFTWARE IS PROVIDED "AS IS" AND DANIEL C. RIECK DISCLAIMS ALL WARRANTIES WITH REGARD TO
-***   THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS. IN NO EVENT
-***   SHALL DANIEL C. RIECK BE LIABLE FOR ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR
-***   ANY DAMAGES WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF
-***   CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE
-***   OR PERFORMANCE OF THIS SOFTWARE.
+*** @author Daniel Rieck [daniel.rieck@wsu.edu] (https://github.com/invokeImmediately)
+*** @license: MIT - Copyright (c) 2021 Washington State University
+***   Permission is hereby granted, free of charge, to any person obtaining a copy of this software
+***     and associated documentation files (the "Software"), to deal in the Software without
+***     restriction, including without limitation the rights to use, copy, modify, merge, publish,
+***     distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom
+***     the Software is furnished to do so, subject to the following conditions:
+***   The above copyright notice and this permission notice shall be included in all copies or
+***     substantial portions of the Software.
+***   THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING
+***     BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+***     NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY
+***     CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE,
+***     ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+***     SOFTWARE.
 *** ================================================================================================
 **/
 @media all and (min-width: 481px) {
@@ -7541,7 +7718,9 @@ div.iframe-wrapper.home {
 
   .row.mimic-two-column-sections .article-deck,
   .row.side-right .article-deck.two,
+  .row.side-right .article-deck.one.mimic-sidebar,
   .row.side-left .article-deck.one,
+  .row.side-left .article-deck.two.mimic-sidebar,
   .row.halves .article-deck {
     font-size: 1.2em;
   }
@@ -7567,7 +7746,9 @@ div.iframe-wrapper.home {
 
   .row.mimic-two-column-sections .column,
   .row.side-right .column.two,
+  .row.side-right .column.one.mimic-sidebar,
   .row.side-left .column.one,
+  .row.side-left .column.two.mimic-sidebar,
   .row.halves .column {
     font-size: 1em;
   }
@@ -7872,14 +8053,6 @@ div.iframe-wrapper.home {
 }
 
 @media all and (max-width: 480px) {
-  .article-summary .article-thumbnail img {
-    width: 96px;
-  }
-
-  .wsuwp-json--headlines.layout--2-columns .wsuwp-content-syndicate-item {
-    width: 100%;
-  }
-
   .builder-banner-content {
     font-size: 5.1568vw;
     line-height: 6.9616vw;
@@ -7977,6 +8150,14 @@ div.iframe-wrapper.home {
     float: none;
     margin-left: 0;
     padding-bottom: 40%;
+    width: 100%;
+  }
+
+  .article-summary .article-thumbnail img {
+    width: 96px;
+  }
+
+  .wsuwp-json--headlines.layout--2-columns .wsuwp-content-syndicate-item {
     width: 100%;
   }
 
@@ -8177,7 +8358,9 @@ div.iframe-wrapper.home {
 
   .row.mimic-two-column-sections .article-deck,
   .row.side-right .article-deck.two,
+  .row.side-right .article-deck.one.mimic-sidebar,
   .row.side-left .article-deck.one,
+  .row.side-left .article-deck.two.mimic-sidebar,
   .row.halves .article-deck {
     font-size: 1.0584em;
   }
@@ -8216,7 +8399,9 @@ div.iframe-wrapper.home {
 
   .row.mimic-two-column-sections .column,
   .row.side-right .column.two,
+  .row.side-right .column.one.mimic-sidebar,
   .row.side-left .column.one,
+  .row.side-left .column.two.mimic-sidebar,
   .row.halves .column {
     font-size: 0.882em;
   }
@@ -8301,7 +8486,9 @@ div.iframe-wrapper.home {
 
   .row.mimic-two-column-sections .article-deck,
   .row.side-right .article-deck.two,
+  .row.side-right .article-deck.one.mimic-sidebar,
   .row.side-left .article-deck.one,
+  .row.side-left .article-deck.two.mimic-sidebar,
   .row.halves .article-deck {
     font-size: 1.1292em;
   }
@@ -8327,7 +8514,9 @@ div.iframe-wrapper.home {
 
   .row.mimic-two-column-sections .column,
   .row.side-right .column.two,
+  .row.side-right .column.one.mimic-sidebar,
   .row.side-left .column.one,
+  .row.side-left .column.two.mimic-sidebar,
   .row.halves .column {
     font-size: 0.941em;
   }
@@ -8354,7 +8543,9 @@ div.iframe-wrapper.home {
 
   .row.mimic-two-column-sections .article-deck,
   .row.side-right .article-deck.two,
+  .row.side-right .article-deck.one.mimic-sidebar,
   .row.side-left .article-deck.one,
+  .row.side-left .article-deck.two.mimic-sidebar,
   .row.halves .article-deck {
     font-size: 1.1292em;
   }
@@ -8380,7 +8571,9 @@ div.iframe-wrapper.home {
 
   .row.mimic-two-column-sections .column,
   .row.side-right .column.two,
+  .row.side-right .column.one.mimic-sidebar,
   .row.side-left .column.one,
+  .row.side-left .column.two.mimic-sidebar,
   .row.halves .column {
     font-size: 0.941em;
   }
@@ -8407,7 +8600,9 @@ div.iframe-wrapper.home {
 
   .row.mimic-two-column-sections .article-deck,
   .row.side-right .article-deck.two,
+  .row.side-right .article-deck.one.mimic-sidebar,
   .row.side-left .article-deck.one,
+  .row.side-left .article-deck.two.mimic-sidebar,
   .row.halves .article-deck {
     font-size: 1.2em;
   }
@@ -8433,7 +8628,9 @@ div.iframe-wrapper.home {
 
   .row.mimic-two-column-sections .column,
   .row.side-right .column.two,
+  .row.side-right .column.one.mimic-sidebar,
   .row.side-left .column.one,
+  .row.side-left .column.two.mimic-sidebar,
   .row.halves .column {
     font-size: 1em;
   }
@@ -8460,7 +8657,9 @@ div.iframe-wrapper.home {
 
   .row.mimic-two-column-sections .article-deck,
   .row.side-right .article-deck.two,
+  .row.side-right .article-deck.one.mimic-sidebar,
   .row.side-left .article-deck.one,
+  .row.side-left .article-deck.two.mimic-sidebar,
   .row.halves .article-deck {
     font-size: 1.1292em;
   }
@@ -8499,7 +8698,9 @@ div.iframe-wrapper.home {
 
   .row.mimic-two-column-sections .column,
   .row.side-right .column.two,
+  .row.side-right .column.one.mimic-sidebar,
   .row.side-left .column.one,
+  .row.side-left .column.two.mimic-sidebar,
   .row.halves .column {
     font-size: 0.941em;
   }
@@ -8723,7 +8924,9 @@ div.iframe-wrapper.home {
 
   .row.mimic-two-column-sections .article-deck,
   .row.side-right .article-deck.two,
+  .row.side-right .article-deck.one.mimic-sidebar,
   .row.side-left .article-deck.one,
+  .row.side-left .article-deck.two.mimic-sidebar,
   .row.halves .article-deck {
     line-height: 1.5em;
   }
@@ -8749,7 +8952,9 @@ div.iframe-wrapper.home {
 
   .row.mimic-two-column-sections .column,
   .row.side-right .column.two,
+  .row.side-right .column.one.mimic-sidebar,
   .row.side-left .column.one,
+  .row.side-left .column.two.mimic-sidebar,
   .row.halves .column {
     line-height: 1.5em;
   }
