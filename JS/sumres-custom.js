@@ -1,37 +1,52 @@
-/*!
- * sumres-custom.js: Site-specific JS for the WSUWP website of the [Summer Undergraduate Research
+/*!*************************************************************************************************
+ * ▄▀▀▀ █  █ ▐▀▄▀▌█▀▀▄ █▀▀▀ ▄▀▀▀    ▄▀▀▀ █  █ ▄▀▀▀▐▀█▀▌▄▀▀▄ ▐▀▄▀▌      █ ▄▀▀▀
+ * ▀▀▀█ █  █ █ ▀ ▌█▄▄▀ █▀▀  ▀▀▀█ ▀▀ █    █  █ ▀▀▀█  █  █  █ █ ▀ ▌   ▄  █ ▀▀▀█
+ * ▀▀▀   ▀▀  █   ▀▀  ▀▄▀▀▀▀ ▀▀▀      ▀▀▀  ▀▀  ▀▀▀   █   ▀▀  █   ▀ ▀ ▀▄▄█ ▀▀▀
+ * 
+ * Custom JS code written specifically for the WSUWP website of the [Summer Undergraduate Research
  * program](https://summerresearch.wsu.edu).
  *
- * @author - Daniel Rieck ( danielcrieck@gmail.com ) [https://github.com/invokeImmediately]
- * @todo - Revise the inline documentation of this file to break down 
- */
+ * @author Daniel Rieck [daniel.rieck@wsu.edu] (https://github.com/invokeImmediately)
+ * @link https://github.com/invokeImmediately/surca.wsu.edu/blob/master/JS/sumres-custom.js
+ * @license MIT - Copyright (c) 2021 Washington State University
+ *   Permission is hereby granted, free of charge, to any person obtaining a copy of this software
+ *     and associated documentation files (the “Software”), to deal in the Software without
+ *     restriction, including without limitation the rights to use, copy, modify, merge, publish,
+ *     distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom
+ *     the Software is furnished to do so, subject to the following conditions:
+ *   The above copyright notice and this permission notice shall be included in all copies or
+ *     substantial portions of the Software.
+ *   THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING
+ *     BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+ *     NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,
+ *     DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+ *     FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+ **************************************************************************************************/
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 // TABLE OF CONTENTS
 // -----------------
-//  §1: Main execution.........................................................................41
-//    §1.1: DOM-ready Execution Block..........................................................44
-//    §1.2: Window Loaded Event Binding........................................................56
-//  §2: Function Definitions...................................................................67
-//    §2.1: addPageHeaderToNews................................................................71
-//    §2.2: adjustScrollingAfterNavToAnchor....................................................89
-//    §2.3: fillHiddenFields..................................................................168
-//    §2.4: initAnchorVisibilityFix...........................................................195
-//    §2.5: initDelayedNotices................................................................207
-//    §2.6: initExpiringItems.................................................................233
-//    §2.7: resortListsWithExpiredItems.......................................................273
-//    §2.8: initFacultyEmailAutoEntry.........................................................349
-//  §3: Class Definition Section..............................................................425
-//    §3.1: FieldsToFill......................................................................428
-//    §3.2: FieldsToFill.prototype.isValid....................................................453
+//  §1: Main execution.........................................................................56
+//    §1.1: DOM-ready Execution Block..........................................................59
+//    §1.2: Window Loaded Event Binding........................................................71
+//  §2: Function Definitions...................................................................82
+//    §2.1: addPageHeaderToNews................................................................86
+//    §2.2: adjustScrollingAfterNavToAnchor...................................................104
+//    §2.3: fillHiddenFields..................................................................183
+//    §2.4: initAnchorVisibilityFix...........................................................210
+//    §2.5: initDelayedNotices................................................................224
+//    §2.6: initExpiringItems.................................................................246
+//    §2.7: resortListsWithExpiredItems.......................................................283
+//    §2.8: initFacultyEmailAutoEntry.........................................................355
+//  §3: Class Definition Section..............................................................430
+//    §3.1: FieldsToFill......................................................................433
+//    §3.2: FieldsToFill.prototype.isValid....................................................458
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 
 /**
  * An IIFE that contains custom JS code specific to summerresearch.wsu.edu.
- *
- * @link	https://github.com/invokeImmediately/distinguishedscholarships.wsu.edu
  * 
- * @param	{object}	$	Alias for the jQuery interface.
+ * @param {object} $: Alias for the jQuery interface.
  */
 ( function( $ ) {
 
@@ -47,9 +62,9 @@
  * Uses the jQuery interface to execute a block of statements once the DOM is ready.
  */
 $( function() {
-	addPageHeaderToNews();
-	initAnchorVisibilityFix();
-	initExpiringItems(".has-expiration", "expirationDate", "is-expired");
+  addPageHeaderToNews();
+  initAnchorVisibilityFix();
+  initExpiringItems(".has-expiration", "expirationDate", "is-expired");
 } );
 
 ////////
@@ -59,8 +74,8 @@ $( function() {
  * Binds a series of execution statements to window loaded event.
  */
 $( window ).on( "load", function() {
-	initDelayedNotices("p.notice", "is-delayed", 500);
-	initFacultyEmailAutoEntry("li.gfield.sets-faculty-email", "li.gform_hidden");
+  initDelayedNotices("p.notice", "is-delayed", 500);
+  initFacultyEmailAutoEntry("li.gfield.sets-faculty-email", "li.gform_hidden");
 });
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -74,15 +89,15 @@ $( window ).on( "load", function() {
  * Adds a page header containing navigational context to the news section of the website.
  */
 function addPageHeaderToNews() {
-	// Tweak HTML source to work around some quirks of WordPress setup.
-	var siteURL = window.location.pathname;
-	switch (siteURL) {
-		case '/news/':
-			$('div.column.one').first().parent('section').before('<section class="row page-header p\
+  // Tweak HTML source to work around some quirks of WordPress setup.
+  var siteURL = window.location.pathname;
+  switch (siteURL) {
+    case '/news/':
+      $('div.column.one').first().parent('section').before('<section class="row page-header p\
 age-header--news"><div class="column one page-header__column-1"><h1 class="page-header__text-title"\
 >News</h1></div></section>');
-			break;
-	}
+      break;
+  }
 }
 
 ////////
@@ -93,75 +108,75 @@ age-header--news"><div class="column one page-header__column-1"><h1 class="page-
  * in view.
  */
 function adjustScrollingAfterNavToAnchor() {
-	var currentScrollPos;		// Uncorrected scrolling position that resulted after navigating to
-								// the anchor.
+  var currentScrollPos;     // Uncorrected scrolling position that resulted after navigating to the
+                            //   anchor.
 
-	var windowWidth;			// Browser window width is checked against spine header width to
-								// test for mobile/tablet mode.
+  var windowWidth;          // Browser window width is checked against spine header width to test
+                            //   for mobile/tablet mode.
 
-	var scrollingAdjustment;	// Calculated number of pixels needed to move up the page and bring
-								// the anchor back into view.
+  var scrollingAdjustment;  // Calculated number of pixels needed to move up the page and bring the
+                            //   anchor back into view.
 
-	var $wpadminbar;			// jQuery object: WordPress admin bar that floats at top or bottom
-								// of screen.
+  var $wpadminbar;          // jQuery object: WordPress admin bar that floats at top or bottom of
+                            //   screen.
 
-	var $spineHeader;			// jQuery object: spine header element that floats at top of screen
-								// on mobile/tablet.
+  var $spineHeader;         // jQuery object: spine header element that floats at top of screen
+                            //   on mobile/tablet.
 
-	var $toc;					// jQuery object: fixed table of contents element located toward top
-								// of page.
+  var $toc;                 // jQuery object: fixed table of contents element located toward top
+                            //   of page.
 
-	var tocTrigger;				// Scrolling position where, once reached, the floating table of
-								// contents is brought into view.
+  var tocTrigger;           // Scrolling position where, once reached, the floating table of
+                            //   contents is brought into view.
 
-	var $floatingToc;			// The jQuery object for the floating table of contents element.
+  var $floatingToc;         // The jQuery object for the floating table of contents element.
 
-	var updatedScrollPos;		// Corrected scrolling position whereat the anchor is visible at top
-								// of page.
+  var updatedScrollPos;     // Corrected scrolling position whereat the anchor is visible at top of
+                            //   page.
 
-	// Get the current, uncorrected scrolling position 
-	currentScrollPos = ( $(window).scrollTop() || $( "body" ).scrollTop() );
-	scrollingAdjustment = 0;
+  // Get the current, uncorrected scrolling position 
+  currentScrollPos = ( $(window).scrollTop() || $( "body" ).scrollTop() );
+  scrollingAdjustment = 0;
 
-	// If necessary, compensate for the floating WordPress admin bar
-	$wpadminbar = $( "#wpadminbar" );
-	if ( $wpadminbar.length && $wpadminbar.css( "top" ) === "0px" ) {
-		scrollingAdjustment += $wpadminbar.outerHeight();
-	}
+  // If necessary, compensate for the floating WordPress admin bar
+  $wpadminbar = $( "#wpadminbar" );
+  if ( $wpadminbar.length && $wpadminbar.css( "top" ) === "0px" ) {
+    scrollingAdjustment += $wpadminbar.outerHeight();
+  }
 
-	// If necessary, compensate for the floating spine menu and the OUE-specific floating
-	// table of contents feature.
-	windowWidth = $( window ).width();
-	$spineHeader = $( "#spine" ).find(".spine-header");
-	$toc = $( ".vpue-jump-bar" ).first();
-	tocTrigger = $toc.offset().top + $toc.height() + 100;
-	$floatingToc = $( ".vpue-jump-bar.floating" );
-	if( $spineHeader.width() != windowWidth ) {
+  // If necessary, compensate for the floating spine menu and the OUE-specific floating
+  // table of contents feature.
+  windowWidth = $( window ).width();
+  $spineHeader = $( "#spine" ).find(".spine-header");
+  $toc = $( ".vpue-jump-bar" ).first();
+  tocTrigger = $toc.offset().top + $toc.height() + 100;
+  $floatingToc = $( ".vpue-jump-bar.floating" );
+  if( $spineHeader.width() != windowWidth ) {
 
-		// We are in desktop view and the spine is positioned to the left of the main content area.
-		// The only possible correction that needs to be applied on OUE websites is to compensate
-		// for a floating TOC element that is hovering over main content at the top of the screen.
-		if ( $floatingToc.length && currentScrollPos > tocTrigger ) {
-			scrollingAdjustment += $floatingToc.outerHeight() + 8;
-		}
-	} else {
+    // We are in desktop view and the spine is positioned to the left of the main content area.
+    // The only possible correction that needs to be applied on OUE websites is to compensate
+    // for a floating TOC element that is hovering over main content at the top of the screen.
+    if ( $floatingToc.length && currentScrollPos > tocTrigger ) {
+      scrollingAdjustment += $floatingToc.outerHeight() + 8;
+    }
+  } else {
 
-		// We are in mobile/tablet view and the spine is floating at the top of the screen and
-		// covering main content area. It is also possible that a correction needs to be applied for
-		// a floating TOC element that is peeking out from under the spine header and is also
-		// covering main content.
-		scrollingAdjustment += $spineHeader.outerHeight();
-		if ( $floatingToc.length && currentScrollPos > tocTrigger ) {
-			scrollingAdjustment += 23;
-		}				
-	}
+    // We are in mobile/tablet view and the spine is floating at the top of the screen and
+    // covering main content area. It is also possible that a correction needs to be applied for
+    // a floating TOC element that is peeking out from under the spine header and is also
+    // covering main content.
+    scrollingAdjustment += $spineHeader.outerHeight();
+    if ( $floatingToc.length && currentScrollPos > tocTrigger ) {
+      scrollingAdjustment += 23;
+    }       
+  }
 
-	// Correct the scrolling position to bring the anchored element back into view at visible top
-	// of screen.
-	updatedScrollPos = currentScrollPos >= scrollingAdjustment ?
-		currentScrollPos - scrollingAdjustment :
-		0;
-	$("html, body").scrollTop( updatedScrollPos );
+  // Correct the scrolling position to bring the anchored element back into view at visible top
+  // of screen.
+  updatedScrollPos = currentScrollPos >= scrollingAdjustment ?
+    currentScrollPos - scrollingAdjustment :
+    0;
+  $("html, body").scrollTop( updatedScrollPos );
 }
 
 ////////
@@ -170,25 +185,25 @@ function adjustScrollingAfterNavToAnchor() {
 /**
  * Fills hidden fields on the gravity form for abstract submission.
  *
- * @param {Object}	fieldsToFill	A properly constructed FieldsToFill object.
+ * @param {Object}  fieldsToFill  A properly constructed FieldsToFill object.
  */
 function fillHiddenFields(fieldsToFill) {
-	if(fieldsToFill instanceof FieldsToFill && fieldsToFill.isValid()) {
-		switch(fieldsToFill.selectionMade) {
-			case "Multidisciplinary Undergraduate Research Training in Wearable Computing " +
-					"(Hassan Ghasemzadeh)":
-				fieldsToFill.$emailInputBox.val("hassan.ghasemzadeh@wsu.edu");
-				fieldsToFill.$nameInputBox.val("Hassan");
-				break;
-			case "Undergraduate Research in Smart Environments (Larry Holder)":
-				fieldsToFill.$emailInputBox.val("holder@wsu.edu");
-				fieldsToFill.$nameInputBox.val("Larry");
-				break;
-			default:
-				fieldsToFill.$emailInputBox.val("");
-				fieldsToFill.$nameInputBox.val("");
-		}
-	}
+  if( fieldsToFill instanceof FieldsToFill && fieldsToFill.isValid() ) {
+    switch( fieldsToFill.selectionMade ) {
+      case "Multidisciplinary Undergraduate Research Training in Wearable Computing " +
+          "(Hassan Ghasemzadeh)":
+        fieldsToFill.$emailInputBox.val( "hassan.ghasemzadeh@wsu.edu" );
+        fieldsToFill.$nameInputBox.val( "Hassan" );
+        break;
+      case "Undergraduate Research in Smart Environments (Larry Holder)":
+        fieldsToFill.$emailInputBox.val( "holder@wsu.edu" );
+        fieldsToFill.$nameInputBox.val( "Larry" );
+        break;
+      default:
+        fieldsToFill.$emailInputBox.val("");
+        fieldsToFill.$nameInputBox.val("");
+    }
+  }
 }
 
 ////////
@@ -197,10 +212,12 @@ function fillHiddenFields(fieldsToFill) {
 /**
  * Binds a callback to the window's hashchange event that will keep an anchor that the user has
  * navigated to in view.
+ * 
+ * @todo Consider moving to DAESA custom JS file.
  */
 function initAnchorVisibilityFix() {
-	// TODO: Change approach to depend on jQuery(window).on(…)
-	window.onhashchange = adjustScrollingAfterNavToAnchor;
+  // TODO: Change approach to depend on jQuery(window).on(…)
+  window.onhashchange = adjustScrollingAfterNavToAnchor;
 }
 
 ////////
@@ -212,21 +229,17 @@ function initAnchorVisibilityFix() {
  */
 function initDelayedNotices(slctrNotices, clssIsDelayed, noticeDelay) {
 
-	var $delayedNotices;	// jQuery object: all delayed notice elements
+  var $delayedNotices;  // jQuery object: all delayed notice elements
+  var $this;            // jQuery object: element from which active execution context was invoked
+  var noticeDelay;      // Number of milliseconds to wait before displaying notices after page load
 
-	var $this;	// jQuery object: element from which active execution context
-				// was invoked
-
-	var noticeDelay;	// Number of milliseconds to wait before displaying
-						//  notices after page load
-
-	$delayedNotices = $(slctrNotices + "." + clssIsDelayed);
-	$delayedNotices.each( function () {
-		$this = $( this );
-		setTimeout( function() {
-			$this.removeClass( clssIsDelayed );
-		}, noticeDelay );
-	});
+  $delayedNotices = $(slctrNotices + "." + clssIsDelayed);
+  $delayedNotices.each( function () {
+    $this = $( this );
+    setTimeout( function() {
+      $this.removeClass( clssIsDelayed );
+    }, noticeDelay );
+  });
 }
 
 ////////
@@ -237,36 +250,33 @@ function initDelayedNotices(slctrNotices, clssIsDelayed, noticeDelay) {
  */
 function initExpiringItems(slctrExpiringElems, dataAttrExprtnDate, clssExpired) {
 
-	var today;	// Date object constructed from today's date; used to determine
-				// whether elements have expired
+  var today;          // Date object constructed from today's date; used to determine whether
+                      //   elements have expired
 
-	var $expiringElems;	// jQuery object: all elements for which an expiration
-						// date has been set
+  var $expiringElems; // jQuery object: all elements for which an expiration date has been set
 
-	var $this;	// jQuery object: element from which active execution context
-				// was invoked
+  var $this;          // jQuery object: element from which active execution context was invoked
 
-	var exprtnDateVal;	// The value of an element's expiration date as set
-						// through jQuery data storage
+  var exprtnDateVal;  // The value of an element's expiration date as set through jQuery data
+                      //   storage
 
-	var exprtnDateObj;	// A date object constructed from the value of an
-						// element's expiration date
+  var exprtnDateObj;  // A date object constructed from the value of an element's expiration date
 
-	today = new Date();
-	$expiringElems = $( slctrExpiringElems );
-	$expiringElems.each( function() {
-		$this = $( this );
-		exprtnDateVal = $this.data( dataAttrExprtnDate );
-		if ( exprtnDateVal != undefined ) {
+  today = new Date();
+  $expiringElems = $( slctrExpiringElems );
+  $expiringElems.each( function() {
+    $this = $( this );
+    exprtnDateVal = $this.data( dataAttrExprtnDate );
+    if ( exprtnDateVal != undefined ) {
 
-			// TODO: use regex to enforce correct date format strings
-			exprtnDateObj = new Date( exprtnDateVal );
-			if ( today > exprtnDateObj ) {
-				$this.addClass( clssExpired );
-			}
-		} 
-	});
-	resortListsWithExpiredItems( clssExpired );
+      // TODO: use regex to enforce correct date format strings
+      exprtnDateObj = new Date( exprtnDateVal );
+      if ( today > exprtnDateObj ) {
+        $this.addClass( clssExpired );
+      }
+    } 
+  });
+  resortListsWithExpiredItems( clssExpired );
 }
 
 ////////
@@ -281,68 +291,64 @@ function initExpiringItems(slctrExpiringElems, dataAttrExprtnDate, clssExpired) 
  * layout function after sorting.
  */
 function resortListsWithExpiredItems(clssExpired) {
-	var $expiredItems;			// jQuery object: all list item elements with an expiration date.
-								// Used to find all list elements containing such items.
+  var $expiredItems;          // jQuery object: all list item elements with an expiration date. Used
+                              //   to find all list elements containing such items.
 
-	var $listsWithExpiredItems;	// jQuery object: all lists containing elements with current
-								// execution context was invoked.
+  var $listsWithExpiredItems; // jQuery object: all lists containing elements with current execution
+                              //   context was invoked.
 
-	var $thisList;				// jQuery object: list element from which active execution context
-								// was invoked.
+  var $thisList;              // jQuery object: list element from which active execution context was
+                              //   invoked.
 
-	var $listItems;				// jQuery object: used once a list containing expiring items has
-								// invoked an execution context to store all of the child list items
-								// of the invoking list.
+  var $listItems;             // jQuery object: used once a list containing expiring items has
+                              //   invoked an execution context to store all of the child list items
+                              //   of the invoking list.
 
-	var $lastItem;				// jQuery object: used while iterating over the child list items of
-								// a parent list element that contains expiring items; serves as
-								// reference to the last item at the end of the list.
+  var $lastItem;              // jQuery object: used while iterating over the child list items of a
+                              //   parent list element that contains expiring items; serves as
+                              //   reference to the last item at the end of the list.
 
-	var $curItem;				// jQuery object: used while iterating over the child list items of
-								// a parent list element that contains expiring items; serves as
-								// reference to the curret item being considered during iteration.
+  var $curItem;               // jQuery object: used while iterating over the child list items of a
+                              //   parent list element that contains expiring items; serves as
+                              //   reference to the curret item being considered during iteration.
 
-	var $clonedItem;			// jQuery object: used to create a clone of an expired
-								// list item while it is being moved to the end of a list.
+  var $clonedItem;            // jQuery object: used to create a clone of an expired list item while
+                              //   it is being moved to the end of a list.
 
-	var idx;	// Iterator index
+  var idx;                    // Iterator index
 
-	$expiredItems = $( "li." + clssExpired );
-	$listsWithExpiredItems = $expiredItems.parent( "ul" );
-	$listsWithExpiredItems.each(function() {
-		$thisList = $(this);
-		if (!$thisList.hasClass('cascaded-layout')) {
-			$listItems = $thisList.children("li");
-			$lastItem = $listItems.eq($listItems.length - 1);
-			for (idx = 0; idx < $listItems.length; idx++) {
-				$curItem = $listItems.eq(idx);
-				if ($curItem.hasClass(clssExpired)) {
-					
-					// This method of moving items is done intentionally to
-					// result in a reverse chronological sorting of expired
-					// items, where the most recently expired item is displayed
-					// first in sequence
-					$curItem.detach().insertAfter($lastItem);
-				}
-			}
-		} else {
-			$listItems = $thisList.children("li");
-			$lastItem = $listItems.eq($listItems.length - 1);
-			for (idx = 0; idx < $listItems.length; idx++) {
-				$curItem = $listItems.eq(idx);
-				if ($curItem.hasClass(clssExpired)) {
-
-					// TODO: This method of moving items will result in a
-					// chronological sorting, which is different from above;
-					// may want to consider refactoring.
-					$clonedItem = $curItem.clone();
-					$thisList.append($clonedItem).masonry("appended",
-						$clonedItem);
-					$thisList.masonry("remove", $curItem).masonry("layout");
-				}
-			}
-		}
-	});
+  $expiredItems = $( "li." + clssExpired );
+  $listsWithExpiredItems = $expiredItems.parent( "ul" );
+  $listsWithExpiredItems.each(function() {
+    $thisList = $(this);
+    if (!$thisList.hasClass('cascaded-layout')) {
+      $listItems = $thisList.children("li");
+      $lastItem = $listItems.eq($listItems.length - 1);
+      for (idx = 0; idx < $listItems.length; idx++) {
+        $curItem = $listItems.eq(idx);
+        if ($curItem.hasClass(clssExpired)) {
+          // This method of moving items is done intentionally to result in a reverse chronological
+          //   sorting of expired items, where the most recently expired item is displayed first in
+          //   sequence
+          $curItem.detach().insertAfter($lastItem);
+        }
+      }
+    } else {
+      $listItems = $thisList.children("li");
+      $lastItem = $listItems.eq($listItems.length - 1);
+      for (idx = 0; idx < $listItems.length; idx++) {
+        $curItem = $listItems.eq(idx);
+        if ($curItem.hasClass(clssExpired)) {
+          // This method of moving items will result in a chronological sorting, which is different
+          //   from above; may want to consider refactoring.
+          $clonedItem = $curItem.clone();
+          $thisList.append($clonedItem).masonry("appended",
+            $clonedItem);
+          $thisList.masonry("remove", $curItem).masonry("layout");
+        }
+      }
+    }
+  });
 }
 
 ////////
@@ -352,73 +358,72 @@ function resortListsWithExpiredItems(clssExpired) {
  * Minimizes user input errors by automatically filling in hidden fields for a research mentor's
  * name and email.
  *
- * @param {string}	slctrSelectBox		Selector string for matching the mentor/project selection
- *										box on the form.
- * @param {string}	slctrHiddenFields	Selector string for matching the hidden fields for the
- *										mentor's name and email address.
+ * @param {string}  slctrSelectBox    Selector string for matching the mentor/project selection
+ *                    box on the form.
+ * @param {string}  slctrHiddenFields Selector string for matching the hidden fields for the
+ *                    mentor's name and email address.
  */
 function initFacultyEmailAutoEntry(slctrSelectBox, slctrHiddenFields) {
-	var $selectField;		// jQuery object: the drop-down selection field through which the user
-							// chooses their project.
+  var $selectField;       // jQuery object: the drop-down selection field through which the user
+                          //   chooses their project.
 
-	var $emailField;		// jQuery object: a hidden email field that is the immediate sibling
-							// following the visible selection field in the DOM.
+  var $emailField;        // jQuery object: a hidden email field that is the immediate sibling
+                          //   following the visible selection field in the DOM.
 
-	var $facultyNameField;	// jQuery object: a hidden text input field that is the immediate
-							// sibling following the hidden email field in the DOM; stores mentor's
-							// name.
+  var $facultyNameField;  // jQuery object: a hidden text input field that is the immediate sibling
+                          //   following the hidden email field in the DOM; stores mentor's name.
 
-	var $selectBox;			// jQuery object: the input element within the project selection field
-							// that is visible to the user.
+  var $selectBox;         // jQuery object: the input element within the project selection field
+                          //   that is visible to the user.
 
-	var $emailInputBox;		// jQuery object: the input element within the mentor's email field
-							// which is hidden from the user.
+  var $emailInputBox;     // jQuery object: the input element within the mentor's email field which
+                          //   is hidden from the user.
 
-	var $nameInputBox;		// jQuery object: the input element within the mentor's name field which
-							// is hidden from the user.
+  var $nameInputBox;      // jQuery object: the input element within the mentor's name field which
+                          //   is hidden from the user.
 
-	var selectionMade;		// Holds the value of the project selectied by the user.
+  var selectionMade;      // Holds the value of the project selected by the user.
 
-	var fieldsToFill;		// Object representing the form fields to be automatically filled by JS.
+  var fieldsToFill;       // Object representing the form fields to be automatically filled by JS.
 
-	// If it exists on the page, find the project selection field and bind its change event to a
-	// function that automatically populates hidden fields that store the mentor's contact email
-	// and name.
-	$( slctrSelectBox ).each(function () {
-		$selectField = $(this);
-		$emailField = $selectField.next(slctrHiddenFields);
-		if ( $emailField.length > 0 ) {
-			$facultyNameField = $emailField.next(slctrHiddenFields);
-			if ( $facultyNameField.length > 0 ) {
-				$selectBox = $selectField.find( "select" ).first();
-				$emailInputBox = $emailField.
-					find( "input[type='hidden']" ).
-					first();
-				$nameInputBox = $facultyNameField.
-					find( "input[type='hidden']" ).
-					first();
+  // If it exists on the page, find the project selection field and bind its change event to a
+  //   function that automatically populates hidden fields that store the mentor's contact email and
+  //   name.
+  $( slctrSelectBox ).each( function () {
+    $selectField = $( this) ;
+    $emailField = $selectField.next( slctrHiddenFields );
+    if ( $emailField.length > 0 ) {
+      $facultyNameField = $emailField.next( slctrHiddenFields );
+      if ( $facultyNameField.length > 0 ) {
+        $selectBox = $selectField.find( "select" ).first();
+        $emailInputBox = $emailField.
+          find( "input[type='hidden']" ).
+          first();
+        $nameInputBox = $facultyNameField.
+          find( "input[type='hidden']" ).
+          first();
 
-				// Initialize the field just in case.
-				fieldsToFill = new FieldsToFill(
-					$selectBox.val(),
-					$emailInputBox,
-					$nameInputBox
-				);
-				fillHiddenFields( fieldsToFill );
+        // Initialize the field just in case.
+        fieldsToFill = new FieldsToFill(
+          $selectBox.val(),
+          $emailInputBox,
+          $nameInputBox
+        );
+        fillHiddenFields( fieldsToFill );
 
-				// Setup an event handler for when the user changes the selection.
-				$selectBox.change( function() {
-					selectionMade = $(this).val();
-					fieldsToFill = new FieldsToFill(
-						selectionMade,
-						$emailInputBox,
-						$nameInputBox
-					);
-					fillHiddenFields( fieldsToFill );
-				});			
-			}
-		}
-	});
+        // Setup an event handler for when the user changes the selection.
+        $selectBox.change( function() {
+          selectionMade = $( this ).val();
+          fieldsToFill = new FieldsToFill(
+            selectionMade,
+            $emailInputBox,
+            $nameInputBox
+          );
+          fillHiddenFields( fieldsToFill );
+        } );     
+      }
+    }
+  } );
 }
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -433,20 +438,20 @@ function initFacultyEmailAutoEntry(slctrSelectBox, slctrHiddenFields) {
  *
  * @class
  *
- * @param {string}	selectionMade	The mentor/project selected by the user.
- * @param {Object}	$emailInputBox	jQuery object for the mentor's hidden email field on the form.
- * @param {Object}	$nameInputBox	jQuery object for the mentor's hidden name field on the form.
+ * @param {string} selectionMade:   The mentor/project selected by the user.
+ * @param {Object} $emailInputBox:  jQuery object for the mentor's hidden email field on the form.
+ * @param {Object} $nameInputBox:   jQuery object for the mentor's hidden name field on the form.
  */
-var FieldsToFill = function (selectionMade, $emailInputBox, $nameInputBox) {
-	this.selectionMade = typeof selectionMade === "string" ?
-		selectionMade :
-		"";
-	this.$emailInputBox = $.isJQueryObj($emailInputBox) ?
-		$emailInputBox :
-		$();
-	this.$nameInputBox = $.isJQueryObj($nameInputBox) ?
-		$nameInputBox :
-		$();
+var FieldsToFill = function ( selectionMade, $emailInputBox, $nameInputBox ) {
+  this.selectionMade = typeof selectionMade === "string" ?
+    selectionMade :
+    "";
+  this.$emailInputBox = $.isJQueryObj($emailInputBox) ?
+    $emailInputBox :
+    $();
+  this.$nameInputBox = $.isJQueryObj($nameInputBox) ?
+    $nameInputBox :
+    $();
 }
 
 ////////
@@ -459,7 +464,7 @@ var FieldsToFill = function (selectionMade, $emailInputBox, $nameInputBox) {
  * @returns {boolean}
  */
 FieldsToFill.prototype.isValid = function () {
-	return this.$emailInputBox.length > 0 && this.$nameInputBox.length > 0;
+  return this.$emailInputBox.length > 0 && this.$nameInputBox.length > 0;
 }
 
 })( jQuery );
