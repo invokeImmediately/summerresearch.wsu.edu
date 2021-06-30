@@ -6,7 +6,7 @@
  * Custom JS code written specifically for the WSUWP website of the [Summer Undergraduate Research
  * program](https://summerresearch.wsu.edu).
  *
- * @version 1.0.0
+ * @version 1.0.0-rc0.0.1
  * 
  * @author Daniel Rieck [daniel.rieck@wsu.edu] (https://github.com/invokeImmediately)
  * @link https://github.com/invokeImmediately/surca.wsu.edu/blob/master/JS/sumres-custom.js
@@ -35,14 +35,14 @@
 //    §2.1: addPageHeaderToNews................................................................88
 //    §2.2: adjustScrollingAfterNavToAnchor...................................................106
 //    §2.3: fillHiddenFields..................................................................185
-//    §2.4: initAnchorVisibilityFix...........................................................212
-//    §2.5: initDelayedNotices................................................................226
-//    §2.6: initExpiringItems.................................................................248
-//    §2.7: resortListsWithExpiredItems.......................................................285
-//    §2.8: initFacultyEmailAutoEntry.........................................................357
-//  §3: Class Definition Section..............................................................432
-//    §3.1: FieldsToFill......................................................................435
-//    §3.2: FieldsToFill.prototype.isValid....................................................460
+//    §2.4: initAnchorVisibilityFix...........................................................241
+//    §2.5: initDelayedNotices................................................................255
+//    §2.6: initExpiringItems.................................................................277
+//    §2.7: resortListsWithExpiredItems.......................................................314
+//    §2.8: initFacultyEmailAutoEntry.........................................................386
+//  §3: Class Definition Section..............................................................461
+//    §3.1: FieldsToFill......................................................................464
+//    §3.2: FieldsToFill.prototype.isValid....................................................489
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 
 /**
@@ -192,14 +192,43 @@ function adjustScrollingAfterNavToAnchor() {
 function fillHiddenFields(fieldsToFill) {
   if( fieldsToFill instanceof FieldsToFill && fieldsToFill.isValid() ) {
     switch( fieldsToFill.selectionMade ) {
-      case "Multidisciplinary Undergraduate Research Training in Wearable Computing " +
-          "(Hassan Ghasemzadeh)":
+      case "Atmospheric Chemistry and Climate Change: Measurements and Modeling in the Pacific " +
+          " Northwest (Shelley Pressley)":
+        fieldsToFill.$emailInputBox.val( "spressley@wsu.edu" );
+        fieldsToFill.$nameInputBox.val( "Shelley" );
+        break;
+      case "Multidisciplinary Undergraduate Research Training in Wearable Computing (Hassan " +
+          "Ghasemzadeh)":
         fieldsToFill.$emailInputBox.val( "hassan.ghasemzadeh@wsu.edu" );
         fieldsToFill.$nameInputBox.val( "Hassan" );
         break;
-      case "Undergraduate Research in Smart Environments (Larry Holder)":
-        fieldsToFill.$emailInputBox.val( "holder@wsu.edu" );
-        fieldsToFill.$nameInputBox.val( "Larry" );
+      case "Northwest Advanced Renewables Alliance (Shelley Pressley)":
+        fieldsToFill.$emailInputBox.val( "spressley@wsu.edu" );
+        fieldsToFill.$nameInputBox.val( "Shelley" );
+        break;
+      case "Phenomics Big Data Management (Sindhuja Sankaran)":
+        fieldsToFill.$emailInputBox.val( "sindhuja.sankaran@wsu.edu" );
+        fieldsToFill.$nameInputBox.val( "Sindhuja" );
+        break;
+      case "Plant Cell Biology and Biochemistry (Andrei Smertenko)":
+        fieldsToFill.$emailInputBox.val( "andrei.smertenko@wsu.edu" );
+        fieldsToFill.$nameInputBox.val( "Andrei" );
+        break;
+      case "Research Experiences for Undergraduates on HPC and Deep Learning (Dingwen Tao)":
+        fieldsToFill.$emailInputBox.val( "dingwen.tao@wsu.edu" );
+        fieldsToFill.$nameInputBox.val( "Dingwen" );
+        break;
+      case "Research in Interdisciplinary STEM Education (Erika Offerdahl)":
+        fieldsToFill.$emailInputBox.val( "erika.offerdahl@wsu.edu" );
+        fieldsToFill.$nameInputBox.val( "Erika" );
+        break;
+      case "Stakeholder Informed Modeling of Innovations in the FEW (Julie Padowski)":
+        fieldsToFill.$emailInputBox.val( "julie.padowski@wsu.edu" );
+        fieldsToFill.$nameInputBox.val( "Julie" );
+        break;
+      case "Waves in the Universe and Technology (Brian Collins)":
+        fieldsToFill.$emailInputBox.val( "brian.collins@wsu.edu" );
+        fieldsToFill.$nameInputBox.val( "Brian" );
         break;
       default:
         fieldsToFill.$emailInputBox.val("");
