@@ -1,6 +1,6 @@
-[submodule "WSU-UE---CSS"]
+[submodule "WSU-DAESA-CSS"]
 	path = WSU-DAESA-CSS
 	url = https://github.com/invokeImmediately/WSU-DAESA-CSS
-[submodule "WSU-UE---JS"]
+[submodule "WSU-DAESA-JS"]
 	path = WSU-DAESA-JS
 	url = https://github.com/invokeImmediately/WSU-DAESA-JS
