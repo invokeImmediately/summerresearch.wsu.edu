@@ -1,4 +1,4 @@
-/*!*********************************
+/*!*************************************
 █▀▀▀▐▄ ▄▌▐▀█▀▌█▀▀▄ ▄▀▀▄
 █▀▀   █    █  █▄▄▀ █▄▄█
 ▀▀▀▀▐▀ ▀▌  █  ▀  ▀▄█  ▀
@@ -9,7 +9,7 @@
 
 FOR THE SUMMER RESEARCH WEBSITE
 -------------------------------
-@version 1.0.0
+@version 1.1.0
 @author Daniel Rieck
   [daniel.rieck@wsu.edu]
   (https://github.com/…
@@ -17,16 +17,17 @@ FOR THE SUMMER RESEARCH WEBSITE
 @license MIT - Copyright © 2021
   Washington State University
   https://mit-license.org/
-***********************************/
+ **************************************/
 
 /*!***
  * §1: Styling for article sub-
  *   headings.
  * @author Daniel Rieck
+ *   (daniel.rieck@wsu.edu)
  */
 
 .article-summary .article-sub-heading {
-	display: none;
+  display: none;
 }
 
 .article-sub-heading {
@@ -35,115 +36,130 @@ FOR THE SUMMER RESEARCH WEBSITE
   margin-bottom: 1rem;
 }
 
-/*!***
- * §2: Style rules for updating the
- *   display of components assoc-
- *   iated with the Events calen-
- *   dar plugin.
+/*!*************************************
+ * §2: EVENTS CALENDAR
+ * Style rules for updating the display
+ *   of components associated with the
+ *   Events calendar plugin.
  * @author Daniel Rieck
- */
+ *   (daniel.rieck@wsu.edu)
+ **************************************/
 
 main#tribe-events {
-	margin-left: 0;
+  margin-left: 0;
 }
 
 .post-type-archive.post-type-archive-tribe_events .fluid .row.side-right .column.one,
 .single-tribe_events .fluid .row.side-right .column.one {
-	width: 100%;
+  width: 100%;
 }
 
 .post-type-archive.post-type-archive-tribe_events .fluid .row.side-right .column.two,
 .single-tribe_events .fluid .row.side-right .column.two {
-	display: none;
+  display: none;
 }
 
 .post-type-archive.post-type-archive-tribe_events .tribe-events-c-nav__list,
 .tribe-events-sub-nav {
-	max-width: none;
+  max-width: none;
 }
 
 .post-type-archive.post-type-archive-tribe_events .column .tribe-events-c-top-bar__nav-list .tribe-events-c-top-bar__nav-list-item,
 .post-type-archive.post-type-archive-tribe_events .column .tribe-events-c-view-selector__list .tribe-events-c-view-selector__list-item {
-	list-style-image: none;
+  list-style-image: none;
 }
 
 .post-type-archive.post-type-archive-tribe_events .post-0 > .article-header,
 .single-tribe_events .post-0 > .article-header {
-	display: none;
+  display: none;
 }
 
 .tribe-common--breakpoint-medium.tribe-events .tribe-events-l-container {
-	padding-top: 2rem;
+  padding-top: 2rem;
 }
 
 .tribe-common--breakpoint-medium.tribe-common .tribe-common-h3 {
-	font-size: inherit;
+  font-size: inherit;
 }
 
 .single-tribe_events .tribe-events-event-image {
-	width: 198px;
+  width: 198px;
 }
 
 .single-tribe_events .tribe_events {
-	display: flex;
-	flex-flow: row wrap;
+  display: flex;
+  flex-flow: row wrap;
 }
 
 .single-tribe_events .tribe_events .tribe-events-cal-links,
 .single-tribe_events .tribe_events  .tribe-events-event-meta {
-	width: 100%;
+  width: 100%;
 }
 
 .single-tribe_events .tribe_events .tribe-events-single-event-description {
-	box-sizing: border-box;
-	max-width: 80ch;
-	padding-right: 2rem !important;
-	order: 1;
-	width: calc(100% - 198px);
+  box-sizing: border-box;
+  max-width: 80ch;
+  padding-right: 2rem !important;
+  order: 1;
+  width: calc(100% - 198px);
 }
 
 .single-tribe_events .tribe_events .tribe-events-event-image {
-	order: 2;
+  order: 2;
 }
 
 
 .single-tribe_events .tribe_events .tribe-events-cal-links {
-	margin-bottom: 0;
-	max-width: 80ch;
-	order: 3;
+  margin-bottom: 0;
+  max-width: 80ch;
+  order: 3;
 }
 
 .single-tribe_events .tribe_events  .tribe-events-event-meta {
-	font-size: 100%;
-	max-width: calc(80ch + 198px);
-	order: 4;
+  font-size: 100%;
+  max-width: calc(80ch + 198px);
+  order: 4;
 }
 
 .single-tribe_events .tribe_events  .tribe-events-event-meta .tribe-events-meta-group {
-	font-size: 14px;
+  font-size: 14px;
 }
 
 .column .tribe-events a.tribe-events-c-view-selector__list-item-link {
-	border-radius: 0;
-	border: none;
-	text-shadow: none;
+  border-radius: 0;
+  border: none;
+  text-shadow: none;
 }
 
 .column .tribe-events a.tribe-events-c-view-selector__list-item-link:hover {
-	background-color: rgba(51,74,255,.25);
+  background-color: rgba(51,74,255,.25);
 }
 
 .column h3.tribe-events-calendar-list__event-title a {
-	text-decoration: none;
+  text-decoration: none;
 }
 
 .column .tribe-events-calendar-list__event-title a::after {
-	background: url(https://s3.wp.wsu.edu/uploads/sites/56/2020/02/link.svg) .2em/70% no-repeat;
-	content: "";
-	height: 1em;
-	margin: 0 0 -.05em .1em;
-	position: absolute;
-	width: 1em;
+  background: url(https://s3.wp.wsu.edu/uploads/sites/56/2020/02/link.svg) .2em/70% no-repeat;
+  content: "";
+  height: 1em;
+  margin: 0 0 -.05em .1em;
+  position: absolute;
+  width: 1em;
+}
+
+.tribe-events-calendar-list__event-venue-title {
+  position: relative;
+}
+
+.tribe-events-calendar-list__event-venue-title:after {
+  background: url(https://s3.wp.wsu.edu/uploads/sites/57/2021/05/map-location_light-gray.svg) .2em/70% no-repeat;
+  content: "";
+  height: 1.35em;
+  margin: 0 0 -.05em .1em;
+  position: absolute;
+  width: 1.35em;
+  top:-.4em;
 }
 
 .tribe-block__organizer__website a:not(:hover),
@@ -160,30 +176,30 @@ main#tribe-events {
 .tribe-venue-url a:not(:hover),
 .tribe_events p a:not(:hover),
 ul.tribe-events-sub-nav a:not(:hover) {
-	color: #981e32;
+  color: #981e32;
 }
 
 .column .tribe-events-calendar-list__event-featured-image-wrapper .tribe-events-calendar-list__event-featured-image-link {
-	border-top: 0;
-	border-bottom-width: 3px;
-	max-width: 198px;
+  border-top: 0;
+  border-bottom-width: 3px;
+  max-width: 198px;
 }
 
 .tribe-common--breakpoint-medium.tribe-events .tribe-events-c-nav__prev:not([disabled]):before {
-	background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg width='12' height='20' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11.916 17.841L10 19.757l-9.9-9.9L10-.041l1.916 1.916-7.983 7.984z' fill='%23DB3246'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg width='12' height='20' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11.916 17.841L10 19.757l-9.9-9.9L10-.041l1.916 1.916-7.983 7.984z' fill='%23DB3246'/%3E%3C/svg%3E");
 }
 
 .tribe-common--breakpoint-medium.tribe-events .tribe-events-c-nav__next,
 .tribe-common--breakpoint-medium.tribe-events .tribe-events-c-nav__prev {
-	background: transparent;
-	border: 0;
-	text-shadow: none;
+  background: transparent;
+  border: 0;
+  text-shadow: none;
 }
 
 .tribe-common--breakpoint-medium.tribe-events .tribe-events-c-nav__next:not([disabled]):hover,
 .tribe-common--breakpoint-medium.tribe-events .tribe-events-c-nav__prev:not([disabled]):hover {
-	color: #da1e00;
-	text-decoration: underline;
+  color: #da1e00;
+  text-decoration: underline;
 }
 
 .tribe-common--breakpoint-medium.tribe-events .tribe-events-c-nav__next:not([disabled]):after {
@@ -191,24 +207,167 @@ ul.tribe-events-sub-nav a:not(:hover) {
 }
 
 .tribe-common .tribe-events-before-html {
-	margin-bottom: 1rem;
+  margin-bottom: 1rem;
 }
 
 .post-type-archive-tribe_events article header time:before {
-	content: "";
+  content: "";
 }
 
 .post-type-archive-tribe_events  .tribe-event-date-start,
 .post-type-archive-tribe_events .tribe-event-time {
-	font-size: 1.2em;
-	font-weight: 600;
+  font-size: 1.2em;
+  font-weight: 600;
 }
 
 .post-type-archive-tribe_events .tribe-events-calendar-list__event-venue.tribe-common-b2 {
-	font-size: 1.1em;
+  font-size: 1.1em;
 }
 
 .single-tribe_events .tribe-events-schedule * {
-	color: #2a3033;
+  color: #2a3033;
 }
 
+.tribe-events .tribe-events-calendar-list__month-separator::after {
+  background-color: #a60f2d;
+}
+
+.tribe-events-calendar-list__event-row {
+  position: relative;
+}
+
+.tribe-events-calendar-list__event-row + .tribe-events-calendar-list__event-row:after {
+  content: "";
+  height: 1px;
+  width: calc(100% - 24px * 4);
+  border-top: 1px solid #eff0f1;
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  transform:translateX(-50%);
+}
+
+.tribe-common-c-btn.tribe-events-c-search__button {
+  background-color: #a60f2d;
+  margin-right: 4px;
+}
+
+.tribe-common-c-btn.tribe-events-c-search__button:hover,
+.tribe-common-c-btn.tribe-events-c-search__button:focus {
+  background-color: #ca1237;
+  box-shadow: 0 0 4px 0 #ca1237;
+}
+
+.tribe-events-calendar-list__event-title-link:visited:not(:hover):not(:focus) {
+  color: #a60f2d;
+}
+
+.tribe-common .tribe-events-calendar-list__event-title-link:hover,
+.tribe-common .tribe-events-calendar-list__event-title-link:focus {
+  color: #a60f2d;
+}
+
+.tribe-events-sub-nav {
+  max-width: none;
+}
+
+.tribe-events-event-url a,
+.tribe-venue-url a,
+.tribe-organizer-url a {
+  word-break: break-all;
+}
+
+.tribe-events-nav-previous,
+.tribe-events-nav-next {
+  max-width: 35ch;
+}
+
+/*!***
+ * §3: Page archival notices.
+ * @author Daniel Rieck
+ *   (daniel.rieck@wsu.edu)
+ */
+
+.archival-notice {
+  padding: 1rem;
+  background-color: #ff0055;
+}
+
+.archival-notice > * {
+  background-color: rgba(255,255,255,0.92);
+  border-radius: 2px;
+  padding: 1rem;
+}
+
+/*!*************************************
+ * §4: SPINE THEME COLOR EXTENSIONS
+ * Additions to the default Spine Theme
+ *   palette that make better use of
+ *   color theory.
+ * @version Added on 2021-02-08.
+ * @author Daniel Rieck
+ **************************************/
+.c--orange--darkish {
+  color: #a63d0f;
+}
+
+.c--teal--darkish {
+  color: #09604f;
+}
+
+.orange-lightest-back {
+  background-color: #fff7f4;
+}
+
+/*!*************************************
+ * §5: TYPOGRAPHY TWEAKS
+ * @author Daniel Rieck
+ *   (daniel.rieck@wsu.edu)
+ **************************************/
+.article-header h1 {
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+#spine-sitenav,
+#spine-offsitenav {
+  font-family: 'Open Sans', sans-serif;
+}
+
+.article-deck {
+  color: inherit;
+  font-size: 1.33em;
+}
+
+/*!*************************************
+ * §6: TABLEPRESS TWEAKS
+ * @author Daniel Rieck
+ *   (daniel.rieck@wsu.edu)
+ **************************************/
+
+.tablepress-id-3,
+.tablepress-id-4,
+.tablepress-id-5 {
+  font-size: .9em;
+}
+
+#post-2454 .tribe-events-single-event-description,
+#post-2456 .tribe-events-single-event-description,
+#post-2484 .tribe-events-single-event-description {
+  max-width: none;
+  width: 100%;
+}
+
+/*!*************************************
+ * §7: PAGE-BASED STYLING
+ * @author Daniel Rieck
+ *   (daniel.rieck@wsu.edu)
+ **************************************/
+@media (min-width: 694px) {
+  .page-id-2756 .wp-image-2899 {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 96px !important;
+  }
+}
