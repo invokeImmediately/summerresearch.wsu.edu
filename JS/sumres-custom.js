@@ -77,7 +77,7 @@ $( function() {
  */
 $( window ).on( "load", function() {
   initDelayedNotices("p.notice", "is-delayed", 500);
-  initFacultyEmailAutoEntry("li.gfield.sets-faculty-email", "li.gform_hidden");
+  initFacultyEmailAutoEntry(".gfield.sets-faculty-email", ".gform_hidden");
 });
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -192,19 +192,17 @@ function adjustScrollingAfterNavToAnchor() {
 function fillHiddenFields(fieldsToFill) {
   if( fieldsToFill instanceof FieldsToFill && fieldsToFill.isValid() ) {
     switch( fieldsToFill.selectionMade ) {
-      case "Atmospheric Chemistry and Climate Change: Measurements and Modeling in the Pacific " +
-          " Northwest (Shelley Pressley)":
+      case "Atmospheric Chemistry and Climate Change: Measurements and Modeling in the Pacific Northwest (Shelley Pressley)":
         fieldsToFill.$emailInputBox.val( "spressley@wsu.edu" );
         fieldsToFill.$nameInputBox.val( "Shelley" );
         break;
-      case "Multidisciplinary Undergraduate Research Training in Wearable Computing (Hassan " +
-          "Ghasemzadeh)":
-        fieldsToFill.$emailInputBox.val( "hassan.ghasemzadeh@wsu.edu" );
-        fieldsToFill.$nameInputBox.val( "Hassan" );
+      case "Cybersecurity Summer 2022 Two-week Workshop (Bernard Van Wie)":
+        fieldsToFill.$emailInputBox.val( "bvanwie@wsu.edu" );
+        fieldsToFill.$nameInputBox.val( "Bernie" );
         break;
-      case "Northwest Advanced Renewables Alliance (Shelley Pressley)":
-        fieldsToFill.$emailInputBox.val( "spressley@wsu.edu" );
-        fieldsToFill.$nameInputBox.val( "Shelley" );
+      case "Improving Crop Resiliency: Agriculture in Changing Climate (Matthew Peck and Andrei Smertenko)":
+        fieldsToFill.$emailInputBox.val( "andrei.smertenko@wsu.edu" );
+        fieldsToFill.$nameInputBox.val( "Andrei and Matthew" );
         break;
       case "Phenomics Big Data Management (Sindhuja Sankaran)":
         fieldsToFill.$emailInputBox.val( "sindhuja.sankaran@wsu.edu" );
@@ -218,13 +216,17 @@ function fillHiddenFields(fieldsToFill) {
         fieldsToFill.$emailInputBox.val( "dingwen.tao@wsu.edu" );
         fieldsToFill.$nameInputBox.val( "Dingwen" );
         break;
-      case "Research in Interdisciplinary STEM Education (Erika Offerdahl)":
+      case "Research in Interdisciplinary STEM Education (RISE) (Erika Offerdahl)":
         fieldsToFill.$emailInputBox.val( "erika.offerdahl@wsu.edu" );
         fieldsToFill.$nameInputBox.val( "Erika" );
         break;
       case "Stakeholder Informed Modeling of Innovations in the FEW (Julie Padowski)":
         fieldsToFill.$emailInputBox.val( "julie.padowski@wsu.edu" );
         fieldsToFill.$nameInputBox.val( "Julie" );
+        break;
+      case "Sustainable High-value Horticulture and Processing (Doug Collins)":
+        fieldsToFill.$emailInputBox.val( "dpcollins@wsu.edu" );
+        fieldsToFill.$nameInputBox.val( "Doug" );
         break;
       case "Waves in the Universe and Technology (Brian Collins)":
         fieldsToFill.$emailInputBox.val( "brian.collins@wsu.edu" );
@@ -421,7 +423,7 @@ function initFacultyEmailAutoEntry(slctrSelectBox, slctrHiddenFields) {
   //   function that automatically populates hidden fields that store the mentor's contact email and
   //   name.
   $( slctrSelectBox ).each( function () {
-    $selectField = $( this) ;
+    $selectField = $( this ) ;
     $emailField = $selectField.next( slctrHiddenFields );
     if ( $emailField.length > 0 ) {
       $facultyNameField = $emailField.next( slctrHiddenFields );
