@@ -1,39 +1,296 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto+Condensed:400,400i,700,700i|PT+Serif:400,400i,700,700i|Roboto+Mono:400,400i,700,700i&display=swap');
+/** ────────────────────────────────────────────────────────────────────────────────────────────────
+ *  █▀▀▄ █  █ ▀█▀ █    █▀▀▄    ▄▀▀▀ █▀▀▀▐▀█▀▌▐▀█▀▌▀█▀ ▐▀▀▄ █▀▀▀ ▄▀▀▀   █    █▀▀▀ ▄▀▀▀ ▄▀▀▀
+ *  █▀▀▄ █  █  █  █  ▄ █  █ ▀▀ ▀▀▀█ █▀▀   █    █   █  █  ▐ █ ▀▄ ▀▀▀█   █  ▄ █▀▀  ▀▀▀█ ▀▀▀█
+ *  ▀▀▀   ▀▀  ▀▀▀ ▀▀▀  ▀▀▀     ▀▀▀  ▀▀▀▀  █    █  ▀▀▀ ▀  ▐ ▀▀▀▀ ▀▀▀  ▀ ▀▀▀  ▀▀▀▀ ▀▀▀  ▀▀▀
+ * 
+ *  Contains settings, implemented as Less variables, that the process for compiling Less files
+ *    into a custom stylesheet for use on a [WSU DAESA](https://daesa.wsu.edu/) websites.
+ * 
+ *  @version 1.1.3
+ * 
+ *  @link https://github.com/invokeImmediately/WSU-DAESA-CSS/main/blob/Settings/build-settings.less
+ *  @author Daniel Rieck [daniel.rieck@wsu.edu] (https://github.com/invokeImmediately)
+ *  @license MIT Copyright (c) 2022 Washington State University
+ *    Permission is hereby granted, free of charge, to any person obtaining a copy of this software
+ *      and associated documentation files (the "Software"), to deal in the Software without
+ *      restriction, including without limitation the rights to use, copy, modify, merge, publish,
+ *      distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom
+ *      the Software is furnished to do so, subject to the following conditions:
+ *    The above copyright notice and this permission notice shall be included in all copies or
+ *      substantial portions of the Software.
+ *    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING
+ *      BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+ *      NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY
+ *      CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE,
+ *      ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+ *      SOFTWARE.
+ *  ────────────────────────────────────────────────────────────────────────────────────────────────
+ *   TABLE OF CONTENTS:
+ *   ────────────────────────────────────────────────────────────────────────────────────────────
+ *   §1: Default sizing of spacing and fonts...................................................55
+ *     >>> §1.1:  Columns......................................................................59
+ *     >>> §1.2:  Paragraphs...................................................................89
+ *     >>> §1.3:  Headings....................................................................106
+ *     >>> §1.4:  Article components..........................................................128
+ *   §2: Responsive design scaling factors....................................................150
+ *   §3: Screen thresholds for responsive design..............................................172
+ *   §4: Colors...............................................................................230
+ *     >>> §4.1:  Color scheme flags..........................................................234
+ *     >>> §4.2:  Hyperlink coloring..........................................................241
+ *   §5: Switches for controlling dependency inclusion........................................249
+ *     >>> §5.1:  Builder template columns....................................................253
+ *     >>> §5.2:  Feeds.......................................................................260
+ *     >>> §5.3:  Nav.........................................................................268
+ *     >>> §5.4:  Footers.....................................................................273
+ *     >>> §5.5:  Forms.......................................................................280
+ *     >>> §5.6:  Headers.....................................................................290
+ *     >>> §5.7:  Hyperlinks..................................................................298
+ *     >>> §5.8:  Lists.......................................................................308
+ *     >>> §5.9:  Tables......................................................................320
+ *     >>> §5.10: Other Spine components......................................................320
+ *     >>> §5.11: Custom DAESA components.....................................................330
+ *   ───────────────────────────────────────────────────────────────────────────────────────────────
+ */
+
+/** ================================================================================================
+ *  §1: Default sizing of spacing and fonts
+ */
+
+/**   ----------------------------------------------------------------------------------------------
+ *      >>> §1.1: Columns
+ */
+
+/**   ----------------------------------------------------------------------------------------------
+ *      >>> §1.2: Paragraphs
+ */
+
+/**   ----------------------------------------------------------------------------------------------
+ *      >>> §1.3: Headings
+ */
+
+/**   ----------------------------------------------------------------------------------------------
+ *      >>> §1.4: Article components
+ */
+
+/** ================================================================================================
+ *  §2: Responsive design scaling factors
+ */
+
+/** ================================================================================================
+ *  §3: Screen thresholds for responsive design
+ */
+
+/** ================================================================================================
+ *  §4: Colors
+ */
+
+/**   ----------------------------------------------------------------------------------------------
+ *      >>> §4.1: Color scheme flags
+ */
+
+/**   ----------------------------------------------------------------------------------------------
+ *      >>> §4.2: Hyperlink coloring
+ */
+
+/** ================================================================================================
+ *  §5: Switches for controlling depdendency inclusion
+ */
+
+/**   ----------------------------------------------------------------------------------------------
+ *      >>> §5.1: Builder template columns
+ */
+
+/**   ----------------------------------------------------------------------------------------------
+ *      >>> §5.2: Feeds
+ */
+
+/**   ----------------------------------------------------------------------------------------------
+ *      >>> §5.3: Nav
+ */
+
+/**   ----------------------------------------------------------------------------------------------
+ *      >>> §5.4: Footers
+ */
+
+/**   ----------------------------------------------------------------------------------------------
+ *      >>> §5.5: Forms
+ */
+
+/**   ----------------------------------------------------------------------------------------------
+ *      >>> §5.6: Headers
+ */
+
+/**   ----------------------------------------------------------------------------------------------
+ *      >>> §5.7: Hyperlinks
+ */
+
+/**   ----------------------------------------------------------------------------------------------
+ *      >>> §5.8: Lists
+ */
+
+/**   ----------------------------------------------------------------------------------------------
+ *      >>> §5.9: Tables
+ */
+
+/**   ----------------------------------------------------------------------------------------------
+ *      >>> §5.10: Other Spine components
+ */
+
+/**   ----------------------------------------------------------------------------------------------
+ *      >>> §5.11: Custom DAESA components
+ */
+
+/** ────────────────────────────────────────────────────────────────────────────────────────────────
+ *  █▀▀▄ █  █ ▀█▀ █    █▀▀▄    █▀▀▀ ▐▀▀▄▐▀█▀▌█▀▀▄ █  █    █▀▀▄ ▄▀▀▄ ▀█▀ ▐▀▀▄▐▀█▀▌
+ *  █▀▀▄ █  █  █  █  ▄ █  █ ▀▀ █▀▀  █  ▐  █  █▄▄▀ ▀▄▄█ ▀▀ █▄▄▀ █  █  █  █  ▐  █ 
+ *  ▀▀▀   ▀▀  ▀▀▀ ▀▀▀  ▀▀▀     ▀▀▀▀ ▀  ▐  █  ▀  ▀▄▄▄▄▀    █     ▀▀  ▀▀▀ ▀  ▐  █ 
+ *
+ *       █    █▀▀▀ ▄▀▀▀ ▄▀▀▀
+ *       █  ▄ █▀▀  ▀▀▀█ ▀▀▀█
+ *     ▀ ▀▀▀  ▀▀▀▀ ▀▀▀  ▀▀▀
+ *
+ *  Entry point for including dependencies utilized in building custom stylesheets that are common
+ *    to all websites designed, built, and maintained by the Division of Academic Engagement and
+ *    Student Achievement (DAESA) in the Office of the Provost at Washington State University (WSU).
+ *
+ *  See §1 for a full description of the contents of this file.
+ *
+ *  @author Daniel Rieck [daniel.rieck@wsu.edu] (https://github.com/invokeImmediately)
+ *  @license MIT — Copyright (c) 2022 Washington State University. (See §1 for full license.)
+ *  ────────────────────────────────────────────────────────────────────────────────────────────────
+ *   TABLE OF CONTENTS:
+ *   ────────────────────────────────────────────────────────────────────────────────────────────
+ *   §1: Persistent comment for documenting general DAESA styling section of stylesheet........80
+ *   §2:  Global Less variables and Less mixins/utility classes...............................145
+ *     >>> §2.1: Additional fonts.............................................................149
+ *     >>> §2.2: Color variables and mixins...................................................155
+ *     >>> §2.3: Miscellaneous mixins.........................................................161
+ *     >>> §2.4: Utility mixins...............................................................167
+ *     >>> §2.5: Animation utility classes....................................................173
+ *   §3: Redesigning of the WSUWP Spine Theme.................................................179
+ *     >>> §3.1: Anchor pseudo-class..........................................................183
+ *     >>> §3.2: Document section nodes.......................................................189
+ *        └> §3.2.1: HTML element.............................................................193
+ *        └> §3.2.2: Body.....................................................................201
+ *        └> §3.2.3: Nav......................................................................219
+ *        └> §3.2.4: Article..................................................................225
+ *        └> §3.2.5: Section..................................................................231
+ *        └> §3.2.6: Aside....................................................................239
+ *        └> §3.2.7: Heading..................................................................245
+ *        └> §3.2.8: Header...................................................................251
+ *        └> §3.2.9: Footer...................................................................257
+ *     >>> §3.3: Content grouping nodes.......................................................269
+ *        └> §3.3.1: Paragraph elements.......................................................273
+ *        └> §3.3.2: Hr elements..............................................................279
+ *        └> §3.3.3: List elements............................................................285
+ *        └> §3.3.4: Div elements.............................................................291
+ *        └> §3.3.5: Banner slideshows........................................................305
+ *        └> §3.3.6: Columns..................................................................311
+ *        └> §3.3.7: Flippable content panels.................................................317
+ *        └> §3.3.8: Page covering notices....................................................323
+ *        └> §3.3.9: Recent updates...........................................................329
+ *        └> §3.3.10: Main element............................................................335
+ *     >>> §3.4: Text-level nodes.............................................................341
+ *        └> §3.4.1: Hyperlink elements.......................................................345
+ *        └> §3.4.2: Strong elements..........................................................351
+ *        └> §3.4.3: Mark elements............................................................371
+ *        └> §3.4.4: Span elements............................................................381
+ *        └> §3.4.5: Cite elements............................................................387
+ *     >>> §3.5: Embedded content nodes.......................................................395
+ *        └> §3.5.1: Image elements...........................................................399
+ *        └> §3.5.2: Iframe elements..........................................................405
+ *     >>> §3.6: Tabular data nodes...........................................................411
+ *     >>> §3.7: Form nodes...................................................................417
+ *     >>> §3.8: Scripted elements............................................................423
+ *        └> §3.8.1: Toggled drop-down panels.................................................427
+ *        └> §3.8.2: Subtle panels............................................................433
+ *        └> §3.8.3: Flippable content panels.................................................474
+ *        └> §3.8.4: QTip driven tooltips.....................................................483
+ *        └> §3.8.5: Quick-tabs panels........................................................489
+ *        └> §3.8.6: Tribe Events Calendars...................................................495
+ *        └> §3.8.7: Auto-scrolling image panels..............................................501
+ *   §4: Component-based CSS..................................................................529
+ *     >>> §4.1: Website notices..............................................................533
+ *     >>> §4.2: News posts...................................................................539
+ *     >>> §4.3: DAESA grids..................................................................550
+ *     >>> §4.4: Other components.............................................................556
+ *   §5: Atomic CSS...........................................................................562
+ *  ────────────────────────────────────────────────────────────────────────────────────────────────
+ */
+
+/** ================================================================================================
+ *  §1: Persistent comment for documenting general DAESA styling section of stylesheet
+ */
+
 /*! ================================================================================================
-*** █▀▀▄ ▄▀▀▄ █▀▀▀ ▄▀▀▀ ▄▀▀▄   ▄▀▀▀ █  █ ▄▀▀▀▐▀█▀▌▄▀▀▄ ▐▀▄▀▌   ▄▀▀▀▐▀█▀▌█  █ █    ▀█▀ ▐▀▀▄ █▀▀▀
-*** █  █ █▄▄█ █▀▀  ▀▀▀█ █▄▄█   █    █  █ ▀▀▀█  █  █  █ █ ▀ ▌   ▀▀▀█  █  ▀▄▄█ █  ▄  █  █  ▐ █ ▀▄
-*** ▀▀▀  █  ▀ ▀▀▀▀ ▀▀▀  █  ▀    ▀▀▀  ▀▀  ▀▀▀   █   ▀▀  █   ▀   ▀▀▀   █  ▄▄▄▀ ▀▀▀  ▀▀▀ ▀  ▐ ▀▀▀▀
-*** ================================================================================================
-*** The following section of this stylesheet contains CSS code written for use on all websites
-***   designed, built, and maintained by the Divsion of Academic Engagement and Student Achievement
-***   (DAESA) in the Office of the Provost at Washington State University (WSU).
-***
-*** The CSS code in the following section was generated from precompiled CSS written in the Less
-***   language extension of CSS. It is designed to be applied via the WSUWP CSS Stylesheet Editor
-***   functioning in add-on mode.
-***
-*** Please refer to the linked GitHub project for fully documented, precompiled source code.
-***
-*** @version 1.0.1-rc1
-***
-*** @link https://github.com/invokeImmediately/WSU-DAESA-CSS
-*** @author Daniel Rieck [daniel.rieck@wsu.edu] (https://github.com/invokeImmediately)
-*** @license MIT Copyright (c) 2021 Washington State University
-***   Permission is hereby granted, free of charge, to any person obtaining a copy of this software
-***     and associated documentation files (the "Software"), to deal in the Software without
-***     restriction, including without limitation the rights to use, copy, modify, merge, publish,
-***     distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom
-***     the Software is furnished to do so, subject to the following conditions:
-***   The above copyright notice and this permission notice shall be included in all copies or
-***     substantial portions of the Software.
-***   THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING
-***     BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
-***     NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY
-***     CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE,
-***     ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-***     SOFTWARE.
-*** ================================================================================================
-**/
+ *  █▀▀▄ ▄▀▀▄ █▀▀▀ ▄▀▀▀ ▄▀▀▄   ▄▀▀▀ █  █ ▄▀▀▀▐▀█▀▌▄▀▀▄ ▐▀▄▀▌   ▄▀▀▀▐▀█▀▌█  █ █    ▀█▀ ▐▀▀▄ █▀▀▀
+ *  █  █ █▄▄█ █▀▀  ▀▀▀█ █▄▄█   █    █  █ ▀▀▀█  █  █  █ █ ▀ ▌   ▀▀▀█  █  ▀▄▄█ █  ▄  █  █  ▐ █ ▀▄
+ *  ▀▀▀  █  ▀ ▀▀▀▀ ▀▀▀  █  ▀    ▀▀▀  ▀▀  ▀▀▀   █   ▀▀  █   ▀   ▀▀▀   █  ▄▄▄▀ ▀▀▀  ▀▀▀ ▀  ▐ ▀▀▀▀
+ *  ================================================================================================
+ *  The following section of this stylesheet contains CSS code written for use on all websites
+ *    designed, built, and maintained by the Division of Academic Engagement and Student Achievement
+ *    (DAESA) in the Office of the Provost at Washington State University (WSU).
+ *
+ *  The CSS code in the following section was generated from precompiled CSS written in the Less
+ *    language extension of CSS. It is designed to be applied via the WSUWP CSS Stylesheet Editor
+ *    functioning in add-on mode.
+ *
+ *  Please refer to the linked GitHub project for fully documented, precompiled source code.
+ *
+ *  @version 1.2.0-rc0.0.5
+ *
+ *  @link https://github.com/invokeImmediately/WSU-DAESA-CSS
+ *  @author Daniel Rieck [daniel.rieck@wsu.edu] (https://github.com/invokeImmediately)
+ *  @license MIT Copyright (c) 2022 Washington State University
+ *    Permission is hereby granted, free of charge, to any person obtaining a copy of this software
+ *      and associated documentation files (the "Software"), to deal in the Software without
+ *      restriction, including without limitation the rights to use, copy, modify, merge, publish,
+ *      distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom
+ *      the Software is furnished to do so, subject to the following conditions:
+ *    The above copyright notice and this permission notice shall be included in all copies or
+ *      substantial portions of the Software.
+ *    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING
+ *      BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+ *      NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,
+ *      DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+ *      FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+ *      SOFTWARE.
+ *  ================================================================================================
+ */
+
+/** ────────────────────────────────────────────────────────────────────────────────────────────────
+ *  ADDITIONAL DESIGN COMMENTS
+ *  ──────────────────────────────────────────────────────────────────────────────────────────────
+ *  DESIGN PHILOSOPHY: This stylesheet mixes semantic with functional CSS. The Spine Theme for WSUWP
+ *    takes a semantic approach to styling; thus, this add-on style sheet necessarily contains some
+ *    semantic styling of its own. Specifically, semantic CSS is utilized to override or minimally
+ *    build upon the default design imposed by the Spine Builder theme.
+ *
+ *    Functional CSS is utilized to maximally build upon the Spine builder theme by further
+ *    extending its design flexibility. Content authors are enabled more options for tweaking the
+ *    basal design to suit their needs without needing to touch CSS, while the CSS is made more
+ *    reusable and easier to maintain.
+ *
+ *  ORGANIZATION OF STYLESHEET: This stylesheet is organized such that semantic CSS precedes
+ *    functional CSS. This is done to ensure that utility classes associated with functional CSS
+ *    override all other behaviors.
+ *
+ *    The semantic styling section of this stylesheet is laid out according to the W3C HTML5
+ *    language specification (please see https://www.w3.org/TR/html5/ for more information). Style
+ *    rules are generally declared in the same sequence as their matching elements appear in the
+ *    HTML5 spec. Moreover, property settings are generally made in alphabetical order within a
+ *    declaration to make the code more predictable an thereby easier to read.
+ *  ────────────────────────────────────────────────────────────────────────────────────────────────
+ */
+
+/** ================================================================================================
+ *  §2:  Global Less variables and Less mixins/utility classes
+ */
+
+/**   --------------------------------------------------------------------------------------------
+ *    >>> §2.1: Additional fonts
+ */
 
 .has-dflt-font,
 .ff--sans,
@@ -66,6 +323,66 @@ span.accentuated-text,
   font-family: 'Roboto Mono', monospace, sans-serif;
 }
 
+/**   --------------------------------------------------------------------------------------------
+ *    >>> §2.2: Color variables and mixins
+ */
+
+/**   --------------------------------------------------------------------------------------------
+ *    >>> §2.3: Miscellaneous mixins
+ */
+
+/** ────────────────────────────────────────────────────────────────────────────────────────────────
+ *    ▐▀▄▀▌▀█▀▐▄ ▄▌▀█▀ ▐▀▀▄ ▄▀▀▀   █    █▀▀▀ ▄▀▀▀ ▄▀▀▀
+ *    █ ▀ ▌ █   █   █  █  ▐ ▀▀▀█   █  ▄ █▀▀  ▀▀▀█ ▀▀▀█
+ *    █   ▀▀▀▀▐▀ ▀▌▀▀▀ ▀  ▐ ▀▀▀  ▀ ▀▀▀  ▀▀▀▀ ▀▀▀  ▀▀▀
+ *
+ *  Contains Less mixins for supporting semantic CSS based design of WSU DASA web sites built using
+ *    the WSUWP platform employing the Spine Parent or WDS themes. CSS declarations effected by
+ *    invocation or inclusion of these mixins are designed to accompany or supersede styling
+ *    associated with the active theme.
+ *
+ *  @version 1.1.3
+ *
+ *  @author Daniel Rieck <daniel.rieck@wsu.edu> (https://github.com/invokeImmediately)
+ *  @link https://github.com/invokeImmediately/WSU-DAESA-CSS/blob/main/mixins.less
+ *  @license MIT Copyright (c) 2022 Washington State University
+ *    Permission is hereby granted, free of charge, to any person obtaining a copy of this software
+ *      and associated documentation files (the "Software"), to deal in the Software without
+ *      restriction, including without limitation the rights to use, copy, modify, merge, publish,
+ *      distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom
+ *      the Software is furnished to do so, subject to the following conditions:
+ *    The above copyright notice and this permission notice shall be included in all copies or
+ *      substantial portions of the Software.
+ *    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING
+ *      BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+ *      NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY
+ *      CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE,
+ *      ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+ *      SOFTWARE.
+ *  ───────────────────────────────────────────────────────────────────────────────────────────────
+ *   TABLE OF CONTENTS:
+ *   ────────────────────────────────────────────────────────────────────────────────────────────
+ *   §1: Semantic visibility control...........................................................50
+ *   §2: Element sizing........................................................................74
+ *   §3: Positioning...........................................................................96
+ *   §4: Spacing..............................................................................122
+ *   §5: Padding..............................................................................189
+ *   §6: Typography...........................................................................280
+ *   §7: Borders..............................................................................309
+ *   §8: More typography......................................................................374
+ *   §9: Semantic mixins for responsive layouts...............................................518
+ *   §10: Iteratively specified CSS declarations..............................................533
+ *   §11: Interpolated style declarations.....................................................698
+ *   §12: Declaration of detached rulesets....................................................727
+ *     >>> §12.1: Rulesets whose selectors might be "wrapped" by a prepended substring........731
+ *     >>> §12.2: Unwrapped rulesets..........................................................751
+ *   ───────────────────────────────────────────────────────────────────────────────────────────────
+ */
+
+/**   ----------------------------------------------------------------------------------------------
+ *    §1: Semantic visibility control
+ */
+
 .initially-hidden,
 .column .initially-hidden {
   display: none;
@@ -84,6 +401,22 @@ span.accentuated-text,
   margin: 0 !important;
   padding: 0 !important;
 }
+
+/**   ----------------------------------------------------------------------------------------------
+ *    §2: Element sizing
+ */
+
+/**   ----------------------------------------------------------------------------------------------
+ *    §3: Positioning
+ */
+
+/**   ----------------------------------------------------------------------------------------------
+ *    §4: Spacing
+ */
+
+/**   ----------------------------------------------------------------------------------------------
+ *    §5: Padding
+ */
 
 .indent-1x,
 .column .indent-1x {
@@ -125,6 +458,10 @@ span.accentuated-text,
   padding-right: 8rem;
 }
 
+/**   ----------------------------------------------------------------------------------------------
+ *    §6: Typography
+ */
+
 .breaks-words,
 .column .breaks-words {
   word-wrap: break-word;
@@ -137,10 +474,198 @@ span.accentuated-text,
   text-align: center;
 }
 
+/**   ----------------------------------------------------------------------------------------------
+ *    §7: Borders
+ */
+
 .soft-gray-border,
 .column .soft-gray-border {
   border: 1px solid rgba(42, 48, 51, 0.5);
 }
+
+/**   ----------------------------------------------------------------------------------------------
+ *    §8: More typography
+ */
+
+/**   ----------------------------------------------------------------------------------------------
+ *    §9: Semantic mixins for responsive layouts
+ */
+
+/**   ----------------------------------------------------------------------------------------------
+ *    §10: Iteratively specified CSS declarations
+ */
+
+/**   ----------------------------------------------------------------------------------------------
+ *    §11: Interpolated style declarations
+ */
+
+/**   ----------------------------------------------------------------------------------------------
+ *    §12: Declaration of detached rulesets
+ */
+
+/**   ----------------------------------------------------------------------------------------------
+ *      >>> §12.1: Rulesets whose selectors might be "wrapped" by a prepended substring
+ */
+
+/**   ----------------------------------------------------------------------------------------------
+ *      >>> §12.2: Unwrapped rulesets
+ */
+
+/**   --------------------------------------------------------------------------------------------
+ *    >>> §2.4: Utility mixins
+ */
+
+/** ────────────────────────────────────────────────────────────────────────────────────────────────
+ *  █  █▐▀█▀▌▀█▀ █    ▀█▀▐▀█▀▌█  █    ▐▀▄▀▌▀█▀▐▄ ▄▌▀█▀ ▐▀▀▄ ▄▀▀▀   █    █▀▀▀ ▄▀▀▀ ▄▀▀▀
+ *  █  █  █   █  █  ▄  █   █  ▀▄▄█ ▀▀ █ ▀ ▌ █   █   █  █  ▐ ▀▀▀█   █  ▄ █▀▀  ▀▀▀█ ▀▀▀█
+ *   ▀▀   █  ▀▀▀ ▀▀▀  ▀▀▀  █  ▄▄▄▀    █   ▀▀▀▀▐▀ ▀▌▀▀▀ ▀  ▐ ▀▀▀  ▀ ▀▀▀  ▀▀▀▀ ▀▀▀  ▀▀▀
+ *
+ *  Less import that defines a variety of utility mixins to be utilized in making focused,
+ *    functional style declarations and creating utility classes. Designed as a dependency to be
+ *    imported upstream of other Less files in the final stylesheet build.
+ *
+ *  @version 1.0.5
+ *
+ *  @link https://github.com/invokeImmediately/WSU-DAESA-CSS/
+ *  @author Daniel Rieck [daniel.rieck@wsu.edu] (https://github.com/invokeImmediately)
+ *  @license MIT Copyright (c) 2022 Washington State University
+ *    Permission is hereby granted, free of charge, to any person obtaining a copy of this software
+ *      and associated documentation files (the "Software"), to deal in the Software without
+ *      restriction, including without limitation the rights to use, copy, modify, merge, publish,
+ *      distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom
+ *      the Software is furnished to do so, subject to the following conditions:
+ *    The above copyright notice and this permission notice shall be included in all copies or
+ *      substantial portions of the Software.
+ *    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING
+ *      BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+ *      NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY
+ *      CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE,
+ *      ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+ *      SOFTWARE.
+ *  ────────────────────────────────────────────────────────────────────────────────────────────────
+ *   TABLE OF CONTENTS:
+ *   ────────────────────────────────────────────────────────────────────────────────────────────
+ *   §1: Display...............................................................................58
+ *   §2: Widths................................................................................72
+ *       >>> §2.1: In units of percentages.....................................................76
+ *       >>> §2.2: Pixels.....................................................................113
+ *       >>> §2.3: Em.........................................................................154
+ *   §3: Heights..............................................................................189
+ *       >>> §3.1: In units of pixels.........................................................193
+ *       >>> §3.2: Em.........................................................................230
+ *   §4: Margins..............................................................................272
+ *       >>> §4.1: In units of "em"...........................................................276
+ *       >>> §4.2: In units of "rem"..........................................................365
+ *   §5: Spacing..............................................................................454
+ *       >>> §5.1: In units of "em"...........................................................458
+ *       >>> §5.2: In units of "rem"..........................................................489
+ *   §6: Padding..............................................................................520
+ *       >>> §6.1: In units of "em"...........................................................524
+ *       >>> §6.2: In units of "rem"..........................................................613
+ *   §7: Typography...........................................................................702
+ *       >>> §7.1: Typograhy: Font Sizing.....................................................706
+ *       >>> §7.2: Line heights...............................................................909
+ *       >>> §7.3: Bolding....................................................................974
+ *   §8: Functional CSS.......................................................................989
+ *       >>> §8.1: Card styling...............................................................993
+ *   ───────────────────────────────────────────────────────────────────────────────────────────────
+ */
+
+/** ================================================================================================
+ *  §1: Display
+ */
+
+/** ================================================================================================
+ *  §2: Widths
+ */
+
+/**   ----------------------------------------------------------------------------------------------
+ *    >>> §2.1: In units of percentagess
+ */
+
+/**   ----------------------------------------------------------------------------------------------
+ *    >>> §2.2: Pixels
+ */
+
+/**   ----------------------------------------------------------------------------------------------
+ *    >>> §2.3: Em
+ */
+
+/** ================================================================================================
+ *  §3: Heights
+ */
+
+/**   ----------------------------------------------------------------------------------------------
+ *    >>> §3.1: In units of pixels
+ */
+
+/**   ----------------------------------------------------------------------------------------------
+ *    >>> §3.2: Em
+ */
+
+/** ================================================================================================
+ *  §4: Margins
+ */
+
+/**   ----------------------------------------------------------------------------------------------
+ *    >>> §4.1: In units of "em"
+ */
+
+/**   ----------------------------------------------------------------------------------------------
+ *    >>> §4.2: In units of "rem"
+ */
+
+/** ================================================================================================
+ *  §5: Spacing
+ */
+
+/**   ----------------------------------------------------------------------------------------------
+ *    >>> §5.1: In units of "em"
+ */
+
+/**   ----------------------------------------------------------------------------------------------
+ *    >>> §5.2: In units of "rem"
+ */
+
+/** ================================================================================================
+ *  §6: Padding
+ */
+
+/**   ----------------------------------------------------------------------------------------------
+ *    >>> §6.1: In units of "em"
+ */
+
+/**   ----------------------------------------------------------------------------------------------
+ *    >>> §6.2: In units of "rem"
+ */
+
+/** ================================================================================================
+ *  §7: Typography
+ */
+
+/**   ----------------------------------------------------------------------------------------------
+ *    >>> §7.1: Font Sizing
+ */
+
+/**   ----------------------------------------------------------------------------------------------
+ *    >>> §7.2: Line heights
+ */
+
+/**   ----------------------------------------------------------------------------------------------
+ *    >>> §7.3: Bolding
+ */
+
+/** ================================================================================================
+ *  §8: Functional CSS
+ */
+
+/**   ----------------------------------------------------------------------------------------------
+ *    >>> §8.1: Card styling
+ */
+
+/**   --------------------------------------------------------------------------------------------
+ *    >>> §2.5: Animation utility classes
+ */
 
 .fade-in {
   animation: anim-fade-in 1s linear 1;
@@ -270,6 +795,14 @@ span.accentuated-text,
   }
 }
 
+/** ================================================================================================
+ *  §3: Redesigning of the WSUWP Spine Theme
+ */
+
+/**   --------------------------------------------------------------------------------------------
+ *    >>> §3.1: Anchor pseudo-class
+ */
+
 :target:not(.no-anchor-highlighting):not(.gform_anchor) {
   position: relative;
 }
@@ -333,9 +866,73 @@ span.accentuated-text,
   visibility: visible;
 }
 
+/**   --------------------------------------------------------------------------------------------
+ *    >>> §3.2: Document section nodes
+ */
+
+/**     ························································································
+ *       └> §3.2.1: HTML element
+ */
+
 html {
   font-size: 100%;
 }
+
+/**     ························································································
+ *       └> §3.2.2: Body
+ */
+
+/**     ························································································
+ *       └> §3.2.3: Nav
+ */
+
+/** ────────────────────────────────────────────────────────────────────────────────────────────────
+ *  ▐▀▀▄ ▄▀▀▄▐   ▌  █    █▀▀▀ ▄▀▀▀ ▄▀▀▀
+ *  █  ▐ █▄▄█ █ █   █  ▄ █▀▀  ▀▀▀█ ▀▀▀█
+ *  ▀  ▐ █  ▀  █  ▀ ▀▀▀  ▀▀▀▀ ▀▀▀  ▀▀▀
+ *  
+ *  Contains styles for paragraph elements of WSU Division of Academic Engagement and Student 
+ *    Achievement websites created using the the Spine parent theme of WSUWP. Styles are designed to
+ *    accompany or supersede the theme's stylesheet via application to the site using the CSS
+ *    Stylesheet Editor, set to add-on mode, in the WordPress administration area.
+ *  
+ *  @version 1.0.1
+ *  
+ *  @link https://github.com/invokeImmediately/WSU-DAESA-CSS/blob/master/Spine-Theme/nav.less
+ *  @author Daniel Rieck [daniel.rieck@wsu.edu] (https://github.com/invokeImmediately)
+ *  @license MIT Copyright (c) 2022 Washington State University
+ *    Permission is hereby granted, free of charge, to any person obtaining a copy of this software
+ *      and associated documentation files (the "Software"), to deal in the Software without
+ *      restriction, including without limitation the rights to use, copy, modify, merge, publish,
+ *      distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom
+ *      the Software is furnished to do so, subject to the following conditions:
+ *    The above copyright notice and this permission notice shall be included in all copies or
+ *      substantial portions of the Software.
+ *    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING
+ *      BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+ *      NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY
+ *      CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE,
+ *      ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+ *      SOFTWARE.
+ *  ────────────────────────────────────────────────────────────────────────────────────────────────
+ */
+
+#spine-sitenav,
+#spine-offsitenav {
+  font-family: 'Open Sans', sans-serif;
+}
+
+#spine nav li.parent > a:not(:hover):after {
+  display: block;
+}
+
+#spine nav li.parent:not(.opened) > a:not(:hover):after {
+  color: rgba(117, 117, 117, 0.5);
+}
+
+/**     ························································································
+ *       └> §3.2.4: Article
+ */
 
 .column article.post {
   background-color: #fff;
@@ -397,6 +994,10 @@ html {
   text-align: center;
 }
 
+/**     ························································································
+ *       └> §3.2.5: Section
+ */
+
 
 
 section.column-one-with-bottom-margin > .column.one {
@@ -416,7 +1017,7 @@ section.column-one-with-bottom-margin > .column.one {
 }
 
 .row.has-crimson-background {
-  background-color: #981e32;
+  background-color: #a60f2d;
 }
 
 .row.has-crimson-background .column {
@@ -447,200 +1048,48 @@ main .row {
   padding-top: 4rem;
 }
 
-aside.shield-themed {
-  padding: 0.5rem;
-  border-left: 4px solid #8d959a;
-  background: #eff0f1;
-  color: #3b4042;
-  font-size: 0.925rem;
-}
+/**     ························································································
+ *       └> §3.2.6: Aside
+ */
 
-aside.shield-themed.floats-left {
-  float: left;
-}
+/** ────────────────────────────────────────────────────────────────────────────────────────────────
+ *  ▄▀▀▄ ▄▀▀▀ ▀█▀ █▀▀▄ █▀▀▀   █    █▀▀▀ ▄▀▀▀ ▄▀▀▀
+ *  █▄▄█ ▀▀▀█  █  █  █ █▀▀    █  ▄ █▀▀  ▀▀▀█ ▀▀▀█
+ *  █  ▀ ▀▀▀  ▀▀▀ ▀▀▀  ▀▀▀▀ ▀ ▀▀▀  ▀▀▀▀ ▀▀▀  ▀▀▀
+ * 
+ *  Involves styles for aside elements on the websites of the WSU Division of Academic Engagement
+ *    and Student Achievement built using the Spine parent theme of WSUWP. Styles are designed to
+ *    accompany or supersede the theme's styling via application to the site using the CSS
+ *    Stylesheet Editor, set to add-on mode, in the WordPress administration area.
+ * 
+ *  @version 1.1.0
+ * 
+ *  @link https://github.com/invokeImmediately/WSU-DAESA-CSS/blob/master/Spine-Theme/aside.less
+ *  @author Daniel Rieck [daniel.rieck@wsu.edu] (https://github.com/invokeImmediately)
+ *  @license MIT Copyright (c) 2022 Washington State University
+ *    Permission is hereby granted, free of charge, to any person obtaining a copy of this software
+ *      and associated documentation files (the "Software"), to deal in the Software without
+ *      restriction, including without limitation the rights to use, copy, modify, merge, publish,
+ *      distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom
+ *      the Software is furnished to do so, subject to the following conditions:
+ *    The above copyright notice and this permission notice shall be included in all copies or
+ *      substantial portions of the Software.
+ *    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING
+ *      BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+ *      NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY
+ *      CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE,
+ *      ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+ *      SOFTWARE.
+ *  ────────────────────────────────────────────────────────────────────────────────────────────────
+ */
 
-aside.shield-themed.floats-right {
-  float: right;
-}
-
-aside.shield-themed > h1:first-child,
-aside.shield-themed > h2:first-child,
-aside.shield-themed > h3:first-child,
-aside.shield-themed > h4:first-child,
-aside.shield-themed > h5:first-child,
-aside.shield-themed > h6:first-child,
-aside.shield-themed > header:first-child > * {
-  box-sizing: content-box;
-  width: 100%;
-  padding: 0.5rem;
-  margin-top: -0.5rem;
-  margin-left: -0.5rem;
-  margin-bottom: 0.5rem;
-  background-color: #981e32;
-  color: #fff;
-}
-
-aside.shield-themed p + * {
-  margin-top: 1em;
-}
-
-aside.shield-themed p + .has-learn-more-link {
-  margin-top: 0.33333333em;
-}
-
-aside.shield-themed:not(:last-child) {
-  margin-bottom: 2rem;
-}
-
-.column aside.article-sidebar {
-  background: #f8f1eb;
-  border: 1px solid #6d441f;
-  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
-  color: #464e54;
-  float: right;
-  font-size: 0.8rem;
-  margin-bottom: 1rem;
-  margin-left: 1rem;
-  min-width: 230px;
-  padding: 0.8rem;
-  width: 33%;
-}
-
-.column aside.article-sidebar:first-child + h1,
-.column aside.article-sidebar:first-child + h2,
-.column aside.article-sidebar:first-child + h3,
-.column aside.article-sidebar:first-child + h4 {
-  margin-top: 0;
-}
-
-.column aside.article-sidebar p,
-.column aside.article-sidebar ol,
-.column aside.article-sidebar ul {
-  font-size: inherit;
-  line-height: normal;
-}
-
-.column aside.article-sidebar p {
-  text-align: left;
-}
-
-.column aside.article-sidebar p:not(:last-child) {
-  margin-bottom: 0.8rem;
-}
-
-.column aside.article-sidebar ol,
-.column aside.article-sidebar ul {
-  padding-bottom: 0;
-}
-
-.column aside.article-sidebar h2 + hr {
-  background-color: rgba(70, 78, 84, 0.75);
-  margin-top: 0.25rem;
-}
-
-.column aside.article-sidebar h3 {
-  font-size: 1.275rem;
-  margin-bottom: 0;
-  margin-top: 1.2rem;
-}
-
-.column aside.article-sidebar h3:first-child {
-  margin-top: 0;
-}
-
-.column aside.article-sidebar h4 {
-  font-size: 1.05rem;
-}
-
-.column aside.article-sidebar h4:first-child {
-  margin-top: 0;
-}
-
-body.single-post #wsuwp-main .row .column.one aside,
-.column > aside.quote {
-  float: right;
-  clear: right;
-  padding: 0.5rem;
-  margin-left: 0.5rem;
-  border-left: 4px solid #b5babe;
-  background: #d7dadb;
-  font-size: 0.9rem;
-}
-
-body.single-post #wsuwp-main .row .column.one aside.full-width,
-.column > aside.quote.full-width {
-  width: 94%;
-  width: calc(100% - 0.5rem * 2);
-  margin-top: 1rem;
-  margin-bottom: 2rem;
-}
-
-body.single-post #wsuwp-main .row .column.one aside:not(.full-width),
-.column > aside.quote:not(.full-width) {
-  width: 33%;
-  margin-top: 0.5rem;
-  margin-bottom: 0.5rem;
-}
-
-body.single-post #wsuwp-main .row .column.one aside > h2:first-child,
-.column > aside.quote > h2:first-child,
-body.single-post #wsuwp-main .row .column.one aside > h3:first-child,
-.column > aside.quote > h3:first-child,
-body.single-post #wsuwp-main .row .column.one aside > h4:first-child,
-.column > aside.quote > h4:first-child {
-  padding: 0.5rem;
-  margin: -0.5rem;
-  background-color: #981e32;
-  color: #fff;
-}
-
-body.single-post #wsuwp-main .row .column.one aside > h2:first-child + *,
-.column > aside.quote > h2:first-child + *,
-body.single-post #wsuwp-main .row .column.one aside > h3:first-child + *,
-.column > aside.quote > h3:first-child + *,
-body.single-post #wsuwp-main .row .column.one aside > h4:first-child + *,
-.column > aside.quote > h4:first-child + * {
-  margin-top: 1rem;
-}
-
-body.blog .article-summary aside {
-  display: none;
-}
+/**     ························································································
+ *       └> §3.2.7: Heading
+ */
 
 .column h2.article-title {
-  font-size: 0.82823529em;
+  font-size: 0.84rem;
   line-height: 1.1em;
-}
-
-.column.show-header.has-fancy-header > header:first-child > h2 {
-  background-color: rgba(94, 94, 94, 0.2);
-  background: linear-gradient(to right, transparent, rgba(94, 94, 94, 0.075) 5%, rgba(94, 94, 94, 0.075) 50%, rgba(94, 94, 94, 0.225));
-  border-bottom: 2px solid rgba(94, 94, 94, 0.075);
-  margin-bottom: 1rem;
-  margin-left: -0.5rem;
-  margin-right: -0.5rem;
-  padding: 0.33333333rem 0.5rem 0.55rem;
-  position: relative;
-}
-
-.column.show-header.has-fancy-header > header:first-child > h2 {
-  padding-top: 0.5rem;
-}
-
-.column.show-header.has-fancy-header > header:first-child > h2:not(:first-child) {
-  margin-top: 2rem;
-}
-
-.column.show-header.has-fancy-header > header:first-child > h2::before {
-  border-bottom: 1px solid rgba(59, 64, 66, 0.3333);
-  border-top-width: 2px;
-  border-top: 1px solid rgba(59, 64, 66, 0.6667);
-  content: "";
-  height: 0;
-  left: 0;
-  position: absolute;
-  top: 0;
-  width: 100%;
 }
 
 .column h1 + h2 {
@@ -659,36 +1108,6 @@ h2.article-title a {
   text-transform: none;
 }
 
-.column.show-header.has-fancy-header > header:first-child > h3 {
-  background-color: rgba(198, 12, 48, 0.075);
-  background: linear-gradient(to right, transparent, rgba(219, 120, 121, 0.075) 5%, rgba(219, 120, 121, 0.075) 50%, rgba(219, 120, 121, 0.225));
-  border-bottom: 2px solid rgba(198, 12, 48, 0.075);
-  margin-bottom: 1rem;
-  margin-left: 0;
-  margin-right: 0;
-  padding: 0.33333333rem 0.5rem 0.45rem 0;
-  position: relative;
-}
-
-.column.show-header.has-fancy-header > header:first-child > h3 {
-  padding-top: 0.4375rem;
-}
-
-.column.show-header.has-fancy-header > header:first-child > h3:not(:first-child) {
-  margin-top: 2rem;
-}
-
-.column.show-header.has-fancy-header > header:first-child > h3::before {
-  border-bottom: 1px solid rgba(152, 30, 50, 0.375);
-  border-top: 1px solid rgba(152, 30, 50, 0.67);
-  content: "";
-  height: 0;
-  left: 0;
-  position: absolute;
-  top: 0;
-  width: 100%;
-}
-
 .hN--subtitle {
   display: block;
   font-size: 0.6em;
@@ -701,8 +1120,8 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Roboto Condensed', 'Arial Narrow', sans-serif;
-  font-weight: bold;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
   margin: 0;
   padding: 0;
 }
@@ -713,31 +1132,39 @@ h6 {
 * + h4,
 * + h5,
 * + h6 {
-  margin-top: 1em;
+  margin-top: 2rem;
 }
 
 h1 {
-  font-size: 2.4em;
+  font-weight: 800;
 }
 
 h2 {
-  font-size: 2.1em;
+  font-weight: 700;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 2.1rem;
 }
 
 h3 {
-  font-size: 1.8em;
+  font-size: 1.8rem;
 }
 
 h4 {
-  font-size: 1.6em;
+  font-size: 1.5rem;
 }
 
 h5 {
-  font-size: 1.5em;
+  font-size: 1.25rem;
 }
 
 h6 {
-  font-size: 1.4em;
+  font-size: 1rem;
 }
 
 h1,
@@ -764,7 +1191,7 @@ h3,
 h4,
 h5,
 h6 {
-  color: #981e32;
+  color: #2a3033;
 }
 
 h1.solid {
@@ -780,8 +1207,8 @@ h1.solid::before {
 }
 
 h2.solid {
-  background-color: rgba(152, 30, 50, 0.9);
-  background: linear-gradient(to right, #981e32 50%, #4f101a);
+  background-color: rgba(166, 15, 45, 0.9);
+  background: linear-gradient(to right, #a60f2d 50%, #4f101a);
   border-bottom: 2px solid rgba(79, 16, 26, 0.5);
   color: #fff;
 }
@@ -792,10 +1219,10 @@ h2.solid::before {
 }
 
 h3.solid {
-  background-color: rgba(198, 12, 48, 0.075);
+  background-color: rgba(202, 18, 55, 0.075);
   background: linear-gradient(to right, transparent, rgba(219, 120, 121, 0.075) 5%, rgba(219, 120, 121, 0.075) 50%, rgba(219, 120, 121, 0.225));
-  border-bottom: 2px solid rgba(198, 12, 48, 0.075);
-  color: #981e32;
+  border-bottom: 2px solid rgba(202, 18, 55, 0.075);
+  color: #a60f2d;
 }
 
 h3.solid::before {
@@ -908,8 +1335,8 @@ h3.white-text.solid.crimson-background,
 h4.white-text.solid.crimson-background,
 h5.white-text.solid.crimson-background,
 h6.white-text.solid.crimson-background {
-  background-color: rgba(152, 30, 50, 0.9);
-  background: linear-gradient(to right, #981e32 50%, #4f101a);
+  background-color: rgba(166, 15, 45, 0.9);
+  background: linear-gradient(to right, #a60f2d 50%, #4f101a);
   border-bottom: 2px solid rgba(79, 16, 26, 0.5);
 }
 
@@ -959,7 +1386,7 @@ h3.crimson-text,
 h4.crimson-text,
 h5.crimson-text,
 h6.crimson-text {
-  color: #981e32;
+  color: #a60f2d;
 }
 
 h1.crimson-text.solid,
@@ -968,9 +1395,9 @@ h3.crimson-text.solid,
 h4.crimson-text.solid,
 h5.crimson-text.solid,
 h6.crimson-text.solid {
-  background-color: rgba(198, 12, 48, 0.075);
+  background-color: rgba(202, 18, 55, 0.075);
   background: linear-gradient(to right, transparent, rgba(219, 120, 121, 0.075) 5%, rgba(219, 120, 121, 0.075) 50%, rgba(219, 120, 121, 0.225));
-  border-bottom: 2px solid rgba(198, 12, 48, 0.075);
+  border-bottom: 2px solid rgba(202, 18, 55, 0.075);
 }
 
 h1.crimson-text.solid::before,
@@ -994,6 +1421,10 @@ h6.crimson-text.solid::before {
 .hX--indent-3 {
   max-width: calc(100% - 6rem);
 }
+
+/**     ························································································
+ *       └> §3.2.8: Header
+ */
 
 .main-header {
   background: #820c23;
@@ -1117,27 +1548,35 @@ h6.crimson-text.solid::before {
   display: block;
 }
 
+/**     ························································································
+ *       └> §3.2.9: Footer
+ */
+
 footer.article-footer div.author-info {
   display: none;
 }
 
-.article-deck {
-  color: #72652a;
-}
+/**   --------------------------------------------------------------------------------------------
+ *    >>> §3.3: Content Grouping Nodes
+ */
 
-.article-deck strong {
-  color: #8f7e35;
+/**     ························································································
+ *       └> §3.3.1: Paragraph elements
+ */
+
+.article-deck {
+  font-size: 1.4em;
 }
 
 .article-tagline {
-  font-size: 1.43em;
+  font-size: 1.4em;
   font-weight: 300;
-  line-height: 1.313em;
+  line-height: 1.5em;
 }
 
 .article-tagline.home,
 .article-tagline.article-tagline--home {
-  font-size: 1.6445em;
+  font-size: 1.61em;
 }
 
 p {
@@ -1154,6 +1593,10 @@ p ~ p {
 .row * + p:not([class*="margined-top"]):not([class*="mt--"]):not([class*="sv--"]) {
   margin-top: 1em;
 }
+
+/**     ························································································
+ *       └> §3.3.2: Hr elements
+ */
 
 hr {
   background-color: #d7dadb;
@@ -1188,6 +1631,10 @@ hr.sub-section {
 hr.thicker {
   border-top-width: 2px;
 }
+
+/**     ························································································
+ *       └> §3.3.3: List elements
+ */
 
 ul {
   font-size: 1em;
@@ -1476,9 +1923,17 @@ ul.cascaded-layout.blank > li.gutter-sizer {
   width: 3% !important;
 }
 
-.column > * + div {
+/**     ························································································
+ *       └> §3.3.4: Div elements
+ */
+
+.column > * + div:not([class*="margined-top"]):not([class*="mt--"]):not([class*="sv--"]) {
   margin-top: 1em;
 }
+
+/**     ························································································
+ *       └> §3.3.5: Banner slideshows
+ */
 
 .builder-banner-content {
   border: 0;
@@ -1588,8 +2043,12 @@ ul.cascaded-layout.blank > li.gutter-sizer {
   left: 0.4rem;
 }
 
+/**     ························································································
+ *       └> §3.3.6: Columns
+ */
+
 .column {
-  color: #2a3033;
+  color: #000000;
   font-family: 'Montserrat', 'Open Sans', sans-serif;
   font-weight: 300;
 }
@@ -1622,6 +2081,10 @@ ul.cascaded-layout.blank > li.gutter-sizer {
 main > .page > .row:last-child > .column:last-child {
   padding-bottom: 2rem;
 }
+
+/**     ························································································
+ *       └> §3.3.7: Flippable content panels
+ */
 
 .interactively-flipped-panels {
   position: relative;
@@ -1808,12 +2271,12 @@ main > .page > .row:last-child > .column:last-child {
 }
 
 .interactively-flipped-panels .container .panel-wrapper .panel.crimson div.rear {
-  background-color: #981e32;
+  background-color: #a60f2d;
   color: #fff;
 }
 
 .interactively-flipped-panels .container .panel-wrapper .panel.crimson div.front {
-  background-color: #c60c30;
+  background-color: #ca1237;
   color: #000;
 }
 
@@ -1844,6 +2307,10 @@ main > .page > .row:last-child > .column:last-child {
   padding-bottom: calc((50% * 0.8 - 2em) * 2 + 2em);
   transition: width linear 0.25s, padding linear 0.25s;
 }
+
+/**     ····························································································
+ *       └> §3.3.8: Page covering notices
+ */
 
 .page-covering-notice-css3 {
   position: fixed;
@@ -1961,6 +2428,10 @@ main > .page > .row:last-child > .column:last-child {
 .page-covering-notice-js .notice-content p + p {
   margin-top: 1em !important;
 }
+
+/**     ····························································································
+ *       └> §3.3.9: Recent updates
+ */
 
 .has-recent-updates {
   background-color: #eff0f1;
@@ -2208,22 +2679,30 @@ main > .page > .row:last-child > .column:last-child {
   }
 }
 
+/**     ························································································
+ *       └> §3.3.10: Main element
+ */
+
+/**   --------------------------------------------------------------------------------------------
+ *    >>> §3.4: Text-level nodes
+ */
+
+/**     ························································································
+ *       └> §3.4.1: Hyperlink elements
+ */
+
 .column a {
-  border-bottom: 1px solid #981e32;
+  border-bottom: 1px solid #a60f2d;
+  color: #a60f2d;
   text-decoration: none;
-  transition: color .2s ease, background 0.2s ease, border-width .05s;
+  transition: color .2s bezier-curve(0,0,.03,1), background 0.2s bezier-curve(0,0,.03,1), border-width .1s bezier-curve(0,0,.03,1);
 }
 
 .column a:focus,
 .column a:hover {
-  background-color: rgba(198, 12, 48, 0.1);
+  background-color: rgba(0, 0, 0, 0.08);
   border-bottom-width: 3px;
-  border-color: #c60c30;
-  text-shadow: 1px 1px 2px rgba(152, 30, 50, 0.3);
-}
-
-.column a:not([class*="fw--"]) {
-  font-weight: 400;
+  border-color: #ca1237;
 }
 
 .column a.gform_anchor {
@@ -2235,8 +2714,7 @@ main > .page > .row:last-child > .column:last-child {
 .column h3 a:not([class*="fw--"]),
 .column h4 a:not([class*="fw--"]),
 .column h5 a:not([class*="fw--"]),
-.column h6 a:not([class*="fw--"]),
-.gform_heading h3.gform_title a:not([class*="fw--"]) {
+.column h6 a:not([class*="fw--"]) {
   font-weight: inherit;
 }
 
@@ -2276,7 +2754,7 @@ main > .page > .row:last-child > .column:last-child {
 .column a.non-text-link img,
 .column .article-thumbnail a img {
   border-bottom: 3px solid #e1e3e5;
-  box-shadow: 0 3px #981e32;
+  box-shadow: 0 3px #a60f2d;
   transition: all .25s ease;
 }
 
@@ -2324,7 +2802,7 @@ main > .page > .row:last-child > .column:last-child {
 }
 
 .overlay-link:after {
-  background: rgba(202,18,55,.33) url(https://s3.wp.wsu.edu/uploads/sites/57/2020/07/overlay-link_open-sans-0xbb.svg) center/8rem no-repeat;
+  background: rgba(202,18,55,.33) url(https://s3.wp.wsu.edu/uploads/sites/57/2020/07/overlay-link_open-sans-0xbb.svg) 50% center/8rem no-repeat;
   background-position-y: calc(50% - 1.2rem);
   height: 100%;
   left: 0;
@@ -2341,9 +2819,25 @@ main > .page > .row:last-child > .column:last-child {
   width: 4rem;
 }
 
+.overlay-link:hover:before,
+.overlay-link:focus:before {
+  opacity: 0;
+}
+
 .overlay-link:hover:after,
 .overlay-link:focus:after {
   opacity: 1;
+}
+
+.overlay-link--smaller-icon:after {
+  background: rgba(202,18,55,.33) url(https://s3.wp.wsu.edu/uploads/sites/57/2020/07/overlay-link_open-sans-0xbb.svg) 50% center/4rem no-repeat;
+}
+
+.overlay-link--smaller-icon:before {
+  bottom: 0.5rem;
+  height: 2rem;
+  right: 0.5rem;
+  width: 2rem;
 }
 
 .column h1 a:not(.non-text-link),
@@ -2351,8 +2845,7 @@ main > .page > .row:last-child > .column:last-child {
 .column h3 a:not(.non-text-link),
 .column h4 a:not(.non-text-link),
 .column h5 a:not(.non-text-link),
-.column h6 a:not(.non-text-link),
-.gform_heading h3.gform_title a:not(.non-text-link) {
+.column h6 a:not(.non-text-link) {
   line-height: 1.4em;
   line-height: calc(1.4em + 1px);
 }
@@ -2363,8 +2856,7 @@ main > .page > .row:last-child > .column:last-child {
 .column h4 a:not(.non-text-link),
 .column h5 a:not(.non-text-link),
 .column h6 a:not(.non-text-link),
-.column .article-footer a,
-.gform_heading h3.gform_title a:not(.non-text-link) {
+.column .article-footer a {
   border-bottom: 1px solid transparent;
   box-shadow: none;
   text-decoration: underline;
@@ -2376,52 +2868,137 @@ main > .page > .row:last-child > .column:last-child {
 .column h4 a:not(.non-text-link):hover,
 .column h5 a:not(.non-text-link):hover,
 .column h6 a:not(.non-text-link):hover,
-.column .article-footer a:hover,
-.gform_heading h3.gform_title a:not(.non-text-link):hover {
-  border-bottom: 4px solid #c60c30;
+.column .article-footer a:hover {
+  border-bottom: 4px solid #ca1237;
   text-decoration: none;
 }
 
 .simple-button {
-  border-radius: 4px;
+  border-radius: 2px;
   display: inline-block;
   margin-bottom: 9px;
   padding: 0.5rem 1rem;
 }
 
-.simple-button:not(:hover) {
-  background-color: #eff0f1;
-  border: 1px solid #a60f2d;
+.simple-button:not(:hover):not(:focus) {
+  background-color: #fef1f4;
+  border: 1px solid #820c23;
   box-shadow: 0 12px 16px 2px rgba(0, 0, 0, 0.03), 0 5px 22px 4px rgba(0, 0, 0, 0.03), 0 6px 13px 0 rgba(0, 0, 0, 0.02);
+  color: #820c23;
 }
 
-.simple-button:hover {
-  background-color: #eff0f1;
-  border: 1px solid #ca1237;
-  box-shadow: 0 12px 16px 2px rgba(202, 18, 55, 0.05), 0 5px 22px 4px rgba(202, 18, 55, 0.05), 0 6px 13px 0 rgba(202, 18, 55, 0.02);
+.column .simple-button:hover,
+.column .simple-button:focus {
+  background-color: #a60f2d;
+  border: 1px solid #a60f2d;
+  box-shadow: 0 0 1.5rem 0.5rem rgba(166, 15, 45, 0.15), 0 0 2px 2px rgba(166, 15, 45, 0.15);
+  color: white;
 }
 
-.column .simple-button:hover {
+.column .column .simple-button:hover,
+.column .column .simple-button:focus {
   border-bottom-width: 1px;
   text-shadow: none;
 }
 
-.simple-button.simple-button--crimson:not(:hover) {
+.simple-button.simple-button--crimson:not(:hover):not(:focus) {
   background-color: #a60f2d;
   border: 0;
   color: white;
 }
 
-.simple-button.simple-button--crimson:hover {
+.column .simple-button.simple-button--crimson:hover,
+.column .simple-button.simple-button--crimson:focus {
   background-color: #ca1237;
   border: 0;
   box-shadow: 0 5px 18px rgba(202, 18, 55, 0.4);
   color: white;
 }
 
-.column .simple-button.simple-button--crimson:hover {
+.column .column .simple-button.simple-button--crimson:hover,
+.column .column .simple-button.simple-button--crimson:focus {
   border-bottom-width: 0;
 }
+
+.simple-button.simple-button--blue:not(:hover):not(:focus) {
+  background-color: #f3f9fd;
+  border: 1px solid #185777;
+  color: #185777;
+}
+
+.column .simple-button.simple-button--blue:hover,
+.column .simple-button.simple-button--blue:focus {
+  background-color: #1e6f98;
+  border-color: #1e6f98;
+  box-shadow: 0 0 1.5rem 0.5rem rgba(30, 111, 152, 0.15), 0 0 2px 2px rgba(30, 111, 152, 0.15);
+  color: white;
+}
+
+.column .column .simple-button.simple-button--blue:hover,
+.column .column .simple-button.simple-button--blue:focus {
+  border-bottom-width: 0;
+}
+
+.simple-button.simple-button--yellow:not(:hover):not(:focus) {
+  background-color: #fdfbf3;
+  border: 1px solid #776818;
+  color: #776818;
+}
+
+.column .simple-button.simple-button--yellow:hover,
+.column .simple-button.simple-button--yellow:focus {
+  background-color: #98841e;
+  border-color: #98841e;
+  box-shadow: 0 0 1.5rem 0.5rem rgba(152, 132, 30, 0.15), 0 0 2px 2px rgba(152, 132, 30, 0.15);
+  color: black;
+}
+
+.column .column .simple-button.simple-button--yellow:hover,
+.column .column .simple-button.simple-button--yellow:focus {
+  border-bottom-width: 0;
+}
+
+.simple-button.simple-button--teal:not(:hover):not(:focus) {
+  background-color: #f3fdfb;
+  border: 1px solid #187768;
+  color: #187768;
+}
+
+.column .simple-button.simple-button--teal:hover,
+.column .simple-button.simple-button--teal:focus {
+  background-color: #1e9884;
+  border-color: #1e9884;
+  box-shadow: 0 0 1.5rem 0.5rem rgba(30, 152, 132, 0.15), 0 0 2px 2px rgba(30, 152, 132, 0.15);
+  color: black;
+}
+
+.column .column .simple-button.simple-button--teal:hover,
+.column .column .simple-button.simple-button--teal:focus {
+  border-bottom-width: 0;
+}
+
+.simple-button.simple-button--orange:not(:hover):not(:focus) {
+  background-color: #fdf6f3;
+  border: 1px solid #773818;
+  color: #773818;
+}
+
+.column .simple-button.simple-button--orange:hover,
+.column .simple-button.simple-button--orange:focus {
+  background-color: #98471e;
+  border-color: #98471e;
+  box-shadow: 0 0 1.5rem 0.5rem rgba(152, 71, 30, 0.15), 0 0 2px 2px rgba(152, 71, 30, 0.15);
+  color: white;
+}
+
+.column .column .simple-button.simple-button--orange:hover,
+.column .column .simple-button.simple-button--orange:focus {
+  border-bottom-width: 0;
+}
+
+/**     ························································································
+ *       └> §3.4.2: Strong elements
+ */
 
 strong.opening-line {
   font-size: 1.0625em;
@@ -2434,15 +3011,24 @@ strong.stands-out {
   font-size: 1.2em;
 }
 
-strong:not([class*="fw--"]) {
+strong:not([class*="fw--"]),
+b:not([class*="fw--"]) {
   font-weight: 600;
 }
+
+/**     ························································································
+ *       └> §3.4.3: Mark elements
+ */
 
 mark.highlight {
   background-color: transparent;
   font-style: normal;
   color: #AEC7CB;
 }
+
+/**     ························································································
+ *       └> §3.4.4: Span elements
+ */
 
 span.accentuated-text {
   font-weight: 700;
@@ -2488,9 +3074,21 @@ span.has-tooltip:hover {
   color: #5895ff;
 }
 
+/**     ························································································
+ *       └> §3.4.5: Cite elements
+ */
+
 cite.article-author {
   display: none;
 }
+
+/**   --------------------------------------------------------------------------------------------
+ *    >>> §3.5: Embedded content nodes
+ */
+
+/**     ························································································
+ *       └> §3.5.1: Image elements
+ */
 
 img {
   height: auto;
@@ -2555,6 +3153,10 @@ figure figcaption {
   font-size: 0.85em;
 }
 
+/**     ························································································
+ *       └> §3.5.2: Iframe elements
+ */
+
 .column .pdf-wrapper,
 .column .youtube-wrapper,
 .column .video-wrapper {
@@ -2593,6 +3195,10 @@ figure figcaption {
   padding-bottom: 56.25%;
 }
 
+/**   --------------------------------------------------------------------------------------------
+ *    >>> §3.6: Tabular data nodes
+ */
+
 .tablepress tfoot th,
 .tablepress thead th {
   font-weight: 600;
@@ -2620,290 +3226,200 @@ figure figcaption {
   background-color: #049cdb;
 }
 
-.column .gform_wrapper {
-  max-width: 990px;
+/**   --------------------------------------------------------------------------------------------
+ *    >>> §3.7: Form nodes
+ */
+
+/** ────────────────────────────────────────────────────────────────────────────────────────────────
+ *  █▀▀▀ ▄▀▀▄ █▀▀▄ ▐▀▄▀▌▄▀▀▀   █    █▀▀▀ ▄▀▀▀ ▄▀▀▀
+ *  █▀▀▀ █  █ █▄▄▀ █ ▀ ▌▀▀▀█   █  ▄ █▀▀  ▀▀▀█ ▀▀▀█
+ *  ▀     ▀▀  ▀  ▀▄█   ▀▀▀▀  ▀ ▀▀▀  ▀▀▀▀ ▀▀▀  ▀▀▀
+ * 
+ *  Custom styling for forms appearing on WSUWP websites that is generally used on websites managed
+ *    by WSU DAESA.
+ * 
+ *  @version 1.0.2
+ * 
+ *  @link https://github.com/invokeImmediately/WSU-DAESA-CSS/main/blob/forms.less
+ *  @author Daniel Rieck [daniel.rieck@wsu.edu] (https://github.com/invokeImmediately)
+ *  @license MIT Copyright (c) 2022 Washington State University
+ *    Permission is hereby granted, free of charge, to any person obtaining a copy of this software
+ *      and associated documentation files (the "Software"), to deal in the Software without
+ *      restriction, including without limitation the rights to use, copy, modify, merge, publish,
+ *      distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom
+ *      the Software is furnished to do so, subject to the following conditions:
+ *    The above copyright notice and this permission notice shall be included in all copies or
+ *      substantial portions of the Software.
+ *    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING
+ *      BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+ *      NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,
+ *      DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+ *      FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+ *      SOFTWARE.
+ *  ────────────────────────────────────────────────────────────────────────────────────────────────
+ *   TABLE OF CONTENTS:
+ *   ────────────────────────────────────────────────────────────────────────────────────────────
+ *   §1: Vanilla forms.........................................................................43
+ *     >>> §1.1: Form-mediated "Read More" interfaces..........................................47
+ *   §2: Gravity forms........................................................................123
+ *     >>> §2.1: Modifications of default GF styling (Spine compatible).......................127
+ *     >>> §2.2: Modifications of default GF styling (WDS and Spine compatible)...............398
+ *     >>> §2.3: Required field highlighting..................................................483
+ *     >>> §2.4: Advanced form controls.......................................................629
+ *   §3: WSUWP password entry form............................................................728
+ *   §4: DAESA styled progress indicators.....................................................740
+ *   ───────────────────────────────────────────────────────────────────────────────────────────────
+ */
+
+/** ================================================================================================
+ *  §1: Vanilla forms
+ */
+
+/**     ····························································································
+ *      >>> §1.1: Form-mediated "Read More" interfaces
+ */
+
+/**   ----------------------------------------------------------------------------------------------
+ *    §2: Gravity forms
+ */
+
+/**     ····························································································
+ *      >>> §2.1: Modifications of default GF styling (Spine compatible)
+ */
+
+/**     ····························································································
+ *      >>> §2.2: Modifications of default GF styling (WDS and Spine Compatible)
+ */
+
+.gform_wrapper.gravity-theme .gform_body {
+  background-color: #f7f7f7;
+  padding: 0.5rem 2rem 2rem;
 }
 
-.column .gform_wrapper #extensions_message {
-  padding-left: 1rem;
-}
-
-.column .gform_wrapper .field_sublabel_above .ginput_complex.ginput_container label {
-  margin: 0;
-}
-
-.column .gform_wrapper .gfield_checkbox li {
-  margin-bottom: 0;
-}
-
-.column .gform_wrapper .gfield_checkbox li label,
-.column .gform_wrapper .gfield_radio li label {
-  font-weight: normal;
-}
-
-.column .gform_wrapper .gfield_checkbox li input,
-.column .gform_wrapper .gfield_checkbox li input[type=checkbox],
-.column .gform_wrapper .gfield_radio li input[type=radio] {
-  vertical-align: top;
-}
-
-.column .gform_wrapper.gf_browser_chrome .gfield_checkbox li input,
-.column .gform_wrapper.gf_browser_chrome .gfield_checkbox li input[type=checkbox],
-.column .gform_wrapper.gf_browser_chrome .gfield_radio li input[type=radio] {
-  margin-top: 8px;
-}
-
-.column .gform_wrapper .gfield_description {
-  max-width: 80ch;
-}
-
-.column .gform_wrapper .gform_body > ul > li.has-top-border:not(.gsection):not(.gfield_html) + li:not(.gsection)::before,
-.column .gform_wrapper .gform_body > ul > li.has-top-spacer:not(.gsection):not(.gfield_html) + li:not(.gsection)::before {
-  content: "";
-  display: block;
-  height: 0;
-  margin: 2rem auto 0;
-  width: 95%;
-}
-
-.column .gform_wrapper .gform_body > ul > li.has-top-border:not(.gsection):not(.gfield_html) + li:not(.gsection)::before {
-  border-bottom: 1px dashed rgba(160, 160, 160, 0.25);
-  border-top: 1px dashed rgba(94, 94, 94, 0.3333);
-}
-
-.column .gform_wrapper .gform_body > ul > li.gf-bckgrnd-field {
-  display: none !important;
-}
-
-.column .gform_wrapper .gform_heading li {
-  list-style: disc !important;
-}
-
-.column .gform_wrapper .ginput_complex span.ginput_full:not(:first-of-type) label,
-.column .gform_wrapper .ginput_complex span.ginput_left:not(:first-of-type) label,
-.column .gform_wrapper .ginput_complex span.ginput_right:not(:nth-of-type(2)) label {
-  margin-top: 0.4em;
-}
-
-.column .gform_wrapper .gsection {
-  margin-bottom: 0;
-  margin-top: 2rem;
-}
-
-.column .gform_wrapper .percentbar_blue {
-  background-color: #981e32;
-}
-
-.column .gform_wrapper h2.fancy {
-  margin-right: 0;
-  margin-left: 0;
-}
-
-.column .gform_wrapper h2.gsection_title {
-  font-size: 1.6em;
-}
-
-.column .gform_wrapper label.gfield_label {
+.gform_wrapper.gravity-theme .field_sublabel_above .gfield_description {
   margin-top: 0;
-  margin-bottom: 0;
-  font-size: 1.125em;
-}
-
-.column .gform_wrapper table.gfield_list thead th {
-  font-weight: 600;
-}
-
-.column .gform_wrapper ul:last-child {
   padding-bottom: 0;
 }
 
-.column li.gfield :focus {
-  outline: 1px solid blue;
+.gform_wrapper.gravity-theme .field_sublabel_above .gfield_description + .ginput_container {
+  margin-top: 0.5rem;
 }
 
-.column li.gfield .chosen-single,
-.column li.gfield .chosen-drop {
-  border-color: #717171 !important;
-}
-
-.column li.gfield input,
-.column li.gfield select {
-  border-color: #717171 !important;
-  border-style: solid !important;
-  border-width: 1px !important;
-}
-
-.column li.gfield.uses-rich-editor .tmce-active .mce-menubar {
-  display: none;
-}
-
-.column li.gfield.uses-rich-editor .tmce-active .mce-toolbar .mce-btn[aria-label="Insert/edit image (Shift+Alt+M)"],
-.column li.gfield.uses-rich-editor .tmce-active .mce-toolbar-grp .mce-btn[aria-label="Insert/edit image (Shift+Alt+M)"],
-.column li.gfield.uses-rich-editor .tmce-active .mce-toolbar .mce-btn[aria-label="Align left (Shift+Alt+L)"],
-.column li.gfield.uses-rich-editor .tmce-active .mce-toolbar-grp .mce-btn[aria-label="Align left (Shift+Alt+L)"],
-.column li.gfield.uses-rich-editor .tmce-active .mce-toolbar .mce-btn[aria-label="Align center (Shift+Alt+C)"],
-.column li.gfield.uses-rich-editor .tmce-active .mce-toolbar-grp .mce-btn[aria-label="Align center (Shift+Alt+C)"],
-.column li.gfield.uses-rich-editor .tmce-active .mce-toolbar .mce-btn[aria-label="Align right (Shift+Alt+R)"],
-.column li.gfield.uses-rich-editor .tmce-active .mce-toolbar-grp .mce-btn[aria-label="Align right (Shift+Alt+R)"],
-.column li.gfield.uses-rich-editor .tmce-active .mce-toolbar .mce-btn[aria-label="Align left (Shift+Alt+L)"],
-.column li.gfield.uses-rich-editor .tmce-active .mce-toolbar-grp .mce-btn[aria-label="Align left (Shift+Alt+L)"],
-.column li.gfield.uses-rich-editor .tmce-active .mce-toolbar .mce-btn[aria-label="Table"],
-.column li.gfield.uses-rich-editor .tmce-active .mce-toolbar-grp .mce-btn[aria-label="Table"],
-.column li.gfield.uses-rich-editor .tmce-active .mce-toolbar .mce-btn[aria-label="Show blocks"],
-.column li.gfield.uses-rich-editor .tmce-active .mce-toolbar-grp .mce-btn[aria-label="Show blocks"],
-.column li.gfield.uses-rich-editor .tmce-active .mce-toolbar .mce-btn[aria-label="Source code"],
-.column li.gfield.uses-rich-editor .tmce-active .mce-toolbar-grp .mce-btn[aria-label="Source code"],
-.column li.gfield.uses-rich-editor .tmce-active .mce-toolbar .mce-btn[aria-label="Text color"],
-.column li.gfield.uses-rich-editor .tmce-active .mce-toolbar-grp .mce-btn[aria-label="Text color"],
-.column li.gfield.uses-rich-editor .tmce-active .mce-toolbar .mce-btn[aria-label="Toolbar Toggle (Shift+Alt+Z)"],
-.column li.gfield.uses-rich-editor .tmce-active .mce-toolbar-grp .mce-btn[aria-label="Toolbar Toggle (Shift+Alt+Z)"] {
-  display: none;
-}
-
-.column li.gfield.uses-rich-editor .tmce-active .mce-statusbar {
-  display: none;
-}
-
-.column li.gfield.uses-rich-editor .wp-editor-container {
-  border-color: #717171 !important;
-}
-
-.column li.gfield.uses-rich-editor iframe {
-  width: 100% !important;
-}
-
-.column li.gfield.uses-rich-editor span.gp-word-count-label {
-  margin-top: 0 !important;
-}
-
-.column li.gfield > div.ginput_complex > span > label {
-  color: #360b12;
-}
-
-.column li.gfield > .ginput_container_select > .chosen-container {
-  width: 100% !important;
-}
-
-.column li.gfield > .ginput_container_select > .chosen-container-single > .chosen-single {
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 20%, rgba(0, 0, 0, 0.038) 50%, rgba(0, 0, 0, 0.07) 52%, rgba(0, 0, 0, 0.045) 100%), linear-gradient(to bottom, #fff, #fff);
-  height: 1.98em;
-  line-height: 1.98em;
-}
-
-.column li.gfield > .ginput_container_select > .chosen-container-single > .chosen-single:hover {
-  text-shadow: none;
-}
-
-.column li.gfield > .ginput_container_select > .chosen-container-single > .chosen-single > div > b {
-  background-position: 0 calc(-10px + 1.98em / 2);
-}
-
-.column li.gfield > .ginput_container_select > .chosen-container-single.chosen-with-drop > .chosen-single {
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.07) 20%, rgba(0, 0, 0, 0) 80%), linear-gradient(to bottom, #fff, #fff);
-}
-
-.column li.gfield div.ginput_container_textarea > textarea {
-  font-size: 16px;
-}
-
-.column .gform_fields.top_label > li.gfield.gfield_error.gf_left_half,
-.column .gform_fields.top_label > li.gfield.gfield_error.gf_right_half {
-  width: calc(50% - 16px);
-}
-
-.column .gform_fields.top_label > li.gfield.gf_left_half ul.gfield_radio,
-.column .gform_fields.top_label > li.gfield.gf_right_half ul.gfield_radio,
-.column .gform_fields.top_label > li.gfield.gf_left_half ul.gfield_checkbox,
-.column .gform_fields.top_label > li.gfield.gf_right_half ul.gfield_checkbox {
-  width: 100%;
-}
-
-.column .gform_fields.top_label > li.gfield > div.gfield_description {
+.gform_wrapper.gravity-theme .field_sublabel_above .instruction {
+  margin-top: 0.25rem;
   padding: 0;
-  margin: 0;
-  color: #360b12;
 }
 
-.column .gform_fields.top_label > li.gfield > div.gfield_description ul li {
-  list-style: disc inside none !important;
+.gform_wrapper.gravity-theme .gfield {
+  margin-top: 1rem;
 }
 
-.column .gform_fields.top_label > li.gfield > div.gfield_description p + ul {
-  margin-top: 0;
+.gform_wrapper.gravity-theme .gfield input,
+.gform_wrapper.gravity-theme .gfield select,
+.gform_wrapper.gravity-theme .gfield textarea {
+  padding: 0.5rem;
 }
 
-.column .gform_fields.top_label > li.gfield > div.ginput_complex {
-  margin-top: 0;
+.gform_wrapper.gravity-theme .gfield input,
+.gform_wrapper.gravity-theme .gfield select,
+.gform_wrapper.gravity-theme .gfield textarea,
+.gform_wrapper.gravity-theme .gfield .gfield_radio,
+.gform_wrapper.gravity-theme .gfield .gfield_checkbox {
+  background: #fff;
+  border: 1px solid #ccc;
+  border-bottom-color: #000;
+  border-radius: 0.3125rem;
 }
 
-.column .gform_fields.top_label > li.gfield + li.gfield:not(.gsection),
-.column .gform_fields.top_label li.gfield:first-child {
-  margin-top: 0.5em;
+.gform_wrapper.gravity-theme .gfield_label {
+  font-weight: 600;
+  margin-bottom: 0;
 }
 
-.column .gform_fields > .gfield.gfield_contains_required > .ginput_container_select > .gfield_select:not(.gf-value-entered) + .chosen-container-single:not(.chosen-with-drop) > .chosen-single {
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 20%, rgba(0, 0, 0, 0.038) 50%, rgba(0, 0, 0, 0.07) 52%, rgba(0, 0, 0, 0.045) 100%), linear-gradient(to bottom, rgba(255, 0, 0, 0.1), rgba(255, 0, 0, 0.1)), linear-gradient(to bottom, #fff, #fff);
+.gform_wrapper.gravity-theme .gfield_label + .ginput_container {
+  margin-top: 0.5rem;
 }
 
-.column .gform_fields > .gfield.gfield_contains_required > .ginput_container_select > .gfield_select + .chosen-container-single.chosen-with-drop > .chosen-single {
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 20%, rgba(0, 0, 0, 0.038) 50%, rgba(0, 0, 0, 0.07) 52%, rgba(0, 0, 0, 0.045) 100%), linear-gradient(to bottom, #edf3f4, #edf3f4);
+.gform_wrapper.gravity-theme .gfield_html:not(.gfield_html--for-indicator) {
+  background: #ffffff;
+  border-radius: 0.3125rem;
+  padding: 2rem;
 }
 
-.column .gform_fields > .gfield.gfield_contains_required input,
-.column .gform_fields > .gfield.gfield_contains_required select,
-.column .gform_fields > .gfield.gfield_contains_required textarea {
-  transition: background 0.3s ease;
+.gform_wrapper.gravity-theme .gf_page_steps {
+  background-color: #f7f7f7;
+  margin-bottom: 0;
+  padding: 0.5rem 1rem 0.25rem;
 }
 
-.column .gform_fields > .gfield.gfield_contains_required input:focus,
-.column .gform_fields > .gfield.gfield_contains_required select:focus,
-.column .gform_fields > .gfield.gfield_contains_required textarea:focus {
-  background-color: #edf3f4 !important;
+.gform_wrapper.gravity-theme .gf_step_completed .gf_step_number:before {
+  box-sizing: border-box;
 }
 
-.column .gform_fields > .gfield.gfield_contains_required input:not(.gf-value-entered):not(:focus),
-.column .gform_fields > .gfield.gfield_contains_required select:not(.gf-value-entered):not(:focus),
-.column .gform_fields > .gfield.gfield_contains_required textarea:not(.gf-value-entered):not(:focus) {
-  background-color: rgba(255, 0, 0, 0.1);
-  background: linear-gradient(to bottom, rgba(255, 0, 0, 0.1) 0, rgba(255, 0, 0, 0) 1.5em);
+.gform_wrapper.gravity-theme .ginput_complex label {
+  padding: 0;
 }
 
-.column .gform_fields > .gfield.gfield_contains_required .gfield_checkbox,
-.column .gform_fields > .gfield.gfield_contains_required .gfield_radio {
-  border: 1px solid #767676;
-  padding: 0.25em 0.5em 0.1em !important;
-  transition: background 0.3s ease;
+.gform_wrapper.gravity-theme label {
+  font-weight: 400;
 }
 
-.column .gform_fields > .gfield.gfield_contains_required .gfield_checkbox:not(.gf-value-entered),
-.column .gform_fields > .gfield.gfield_contains_required .gfield_radio:not(.gf-value-entered) {
-  background-color: rgba(255, 0, 0, 0.1);
-  background: linear-gradient(to bottom, rgba(255, 0, 0, 0.1) 0, rgba(255, 0, 0, 0) 1.5em);
+/**     ····························································································
+ *      >>> §2.3: Required field highlighting
+ */
+
+.gform_wrapper.gravity-theme .gfield_contains_required input:not(.gf-value-entered),
+.gform_wrapper.gravity-theme .gfield_contains_required select:not(.gf-value-entered),
+.gform_wrapper.gravity-theme .gfield_contains_required textarea:not(.gf-value-entered),
+.gform_wrapper.gravity-theme .gfield_contains_required .gfield_radio:not(.gf-value-entered),
+.gform_wrapper.gravity-theme .gfield_contains_required .gfield_checkbox:not(.gf-value-entered) {
+  border-left: 2px solid #a60f2d;
 }
 
-.column .gform_fields > .gfield.gfield_contains_required .address_line_2 input,
-.column .gform_fields > .gfield.gfield_contains_required .name_middle input,
-.column .gform_fields > .gfield.gfield_contains_required .name_suffix input {
-  background: #fff !important;
+.gform_wrapper.gravity-theme .gfield_contains_required input.gf-value-entered,
+.gform_wrapper.gravity-theme .gfield_contains_required select.gf-value-entered,
+.gform_wrapper.gravity-theme .gfield_contains_required textarea.gf-value-entered {
+  padding-left: calc(0.5rem + 1px);
 }
 
-.column .gform_fields > .gfield.gfield_contains_required .address_line_2 input:focus,
-.column .gform_fields > .gfield.gfield_contains_required .name_middle input:focus,
-.column .gform_fields > .gfield.gfield_contains_required .name_suffix input:focus {
-  background-color: #edf3f4 !important;
+.gform_wrapper.gravity-theme .gfield_contains_required .gfield_radio.gf-value-entered,
+.gform_wrapper.gravity-theme .gfield_contains_required .gfield_checkbox.gf-value-entered {
+  padding-left: 1px;
 }
+
+/**     ····························································································
+ *      >>> §2.4: Advanced form controls
+ */
+
+/**   ----------------------------------------------------------------------------------------------
+ *    §3: WSUWP password entry form
+ */
 
 .post-password-required {
   padding-left: 2rem;
   padding-top: 2rem;
 }
 
-.drop-down-toggle {
+/**   ----------------------------------------------------------------------------------------------
+ *    §4: DAESA styled progress indicators
+ */
+
+/**   --------------------------------------------------------------------------------------------
+ *    >>> §3.8: Scripted elements
+ */
+
+/**     ························································································
+ *       └> §3.8.1: Toggled drop-down panels
+ */
+
+.drop-down-toggle,
+.accordion-toggle {
   position: relative;
   transition: all 0.3s ease;
 }
 
-.drop-down-toggle:after {
+.drop-down-toggle:after,
+.accordion-toggle:after {
   content: "";
   position: absolute;
   right: 10px;
@@ -2912,18 +3428,19 @@ figure figcaption {
   height: 0;
   border-top: none;
   border-right: 8px solid transparent;
-  border-bottom: 8px solid #981e32;
+  border-bottom: 8px solid #a60f2d;
   border-left: 8px solid transparent;
   transform: translateY(-50%);
   transition: all 0.3s ease;
 }
 
-.drop-down-toggle:before {
+.drop-down-toggle:before,
+.accordion-toggle:before {
   content: "Click to expand";
   position: absolute;
   top: 50%;
   right: 0;
-  color: #981e32;
+  color: #a60f2d;
   font-size: 12px;
   text-transform: none;
   opacity: 0;
@@ -2931,56 +3448,66 @@ figure figcaption {
   transition: all 0.3s ease;
 }
 
-.drop-down-toggle:hover {
+.drop-down-toggle:hover,
+.accordion-toggle:hover {
   background-color: rgba(219, 120, 121, 0.3);
 }
 
-.drop-down-toggle:hover:after {
+.drop-down-toggle:hover:after,
+.accordion-toggle:hover:after {
   border-top: none;
   border-right: 8px solid transparent;
-  border-bottom: 8px solid #c60c30;
+  border-bottom: 8px solid #ca1237;
   border-left: 8px solid transparent;
 }
 
-.drop-down-toggle:hover:before {
+.drop-down-toggle:hover:before,
+.accordion-toggle:hover:before {
   opacity: 0.5;
 }
 
-.drop-down-toggle.activated {
+.drop-down-toggle.activated,
+.accordion-toggle.activated {
   background-color: rgba(219, 120, 121, 0.15);
 }
 
-.drop-down-toggle.activated:after {
-  border-top: 8px solid #981e32;
+.drop-down-toggle.activated:after,
+.accordion-toggle.activated:after {
+  border-top: 8px solid #a60f2d;
   border-right: 8px solid transparent;
   border-bottom: none;
   border-left: 8px solid transparent;
 }
 
-.drop-down-toggle.activated:before {
+.drop-down-toggle.activated:before,
+.accordion-toggle.activated:before {
   content: "Click to collapse";
 }
 
-.drop-down-toggle.activated:hover:after {
-  border-top: 8px solid #c60c30;
+.drop-down-toggle.activated:hover:after,
+.accordion-toggle.activated:hover:after {
+  border-top: 8px solid #ca1237;
   border-right: 8px solid transparent;
   border-bottom: none;
   border-left: 8px solid transparent;
 }
 
-.drop-down-toggle.boxed {
+.drop-down-toggle.boxed,
+.accordion-toggle.boxed {
   padding-left: 44px;
   padding-top: 5px;
   padding-bottom: 5px;
   margin-left: 0 !important;
   margin-right: 0 !important;
   margin-bottom: 0 !important;
-  background-color: rgba(198, 12, 48, 0.1);
+  background-color: rgba(0, 0, 0, 0.1);
 }
 
 .drop-down-toggle.boxed:after,
-.drop-down-toggle.boxed:before {
-  background-color: #981e32;
+.accordion-toggle.boxed:after,
+.drop-down-toggle.boxed:before,
+.accordion-toggle.boxed:before {
+  background-color: #a60f2d;
   border-radius: 4px;
   border: none;
   color: #fff;
@@ -2996,113 +3523,154 @@ figure figcaption {
   transform: translate(-50%, -50%);
 }
 
-.drop-down-toggle.boxed:after {
+.drop-down-toggle.boxed:after,
+.accordion-toggle.boxed:after {
   content: "+";
   opacity: 1;
 }
 
-.drop-down-toggle.boxed:before {
+.drop-down-toggle.boxed:before,
+.accordion-toggle.boxed:before {
   content: "-";
   opacity: 0;
 }
 
-.drop-down-toggle.boxed:hover {
-  background-color: rgba(198, 12, 48, 0.3);
+.drop-down-toggle.boxed:hover,
+.accordion-toggle.boxed:hover {
+  background-color: rgba(0, 0, 0, 0.3);
 }
 
 .drop-down-toggle.boxed:hover:after,
-.drop-down-toggle.boxed:hover:before {
-  background-color: #b35a69;
+.accordion-toggle.boxed:hover:after,
+.drop-down-toggle.boxed:hover:before,
+.accordion-toggle.boxed:hover:before {
+  background-color: #be4f65;
 }
 
-.drop-down-toggle.boxed.activated {
-  background-color: rgba(198, 12, 48, 0.2);
+.drop-down-toggle.boxed.activated,
+.accordion-toggle.boxed.activated {
+  background-color: rgba(0, 0, 0, 0.2);
 }
 
-.drop-down-toggle.boxed.activated:hover {
-  background-color: rgba(198, 12, 48, 0.3);
+.drop-down-toggle.boxed.activated:hover,
+.accordion-toggle.boxed.activated:hover {
+  background-color: rgba(0, 0, 0, 0.3);
 }
 
-.drop-down-toggle.boxed.activated:after {
+.drop-down-toggle.boxed.activated:after,
+.accordion-toggle.boxed.activated:after {
   opacity: 0;
 }
 
-.drop-down-toggle.boxed.activated:before {
+.drop-down-toggle.boxed.activated:before,
+.accordion-toggle.boxed.activated:before {
   opacity: 1;
 }
 
-.drop-down-toggle.boxed + .toggled-panel {
+.drop-down-toggle.boxed + .toggled-panel,
+.accordion-toggle.boxed + .toggled-panel {
   padding: 0.5rem;
-  border-right: 1px solid rgba(198, 12, 48, 0.2);
-  border-bottom: 1px solid rgba(198, 12, 48, 0.2);
-  border-left: 1px solid rgba(198, 12, 48, 0.2);
+  border-right: 1px solid rgba(0, 0, 0, 0.2);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  border-left: 1px solid rgba(0, 0, 0, 0.2);
   margin-top: 0 !important;
   padding-top: 1rem !important;
 }
 
-.drop-down-toggle.boxed + .toggled-panel > :last-child {
+.drop-down-toggle.boxed + .toggled-panel > :last-child,
+.accordion-toggle.boxed + .toggled-panel > :last-child {
   padding-bottom: 0.5rem;
 }
 
 .drop-down-toggle.boxed + .drop-down-toggle.boxed,
-.drop-down-toggle.boxed + .toggled-panel + .drop-down-toggle.boxed {
+.drop-down-toggle.boxed + .accordion-toggle.boxed,
+.accordion-toggle.boxed + .drop-down-toggle.boxed,
+.accordion-toggle.boxed + .accordion-toggle.boxed,
+.drop-down-toggle.boxed + .toggled-panel + .drop-down-toggle.boxed,
+.drop-down-toggle.boxed + .toggled-panel + .accordion-toggle.boxed,
+.accordion-toggle.boxed + .toggled-panel + .drop-down-toggle.boxed,
+.accordion-toggle.boxed + .toggled-panel + .accordion-toggle.boxed {
   margin-top: 0.5rem;
 }
 
-.drop-down-toggle.boxed + .toggled-panel + :not(.drop-down-toggle) {
+.drop-down-toggle.boxed + .toggled-panel + :not(.drop-down-toggle),
+.accordion-toggle.boxed + .toggled-panel + :not(.drop-down-toggle) {
   margin-top: 1rem;
 }
 
-.drop-down-toggle.boxed.blue {
+.drop-down-toggle.boxed.blue,
+.accordion-toggle.boxed.blue {
   background-color: rgba(0, 165, 189, 0.1);
   color: #0076bd;
 }
 
 .drop-down-toggle.boxed.blue:after,
-.drop-down-toggle.boxed.blue:before {
+.accordion-toggle.boxed.blue:after,
+.drop-down-toggle.boxed.blue:before,
+.accordion-toggle.boxed.blue:before {
   background-color: #0076bd;
 }
 
-.drop-down-toggle.boxed.blue:hover {
+.drop-down-toggle.boxed.blue:hover,
+.accordion-toggle.boxed.blue:hover {
   background-color: rgba(0, 165, 189, 0.3);
 }
 
 .drop-down-toggle.boxed.blue:hover:after,
-.drop-down-toggle.boxed.blue:hover:before {
+.accordion-toggle.boxed.blue:hover:after,
+.drop-down-toggle.boxed.blue:hover:before,
+.accordion-toggle.boxed.blue:hover:before {
   background-color: #449bcf;
 }
 
-.drop-down-toggle.boxed.blue.activated {
+.drop-down-toggle.boxed.blue.activated,
+.accordion-toggle.boxed.blue.activated {
   background-color: rgba(0, 165, 189, 0.2);
 }
 
-.drop-down-toggle.boxed.blue.activated:hover {
+.drop-down-toggle.boxed.blue.activated:hover,
+.accordion-toggle.boxed.blue.activated:hover {
   background-color: rgba(0, 165, 189, 0.3);
 }
 
-.drop-down-toggle.boxed.blue + .toggled-panel {
+.drop-down-toggle.boxed.blue + .toggled-panel,
+.accordion-toggle.boxed.blue + .toggled-panel {
   border-right: 1px solid rgba(0, 165, 189, 0.2);
   border-bottom: 1px solid rgba(0, 165, 189, 0.2);
   border-left: 1px solid rgba(0, 165, 189, 0.2);
 }
 
-.drop-down-toggle + .toggled-panel {
+.drop-down-toggle + .toggled-panel,
+.accordion-toggle + .toggled-panel {
   opacity: 1;
   overflow: hidden;
   transition: all 0.5s ease;
 }
 
-.drop-down-toggle:not(.activated) + .toggled-panel {
+.drop-down-toggle:not(.activated) + .toggled-panel,
+.accordion-toggle:not(.activated) + .toggled-panel {
   height: 0 !important;
   padding: 0 !important;
   border: none !important;
   opacity: 0 !important;
 }
 
+/**     ························································································
+ *       └> §3.8.2: Subtle panels
+ */
+
+/**     ························································································
+ *       └> §3.8.3: Flippable content panels
+ */
+
 .flipped-content-back {
   display: none;
   width: 100%;
 }
+
+/**     ························································································
+ *       └> §3.8.4: QTip driven tooltips
+ */
 
 .is-qtip {
   display: none;
@@ -3630,6 +4198,49 @@ x:-o-prefocus {
   position: absolute !important;
 }
 
+/**     ························································································
+ *       └> §3.8.5: Quick-tabs panels
+ */
+
+/**     ························································································
+ *       └> §3.8.6: Tribe Events Calendars
+ */
+
+/** ────────────────────────────────────────────────────────────────────────────────────────────────
+ *  █▀▀▀▐   ▌█▀▀▀ ▐▀▀▄▐▀█▀▌▄▀▀▀    ▄▀▀▀ ▄▀▀▄ █    █▀▀▀ ▐▀▀▄ █▀▀▄ ▄▀▀▄ █▀▀▄    █    █▀▀▀ ▄▀▀▀ ▄▀▀▀
+ *  █▀▀  █ █ █▀▀  █  ▐  █  ▀▀▀█ ▀▀ █    █▄▄█ █  ▄ █▀▀  █  ▐ █  █ █▄▄█ █▄▄▀    █  ▄ █▀▀  ▀▀▀█ ▀▀▀█
+ *  ▀▀▀▀  █  ▀▀▀▀ ▀  ▐  █  ▀▀▀      ▀▀▀ █  ▀ ▀▀▀  ▀▀▀▀ ▀  ▐ ▀▀▀  █  ▀ ▀  ▀▄ ▀ ▀▀▀  ▀▀▀▀ ▀▀▀  ▀▀▀ 
+ *
+ *  Contains styles for elements associated with the events calendar plugin on WSU Division of
+ *    Academic Engagement web pages built using the builder template of the Spine parent theme of
+ *    WSUWP. Styles are designed to accompany or supersede styling associated with the theme.
+ *
+ *  @version 1.1.3
+ *
+ *  @author Daniel Rieck <daniel.rieck@wsu.edu> (https://github.com/invokeImmediately)
+ *  @link https://github.com/invokeImmediately/WSU-DAESA-CSS/blob/master/…→
+ *    ←…/events-calendar.less
+ *  @license MIT Copyright (c) 2022 Washington State University
+ *    Permission is hereby granted, free of charge, to any person obtaining a copy of this software
+ *      and associated documentation files (the "Software"), to deal in the Software without
+ *      restriction, including without limitation the rights to use, copy, modify, merge, publish,
+ *      distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom
+ *      the Software is furnished to do so, subject to the following conditions:
+ *    The above copyright notice and this permission notice shall be included in all copies or
+ *      substantial portions of the Software.
+ *    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING
+ *      BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+ *      NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY
+ *      CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE,
+ *      ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+ *      SOFTWARE.
+ *  ────────────────────────────────────────────────────────────────────────────────────────────────
+ */
+
+/**     ························································································
+ *       └> §3.8.7: Auto-scrolling image panels
+ */
+
 div.auto-scroller {
   position: relative;
 }
@@ -3656,6 +4267,18 @@ div.auto-scroller ul li {
   list-style-type: none;
   list-style-image: none;
 }
+
+/** ================================================================================================
+ *  §4: Component-based CSS
+ */
+
+/**   --------------------------------------------------------------------------------------------
+ *    >>> §4.1: Website notices
+ */
+
+/**   --------------------------------------------------------------------------------------------
+ *    >>> §4.2: News posts
+ */
 
 .article-body {
   position: relative;
@@ -3906,9 +4529,61 @@ div.auto-scroller ul li {
   margin-bottom: 1rem;
 }
 
+/**   --------------------------------------------------------------------------------------------
+ *    >>> §4.3: DAESA Grids
+ */
+
+/**   --------------------------------------------------------------------------------------------
+ *    >>> §4.4: Other components
+ */
+
+/** ────────────────────────────────────────────────────────────────────────────────────────────────
+ *  ▄▀▀▀ ▄▀▀▄ ▐▀▄▀▌█▀▀▄ ▄▀▀▄ ▐▀▀▄ █▀▀▀ ▐▀▀▄▐▀█▀▌▄▀▀▀   █    █▀▀▀ ▄▀▀▀ ▄▀▀▀
+ *  █    █  █ █ ▀ ▌█▄▄▀ █  █ █  ▐ █▀▀  █  ▐  █  ▀▀▀█   █  ▄ █▀▀  ▀▀▀█ ▀▀▀█
+ *   ▀▀▀  ▀▀  █   ▀█     ▀▀  ▀  ▐ ▀▀▀▀ ▀  ▐  █  ▀▀▀  ▀ ▀▀▀  ▀▀▀▀ ▀▀▀  ▀▀▀
+ * 
+ *  Less import that contains style rules designed according to component-based CSS conventions and
+ *    which are commonly used on all WSU DAESA websites.
+ *
+ *  @version 1.0.2
+ * 
+ *  @author Daniel Rieck <daniel.rieck@wsu.edu> (https://github.com/invokeImmediately)
+ *  @link https://github.com/invokeImmediately/WSU-DAESA-CSS/blob/main/…→
+ *    ←…/BEM/components.less
+ *  @license MIT Copyright (c) 2022 Washington State University
+ *    Permission is hereby granted, free of charge, to any person obtaining a copy of this software
+ *      and associated documentation files (the "Software"), to deal in the Software without
+ *      restriction, including without limitation the rights to use, copy, modify, merge, publish,
+ *      distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom
+ *      the Software is furnished to do so, subject to the following conditions:
+ *    The above copyright notice and this permission notice shall be included in all copies or
+ *      substantial portions of the Software.
+ *    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING
+ *      BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+ *      NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY
+ *      CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE,
+ *      ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+ *      SOFTWARE.
+ *  ────────────────────────────────────────────────────────────────────────────────────────────────
+ *   TABLE OF CONTENTS:
+ *   ────────────────────────────────────────────────────────────────────────────────────────────
+ *   §1: Card styling..........................................................................44
+ *   §2: Page headers..........................................................................73
+ *   §3: On this page.........................................................................159
+ *   §4: Hero containers (inspired by Rainier theme)..........................................333
+ *   §5: Breadcrumb link lists................................................................421
+ *   §6: Arrowed bullet lists.................................................................452
+ *   §7: Text lists...........................................................................474
+ *   ───────────────────────────────────────────────────────────────────────────────────────────────
+ */
+
+/** ================================================================================================
+ *  §1: Card styling
+ */
+
 .style--card,
 .daesa-card {
-  box-shadow: 0 12px 16px 2px rgba(0, 0, 0, 0.03), 0 5px 22px 4px rgba(0, 0, 0, 0.03), 0 6px 13px 0 rgba(0, 0, 0, 0.02);
+  border: 1px solid #eee;
   border-radius: 5px;
   box-sizing: border-box;
   padding: 1rem;
@@ -3916,8 +4591,8 @@ div.auto-scroller ul li {
 
 .style--card--raised,
 .daesa-card--raised {
-  border: 1px solid rgba(59, 64, 66, 0.15);
-  box-shadow: 0 12px 16px 2px rgba(0, 0, 0, 0.03), 0 5px 22px 4px rgba(0, 0, 0, 0.03), 0 6px 13px 0 rgba(0, 0, 0, 0.02);
+  border: 1px solid #eee;
+  box-shadow: 0 6px 8px 1px rgba(0, 0, 0, 0.03), 0 5px 11px 2px rgba(0, 0, 0, 0.03);
   border-radius: 5px;
   box-sizing: border-box;
   padding: 1rem;
@@ -3947,8 +4622,8 @@ div.auto-scroller ul li {
   font-family: 'Roboto Condensed', 'Arial Narrow', sans-serif;
   margin-bottom: 0em;
   margin-top: 0em;
-  margin-left: -1rem;
-  margin-right: -1rem;
+  margin-left: -0.5rem;
+  margin-right: -0.5rem;
   letter-spacing: 1px;
   padding: 0.5rem 1rem;
   word-spacing: 1px;
@@ -3958,6 +4633,10 @@ div.auto-scroller ul li {
 .daesa-card__title + .daesa-card__sub-title {
   margin-top: 0em;
 }
+
+/** ================================================================================================
+ *  §2: Page headers
+ */
 
 .page-header {
   height: 230px;
@@ -3980,10 +4659,10 @@ div.auto-scroller ul li {
   box-sizing: border-box;
   color: #ffffff;
   display: block;
-  left: 2rem;
+  left: 1rem;
   margin: 0;
-  padding: 1rem;
-  right: 2rem;
+  padding: 0.5rem;
+  right: 1rem;
   top: 50%;
   text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.9);
   transform: translateY(-50%);
@@ -4023,6 +4702,10 @@ div.auto-scroller ul li {
   font-size: 1rem;
   line-height: 1rem;
 }
+
+/** ================================================================================================
+ *  §3: On this page
+ */
 
 .on-this-page {
   padding-bottom: 0.75em;
@@ -4170,6 +4853,10 @@ div.auto-scroller ul li {
   background: url(https://s3.wp.wsu.edu/uploads/sites/50/2017/10/micon_returnKey_rotated-90-deg-cw_54x64.png) center center / auto 100% no-repeat;
 }
 
+/** ================================================================================================
+ *  §4: Hero containers (inspired by Rainier theme)
+ */
+
 .hero-container {
   background-color: #a60e2d;
   background-position: center;
@@ -4244,6 +4931,10 @@ div.auto-scroller ul li {
   opacity: 0.75;
 }
 
+/** ================================================================================================
+ *  §5: Breadcrumb link lists
+ */
+
 .breadcrumb-list {
   display: flex;
   flex-wrap: wrap;
@@ -4257,12 +4948,16 @@ div.auto-scroller ul li {
   margin-right: 0.25em;
 }
 
-.breadcrumb-list__link:not(:hover) {
+.breadcrumb-list__link:not(:hover):not(:focus) {
   box-shadow: none;
   border-bottom-color: transparent;
   color: inherit;
   text-decoration: underline;
 }
+
+/** ================================================================================================
+ *  §6: Arrowed bullet lists
+ */
 
 .arrowed-bullet-list {
   list-style-type: none;
@@ -4280,6 +4975,10 @@ div.auto-scroller ul li {
   transform: translateX(-100%) translateX(-.5em);
 }
 
+/** ================================================================================================
+ *  §7: Text lists
+ */
+
 .text-list--double-spaced .text-list__item {
   padding: 0 0 0.9em 0;
 }
@@ -4292,6 +4991,90 @@ div.auto-scroller ul li {
   padding-left: 1.5em;
 }
 
+/** ================================================================================================
+ *  §5: Atomic CSS
+ */
+
+/** ────────────────────────────────────────────────────────────────────────────────────────────────
+ *    █  █▐▀█▀▌▀█▀ █    ▀█▀▐▀█▀▌█  █    ▄▀▀▀ █    ▄▀▀▄ ▄▀▀▀ ▄▀▀▀ █▀▀▀ ▄▀▀▀   █    █▀▀▀ ▄▀▀▀ ▄▀▀▀
+ *    █  █  █   █  █  ▄  █   █  ▀▄▄█ ▀▀ █    █  ▄ █▄▄█ ▀▀▀█ ▀▀▀█ █▀▀  ▀▀▀█   █  ▄ █▀▀  ▀▀▀█ ▀▀▀█
+ *     ▀▀   █  ▀▀▀ ▀▀▀  ▀▀▀  █  ▄▄▄▀     ▀▀▀ ▀▀▀  █  ▀ ▀▀▀  ▀▀▀  ▀▀▀▀ ▀▀▀  ▀ ▀▀▀  ▀▀▀▀ ▀▀▀  ▀▀▀
+ *
+ *  Less import that declares a variety of utility classes for use in functional/atomic styling of
+ *    WSU Division of Academic Engagement and Student Achievement websites.
+ *
+ *  Designed to be imported downstream of other Less files in the final stylesheet build so its
+ *    rules will have the greatest possible weight in style conflict resolution.
+ *
+ *  @version 1.1.2
+ *
+ *  @author Daniel Rieck <daniel.rieck@wsu.edu> (https://github.com/invokeImmediately)
+ *  @link https://github.com/invokeImmediately/WSU-DAESA-CSS/blob/master/…→
+ *    ←…/Atomic-CSS/utility-classes.less
+ *  @license MIT Copyright (c) 2022 Washington State University
+ *    Permission is hereby granted, free of charge, to any person obtaining a copy of this software
+ *      and associated documentation files (the "Software"), to deal in the Software without
+ *      restriction, including without limitation the rights to use, copy, modify, merge, publish,
+ *      distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom
+ *      the Software is furnished to do so, subject to the following conditions:
+ *    The above copyright notice and this permission notice shall be included in all copies or
+ *      substantial portions of the Software.
+ *    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING
+ *      BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+ *      NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY
+ *      CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE,
+ *      ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+ *      SOFTWARE.
+ *  ────────────────────────────────────────────────────────────────────────────────────────────────
+ *   TABLE OF CONTENTS:
+ *   ────────────────────────────────────────────────────────────────────────────────────────────
+ *   §1: Box-sizing............................................................................80
+ *   §2: Widths................................................................................92
+ *     >>> §2.1: Percent widths................................................................96
+ *     >>> §2.2: Pixel widths.................................................................134
+ *     >>> §2.3: Additional widths............................................................183
+ *   §3: Heights..............................................................................214
+ *     >>> §3.1: Pixel heights................................................................218
+ *     >>> §3.2: Em heights...................................................................256
+ *     >>> §3.3: Additional heights...........................................................297
+ *   §4: Typography...........................................................................305
+ *     >>> §4.1: Font Sizing..................................................................309
+ *     >>> §4.2: Line Heights.................................................................367
+ *     >>> §4.3: Bolding......................................................................409
+ *     >>> §4.4: Text transformation..........................................................436
+ *     >>> §4.5: Text alignment...............................................................448
+ *   §5: Spacing..............................................................................468
+ *   §6: Floating.............................................................................484
+ *       >>> §6.1: Clearing...................................................................500
+ *   §7: Display..............................................................................517
+ *     >>> §7.1: Flex-box.....................................................................585
+ *        └> §7.5.1: Flex direction...........................................................593
+ *        └> §7.5.2: Flex wrapping............................................................613
+ *        └> §7.5.3: Content justification....................................................629
+ *        └> §7.5.4: Item alignment...........................................................653
+ *        └> §7.5.5: Content alignment........................................................673
+ *        └> §7.5.6: Basis....................................................................697
+ *        └> §7.5.6: Growth...................................................................713
+ *        └> §7.5.6: Shrinking................................................................725
+ *   §8: Margins..............................................................................737
+ *     >>> §8.1: General margins..............................................................741
+ *     >>> §8.2: In units of "em".............................................................751
+ *     >>> §8.3: In units of "rem"............................................................781
+ *   §9: Padding..............................................................................814
+ *     >>> §9.1: In units of "em".............................................................818
+ *     >>> §9.2: In units of "rem"............................................................850
+ *   §10: Vertical alignment..................................................................882
+ *   §11: Colors..............................................................................918
+ *     >>> §11.1: General.....................................................................971
+ *     >>> §11.2: WSU Crimsons................................................................979
+ *     >>> §11.3: WDS Color Scheme............................................................991
+ *  ────────────────────────────────────────────────────────────────────────────────────────────────
+ */
+
+/** ================================================================================================
+ *  §1: Box-sizing
+ */
+
 .bs--border-box {
   box-sizing: border-box;
 }
@@ -4299,6 +5082,14 @@ div.auto-scroller ul li {
 .bs--content-box {
   box-sizing: content-box;
 }
+
+/** ================================================================================================
+ *  §2: Widths
+ */
+
+/**   ----------------------------------------------------------------------------------------------
+ *    >>> §2.1: Percent widths
+ */
 
 .w--5pct {
   width: 5%;
@@ -4387,6 +5178,10 @@ div.auto-scroller ul li {
 .w--100pct {
   width: 100%;
 }
+
+/**   ----------------------------------------------------------------------------------------------
+ *    >>> §2.2: Pixel widths
+ */
 
 .w--64px {
   width: 64px;
@@ -4688,6 +5483,10 @@ div.auto-scroller ul li {
   max-width: 960px;
 }
 
+/**   ----------------------------------------------------------------------------------------------
+ *    >>> §2.3: Additional widths
+ */
+
 .mw--none {
   max-width: none;
 }
@@ -4715,6 +5514,14 @@ div.auto-scroller ul li {
 .w--auto {
   width: auto;
 }
+
+/** ================================================================================================
+ *  §3: Heights
+ */
+
+/**   ----------------------------------------------------------------------------------------------
+ *    >>> §3.1: Pixel heights
+ */
 
 .h--64px {
   height: 64px;
@@ -4804,9 +5611,133 @@ div.auto-scroller ul li {
   height: 400px;
 }
 
+/**   ----------------------------------------------------------------------------------------------
+ *    >>> §3.2: Em heights
+ */
+
+.h--250mem {
+  height: 64px;
+}
+
+.h--333mem {
+  height: 80px;
+}
+
+.h--500mem {
+  height: 96px;
+}
+
+.h--667mem {
+  height: 112px;
+}
+
+.h--750mem {
+  height: 128px;
+}
+
+.h--1em {
+  height: 144px;
+}
+
+.h--1250mem {
+  height: 160px;
+}
+
+.h--1333mem {
+  height: 176px;
+}
+
+.h--1500mem {
+  height: 192px;
+}
+
+.h--1667mem {
+  height: 208px;
+}
+
+.h--1750mem {
+  height: 224px;
+}
+
+.h--2em {
+  height: 240px;
+}
+
+.h--3em {
+  height: 256px;
+}
+
+.h--45dem {
+  height: 272px;
+}
+
+.h--6em {
+  height: 288px;
+}
+
+.h--75dem {
+  height: 304px;
+}
+
+.h--9em {
+  height: 320px;
+}
+
+.h--105dem {
+  height: 336px;
+}
+
+.h--12em {
+  height: 352px;
+}
+
+.h--135dem {
+  height: 368px;
+}
+
+.h--15em {
+  height: 384px;
+}
+
+.h--165dem {
+  height: 400px;
+}
+
+.h--18em {
+  height: extract(64px, 80px, 96px, 112px, 128px, 144px, 160px, 176px, 192px, 208px, 224px, 240px, 256px, 272px, 288px, 304px, 320px, 336px, 352px, 368px, 384px, 400px, 23);
+}
+
+.h--195dem {
+  height: extract(64px, 80px, 96px, 112px, 128px, 144px, 160px, 176px, 192px, 208px, 224px, 240px, 256px, 272px, 288px, 304px, 320px, 336px, 352px, 368px, 384px, 400px, 24);
+}
+
+.h--21em {
+  height: extract(64px, 80px, 96px, 112px, 128px, 144px, 160px, 176px, 192px, 208px, 224px, 240px, 256px, 272px, 288px, 304px, 320px, 336px, 352px, 368px, 384px, 400px, 25);
+}
+
+/**   ----------------------------------------------------------------------------------------------
+ *    >>> §3.3: Additional heights
+ */
+
 .h--auto {
   height: auto;
 }
+
+/** ================================================================================================
+ *  §4: Typography
+ */
+
+/**   ----------------------------------------------------------------------------------------------
+ *    >>> §4.1: Font Sizing
+ *
+ *      NOTES:
+ *      • Units of "mx" stand for "milli-fold" and function similar to magnification units. Thus,
+ *        1000mx = 1x, where x is the standard font-size for body-text. Thus, 1000mx means the same
+ *        font-size as the default font-size for body text. 2000mx would be twice the size of body
+ *        text.
+ *      • Depends on the utiltiy mixin .font-size(...) and the Less variable @fSize-array, which
+ *        are both defined in utility-mixins.less.
+ */
 
 .font-size--400mx,
 .fs--400mx {
@@ -4943,6 +5874,15 @@ div.auto-scroller ul li {
   font-size: 1.4em;
 }
 
+/**   ----------------------------------------------------------------------------------------------
+ *    >>> §4.2: Line heights
+**
+ *      NOTES:
+ *      * See line 24 for explanation of "mx" units.
+ *      * Depends on the utiltiy mixin .set-lHeight(...) and the Less variable @lHeight-array,
+ *        which are both defined in utility-mixins.less.
+ */
+
 .lh--667mx {
   line-height: 1em;
 }
@@ -5027,6 +5967,10 @@ div.auto-scroller ul li {
   line-height: 2em;
 }
 
+/**   ----------------------------------------------------------------------------------------------
+ *    >>> §4.3: Bolding
+ */
+
 .fw--light {
   font-weight: 300;
 }
@@ -5047,6 +5991,10 @@ div.auto-scroller ul li {
   font-weight: 800;
 }
 
+/**   ----------------------------------------------------------------------------------------------
+ *    >>> §4.4: Text transformation
+ */
+
 .tt--none {
   text-transform: none;
 }
@@ -5054,6 +6002,10 @@ div.auto-scroller ul li {
 .tt--uppercase {
   text-transform: uppercase;
 }
+
+/**   ----------------------------------------------------------------------------------------------
+ *    >>> §4.5: Text alignment
+ */
 
 .ta--center {
   text-align: center;
@@ -5070,6 +6022,10 @@ div.auto-scroller ul li {
 .ta--right {
   text-align: left;
 }
+
+/**   ----------------------------------------------------------------------------------------------
+ *    §5: Spacing
+ */
 
 .column * + .sv--0mx {
   margin-top: 0em;
@@ -5123,6 +6079,10 @@ div.auto-scroller ul li {
   margin-top: 4em;
 }
 
+/** ================================================================================================
+ *  §6: Floating
+ */
+
 .flt--none {
   float: none;
 }
@@ -5135,6 +6095,10 @@ div.auto-scroller ul li {
   float: left;
 }
 
+/**   ----------------------------------------------------------------------------------------------
+ *    >>> §6.1: Clearing
+ */
+
 .clr--left {
   clear: left;
 }
@@ -5146,6 +6110,10 @@ div.auto-scroller ul li {
 .clr--both {
   clear: both;
 }
+
+/** ================================================================================================
+ *  §7: Display
+ */
 
 .dy--block {
   display: block;
@@ -5163,9 +6131,17 @@ div.auto-scroller ul li {
   display: none;
 }
 
+/**   ----------------------------------------------------------------------------------------------
+ *    >>> §7.1: Flex-box
+ */
+
 .dy--flex {
   display: flex;
 }
+
+/**     ····························································································
+ *       └> §7.5.1: Flex direction
+ */
 
 .flxd--row {
   flex-direction: row;
@@ -5183,6 +6159,10 @@ div.auto-scroller ul li {
   flex-direction: column;
 }
 
+/**     ····························································································
+ *       └> §7.5.2: Flex wrapping
+ */
+
 .flxw--no-wrap {
   flex-wrap: nowrap;
 }
@@ -5194,6 +6174,10 @@ div.auto-scroller ul li {
 .flxw--wrap-reverse {
   flex-wrap: wrap;
 }
+
+/**     ····························································································
+ *       └> §7.5.3: Content justification
+ */
 
 .flxjc--start {
   justify-content: start;
@@ -5215,6 +6199,10 @@ div.auto-scroller ul li {
   justify-content: space-evenly;
 }
 
+/**     ····························································································
+ *       └> §7.5.4: Item alignment
+ */
+
 .flxai--flex-start {
   align-items: flex-start;
 }
@@ -5230,6 +6218,10 @@ div.auto-scroller ul li {
 .flxai--center {
   align-items: center;
 }
+
+/**     ····························································································
+ *       └> §7.5.5: Content alignment
+ */
 
 .flxac--flex-start {
   align-content: flex-start;
@@ -5251,6 +6243,10 @@ div.auto-scroller ul li {
   align-content: space-around;
 }
 
+/**     ····························································································
+ *       └> §7.5.6: Basis
+ */
+
 .flxb--0 {
   flex-basis: 0;
 }
@@ -5263,6 +6259,10 @@ div.auto-scroller ul li {
   flex-basis: content;
 }
 
+/**     ····························································································
+ *       └> §7.5.7: Growth
+ */
+
 .flxg--0 {
   flex-grow: 0;
 }
@@ -5270,6 +6270,10 @@ div.auto-scroller ul li {
 .flxg--1 {
   flex-grow: 1;
 }
+
+/**     ····························································································
+ *       └> §7.5.8: Shrinking
+ */
 
 .flxs--0 {
   flex-shrink: 0;
@@ -5279,10 +6283,22 @@ div.auto-scroller ul li {
   flex-shrink: 1;
 }
 
+/** ================================================================================================
+ *  §8: Margins
+ */
+
+/**   ----------------------------------------------------------------------------------------------
+ *    >>> §8.1: General margins
+ */
+
 .mh--auto {
   margin-left: auto;
   margin-right: auto;
 }
+
+/**   ----------------------------------------------------------------------------------------------
+ *    >>> §8.2: In units of "em"
+ */
 
 .ma--0mx {
   margin: 0em;
@@ -5544,6 +6560,10 @@ div.auto-scroller ul li {
   margin-top: 4em;
 }
 
+/**   ----------------------------------------------------------------------------------------------
+ *    >>> §8.3: In units of "rem"
+ */
+
 .ma--rem--0mx {
   margin: 0rem;
 }
@@ -5724,6 +6744,174 @@ div.auto-scroller ul li {
   margin-top: 2rem;
 }
 
+.ma--rem--2250mx {
+  margin: 2.25rem;
+}
+
+.mb--rem--2250mx {
+  margin-bottom: 2.25rem;
+}
+
+.ml--rem--2250mx {
+  margin-left: 2.25rem;
+}
+
+.mr--rem--2250mx {
+  margin-right: 2.25rem;
+}
+
+.mt--rem--2250mx {
+  margin-top: 2.25rem;
+}
+
+.ma--rem--2500mx {
+  margin: 2.5rem;
+}
+
+.mb--rem--2500mx {
+  margin-bottom: 2.5rem;
+}
+
+.ml--rem--2500mx {
+  margin-left: 2.5rem;
+}
+
+.mr--rem--2500mx {
+  margin-right: 2.5rem;
+}
+
+.mt--rem--2500mx {
+  margin-top: 2.5rem;
+}
+
+.ma--rem--2750mx {
+  margin: 2.75rem;
+}
+
+.mb--rem--2750mx {
+  margin-bottom: 2.75rem;
+}
+
+.ml--rem--2750mx {
+  margin-left: 2.75rem;
+}
+
+.mr--rem--2750mx {
+  margin-right: 2.75rem;
+}
+
+.mt--rem--2750mx {
+  margin-top: 2.75rem;
+}
+
+.ma--rem--3000mx {
+  margin: 3rem;
+}
+
+.mb--rem--3000mx {
+  margin-bottom: 3rem;
+}
+
+.ml--rem--3000mx {
+  margin-left: 3rem;
+}
+
+.mr--rem--3000mx {
+  margin-right: 3rem;
+}
+
+.mt--rem--3000mx {
+  margin-top: 3rem;
+}
+
+.ma--rem--3250mx {
+  margin: 3.25rem;
+}
+
+.mb--rem--3250mx {
+  margin-bottom: 3.25rem;
+}
+
+.ml--rem--3250mx {
+  margin-left: 3.25rem;
+}
+
+.mr--rem--3250mx {
+  margin-right: 3.25rem;
+}
+
+.mt--rem--3250mx {
+  margin-top: 3.25rem;
+}
+
+.ma--rem--3500mx {
+  margin: 3.5rem;
+}
+
+.mb--rem--3500mx {
+  margin-bottom: 3.5rem;
+}
+
+.ml--rem--3500mx {
+  margin-left: 3.5rem;
+}
+
+.mr--rem--3500mx {
+  margin-right: 3.5rem;
+}
+
+.mt--rem--3500mx {
+  margin-top: 3.5rem;
+}
+
+.ma--rem--3750mx {
+  margin: 3.75rem;
+}
+
+.mb--rem--3750mx {
+  margin-bottom: 3.75rem;
+}
+
+.ml--rem--3750mx {
+  margin-left: 3.75rem;
+}
+
+.mr--rem--3750mx {
+  margin-right: 3.75rem;
+}
+
+.mt--rem--3750mx {
+  margin-top: 3.75rem;
+}
+
+.ma--rem--4000mx {
+  margin: 4rem;
+}
+
+.mb--rem--4000mx {
+  margin-bottom: 4rem;
+}
+
+.ml--rem--4000mx {
+  margin-left: 4rem;
+}
+
+.mr--rem--4000mx {
+  margin-right: 4rem;
+}
+
+.mt--rem--4000mx {
+  margin-top: 4rem;
+}
+
+/** ================================================================================================
+ *  §9: Padding
+ */
+
+/**   ----------------------------------------------------------------------------------------------
+ *    >>> §9.1: In units of "em"
+ */
+
 .pa--0mx {
   padding: 0em;
 }
@@ -5745,164 +6933,168 @@ div.auto-scroller ul li {
 }
 
 .pa--250mx {
-  padding: 0.5em;
+  padding: 0.25em;
 }
 
 .pb--250mx {
-  padding-bottom: 0.5em;
+  padding-bottom: 0.25em;
 }
 
 .pl--250mx {
-  padding-left: 0.5em;
+  padding-left: 0.25em;
 }
 
 .pr--250mx {
-  padding-right: 0.5em;
+  padding-right: 0.25em;
 }
 
 .pt--250mx {
-  padding-top: 0.5em;
+  padding-top: 0.25em;
 }
 
 .pa--500mx {
-  padding: 1em;
+  padding: 0.5em;
 }
 
 .pb--500mx {
-  padding-bottom: 1em;
+  padding-bottom: 0.5em;
 }
 
 .pl--500mx {
-  padding-left: 1em;
+  padding-left: 0.5em;
 }
 
 .pr--500mx {
-  padding-right: 1em;
+  padding-right: 0.5em;
 }
 
 .pt--500mx {
-  padding-top: 1em;
+  padding-top: 0.5em;
 }
 
 .pa--750mx {
-  padding: 1.5em;
+  padding: 0.75em;
 }
 
 .pb--750mx {
-  padding-bottom: 1.5em;
+  padding-bottom: 0.75em;
 }
 
 .pl--750mx {
-  padding-left: 1.5em;
+  padding-left: 0.75em;
 }
 
 .pr--750mx {
-  padding-right: 1.5em;
+  padding-right: 0.75em;
 }
 
 .pt--750mx {
-  padding-top: 1.5em;
+  padding-top: 0.75em;
 }
 
 .pa--1000mx {
-  padding: 2em;
+  padding: 1em;
 }
 
 .pb--1000mx {
-  padding-bottom: 2em;
+  padding-bottom: 1em;
 }
 
 .pl--1000mx {
-  padding-left: 2em;
+  padding-left: 1em;
 }
 
 .pr--1000mx {
-  padding-right: 2em;
+  padding-right: 1em;
 }
 
 .pt--1000mx {
-  padding-top: 2em;
+  padding-top: 1em;
 }
 
 .pa--1250mx {
-  padding: 2.5em;
+  padding: 1.25em;
 }
 
 .pb--1250mx {
-  padding-bottom: 2.5em;
+  padding-bottom: 1.25em;
 }
 
 .pl--1250mx {
-  padding-left: 2.5em;
+  padding-left: 1.25em;
 }
 
 .pr--1250mx {
-  padding-right: 2.5em;
+  padding-right: 1.25em;
 }
 
 .pt--1250mx {
-  padding-top: 2.5em;
+  padding-top: 1.25em;
 }
 
 .pa--1500mx {
-  padding: 3em;
+  padding: 1.5em;
 }
 
 .pb--1500mx {
-  padding-bottom: 3em;
+  padding-bottom: 1.5em;
 }
 
 .pl--1500mx {
-  padding-left: 3em;
+  padding-left: 1.5em;
 }
 
 .pr--1500mx {
-  padding-right: 3em;
+  padding-right: 1.5em;
 }
 
 .pt--1500mx {
-  padding-top: 3em;
+  padding-top: 1.5em;
 }
 
 .pa--1750mx {
-  padding: 3.5em;
+  padding: 1.75em;
 }
 
 .pb--1750mx {
-  padding-bottom: 3.5em;
+  padding-bottom: 1.75em;
 }
 
 .pl--1750mx {
-  padding-left: 3.5em;
+  padding-left: 1.75em;
 }
 
 .pr--1750mx {
-  padding-right: 3.5em;
+  padding-right: 1.75em;
 }
 
 .pt--1750mx {
-  padding-top: 3.5em;
+  padding-top: 1.75em;
 }
 
 .pa--2000mx {
-  padding: 4em;
+  padding: 2em;
 }
 
 .pb--2000mx {
-  padding-bottom: 4em;
+  padding-bottom: 2em;
 }
 
 .pl--2000mx {
-  padding-left: 4em;
+  padding-left: 2em;
 }
 
 .pr--2000mx {
-  padding-right: 4em;
+  padding-right: 2em;
 }
 
 .pt--2000mx {
-  padding-top: 4em;
+  padding-top: 2em;
 }
+
+/**   ----------------------------------------------------------------------------------------------
+ *    >>> §9.2: In units of "rem"
+ */
 
 .pa--rem--0mx {
   padding: 0;
@@ -5925,164 +7117,328 @@ div.auto-scroller ul li {
 }
 
 .pa--rem--250mx {
-  padding: 0.5rem;
+  padding: 0.25rem;
 }
 
 .pb--rem--250mx {
-  padding-bottom: 0.5rem;
+  padding-bottom: 0.25rem;
 }
 
 .pl--rem--250mx {
-  padding-left: 0.5rem;
+  padding-left: 0.25rem;
 }
 
 .pr--rem--250mx {
-  padding-right: 0.5rem;
+  padding-right: 0.25rem;
 }
 
 .pt--rem--250mx {
-  padding-top: 0.5rem;
+  padding-top: 0.25rem;
 }
 
 .pa--rem--500mx {
-  padding: 1rem;
+  padding: 0.5rem;
 }
 
 .pb--rem--500mx {
-  padding-bottom: 1rem;
+  padding-bottom: 0.5rem;
 }
 
 .pl--rem--500mx {
-  padding-left: 1rem;
+  padding-left: 0.5rem;
 }
 
 .pr--rem--500mx {
-  padding-right: 1rem;
+  padding-right: 0.5rem;
 }
 
 .pt--rem--500mx {
-  padding-top: 1rem;
+  padding-top: 0.5rem;
 }
 
 .pa--rem--750mx {
-  padding: 1.5rem;
+  padding: 0.75rem;
 }
 
 .pb--rem--750mx {
-  padding-bottom: 1.5rem;
+  padding-bottom: 0.75rem;
 }
 
 .pl--rem--750mx {
-  padding-left: 1.5rem;
+  padding-left: 0.75rem;
 }
 
 .pr--rem--750mx {
-  padding-right: 1.5rem;
+  padding-right: 0.75rem;
 }
 
 .pt--rem--750mx {
-  padding-top: 1.5rem;
+  padding-top: 0.75rem;
 }
 
 .pa--rem--1000mx {
-  padding: 2rem;
+  padding: 1rem;
 }
 
 .pb--rem--1000mx {
-  padding-bottom: 2rem;
+  padding-bottom: 1rem;
 }
 
 .pl--rem--1000mx {
-  padding-left: 2rem;
+  padding-left: 1rem;
 }
 
 .pr--rem--1000mx {
-  padding-right: 2rem;
+  padding-right: 1rem;
 }
 
 .pt--rem--1000mx {
-  padding-top: 2rem;
+  padding-top: 1rem;
 }
 
 .pa--rem--1250mx {
-  padding: 2.5rem;
+  padding: 1.25rem;
 }
 
 .pb--rem--1250mx {
-  padding-bottom: 2.5rem;
+  padding-bottom: 1.25rem;
 }
 
 .pl--rem--1250mx {
-  padding-left: 2.5rem;
+  padding-left: 1.25rem;
 }
 
 .pr--rem--1250mx {
-  padding-right: 2.5rem;
+  padding-right: 1.25rem;
 }
 
 .pt--rem--1250mx {
-  padding-top: 2.5rem;
+  padding-top: 1.25rem;
 }
 
 .pa--rem--1500mx {
-  padding: 3rem;
+  padding: 1.5rem;
 }
 
 .pb--rem--1500mx {
-  padding-bottom: 3rem;
+  padding-bottom: 1.5rem;
 }
 
 .pl--rem--1500mx {
-  padding-left: 3rem;
+  padding-left: 1.5rem;
 }
 
 .pr--rem--1500mx {
-  padding-right: 3rem;
+  padding-right: 1.5rem;
 }
 
 .pt--rem--1500mx {
-  padding-top: 3rem;
+  padding-top: 1.5rem;
 }
 
 .pa--rem--1750mx {
-  padding: 3.5rem;
+  padding: 1.75rem;
 }
 
 .pb--rem--1750mx {
-  padding-bottom: 3.5rem;
+  padding-bottom: 1.75rem;
 }
 
 .pl--rem--1750mx {
-  padding-left: 3.5rem;
+  padding-left: 1.75rem;
 }
 
 .pr--rem--1750mx {
-  padding-right: 3.5rem;
+  padding-right: 1.75rem;
 }
 
 .pt--rem--1750mx {
-  padding-top: 3.5rem;
+  padding-top: 1.75rem;
 }
 
 .pa--rem--2000mx {
-  padding: 4rem;
+  padding: 2rem;
 }
 
 .pb--rem--2000mx {
-  padding-bottom: 4rem;
+  padding-bottom: 2rem;
 }
 
 .pl--rem--2000mx {
-  padding-left: 4rem;
+  padding-left: 2rem;
 }
 
 .pr--rem--2000mx {
-  padding-right: 4rem;
+  padding-right: 2rem;
 }
 
 .pt--rem--2000mx {
-  padding-top: 4rem;
+  padding-top: 2rem;
 }
+
+.pa--rem--2250mx {
+  padding: 2.25rem;
+}
+
+.pb--rem--2250mx {
+  padding-bottom: 2.25rem;
+}
+
+.pl--rem--2250mx {
+  padding-left: 2.25rem;
+}
+
+.pr--rem--2250mx {
+  padding-right: 2.25rem;
+}
+
+.pt--rem--2250mx {
+  padding-top: 2.25rem;
+}
+
+.pa--rem--2500mx {
+  padding: 2.5rem;
+}
+
+.pb--rem--2500mx {
+  padding-bottom: 2.5rem;
+}
+
+.pl--rem--2500mx {
+  padding-left: 2.5rem;
+}
+
+.pr--rem--2500mx {
+  padding-right: 2.5rem;
+}
+
+.pt--rem--2500mx {
+  padding-top: 2.5rem;
+}
+
+.pa--rem--2750mx {
+  padding: 2.5rem;
+}
+
+.pb--rem--2750mx {
+  padding-bottom: 2.5rem;
+}
+
+.pl--rem--2750mx {
+  padding-left: 2.5rem;
+}
+
+.pr--rem--2750mx {
+  padding-right: 2.5rem;
+}
+
+.pt--rem--2750mx {
+  padding-top: 2.5rem;
+}
+
+.pa--rem--3000mx {
+  padding: extract(0, 0.25rem, 0.5rem, 0.75rem, 1rem, 1.25rem, 1.5rem, 1.75rem, 2rem, 2.25rem, 2.5rem, 2.5rem, 13);
+}
+
+.pb--rem--3000mx {
+  padding-bottom: extract(0, 0.25rem, 0.5rem, 0.75rem, 1rem, 1.25rem, 1.5rem, 1.75rem, 2rem, 2.25rem, 2.5rem, 2.5rem, 13);
+}
+
+.pl--rem--3000mx {
+  padding-left: extract(0, 0.25rem, 0.5rem, 0.75rem, 1rem, 1.25rem, 1.5rem, 1.75rem, 2rem, 2.25rem, 2.5rem, 2.5rem, 13);
+}
+
+.pr--rem--3000mx {
+  padding-right: extract(0, 0.25rem, 0.5rem, 0.75rem, 1rem, 1.25rem, 1.5rem, 1.75rem, 2rem, 2.25rem, 2.5rem, 2.5rem, 13);
+}
+
+.pt--rem--3000mx {
+  padding-top: extract(0, 0.25rem, 0.5rem, 0.75rem, 1rem, 1.25rem, 1.5rem, 1.75rem, 2rem, 2.25rem, 2.5rem, 2.5rem, 13);
+}
+
+.pa--rem--3250mx {
+  padding: extract(0, 0.25rem, 0.5rem, 0.75rem, 1rem, 1.25rem, 1.5rem, 1.75rem, 2rem, 2.25rem, 2.5rem, 2.5rem, 14);
+}
+
+.pb--rem--3250mx {
+  padding-bottom: extract(0, 0.25rem, 0.5rem, 0.75rem, 1rem, 1.25rem, 1.5rem, 1.75rem, 2rem, 2.25rem, 2.5rem, 2.5rem, 14);
+}
+
+.pl--rem--3250mx {
+  padding-left: extract(0, 0.25rem, 0.5rem, 0.75rem, 1rem, 1.25rem, 1.5rem, 1.75rem, 2rem, 2.25rem, 2.5rem, 2.5rem, 14);
+}
+
+.pr--rem--3250mx {
+  padding-right: extract(0, 0.25rem, 0.5rem, 0.75rem, 1rem, 1.25rem, 1.5rem, 1.75rem, 2rem, 2.25rem, 2.5rem, 2.5rem, 14);
+}
+
+.pt--rem--3250mx {
+  padding-top: extract(0, 0.25rem, 0.5rem, 0.75rem, 1rem, 1.25rem, 1.5rem, 1.75rem, 2rem, 2.25rem, 2.5rem, 2.5rem, 14);
+}
+
+.pa--rem--3500mx {
+  padding: extract(0, 0.25rem, 0.5rem, 0.75rem, 1rem, 1.25rem, 1.5rem, 1.75rem, 2rem, 2.25rem, 2.5rem, 2.5rem, 15);
+}
+
+.pb--rem--3500mx {
+  padding-bottom: extract(0, 0.25rem, 0.5rem, 0.75rem, 1rem, 1.25rem, 1.5rem, 1.75rem, 2rem, 2.25rem, 2.5rem, 2.5rem, 15);
+}
+
+.pl--rem--3500mx {
+  padding-left: extract(0, 0.25rem, 0.5rem, 0.75rem, 1rem, 1.25rem, 1.5rem, 1.75rem, 2rem, 2.25rem, 2.5rem, 2.5rem, 15);
+}
+
+.pr--rem--3500mx {
+  padding-right: extract(0, 0.25rem, 0.5rem, 0.75rem, 1rem, 1.25rem, 1.5rem, 1.75rem, 2rem, 2.25rem, 2.5rem, 2.5rem, 15);
+}
+
+.pt--rem--3500mx {
+  padding-top: extract(0, 0.25rem, 0.5rem, 0.75rem, 1rem, 1.25rem, 1.5rem, 1.75rem, 2rem, 2.25rem, 2.5rem, 2.5rem, 15);
+}
+
+.pa--rem--3750mx {
+  padding: extract(0, 0.25rem, 0.5rem, 0.75rem, 1rem, 1.25rem, 1.5rem, 1.75rem, 2rem, 2.25rem, 2.5rem, 2.5rem, 16);
+}
+
+.pb--rem--3750mx {
+  padding-bottom: extract(0, 0.25rem, 0.5rem, 0.75rem, 1rem, 1.25rem, 1.5rem, 1.75rem, 2rem, 2.25rem, 2.5rem, 2.5rem, 16);
+}
+
+.pl--rem--3750mx {
+  padding-left: extract(0, 0.25rem, 0.5rem, 0.75rem, 1rem, 1.25rem, 1.5rem, 1.75rem, 2rem, 2.25rem, 2.5rem, 2.5rem, 16);
+}
+
+.pr--rem--3750mx {
+  padding-right: extract(0, 0.25rem, 0.5rem, 0.75rem, 1rem, 1.25rem, 1.5rem, 1.75rem, 2rem, 2.25rem, 2.5rem, 2.5rem, 16);
+}
+
+.pt--rem--3750mx {
+  padding-top: extract(0, 0.25rem, 0.5rem, 0.75rem, 1rem, 1.25rem, 1.5rem, 1.75rem, 2rem, 2.25rem, 2.5rem, 2.5rem, 16);
+}
+
+.pa--rem--4000mx {
+  padding: extract(0, 0.25rem, 0.5rem, 0.75rem, 1rem, 1.25rem, 1.5rem, 1.75rem, 2rem, 2.25rem, 2.5rem, 2.5rem, 17);
+}
+
+.pb--rem--4000mx {
+  padding-bottom: extract(0, 0.25rem, 0.5rem, 0.75rem, 1rem, 1.25rem, 1.5rem, 1.75rem, 2rem, 2.25rem, 2.5rem, 2.5rem, 17);
+}
+
+.pl--rem--4000mx {
+  padding-left: extract(0, 0.25rem, 0.5rem, 0.75rem, 1rem, 1.25rem, 1.5rem, 1.75rem, 2rem, 2.25rem, 2.5rem, 2.5rem, 17);
+}
+
+.pr--rem--4000mx {
+  padding-right: extract(0, 0.25rem, 0.5rem, 0.75rem, 1rem, 1.25rem, 1.5rem, 1.75rem, 2rem, 2.25rem, 2.5rem, 2.5rem, 17);
+}
+
+.pt--rem--4000mx {
+  padding-top: extract(0, 0.25rem, 0.5rem, 0.75rem, 1rem, 1.25rem, 1.5rem, 1.75rem, 2rem, 2.25rem, 2.5rem, 2.5rem, 17);
+}
+
+/** ================================================================================================
+ *  §10: Vertical alignment
+ */
 
 .va--baseline {
   vertical-align: baseline;
@@ -6116,9 +7472,21 @@ div.auto-scroller ul li {
   vertical-align: top;
 }
 
+/** ================================================================================================
+ *  §11: Colors
+ */
+
+/**   ----------------------------------------------------------------------------------------------
+ *    >>> §11.1: General
+ */
+
 .bgc--transparent {
   background-color: transparent;
 }
+
+/**   ----------------------------------------------------------------------------------------------
+ *    >>> §11.2: WSU Crimsons
+ */
 
 .c--crimson--lightest {
   color: #dc4e65;
@@ -6137,7 +7505,7 @@ div.auto-scroller ul li {
 }
 
 .c--crimson--darkish {
-  color: #981e32;
+  color: #a60f2d;
 }
 
 .c--crimson--dark {
@@ -6189,11 +7557,11 @@ div.auto-scroller ul li {
 }
 
 .bgc--crimson--darkish {
-  background-color: #981e32;
+  background-color: #a60f2d;
 }
 
 .bgc--crimson--darkish--25pct {
-  background-color: rgba(152, 30, 50, 0.25);
+  background-color: rgba(166, 15, 45, 0.25);
 }
 
 .bgc--crimson--dark {
@@ -6229,8 +7597,12 @@ div.auto-scroller ul li {
 }
 
 .bgc--crimson--tint {
-  background-color: #f2e2e4;
+  background-color: #f3e0e4;
 }
+
+/**   ----------------------------------------------------------------------------------------------
+ *    >>> §11.3: WDS Color Scheme
+ */
 
 /*! ================================================================================================
 *** ▄▀▀▀ █  █ ▐▀▄▀▌▐▀▄▀▌█▀▀▀ █▀▀▄    █▀▀▄ █▀▀▀ ▄▀▀▀ █▀▀▀ ▄▀▀▄ █▀▀▄ ▄▀▀▀ █  █
@@ -6628,7 +8000,7 @@ div.interactively-flipped-panels div.container div.panel-wrapper.top-left div.pa
 }
 
 div.interactively-flipped-panels div.container div.panel-wrapper.top-left div.panel div.rear {
-  background: #981e32 url(/wp-content/uploads/sites/907/2017/05/homepage-buttons_summer-research-opportunities_v03_hovered.jpg) no-repeat center center;
+  background: #a60f2d url(/wp-content/uploads/sites/907/2017/05/homepage-buttons_summer-research-opportunities_v03_hovered.jpg) no-repeat center center;
   background-size: auto 100%;
   color: #fff;
 }
@@ -6639,7 +8011,7 @@ div.interactively-flipped-panels div.container div.panel-wrapper.top-right div.p
 }
 
 div.interactively-flipped-panels div.container div.panel-wrapper.top-right div.panel div.rear {
-  background: #981e32 url(/wp-content/uploads/sites/907/2016/05/homepage-buttons_summer-in-pullman-02_hovered.jpg) no-repeat center center;
+  background: #a60f2d url(/wp-content/uploads/sites/907/2016/05/homepage-buttons_summer-in-pullman-02_hovered.jpg) no-repeat center center;
   background-size: auto 100%;
   color: #fff;
 }
@@ -6650,7 +8022,7 @@ div.interactively-flipped-panels div.container div.panel-wrapper.bottom-left div
 }
 
 div.interactively-flipped-panels div.container div.panel-wrapper.bottom-left div.panel div.rear {
-  background: #981e32 url(/wp-content/uploads/sites/907/2016/05/homepage-buttons_summer-research-poster-symposium_hovered.jpg) no-repeat center center;
+  background: #a60f2d url(/wp-content/uploads/sites/907/2016/05/homepage-buttons_summer-research-poster-symposium_hovered.jpg) no-repeat center center;
   background-size: auto 100%;
   color: #fff;
 }
@@ -6661,7 +8033,7 @@ div.interactively-flipped-panels div.container div.panel-wrapper.bottom-right di
 }
 
 div.interactively-flipped-panels div.container div.panel-wrapper.bottom-right div.panel div.rear {
-  background: #981e32 url(/wp-content/uploads/sites/907/2016/05/homepage-buttons_summer-research-events_hovered.jpg) no-repeat center center;
+  background: #a60f2d url(/wp-content/uploads/sites/907/2016/05/homepage-buttons_summer-research-events_hovered.jpg) no-repeat center center;
   background-size: auto 100%;
   color: #fff;
 }
@@ -6685,7 +8057,7 @@ div.interactively-flipped-panels.fifths:before {
   font-size: 0.9em;
   line-height: 0.9em;
   font-weight: bold;
-  color: #981e32;
+  color: #a60f2d;
   text-transform: uppercase;
   transform: translateY(-100%) translateY(-5px);
 }
@@ -6926,12 +8298,12 @@ div.iframe-wrapper.home {
 .row.has-linked-columns:not(.gutter) .column:hover > :first-child:not(header),
 .row.has-linked-columns:not(.gutter) .column:hover > header:first-child + *,
 .row.has-linked-columns:not(.gutter) .column:hover > .shift-to-bottom:first-of-type {
-  color: #c60c30;
+  color: #ca1237;
   transition: all 0.3s linear;
 }
 
 .row.has-linked-columns:not(.gutter) .column:hover > .shift-to-bottom:first-of-type {
-  border-top: 1px solid #c60c30;
+  border-top: 1px solid #ca1237;
 }
 
 .row.has-linked-columns:not(.gutter) .column * {
@@ -7066,11 +8438,11 @@ div.iframe-wrapper.home {
 }
 
 .row.has-linked-columns:not(.gutter) .column.has-crimson-bg:after {
-  background: linear-gradient(to bottom, rgba(152, 30, 50, 0), rgba(152, 30, 50, 0.2) 50%, #981e32);
+  background: linear-gradient(to bottom, rgba(166, 15, 45, 0), rgba(166, 15, 45, 0.2) 50%, #a60f2d);
 }
 
 .row.has-linked-columns:not(.gutter) .column.has-crimson-bg:before {
-  background: linear-gradient(to top, rgba(152, 30, 50, 0), rgba(152, 30, 50, 0.2) 50%, #981e32);
+  background: linear-gradient(to top, rgba(166, 15, 45, 0), rgba(166, 15, 45, 0.2) 50%, #a60f2d);
 }
 
 .row.has-linked-columns:not(.gutter) .column.has-gray-bg:after {
@@ -7212,12 +8584,12 @@ div.iframe-wrapper.home {
 
 .row.has-linked-columns:not(.gutter).thirds .column.has-crimson-bg:after,
 .row.has-linked-columns:not(.gutter).quarters .column.has-crimson-bg:after {
-  background: linear-gradient(to bottom, rgba(152, 30, 50, 0), rgba(152, 30, 50, 0.2) 50%, #981e32 80%);
+  background: linear-gradient(to bottom, rgba(166, 15, 45, 0), rgba(166, 15, 45, 0.2) 50%, #a60f2d 80%);
 }
 
 .row.has-linked-columns:not(.gutter).thirds .column.has-crimson-bg:before,
 .row.has-linked-columns:not(.gutter).quarters .column.has-crimson-bg:before {
-  background: linear-gradient(to top, rgba(152, 30, 50, 0), rgba(152, 30, 50, 0.2) 50%, #981e32 80%);
+  background: linear-gradient(to top, rgba(166, 15, 45, 0), rgba(166, 15, 45, 0.2) 50%, #a60f2d 80%);
 }
 
 .row.has-linked-columns:not(.gutter).thirds .column.has-gray-bg:after,
@@ -7321,7 +8693,7 @@ div.iframe-wrapper.home {
 }
 
 .row.has-linked-columns:not(.gutter).for-faculty .column.has-black-bg:before {
-  background: linear-gradient(to top, rgba(152, 30, 50, 0), rgba(152, 30, 50, 0.2) 50%, rgba(152, 30, 50, 0.7) 70%);
+  background: linear-gradient(to top, rgba(166, 15, 45, 0), rgba(166, 15, 45, 0.2) 50%, rgba(166, 15, 45, 0.7) 70%);
 }
 
 .row.has-linked-columns:not(.gutter).for-faculty + .row.has-linked-columns:not(.gutter).for-faculty.thirds,
@@ -7359,7 +8731,7 @@ div.iframe-wrapper.home {
   right: 0;
   top: 0;
   width: 32px;
-  background: rgba(152, 30, 50, 0.3333) url(/wp-content/uploads/sites/907/2017/06/icon_genericons-neue_notice_v5.png) 4px 1rem no-repeat;
+  background: rgba(166, 15, 45, 0.3333) url(/wp-content/uploads/sites/907/2017/06/icon_genericons-neue_notice_v5.png) 4px 1rem no-repeat;
 }
 
 .notice.linked a {
@@ -7380,7 +8752,7 @@ div.iframe-wrapper.home {
 }
 
 .notice.linked a:first-of-type::before {
-  border-bottom: 3px solid #981e32;
+  border-bottom: 3px solid #a60f2d;
   bottom: -5px;
   box-sizing: border-box;
   content: "";
@@ -7408,9 +8780,9 @@ div.iframe-wrapper.home {
 }
 
 .notice.linked .hyperlink-simulator {
-  border-bottom: 0.0625em solid #981e32;
-  box-shadow: inset 0 -0.3125em 0 rgba(152, 30, 50, 0.15);
-  color: #981e32;
+  border-bottom: 0.0625em solid #a60f2d;
+  box-shadow: inset 0 -0.3125em 0 rgba(166, 15, 45, 0.15);
+  color: #a60f2d;
 }
 
 .column p.notice.has-expiration {
@@ -7461,7 +8833,7 @@ div.iframe-wrapper.home {
 }
 
 .row.article-notice.ruby .column {
-  background: #c60c30 url(/wp-content/uploads/sites/907/2017/08/texture_unheated-ruby.png) no-repeat scroll left top;
+  background: #ca1237 url(/wp-content/uploads/sites/907/2017/08/texture_unheated-ruby.png) no-repeat scroll left top;
   color: #fff;
 }
 
@@ -7591,28 +8963,6 @@ div.iframe-wrapper.home {
   }
 }
 
-@media only screen and (min-width: 641px) {
-  .column .gform_wrapper .top_label li ul.gfield_radio {
-    width: 100%;
-  }
-
-  .column .gform_wrapper.gf_browser_chrome .gform_body {
-    width: calc(100% + 15px);
-  }
-
-  .column li.gfield.gf_left_half.expands-to-two-thirds {
-    width: 67% !important;
-  }
-
-  .column li.gfield.gf_left_half.expands-to-two-thirds + li.gfield.gf_right_half {
-    width: 33% !important;
-  }
-
-  .column li.gfield.has-label-spacer > div.ginput_container {
-    margin-top: 21px;
-  }
-}
-
 @media all and (min-width: 694px) {
   section.thirds img.show-when-adjacent {
     width: 100%;
@@ -7620,11 +8970,6 @@ div.iframe-wrapper.home {
 
   section.thirds img.show-when-stacked {
     display: none;
-  }
-
-  aside.shield-themed.floats-left,
-  aside.shield-themed.floats-right {
-    width: 33.3333%;
   }
 
   section.side-right .column.one h2.fancy,
@@ -7677,12 +9022,6 @@ div.iframe-wrapper.home {
   }
 }
 
-@media only screen and (min-width: 792px) {
-  .column li.gfield.has-label-spacer > div.ginput_container {
-    margin-top: 23px;
-  }
-}
-
 @media all and (min-width: 792px) {
   .show-on-tablet {
     display: none !important;
@@ -7697,10 +9036,6 @@ div.iframe-wrapper.home {
   body.use-max-width-1386 #binder.max-1188 .row {
     max-width: 1386px;
   }
-
-  .column li.gfield.has-label-spacer > div.ginput_container {
-    margin-top: 21px;
-  }
 }
 
 @media all and (min-width: 990px) {
@@ -7710,29 +9045,6 @@ div.iframe-wrapper.home {
 }
 
 @media all and (min-width: 1073px) {
-  .row.single .article-deck,
-  .row.side-right .article-deck.one,
-  .row.side-left .article-deck.two {
-    font-size: 1.3416em;
-  }
-
-  .row.mimic-two-column-sections .article-deck,
-  .row.side-right .article-deck.two,
-  .row.side-right .article-deck.one.mimic-sidebar,
-  .row.side-left .article-deck.one,
-  .row.side-left .article-deck.two.mimic-sidebar,
-  .row.halves .article-deck {
-    font-size: 1.2em;
-  }
-
-  .row.thirds .article-deck {
-    font-size: 1.2em;
-  }
-
-  .row.quarters .article-deck {
-    font-size: 1.1292em;
-  }
-
   .row dl.faq > .expand-all-button,
   .row dl.faq > .collapse-all-button {
     font-size: 13.416px;
@@ -7741,7 +9053,7 @@ div.iframe-wrapper.home {
   .row.single .column,
   .row.side-right .column.one,
   .row.side-left .column.two {
-    font-size: 1.118em;
+    font-size: 1em;
   }
 
   .row.mimic-two-column-sections .column,
@@ -7763,12 +9075,6 @@ div.iframe-wrapper.home {
 
   .tablepress thead th {
     font-size: 0.98384em;
-  }
-}
-
-@media only screen and (min-width: 1073px) {
-  .column li.gfield.has-label-spacer > div.ginput_container {
-    margin-top: 23px;
   }
 }
 
@@ -7894,29 +9200,6 @@ div.iframe-wrapper.home {
     margin-top: 2rem;
   }
 
-  .row.single .column aside.article-sidebar {
-    position: absolute;
-    right: -2rem;
-    top: 0px;
-    width: 230px;
-    transform-origin: 100% 0% 0;
-    transform: rotate(-90deg) translateY(-2rem);
-    transition: transform .25s ease-out;
-    z-index: 99352;
-  }
-
-  .row.single .column aside.article-sidebar:hover {
-    transform: none;
-  }
-
-  body.single-post #wsuwp-main .row .column.one aside:not(.full-width),
-  .column > aside.quote:not(.full-width) {
-    width: 94%;
-    width: calc(100% - 0.5rem * 2);
-    margin-top: 1rem;
-    margin-bottom: 2rem;
-  }
-
   ul.cascaded-layout.blank > li {
     width: 96%;
     margin-bottom: 6%;
@@ -8035,19 +9318,6 @@ div.iframe-wrapper.home {
 
 @media (max-width: 693px) {
   .notice {
-    width: 100%;
-  }
-}
-
-@media only screen and (max-width: 641px) {
-  .column li.gfield > .ginput_container_select > .chosen-container-single > .chosen-single > div > b {
-    top: calc(0.99em - 3px);
-    background-position: 0 -7px;
-  }
-}
-
-@media only screen and (max-width: 640px) {
-  .column .gform_wrapper.gf_browser_chrome .gform_body {
     width: 100%;
   }
 }
@@ -8220,7 +9490,7 @@ div.iframe-wrapper.home {
 
   .row.has-linked-columns:not(.gutter).thirds .column.has-crimson-bg:after,
   .row.has-linked-columns:not(.gutter).quarters .column.has-crimson-bg:after {
-    background: linear-gradient(to bottom, rgba(152, 30, 50, 0), rgba(152, 30, 50, 0.2) 40%, #981e32 67%);
+    background: linear-gradient(to bottom, rgba(166, 15, 45, 0), rgba(166, 15, 45, 0.2) 40%, #a60f2d 67%);
   }
 
   .row.has-linked-columns:not(.gutter).thirds .column.has-gray-bg:after,
@@ -8262,7 +9532,7 @@ div.iframe-wrapper.home {
   }
 
   .row.has-linked-columns:not(.gutter).for-faculty .column.has-black-bg:before {
-    background: linear-gradient(to top, rgba(152, 30, 50, 0), rgba(152, 30, 50, 0.2) 40%, rgba(152, 30, 50, 0.7) 67%);
+    background: linear-gradient(to top, rgba(166, 15, 45, 0), rgba(166, 15, 45, 0.2) 40%, rgba(166, 15, 45, 0.7) 67%);
   }
 
   .row.has-linked-columns:not(.gutter).for-faculty.quarters .column {
@@ -8344,35 +9614,12 @@ div.iframe-wrapper.home {
   }
 
   .page-header__column-1 {
-    left: 0.5rem;
-    right: 0.5rem;
+    left: 0.25rem;
+    right: 0.25rem;
   }
 }
 
 @media all and (max-width: 360px) {
-  .row.single .article-deck,
-  .row.side-right .article-deck.one,
-  .row.side-left .article-deck.two {
-    font-size: 1.0584em;
-  }
-
-  .row.mimic-two-column-sections .article-deck,
-  .row.side-right .article-deck.two,
-  .row.side-right .article-deck.one.mimic-sidebar,
-  .row.side-left .article-deck.one,
-  .row.side-left .article-deck.two.mimic-sidebar,
-  .row.halves .article-deck {
-    font-size: 1.0584em;
-  }
-
-  .row.thirds .article-deck {
-    font-size: 1.0584em;
-  }
-
-  .row.quarters .article-deck {
-    font-size: 0.9888em;
-  }
-
   .row dl.faq > .expand-all-button,
   .row dl.faq > .collapse-all-button {
     font-size: 10.584px;
@@ -8472,35 +9719,12 @@ div.iframe-wrapper.home {
   }
 
   .page-header__column-1 {
-    left: 1rem;
-    right: 1rem;
+    left: 0.5rem;
+    right: 0.5rem;
   }
 }
 
 @media all and (min-width: 990px) and (max-width: 1072px) {
-  .row.single .article-deck,
-  .row.side-right .article-deck.one,
-  .row.side-left .article-deck.two {
-    font-size: 1.2em;
-  }
-
-  .row.mimic-two-column-sections .article-deck,
-  .row.side-right .article-deck.two,
-  .row.side-right .article-deck.one.mimic-sidebar,
-  .row.side-left .article-deck.one,
-  .row.side-left .article-deck.two.mimic-sidebar,
-  .row.halves .article-deck {
-    font-size: 1.1292em;
-  }
-
-  .row.thirds .article-deck {
-    font-size: 1.0584em;
-  }
-
-  .row.quarters .article-deck {
-    font-size: 1.0584em;
-  }
-
   .row dl.faq > .expand-all-button,
   .row dl.faq > .collapse-all-button {
     font-size: 12px;
@@ -8509,7 +9733,7 @@ div.iframe-wrapper.home {
   .row.single .column,
   .row.side-right .column.one,
   .row.side-left .column.two {
-    font-size: 1em;
+    font-size: 0.941em;
   }
 
   .row.mimic-two-column-sections .column,
@@ -8535,29 +9759,6 @@ div.iframe-wrapper.home {
 }
 
 @media all and (min-width: 694px) and (max-width: 989px) {
-  .row.single .article-deck,
-  .row.side-right .article-deck.one,
-  .row.side-left .article-deck.two {
-    font-size: 1.3416em;
-  }
-
-  .row.mimic-two-column-sections .article-deck,
-  .row.side-right .article-deck.two,
-  .row.side-right .article-deck.one.mimic-sidebar,
-  .row.side-left .article-deck.one,
-  .row.side-left .article-deck.two.mimic-sidebar,
-  .row.halves .article-deck {
-    font-size: 1.1292em;
-  }
-
-  .row.thirds .article-deck {
-    font-size: 1.0584em;
-  }
-
-  .row.quarters .article-deck {
-    font-size: 1.0584em;
-  }
-
   .row dl.faq > .expand-all-button,
   .row dl.faq > .collapse-all-button {
     font-size: 13.416px;
@@ -8566,7 +9767,7 @@ div.iframe-wrapper.home {
   .row.single .column,
   .row.side-right .column.one,
   .row.side-left .column.two {
-    font-size: 1.118em;
+    font-size: 0.941em;
   }
 
   .row.mimic-two-column-sections .column,
@@ -8592,29 +9793,6 @@ div.iframe-wrapper.home {
 }
 
 @media all and (min-width: 481px) and (max-width: 693px) {
-  .row.single .article-deck,
-  .row.side-right .article-deck.one,
-  .row.side-left .article-deck.two {
-    font-size: 1.2em;
-  }
-
-  .row.mimic-two-column-sections .article-deck,
-  .row.side-right .article-deck.two,
-  .row.side-right .article-deck.one.mimic-sidebar,
-  .row.side-left .article-deck.one,
-  .row.side-left .article-deck.two.mimic-sidebar,
-  .row.halves .article-deck {
-    font-size: 1.2em;
-  }
-
-  .row.thirds .article-deck {
-    font-size: 1.2em;
-  }
-
-  .row.quarters .article-deck {
-    font-size: 1.1292em;
-  }
-
   .row dl.faq > .expand-all-button,
   .row dl.faq > .collapse-all-button {
     font-size: 12px;
@@ -8649,29 +9827,6 @@ div.iframe-wrapper.home {
 }
 
 @media all and (min-width: 361px) and (max-width: 480px) {
-  .row.single .article-deck,
-  .row.side-right .article-deck.one,
-  .row.side-left .article-deck.two {
-    font-size: 1.1292em;
-  }
-
-  .row.mimic-two-column-sections .article-deck,
-  .row.side-right .article-deck.two,
-  .row.side-right .article-deck.one.mimic-sidebar,
-  .row.side-left .article-deck.one,
-  .row.side-left .article-deck.two.mimic-sidebar,
-  .row.halves .article-deck {
-    font-size: 1.1292em;
-  }
-
-  .row.thirds .article-deck {
-    font-size: 1.1292em;
-  }
-
-  .row.quarters .article-deck {
-    font-size: 1.0584em;
-  }
-
   .row dl.faq > .expand-all-button,
   .row dl.faq > .collapse-all-button {
     font-size: 11.292px;
@@ -8914,29 +10069,6 @@ div.iframe-wrapper.home {
 
   .article-header:not(.row) .header-content .highlight {
     text-shadow: 0 0.3333px 0 #77898b, 0 0.6667px 0 #687779, 0 1px 0 #576365, 0 1.3333px 0 #475153, 0 1.6667px 0 #363e3f, 0 2px 0.3333px rgba(0, 0, 0, 0.1), 0 0 1.6667px rgba(0, 0, 0, 0.1), 0 0.3333px 1px rgba(0, 0, 0, 0.3), 0 1px 1.6667px rgba(0, 0, 0, 0.2), 0 1.6667px 3.3333px rgba(0, 0, 0, 0.25), 0 3.3333px 3.3333px rgba(0, 0, 0, 0.2), 0 6.6667px 6.6667px rgba(0, 0, 0, 0.15);
-  }
-
-  .row.single .article-deck,
-  .row.side-right .article-deck.one,
-  .row.side-left .article-deck.two {
-    line-height: 1.5em;
-  }
-
-  .row.mimic-two-column-sections .article-deck,
-  .row.side-right .article-deck.two,
-  .row.side-right .article-deck.one.mimic-sidebar,
-  .row.side-left .article-deck.one,
-  .row.side-left .article-deck.two.mimic-sidebar,
-  .row.halves .article-deck {
-    line-height: 1.5em;
-  }
-
-  .row.thirds .article-deck {
-    line-height: 1.5em;
-  }
-
-  .row.quarters .article-deck {
-    line-height: 1.5em;
   }
 
   .row dl.faq > .expand-all-button,
